@@ -1,0 +1,3 @@
+# Optional third-party packages for skills/elevenlabs-narration (stdlib covers generate_audio.py and captions.py).
+faster-whisper>=1.0        # qa_transcribe.py transcription engine (alternative: whisper.cpp binary on PATH)
+python-dotenv>=1.0         # optional: loads build/.env; scripts fall back to os.environ without it

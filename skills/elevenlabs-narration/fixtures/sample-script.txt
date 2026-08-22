@@ -1,0 +1,5 @@
+Everyone says you need a 4090 to run a 30 billion parameter model at home. The DGX Spark says otherwise.
+
+I loaded Qwen 3 at Q4 through llama.cpp on the GB10, with the KV cache left at the default. Load time was 14 seconds and it held 38 tokens per second across a 4,096 token context. vLLM on the same box was faster on batches but slower on a single stream.
+
+The catch is bandwidth. The Spark's 128 GB of unified memory moves at 273 GB/s, so a single stream tops out well below an RTX 5090. If you serve one user, the 5090 wins. If you serve a room, the Spark does.

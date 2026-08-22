@@ -1,0 +1,2 @@
+# skills/telegram-gate uses the standard library only (urllib, json, zoneinfo).
+python-dotenv>=1.0   # optional: loads build/.env; scripts fall back to os.environ without it

@@ -26,3 +26,16 @@ The radar item ids each pick draws on.
 ```
 
 Rules: titles in this note are working titles; the package stage writes the final ones. Every number in the table comes from a script's output, never typed from memory.
+
+## Top five for the card
+
+The Telegram FYI parser reads this section (`skills/telegram-gate/rules/cards.md`). One block per rank, exactly this shape:
+
+```
+## 1. Can DeepSeek V4 Flash run on 128 GB?
+- angle: The FP8 build leaves 40 GB free for context on a DGX Spark.
+- why now: DeepSeek shipped V4 Flash 0731 this week.
+- format: smooth-explainer
+```
+
+Ranks 1 and 2 are the picks; ranks 3-5 are what a `swap` tap can promote.
