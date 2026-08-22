@@ -1,0 +1,40 @@
+[
+  {
+    "id": "cmd1",
+    "command": "ollama run deepseek-v4-flash:q4_k_m --verbose \"Explain what a KV cache is in three sentences.\"",
+    "status": "ok",
+    "exit": 0,
+    "duration_s": 3.41,
+    "started_at": "2026-08-24T02:10:11-05:00",
+    "timeout_s": 600,
+    "expect": "ok",
+    "parse": "tok_s",
+    "cast": "cmd1.cast",
+    "stdout_tail": "A KV cache stores the key and value vectors the model already computed for earlier tokens, so it does not redo that work for every new word. Without it, each generated token would re-process the whole conversation, and generation would slow down as the text grows. The cost is memory: the cache grows with context length, which is why a 32k window needs more room than an 8k one.\n\ntotal duration:       2.9312s\nload duration:        31.2ms\nprompt eval count:    21 token(s)\nprompt eval duration: 214.1ms\nprompt eval rate:     98.08 tokens/s\neval count:           63 token(s)\neval duration:        1.5103s\neval rate:            41.71 tokens/s",
+    "metrics": {
+      "tok_s": 41.71,
+      "prompt_tok_s": 98.08,
+      "load_s": 0.031,
+      "eval_count": 63
+    },
+    "reason": null
+  },
+  {
+    "id": "cmd2",
+    "command": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader",
+    "status": "ok",
+    "exit": 0,
+    "duration_s": 0.21,
+    "started_at": "2026-08-24T02:10:15-05:00",
+    "timeout_s": 30,
+    "expect": "ok",
+    "parse": "vram_gb",
+    "cast": null,
+    "stdout_tail": "87214 MiB, 131072 MiB",
+    "metrics": {
+      "vram_gb": 85.17,
+      "vram_total_gb": 128.0
+    },
+    "reason": null
+  }
+]
