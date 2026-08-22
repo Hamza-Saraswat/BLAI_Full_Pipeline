@@ -1,0 +1,16 @@
+# Fires blai-build.service 2 minutes after boot and every 5 minutes after the last run started.
+# systemd never starts a second instance while the service is still running, and build.py holds
+# build/locks/build.lock as a second guard.
+#   systemctl --user enable --now blai-build.timer
+#   systemctl --user list-timers
+[Unit]
+Description=Run the BLAI build agent every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+Unit=blai-build.service
+
+[Install]
+WantedBy=timers.target

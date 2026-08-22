@@ -1,0 +1,7 @@
+# Python packages for the DGX Spark venv ($HOME/blai/venv). Installed by build/install.sh.
+# Everything else the build agent uses is stdlib. manim is installed separately by install.sh
+# because it needs apt packages (libcairo2-dev, libpango1.0-dev, pkg-config).
+faster-whisper>=1.1
+boto3>=1.34
+python-dotenv>=1.0
+requests>=2.31

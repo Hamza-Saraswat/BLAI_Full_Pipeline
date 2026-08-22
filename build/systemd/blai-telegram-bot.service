@@ -1,0 +1,22 @@
+# BLAI Telegram gate bot: long-polls getUpdates, answers approve/reject taps, updates hub notes.
+# Installed as a user unit by build/install.sh.
+#   systemctl --user status blai-telegram-bot.service
+#   journalctl --user -u blai-telegram-bot.service -f
+[Unit]
+Description=BLAI Telegram gate bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/blai/repo
+EnvironmentFile=%h/blai/repo/build/.env
+Environment=HOME=%h
+Environment=PATH=%h/.local/bin:%h/blai/venv/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/blai/venv/bin/python %h/blai/repo/skills/telegram-gate/scripts/bot.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=default.target

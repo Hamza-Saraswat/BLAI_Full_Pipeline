@@ -1,0 +1,21 @@
+# BLAI build agent: one pass of build/build.py. Started by blai-build.timer every 5 minutes.
+# Installed as a user unit (~/.config/systemd/user/) by build/install.sh, which rewrites
+# %h/blai/repo when the repo lives elsewhere (BLAI_REPO_DIR).
+#   systemctl --user status blai-build.service
+#   journalctl --user -u blai-build.service -f
+[Unit]
+Description=BLAI build agent (one pass: pull, build one video, publish approved ones)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/blai/repo
+EnvironmentFile=%h/blai/repo/build/.env
+Environment=HOME=%h
+Environment=PATH=%h/.local/bin:%h/blai/venv/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/blai/venv/bin/python %h/blai/repo/build/build.py --once
+# A render or an overnight capture can run for hours; the lock file prevents overlap.
+TimeoutStartSec=12h
+Nice=5
