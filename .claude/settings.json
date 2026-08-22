@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(npx:*)",
+      "Bash(npm:*)",
+      "Bash(git:*)",
+      "Bash(tools/git-sync.sh:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(date:*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "mcp__firecrawl__firecrawl_scrape",
+      "mcp__firecrawl__firecrawl_search",
+      "mcp__firecrawl__firecrawl_map"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Read(.env)",
+      "Read(.env.*)"
+    ]
+  }
+}

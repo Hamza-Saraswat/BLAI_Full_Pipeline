@@ -1,0 +1,96 @@
+# BLAI pipeline dashboard. Source: the hub notes in workspaces/*/videos/. Open this file in Obsidian.
+filters:
+  and:
+    - file.inFolder("BLAI/workspaces")
+    - file.hasProperty("status")
+    - file.hasProperty("slug")
+properties:
+  note.status:
+    displayName: Status
+  note.title:
+    displayName: Title
+  note.workspace:
+    displayName: Workspace
+  note.pillar:
+    displayName: Pillar
+  note.series:
+    displayName: Series
+  note.structure:
+    displayName: Structure
+  note.style_pack:
+    displayName: Pack
+  note.seo_score:
+    displayName: SEO
+  note.publish_slot:
+    displayName: Slot
+  note.youtube_url:
+    displayName: YouTube
+  note.updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Needs me
+    filters:
+      or:
+        - 'status == "review"'
+        - 'status == "blocked"'
+        - 'status == "rejected"'
+    order:
+      - file.name
+      - note.workspace
+      - note.status
+      - note.title
+      - note.blocked_reason
+      - note.feedback
+      - note.preview_url
+      - note.updated
+  - type: table
+    name: Shorts queue
+    filters:
+      and:
+        - 'workspace == "shorts"'
+        - or:
+            - 'status == "idea"'
+            - 'status == "researched"'
+            - 'status == "scripted"'
+            - 'status == "ready-to-build"'
+            - 'status == "building"'
+            - 'status == "review"'
+    groupBy:
+      property: note.status
+    order:
+      - file.name
+      - note.title
+      - note.pillar
+      - note.structure
+      - note.style_pack
+      - note.seo_score
+      - note.updated
+  - type: table
+    name: Long-form pipeline
+    filters:
+      and:
+        - 'workspace == "long-form"'
+        - 'status != "published"'
+    groupBy:
+      property: note.status
+    order:
+      - file.name
+      - note.title
+      - note.series
+      - note.seo_score
+      - note.publish_slot
+      - note.updated
+  - type: table
+    name: Scheduled and published
+    filters:
+      or:
+        - 'status == "scheduled"'
+        - 'status == "published"'
+    order:
+      - file.name
+      - note.workspace
+      - note.title
+      - note.publish_slot
+      - note.youtube_url
+      - note.status

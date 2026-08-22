@@ -1,0 +1,8 @@
+# assemble.py stages per-run media in remotion/public/<slug>/ and removes it after the render.
+# Only the smoke fixture and the bundled sfx are tracked.
+*
+!.gitignore
+!smoke/
+!smoke/**
+!sfx/
+!sfx/**

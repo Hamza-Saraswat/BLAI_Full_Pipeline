@@ -1,0 +1,145 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: sketch — rough.js shape factory + chalk draw-on
+  (skills/render-shorts/styles/sketch.md — chalk on slate)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/sketch-snippet.html index.html && npx hyperframes lint
+
+  Signature techniques shown here:
+    1. rough.js VENDORED locally (packs/vendor/rough.js — never a
+       CDN fetch at render) with an explicit SEED on every shape:
+       seeded generation happens once at load, so renders are
+       deterministic (no Math.random path is ever taken)
+    2. chalk shape factory: rough node -> pathLength="1" on every
+       path -> stroke-dashoffset 1 -> 0 draw-on reveal
+    3. grain overlay (.grain — static feTurbulence, fixed seed)
+    4. chalk type classes (.chalk headline, .annotation in Caveat)
+    5. human easing — back.out(1.2) pops, sine.inOut draws,
+       nothing perfectly linear
+  Motifs: circled words, wobbly arrows. Straight CSS borders are
+  off-brand — draw lines with the factory instead.
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="packs/vendor/rough.js"></script>
+    <link rel="stylesheet" href="packs/sketch.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .hook {
+        position: absolute;
+        top: 20px;
+        left: 60px; /* breathing room so the circled word's stroke stays in-safe */
+      }
+      .note-rotate {
+        /* static rotation lives on a wrapper; GSAP animates the inner
+           element (opacity/y/scale) so transforms never fight */
+        position: absolute;
+        top: 520px;
+        left: 40px;
+        transform: rotate(-2.5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <!-- hook: on screen at frame 1 -->
+          <h1 class="chalk hook">
+            SHRINK THE<br />
+            <span class="accent">NUMBERS</span>
+          </h1>
+
+          <!-- rough.js draws into this layer (viewBox = safe area px) -->
+          <div class="rough-layer">
+            <svg id="board" viewBox="0 0 830 1020" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+
+          <div class="note-rotate">
+            <div id="note" class="annotation">just round them off</div>
+          </div>
+        </div>
+        <!-- static grain above content -->
+        <div class="grain"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- chalk shape factory (rough.js, SEEDED = deterministic) ----
+         One base seed per scene (vary it per scene id); every shape
+         gets seed + offset. Generation runs once at load. */
+      const SEED = 42;
+      const svg = document.getElementById("board");
+      const rc = rough.svg(svg);
+      const CHALK = { stroke: "#FFB347", strokeWidth: 5, roughness: 2.2, bowing: 1.4, fill: "none" };
+
+      function chalkShape(node) {
+        // prep every rough path for draw-on: normalized dash of length 1
+        const paths = Array.from(node.querySelectorAll("path"));
+        paths.forEach((p) => {
+          p.setAttribute("pathLength", "1");
+          p.style.strokeDasharray = "1";
+          p.style.strokeDashoffset = "1";
+          p.style.strokeLinecap = "round";
+        });
+        svg.appendChild(node);
+        return paths;
+      }
+      // reveal: divide the window across the shape's paths, in order
+      function drawOn(paths, at, dur, ease) {
+        const per = dur / paths.length;
+        paths.forEach((p, i) => {
+          tl.to(p, { strokeDashoffset: 0, duration: per, ease }, at + per * i);
+        });
+      }
+
+      // motif 1: circled word — rough ellipse around "NUMBERS"
+      const circle = chalkShape(
+        rc.ellipse(330, 214, 630, 180, { ...CHALK, seed: SEED })
+      );
+
+      // motif 2: wobbly arrow from the annotation up to the circle
+      const shaft = chalkShape(
+        rc.curve([[430, 500], [470, 410], [400, 330]], { ...CHALK, strokeWidth: 4, seed: SEED + 1 })
+      );
+      const head = chalkShape(
+        rc.linearPath([[368, 368], [400, 330], [446, 352]], { ...CHALK, strokeWidth: 4, seed: SEED + 2 })
+      );
+
+      /* ---- timeline (human easing, motion inside frames 9..142) ---- */
+      drawOn(circle, 0.35, 1.2, "sine.inOut");
+
+      // annotation pops in with a gentle overshoot
+      tl.from("#note", { opacity: 0, y: 36, scale: 0.92, duration: 0.55, ease: "back.out(1.2)" }, 1.8);
+
+      drawOn(shaft, 2.5, 0.55, "sine.inOut");
+      drawOn(head, 3.1, 0.3, "sine.out");
+      // motion ends 3.4s — last 8 frames (4.73s+) are stable
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

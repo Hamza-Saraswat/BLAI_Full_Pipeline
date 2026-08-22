@@ -1,0 +1,250 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: halftone — Ben-Day dots + punch cards + gutter cuts
+  (skills/render-shorts/styles/halftone.md — midnight comic press)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/halftone-snippet.html index.html && npx hyperframes lint
+
+  Signature techniques shown here:
+    1. THE STYLE LAW: all content lives inside .gutter-stage
+       (overflow: hidden at the safe-area box) — a full-perimeter
+       gutter of pure #16121F on every frame, wider than the linter
+       margin strips; panel slides are clipped at the gutter edge
+    2. Ben-Day dot screen — SVG <pattern> of equal circles (45deg
+       lattice, regular grid, ZERO randomness), revealed by tweening
+       the height of a mask <rect> (attr tween, power4.out)
+    3. punch card slam — scale 1.6 -> 1.0 with back.in(2) + rotation
+       snap; the ink shadow is a TWIN element offset 7,9px (never a
+       css box-shadow blur); opacity pops on hard (ease "none")
+    4. starburst — jagged star polygon (points from a deterministic
+       formula at load) popping scale+rotate behind the stat card
+    5. misregistration flick — amber/ink twin text plates .set()
+       apart +/-3px for EXACTLY 2 frames at a keyframed mark
+    6. panel-gutter transition — panel B slides across the gutter
+       with power4.inOut; dot-size ramp (r = f(row)) as shading
+  Easing: percussive (back.in(2) impacts, power4 snaps, steps(2)
+  plate-flicks). No randomness anywhere. DOT BUDGET <=600/frame
+  (panel A screen ~476, panel B ramp 119).
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/halftone.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .tab-a {                /* comic caption tab, top-left of panel A */
+        position: absolute;
+        top: 36px;
+        left: 36px;
+        z-index: 2;
+      }
+      .hook-wrap {            /* headline punch card — static rotation on
+                                 the wrapper; GSAP never touches it */
+        top: 300px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+        z-index: 2;
+      }
+      .stat-wrap {            /* stat punch card (panel B) */
+        top: 330px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-3deg);
+        z-index: 3;
+        opacity: 0;           /* pops on at the slam mark */
+      }
+      .burst-b {
+        left: 83px;
+        top: 90px;
+        width: 620px;
+        height: 620px;
+        z-index: 2;
+        opacity: 0;           /* pops on with the scale+rotate tween */
+      }
+      .dots-a { inset: 0; z-index: 1; }
+      .ramp-b {               /* dot-size ramp = the pack's "shading" */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 300px;
+        z-index: 1;
+      }
+      .cap-b {
+        position: absolute;
+        top: 600px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;           /* steps(2) plate-flick */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <!-- THE STYLE LAW: everything bright lives inside this clip box.
+             The margins + caption band around it are pure #16121F. -->
+        <div class="gutter-stage">
+          <!-- PANEL A: hook card on screen at frame 1 -->
+          <div id="panelA" class="panel">
+            <!-- 2) Ben-Day screen: 60px tile, two r=10 dots (45deg
+                 lattice) ~= 476 visible dots; mask rect reveals it -->
+            <div class="dot-field dots-a">
+              <svg viewBox="0 0 786 976" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                  <pattern id="benday" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <circle cx="15" cy="15" r="10" fill="#5E2A4D" />
+                    <circle cx="45" cy="45" r="10" fill="#5E2A4D" />
+                  </pattern>
+                  <mask id="revealA">
+                    <rect id="maskRectA" x="0" y="0" width="786" height="0" fill="#fff" />
+                  </mask>
+                </defs>
+                <rect width="786" height="976" fill="url(#benday)" mask="url(#revealA)" />
+              </svg>
+            </div>
+
+            <div class="caption-box tab-a">The myth</div>
+
+            <!-- hook: legible at frame 1; ink shadow = twin element -->
+            <div class="punch-wrap hook-wrap">
+              <div class="punch-card">
+                <div class="punch-shadow"></div>
+                <div class="punch-face">
+                  <!-- 5) misreg plates: amber under, ink over -->
+                  <div class="misreg punch">
+                    <span id="plateUnder" class="misreg-under">NO H100<br />NEEDED</span>
+                    <span id="plateOver" class="misreg-over">NO H100<br />NEEDED</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL B: slides in across the gutter -->
+          <div id="panelB" class="panel">
+            <!-- 4) starburst rays behind the stat card -->
+            <div class="burst burst-b" id="burst">
+              <svg viewBox="0 0 620 620" xmlns="http://www.w3.org/2000/svg">
+                <polygon id="burstPoly" fill="#FFB347" points="" />
+              </svg>
+            </div>
+
+            <!-- 3) POW card: amber face, ink text, twin ink shadow -->
+            <div class="punch-wrap stat-wrap" id="statWrap">
+              <div class="punch-card" id="statCard">
+                <div class="punch-shadow"></div>
+                <div class="punch-face punch-face--amber">
+                  <span class="punch punch-big">40 TOK/S!</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="capB" class="body-text cream cap-b">on a used 3090</div>
+
+            <!-- 6) size-ramp screen: r = 5 + 1.3*row (119 dots) -->
+            <div class="dot-field ramp-b">
+              <svg id="rampSvg" viewBox="0 0 786 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const F = 1 / 30; // one frame at 30fps
+
+      /* ---- build-time generation (runs once at load, DETERMINISTIC —
+              formulas only, no Math.random ever) ---- */
+
+      // 4) jagged starburst: 12 spikes, alternating outer radii
+      const SPIKES = 12, CX = 310, CY = 310, R_IN = 165;
+      const pts = [];
+      for (let i = 0; i < SPIKES; i++) {
+        const rOut = i % 2 === 0 ? 300 : 268; // alternation = the jag
+        const aOut = (i / SPIKES) * Math.PI * 2 - Math.PI / 2;
+        const aIn = ((i + 0.5) / SPIKES) * Math.PI * 2 - Math.PI / 2;
+        pts.push(CX + rOut * Math.cos(aOut), CY + rOut * Math.sin(aOut));
+        pts.push(CX + R_IN * Math.cos(aIn), CY + R_IN * Math.sin(aIn));
+      }
+      document
+        .getElementById("burstPoly")
+        .setAttribute("points", pts.map((v) => v.toFixed(1)).join(","));
+
+      // 6) dot-size ramp: radius is a function of ROW (fake shading —
+      //    this pack's substitute for gradients). 7*17 = 119 dots.
+      const NS = "http://www.w3.org/2000/svg";
+      const ramp = document.getElementById("rampSvg");
+      for (let row = 0; row < 7; row++) {
+        for (let col = 0; col < 17; col++) {
+          const c = document.createElementNS(NS, "circle");
+          c.setAttribute("cx", 24 + col * 44 + (row % 2) * 22);
+          c.setAttribute("cy", 20 + row * 40);
+          c.setAttribute("r", (5 + 1.3 * row).toFixed(1));
+          c.setAttribute("fill", "#5E2A4D");
+          ramp.appendChild(c);
+        }
+      }
+
+      // panel B parks offscreen-right INSIDE the clipped stage
+      gsap.set("#panelB", { x: 850 });
+
+      /* ---- timeline (percussive; motion inside frames 9..142) ---- */
+
+      // 2) dot screen prints on: mask rect height 0 -> full, one snap
+      tl.to("#maskRectA", { attr: { height: 976 }, duration: 0.8, ease: "power4.out" }, 0.3);
+
+      // 5) misregistration flick — plates apart for EXACTLY 2 frames
+      //    at a keyframed mark (never random, never CSS animation)
+      tl.set("#plateUnder", { x: -3, y: 2 }, 1.3);
+      tl.set("#plateOver", { x: 3, y: -1 }, 1.3);
+      tl.set(["#plateUnder", "#plateOver"], { x: 0, y: 0 }, 1.3 + 2 * F);
+
+      // 6) panel-gutter transition — both panels move between inset
+      //    positions; .gutter-stage clips them at the gutter edge
+      tl.to("#panelA", { x: -850, duration: 0.6, ease: "power4.inOut" }, 2.5);
+      tl.to("#panelB", { x: 0, duration: 0.6, ease: "power4.inOut" }, 2.5);
+
+      // 4) starburst pops behind the reveal (scale+rotate, power4.out)
+      tl.set("#burst", { opacity: 1 }, 3.3);
+      tl.from("#burst", { scale: 0, rotation: -30, duration: 0.35, ease: "power4.out" }, 3.3);
+
+      // 3) POW card slam: 1.6 -> 1.0 with back.in(2) + rotation snap;
+      //    opacity pops on hard. Panel overflow clips the wind-up.
+      tl.set("#statWrap", { opacity: 1 }, 3.42);
+      tl.from("#statCard", { scale: 1.6, rotation: 6, duration: 0.38, ease: "back.in(2)" }, 3.42);
+
+      // caption plate-flicks in with steps(2)
+      tl.fromTo(
+        "#capB",
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.14, ease: "steps(2)", immediateRender: false },
+        4.02
+      );
+      // motion ends 4.16s — last 8 frames (4.73s+) are stable
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

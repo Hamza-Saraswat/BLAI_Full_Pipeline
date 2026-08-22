@@ -1,0 +1,137 @@
+/* ============================================================
+   PACK: terminal — phosphor CLI world (skills/render-shorts/styles/terminal.md)
+   You're inside our box. Monospace everything, prompt cursors,
+   typewriter reveals, faint scanlines.
+
+   Easing personality (JS side): mechanical —
+     steps(N) eases, per-char typewriter stagger, cursor blink at
+     530ms (timeline .set() toggles — NEVER CSS animation).
+   Transitions: hard cut, or 200ms scramble-decode on the incoming
+   headline. NO flicker animation (motion-boundary rules apply).
+   ============================================================ */
+
+/* ---- fonts (self-hosted, no CDN at render) ---- */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono-vf.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #060A08;                        /* near-black, green-tinged */
+  --fg: #C9F7CF;                        /* pale phosphor */
+  --fg2: #38E07A;                       /* terminal green */
+  --accent: #FFB347;                    /* LOCKED brand anchor — amber phosphor */
+  --ok: #7BD88F;                        /* LOCKED semantic */
+  --bad: #FF6B6B;                       /* LOCKED semantic */
+  --muted: rgba(201, 247, 207, 0.45);   /* fg at 45% */
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;
+  --safe-top: 240px;
+  --safe-bottom: 660px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "JetBrains Mono", "Space Mono", Menlo, monospace;
+}
+
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- texture: scanlines overlay (STATIC — never animated) ---- */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.14) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+/* phosphor glow — low alpha, static */
+.glow        { text-shadow: 0 0 8px rgba(201, 247, 207, 0.35); }
+.glow-green  { text-shadow: 0 0 8px rgba(56, 224, 122, 0.35); }
+.glow-amber  { text-shadow: 0 0 8px rgba(255, 179, 71, 0.35); }
+
+/* ---- type ---- */
+.headline {
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+.body-text { font-weight: 700; font-size: 56px; line-height: 1.3; }
+.term-text { font-weight: 400; font-size: 40px; line-height: 1.5; }
+.label {
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.accent { color: var(--accent); }
+.green  { color: var(--fg2); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* ---- motifs: > beat lines, $ commands ---- */
+.beat-line::before { content: "> "; color: var(--fg2); }
+.cmd::before       { content: "$ "; color: var(--muted); }
+
+/* blinking block cursor — the █ glyph; blink driven by the GSAP
+   timeline (530ms .set() toggles), NOT by CSS animation */
+.cursor { color: var(--fg2); }
+
+/* ---- terminal window frame — the ONLY rounded corners in this pack ---- */
+.term-window {
+  border: 2px solid var(--fg2);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+.term-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 64px;
+  padding: 0 28px;
+  border-bottom: 1px solid rgba(56, 224, 122, 0.4);
+}
+.term-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--fg2);
+}
+.term-dot--amber { border-color: var(--accent); }
+.term-dot--muted { border-color: var(--muted); }
+.term-body { padding: 36px 40px; }
+
+/* everything else: sharp 1-2px lines, NO rounded corners */
+.rule      { height: 2px; background: var(--fg2); }
+.hairline  { height: 1px; background: var(--muted); }
+.box       { border: 2px solid var(--fg2); border-radius: 0; }

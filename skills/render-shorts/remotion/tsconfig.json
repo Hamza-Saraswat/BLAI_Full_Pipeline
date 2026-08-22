@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "lib": ["es2015"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true
+  },
+  "exclude": [
+    "remotion.config.ts",
+    // whisper.cpp's CMake build tree contains fake "compiler_depend.ts"
+    // timestamp files that are not TypeScript - keep tsc out of it.
+    "whisper.cpp",
+    "node_modules",
+    "out"
+  ]
+}

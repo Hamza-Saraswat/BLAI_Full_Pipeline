@@ -1,0 +1,187 @@
+/* ============================================================
+   PACK: axon — calm 2.5D machine-room (skills/render-shorts/styles/axon.md)
+   Every system is a small glowing diorama you can take apart.
+   Iso blocks with flat-fill face shading, floor-grid diamonds,
+   dashed steel leaders, amber data packets. NO gradients, NO
+   shadows — the 2.5D is projected math, not a 3D engine.
+
+   THE iso projection (define ONCE in the scene script, use it
+   for every polygon):
+     x' = (x - y) * cos30    y' = (x + y) * sin30 - z
+
+   Easing personality (JS side): weighty-premium —
+     builds     power3.inOut
+     landings   back.out(1.2)
+     conveyors  sine.inOut (manual per-segment tweens — the
+                bundled GSAP is core only, no MotionPathPlugin)
+     staggers   lag ~0.08 (floor ripple ordered by distance)
+   Transitions: hard cuts; one mechanism moves at a time.
+   Color law: structure is cool steel; the DATA is amber.
+   ============================================================ */
+
+/* ---- fonts (self-hosted static instances, no CDN at render) ---- */
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/sora-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/sora-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sometype Mono";
+  src: url("fonts/sometype-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sometype Mono";
+  src: url("fonts/sometype-mono-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #14161F;                       /* graphite-violet */
+  --fg: #D8DEE9;                       /* label off-white — CENTER-FRAME ONLY */
+  --accent: #FFB347;                   /* LOCKED — the data payload; never in margins */
+  --steel: #7FB4C9;                    /* steel-cyan secondary: leaders, ticks */
+  --face-top: #3D465E;                 /* iso face shading triplet — flat fills */
+  --face-left: #2A3147;
+  --face-right: #1D2334;
+  --floor: #232838;                    /* floor grid lines (margin-legal, Y≈40) */
+  --ok: #7BD88F;                       /* LOCKED semantic */
+  --bad: #FF6B6B;                      /* LOCKED semantic */
+  --muted: rgba(216, 222, 233, 0.5);
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;   /* text margin; UI rail strip itself is 120px */
+  --safe-top: 240px;
+  --safe-bottom: 660px;  /* bottom UI 450 + caption band y1260-1470 */
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Sora", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+/* content lives inside .safe by default — bright faces/labels/amber
+   must stay here (margin strips are luma-linted, Y>140 fails) */
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- type ---- */
+.headline {                 /* Sora — headlines only */
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 92px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.subhead {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 1.2;
+}
+.label {                    /* Sometype Mono — diagram labels */
+  font-family: "Sometype Mono", monospace;
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.label-strong {
+  font-family: "Sometype Mono", monospace;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.accent { color: var(--accent); }
+.steel  { color: var(--steel); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* ---- iso faces (SVG polygons pick these up via class) ----
+   Flat fills; thin bg-colored strokes separate adjacent faces. */
+.face-top   { fill: var(--face-top);   stroke: var(--bg); stroke-width: 2; }
+.face-left  { fill: var(--face-left);  stroke: var(--bg); stroke-width: 2; }
+.face-right { fill: var(--face-right); stroke: var(--bg); stroke-width: 2; }
+
+/* amber data payload (packets, tokens, weight cubes) */
+.packet-face { fill: var(--accent); stroke: var(--bg); stroke-width: 2; }
+
+/* floor-grid diamond tiles (script-generated in the diagram layer;
+   ripple = staggered opacity pulse ordered by distance) */
+.floor-tile { fill: none; stroke: var(--floor); stroke-width: 2; }
+
+/* dashed steel leader lines (exploded views) — FADE them in, never
+   dashoffset-draw (dash pattern clashes with the draw trick) */
+.leader {
+  fill: none;
+  stroke: var(--steel);
+  stroke-width: 2;
+  stroke-dasharray: 12 10;
+}
+
+/* small steel tick + mono sub-label row next to a block */
+.tick-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--steel);
+}
+.tick-label::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--steel);
+}
+
+/* static CSS fallback floor (full-bleed, margin-legal): iso grid as
+   crossed ±30° line families. Prefer script-built .floor-tile
+   diamonds when the floor itself must ripple. */
+.floor-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(60deg,  var(--floor) 0 2px, transparent 2px 52px),
+    repeating-linear-gradient(120deg, var(--floor) 0 2px, transparent 2px 52px);
+}
+
+/* diagram layer (iso polygons live here; viewBox = safe area px) */
+.diagram-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.diagram-layer svg { width: 100%; height: 100%; overflow: visible; }

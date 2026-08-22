@@ -1,0 +1,121 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: signal — kinetic type + count-down + scale-punch
+  (skills/render-shorts/styles/signal.md — the flagship look, extracted from the
+  original hello template in index.html)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/signal-snippet.html index.html && npx hyperframes lint
+  Or copy the patterns into your scene's index.html.
+
+  Signature techniques shown here:
+    1. hook text already on screen at frame 1 (never open blank)
+    2. accent-bar wipe (scaleX from 0, transform-origin left)
+    3. scale-punch emphasis 1.0 -> 1.12 -> 1.0 on a beat word
+    4. rise-in-place inside an overflow:hidden .line (px offsets,
+       never slide in from off-screen / never yPercent)
+    5. deterministic count-down via a proxy object tween
+  Easing: entrances power2.out, emphasis expo.out. No push-ins.
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/signal.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+      #accent-bar { margin: 32px 0 56px; }
+      #punch-word {
+        display: inline-block;          /* transformable */
+        transform-origin: left center;  /* punch grows from the text, not the box */
+      }
+      #stat-row {
+        display: inline-block;
+        transform-origin: left center;
+      }
+      .stat-line { margin-top: 110px; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <div class="stack">
+            <div class="label">Quantization</div>
+            <div id="accent-bar" class="accent-bar"></div>
+            <!-- hook: on screen at frame 1, no entrance animation -->
+            <h1 class="headline">
+              SHRINK THE<br />
+              <span id="punch-word" class="accent">NUMBERS</span>
+            </h1>
+            <!-- overflow:hidden wrapper so the stat rises IN PLACE -->
+            <div class="line stat-line">
+              <div id="stat-row" class="display">
+                <span id="stat-num" class="accent">16</span><span class="accent"> GB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // 1) accent bar wipes in from the left (motion starts frame 9+)
+      tl.from("#accent-bar", { scaleX: 0, duration: 0.5, ease: "power2.out" }, 0.3);
+
+      // 2) scale-punch the beat word: 1.0 -> 1.12 -> 1.0
+      tl.to("#punch-word", { scale: 1.12, duration: 0.14, ease: "power2.out" }, 1.0);
+      tl.to("#punch-word", { scale: 1.0, duration: 0.35, ease: "expo.out" }, 1.15);
+
+      // 3) stat row rises in place inside its overflow:hidden .line
+      tl.from("#stat-row", { y: 140, opacity: 0, duration: 0.6, ease: "power2.out" }, 1.7);
+
+      // 4) deterministic count-down 16 -> 4 (proxy object, snapped)
+      const stat = { v: 16 };
+      const statEl = () => document.getElementById("stat-num");
+      tl.to(
+        stat,
+        {
+          v: 4,
+          duration: 1.2,
+          ease: "power2.out",
+          onUpdate: () => { statEl().textContent = String(Math.round(stat.v)); },
+        },
+        2.4
+      );
+
+      // 5) landing punch on the final number
+      tl.to("#stat-row", { scale: 1.12, duration: 0.12, ease: "power2.out" }, 3.7);
+      tl.to("#stat-row", { scale: 1.0, duration: 0.35, ease: "expo.out" }, 3.83);
+      // motion ends 4.18s — last 8 frames (4.73s+) are stable
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "blai://storyboard.schema.json",
+  "title": "BLAI Short Storyboard v3",
+  "description": "The ONLY handoff between storyboard and downstream stages. Scene narrations joined with single spaces MUST equal narration_full exactly. Style packs, layout archetypes, sfx markers. How the story is told is the writer's call — no structural template is encoded here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "topic", "title", "description", "hashtags", "hook_text", "hook_candidates", "style_pack", "target_duration_s", "narration_full", "music_mood", "scenes"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,40}$" },
+    "topic": { "type": "string", "minLength": 8 },
+    "title": { "type": "string", "minLength": 8, "maxLength": 100, "description": "≤40 chars ideal (mobile truncation); keyword first; question-phrasing when natural; never verbatim hook_text" },
+    "description": { "type": "string", "maxLength": 1500, "description": "Restated keyword-rich title line, a 2-3 sentence setup, a 'You'll learn…' line, then the CTA + '(Narration is AI-generated.)'" },
+    "hashtags": { "type": "array", "minItems": 3, "maxItems": 15, "items": { "type": "string", "pattern": "^#[A-Za-z0-9]+$" }, "description": "8–12 targeted tags. Lead with the specific product/model name — channel search traffic is dominated by product queries." },
+    "tags": { "type": "array", "maxItems": 30, "items": { "type": "string", "minLength": 2, "maxLength": 60 }, "description": "OPTIONAL YouTube keyword tags (the Studio 'Tags' box, not hashtags). 15–25 lowercase phrases; include product names, the question form, and adjacent search terms." },
+    "hook_text": { "type": "string", "maxLength": 60, "description": "On-screen frame-1 text: ≤7 words, 3–5 ideal" },
+    "hook_candidates": { "type": "array", "minItems": 10, "items": { "type": "string" }, "description": "The ≥10 hooks written before picking (Hoyos practice); shown at Gate 1" },
+    "style_pack": { "type": "string", "enum": ["signal", "terminal", "sketch", "blueprint", "axon", "halftone", "silicon"], "description": "Check docs/styles/history.json — never the same pack as the previous video" },
+    "script_format": { "type": "string", "enum": ["classic", "smooth-explainer"], "description": "Optional; absent = classic. Per-format bands (duration, words, numbers policy, person) live in pipeline/formats.json — the validator enforces them." },
+    "structure": { "type": "string", "description": "Optional; the narrative shape chosen from script-structures.md (worked-example, myth-bust, comparison-ladder, news-react-so-what, how-to-three-moves, contrarian-take, story-first, number-first). Free text: the validator never rejects a value; the list in skills/script-gates/formats.json is informational and independent of script_format." },
+    "value_types": { "type": "string", "description": "Optional; the two locked value types from brand-vault/value-framework.md, comma-separated (TEACHES, EQUIPS, REFRAMES, PROVES). Carried for the audit, not validated." },
+    "target_duration_s": { "type": "integer", "minimum": 28, "maximum": 180, "description": "Union bound; the REAL band is per-format in pipeline/formats.json (classic 28–60 target 32–38; smooth-explainer 60–180 target 75–150)" },
+    "narration_full": { "type": "string", "minLength": 200, "maxLength": 3000, "description": "Union bound; per-format words band in pipeline/formats.json (classic ~85–110 words; smooth-explainer 250–450). Numbers as SPOKEN words. FK grade ≤5." },
+    "analogy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vehicle", "mapping"],
+      "description": "OPTIONAL creative note — if the script leans on one central analogy, record it for the reviewer. Never required, never validated.",
+      "properties": {
+        "vehicle": { "type": "string", "description": "The central analogy, if the script uses one" },
+        "mapping": { "type": "string", "description": "How it maps back to the real thing" },
+        "limit": { "type": "string", "description": "Where the analogy breaks, if that matters here" }
+      }
+    },
+    "music_mood": { "type": "string", "enum": ["curious-tech", "steady-build", "warm-optimist", "none"] },
+    "scenes": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "role", "tool", "layout_archetype", "narration", "on_screen_text", "visual_brief", "est_duration_s"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^s[1-9][0-9]?$" },
+          "role": { "type": "string", "enum": ["hook", "foreshadow", "explain", "payoff_close"], "description": "hook must be first (promise + frame-1 legible text); payoff_close must be last (delivers the promise, abrupt end, wordmark settle). Middle scenes are free — 'explain' and 'foreshadow' are interchangeable labels, foreshadow retained for back-compat with shipped boards." },
+          "tool": { "type": "string", "enum": ["hyperframes", "manim"] },
+          "layout_archetype": { "type": "string", "enum": ["centered-stack", "split-compare", "timeline", "grid", "giant-number", "diagram-flow"], "description": "Adjacent scenes must differ" },
+          "narration": { "type": "string", "minLength": 1 },
+          "on_screen_text": { "type": "string", "maxLength": 120, "description": "≤8 words per | beat" },
+          "visual_brief": { "type": "string", "minLength": 40, "maxLength": 700, "description": "Concrete and buildable; must specify a visual change at least every ~3s of the scene; hook scene must specify the frame-1 composition AND the ≤0.5s motion onset" },
+          "est_duration_s": { "type": "number", "minimum": 2, "maximum": 25 },
+          "render_notes": { "type": "string", "maxLength": 200, "description": "Optional producer hints for the scene worker (props, motifs, references) — passed verbatim, not validated for style" },
+          "sfx": { "type": "array", "maxItems": 3, "items": { "type": "object", "additionalProperties": false, "required": ["at", "name"], "properties": { "at": { "type": "string", "enum": ["start", "number-reveal", "end"] }, "name": { "type": "string", "enum": ["whoosh", "pop", "tick", "ding", "type"] } } }, "description": "≤6 total per video; boundaries + number reveals only" }
+        }
+      }
+    },
+    "notes_for_review": { "type": "string" }
+  }
+}

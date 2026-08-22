@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: blueprint — grid bg + stroke-draw + guides + refs
+  (skills/render-shorts/styles/blueprint.md — engineering schematic)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/blueprint-snippet.html index.html && npx hyperframes lint
+
+  Signature techniques shown here:
+    1. drafting grid background (.grid-bg — static, full-bleed;
+       dark enough to be legal in the UI margins)
+    2. stroke-draw reveal WITHOUT DrawSVG (the bundled GSAP is core
+       only): pathLength="1" + stroke-dasharray:1, then tween
+       stroke-dashoffset 1 -> 0. Works on <rect>, <line>, <path>.
+    3. dashed construction guides that appear BEFORE the shape
+       they define (fade, never draw — dashes + dashoffset clash)
+    4. corner tick marks, circled ref marker (.ref-marker), and a
+       dimension line whose label fades in AFTER
+    5. title-block corner stamp (.title-block), static from frame 1
+  Easing: drafting-machine — near-linear power1.inOut everywhere.
+  Order of appearance: guides -> shape -> ticks -> refs -> labels.
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/blueprint.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .hook { position: absolute; top: 0; left: 0; }
+      #refmark { position: absolute; left: 726px; top: 330px; opacity: 0; }
+      #dimlabel {
+        position: absolute;
+        left: 115px;
+        top: 826px;
+        width: 600px;
+        text-align: center;
+        opacity: 0;
+      }
+      .title-block { bottom: 24px; } /* clear of the caption band below the safe area */
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- static full-bleed drafting grid -->
+      <div class="grid-bg"></div>
+
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <!-- hook: stencil headline, on screen at frame 1 -->
+          <h1 class="headline hook">
+            SHRINK THE<br />
+            <span class="accent">NUMBERS</span>
+          </h1>
+
+          <!-- schematic layer (viewBox = safe area px) -->
+          <div class="schematic-layer">
+            <svg viewBox="0 0 830 1020" xmlns="http://www.w3.org/2000/svg">
+              <!-- 3) dashed construction guides — appear FIRST -->
+              <g stroke="rgba(95,180,255,0.55)" stroke-width="2" stroke-dasharray="14 10">
+                <line class="guide-h" x1="30" y1="400" x2="800" y2="400" style="opacity:0" />
+                <line class="guide-h" x1="30" y1="720" x2="800" y2="720" style="opacity:0" />
+                <line class="guide-v" x1="115" y1="320" x2="115" y2="800" style="opacity:0" />
+                <line class="guide-v" x1="715" y1="320" x2="715" y2="800" style="opacity:0" />
+              </g>
+
+              <!-- 2) the shape: stroke-only, draws itself along the guides -->
+              <rect
+                id="draw-rect"
+                x="115" y="400" width="600" height="320"
+                fill="none" stroke="#E8F1FF" stroke-width="2"
+                pathLength="1"
+                style="stroke-dasharray: 1; stroke-dashoffset: 1"
+              />
+
+              <!-- 4) corner tick marks (registration crosses) -->
+              <g stroke="#E8F1FF" stroke-width="2">
+                <g class="tick" style="opacity:0"><line x1="101" y1="400" x2="129" y2="400"/><line x1="115" y1="386" x2="115" y2="414"/></g>
+                <g class="tick" style="opacity:0"><line x1="701" y1="400" x2="729" y2="400"/><line x1="715" y1="386" x2="715" y2="414"/></g>
+                <g class="tick" style="opacity:0"><line x1="101" y1="720" x2="129" y2="720"/><line x1="115" y1="706" x2="115" y2="734"/></g>
+                <g class="tick" style="opacity:0"><line x1="701" y1="720" x2="729" y2="720"/><line x1="715" y1="706" x2="715" y2="734"/></g>
+              </g>
+
+              <!-- dimension line: draws, then arrowheads, then label -->
+              <g stroke="rgba(95,180,255,0.55)" stroke-width="2" fill="none">
+                <line id="dimline" x1="115" y1="790" x2="715" y2="790"
+                      pathLength="1" style="stroke-dasharray: 1; stroke-dashoffset: 1" />
+                <polyline class="dim-arrow" points="139,778 115,790 139,802" style="opacity:0" />
+                <polyline class="dim-arrow" points="691,778 715,790 691,802" style="opacity:0" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- 4) circled reference number + amber dimension label -->
+          <span id="refmark" class="ref-marker">1</span>
+          <div id="dimlabel" class="dim-label">4 BITS</div>
+
+          <!-- 5) title-block corner stamp, used straight (never ironic) -->
+          <div class="title-block">Section A-A</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const EASE = "power1.inOut"; // drafting-machine: near-linear, everywhere
+
+      // 1) guides appear BEFORE the shape they define (fade, staggered)
+      tl.to(".guide-h", { opacity: 1, duration: 0.3, ease: EASE, stagger: 0.12 }, 0.35);
+      tl.to(".guide-v", { opacity: 1, duration: 0.3, ease: EASE, stagger: 0.12 }, 0.6);
+
+      // 2) the rect draws itself (dasharray fallback — no DrawSVG needed)
+      tl.to("#draw-rect", { strokeDashoffset: 0, duration: 1.4, ease: EASE }, 1.1);
+
+      // 3) corner ticks snap in around the finished shape
+      tl.to(".tick", { opacity: 1, duration: 0.18, ease: EASE, stagger: 0.07 }, 2.6);
+
+      // 4) ref marker, then dimension line, then its label — in that order
+      tl.to("#refmark", { opacity: 1, duration: 0.35, ease: EASE }, 3.0);
+      tl.to("#dimline", { strokeDashoffset: 0, duration: 0.5, ease: EASE }, 3.2);
+      tl.to(".dim-arrow", { opacity: 1, duration: 0.2, ease: EASE }, 3.72);
+      tl.to("#dimlabel", { opacity: 1, duration: 0.35, ease: EASE }, 3.9);
+      // motion ends 4.25s — last 8 frames (4.73s+) are stable
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

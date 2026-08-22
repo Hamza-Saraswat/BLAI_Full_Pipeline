@@ -1,0 +1,161 @@
+/* ============================================================
+   PACK: blueprint — engineering schematic (skills/render-shorts/styles/blueprint.md)
+   The systems-diagram look of someone who has actually built it.
+   Faint grid, stroke-only shapes drawing themselves, dashed
+   construction lines, stencil headlines.
+
+   Easing personality (JS side): drafting-machine —
+     near-linear power1.inOut, line-draw reveals
+     (stroke-dashoffset), guides appear BEFORE the shape they
+     define, dimension labels fade in AFTER.
+   Transitions: grid-pan (content slides along grid axes),
+   draw/erase.
+   Motifs: title-block corner stamp, dimension arrows,
+   "SECTION A-A" style labels used straight (never ironic).
+   ============================================================ */
+
+/* ---- fonts (self-hosted, no CDN at render) ---- */
+@font-face {
+  font-family: "Allerta Stencil";
+  src: url("fonts/allerta-stencil-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-vf.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #0A1A2F;                        /* deep drafting blue */
+  --fg: #E8F1FF;                        /* blue-white */
+  --accent: #FFB347;                    /* LOCKED — "annotated in amber" */
+  --construction: rgba(95, 180, 255, 0.55); /* dashed guides, dimensions */
+  --grid-line: rgba(30, 58, 95, 0.25);  /* #1E3A5F at 25% */
+  --ok: #7BD88F;                        /* LOCKED semantic */
+  --bad: #FF6B6B;                       /* LOCKED semantic */
+  --muted: rgba(232, 241, 255, 0.5);
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;
+  --safe-top: 240px;
+  --safe-bottom: 660px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+/* ---- texture: drafting grid, 10px minor / 50px major (1px #1E3A5F
+       lines at 25%; major lines double up where they coincide).
+       Dark enough to be legal in the UI margins — content still
+       stays inside .safe. ---- */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg,  var(--grid-line) 0 1px, transparent 1px 50px),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 50px),
+    repeating-linear-gradient(0deg,  var(--grid-line) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 10px);
+}
+
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- type ---- */
+.headline {                 /* stencil — headlines ONLY */
+  font-family: "Allerta Stencil", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.label {                    /* Inter labels/body */
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.dim-label {                /* dimension callouts */
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+.body-text { font-weight: 600; font-size: 54px; line-height: 1.3; }
+.accent       { color: var(--accent); }
+.construction { color: var(--construction); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* ---- line language: 2px stroke-only, sharp corners ---- */
+.stroke-box {
+  border: 2px solid var(--fg);
+  border-radius: 0;
+  background: transparent;   /* fill_opacity 0 */
+}
+.dashed-guide-h { height: 0; border-top: 2px dashed var(--construction); }
+.dashed-guide-v { width: 0; border-left: 2px dashed var(--construction); }
+
+/* circled reference numbers 1/2/3 */
+.ref-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--accent);
+}
+
+/* title-block corner stamp (small wordmark box) */
+.title-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--construction);
+  padding: 14px 22px;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--construction);
+}
+
+/* SVG schematic layer (stroke-draw shapes live here) */
+.schematic-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.schematic-layer svg { width: 100%; height: 100%; overflow: visible; }

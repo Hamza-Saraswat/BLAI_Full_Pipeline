@@ -1,0 +1,252 @@
+/* ============================================================
+   PACK: halftone — midnight comic press (skills/render-shorts/styles/halftone.md)
+   Loud pop-art print: every stat lands like a punch panel.
+   Ben-Day dot screens, chunky Bangers punch cards, starburst
+   rays, keyframed misregistration flicks, panel-gutter cuts.
+   Mechanically perfect print process — the OPPOSITE of sketch's
+   hand wobble. No jitter, no rough.js, no randomness ever.
+
+   Easing personality (JS side): percussive, beat-mapped —
+     back.in(2) impacts, power4.out snaps, steps(2) plate-flicks,
+     at most ONE elastic.out(1,0.4) mega-punch per video.
+   Transitions: panel-gutter slides (power4.inOut) INSIDE the
+   overflow-hidden .gutter-stage — bright pixels never cross
+   into the margins mid-slide.
+
+   THE STYLE LAW (linter survival): a full-perimeter gutter of
+   pure #16121F ink, WIDER than the linter margin strips
+   (left >=90px, right >=160px, top >=240px, bottom >=660px), on
+   EVERY frame. Panels and all bright content (cream / amber /
+   dots) always inset within it. Cream at Y~230 in a margin is an
+   instant lint fail — .gutter-stage (overflow: hidden) IS the
+   compliance mechanism; never place content outside it.
+   ============================================================ */
+
+/* ---- fonts (self-hosted, no CDN at render) ---- */
+@font-face {
+  font-family: "Bangers";
+  src: url("fonts/Bangers-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("fonts/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #16121F;                        /* ink violet-black — page + gutter */
+  --ink: #0E0B16;                       /* panel-interior ink */
+  --fg: #F2E8D5;                        /* cream — PANEL-INTERIOR ONLY */
+  --accent: #FFB347;                    /* LOCKED brand anchor — the "POW" ink */
+  --mauve: #8B7A9E;                     /* muted mauve — labels, kickers */
+  --dotfield: #5E2A4D;                  /* deep red-violet — dot screens */
+  --ok: #7BD88F;                        /* LOCKED semantic */
+  --bad: #FF6B6B;                       /* LOCKED semantic */
+  --muted: rgba(242, 232, 213, 0.55);   /* cream at 55% */
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;
+  --safe-top: 240px;
+  --safe-bottom: 660px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  /* Space Mono is the BODY role (captions, labels, kickers).
+     Bangers is display-only via the punch classes below. */
+  font-family: "Space Mono", "JetBrains Mono", Menlo, monospace;
+}
+
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- THE perimeter gutter stage ----
+   Same box as .safe but with overflow: hidden — this is the law's
+   enforcement: panels slide BETWEEN inset positions inside this
+   clip box, so mid-transition bright pixels are cut off at the
+   gutter edge and the margin strips + caption band (y 1260-1470)
+   stay pure #16121F on every frame. ALL content lives in here. */
+.gutter-stage {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+  overflow: hidden;
+}
+
+/* ---- comic panel: thick cream border on panel ink ----
+   Hard geometry — square corners, mechanically straight edges.
+   Inset 12px from the stage so borders never kiss the gutter. */
+.panel {
+  position: absolute;
+  inset: 12px;
+  background: var(--ink);
+  border: 10px solid var(--fg);
+  border-radius: 0;                     /* panels are never rounded */
+  overflow: hidden;                     /* dots/cards clip at the frame */
+}
+
+/* comic caption box — small cream tab, ink mono text */
+.caption-box {
+  display: inline-block;
+  background: var(--fg);
+  color: var(--ink);
+  padding: 10px 26px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/* ---- punch cards: chunky Bangers stat cards ----
+   Structure (the ink shadow is a TWIN ELEMENT, never box-shadow):
+
+     <div class="punch-wrap">              static rotation wrapper
+       <div class="punch-card">            GSAP animates THIS (slam)
+         <div class="punch-shadow"></div>  offset ink twin, behind
+         <div class="punch-face">
+           <span class="punch">40 TOK/S!</span>
+         </div>
+       </div>
+     </div>
+
+   Slam recipe: from {scale:1.6, rotation:6} to rest, 0.35-0.4s,
+   ease back.in(2); opacity pops on hard (1-frame, ease "none"). */
+.punch-wrap { position: absolute; }     /* set static rotate() inline */
+.punch-card { position: relative; }
+.punch-shadow {
+  position: absolute;
+  inset: 0;
+  transform: translate(7px, 9px);       /* offset ink — NOT a blur */
+  background: var(--ink);
+  border-radius: 18px;
+}
+.punch-face {
+  position: relative;
+  background: var(--fg);                /* cream card; amber = POW card */
+  border: 8px solid var(--ink);
+  border-radius: 18px;
+  padding: 18px 44px 8px;               /* Bangers rides high — trim below */
+  text-align: center;
+}
+.punch-face--amber { background: var(--accent); }
+
+/* ---- type ----
+   Bangers = CAPS-ONLY display role (uppercase enforced).
+   Space Mono = everything that isn't a punch line. */
+.punch {
+  font-family: "Bangers", "Arial Black", sans-serif;
+  font-weight: 400;                     /* Bangers ships ONE weight */
+  font-size: 128px;
+  line-height: 0.98;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.punch-big { font-size: 168px; }        /* modifier on .punch */
+.kicker {                               /* Space Mono micro-label */
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--mauve);
+}
+.body-text {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.35;
+}
+.accent { color: var(--accent); }
+.cream  { color: var(--fg); }
+.mauve  { color: var(--mauve); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* ---- misregistration flick ----
+   Twin text layers, normally in perfect register; at exact
+   keyframed timeline marks the GSAP timeline .set()s them apart
+   +/-3px for 2-3 frames, then .set()s them back. NEVER random,
+   NEVER a CSS animation.
+
+     <span class="misreg">
+       <span class="misreg-under">NO H100</span>   amber plate
+       <span class="misreg-over">NO H100</span>    front plate
+     </span>                                                     */
+.misreg { position: relative; display: inline-block; }
+.misreg-under {
+  position: absolute;
+  inset: 0;
+  color: var(--accent);                 /* the amber plate peeks on flick */
+}
+.misreg-over { position: relative; }
+
+/* ---- Ben-Day dot screens ----
+   .dot-field hosts an inline SVG. Dots are an SVG <pattern> of
+   EQUAL circles on a 45-degree lattice (two dots per square tile)
+   — a regular grid, zero randomness. Reveal by tweening the
+   height of a white <rect> inside a <mask> (attr tween).
+
+     <svg viewBox="0 0 W H">
+       <defs>
+         <pattern id="benday" width="56" height="56"
+                  patternUnits="userSpaceOnUse">
+           <circle cx="14" cy="14" r="10" fill="#5E2A4D"/>
+           <circle cx="42" cy="42" r="10" fill="#5E2A4D"/>
+         </pattern>
+         <mask id="reveal">
+           <rect id="maskRect" width="W" height="0" fill="#fff"/>
+         </mask>
+       </defs>
+       <rect width="W" height="H" fill="url(#benday)"
+             mask="url(#reveal)"/>
+     </svg>
+
+   Duotone screen = a second, SPARSER amber pattern (bigger tile)
+   layered under or over the red-violet one.
+   Size-ramp shading = build-time-generated <circle> rows with
+   r = r0 + k * row (deterministic function of row — fake shading;
+   gradients are banned, dot ramps ARE the shading).
+   DOT BUDGET: <=600 visible dots per frame — size tile/rows so
+   (tiles-across * tiles-down * dots-per-tile) stays under it. */
+.dot-field { position: absolute; pointer-events: none; }
+.dot-field svg { display: block; width: 100%; height: 100%; }
+
+/* ---- starburst rays ----
+   Jagged star polygon (SVG <polygon>, points computed once at
+   load by a deterministic formula — no randomness) that pops
+   scale+rotate behind a reveal. Amber is its ink. */
+.burst { position: absolute; pointer-events: none; }
+.burst svg { display: block; width: 100%; height: 100%; overflow: visible; }

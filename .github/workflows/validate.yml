@@ -1,0 +1,23 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  icm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: ICM conventions (shorts)
+        run: python3 tools/validate.py workspaces/shorts --allow-outputs
+      - name: ICM conventions (long-form)
+        run: python3 tools/validate.py workspaces/long-form --allow-outputs
+      - name: Hub notes and packages against schemas
+        run: python3 tools/check_outputs.py
+      - name: Python syntax
+        run: for d in tools build skills; do [ -d "$d" ] && python3 -m compileall -q "$d"; done; true

@@ -1,0 +1,130 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: terminal — window frame + typewriter + cursor
+  (skills/render-shorts/styles/terminal.md — phosphor CLI world)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/terminal-snippet.html index.html && npx hyperframes lint
+
+  Signature techniques shown here:
+    1. scanlines overlay (.scanlines — STATIC, never animated)
+    2. terminal window frame (.term-window: the only rounded corners)
+    3. typewriter — a proxy-object tween slices the command string
+       one char per tick (seek-safe: onUpdate re-evaluates at any
+       seeked frame, so the cursor always hugs the last typed char)
+    4. blinking block cursor at 530ms — timeline .set() toggles,
+       NEVER a CSS animation (must be seek-driven)
+    5. > beat-line and $ command motifs via ::before content
+  Easing: mechanical (stepped/instant reveals, ease "none").
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/terminal.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+      .hook-indent { padding-left: 1.2em; } /* aligns under the "> " prefix */
+      #window { margin-top: 96px; }
+      #typed { white-space: pre; }
+      #out-line { margin-top: 18px; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <div class="stack">
+            <!-- hook: on screen at frame 1, > prompt prefix on beat lines -->
+            <h1 class="headline glow">
+              <span class="beat-line">SHRINK THE</span><br />
+              <span class="hook-indent"><span class="accent glow-amber">NUMBERS</span></span>
+            </h1>
+
+            <!-- terminal window frame: header dots + typed command -->
+            <div id="window" class="term-window">
+              <div class="term-header">
+                <span class="term-dot"></span>
+                <span class="term-dot term-dot--amber"></span>
+                <span class="term-dot term-dot--muted"></span>
+              </div>
+              <div class="term-body">
+                <div class="term-text cmd glow-green"
+                  ><span id="typed" class="green">ollama run llama3:8b-q4_K_M</span
+                  ><span id="cursor" class="cursor">█</span></div>
+                <div id="out-line" class="term-text">4.9 GB &middot; <span class="ok">exit 0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- static scanlines above content -->
+        <div class="scanlines"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // 3) typewriter: proxy tween slices the string one char per tick.
+      //    ease "none" + Math.floor = stepped/mechanical; onUpdate is
+      //    re-evaluated on every seek, so any frame shows the right slice
+      //    and the inline cursor hugs the last typed character.
+      const typedEl = document.getElementById("typed");
+      const commandText = typedEl.textContent;
+      typedEl.textContent = "";
+      const TYPE_START = 0.5, CHAR_TICK = 0.055;
+      const type = { n: 0 };
+      tl.to(
+        type,
+        {
+          n: commandText.length,
+          duration: CHAR_TICK * commandText.length,
+          ease: "none",
+          onUpdate: () => {
+            typedEl.textContent = commandText.slice(0, Math.floor(type.n));
+          },
+        },
+        TYPE_START
+      );
+      const typeEnd = TYPE_START + CHAR_TICK * commandText.length; // ~2.0s
+
+      // output line snaps in (hard appear — no easing curves here)
+      tl.set("#out-line", { opacity: 1 }, typeEnd + 0.45);
+
+      // 4) cursor: solid while typing, then blink at 530ms via .set()
+      //    toggles; parked solid before the stable tail (last 8 frames)
+      let visible = false;
+      for (let t = typeEnd + 0.1; t < 4.5; t += 0.53) {
+        tl.set("#cursor", { opacity: visible ? 1 : 0 }, t);
+        visible = !visible;
+      }
+      tl.set("#cursor", { opacity: 1 }, 4.55);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

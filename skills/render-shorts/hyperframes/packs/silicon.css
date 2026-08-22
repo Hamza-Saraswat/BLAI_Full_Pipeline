@@ -1,0 +1,289 @@
+/* ============================================================
+   PACK: silicon — matte-black circuit board (skills/render-shorts/styles/silicon.md)
+   Premium matte-black PCB; information travels as light down
+   copper. Filled metal, weighted stroke hierarchy, luminous
+   signal traffic. Amber #FFB347 IS the conductive material:
+   unlit traces sit at deep copper #7A5A2E and light to amber
+   when signal flows.
+
+   Easing personality (JS side): machine-placement —
+     power2.inOut trace routing (45°/90° bends only), LINEAR
+     signal pulses, power3.out chip drops (scale 1.15 -> 1),
+     back.out(1.3) via pops, steps(n)/.set() pad sequences.
+     No wobble, ever.
+   Glow law: 2-3 stacked stroke copies (wide low-opacity ->
+     thin full-opacity). NEVER filter: blur / text-shadow —
+     type does not glow in this pack (Manim parity).
+   Green law: the solder-mask green cast exists only below
+     luminance 40 (bg/board grid). All bright elements are
+     amber/silver/white. No scanlines, no CRT.
+   ============================================================ */
+
+/* ---- fonts (self-hosted, no CDN at render) ---- */
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("fonts/ChakraPetch-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("fonts/ChakraPetch-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("fonts/ChakraPetch-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/IBMPlexMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #0E1211;                        /* solder-mask charcoal (green CAST) */
+  --fg: #C9D2CC;                        /* silkscreen — center-frame only */
+  --accent: #FFB347;                    /* LOCKED — ENIG gold / energized copper */
+  --tin: #8FA0A8;                       /* tin/nickel — secondary traces, pads */
+  --copper-unlit: #7A5A2E;              /* deep copper shadow — UNLIT traces */
+  --grid-line: #1A211E;                 /* board grid (margin-legal, Y~31) */
+  --chip-body: #1A211E;                 /* dark epoxy = board-grid tone */
+  --ok: #7BD88F;                        /* LOCKED semantic */
+  --bad: #FF6B6B;                       /* LOCKED semantic */
+  --muted: rgba(201, 210, 204, 0.5);    /* silkscreen at 50% */
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;
+  --safe-top: 240px;
+  --safe-bottom: 660px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Chakra Petch", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+/* ---- texture: board grid, 60px squares of 1px #1A211E lines.
+       Dark enough (Y~31) to be legal in the UI margins — bright
+       content (amber/tin/silkscreen) still stays inside .safe. ---- */
+.board-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg,  var(--grid-line) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 60px);
+}
+
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- type ---- */
+.headline {                 /* Chakra Petch bold — squared techno */
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1.08;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.label {                    /* Chakra Petch semibold labels */
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.body-text { font-weight: 600; font-size: 54px; line-height: 1.3; }
+.designator {               /* reference designators: U1, VRAM0, KV$ */
+  font-family: "IBM Plex Mono", Menlo, monospace;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+.value {                    /* mono values/readouts */
+  font-family: "IBM Plex Mono", Menlo, monospace;
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+.accent { color: var(--accent); }
+.silk   { color: var(--fg); }
+.tin    { color: var(--tin); }
+.copper { color: var(--copper-unlit); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* ---- SVG board layer (traces/vias live here; viewBox = safe px) ---- */
+.board-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.board-layer svg { width: 100%; height: 100%; overflow: visible; }
+
+/* ---- trace strokes: weighted hierarchy, rounded caps (etched copper).
+       45°/90° bends ONLY — every segment horizontal, vertical, or
+       |dx| == |dy|. Draw-on = pathLength="1" + dasharray/dashoffset. ---- */
+.trace-unlit {              /* copper before signal flows */
+  stroke: var(--copper-unlit);
+  stroke-width: 5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.trace-tin {                /* secondary/quiet routing */
+  stroke: var(--tin);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---- glow law: stacked stroke copies, wide->thin. Apply all three
+       classes to three copies of the SAME path. NEVER filter: blur. ---- */
+.glow-wide {
+  stroke: var(--accent);
+  stroke-width: 22;
+  stroke-opacity: 0.12;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.glow-mid {
+  stroke: var(--accent);
+  stroke-width: 12;
+  stroke-opacity: 0.3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.glow-core {
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-opacity: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* pulse copies (short travelling dash) — pair wide + core */
+.pulse-wide {
+  stroke: var(--accent);
+  stroke-width: 18;
+  stroke-opacity: 0.25;
+  fill: none;
+  stroke-linecap: round;
+}
+.pulse-core {
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-opacity: 1;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* ---- via: concentric rings at a trace endpoint (annulus + hole) ---- */
+.via-glow { stroke: var(--accent); stroke-opacity: 0.15; stroke-width: 18; fill: none; }
+.via-ring { stroke: var(--accent); stroke-width: 8; fill: none; }
+.via-hole { fill: var(--bg); }
+
+/* ---- component: chip = FILLED rounded rect + pin stubs (this pack
+       has weight — never stroke-only hero shapes) ---- */
+.chip {
+  position: absolute;
+  background: var(--chip-body);
+  border: 3px solid var(--tin);
+  border-radius: 14px;
+}
+.chip-label {               /* die marking — mono, silkscreen */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBM Plex Mono", Menlo, monospace;
+  font-weight: 600;
+  font-size: 44px;
+  letter-spacing: 6px;
+  color: var(--fg);
+}
+.chip-pin {
+  position: absolute;
+  width: 26px;
+  height: 12px;
+  background: var(--tin);
+}
+.chip-pin--l { left: -26px; }
+.chip-pin--r { right: -26px; }
+.chip-pin1 {                /* pin-1 index dot, silkscreen */
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--fg);
+}
+.pad {                      /* footprint pad: unlit copper until soldered */
+  position: absolute;
+  width: 32px;
+  height: 18px;
+  border-radius: 3px;
+  background: var(--copper-unlit);
+}
+
+/* ---- silkscreen callout: dashed outline (FADE in — dashes never
+       draw) + typed designator inside ---- */
+.silk-box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--fg);
+  border-radius: 0;
+}
+
+/* fab mark — quiet corner motif (muted silkscreen, inside .safe) */
+.fab-mark {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  font-family: "IBM Plex Mono", Menlo, monospace;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}

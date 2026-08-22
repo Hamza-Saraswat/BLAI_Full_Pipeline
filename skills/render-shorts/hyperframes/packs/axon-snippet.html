@@ -1,0 +1,215 @@
+<!doctype html>
+<!-- ============================================================
+  PACK SNIPPET: axon — iso diorama: floor ripple + extrusion +
+  exploded leaders + amber packet conveyor
+  (skills/render-shorts/styles/axon.md — calm 2.5D machine-room)
+
+  This file is BOTH the reference snippet and a renderable 5s hello
+  composition. Asset paths are PROJECT-ROOT-relative ("packs/...")
+  because scene workers author index.html at the project root:
+      cp packs/axon-snippet.html index.html && npx hyperframes lint
+
+  Signature techniques shown here:
+    1. THE iso projection, defined ONCE (iso() below) and used for
+       every polygon:  x' = (x-y)cos30,  y' = (x+y)sin30 - z
+    2. floor-grid diamond ripple — script-built .floor-tile cells,
+       opacity stagger ordered by distance (lag 0.08 per ring)
+    3. iso extrusion build — a proxy tween {h} rewrites the prism's
+       three polygon points each update (top rhombus + 2 side
+       faces); pure function of h, so it is seek-safe
+    4. exploded-view separation along the iso up-axis (screen
+       vertical) with dashed steel leaders FADED in after (never
+       dashoffset-drawn — dash pattern clashes with the draw trick)
+    5. amber packet conveyor — the data payload rides a two-segment
+       right-angle iso path as manual per-segment x/y tweens
+       (projection is linear: screen-lerp = world-lerp; the bundled
+       GSAP is core only, NO MotionPathPlugin)
+  Color law: structure is cool steel; the DATA is amber.
+  Easing: weighty-premium — power3.inOut builds, back.out(1.2)
+  landings, sine.inOut conveyor segments. Draw order back-to-front:
+  floor -> slab -> lid -> leaders -> packet.
+  First 8 and last 8 frames are motion-free.
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/axon.css" />
+    <style>
+      /* snippet-local layout only — all tokens/type come from the pack CSS */
+      .hook { position: absolute; top: 0; left: 0; }
+      #xlabel {
+        position: absolute;
+        left: 10px;
+        top: 600px;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="5"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <!-- hook: Sora headline, on screen at frame 1 -->
+          <h1 class="headline hook">
+            SHRINK THE<br />
+            <span class="accent">NUMBERS</span>
+          </h1>
+
+          <!-- diagram layer (viewBox = safe area px); groups are
+               DOM-ordered back-to-front — Manim-style painter rules -->
+          <div class="diagram-layer">
+            <svg id="diorama" viewBox="0 0 830 1020" xmlns="http://www.w3.org/2000/svg">
+              <g id="floor"></g>
+              <g id="slab" style="opacity: 0"></g>
+              <g id="lid" style="opacity: 0"></g>
+              <g id="leaders"></g>
+              <g id="packet" style="opacity: 0"></g>
+            </svg>
+          </div>
+
+          <!-- steel mono annotation, used straight -->
+          <div id="xlabel" class="label tick-label"><span>EXPLODED</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- THE iso projection (defined once, used everywhere) ---- */
+      const COS = Math.cos(Math.PI / 6); // cos 30
+      const SIN = 0.5;                   // sin 30
+      const O = { x: 415, y: 700 };      // floor origin in safe-area px
+      function iso(x, y, z) {
+        return { x: O.x + (x - y) * COS, y: O.y + (x + y) * SIN - z };
+      }
+      const NS = "http://www.w3.org/2000/svg";
+      function poly(parent, cls) {
+        const p = document.createElementNS(NS, "polygon");
+        p.setAttribute("class", cls);
+        parent.appendChild(p);
+        return p;
+      }
+      function setQuad(el, pts) {
+        el.setAttribute(
+          "points",
+          pts.map((p) => iso(p[0], p[1], p[2])).map((s) => `${s.x},${s.y}`).join(" ")
+        );
+      }
+
+      /* ---- 2) floor-grid diamonds, ripple-ordered by distance ---- */
+      const floorG = document.getElementById("floor");
+      const CELL = 56;
+      const tiles = [];
+      for (let i = -3; i <= 3; i++) {
+        for (let j = -3; j <= 3; j++) {
+          const t = poly(floorG, "floor-tile");
+          const cx = i * CELL, cy = j * CELL, h = CELL / 2;
+          setQuad(t, [
+            [cx - h, cy - h, 0], [cx + h, cy - h, 0],
+            [cx + h, cy + h, 0], [cx - h, cy + h, 0],
+          ]);
+          t.style.opacity = "0";
+          tiles.push({ el: t, ring: Math.abs(i) + Math.abs(j) });
+        }
+      }
+
+      /* ---- 3) iso prism: top rhombus + 2 side faces (flat fills).
+             setPrism(h) is a pure function of h -> seek-safe. ---- */
+      function makePrism(g) {
+        // DOM order = painter order: sides first, top last
+        return {
+          left: poly(g, "face-left"),
+          right: poly(g, "face-right"),
+          top: poly(g, "face-top"),
+        };
+      }
+      function setPrism(f, x, y, w, d, h, z0) {
+        const z1 = z0 + h;
+        setQuad(f.left,  [[x, y + d, z0], [x + w, y + d, z0], [x + w, y + d, z1], [x, y + d, z1]]);
+        setQuad(f.right, [[x + w, y, z0], [x + w, y + d, z0], [x + w, y + d, z1], [x + w, y, z1]]);
+        setQuad(f.top,   [[x, y, z1], [x + w, y, z1], [x + w, y + d, z1], [x, y + d, z1]]);
+      }
+      const slab = makePrism(document.getElementById("slab"));
+      setPrism(slab, -75, -75, 150, 150, 0.001, 0); // flat on the floor at load
+      const lid = makePrism(document.getElementById("lid"));
+      setPrism(lid, -75, -75, 150, 150, 70, 110);   // resting on the slab
+
+      /* ---- 4) dashed steel leaders along the separation axis ---- */
+      const EXPLODE = 70; // lid rises 70px (screen up = iso up-axis)
+      const leadersG = document.getElementById("leaders");
+      [[-75, 75], [75, 75], [75, -75]].forEach(([cx, cy]) => {
+        const l = document.createElementNS(NS, "line");
+        l.setAttribute("class", "leader");
+        const a = iso(cx, cy, 110);
+        l.setAttribute("x1", a.x); l.setAttribute("y1", a.y);
+        l.setAttribute("x2", a.x); l.setAttribute("y2", a.y - EXPLODE);
+        l.style.opacity = "0";
+        leadersG.appendChild(l);
+      });
+
+      /* ---- 5) amber packet (the data payload) + its conveyor ---- */
+      const packet = {
+        left: poly(document.getElementById("packet"), "packet-face"),
+        right: poly(document.getElementById("packet"), "packet-face"),
+        top: poly(document.getElementById("packet"), "packet-face"),
+      };
+      // cube world size 26, built at path start P0 = (-190, 130)
+      setPrism(packet, -190 - 13, 130 - 13, 26, 26, 26, 0);
+      // two-segment right-angle path: P0 -> P1 = (130, 130) -> P2 = (130, -20)
+      // projection is linear, so per-segment screen deltas ARE the path
+      const D1 = { x: (130 - -190) * COS, y: (130 - -190) * SIN }; // along +x
+      const D2 = { x: (0 - -150) * COS,   y: (-150) * SIN };       // along -y
+
+      /* ---- timeline (weighty-premium; motion inside frames 9..142) ---- */
+      // 2) floor ripple: distance-ordered stagger, lag 0.08 per ring
+      tiles.forEach((t) => {
+        tl.to(t.el, { opacity: 1, duration: 0.45, ease: "power3.inOut" },
+              0.30 + 0.08 * t.ring);
+      });
+
+      // 3) extrusion build: proxy tween rewrites the slab's points
+      const ext = { h: 0.001 };
+      tl.set("#slab", { opacity: 1 }, 1.1);
+      tl.to(ext, {
+        h: 110,
+        duration: 1.0,
+        ease: "power3.inOut",
+        onUpdate: () => setPrism(slab, -75, -75, 150, 150, ext.h, 0),
+      }, 1.1);
+
+      // block landing: the lid settles with a weighty overshoot
+      tl.fromTo("#lid", { y: 34, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.2)" }, 2.2);
+
+      // 4) exploded-view separation, then leaders + label fade in AFTER
+      tl.to("#lid", { y: -EXPLODE, duration: 0.5, ease: "power3.inOut" }, 2.95);
+      tl.to(".leader", { opacity: 1, duration: 0.25, stagger: 0.08 }, 3.5);
+      tl.to("#xlabel", { opacity: 1, duration: 0.3 }, 3.55);
+
+      // 5) packet conveyor: manual per-segment tweens, sine.inOut
+      tl.to("#packet", { opacity: 1, duration: 0.25, ease: "back.out(1.2)" }, 3.6);
+      tl.to("#packet", { x: D1.x, y: D1.y, duration: 0.42, ease: "sine.inOut" }, 3.9);
+      tl.to("#packet", { x: D1.x + D2.x, y: D1.y + D2.y, duration: 0.28, ease: "sine.inOut" }, 4.34);
+      // motion ends 4.62s — last 8 frames (4.73s+) are stable
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

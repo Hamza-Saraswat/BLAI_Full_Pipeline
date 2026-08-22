@@ -1,0 +1,131 @@
+/* ============================================================
+   PACK: sketch — chalk on slate (skills/render-shorts/styles/sketch.md)
+   A sharp friend explaining on a board. Rough strokes, handwritten
+   type, draw-on reveals. DARK slate, not light paper — this is
+   "chalkboard", not "notebook" (keeps the dark-family feed
+   signature + the safe-zone linter's bright-pixel detection valid).
+
+   Easing personality (JS side): human —
+     gentle overshoot back.out(1.2), draw-on reveals
+     (stroke-dashoffset), nothing perfectly linear.
+   Transitions: chalk-swipe wipe (masked erase), or draw-over.
+   Motifs: circled words, underlines that overshoot, arrows with
+   wobble, crossed-out wrong answers.
+
+   Rough strokes come from the vendored rough.js
+   (packs/vendor/rough.js) — ALWAYS pass a seed (deterministic
+   renders). See packs/sketch-snippet.html for the shape factory.
+   ============================================================ */
+
+/* ---- fonts (self-hosted, no CDN at render) ---- */
+@font-face {
+  font-family: "Shantell Sans";
+  src: url("fonts/shantell-sans-vf.woff2") format("woff2");
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("fonts/caveat-vf.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---- reset + canvas (identical across packs) ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+/* ---- tokens ---- */
+:root {
+  --bg: #151C25;                        /* dark slate */
+  --fg: #F2EDE4;                        /* chalk white */
+  --accent: #FFB347;                    /* LOCKED brand anchor — amber chalk */
+  --mint: #9FD8CB;                      /* mint chalk, sparingly */
+  --ok: #7BD88F;                        /* LOCKED semantic */
+  --bad: #FF6B6B;                       /* LOCKED semantic */
+  --muted: rgba(242, 237, 228, 0.5);
+
+  /* safe-area geometry — LOCKED, identical in every pack */
+  --safe-left: 90px;
+  --safe-right: 160px;
+  --safe-top: 240px;
+  --safe-bottom: 660px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Shantell Sans", cursive, sans-serif;
+}
+
+.safe {
+  position: absolute;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  top: var(--safe-top);
+  bottom: var(--safe-bottom);
+}
+
+/* ---- texture: subtle grain (STATIC feTurbulence — never animated;
+       fixed seed keeps it deterministic) ---- */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch' seed='7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- type ---- */
+.chalk {                    /* headlines — Shantell Sans */
+  font-family: "Shantell Sans", cursive;
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 1.15;
+}
+.chalk-big {
+  font-family: "Shantell Sans", cursive;
+  font-weight: 700;
+  font-size: 160px;
+  line-height: 1.05;
+}
+.annotation {               /* margin notes — Caveat */
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 1.1;
+  color: var(--mint);
+}
+.annotation--amber { color: var(--accent); }
+.body-text {
+  font-family: "Shantell Sans", cursive;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1.35;
+}
+.accent { color: var(--accent); }
+.mint   { color: var(--mint); }
+.ok     { color: var(--ok); }
+.bad    { color: var(--bad); }
+.muted  { color: var(--muted); }
+
+/* crossed-out wrong answer (pair with a rough.js strike line) */
+.crossed { opacity: 0.55; }
+
+/* ---- line language: irregular hand-drawn 3-5px strokes.
+       Straight CSS borders are OFF-BRAND here — draw shapes with
+       the rough.js factory into an SVG layer instead. ---- */
+.rough-layer {              /* SVG host inside .safe */
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.rough-layer svg { width: 100%; height: 100%; overflow: visible; }

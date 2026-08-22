@@ -1,0 +1,226 @@
+<!doctype html>
+<!-- SCENE s2 title-everyone-says-dgx-spark-is -->
+<!-- ============================================================
+  s2 (explain, giant-number) — "33B DENSE | every weight, every
+  word" · axon pack · 9.71s @ 30fps
+  Beats (scene-relative, from word timings):
+    0.00-0.85  static: giant amber "12.15 TOK/S" carried over from
+               s1, floor grid beneath — "stage won the test."
+    0.85-1.35  number fades/rises up into a small top label
+               — "He'd loaded"
+    1.45-2.45  iso slab extrudes from the floor (proxy height
+               tween) — "a 33 billion parameter"
+    2.90-3.25  "33B DENSE" label fades onto the slab
+               — "dense model"
+    3.90-4.30  whole block flashes amber once — "means every
+               weight...fires"
+    5.35-5.90  "the" types letter by letter beneath the slab, each
+               letter re-triggers the full-block flash — "fires
+               for every" (cost-per-word repetition)
+    6.00-6.30  typed word fades back out
+    6.55-7.00  "every weight, every word" caption fades in under
+               the slab — "it writes."
+    7.00-9.71  stable hold through "You'd think the same thing
+               this box is slow." (>= 8 frames, well past 9.44s)
+============================================================ -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="packs/axon.css" />
+    <style>
+      /* scene-local layout only — tokens/type come from the pack CSS */
+      #giantNum {
+        position: absolute;
+        left: 0;
+        top: 300px;
+        width: 100%;
+        text-align: center;
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 108px;
+        letter-spacing: 1px;
+      }
+      #topLabel {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+      #slabLabel {
+        position: absolute;
+        left: 0;
+        top: 430px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+      #typedThe {
+        position: absolute;
+        left: 0;
+        top: 760px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+      #caption {
+        position: absolute;
+        left: 0;
+        top: 900px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="9.71"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="9.71"
+        data-track-index="1"
+      >
+        <div class="safe">
+          <!-- diagram layer FIRST so text always paints above the floor grid
+               (viewBox = safe area px, 1:1 with .safe) -->
+          <div class="diagram-layer">
+            <svg id="diorama" viewBox="0 0 830 1020" xmlns="http://www.w3.org/2000/svg">
+              <g id="floor"></g>
+              <g id="slab"></g>
+              <g id="flash" style="opacity: 0"></g>
+            </svg>
+          </div>
+
+          <!-- carried-over number, then shrinks into a top label -->
+          <div id="giantNum" class="accent">12.15 TOK/S</div>
+          <div id="topLabel" class="label-strong accent">12.15 TOK/S</div>
+
+          <div id="slabLabel" class="label-strong">33B DENSE</div>
+          <div id="typedThe" class="label-strong accent"></div>
+          <div id="caption" class="subhead">every weight, every word</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- THE iso projection (defined once, used for every polygon) ---- */
+      const COS = Math.cos(Math.PI / 6); // cos 30
+      const SIN = 0.5; // sin 30
+      const O = { x: 415, y: 660 }; // floor origin in safe-area px
+      function iso(x, y, z) {
+        return { x: O.x + (x - y) * COS, y: O.y + (x + y) * SIN - z };
+      }
+      const NS = "http://www.w3.org/2000/svg";
+      function poly(parent, cls) {
+        const p = document.createElementNS(NS, "polygon");
+        p.setAttribute("class", cls);
+        parent.appendChild(p);
+        return p;
+      }
+      function setQuad(el, pts) {
+        el.setAttribute(
+          "points",
+          pts.map((p) => iso(p[0], p[1], p[2])).map((s) => `${s.x},${s.y}`).join(" ")
+        );
+      }
+
+      /* ---- static floor-grid diamonds (no motion — backdrop only) ---- */
+      const floorG = document.getElementById("floor");
+      const CELL = 56;
+      for (let i = -5; i <= 5; i++) {
+        for (let j = -5; j <= 5; j++) {
+          const t = poly(floorG, "floor-tile");
+          const cx = i * CELL, cy = j * CELL, h = CELL / 2;
+          setQuad(t, [
+            [cx - h, cy - h, 0], [cx + h, cy - h, 0],
+            [cx + h, cy + h, 0], [cx - h, cy + h, 0],
+          ]);
+        }
+      }
+
+      /* ---- iso prism helper: top rhombus + 2 side faces (flat fills) ---- */
+      function setPrism(f, x, y, w, d, h, z0) {
+        const z1 = z0 + h;
+        setQuad(f.left, [[x, y + d, z0], [x + w, y + d, z0], [x + w, y + d, z1], [x, y + d, z1]]);
+        setQuad(f.right, [[x + w, y, z0], [x + w, y + d, z0], [x + w, y + d, z1], [x + w, y, z1]]);
+        setQuad(f.top, [[x, y, z1], [x + w, y, z1], [x + w, y + d, z1], [x, y + d, z1]]);
+      }
+
+      /* ---- slab: rises from the floor via a height proxy tween ---- */
+      const slab = {
+        left: poly(document.getElementById("slab"), "face-left"),
+        right: poly(document.getElementById("slab"), "face-right"),
+        top: poly(document.getElementById("slab"), "face-top"),
+      };
+      const ext = { h: 0.001 };
+      setPrism(slab, -70, -70, 140, 140, ext.h, 0);
+
+      /* ---- flash: amber overlay at the slab's final geometry, hidden
+             until it flashes ("the whole block lights") ---- */
+      const flash = {
+        left: poly(document.getElementById("flash"), "packet-face"),
+        right: poly(document.getElementById("flash"), "packet-face"),
+        top: poly(document.getElementById("flash"), "packet-face"),
+      };
+      setPrism(flash, -70, -70, 140, 140, 130, 0);
+
+      /* ---- timeline (weighty-premium; motion inside frames 9..9.44s) ---- */
+
+      // giant number carried over from s1 — fades/rises into a small top label
+      tl.to("#giantNum", { opacity: 0, y: -40, duration: 0.5, ease: "power3.inOut" }, 0.85);
+      tl.fromTo("#topLabel", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 0.85);
+
+      // slab extrudes — "a 33 billion parameter"
+      tl.to(ext, {
+        h: 130,
+        duration: 1.0,
+        ease: "power3.inOut",
+        onUpdate: () => setPrism(slab, -70, -70, 140, 140, ext.h, 0),
+      }, 1.45);
+
+      // "33B DENSE" seats on the slab — "dense model"
+      tl.fromTo("#slabLabel", { y: 15 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 2.9);
+
+      // whole block flashes amber once — "means every weight...fires"
+      function flashPulse(t, inDur, outDur) {
+        tl.to("#flash", { opacity: 1, duration: inDur, ease: "power2.out" }, t);
+        tl.to("#flash", { opacity: 0, duration: outDur, ease: "power2.in" }, t + inDur);
+      }
+      flashPulse(3.9, 0.18, 0.22);
+
+      // "the" types letter by letter, each letter re-flashes the block
+      // — "fires for every" (cost-per-word repetition)
+      tl.to("#typedThe", { opacity: 1, duration: 0.12, ease: "power2.out" }, 5.3);
+      tl.set("#typedThe", { textContent: "t" }, 5.35);
+      flashPulse(5.35, 0.07, 0.07);
+      tl.set("#typedThe", { textContent: "th" }, 5.51);
+      flashPulse(5.51, 0.07, 0.07);
+      tl.set("#typedThe", { textContent: "the" }, 5.67);
+      flashPulse(5.67, 0.07, 0.07);
+
+      // typed word retires
+      tl.to("#typedThe", { opacity: 0, duration: 0.3, ease: "power2.in" }, 6.0);
+
+      // caption lands under the slab and holds — "it writes."
+      tl.fromTo("#caption", { y: 20 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 6.55);
+      // motion ends ~7.0s — stable tail through 9.71s (well past 8 frames)
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "_rule": "Test fixture only: an empty style-pack history so validate_storyboard.py --history and eval_short.py --history can run where skills/render-shorts/styles/history.json does not exist yet. The real file is appended on approval by skills/render-shorts/scripts/style_rotation.py --record; the validator refuses the same pack twice in a row.",
+  "used": []
+}
