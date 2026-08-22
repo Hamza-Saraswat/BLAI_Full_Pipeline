@@ -1,0 +1,31 @@
+{
+  "ggml-org/llama.cpp": [
+    {"tag_name": "b6700", "name": "b6700", "published_at": "2026-08-24T14:30:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b6700", "body": "NVFP4 GGUF quantization type for Blackwell GPUs (GB10, RTX 50 series). CUDA graphs are now enabled by default on compute capability 12.x. Known issue: CUDA graphs crash on GB10 with some MoE models; pass --no-cuda-graphs or stay on b6690 until the fix lands. Vulkan: 12 percent faster prompt processing on Strix Halo."},
+    {"tag_name": "b6690", "name": "b6690", "published_at": "2026-08-22T09:10:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b6690", "body": "Fix KV cache defragmentation on contexts above 64K. Vulkan matmul speedups."}
+  ],
+  "vllm-project/vllm": [
+    {"tag_name": "v0.12.0", "name": "v0.12.0", "published_at": "2026-08-24T22:30:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/vllm-project/vllm/releases/tag/v0.12.0", "body": "FP4 KV cache on Blackwell: up to 2x decode throughput on GB10 at batch 8 with no measurable quality loss on our evals. New speculative decoding defaults (EAGLE-3 when a draft head exists). DeepSeek V4 Flash day-0 support. Drops Python 3.9. Breaking: the --kv-cache-dtype auto default now picks fp8 on Hopper and Blackwell."}
+  ],
+  "ollama/ollama": [
+    {"tag_name": "v0.13.0", "name": "v0.13.0", "published_at": "2026-08-25T00:45:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/ollama/ollama/releases/tag/v0.13.0", "body": "NVFP4 model support on Blackwell GPUs, 1.8x faster prompt processing on the DGX Spark. New ollama ps --gpu view. Breaking: the legacy context field on /api/generate is removed; clients that still send it get a 400."}
+  ],
+  "unslothai/unsloth": [
+    {"tag_name": "2026.8.2", "name": "2026.8.2: 3x faster LoRA on Blackwell", "published_at": "2026-08-25T07:00:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/unslothai/unsloth/releases/tag/2026.8.2", "body": "Triton kernels tuned for sm_121 (GB10). Gemma 4 and GLM-5 Air fine-tuning support. Fixes an OOM on 128 GB unified memory when gradient checkpointing is off."}
+  ],
+  "sgl-project/sglang": [
+    {"tag_name": "v0.6.0", "name": "v0.6.0", "published_at": "2026-08-23T18:00:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/sgl-project/sglang/releases/tag/v0.6.0", "body": "Prefill-decode disaggregation is GA. DeepSeek V4 Flash day-0 support with MLA kernels."}
+  ],
+  "NVIDIA/TensorRT-LLM": [
+    {"tag_name": "v1.4.0rc1", "name": "TensorRT-LLM 1.4.0 release candidate 1", "published_at": "2026-08-24T19:00:00Z", "prerelease": true, "draft": false, "html_url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc1", "body": "NVFP4 weight-only quantization for GB10. Qwen 3.5 and Gemma 4 model support."}
+  ],
+  "huggingface/transformers": [
+    {"tag_name": "v5.2.0", "name": "v5.2.0", "published_at": "2026-08-15T12:00:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.2.0", "body": "Ten days old: must be dropped by the one-week release window."}
+  ],
+  "exo-explore/exo": [],
+  "mlc-ai/mlc-llm": [],
+  "ggml-org/whisper.cpp": [],
+  "open-webui/open-webui": [
+    {"tag_name": "v0.9.0", "name": "v0.9.0", "published_at": "2026-08-24T11:00:00Z", "prerelease": false, "draft": false, "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.0", "body": "New side-by-side model comparison view. SSO fixes. Breaking: connections to Ollama older than 0.12 fail, update both."}
+  ],
+  "NVIDIA/dgx-spark-playbooks": []
+}

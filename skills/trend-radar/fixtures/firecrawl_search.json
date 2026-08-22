@@ -1,0 +1,19 @@
+{
+  "DGX Spark": {"success": true, "data": [
+    {"title": "NVIDIA releases DGX Spark firmware 2.3 with dual-node 200 GbE support", "url": "https://www.servethehome.com/nvidia-dgx-spark-firmware-2-3-dual-node/", "description": "The 2.3 firmware turns the ConnectX-7 port into a supported two-node fabric, and NVIDIA publishes a playbook for splitting a 400B model across two Sparks.", "markdown": "# NVIDIA releases DGX Spark firmware 2.3\n\nNVIDIA's 2.3 firmware for the DGX Spark enables the ConnectX-7 port as a supported two-node fabric at 200 GbE. The accompanying playbook shows DeepSeek V4 Flash split across two units with exo and with vLLM's pipeline parallelism. Update through the DGX Dashboard; the update takes about 12 minutes and requires a reboot."},
+    {"title": "Apple M5 Max Mac Studio benchmarks leak: 1.1 TB/s memory bandwidth", "url": "https://www.macrumors.com/2026/08/24/m5-max-mac-studio-benchmarks/", "description": "Leaked Geekbench and llama.cpp numbers put the M5 Max ahead of the DGX Spark on single-stream decode.", "markdown": "# M5 Max Mac Studio benchmarks leak\n\nA Geekbench listing and a llama.cpp run show the M5 Max at 1.1 TB/s memory bandwidth, about 4x the DGX Spark's 273 GB/s, which lifts single-stream decode on 70B Q4 to roughly 28 tok/s."}
+  ]},
+  "local LLM news": {"success": true, "data": [
+    {"title": "DeepSeek V4 Flash arrives with open weights and a 128K context", "url": "https://www.theverge.com/2026/8/24/deepseek-v4-flash-open-weights", "description": "The 160B mixture-of-experts model activates 12B parameters per token and ships under an MIT license.", "markdown": "# DeepSeek V4 Flash arrives\n\nDeepSeek released V4 Flash on Monday with open weights on Hugging Face. The model activates 12B of 160B parameters per token and fits on a 128 GB box at 4-bit. Day-0 support landed in vLLM 0.12 and SGLang 0.6."},
+    {"title": "Micron HBM shortage pushes consumer GPU prices up 15 percent", "url": "https://www.tomshardware.com/2026/08/hbm-shortage-gpu-prices", "description": "RTX 5090 street prices climbed again this week as memory supply tightens.", "markdown": "# HBM shortage pushes GPU prices up\n\nRetail RTX 5090 prices rose about 15 percent over the past month as HBM and GDDR7 supply tightened. Used RTX 3090 prices are flat."}
+  ]},
+  "NVIDIA DGX Spark firmware update": {"success": true, "data": [
+    {"title": "NVIDIA releases DGX Spark firmware 2.3 with dual-node 200 GbE support", "url": "https://www.servethehome.com/nvidia-dgx-spark-firmware-2-3-dual-node/", "description": "Duplicate result across queries; must be listed once.", "markdown": ""}
+  ]},
+  "open weights model release": {"success": true, "data": [
+    {"title": "Mistral Medium 4 goes Apache 2.0, targets on-prem enterprise deployments", "url": "https://www.zdnet.com/article/mistral-medium-4-apache-open-weights/", "description": "Mistral's mid-size model is now fully open, with a pitch aimed at regulated industries that cannot send data to the cloud.", "markdown": "# Mistral Medium 4 goes Apache 2.0\n\nMistral released Medium 4 under Apache 2.0 with a pitch at hospitals, law firms and banks that need on-premises inference. The 48B dense model runs at 4-bit on a single 48 GB GPU."}
+  ]},
+  "run LLM locally": {"success": true, "data": [
+    {"title": "EU AI Act GPAI obligations start biting: what small firms must log", "url": "https://www.euractiv.com/section/ai/news/eu-ai-act-gpai-obligations-small-firms/", "description": "From this month, small firms using general-purpose AI in regulated workflows must keep usage logs, a task on-premises deployments make simpler.", "markdown": "# EU AI Act GPAI obligations\n\nThe Commission's guidance clarifies that firms deploying general-purpose AI in regulated workflows must keep prompt and output logs for audits. Running the model on premises keeps the logs inside the firm."}
+  ]}
+}

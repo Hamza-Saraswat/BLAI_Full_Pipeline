@@ -14,13 +14,15 @@ REDDIT_CLIENT_SECRET=
 REDDIT_USER_AGENT=blai-radar/1.0
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
+GITHUB_TOKEN=
 ```
 
 | Variable | Read by | How to get it |
 |----------|---------|---------------|
+| `GITHUB_TOKEN` (optional) | `skills/trend-radar/scripts/github_releases.py` | any fine-grained token with public read; raises the unauthenticated rate limit. The cloud session's git proxy handles pushes without it |
 | `FIRECRAWL_API_KEY` | `.mcp.json` (FireCrawl MCP), `skills/trend-radar/scripts/firecrawl_search.py` | firecrawl.dev dashboard; reuse the v1 key |
 | `YT_API_KEY` | `skills/trend-radar/scripts/youtube_recent.py`, `skills/youtube-keyword-research/scripts/competition.py`, `skills/youtube-analytics` | Google Cloud console: project, enable YouTube Data API v3, create an API key (no OAuth needed) |
-| `REDDIT_*` | `skills/trend-radar/scripts/reddit.py` | reddit.com/prefs/apps: create a "script" app |
+| `REDDIT_*` | `skills/trend-radar/scripts/reddit.py` | reddit.com/prefs/apps: create a "script" app. Required in practice: Reddit's public `.json` endpoint answers 403 to cloud clients |
 | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | `skills/telegram-gate/scripts/send_card.py` (morning FYI) | @BotFather for the token; send the bot a message, then `getUpdates` shows your chat id (`build/install.sh` prints it) |
 
 ## DGX Spark (`build/.env`, mode 600, owned by the `blai` user)
