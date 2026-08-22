@@ -11,15 +11,17 @@ The five cloud routines are created and updated with the `RemoteTrigger` tool fr
 | `allowed_tools` | `["Bash", "Read", "Write", "Edit", "Glob", "Grep", "WebFetch", "WebSearch", "mcp__firecrawl__firecrawl_scrape", "mcp__firecrawl__firecrawl_search", "mcp__firecrawl__firecrawl_map"]`; the ideas routines add the vidIQ tools as `mcp__vidiq__*` (read the tool names from the connector after attaching it) |
 | `enabled` | `false` at creation; flip to `true` with an update once the environment variables exist |
 
-| Routine | `name` | `cron_expression` (UTC) | `model` | `mcp_connections` |
-|---------|--------|--------------------------|---------|-------------------|
-| Shorts ideas | `blai-shorts-ideas` | `0 11 * * *` | `claude-sonnet-5` | vidIQ |
-| Shorts produce | `blai-shorts-produce` | `0 12 * * *` | `claude-opus-5` | none |
-| Long-form ideas | `blai-longform-ideas` | `0 11 * * 1,3,5` | `claude-sonnet-5` | vidIQ |
-| Long-form produce | `blai-longform-produce` | `0 12 * * 1,3,5` | `claude-opus-5` | none |
-| Weekly retro | `blai-weekly-retro` | `0 13 * * 0` | `claude-sonnet-5` | none |
+| Routine | `name` | id | `cron_expression` (UTC) | `model` | `mcp_connections` |
+|---------|--------|----|--------------------------|---------|-------------------|
+| Shorts ideas | `blai-shorts-ideas` | `trig_01M1aFeB4XKCWyU8Ho2PxFv1` | `0 11 * * *` | `claude-sonnet-5` | vidIQ |
+| Shorts produce | `blai-shorts-produce` | `trig_01C8VWEn3GmqxXzwkoca7T7S` | `0 12 * * *` | `claude-opus-5` | none |
+| Long-form ideas | `blai-longform-ideas` | `trig_01UyPJJtjsuRWdRbUfVbv19r` | `0 11 * * 1,3,5` | `claude-sonnet-5` | vidIQ |
+| Long-form produce | `blai-longform-produce` | `trig_015mWBSsmqS3qLsErDsWTJyQ` | `0 12 * * 1,3,5` | `claude-opus-5` | none |
+| Weekly retro | `blai-weekly-retro` | `trig_015whWPfYgc5hREUHMPq8vP2` | `0 13 * * 0` | `claude-sonnet-5` | none |
 
 Cron is UTC; the local times in the routine files assume CT summer time. Move the ideas and produce crons one hour later in winter if 06:00/07:00 CT must hold.
+
+All five were created on 2026-08-22 (disabled, no connectors attached). Links: https://claude.ai/code/routines/<id>.
 
 ## Create body
 
