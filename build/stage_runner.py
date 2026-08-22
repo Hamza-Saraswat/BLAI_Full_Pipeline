@@ -413,8 +413,9 @@ def stage_capture(ctx: Ctx) -> str:
     window = (ctx.meta.get("capture_window") or "night").strip().lower() or "night"
     cap = ctx.build / "capture"
     if ctx.fresh or ctx.dry_run or not (cap / "capture.json").exists():
+        # cwd = repo root: plans reference python3 skills/dgx-capture/benchmarks/... relatively
         ctx.run([PY, SCRIPT["capture"], "--plan", plan, "--out", cap, "--window", window],
-                "capture", timeout=CAPTURE_TIMEOUT)
+                "capture", cwd=REPO, timeout=CAPTURE_TIMEOUT)
     else:
         ctx.say("reusing %s (pass --fresh to capture again)" % (cap / "capture.json"))
     ctx.claude(RECONCILE.format(slug=ctx.slug, build=ctx.build), stage, max_turns=100)
@@ -440,10 +441,17 @@ def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> 
     ctx.require(video, "final.mp4")
     cmd = [PY, SCRIPT["publish"], "--package", package, "--video", video, "--slot", "auto"]
     if with_thumbnail:
-        pick = re.sub(r"\.png$", "", (ctx.meta.get("thumbnail_pick") or "1").strip()) or "1"
-        thumb = ctx.build / "render" / "thumbnails" / (pick + ".png")
+        pick = re.sub(r"\.(png|jpg)$", "", (ctx.meta.get("thumbnail_pick") or "1").strip()) or "1"
+        thumbs = ctx.build / "render" / "thumbnails"
+        # render_longform.py writes <n>.jpg next to <n>.png only when the png exceeds YouTube's 2 MB cap
+        thumb = thumbs / (pick + ".jpg") if (thumbs / (pick + ".jpg")).exists() else thumbs / (pick + ".png")
         ctx.require(thumb, "thumbnail")
         cmd += ["--thumbnail", thumb]
+        chapters = ctx.build / "render" / "chapters.json"  # measured chapter times from render_longform.py
+        if chapters.exists():
+            cmd += ["--chapters", chapters]
+        elif ctx.dry_run:
+            ctx.plan("adds --chapters %s when the render wrote it" % chapters)
     privacy = os.environ.get("BLAI_PUBLISH_PRIVACY", "").strip()
     if privacy:
         cmd += ["--privacy", privacy]

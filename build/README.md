@@ -74,7 +74,7 @@ Per-slug binaries: `$BLAI_BUILD_DIR/<slug>/{voice,capture,render,logs}/`. Nothin
 | long-form | `08-capture` | mixed | `capture.py --plan stages/03-research/output/<slug>-experiment.md --window <capture_window or night>`, then `claude -p` "Run stage 08-capture reconcile ..."; without an experiment file it writes a "no experiment" note and moves on |
 | long-form | `09-voice` | mechanical | as `06-voice` with `--text stages/05-script/output/<slug>-narration.txt --format long` |
 | long-form | `10-render` | creative | `claude -p` "Run stage 10-render ..."; verifies `final.mp4`, `thumbnails/1.png`, `<slug>-render.md`, `status: review` |
-| long-form | `11-publish` | mechanical | as `08-publish` with `--thumbnail render/thumbnails/<thumbnail_pick or 1>.png`, package from `stages/07-package` |
+| long-form | `11-publish` | mechanical | as `08-publish` with `--thumbnail render/thumbnails/<thumbnail_pick or 1>.png` (the `.jpg` twin when the png exceeds 2 MB) and `--chapters render/chapters.json` (measured times) when present, package from `stages/07-package` |
 
 `claude -p` runs with a 2 h timeout, stdout captured to the day log and to `$BLAI_BUILD_DIR/<slug>/logs/`. It needs a logged-in `claude` and `node` on the unit's PATH (`install.sh` links nvm's node into `~/.local/bin`).
 
