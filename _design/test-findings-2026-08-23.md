@@ -76,6 +76,12 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 54 | 07 render | blocker | **GSAP was never vendored, so all 15 HyperFrames renders depended on a live CDN fetch** -- on a stack meant to run unattended on a Spark. `rules/hyperframes-1.md` already said where the copy belonged. Vendored 3.14.2 there. Still open: `package.json` scripts call `npx --yes` and bypass the lockfile pin | **fixed** |
 | 55 | 07 render | quality | **Two silent Manim degradations.** `mob_class=Text` still yields serif digits, because `DecimalNumber` calls `mob_class(string)` with no kwargs -- bind font/weight with `functools.partial` first. And non-frame-aligned `run_time`s inflate duration, since Manim emits `ceil(run_time*fps)` per animation and the rounding accumulates | open |
 | 56 | 04 script | quality | **Finding 42 reaches the Shorts briefs.** Scenes came in 9-38% shorter than `est_duration_s`, and briefs schedule beats by wall clock, so beats land after their scene ends (s1's 4 s beat in a 3.16 s scene). Briefs should specify beats by narration phrase, not by second -- phrase timing survives re-timing | open |
+| 57 | 07 render | note | **Both Shorts assembled, every gate passes.** Ornith 30.13 s / -14.0 LUFS / loop 0.956; Unsloth 74.50 s / -14.1 LUFS / loop 0.791. 15 of 15 scenes published, none hit the 5-attempt limit, worst duration delta +0.030 s. No music by design | working as designed |
+| 58 | 07 render | quality | **Every pack's shipped body class breaks the 64 px minimum text height.** `signal .label` 40 px, `terminal .term-text` 40 px, `terminal .label` 36 px. A worker who uses the pack's own class fails the brand rule by following the pack. Three workers hit it independently and all overrode | open |
+| 59 | 07 render | quality | **Three undocumented HyperFrames audit traps.** `terminal.css`'s `.cursor` silently beats `.accent` on cascade order; `data-layout-allow-occlusion` must sit on the occluded text, not the coverer; `inspect` samples only 9 timeline points by default and catches mid-animation defects by luck. Also `styles/terminal.md` specifies a scramble-decode the pack does not ship | open |
+| 60 | 07 render | quality | **Two more silent Manim failures.** `Scene.remove()` does not extract families in CE 0.20.1, so removing a VGroup is a no-op when children were added by `play()`. And `Blink` sums children's run_times in float, so whole-frame arithmetic still ceils off by one -- finding 55's rule is necessary but not sufficient | open |
+| 61 | 04 script | quality | **The storyboard stage writes briefs the format rules forbid** -- 3 of 15 scenes: a slide through the UI margin, `on_screen_text` carrying 12 words against an 8-word cap, and rounded pills in a pack that bans them. Every worker substituted correctly, but the stage has no visibility into the scene rules or pack constraints it writes against | open |
+| 62 | process | note | **The worker briefing I wrote mid-run was wrong twice and the workers caught it.** The YAVG stillness test false-positives on the frame-250 GOP keyframe (any scene over 8.33 s); the 0.2 opacity floor is mask-specific and produces a visible ghost on unmasked elements. Both corrected mid-flight. Same failure mode as findings 51-52, in fresh documentation | working as designed |
 
 ## Detail
 
@@ -537,3 +543,74 @@ The concrete damage: briefs schedule beats by wall clock ("At 2s", "At 4s"), and
 So the storyboard stage is writing visual briefs in a unit (wall-clock seconds) that the voice stage then invalidates. The durable fix is for briefs to specify beats **by narration phrase**, not by second, since the phrase timing is what survives re-timing. That is a storyboard-format change, and it would also make the briefs read better.
 
 Smaller, same root: several briefs specify "motion onset at 0.25s", but `hyperframes-1.md` forbids motion before frame 9 (t = 0.2667 s). Every such brief is 0.017 s inside the illegal zone. Either the boundary or the brief convention should move; right now they contradict for any brief that picks 0.25 as a round number.
+
+### 57. Both Shorts assembled, every release gate passes (working as designed)
+
+| | Ornith 1.5 9B | Unsloth LAN |
+|---|---|---|
+| Format | classic | smooth-explainer |
+| Style pack | signal | terminal |
+| Duration | 30.13 s (band 28-47) | 74.50 s (band 70-155) |
+| Loudness | **-14.0 LUFS** | **-14.1 LUFS** |
+| Video | 1080x1920 h264 yuv420p 30 fps | same |
+| Audio | aac 48 kHz | same |
+| Size | 3.2 MB | 5.2 MB |
+| Scenes | 6 (4 HyperFrames, 2 Manim) | 9 (5 HyperFrames, 4 Manim) |
+| `lint_video --final` | 0 violations, 0 warnings | 0 violations, 0 warnings |
+| `safe_zone_check` | 0 violations | 0 violations |
+| `loop_check` SSIM | **0.956** (threshold 0.5) | **0.791** |
+| Captions | 101 words | 279 words |
+
+**Fifteen scenes, fifteen published, none hit the five-attempt limit.** Every scene landed inside the +/-0.15 s tolerance; the worst was +0.030 s. Both Shorts carry the same honest assembly warning -- video total exceeds narration by about a second -- which is `scene_timing.py` giving the last scene its documented 1 s hold, not drift.
+
+Neither Short has music: `assets/music/` is a deliberate manual step and the pipeline renders silent rather than pick a wrong mood. The Ornith cut fired both its sfx cues; the Unsloth storyboard asked for none.
+
+### 58. The shipped pack CSS classes violate the brand's own minimum text height, in every pack tested (open)
+
+Three separate workers on two packs hit this independently:
+
+| Pack | Class | Ships at | Rule |
+|---|---|---|---|
+| signal | `.label` | 40 px | 64 px minimum at 1080 wide |
+| terminal | `.term-text` | 40 px | same |
+| terminal | `.label` | 36 px | same |
+
+`scene-agent.md` and `shared/platform-specs.md` both require "minimum text height about 64 px at 1080 wide". **A worker who uses the pack's own body class for on-screen copy fails the rule by following the pack.** All three workers independently overrode to 62-78 px.
+
+This is not a per-pack slip; it is every pack that has been exercised. Either the classes are sized for chrome rather than content and the docs should say so, or they are simply wrong. Worth checking the other five packs before they are used.
+
+Related and measured, worth putting in the pack docs: JetBrains Mono's advance is 0.6 em, so at the 64 px floor each character costs 38.4 px and the 830 px safe width holds about **19 characters**. That constraint governs `terminal` far more than anything in its style file -- it is why a `split-compare` in this pack needs its minor-side word at seven characters or fewer, and why a three-node `timeline` with word labels is at the width limit.
+
+### 59. Three more HyperFrames audit traps, none documented (open)
+
+- **`terminal.css` has a silent cascade trap.** `.accent` and `.cursor` are both single-class selectors and `.accent` is declared first, so `class="cursor accent"` renders the block cursor phosphor-green and drops the amber with no warning. A draft shipped a green cursor beside an amber payoff before a still caught it. Needs higher specificity, or a note in `styles/terminal.md`.
+- **`data-layout-allow-occlusion` must sit on the occluded TEXT element or an ancestor of it, never on the thing doing the covering.** Confirmed in the CLI source: `hasAllowOcclusionFlag()` is `element.closest("[data-layout-allow-occlusion]")` where `element` is the text. A worker put it on the strike bar and the error did not move. Same shape as the item-7 trap and belongs beside it.
+- **`inspect` samples only 9 points on the timeline by default**, so it catches a mid-animation defect by luck. It accepts `--samples N`, `--at`, `--at-transitions` and `--strict`; `inspect --samples 40 --at-transitions --strict` cost about two seconds and covered 72 samples. That should be the standard invocation, not the bare command.
+
+Also worth recording: `styles/terminal.md` specifies "a 200 ms scramble-decode on the incoming headline" as a signature technique, and **the pack ships no implementation of it** -- the snippet only demonstrates the typewriter. The obvious implementation reaches for `Math.random()`, which the seek-safety rules ban. One worker wrote a deterministic version (character `i` resolves at `p >= (i+1)/n`, glyph chosen by a pure function of tween progress) that should be folded into the snippet.
+
+### 60. Two more silent Manim failures (open)
+
+- **`Scene.remove()` does not extract mobject families in CE 0.20.1.** It calls `restructure_mobjects(..., extract_families=False)`, so `self.remove(some_vgroup)` is a **silent no-op** when the children were added individually by `play()`. A worker's first draft left an entire scene phase visible underneath the next one. The fix is to track the mobjects that actually reached the scene and remove them flat. `self.remove(*vgroup)` is also wrong for nested groups.
+- **`Blink` breaks frame budgeting twice over.** It is a `Succession` that computes its own `run_time` internally, so it cannot be pinned to a whole frame count -- and its children's run_times sum in float, so `0.4 + 0.4 + 0.4` gives `1.2000000000000002` and `ceil(... * 30)` returns 37 frames, not 36. Two workers independently abandoned it and hand-cut the blink with `add`/`remove` between exact-frame waits, which is also more on-pack for `terminal`. Finding 55's whole-frame rule is necessary but not sufficient: it fails for any animation that sums its children.
+
+One genuinely useful difference recorded: **HyperFrames rounds the frame count up once for the whole composition, not per animation.** So the accumulation problem is Manim-specific, and a HyperFrames scene's error is always bounded under one frame.
+
+### 61. The storyboard stage keeps writing briefs the format rules forbid (open)
+
+Finding 56 covered the clock. This is the other half, and it showed up three times in fifteen scenes:
+
+- **"slides in from the right edge"** (Ornith s2) -- scene-agent rule 7 bans entrances through the UI margins.
+- **`on_screen_text` carrying two full clauses** (Unsloth s1) -- both lines are six words, so honouring the brief puts twelve words on screen against an eight-word hard cap.
+- **"three amber pills"** (Unsloth s3) -- the `terminal` pack bans rounded corners outside its window frame, and "amber stays the one accent" argues against three amber blocks plus an amber toggle in one frame.
+
+Every worker substituted correctly and said so. But the storyboard stage has no visibility into the scene rules or the pack constraints it is writing against, so it will keep producing briefs that cannot be built as written. The cheap fix is to put the hard don'ts and the pack's own bans into the storyboard stage's references, so the brief is legal when it is written rather than repaired fifteen times downstream.
+
+### 62. My own briefing was wrong twice, and the workers caught it (process note)
+
+Worth recording honestly, because it is the same failure mode as findings 51 and 52 -- documentation drifting from what is true -- and it happened to documentation I wrote during this run.
+
+- **The stillness metric.** I published "use YAVG with a ~0.05 threshold" from the pilots. A later worker found it false-positives on every scene longer than 8.33 s: x264 inserts an IDR at frame 250, which re-quantizes the whole frame and produces a diffuse YAVG spike at YMAX ~33, where real motion shows YMAX 150+. Corrected to require both statistics. Three running workers had scenes over 8.33 s when the correction landed.
+- **The opacity floor.** I published the pilot's ">= 0.2 start opacity" fix without its scope. It is specific to text inside an `overflow:hidden` mask, where the audit promotes the mask to a text element. Applied to an **unmasked** element it produces a visible ghost, because `fromTo` renders its "from" state immediately -- a chip sitting at 0.25 opacity from frame 0 for the whole delay. No linter catches it; only a mid-scene still. Corrected and narrowed.
+
+Both corrections came from workers testing the advice rather than trusting it, and one of them explicitly re-ran the pack default to check whether my precaution was even necessary (it was not). That is the behaviour worth keeping: the briefing was useful, and it was also wrong, and the way that got caught was people rendering stills instead of believing a document.
