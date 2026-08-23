@@ -22,6 +22,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 
 | 11 | 04 script | blocker | **Two parallel writers collided on a shared scratchpad path.** Both generated their storyboard with a script at `scratchpad/build_b.py`; the second overwrote the first and its run regenerated the other writer's output file. In production these two drafts are parallel subagents inside one stage, so this is a live data-loss path | open |
 
+| 12 | 04 script | quality | **Blind writers converged on the same hook.** The two Unsloth drafts, written by workers who could not see each other, opened with "Unsloth won't answer from the couch" and "Unsloth won't answer from your couch". The variety in the two-draft design comes from structure, not from the opening | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -98,3 +100,13 @@ Two independent writers, told to write their own storyboard JSON, both reached f
 This is not a test artifact. The stage contract runs draft A and draft B as parallel subagents inside one stage, every day, for every video, and the same collision is available every time. Two videos are produced each morning, so four writers can be live at once.
 
 Proposed fix, not applied: the stage contract should hand each writer a private scratch directory (`.local-builds/<slug>/draft-<A|B>/`) and say so, and writers should be told to write only to their own draft path. A cheaper belt-and-braces version: have the stage verify after each draft that the file's `slug` and `structure` match what that writer was assigned, which is a two-line check and would have caught this immediately.
+
+### 12. Two blind writers wrote the same hook (open)
+
+Draft A: `Unsloth won't answer from the couch`. Draft B: `Unsloth won't answer from your couch`. One word apart, from two workers with no access to each other's files.
+
+This is the brief working as designed and the draft design working less well than intended. `viewer_situation` in the brief reads "Your model runs on the box in the other room and you are on the couch with a laptop or a phone", the hook library awards a point for naming the viewer's situation, and both writers took the same shortest path from that sentence to a hook. The Ornith pair converged less sharply but still both led on the file size (`5.63 GB fixes real bugs` and `6 GB file. It fits your card.`), because the brief names the size as the surprise.
+
+The consequence is that two drafts buy less variety than the plan assumed. The shapes differ, the payoffs differ, the endings differ, but the first three seconds, which is where the retention cliff is, can be nearly identical. The judge then chooses between two videos that open the same way.
+
+Proposed fixes, none applied. Assign each writer a different hook pattern from the library alongside its structure, so A opens on a number and B opens on a situation. Or have the judge score hook distance between the drafts and refuse a pair whose hooks share their first four words, which is a check the variety ledger already computes for the between-video case (`hook_head`).
