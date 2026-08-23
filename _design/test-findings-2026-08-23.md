@@ -82,6 +82,10 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 60 | 07 render | quality | **Two more silent Manim failures.** `Scene.remove()` does not extract families in CE 0.20.1, so removing a VGroup is a no-op when children were added by `play()`. And `Blink` sums children's run_times in float, so whole-frame arithmetic still ceils off by one -- finding 55's rule is necessary but not sufficient | open |
 | 61 | 04 script | quality | **The storyboard stage writes briefs the format rules forbid** -- 3 of 15 scenes: a slide through the UI margin, `on_screen_text` carrying 12 words against an 8-word cap, and rounded pills in a pack that bans them. Every worker substituted correctly, but the stage has no visibility into the scene rules or pack constraints it writes against | open |
 | 62 | process | note | **The worker briefing I wrote mid-run was wrong twice and the workers caught it.** The YAVG stillness test false-positives on the frame-250 GOP keyframe (any scene over 8.33 s); the 0.2 opacity floor is mask-specific and produces a visible ghost on unmasked elements. Both corrected mid-flight. Same failure mode as findings 51-52, in fresh documentation | working as designed |
+| 63 | 11 publish | blocker | **`publish.py --chapters` could not read the `chapters.json` the render stage writes.** Render emits `timestamp`, publish read `time`; and past that guard it assigned the render's richer shape into a manifest whose schema wants `{time,label}` only, so a one-line fix would have moved the error not removed it. Invisible to every unit check -- both files are individually valid | **fixed** |
+| 64 | 11 publish | quality | **The composed description put its hashtags in the middle.** `publish.py` strips the estimated chapter lines from their correct position and `compose_description` re-appends the measured block past the hashtags already in the string. `titles-descriptions.md` wants hashtags last | **fixed** |
+| 65 | 11 publish | quality | **The manifest thumbnail path resolves against the package note, but the stills live in the build dir.** Three valid 1280x720 thumbnails exist and the upload proceeds silently without one. A long-form episode publishing with no custom thumbnail should be an error, not a log line | open |
+| 66 | 11 publish | note | **Publish dry-runs are otherwise correct on all three videos.** Privacy, notify, kids and synthetic flags all right per format; Shorts drew an 18:00 CT slot and the episode the next 09:00 CT, exactly per `publish-timing.md`; the stale `publish_slot_hint` was caught rather than scheduled into the past | working as designed |
 
 ## Detail
 
@@ -614,3 +618,54 @@ Worth recording honestly, because it is the same failure mode as findings 51 and
 - **The opacity floor.** I published the pilot's ">= 0.2 start opacity" fix without its scope. It is specific to text inside an `overflow:hidden` mask, where the audit promotes the mask to a text element. Applied to an **unmasked** element it produces a visible ghost, because `fromTo` renders its "from" state immediately -- a chip sitting at 0.25 opacity from frame 0 for the whole delay. No linter catches it; only a mid-scene still. Corrected and narrowed.
 
 Both corrections came from workers testing the advice rather than trusting it, and one of them explicitly re-ran the pack default to check whether my precaution was even necessary (it was not). That is the behaviour worth keeping: the briefing was useful, and it was also wrong, and the way that got caught was people rendering stills instead of believing a document.
+
+### 63. The two ends of the chapter handoff never agreed on a key name (fixed)
+
+The long-form design says the render stage writes measured chapter times and `publish.py --chapters` swaps them into the description at upload. The first time those two programs were asked to talk to each other, they could not:
+
+```
+[publish] --chapters must be a non-empty list whose first entry is 00:00
+```
+
+`render_longform.py` writes `{number, label, scene, start_s, timestamp}`. `publish.py:366` read `measured[0].get("time")`. Neither is wrong on its own; nobody had ever run one against the other.
+
+It was a **two-part** failure. Past the key-name guard, line 368 assigned the render's whole richer shape straight into `manifest["chapters"]`, which `publish-manifest.schema.json` requires to be `{time, label}` -- so the manifest would then have failed validation on the extra fields. A fix to only the guard would have moved the error, not removed it.
+
+Fixed on the reader end: `publish.py` now accepts a list or a `{chapters: [...]}` wrapper, takes `time` or `timestamp`, and projects each entry down to `{time, label}` so the manifest still validates. The render's extra fields (`scene`, `start_s`) stay in `chapters.json` where they are useful for debugging.
+
+This is the single most valuable thing the end-to-end run found on the publish side, because it is invisible to every unit check: both files are individually well-formed and schema-valid.
+
+### 64. The description put its hashtags in the middle (fixed)
+
+With chapters flowing, the composed description came out with the chapter block **after** the hashtags. `titles-descriptions.md` prescribes: body, chapters block, links, credits, "then 2-3 hashtags at the end."
+
+Cause: `publish.py` strips the estimated chapter lines from wherever the package note had them (correctly placed, before the hashtags) and `compose_description` then *appends* the measured block to the end of the string -- past the hashtags that were already there.
+
+Fixed: `compose_description` now splits off a trailing hashtag-only line, appends chapters and any related-video link above it, then puts the hashtags back last. Verified on all three: the long-form description ends with the five measured chapters followed by `#Qwen #LocalAI #GGUF`, and both Shorts still end with their hashtags.
+
+### 65. The thumbnail path is relative to the wrong thing (open)
+
+```
+[publish] manifest thumbnail thumbnails/1.png not found next to the package note; continuing without it
+```
+
+The manifest carries `"thumbnail": "thumbnails/1.png"`, which is where `render_longform.py` actually writes them -- inside the **build directory**. `publish.py` resolves it relative to the **package note**, in `workspaces/long-form/stages/07-package/output/`. The stills exist and are valid (three, 1280x720, 0.05-0.07 MB), and the upload silently proceeds without a thumbnail.
+
+Silently is the problem. A long-form episode publishing with no custom thumbnail is a significant loss, and the run continues with a log line rather than stopping. Two things needed: decide which directory the path is relative to (the build dir is the sane answer, since that is the only place the file exists), and make a missing thumbnail on a long-form upload an error rather than a warning.
+
+### 66. Publish dry-runs are otherwise correct on all three videos (working as designed)
+
+Everything else in the Blotato body matched the playbooks without intervention:
+
+| | Ornith | Unsloth | Long-form |
+|---|---|---|---|
+| `privacyStatus` | public | public | **private** (the test-artifact setting held) |
+| `shouldNotifySubscribers` | false | false | **true** (long-form default) |
+| `isMadeForKids` | false | false | false |
+| `containsSyntheticMedia` | false | false | false |
+| Slot chosen | 2026-08-23 18:00 CT | 2026-08-23 18:00 CT | **2026-08-24 09:00 CT** |
+| Description | 489 bytes | 724 bytes | 1,541 bytes |
+
+The Shorts landed on an 18:00 CT slot and the episode on the next 09:00 CT, which is exactly what `publish-timing.md` specifies for each format. `publish.py` also noticed the Ornith package's `publish_slot_hint` was already in the past and said so before picking the next free slot rather than scheduling into history.
+
+Both Shorts drew the same 18:00 slot, which is expected in dry-run: nothing is reserved because nothing is written. In a real run the first would set `publish_slot` on its hub note and the second would see it taken. Worth confirming once against a live run, but it is not evidence of a bug.

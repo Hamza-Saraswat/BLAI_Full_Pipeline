@@ -160,16 +160,33 @@ def validate_manifest(m: dict, schema_path: pathlib.Path = SCHEMA_PATH) -> list:
 
 
 def compose_description(m: dict) -> str:
+    """Assemble the description in the order titles-descriptions.md prescribes:
+    body, chapters, links and credits, hashtags last.
+
+    Anything appended here has to land *above* a hashtag block the description already
+    carries, or the hashtags stop being last and the playbook order breaks.
+    """
     desc = str(m.get("description", "")).rstrip()
+    hashtags = [h for h in m.get("hashtags", []) if isinstance(h, str)]
+    # Split off a trailing hashtag-only line so later additions go above it.
+    lines = desc.splitlines()
+    tail = ""
+    if lines and lines[-1].strip() and all(w.startswith("#") for w in lines[-1].split()):
+        tail = lines.pop().strip()
+        desc = "\n".join(lines).rstrip()
+
     chapters = m.get("chapters") or []
     if chapters and isinstance(chapters, list) and str(chapters[0].get("time", "")) not in desc:
         desc += "\n\nChapters\n" + "\n".join("%s %s" % (c.get("time", ""), c.get("label", "")) for c in chapters)
     related = m.get("related_long_form_url")
     if related and related not in desc:
         desc += "\n\nFull video: %s" % related
-    missing = [h for h in m.get("hashtags", []) if h not in desc]
+
+    if tail:
+        desc += "\n\n" + tail
+    missing = [h for h in hashtags if h not in desc]
     if missing:
-        desc += "\n\n" + " ".join(missing)
+        desc += ("\n\n" if not tail else " ") + " ".join(missing)
     return desc
 
 
@@ -362,8 +379,19 @@ def main() -> int:
 
     manifest = read_manifest(package)
     if args.chapters:
-        measured = json.loads(pathlib.Path(args.chapters).read_text(encoding="utf-8"))
-        if not isinstance(measured, list) or not measured or str(measured[0].get("time", "")) not in ("00:00", "0:00", "00:00:00"):
+        raw = json.loads(pathlib.Path(args.chapters).read_text(encoding="utf-8"))
+        if isinstance(raw, dict):
+            raw = raw.get("chapters", [])
+        # render_longform.py writes {number,label,scene,start_s,timestamp}; the manifest schema wants
+        # {time,label}. Accept either key and drop the extras so the manifest still validates.
+        measured = []
+        if isinstance(raw, list):
+            for c in raw:
+                if not isinstance(c, dict):
+                    measured = []; break
+                stamp = c.get("time", c.get("timestamp", ""))
+                measured.append({"time": str(stamp), "label": str(c.get("label", ""))})
+        if not measured or measured[0]["time"] not in ("00:00", "0:00", "00:00:00"):
             log("--chapters must be a non-empty list whose first entry is 00:00"); return 1
         manifest["chapters"] = measured
         # drop any estimated chapter lines (and a bare "Chapters" header) so compose_description re-adds the measured ones
