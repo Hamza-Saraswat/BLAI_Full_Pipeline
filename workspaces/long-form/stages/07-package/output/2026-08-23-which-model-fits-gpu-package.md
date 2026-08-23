@@ -29,10 +29,10 @@ Nothing here was measured on our bench, and the episode says so in its first twe
 
 Chapters
 00:00 Which Build Actually Fits
-01:46 File Plus Cache
-04:30 More Parameters, Fewer Bits
-06:46 Fewer Parameters, More Bits
-09:29 The Rule And Its Exceptions
+01:07 File Plus Cache
+02:57 More Parameters, Fewer Bits
+04:30 Fewer Parameters, More Bits
+06:27 The Rule And Its Exceptions
 
 Sources
 Unsloth's Qwen3.8-27B file table: https://huggingface.co/unsloth/Qwen3.8-27B-GGUF
@@ -52,7 +52,7 @@ Written, sourced and voiced by me; animation and research assisted by an AI pipe
 
 ## Chapters
 
-| Time | Label | First scene |
+| Measured | Label | First scene |
 |------|-------|-------------|
 | 00:00 | Which Build Actually Fits | s01 |
 | 01:46 | File Plus Cache | s07 |
@@ -149,19 +149,19 @@ Times are summed from the spec's `est_duration_s` at the pipeline's assumed 2.9 
       "label": "Which Build Actually Fits"
     },
     {
-      "time": "01:46",
+      "time": "01:07",
       "label": "File Plus Cache"
     },
     {
-      "time": "04:30",
+      "time": "02:57",
       "label": "More Parameters, Fewer Bits"
     },
     {
-      "time": "06:46",
+      "time": "04:30",
       "label": "Fewer Parameters, More Bits"
     },
     {
-      "time": "09:29",
+      "time": "06:27",
       "label": "The Rule And Its Exceptions"
     }
   ],
@@ -169,6 +169,6 @@ Times are summed from the spec's `est_duration_s` at the pipeline's assumed 2.9 
   "related_long_form_url": "",
   "original_insight": "Everyone repeats \"take a bigger model at lower precision\"; this episode does the memory arithmetic from publishers' own file tables and llama.cpp's bits-per-weight figures, and shows the rung where that rule reverses \u2014 while stating up front that no number in it was measured on our bench.",
   "seo_score": 100,
-  "reviewer_notes": "TEST ARTIFACT. privacy_status is private and publish_slot_hint is empty on purpose: this run is voiced by Kokoro, not the creator's ElevenLabs clone, so compliance rule 3 (the creator's own voice) is not satisfied and it must not be published as-is. Chapter times are estimates; stage 10 overwrites them with measured ones. Thumbnail pixel checks (>=1280x720, <=2 MB) cannot run until stage 10 renders the stills."
+  "reviewer_notes": "TEST ARTIFACT. privacy_status is private and publish_slot_hint is empty on purpose: this run is voiced by Kokoro, not the creator's ElevenLabs clone, so compliance rule 3 (the creator's own voice) is not satisfied and it must not be published as-is. Chapter times are MEASURED from the rendered 493.4 s episode; they replaced 2.5 wps estimates that were wrong by up to 3 minutes. Thumbnail pixel checks (>=1280x720, <=2 MB) cannot run until stage 10 renders the stills."
 }
 ```
