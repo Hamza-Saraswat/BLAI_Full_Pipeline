@@ -4,6 +4,25 @@ Everything the dry run catches, in the order it was caught. Branch `test/dry-run
 
 Severity: **blocker** stops a real run; **quality** ships bad work; **friction** costs time or trust; **blocked** cannot be tested here.
 
+## Result: three videos rendered, both pipelines run end to end
+
+| | Ornith 1.5 9B | Unsloth LAN | Which build fits your GPU |
+|---|---|---|---|
+| Workspace | shorts | shorts | long-form |
+| Stages run | 01-07 | 01-07 | 01-10 |
+| Output | 30.13 s, 1080x1920 | 74.50 s, 1080x1920 | **8:13**, 1920x1080 |
+| Loudness | -14.0 LUFS | -14.1 LUFS | -14.0 LUFS |
+| Release gates | **all pass** | **all pass** | **1 of 9 fails: duration** |
+| Hub note | `review` | `review` | `review` |
+
+**66 findings.** 12 fixed during the run, 4 blocked on credentials, the rest open with a proposed fix.
+
+The blockers that would have stopped a real run, in the order they would have hit: Manim was never installed (33); GSAP was never vendored, so all fifteen HyperFrames renders depended on a live CDN (54); the ffmpeg concat list used relative paths, which breaks every multi-chunk narration and so every episode (43); the pronunciation gate scored tokens instead of words and fed 44.1 kHz audio to a 16 kHz-only binary, so it could never have run (44); the documented Manim safe area is 210 px looser than the shipped code, so anything laid out to the docs fails its own linter (51); and `publish.py` could not read the `chapters.json` the render stage writes (63).
+
+The one that is not a bug but a contradiction: the script stage's 1,500-2,100 word band and the render stage's 720 s target cannot both be satisfied at the voice's measured 3.69 words per second (42, 48). A script that passes stage 05 produces an episode that fails stage 10. That is why the long-form lint failure above is left standing rather than waived.
+
+What could not be tested here remains: the Spark, the paid APIs, the cloud routine environment, and the Telegram round trip.
+
 | # | Stage | Severity | Finding | Status |
 |---|-------|----------|---------|--------|
 | 1 | 01 radar | quality | No relevance gate: Hacker News ranks by discussion volume, so a missing-crypto-executive story scored 49 and a marathon-medal story 38, both with no product and no AI topic, and both landed in the top 10 | **fixed** |
