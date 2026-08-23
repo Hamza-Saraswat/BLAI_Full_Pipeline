@@ -13,7 +13,7 @@ Turn the digest into scored episode candidates and pick the one to produce.
 | Brand vault | `../../../../brand-vault/value-framework.md` | Full file | Value tags |
 | Reference | `references/selection-rules.md` | Full file | Cadence, rotation, how the pick is chosen |
 | Reference | `references/ideas-format.md` | Full file | Layout of the ideas note |
-| Ledger | `output/series-ledger.json` | Last 6 entries | Series rotation |
+| Ledger | `output/episode-ledger.json` | Last 6 entries | Series rotation |
 | Skill | `../../../../skills/telegram-gate/SKILL.md` | "fyi-ideas" card | The morning FYI |
 
 ## Process
@@ -23,7 +23,7 @@ Turn the digest into scored episode candidates and pick the one to produce.
 3. Run `opportunity_score.py --candidates output/[date]-candidates.json --out output/[date]-scored.json`.
 4. Choose the pick per selection-rules.md. **[Checkpoint]** -- present the ranked top 5 with the pick (unattended: decide, record under Decisions).
 5. Create the hub note: `python3 ../../../../tools/new-run.py --workspace long-form --title "..." --series [series] --value-types "A,B" --date [date]`.
-6. Write `output/[date]-ideas.md` per ideas-format.md; append `{slug, series, date}` to `output/series-ledger.json`. Run the audit checks below; if any fail, revise before saving.
+6. Write `output/[date]-ideas.md` per ideas-format.md; append `{slug, series, date}` to `output/episode-ledger.json` (the outline stage writes `structure` into the same entry). Run the audit checks below; if any fail, revise before saving.
 7. Send the FYI: `send_card.py --kind fyi-ideas --ideas output/[date]-ideas.md --hub ../../videos/[slug].md` (skip with a note without `TELEGRAM_BOT_TOKEN`).
 8. Unattended: `../../../../tools/git-sync.sh "long-form: [date] ideas"`.
 
@@ -50,6 +50,6 @@ Turn the digest into scored episode candidates and pick the one to produce.
 | Ideas note | `output/[date]-ideas.md` | ranked table, pick, keyword notes, decisions |
 | Candidates and scores | `output/[date]-candidates.json`, `output/[date]-scored.json` | JSON |
 | Hub note | `../../videos/[slug].md` | hub note with status `idea` |
-| Ledger | `output/series-ledger.json` | JSON list |
+| Ledger | `output/episode-ledger.json` | JSON list of `{slug, series, structure, date}`; `structure` is filled in by the outline stage |
 
 The ideas note and the hub note are the human edit surface. Swap the pick by tapping the card or by writing `output/[date]-picks.md` (`swap 1 -> 3`). The research stage reads whatever is there.

@@ -8,7 +8,8 @@ Turn the script into a scene list the render stage compiles. The spec says what 
 |--------|--------------|---------------|-----|
 | Previous stage | `../05-script/output/[slug]-script.md` | Every chapter's beat table | Beats become scenes |
 | Previous stage | `../05-script/output/[slug]-narration.txt` | Full file | The narration the scenes must cover exactly |
-| Previous stage | `../04-outline/output/[slug]-outline.md` | "Chapters", "Visual philosophy" | Chapter starts and the visual stance |
+| Previous stage | `../04-outline/output/[slug]-outline.md` | Frontmatter `structure`, "Chapters", "Visual philosophy" | Chapter starts, the episode shape, and the visual stance |
+| Reference | `../04-outline/references/episode-structures.md` | The section for the outline's `structure` | What a muted viewer must follow, so the scene mix matches the shape |
 | Previous stage | `../03-research/output/[slug]-experiment.md` | Command ids, when present | `capture_ref` values |
 | Skill rule | `../../../../skills/render-longform/rules/scene-library.md` | Full file | Scene types and what each needs in `data` |
 | Skill rule | `../../../../skills/render-longform/rules/thumbnails.md` | Full file | Thumbnail concepts |

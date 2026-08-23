@@ -298,6 +298,8 @@ def main() -> None:
     ap.add_argument("--out-txt", help="write normalized narration text here")
     ap.add_argument("--out-json", help="write the per-scene sidecar here")
     ap.add_argument("--lexicon", help=f"lexicon path (default: {DEFAULT_LEXICON})")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="normalize and print the summary, but write no files")
     args = ap.parse_args()
 
     lex = load_lexicon(args.lexicon)
@@ -322,11 +324,11 @@ def main() -> None:
 
     norm = normalize_storyboard(sb, lex)
 
-    if args.out_txt:
+    if args.out_txt and not args.dry_run:
         p = Path(args.out_txt)
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(norm["full"] + "\n", encoding="utf-8")
-    if args.out_json:
+    if args.out_json and not args.dry_run:
         p = Path(args.out_json)
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(norm, indent=2), encoding="utf-8")
@@ -338,6 +340,7 @@ def main() -> None:
         "scenes_changed": changed,
         "out_txt": args.out_txt,
         "out_json": args.out_json,
+        "dry_run": bool(args.dry_run),
     }))
 
 

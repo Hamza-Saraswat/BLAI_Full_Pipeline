@@ -1,0 +1,21 @@
+In this video we will look at quantization from the ground up. Quantization is a family of techniques for storing model weights in fewer bits. There are many formats. Most people encounter four of them, and the differences between those four are mostly historical rather than practical.
+
+The taxonomy is the usual starting point. There is round to nearest, there is group-wise scaling, there is the k-quant family, and there is the newer four-bit floating point work. Each of these has a paper, a repository, and a set of benchmark tables that mostly agree with each other.
+
+The reason all of this matters is that memory is finite, and a model that does not fit does not run at all, which is a fact that gets rediscovered constantly in forums and issue threads and comment sections, usually by someone who has just spent an hour downloading a file. The arithmetic is not complicated. Parameters times bits per parameter divided by eight gives bytes. Everything else in this space is an argument about how much accuracy is acceptable to lose in exchange for that arithmetic coming out smaller.
+
+Stage one. The weights arrive as sixteen-bit floating point numbers from the original training run. This is the reference that every other format is measured against, and it is the baseline for the tables below.
+
+Stage two. Group-wise scaling splits the tensor into blocks of thirty-two and stores one scale factor per block. Stage three. The k-quant family mixes precisions inside a single file, which is why its names have letters in them.
+
+Stage four is the strange one. Four-bit floating point keeps an exponent, which matters for outliers in the attention layers. Nothing about this ordering is sequential, and none of these stages happens after another one in any real pipeline.
+
+Stage five. Benchmarks for all of these land within two percentage points of each other on the common evaluation suites, which is a result that surprises people who expected the newer formats to win by a wide margin.
+
+Stage six. Selection in practice comes down to what the runtime supports, not to what the papers recommend, and most runtimes support two of these formats well and the rest badly.
+
+A user who wants the smallest file will pick the k-quant family. A user who wants the best accuracy per gigabyte on newer hardware will pick the four-bit floating point build. Neither choice is wrong, and both are widely deployed today. Both appear in the same download menus.
+
+The honest summary is that the format matters less than the context length, which is where the memory actually goes on a long conversation. Most of the debate in this area is about a few percentage points of file size.
+
+That is the landscape. Subscribe if a deeper walk through the k-quant naming scheme would be useful, because that is the natural follow-up to this material and it deserves its own episode.

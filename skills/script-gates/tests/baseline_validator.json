@@ -1,0 +1,233 @@
+{
+  "_doc": "Pre-change validate_storyboard.py blocker/advisory/warning counts over the v1 corpus (BLAI_Animator/out/*/storyboard.json), captured with --history skills/script-gates/fixtures/history.json. corpus_regression.py asserts blocker counts never rise.",
+  "boards": {
+    "5-numbers-that-prove-your-employees": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 2,
+      "warnings": 3
+    },
+    "5-reasons-last-week-made-the": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 2
+    },
+    "5-signs-local-ai-just-had": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 5,
+      "warnings": 4
+    },
+    "63-of-companies-just-admitted-their": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 2
+    },
+    "deepseeks-new-coding-model-beat-its": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 2
+    },
+    "deepseeks-new-model-just-beat-frontier": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 1,
+      "warnings": 3
+    },
+    "format-comparison-title-nvidias-4-000-min": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 10,
+      "warnings": 4
+    },
+    "format-how-to-title-unsloth-says-the-newe": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 8,
+      "warnings": 5
+    },
+    "format-how-to-title-will-qwen3-8-maxs-2-4": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 7,
+      "warnings": 3
+    },
+    "gpu-doorway-bandwidth": {
+      "exit": 1,
+      "blockers": 2,
+      "advisories": 0,
+      "warnings": 0
+    },
+    "moe-local-rematch": {
+      "exit": 1,
+      "blockers": 2,
+      "advisories": 0,
+      "warnings": 0
+    },
+    "moe-wake-up-trick": {
+      "exit": 1,
+      "blockers": 2,
+      "advisories": 0,
+      "warnings": 0
+    },
+    "ollama-v0-32-0-july-11-2026-added": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 5
+    },
+    "reason-like-a-3b-know-like": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 0
+    },
+    "shrink-the-numbers": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 0
+    },
+    "simple-explanation-on-how-to-install": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 7,
+      "warnings": 3
+    },
+    "smoke-test": {
+      "exit": 1,
+      "blockers": 2,
+      "advisories": 0,
+      "warnings": 0
+    },
+    "three-laptops-one-brain-hook-our": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 2,
+      "warnings": 2
+    },
+    "title-5-numbers-to-know-before": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 1,
+      "warnings": 5
+    },
+    "title-alibaba-just-undercut-claudes-price": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 5
+    },
+    "title-dgx-spark-vs-mac-studio": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 2,
+      "warnings": 0
+    },
+    "title-everyone-says-dgx-spark-is": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 7,
+      "warnings": 1
+    },
+    "title-meta-just-shipped-a-free": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 2
+    },
+    "title-nvidias-nemotron-3-5-lightning-turn": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 2,
+      "warnings": 2
+    },
+    "title-the-eu-just-got-the": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 2
+    },
+    "title-top-5-things-that-just": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 6,
+      "warnings": 2
+    },
+    "title-two-new-open-models-landed": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 8,
+      "warnings": 4
+    },
+    "top-5-reasons-why-enterprises-should": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 3
+    },
+    "what-is-fine-tuning-a-model": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 5
+    },
+    "what-is-moe-mixture-of-experts": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 7,
+      "warnings": 2
+    },
+    "what-is-the-dgx-spark-and": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 10,
+      "warnings": 5
+    },
+    "what-nvidias-new-dgx-spark-firmware": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 3
+    },
+    "why-a-law-firm-clinic-or": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 4
+    },
+    "why-the-exact-same-ai-model": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 2
+    },
+    "why-your-law-firm-clinic-shop-cant-use": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 4,
+      "warnings": 3
+    },
+    "why-your-local-ai-model-looks": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 6,
+      "warnings": 2
+    },
+    "your-deleted-chatgpt-conversations-are-no": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 2,
+      "warnings": 0
+    },
+    "z-ai-didnt-make-glm-5-3-bigger": {
+      "exit": 3,
+      "blockers": 0,
+      "advisories": 3,
+      "warnings": 7
+    }
+  }
+}

@@ -23,6 +23,12 @@ LANGUAGE    [advisory] FK grade >8 · sentence cap 20 / avg <=15 · hook
             sentence 5-12 · banned openers/closers/fillers/hype/CTA
             · (passive-ish: warn)
 PACING      [advisory] words/sec vs target · est-sum vs target (word budget: warn)
+VOICE       [advisory] >3 "we/our/us" in a second-person band · no "you/your/
+            you're" in the first three sentences
+ENDING      [advisory] sentences after the payoff line: `ending` from
+            formats.json (abrupt = 1, resolution-or-recap = 2). The payoff is
+            anchored at the FIRST sentence of the final payoff_close scene
+LENGTH      [advisory] narration_full over the band's narration_max_chars
 HOOKS       [advisory] hook_text <=7 words · >=10 hook_candidates ·
             title==hook · AI-disclosure (title length: warn)
 SFX         [advisory] <=6 total
@@ -30,7 +36,7 @@ SHAPE       `structure` (narrative shape) is free text: never rejected; an
             unlisted value is a warning only. Absent script_format = classic.
 
 Paths (v2 port, all relative to this file): formats.json, tts_lexicon.json and
-voice.config.json (wps) in skills/script-gates/; the schema in
+voice.config.json (wps_by_format, then wps) in skills/script-gates/; the schema in
 shared/schemas/storyboard.schema.json; style history in
 skills/render-shorts/styles/history.json (--history overrides; a missing file
 is "no history" and raises an advisory, never a crash).
@@ -96,8 +102,9 @@ _CLASSIC_FALLBACK = {
     "scene_narration_advisory_s": 13,
     "hook": {"concrete_required": True, "first_sentence_words": {"min": 5, "max": 12}, "scene_max_s": 7},
     "sentence": {"cap": 20, "pct_over_cap": 0.0, "avg_max": 15, "runaway": None},
-    "numbers": {"policy": "spend", "min_count": 3, "ratio": 0.5},
-    "person": "we",
+    "numbers": {"policy": "band", "min_count": 2, "max_count": 5},
+    "person": "you",
+    "ending": "abrupt",
     "est_sum_tolerance": {"lo": 0.8, "hi": 1.25},
     "wps_fallback": 2.6,
 }
@@ -120,15 +127,21 @@ def _structures():
         return []
 
 
-def _wps(fmt_cfg):
-    """Words/sec: pinned voice's MEASURED wps beats the format fallback beats 2.6."""
-    cfg_path = VOICE_CONFIG_PATH  # repointed: skills/script-gates/voice.config.json (reads "wps")
+def _wps(fmt, fmt_cfg):
+    """Words/sec, in preference order: the pinned voice's measured per-format rate
+    (voice.config.json `wps_by_format[fmt]`) beats its flat `wps`, which beats the
+    band's `wps_fallback` in formats.json, which beats 2.6."""
+    cfg = {}
     try:
-        w = json.load(open(cfg_path)).get("wps")
-        if w:
-            return float(w)
+        cfg = json.load(open(VOICE_CONFIG_PATH))  # repointed: skills/script-gates/voice.config.json
     except Exception:
         pass
+    by_fmt = cfg.get("wps_by_format") or {}
+    w = by_fmt.get(fmt) if isinstance(by_fmt, dict) else None
+    if not w:
+        w = cfg.get("wps")
+    if w:
+        return float(w)
     return float(fmt_cfg.get("wps_fallback", 2.6))
 
 
@@ -214,6 +227,9 @@ def main():
     ap.add_argument("--history", default=None,
                     help=f"style-pack history file (default: {HISTORY_PATH}); "
                          "a missing file means no history and is reported as an advisory")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="no-op: this script only reads and prints. Accepted so every "
+                         "script in skills/script-gates takes the same flags.")
     args = ap.parse_args()
     if not args.storyboard:
         print(__doc__)
@@ -250,7 +266,7 @@ def main():
         adv.append(f"unknown script_format '{fmt}' — treating as classic (see skills/script-gates/formats.json)")
         fmt = "classic"
     F = formats.get(fmt, _CLASSIC_FALLBACK)
-    WPS = _wps(F)
+    WPS = _wps(fmt, F)
 
     # v2: `structure` is the narrative shape (script-structures.md). It is
     # independent of the band and never rejected; an unlisted value is only
@@ -272,9 +288,12 @@ def main():
         warn.append(f"target {tgt}s outside the {_t['sweet_min']}-{_t['sweet_max']}s evidence band")
     if not all(re.fullmatch(r"#[A-Za-z0-9]+", h) for h in sb["hashtags"]):
         adv.append("hashtags must all match #Alnum")
-    if not 8 <= len(sb["hashtags"]) <= 12:
-        adv.append(f"{len(sb['hashtags'])} hashtags — 8–12 is the evidence band "
-                   "(reference channels ship 10–15; we shipped 3)")
+    # repointed: shared/playbook/hashtags-tags.md is the source of truth. YouTube shows at
+    # most 3 above the title, so 2-3 is the target; the schema floor is 3. The package stage
+    # writes the final list, so these are working values.
+    if not 2 <= len(sb["hashtags"]) <= 4:
+        adv.append(f"{len(sb['hashtags'])} hashtags -- 2-3 is the target "
+                   "(only 3 show above the title; see shared/playbook/hashtags-tags.md)")
     tags = sb.get("tags") or []
     if len(tags) < 15:
         adv.append(f"{len(tags)} YouTube keyword tags — 15–25 recommended "
@@ -463,11 +482,39 @@ def main():
     if not (_tol["lo"] * tgt <= est_sum <= _tol["hi"] * tgt):
         adv.append(f"sum(est)={est_sum:.0f}s vs target {tgt}s")
 
-    # smooth-explainer is written in second person; "we/our" is the classic voice.
+    # ---- person, ending, narration length ---------------------------------
+    # Both bands are second person now (formats.json `person`); "we" is reserved
+    # for our own measurements.
     if F.get("person") == "you":
         plural = len(re.findall(r"\b(?:we|our|ours|us)\b", narr, re.I))
         if plural > 3:
             adv.append(f"{plural} first-person-plural uses ('we/our') — this format is second-person ('you')")
+        # Direct address: the viewer's situation is named early or the script is
+        # talking about the subject instead of to the viewer.
+        head3 = " ".join(sents[:3])
+        if not re.search(r"\b(?:you|your|you['\u2019]re)\b", head3, re.I):
+            adv.append("no second-person marker ('you', 'your', \"you're\") in the first "
+                       "three sentences: name the viewer's situation up front")
+
+    # `ending` (formats.json): the last spoken sentence is the payoff and almost
+    # nothing follows it. The payoff is anchored, deterministically, at the FIRST
+    # sentence of the final payoff_close scene; every sentence after it in that
+    # scene is tail. `abrupt` allows one tail sentence, `resolution-or-recap` two.
+    _ending = F.get("ending")
+    _tail_budget = {"abrupt": 1, "resolution-or-recap": 2}.get(_ending)
+    if _tail_budget is not None and scenes:
+        _last_sents = sentences(scenes[-1].get("narration", "") or "")
+        _tail = _last_sents[1:]
+        if len(_tail) > _tail_budget:
+            adv.append(f"ending '{_ending}': {len(_tail)} sentences follow the payoff line "
+                       f"(at most {_tail_budget}): cut to the payoff and stop: "
+                       f"'{' '.join(_tail)[:80]}…'")
+
+    # `narration_max_chars` (formats.json): the schema's per-band bound.
+    _max_chars = F.get("narration_max_chars")
+    if _max_chars and len(narr) > _max_chars:
+        adv.append(f"narration_full {len(narr)} chars > {_max_chars} for {fmt} "
+                   f"(skills/script-gates/formats.json narration_max_chars)")
 
     # ---- style-pack rotation ---------------------------------------------
     # repointed: skills/render-shorts/styles/history.json (v1: docs/styles/history.json).

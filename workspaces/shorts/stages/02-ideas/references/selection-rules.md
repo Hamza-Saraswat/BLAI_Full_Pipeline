@@ -6,7 +6,16 @@
 
 ## Format mix
 
-Alternate `classic` (32-38 s) and `smooth-explainer` (75-150 s) across the two picks. A `news-react` pick is always `classic`; an `explainer` or `how-to` pick is usually `smooth-explainer`. Bands are defined in `skills/script-gates/formats.json`.
+Pick the band by fit, not by turn-taking. Bands are defined in `skills/script-gates/formats.json`.
+
+| Take `classic` (32-38 s) when | Take `smooth-explainer` (75-150 s) when |
+|---|---|
+| the idea is one fact and one consequence | the idea needs a worked example carried the whole way |
+| the number does the work on its own | the viewer has to follow a state changing three or more times |
+| it is a release, a price change or a correction | it is a mechanism, a process, or a belief that needs dismantling |
+| a viewer could act on it in one sentence | the honest catch needs its own beat |
+
+Two soft constraints, in this order: the two picks of one day should not share a band, and no band runs three days straight. Fit wins over both; when it does, say so in the Decisions block.
 
 ## Ranking
 

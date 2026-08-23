@@ -1,0 +1,176 @@
+{
+  "slug": "2026-08-22-dgx-spark-or-mac-studio",
+  "topic": "Why the DGX Spark loses to a Mac Studio at writing text and wins at reading it",
+  "title": "DGX Spark vs Mac Studio: wrong number",
+  "description": "The DGX Spark is sold on a petaflop of AI performance, and a Mac Studio still writes text about three times faster. Here is which half of the job each box actually wins, and how to pick.\n\n(narration is ai-generated using the creator's own cloned voice)\n\n#dgxspark #macstudio #localai",
+  "hashtags": [
+    "#dgxspark",
+    "#macstudio",
+    "#localai"
+  ],
+  "tags": [
+    "dgx spark",
+    "mac studio",
+    "dgx spark vs mac studio",
+    "local llm",
+    "run llm locally",
+    "memory bandwidth",
+    "prefill vs decode",
+    "m3 ultra",
+    "local ai hardware",
+    "llama cpp",
+    "tokens per second",
+    "dgx spark benchmark",
+    "mac studio local ai",
+    "petaflop",
+    "unified memory"
+  ],
+  "hook_text": "The petaflop is the wrong number",
+  "hook_candidates": [
+    "The petaflop is the wrong number",
+    "Your Mac writes faster than a petaflop box",
+    "One box reads faster. The other writes faster.",
+    "A petaflop cannot save a narrow pipe",
+    "Which half of the job are you buying?",
+    "The Spark is faster. Just not at that.",
+    "Four thousand dollars of compute, standing in line",
+    "You are comparing two boxes on the wrong axis",
+    "Spec sheets pick the Spark. Owners pick the Mac.",
+    "The number on the box measures the half nobody watches"
+  ],
+  "style_pack": "silicon",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "REFRAMES, EQUIPS",
+  "target_duration_s": 89,
+  "narration_full": "The DGX Spark is sold on a petaflop of AI performance. The Mac Studio on your desk is not. So the Spark should write your text faster. It does not, and the gap is not close. Hand both machines the same model and the same long document, then watch the answer come out. The Mac gets there first, and not by a little. That is not a bad driver or a tuning problem. It is the wrong number on the box. Writing text is not a compute problem. To produce one word, the machine pulls the model's weights out of memory. Then it does it again for the next word, and again. The weights do not fit in any cache, so there is no shortcut. Every word pays the same toll. What limits you is how wide that memory pipe is, and the Mac's is about three times wider than the Spark's. The petaflops sit there, waiting. Where the Spark's petaflop does show up is the other half of the job: reading what you pasted. That is one big block of math, the Spark does it all at once, and it is not close. So the myth is half true, which is exactly why it survives. The Spark really is the faster machine. It is faster at the half of the job nobody watches. None of this is on NVIDIA's spec sheet, because a spec sheet has no idea what you paste. Long documents and short answers, buy the Spark. Short questions and long answers, buy the Mac Studio.",
+  "analogy": {
+    "vehicle": "a stronger engine against a wider doorway",
+    "mapping": "compute is the engine, memory bandwidth is the doorway",
+    "limit": "reading the prompt is one wide pass, not a queue at the door"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The DGX Spark is sold on a petaflop of AI performance. The Mac Studio on your desk is not.",
+      "on_screen_text": "1 PFLOP | vs Mac Studio",
+      "visual_brief": "Frame 1: the words ONE PETAFLOP already legible in huge amber type on the near-black field. Motion onset at 0.3s: a thin rule strokes left to right beneath it. At 2s a Mac Studio silhouette fades in at the right edge with no number beside it. At 5s the empty space where its number would go pulses once.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "So the Spark should write your text faster. It does not, and the gap is not close.",
+      "on_screen_text": "Mac finishes first",
+      "visual_brief": "The petaflop tag shrinks into the top-left corner. '3x SLOWER' punches in at centre in error red, scaling from 0.8 to 1.0 over six frames. At 3s a small Spark badge slides in beneath it and settles. At 5s the corner petaflop tag dims to grey.",
+      "est_duration_s": 6.8
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Hand both machines the same model and the same long document, then watch the answer come out.",
+      "on_screen_text": "same model | same document",
+      "visual_brief": "Two identical cards slide in from opposite edges, Spark left and Mac right. At 2s each is stamped with the same model chip. At 4s the same document glyph drops onto both. At 6s a shared progress bar begins filling under both at the same instant.",
+      "est_duration_s": 6.8
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "The Mac gets there first, and not by a little. That is not a bad driver or a tuning problem. It is the wrong number on the box.",
+      "on_screen_text": "Mac finishes first",
+      "visual_brief": "Two horizontal timelines run in parallel. At 2s the Mac bar passes the halfway mark while the Spark bar lags. At 5s the Mac bar completes and locks in success green with a soft tick. At 7s the Spark bar is still a third across and keeps crawling. At 9s a red 'wrong number' tag lands on the spec sheet in the corner.",
+      "est_duration_s": 10.6
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Writing text is not a compute problem. To produce one word, the machine pulls the model's weights out of memory. Then it does it again for the next word, and again.",
+      "on_screen_text": "one word = one full read",
+      "visual_brief": "A memory block on the left, a compute die on the right, one narrow pipe between them. At 2s a packet labelled 'one word' travels the pipe end to end. At 4s the compute die pulses once as it lands. At 6s the same trip repeats down a dimmer row, then again on a third, so the repetition reads as endless.",
+      "est_duration_s": 11.6
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "The weights do not fit in any cache, so there is no shortcut. Every word pays the same toll.",
+      "on_screen_text": "no shortcut | every word pays",
+      "visual_brief": "A cache block sits beside a far larger weights block, obviously too small to hold it. At 2s a word token tries the cache, finds nothing, and is routed the long way. At 5s a counter of identical tolls ticks up once per word.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "What limits you is how wide that memory pipe is, and the Mac's is about three times wider than the Spark's. The petaflops sit there, waiting.",
+      "on_screen_text": "three times wider",
+      "visual_brief": "The two pipes are drawn to scale side by side, the Mac's visibly three times the bore of the Spark's. At 2s each is labelled with its bandwidth. At 4s a stream of packets floods the wide pipe. At 6s the narrow pipe trickles. At 8s the Spark's compute die idles with a slow grey pulse while its pipe is still draining.",
+      "est_duration_s": 9.9
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Where the Spark's petaflop does show up is the other half of the job: reading what you pasted.",
+      "on_screen_text": "reading the prompt",
+      "visual_brief": "The scene flips orientation. At 1s the document glyph from earlier returns at centre. At 3s the whole prompt is swallowed in one wide sweep rather than word by word. At 5s the petaflop tag brightens back to amber.",
+      "est_duration_s": 7.1
+    },
+    {
+      "id": "s9",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "That is one big block of math, the Spark does it all at once, and it is not close.",
+      "on_screen_text": "one pass, all at once",
+      "visual_brief": "A dense grid of cells resolves all at once instead of sequentially, then '4x' counts up in the centre while a small Mac bar beside it fills only a quarter of the way.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "So the myth is half true, which is exactly why it survives. The Spark really is the faster machine. It is faster at the half of the job nobody watches.",
+      "on_screen_text": "faster at reading | slower at writing",
+      "visual_brief": "The frame splits cleanly down the middle. At 2s the reading half fills in success green with the Spark ahead. At 5s the writing half fills in amber with the Mac ahead. At 8s both halves hold on screen together for the first time and a hairline divider draws down the centre.",
+      "est_duration_s": 11.2
+    },
+    {
+      "id": "s11",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "None of this is on NVIDIA's spec sheet, because a spec sheet has no idea what you paste.",
+      "on_screen_text": "the spec sheet cannot know",
+      "visual_brief": "A spec sheet renders as a clean column of figures. At 2s a document of the viewer's own text slides in beside it and the sheet has no row for it. At 5s the unmatched row highlights in amber and the rest of the sheet dims.",
+      "est_duration_s": 7.1
+    },
+    {
+      "id": "s12",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Long documents and short answers, buy the Spark. Short questions and long answers, buy the Mac Studio.",
+      "on_screen_text": "long in, short out: Spark",
+      "visual_brief": "Two short decision lines stack and lock, each with its verdict word in amber. At 3s the second line lands. At 6s the wordmark settles into the lower third. The frame then stops moving, rhyming with the composition of frame 1.",
+      "est_duration_s": 6.8
+    }
+  ],
+  "notes_for_review": "Two spoken numbers only, three times and four times, each doing double duty for bandwidth and for speed. Ratios are rounded from the EXO Labs run (3.4x writing, 3.8x reading); the exact figures are in the brief."
+}

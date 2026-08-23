@@ -2,17 +2,57 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "blai://research.schema.json",
   "title": "BLAI Research Brief v1",
-  "description": "A SOURCED research brief that educates the storyboard stage. Written by blai-research from web sources; read by blai-storyboard as ground truth. Every claim cites a page actually fetched this session; anything unverified goes in `unverified`, never `claims`. `explanation_path` + `suggested_outline` are the cohesion mechanism — the storyboard follows the route from zero to the payoff instead of assembling beats blind.",
+  "description": "A SOURCED research brief that educates the storyboard stage. Written by blai-research from web sources; read by blai-storyboard as ground truth. Every claim cites a page actually fetched this session; anything unverified goes in `unverified`, never `claims`. `explanation_path` + `suggested_outline` are the cohesion mechanism \u2014 the storyboard follows the route from zero to the payoff instead of assembling beats blind.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["slug", "topic", "generated_at", "depth", "thesis", "explanation_path", "claims", "key_numbers", "analogy_candidates", "misconceptions", "glossary", "unverified", "suggested_outline"],
+  "required": [
+    "slug",
+    "topic",
+    "generated_at",
+    "depth",
+    "thesis",
+    "explanation_path",
+    "claims",
+    "key_numbers",
+    "analogy_candidates",
+    "misconceptions",
+    "glossary",
+    "unverified",
+    "suggested_outline"
+  ],
   "properties": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,40}$" },
-    "topic": { "type": "string", "minLength": 8, "description": "The concept the producer typed" },
-    "generated_at": { "type": "string", "description": "ISO timestamp the brief was written" },
-    "depth": { "type": "string", "enum": ["standard", "deep"], "description": "standard = built-in WebSearch/WebFetch; deep = also Firecrawl MCP full-page extraction" },
-    "thesis": { "type": "string", "minLength": 20, "maxLength": 400, "description": "One sentence: the single idea this video lands" },
-    "explanation_path": { "type": "string", "minLength": 40, "description": "Prose: the recommended route from zero to the payoff — what must be understood before what. This is what makes the short cohesive instead of disjointed." },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,40}$"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 8,
+      "description": "The concept the producer typed"
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "ISO timestamp the brief was written"
+    },
+    "depth": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "deep"
+      ],
+      "description": "standard = built-in WebSearch/WebFetch; deep = also Firecrawl MCP full-page extraction"
+    },
+    "thesis": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 400,
+      "description": "One sentence: the single idea this video lands"
+    },
+    "explanation_path": {
+      "type": "string",
+      "minLength": 40,
+      "description": "Prose: the recommended route from zero to the payoff \u2014 what must be understood before what. This is what makes the short cohesive instead of disjointed."
+    },
     "claims": {
       "type": "array",
       "minItems": 3,
@@ -20,14 +60,46 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["claim", "source_url", "source_title", "source_quality", "confidence", "accessed"],
+        "required": [
+          "claim",
+          "source_url",
+          "source_title",
+          "source_quality",
+          "confidence",
+          "accessed"
+        ],
         "properties": {
-          "claim": { "type": "string", "minLength": 10 },
-          "source_url": { "type": "string", "pattern": "^https?://" },
-          "source_title": { "type": "string" },
-          "source_quality": { "type": "string", "enum": ["primary", "docs", "benchmark", "community"] },
-          "confidence": { "type": "string", "enum": ["high", "medium"] },
-          "accessed": { "type": "string", "description": "ISO date the page was fetched" }
+          "claim": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_url": {
+            "type": "string",
+            "pattern": "^https?://"
+          },
+          "source_title": {
+            "type": "string"
+          },
+          "source_quality": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "docs",
+              "benchmark",
+              "community"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium"
+            ]
+          },
+          "accessed": {
+            "type": "string",
+            "description": "ISO date the page was fetched"
+          }
         }
       }
     },
@@ -37,60 +109,123 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["label", "value"],
+        "required": [
+          "label",
+          "value"
+        ],
         "properties": {
-          "label": { "type": "string" },
-          "value": { "type": "string", "description": "value WITH units, e.g. '273 GB/s', '2%', '4x'" },
-          "source_url": { "type": "string", "pattern": "^https?://" }
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "description": "value WITH units, e.g. '273 GB/s', '2%', '4x'"
+          },
+          "source_url": {
+            "type": "string",
+            "pattern": "^https?://"
+          }
         }
       }
     },
     "analogy_candidates": {
       "type": "array",
-      "description": "Candidate analogies for the storyboard to choose from — each with its breaking point named",
+      "description": "Candidate analogies for the storyboard to choose from \u2014 each with its breaking point named",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["vehicle", "mapping", "limit"],
+        "required": [
+          "vehicle",
+          "mapping",
+          "limit"
+        ],
         "properties": {
-          "vehicle": { "type": "string" },
-          "mapping": { "type": "string" },
-          "limit": { "type": "string" }
+          "vehicle": {
+            "type": "string"
+          },
+          "mapping": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "string"
+          }
         }
       }
     },
     "misconceptions": {
       "type": "array",
-      "description": "Counterintuitive facts / common myths — hook fuel and accuracy guards",
+      "description": "Counterintuitive facts / common myths \u2014 hook fuel and accuracy guards",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["myth", "reality"],
+        "required": [
+          "myth",
+          "reality"
+        ],
         "properties": {
-          "myth": { "type": "string" },
-          "reality": { "type": "string" }
+          "myth": {
+            "type": "string"
+          },
+          "reality": {
+            "type": "string"
+          }
         }
       }
     },
     "glossary": {
       "type": "array",
-      "description": "Terms the video must define in ≤1 sentence",
+      "description": "Terms the video must define in \u22641 sentence",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["term", "definition"],
+        "required": [
+          "term",
+          "definition"
+        ],
         "properties": {
-          "term": { "type": "string" },
-          "definition": { "type": "string" }
+          "term": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          }
         }
       }
     },
     "unverified": {
       "type": "array",
       "description": "Claims that could NOT be grounded in a fetched source. The storyboard may use these only hedged, or not at all.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "suggested_outline": { "type": "string", "minLength": 20, "description": "Newline-separated beats, one per line — seeds input.outline when it's empty" },
-    "notes": { "type": "string", "description": "Anything else the storyboard writer should know (open questions, conflicting sources)" }
+    "suggested_outline": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Newline-separated beats, one per line \u2014 seeds input.outline when it's empty"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Anything else the storyboard writer should know (open questions, conflicting sources)"
+    },
+    "viewer_situation": {
+      "type": "string",
+      "description": "What the viewer already has or does today, in one sentence. Feeds the direct-address opener."
+    },
+    "has_process": {
+      "type": "boolean",
+      "description": "True when the topic is a process the viewer performs. Decides structure fit and whether positional labels are permitted at all."
+    },
+    "process_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The real steps, when has_process is true. Each is an action the viewer takes."
+    },
+    "objection": {
+      "type": "string",
+      "description": "What a skeptical engineer says back. Feeds the honest-catch beat."
+    }
   }
 }

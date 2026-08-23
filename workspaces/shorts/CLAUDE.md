@@ -16,7 +16,7 @@ shorts/
     ├── 01-radar/            (48 h sweep -> scored digest)                 cloud
     ├── 02-ideas/            (candidates -> keyword research -> 2 picks)   cloud
     ├── 03-research/         (pick -> sourced brief)                       cloud
-    ├── 04-script/           (brief -> script + storyboard.json)           cloud
+    ├── 04-script/           (brief -> two drafts -> judged script)        cloud
     ├── 05-package/          (script -> title, description, manifest)      cloud
     ├── 06-voice/            (storyboard -> narration + captions)          Spark
     ├── 07-render/           (scenes -> final.mp4 -> Telegram card)        Spark
@@ -80,7 +80,7 @@ Every routine and build run passes `--unattended`. The agent still reaches every
 | Sweep sources | `stages/01-radar/CONTEXT.md` and its Inputs | `stages/02` to `stages/08`, `brand-vault/voice-rules.md` |
 | Pick topics | `stages/02-ideas/CONTEXT.md` and its Inputs, the day's radar digest | `stages/03` onward, `brand-vault/voice-rules.md` |
 | Research | `stages/03-research/CONTEXT.md` and its Inputs | the radar digest, `stages/04` onward, `brand-vault/voice-rules.md` |
-| Script | `stages/04-script/CONTEXT.md` and its Inputs (brief, voice-rule sections, structures, hooks) | the radar and ideas notes, `stages/05` onward, other slugs' outputs |
+| Script | `stages/04-script/CONTEXT.md` and its Inputs (brief, voice-rule sections, signature analogies, structures, hooks, judge rubric, the ledger's last 5) | the radar and ideas notes, `stages/05` onward, other slugs' outputs |
 | Package | `stages/05-package/CONTEXT.md` and its Inputs (script, playbook) | the brief, `stages/06` onward |
 | Voice, render, publish | that stage's `CONTEXT.md` and its Inputs | every cloud stage's `references/`, other slugs' build folders |
 

@@ -12,7 +12,7 @@
 
 ## Rotation
 
-No series twice in a row (`output/series-ledger.json`). Across any rolling six runs, every series that has a viable candidate appears at least once.
+No series twice in a row (`output/episode-ledger.json`). Across any rolling six runs, every series that has a viable candidate appears at least once.
 
 ## Favored series
 

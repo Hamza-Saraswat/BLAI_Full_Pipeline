@@ -71,3 +71,7 @@ You produce the one artifact the script writer trusts as ground truth: a sourced
 - The stage contract, not this skill, links the brief in the hub note (`## Artifacts`, "Brief"), appends the decision line, and sets `status: researched` with `tools/hubnote.py`.
 - Write only the two brief files. Never touch the script, the storyboard, or any other stage's output.
 - If the concept is thin or the sources are weak, say so under Notes instead of padding Unverified with filler; a thin brief is a reason to send the idea back, not to fake depth.
+
+## Three fields the writer cannot invent
+
+Every brief carries `viewer_situation` (what the viewer has or does today, one sentence, second person), `has_process` plus `process_steps` (true only for steps the viewer performs; a mechanism or an argument is not a process), and `objection` (what a skeptical engineer says back). The script stage uses them to open in direct address, to choose a structure, and to decide whether positional labels are permitted at all. Getting `has_process` wrong is how a script ends up numbering things that are not steps. See `rules/brief-format.md`.

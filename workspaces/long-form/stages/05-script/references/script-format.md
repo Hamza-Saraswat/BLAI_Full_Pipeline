@@ -6,6 +6,7 @@
 ---
 slug: [slug]
 series: [series]
+structure: [structure]
 value_types: A, B
 target_minutes: 12
 words: 1820
@@ -42,3 +43,4 @@ chapters: 4
 - Every chapter ends on something usable (a command, a number, a decision rule).
 - Scene hints come from the scene library in `skills/render-longform/rules/scene-library.md`; they are hints, the spec stage decides.
 - Person: first person singular for what I did on the Spark, second person for what the viewer should do.
+- `structure` is carried unchanged from the outline's frontmatter. It fixes the chapter pattern, where the payoff sits, and whether positional labels are allowed at all; the gate reads it from here.

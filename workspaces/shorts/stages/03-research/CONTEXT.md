@@ -38,6 +38,7 @@ Turn each of today's picks into a sourced brief. Facts in the brief bind every l
 | Thesis | one sentence a viewer could repeat, consistent with the pick's angle |
 | Specifics | at least 3 key numbers and 2 named products or tools |
 | Audience | no claim explains something the Audience section says viewers already know |
+| Writer fields | `viewer_situation`, `objection` and `has_process` are all present; when `has_process` is true, `process_steps` lists actions the viewer performs |
 
 ## Outputs
 

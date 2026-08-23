@@ -9,15 +9,18 @@ format: classic | smooth-explainer
 structure: [from script-structures.md]
 style_pack: [from style_rotation.py]
 value_types: A, B
+promise: [one sentence: what the viewer can do or decide after 40 seconds]
 target_duration_s: [inside the band]
 brief: [slug]-brief.md
+drafts: [slug]-drafts.md
 ---
 
 # [working title]
 
 ## Decisions
-- Structure and value types: what and why (two lines)
+- The two structures tried and why; which won and by how many points
 - Hook: which of the 10 and why
+- Any graft taken from the losing draft
 
 ## Hook candidates
 1. ... (10 lines, the pick marked with *)
@@ -48,3 +51,11 @@ What the reviewer should check (a number you rounded, a claim you softened, the 
 | `notes_for_review` | the Notes for review section |
 
 Rules: scene narration strings must concatenate exactly to `narration_full`; numbers are words in narration and digits on screen; a number on screen is spoken in the same scene; the last scene's role is `payoff_close`; the schema is `shared/schemas/storyboard.schema.json` and the validator in `skills/script-gates` is the judge.
+
+## The drafts note
+
+`[slug]-drafts.md` holds both drafts, the judge's score table for every row, the winner, each graft with its reason, and two sentences on what the losing shape would have needed. Layout and scoring live in `judge-rubric.md`. This note is committed: the weekly retro reads it when one structure keeps losing.
+
+## The ledger
+
+`output/script-ledger.json` is appended by `variety_check.py record` after the winner is saved. It carries the structure, hook pattern, closing move, duration and sentence-opener fingerprint of every script, and it is what the `sameness` gate compares against. Never edit it by hand; if a run is abandoned, delete its entry rather than rewriting it.

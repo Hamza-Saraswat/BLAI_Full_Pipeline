@@ -26,6 +26,8 @@ Three to five lines for the reviewer: the thesis, the most arresting number, the
 One sentence: the single idea the video lands.
 
 ## Explanation path
+
+Write it as content, never as positions. "Establish that one job has two halves, reading and writing, before either machine appears" is right. "Stage one, reading. Stage two, writing." is wrong: positional vocabulary in the brief becomes positional vocabulary in the narration, which is banned by Hard Constraint 10 in `brand-vault/voice-rules.md`. Name the thing, not its number.
 Prose. The route from zero to the payoff: what must be understood before what, and why that order. A proposal the script may restructure.
 
 ## Claims
@@ -55,6 +57,15 @@ Prose. The route from zero to the payoff: what must be understood before what, a
 ## Suggested outline
 1. One beat per line, strongest concrete fact early.
 2. ...
+
+## Viewer situation
+One sentence: what the viewer already has or does today, in their words. Second person.
+
+## Has process
+`true` or `false`. When true, list the real steps the viewer performs, one per line, each starting with a verb. When false, write "false" and nothing else. Never list rhetorical moves, components or layers as steps.
+
+## Objection
+One sentence: what a skeptical engineer says back to the thesis.
 
 ## Sources
 | # | URL | Title | Tier | Fetched via | Accessed |

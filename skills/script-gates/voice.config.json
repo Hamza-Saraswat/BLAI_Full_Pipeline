@@ -4,6 +4,7 @@
   "speed": 1.0,
   "sample_rate": 44100,
   "wps": 2.9,
+  "wps_by_format": { "classic": 2.9, "smooth-explainer": 2.9 },
   "voices_wps": {},
-  "_note": "wps is a provisional estimate for the ElevenLabs professional clone; re-measure with the first three voice renders (duration vs word count) and update."
+  "_note": "wps and wps_by_format are PROVISIONAL estimates for the ElevenLabs professional clone. They must be re-measured from the first three renders (rendered audio duration divided by narration word count, per format) and updated here. Both scripts prefer wps_by_format[script_format], then the flat wps, then the band's wps_fallback in formats.json."
 }

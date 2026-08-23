@@ -16,21 +16,27 @@ Stages pass explicit --storyboard/--research/--out paths; the <slug> form needs 
 v1-style out/<slug>/ tree under --root. --report scans out/*/eval.json and
 workspaces/*/stages/*/output/*eval.json.
 
-GATES (Gate-1 delegation contract; see GATES dict)
-  number_spend       spent >= min(3, ceil(0.5*total))   count-based: a rich
-                     brief must not make the bar unreachable for a 40s short
+GATES (Gate-1 delegation contract; thresholds come from formats.json, see
+gates_for(); the GATE_FALLBACKS dict below is only a per-key safety net)
+  number_spend       classic: at least 2 and at most 5 key numbers spent;
+                     smooth-explainer: a cap of 3. The floor is clamped to the
+                     brief's own total so a thin brief cannot make it unreachable
   entity_spend       >= 0.5 of the filtered named-entity set
   top2               both top-ranked entities present (quality, then frequency)
   hook_concrete      hook + first sentence carries a digit/number/entity
-  scene_specificity  every scene but one carries a specific
-  skeleton           sentence-initial First/Then/Next/So/Finally <= 0.15
+  scene_specificity  every scene but one (classic) / but two (smooth) carries a key
+                     number, a named entity or a glossary term from the brief
+  skeleton           sentence-initial First/Then/Next/Finally <= 0.15 ("so" is
+                     natural speech and was removed from the list)
+  positional_labels  no "stage one / step two" template; see POSITIONAL_RE
+  sameness           not the same shape/hook/ending/length/rhythm as the last
+                     five ledger entries. ONLY runs when --ledger is passed
   validator          validate_storyboard.py reports zero blockers
 
 Exit 0 = gates pass (or report written) - 4 = gates fail - 2 = usage/IO error.
 """
 import argparse
 import json
-import math
 import os
 import re
 import subprocess
@@ -57,13 +63,19 @@ def _format_cfg(fmt):
 
 
 def _wps(fmt="classic"):
-    """Words/sec: pinned voice's MEASURED wps > format fallback > 2.6."""
+    """Words/sec, in preference order: the pinned voice's measured per-format
+    rate (voice.config.json `wps_by_format[fmt]`) > its flat `wps` > the band's
+    `wps_fallback` in formats.json > 2.6."""
     try:
-        w = json.loads((SKILL_DIR / "voice.config.json").read_text()).get("wps")  # repointed: reads "wps"
-        if w:
-            return float(w)
+        cfg = json.loads((SKILL_DIR / "voice.config.json").read_text())  # repointed
     except Exception:
-        pass
+        cfg = {}
+    by_fmt = cfg.get("wps_by_format") or {}
+    w = by_fmt.get(fmt) if isinstance(by_fmt, dict) else None
+    if not w:
+        w = cfg.get("wps")
+    if w:
+        return float(w)
     return float(_format_cfg(fmt).get("wps_fallback", WPS))
 
 # --- validator helpers -------------------------------------------------------
@@ -97,31 +109,89 @@ except Exception:  # pragma: no cover - fallback path
         syl = sum(_syllables(w) for w in ws)
         return 0.39 * (len(ws) / len(sents)) + 11.8 * (syl / len(ws)) - 15.59
 
-GATES_BY_FORMAT = {
-    # classic: the calibrated v2/v3 contract, verbatim.
+# formats.json is the single source of truth for every gate threshold.
+# GATE_FALLBACKS is a per-key safety net used only when the file is missing or a
+# key is absent from it; it must mirror the shipped formats.json values.
+# variety_check.py is the sibling library behind the `sameness` gate. It is
+# optional: without it (or without --ledger) the gate simply does not run.
+try:
+    from variety_check import check_entry as _vc_check  # type: ignore
+    from variety_check import ledger_entry as _vc_entry  # type: ignore
+    from variety_check import load_ledger as _vc_load  # type: ignore
+except Exception:  # pragma: no cover
+    _vc_check = _vc_entry = _vc_load = None
+
+GATE_FALLBACKS = {
     "classic": {
-        "number_spend": {"min_count": 3, "ratio": 0.5},
+        "number_spend": {"min_count": 2, "max_count": 5},
         "entity_spend": {"min_ratio": 0.5},
         "top2": {"required": True},
         "hook_concrete": {"required": True},
         "scene_specificity": {"allow_generic": 1},
         "skeleton": {"max_density": 0.15},
+        "positional_labels": {"allowed_structures": ["how-to-three-moves", "worked-example"],
+                              "max_labels": 3, "min_label_words": 6},
+        "sameness": {"window": 5},
         "validator": {"max_blockers": 0},
     },
     # smooth-explainer inverts two gates: numbers are a CAP (the format spends
-    # 1-3, each on its own beat — see rules/format-bands.md), and
-    # the hook opens on a situation, so no digit/entity is required in it.
+    # 1-3, each on its own beat; see rules/format-bands.md), and the hook opens
+    # on a situation, so no digit/entity is required in it. It also buys one
+    # extra non-specific scene, which is where a wry beat or direct address goes.
     "smooth-explainer": {
         "number_spend": {"max_count": 3},
         "entity_spend": {"min_ratio": 0.5},
         "top2": {"required": True},
         "hook_concrete": {"required": False},
-        "scene_specificity": {"allow_generic": 1},
+        "scene_specificity": {"allow_generic": 2},
         "skeleton": {"max_density": 0.15},
+        "positional_labels": {"allowed_structures": ["how-to-three-moves", "worked-example"],
+                              "max_labels": 3, "min_label_words": 6},
+        "sameness": {"window": 5},
         "validator": {"max_blockers": 0},
     },
 }
-GATES = GATES_BY_FORMAT["classic"]  # back-compat alias
+GATES = GATE_FALLBACKS["classic"]  # back-compat alias
+
+
+def _merge(fallback, override, keys):
+    out = dict(fallback)
+    if isinstance(override, dict):
+        for k in keys:
+            if k in override:
+                out[k] = override[k]
+    return out
+
+
+def gates_for(fmt):
+    """Gate thresholds for a script format, READ FROM formats.json.
+
+    Every threshold below lives in skills/script-gates/formats.json; a key the
+    file does not carry falls back to GATE_FALLBACKS. The one non-merge case is
+    `numbers`: when the file states a numbers block at all, it is taken whole,
+    so a format that declares only `max_count` genuinely has no floor."""
+    fb = GATE_FALLBACKS.get(fmt) or GATE_FALLBACKS["classic"]
+    cfg = _format_cfg(fmt)
+    nums = cfg.get("numbers") if isinstance(cfg.get("numbers"), dict) else {}
+    if "min_count" in nums or "max_count" in nums:
+        number_spend = {k: nums[k] for k in ("min_count", "max_count") if k in nums}
+    else:
+        number_spend = dict(fb["number_spend"])
+    hook_cfg = cfg.get("hook") if isinstance(cfg.get("hook"), dict) else {}
+    return {
+        "number_spend": number_spend,
+        "entity_spend": _merge(fb["entity_spend"], cfg.get("entity_spend"), ("min_ratio",)),
+        "top2": _merge(fb["top2"], cfg.get("top2"), ("required",)),
+        "hook_concrete": {"required": bool(hook_cfg.get("concrete_required",
+                                                        fb["hook_concrete"]["required"]))},
+        "scene_specificity": _merge(fb["scene_specificity"], cfg.get("scene_specificity"),
+                                    ("allow_generic",)),
+        "skeleton": _merge(fb["skeleton"], cfg.get("skeleton"), ("max_density",)),
+        "positional_labels": _merge(fb["positional_labels"], cfg.get("positional_labels"),
+                                    ("allowed_structures", "max_labels", "min_label_words")),
+        "sameness": _merge(fb["sameness"], cfg.get("sameness"), ("window",)),
+        "validator": _merge(fb["validator"], cfg.get("validator"), ("max_blockers",)),
+    }
 
 # --- number vocabulary -------------------------------------------------------
 ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
@@ -175,8 +245,87 @@ ENTITY_STOP |= {m.capitalize() for m in MONTHS}
 ENTITY_STOP |= {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
                 "Saturday", "Sunday"}
 
+# "so" was REMOVED from this list: it opens ~5.8% of sentences in both formats,
+# it is natural speech rather than scaffolding, and banning it is what pushed the
+# writer into "Stage two:" (see rules/eval-gates.md and the positional_labels
+# gate below). The 0.15 density cap is unchanged.
 SKELETON_RE = re.compile(
-    r"^\s*(first|second|third|then|next|so|finally|lastly|and then)\b[,]?", re.I)
+    r"^\s*(first|second|third|then|next|finally|lastly|and then)\b[,]?", re.I)
+
+# --- positional labels ("stage one, stage two") ------------------------------
+# The template the corpus collapsed into: `stage` opens 8.6% of every sentence in
+# the smooth-explainer scripts. Matched at the start of a sentence, optionally
+# behind a leading "And "/"But ", an "in " and a "that's".
+POSITIONAL_RE = re.compile(
+    r"^\s*(?:(?:and|but)\s+)?(?:in\s+)?(?:that['\u2019]s\s+)?"
+    r"(stage|step|part|phase)\s+"
+    r"(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b", re.I)
+
+_ORDINAL_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                  "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+
+# Action-verb heuristic. It exists to let a LEGITIMATE imperative label through
+# ("Stage two, you cap the context window at four thousand tokens.") and to catch
+# the three empty labels the corpus shipped ("Stage three.", "Stage four, then.",
+# "Stage four is the strange one."). It is deliberately GENEROUS, because a false
+# failure here blocks a good script:
+#   a label sentence carries an action verb when it contains either
+#     (a) a word in ACTION_VERBS, or
+#     (b) ANY word ending in -s, -ed or -ing that is not in NON_VERB_STOP.
+# NON_VERB_STOP holds only copulas, auxiliaries, pronouns and function words,
+# never ordinary nouns, so almost anything that describes an action passes.
+ACTION_VERBS = set("""
+measure shrink load run cap send swap quantize install pull set open close check
+build write read add batch boot bring cache click clone compare compile copy count
+cut download drop export feed find fix flash get give go hit hold import index keep
+know leave let make merge mount move name pass paste patch pick plug point prune push
+put route save scale see ship show size split stack start stop store stream switch
+take tell test train trim try tune turn type unzip upload use wait wake want watch
+wire work choose
+""".split())
+NON_VERB_STOP = set("""
+is was has does this its his hers theirs yours ours us as thus plus less unless yes
+across towards besides versus whereas news series gas bias
+nothing something anything everything during being having always sometimes perhaps
+thing things string strings ceiling morning evening
+indeed instead ahead hundred red
+""".split())
+
+
+def has_action_verb(sentence):
+    """Generous action-verb test; see the comment above ACTION_VERBS.
+
+    A contraction is judged on its head ("that's" -> "that", "you're" -> "you"),
+    so the -s branch cannot mistake "That's" for a verb."""
+    for w in re.findall(r"[A-Za-z]+(?:['\u2019][A-Za-z]+)*", sentence or ""):
+        t = re.split(r"['\u2019]", w.lower())[0]
+        if not t or t in NON_VERB_STOP:
+            continue
+        if t in ACTION_VERBS:
+            return True
+        if t.endswith(("ing", "ed", "s")):
+            return True
+    return False
+
+
+def find_positional_labels(narration):
+    """Every sentence of `narration` that opens with a positional label."""
+    out = []
+    for i, sent in enumerate(sentences(narration or "")):
+        m = POSITIONAL_RE.match(sent)
+        if not m:
+            continue
+        raw = m.group(2).lower()
+        ordinal = _ORDINAL_WORDS.get(raw)
+        if ordinal is None:
+            try:
+                ordinal = int(raw)
+            except ValueError:
+                ordinal = None
+        out.append({"sentence_index": i, "sentence": sent, "label": m.group(1).lower(),
+                    "ordinal": ordinal, "words": len(words(sent)),
+                    "has_action_verb": has_action_verb(sent)})
+    return out
 
 # capitalized words that start a sentence/phrase but never start a real name
 LEADING_STOP = {"In", "On", "At", "To", "Of", "By", "From", "With", "Before",
@@ -639,7 +788,13 @@ def score_board(sb, research):
                        "matched_in": matched_in, "matched_token": matched_token,
                        "scene_ids": sids})
     n_total = len(detail)
-    number_spend = {"total": n_total, "spent": spent,
+    # distinct = how many number PHRASES a listener actually hears. One spoken "about three
+    # times" can satisfy several brief rows (a ratio, two bandwidths, a second ratio), which
+    # inflates `spent` and made the cap fire on scripts that spend one number well. The gates
+    # count distinct phrases; `spent` stays for reporting coverage of the brief.
+    distinct = len({(d.get("matched_token") or "").strip().lower()
+                    for d in detail if d.get("spent") and d.get("matched_token")})
+    number_spend = {"total": n_total, "spent": spent, "distinct": distinct,
                     "score": round(spent / n_total, 3) if n_total else None,
                     "detail": detail}
 
@@ -672,6 +827,11 @@ def score_board(sb, research):
                     "top2": top2, "top2_present": top2_present,
                     "entities": ent_out}
 
+    # --- positional labels ("stage one, stage two")
+    labels = find_positional_labels(narration)
+    positional_labels = {"count": len(labels), "structure": sb.get("structure"),
+                         "labels": labels}
+
     # --- skeleton
     offenders = [s for s in sents if SKELETON_RE.match(s)]
     skeleton = {"sentences": len(sents), "hits": len(offenders),
@@ -697,9 +857,26 @@ def score_board(sb, research):
             "first_sentence": sents[0] if sents else ""}
 
     # --- per-scene specificity
+    # A scene is specific when it carries something FROM THE BRIEF: a key number, a named
+    # entity, or a glossary term. Glossary terms were added 2026-08-22 after a demo script
+    # failed the gate on beats like "the machine pulls the model's weights out of memory",
+    # which is the most specific sentence in the script and contains no proper noun or digit.
+    # Note this deliberately differs from extract_entities above, which filters glossary terms
+    # OUT: a defined term is not a "named example" for the entity gates, but it is a specific.
+    gloss_terms = []
+    for g in ((research or {}).get("glossary") or []):
+        t = (g.get("term") if isinstance(g, dict) else g) or ""
+        t = str(t).strip()
+        if len(t) >= 3:
+            gloss_terms.append(t)
+    gloss_rx = [(t, re.compile(r"\b" + re.escape(t) + r"s?\b", re.I)) for t in gloss_terms]
+
     scene_rows = []
     for s in scenes:
         hits = number_hits_by_scene.get(s.get("id"), []) + ent_hits_by_scene.get(s.get("id"), [])
+        if not hits:
+            corpus = (s.get("narration", "") or "") + " " + (s.get("on_screen_text", "") or "")
+            hits = ["glossary:" + t for t, rx in gloss_rx if rx.search(corpus)]
         scene_rows.append({"id": s.get("id"), "role": s.get("role"),
                            "est_duration_s": s.get("est_duration_s"),
                            "specific": bool(hits), "hits": hits,
@@ -720,31 +897,49 @@ def score_board(sb, research):
 
     return {"number_spend": number_spend, "entity_spend": entity_spend,
             "skeleton": skeleton, "hook": hook,
+            "positional_labels": positional_labels,
             "scene_specificity": scene_specificity, "language": language,
             "narration_full": narration, "on_screen": on_screen}
 
 
-def apply_gates(board, validator_blockers, fmt="classic"):
+def apply_gates(board, validator_blockers, fmt="classic", sameness=None):
+    """Run the nine gates. `sameness` is the variety_check result dict, or None
+    when no ledger was supplied, in which case that gate does not run at all
+    and says so in the detail block."""
     if board is None:
         return {"gate1_ready": False, "failures": ["no_storyboard"], "detail": {}}
-    G = GATES_BY_FORMAT.get(fmt, GATES)
+    G = gates_for(fmt)
     f, d = [], {}
     # With no research brief there is nothing to "spend" — the spend gates are
     # not applicable rather than failed (keeps briefless boards from reading as
     # broken in the report).
     has_brief = bool(board["number_spend"]["total"] or board["entity_spend"]["total"])
     ns = board["number_spend"]
-    if "max_count" in G["number_spend"]:
-        # cap mode (smooth-explainer): spending MORE than the cap fails.
-        cap = G["number_spend"]["max_count"]
-        d["number_spend"] = {"spent": ns["spent"], "need": cap, "total": ns["total"], "mode": "cap"}
-        if ns["spent"] > cap:
-            f.append("number_spend")
+    gn = G["number_spend"]
+    minc, maxc = gn.get("min_count"), gn.get("max_count")
+    # classic is now a BAND (at least 2, at most 5); smooth-explainer is a cap
+    # only. The floor is clamped to the brief's own total so a thin brief cannot
+    # make the bar unreachable.
+    need = min(minc, ns["total"]) if (minc is not None and ns["total"]) else 0
+    if not ns["total"]:
+        shown_need = "n/a"
+    elif minc is None:
+        shown_need = "<=%s" % maxc          # cap-only format: no floor to meet
     else:
-        need = min(G["number_spend"]["min_count"],
-                   math.ceil(G["number_spend"]["ratio"] * ns["total"])) if ns["total"] else 0
-        d["number_spend"] = {"spent": ns["spent"], "need": need, "total": ns["total"]}
-        if ns["total"] and ns["spent"] < need:
+        shown_need = need
+    heard = ns.get("distinct", ns["spent"])   # distinct spoken phrases, not brief rows matched
+    d["number_spend"] = {"spent": ns["spent"], "heard": heard, "total": ns["total"],
+                         "need": shown_need, "min": minc, "max": maxc,
+                         "mode": "cap" if minc is None else "band"}
+    if ns["total"]:
+        under = minc is not None and heard < need
+        over = maxc is not None and heard > maxc
+        if under or over:
+            d["number_spend"]["reason"] = (
+                "the viewer hears %d distinct number%s (%d of %d brief rows matched); the band is %s-%s"
+                % (heard, "" if heard == 1 else "s", ns["spent"], ns["total"],
+                   "0" if minc is None else str(need),
+                   "any" if maxc is None else str(maxc)))
             f.append("number_spend")
 
     es = board["entity_spend"]
@@ -772,6 +967,70 @@ def apply_gates(board, validator_blockers, fmt="classic"):
     d["skeleton"] = {"density": sk["density"], "max": G["skeleton"]["max_density"]}
     if sk["density"] > G["skeleton"]["max_density"]:
         f.append("skeleton")
+
+    # --- positional labels: the "stage one, stage two" template -------------
+    pl = board.get("positional_labels") or {"count": 0, "structure": None, "labels": []}
+    gp = G["positional_labels"]
+    allowed = list(gp.get("allowed_structures") or [])
+    max_labels = gp.get("max_labels", 3)
+    min_label_words = gp.get("min_label_words", 6)
+    struct = pl.get("structure")
+    reasons = []
+    if pl["count"]:
+        if not struct or struct not in allowed:
+            reasons.append(
+                "%s, so the video does not walk the viewer through a process and "
+                "no positional label is permitted (allowed structures: %s); first "
+                "hit: \u201c%s\u201d"
+                % ("structure is absent" if not struct else "structure is '%s'" % struct,
+                   ", ".join(allowed) or "none", pl["labels"][0]["sentence"].strip()))
+        else:
+            if pl["count"] > max_labels:
+                reasons.append("%d positional labels, at most %d"
+                               % (pl["count"], max_labels))
+            ords = [l.get("ordinal") for l in pl["labels"]]
+            if ords != list(range(1, len(ords) + 1)):
+                reasons.append("label ordinals %s are not strictly ascending from one"
+                               % (ords,))
+            short = [l["sentence"].strip() for l in pl["labels"]
+                     if l["words"] < min_label_words]
+            if short:
+                reasons.append("label sentence(s) under %d words: %s"
+                               % (min_label_words,
+                                  "; ".join("\u201c%s\u201d" % x for x in short)))
+            dead = [l["sentence"].strip() for l in pl["labels"]
+                    if not l["has_action_verb"]]
+            if dead:
+                reasons.append("label sentence(s) naming no action: %s"
+                               % "; ".join("\u201c%s\u201d" % x for x in dead))
+    d["positional_labels"] = {"count": pl["count"], "structure": struct,
+                              "allowed_structures": allowed,
+                              "max_labels": max_labels,
+                              "min_label_words": min_label_words,
+                              "offenders": [l["sentence"].strip() for l in pl["labels"]],
+                              "reasons": reasons,
+                              "reason": " · ".join(reasons) if reasons else None}
+    if reasons:
+        f.append("positional_labels")
+
+    # --- sameness: only when a ledger was supplied --------------------------
+    if sameness is None:
+        d["sameness"] = {"checked": False, "ok": None,
+                         "reason": "not run: no --ledger was passed, so nothing "
+                                   "checks this script against the last five"}
+    else:
+        viol = sameness.get("violations") or []
+        d["sameness"] = {"checked": True, "ok": bool(sameness.get("ok")),
+                         "ledger": sameness.get("ledger"),
+                         "comparisons": sameness.get("comparisons"),
+                         "violations": viol,
+                         "advisories": sameness.get("advisories") or [],
+                         "reason": ("; ".join(v.get("detail", "") for v in viol)
+                                    or sameness.get("error"))}
+        if sameness.get("error"):
+            d["sameness"]["error"] = sameness["error"]
+        if not sameness.get("ok"):
+            f.append("sameness")
 
     d["validator"] = {"blockers": validator_blockers}
     if validator_blockers is not None and validator_blockers > G["validator"]["max_blockers"]:
@@ -930,7 +1189,27 @@ def telemetry_from_api(base, slug):
     return {"stages": stages, "totals": totals}
 
 
-def build_eval_api(slug, base, label=None):
+def sameness_for(sb, ledger, fmt="classic"):
+    """Run variety_check's sameness rules for a storyboard against a ledger.
+    Returns None when no ledger was asked for (the gate then does not run)."""
+    if not ledger or not sb:
+        return None
+    if _vc_entry is None:
+        return {"ok": True, "violations": [], "advisories": [], "comparisons": 0,
+                "ledger": str(ledger),
+                "error": "variety_check.py not importable, sameness not enforced"}
+    try:
+        entry = _vc_entry(sb)
+        res = _vc_check(entry, _vc_load(ledger),
+                        window=gates_for(fmt)["sameness"].get("window", 5))
+        res["ledger"] = str(ledger)
+        return res
+    except Exception as e:  # never let the variety library block a run
+        return {"ok": True, "violations": [], "advisories": [], "comparisons": 0,
+                "ledger": str(ledger), "error": "variety_check failed: %s" % e}
+
+
+def build_eval_api(slug, base, label=None, ledger=None):
     """Score a run using only the dashboard HTTP API (no repo filesystem)."""
     sb_resp = _api(base, f"/api/projects/{slug}/storyboard")
     res_resp = _api(base, f"/api/projects/{slug}/research")
@@ -960,24 +1239,27 @@ def build_eval_api(slug, base, label=None):
                 "scenes_done": sum(1 for s in (rec.get("scenes") or [])
                                    if s.get("status") == "done"),
                 "scenes_total": len(rec.get("scenes") or [])}
+    fmt = ((sb or {}).get("script_format") or "classic")
+    same = sameness_for(sb, ledger, fmt)
     return {
         "eval_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "slug": label or slug,
         "inputs": {"storyboard_path": f"{base}/api/projects/{slug}/storyboard",
                    "research_path": f"{base}/api/projects/{slug}/research",
-                   "mode": "api", "project_record": proj},
+                   "mode": "api", "project_record": proj,
+                   "ledger_path": str(ledger) if ledger else None},
         "research_metrics": research_metrics(res),
         "board_metrics": board,
         "validators": validators,
         "telemetry": telemetry_from_api(base, slug),
-        "script_format": ((sb or {}).get("script_format") or "classic"),
-        "thresholds": GATES_BY_FORMAT.get(((sb or {}).get("script_format") or "classic"), GATES),
-        "overall": apply_gates(board, vb, ((sb or {}).get("script_format") or "classic")),
+        "script_format": fmt,
+        "thresholds": gates_for(fmt),
+        "overall": apply_gates(board, vb, fmt, sameness=same),
     }
 
 
-def build_eval(slug, sb_path, res_path, root, label=None, history=None):
+def build_eval(slug, sb_path, res_path, root, label=None, history=None, ledger=None):
     sb = json.loads(Path(sb_path).read_text()) if sb_path and Path(sb_path).exists() else None
     res = json.loads(Path(res_path).read_text()) if res_path and Path(res_path).exists() else None
     board = score_board(sb, res or {}) if sb else None
@@ -1009,20 +1291,23 @@ def build_eval(slug, sb_path, res_path, root, label=None, history=None):
                         "scenes_total": len(p.get("scenes") or [])}
             except Exception:
                 pass
+    fmt = ((sb or {}).get("script_format") or "classic")
+    same = sameness_for(sb, ledger, fmt)
     return {
         "eval_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "slug": label or slug,
         "inputs": {"storyboard_path": str(sb_path) if sb_path else None,
                    "research_path": str(res_path) if res_path else None,
-                   "project_record": proj},
+                   "project_record": proj,
+                   "ledger_path": str(ledger) if ledger else None},
         "research_metrics": research_metrics(res),
         "board_metrics": board,
         "validators": validators,
         "telemetry": telemetry_for(slug, (Path(root) / "dashboard" / "data") if root else None),
-        "script_format": ((sb or {}).get("script_format") or "classic"),
-        "thresholds": GATES_BY_FORMAT.get(((sb or {}).get("script_format") or "classic"), GATES),
-        "overall": apply_gates(board, vb, ((sb or {}).get("script_format") or "classic")),
+        "script_format": fmt,
+        "thresholds": gates_for(fmt),
+        "overall": apply_gates(board, vb, fmt, sameness=same),
     }
 
 
@@ -1174,10 +1459,22 @@ def _run_card(ev, judge):
                 val = f'{det.get("specific")}/{det.get("total")} (need {det.get("need")})'
             elif name == "skeleton":
                 val = f'{det.get("density")} (max {det.get("max")})'
+            elif name == "positional_labels":
+                val = (f'{det.get("count")} label(s)' if det.get("count")
+                       else "none") + (f': {det.get("reason")}' if det.get("reason") else "")
+            elif name == "sameness":
+                if not det.get("checked"):
+                    val = "not checked (no ledger)"
+                else:
+                    val = (f'{det.get("comparisons")} compared'
+                           + (f': {det.get("reason")}' if det.get("reason") else ""))
             elif name == "validator":
                 bl = det.get("blockers")
                 val = "n/a" if bl is None else f"{bl} blockers"
-            h.append(_chip(f"{name}: {val}", "fail" if failed else "pass"))
+            state = "fail" if failed else "pass"
+            if name == "sameness" and not det.get("checked"):
+                state = "dim"  # not run is not the same as passed
+            h.append(_chip(f"{name}: {val}", state))
         h.append('</div>')
 
         ns, es = b["number_spend"], b["entity_spend"]
@@ -1435,10 +1732,20 @@ def main():
     ap.add_argument("--diff")
     ap.add_argument("--history", help="style-pack history file handed to validate_storyboard.py "
                                       "(default: skills/render-shorts/styles/history.json)")
+    ap.add_argument("--ledger", help="script ledger JSON (output/script-ledger.json). "
+                                     "WITHOUT it the `sameness` gate does not run at all, "
+                                     "and the eval JSON says so.")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="score everything and print the result, but write no files")
     a = ap.parse_args()
 
     root = Path(a.root) if a.root else REPO_ROOT
     if a.report:
+        if a.dry_run:
+            print(json.dumps({"dry_run": True, "would_write":
+                              str(Path(a.out) if a.out else root / "evals" / "report.html")},
+                             indent=2))
+            return 0
         out = write_report(root, a.diff, a.out)
         print(f"wrote {out}")
         return 0
@@ -1446,20 +1753,22 @@ def main():
     if a.api:
         if not a.slug:
             ap.error("--api needs a slug")
-        ev = build_eval_api(a.slug, a.api, label=a.label)
+        ev = build_eval_api(a.slug, a.api, label=a.label, ledger=a.ledger)
         base_dir = Path(a.evaldir) if a.evaldir else Path("evals")
         dest = Path(a.out) if a.out else base_dir / "out" / (a.label or a.slug) / "eval.json"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        tmp = dest.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(ev, indent=2))
-        os.replace(tmp, dest)
+        if not a.dry_run:
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            tmp = dest.with_suffix(".json.tmp")
+            tmp.write_text(json.dumps(ev, indent=2))
+            os.replace(tmp, dest)
         print(json.dumps(ev["overall"], indent=2))
-        print(f"-> {dest}")
+        print(f"-> {dest}" + (" (dry run: not written)" if a.dry_run else ""))
         return 0 if ev["overall"]["gate1_ready"] else 4
 
     if a.storyboard or (a.research and not a.slug):
         slug = a.label or (a.slug or "adhoc")
-        ev = build_eval(slug, a.storyboard, a.research, root, label=slug, history=a.history)
+        ev = build_eval(slug, a.storyboard, a.research, root, label=slug,
+                        history=a.history, ledger=a.ledger)
         dest = Path(a.out) if a.out else Path(f"{slug}.eval.json")
     else:
         if not a.slug:
@@ -1471,14 +1780,16 @@ def main():
         d = Path(root) / "out" / slug
         ev = build_eval(slug, d / "storyboard.json",
                         Path(a.research) if a.research else d / "research.json", root,
-                        history=a.history)
+                        history=a.history, ledger=a.ledger)
         dest = Path(a.out) if a.out else d / "eval.json"
 
-    tmp = dest.with_suffix(dest.suffix + ".tmp")
-    tmp.write_text(json.dumps(ev, indent=2))
-    os.replace(tmp, dest)
+    if not a.dry_run:
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        tmp = dest.with_suffix(dest.suffix + ".tmp")
+        tmp.write_text(json.dumps(ev, indent=2))
+        os.replace(tmp, dest)
     print(json.dumps(ev["overall"], indent=2))
-    print(f"-> {dest}")
+    print(f"-> {dest}" + (" (dry run: not written)" if a.dry_run else ""))
     return 0 if ev["overall"]["gate1_ready"] else 4
 
 

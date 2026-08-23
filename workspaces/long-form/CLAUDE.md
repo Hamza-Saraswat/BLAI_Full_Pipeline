@@ -16,7 +16,7 @@ long-form/
     ├── 01-radar/            (sweep + input notes -> digest)                 cloud
     ├── 02-ideas/            (episode candidates -> 1 pick)                  cloud
     ├── 03-research/         (deep brief + experiment plan)                  cloud
-    ├── 04-outline/          (angle, value types, chapters, visual philosophy) cloud
+    ├── 04-outline/          (two outlines under two shapes, judged)         cloud
     ├── 05-script/           (full script + narration.txt)                   cloud
     ├── 06-spec/             (scene list from the scene library + thumbnails) cloud
     ├── 07-package/          (titles, description with chapters, manifest)  cloud
@@ -76,8 +76,8 @@ Measured numbers from stage 08 beat researched numbers; the reconcile rule in `s
 | Sweep | `stages/01-radar/CONTEXT.md` and its Inputs | every later stage, `brand-vault/voice-rules.md` |
 | Pick | `stages/02-ideas/CONTEXT.md` and its Inputs, the digest | `stages/03` onward |
 | Research | `stages/03-research/CONTEXT.md` and its Inputs | the digest, `stages/04` onward |
-| Outline | `stages/04-outline/CONTEXT.md` and its Inputs (brief, value framework, series section) | the radar and ideas notes, `stages/05` onward |
-| Script | `stages/05-script/CONTEXT.md` and its Inputs (outline, brief, voice-rule sections) | `stages/06` onward, other slugs' outputs |
+| Outline | `stages/04-outline/CONTEXT.md` and its Inputs (brief, value framework, series section, the shape library, the judge rubric) | the radar and ideas notes, `stages/05` onward |
+| Script | `stages/05-script/CONTEXT.md` and its Inputs (outline, brief, voice-rule sections, the shape section and the hook library) | `stages/06` onward, other slugs' outputs |
 | Spec | `stages/06-spec/CONTEXT.md` and its Inputs (script, scene library) | the brief, `stages/07` onward |
 | Package | `stages/07-package/CONTEXT.md` and its Inputs (script, spec, playbook) | the brief, `stages/08` onward |
 | Capture, voice, render, publish | that stage's `CONTEXT.md` and its Inputs | every cloud stage's `references/` |
