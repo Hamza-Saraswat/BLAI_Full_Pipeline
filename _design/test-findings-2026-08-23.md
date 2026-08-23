@@ -42,6 +42,10 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 
 | 25 | long-form 04 | quality | **A brief can contradict itself and nothing checks it.** The brief's `process_steps` told the writer to "leave about a gigabyte of slack" while its own `unverified` list called specific headroom advice folklore with no measurements behind it. The outline writer noticed, refused the instruction, and substituted a sourced check instead | open |
 
+| 26 | long-form 04 | quality | **Finding 12 reproduces in long-form.** Both outline writers, blind to each other, chose the same 0:20 number (6.19 GB) and built their hook on the same collision between a parameter count and a file size. Convergence is not a Shorts-only effect | open |
+| 27 | long-form 04 | note | **The private scratch directory fixed finding 11.** Each writer was given `.local-builds/<slug>/outline-<A\|B>/` and told never to use a shared path. No collision, and one writer left its verification script in its own directory where it belongs | **fix validated** |
+| 28 | long-form 04 | quality | Both writers independently refused the brief's folklore instruction, not just one. Two blind readers treating the `unverified` list as binding on the rest of the brief is stronger evidence than one | working as designed |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -192,3 +196,13 @@ Those cannot both be followed. The outline writer resolved it correctly and said
 Two things follow. The good one: the `unverified` list is doing real work as a guard on the brief's own confident sections, which is more than it was designed for. The bad one: I wrote that brief, the research validator passed it, and nothing anywhere compares a brief's instructions against its own caveats. A brief that tells a writer to state a number it elsewhere calls folklore will usually be obeyed rather than questioned.
 
 Proposed fix, not applied: add an audit row to the research contract requiring that no `process_step`, `suggested_outline` or `thesis` asserts something the same brief's `unverified` list disowns, and have the writer flag rather than silently resolve such a conflict. A mechanical version is possible for the obvious cases: flag when a number appears in both a confident field and an unverified entry.
+
+### 26 to 28. The second draft pair, and one fix confirmed
+
+**Convergence is structural, not a Shorts accident.** In Shorts, two blind writers produced hooks one word apart. In long-form, two blind writers picked the same number for the 0:20 beat and built the same collision: a parameter count against a file size. Outline A opens "Twenty-seven billion parameters, in a file of six point one nine gigabytes"; outline B opens on the viewer's twelve-gigabyte card and arrives at the same 6.19 GB sixteen seconds in. Both then rejected the same alternative for the same reason, the DGX Spark's bandwidth fact, because it measures a second axis.
+
+That the reasoning is sound in both cases is the point. Given one brief, one hook library and one value framework, two competent writers converge, because the brief names the surprise and the rules reward naming it early. The two-draft design buys different shapes reliably and different openings only by luck. The fix proposed under finding 12, assigning each writer a different hook pattern, applies here unchanged.
+
+**The scratch fix works.** Finding 11 was a live data-loss path: two Shorts writers used `scratchpad/build_b.py` and one regenerated the other's output. This round each writer was given a private directory under `.local-builds/<slug>/` and told never to use a shared path. No collision occurred, and outline A's verification script sits in its own directory. The instruction is cheap and should go into the stage contracts rather than into individual prompts.
+
+**And the guard held twice.** Both writers, independently, refused the brief's "leave about a gigabyte of slack" because the same brief's `unverified` list calls headroom figures folklore. One writer doing that is a good writer; two doing it blind means the `unverified` list is reliably read as binding. That is worth stating in the research contract explicitly, since it is currently an emergent property rather than a documented one.
