@@ -17,6 +17,9 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 
 | 8 | 04 script | quality | Style-pack rotation is sequential-only: `style_rotation.py --pick` compares against the last recorded entry, so two Shorts produced in the same morning both returned `signal`. It is order-dependent, and the contract's pick-then-record sequence only saves it if the two runs are strictly serial | open |
 
+| 9 | 04 script | quality | **`entity_spend` and `top2` are unsatisfiable and fire on almost everything.** The extractor pulled 22 "entities" from the Ornith brief for a 104-word script, including sentence fragments (`GB and BF16`, `OpenHands for SWE-bench and Harbor`, `Terminus-2 46.2`), quantization format names and the license. From the Unsloth brief it produced `LAN`, `Auto`, `Settings`. Both gates failed on all four drafts, and `entity_spend` fails on 35 of the 38 v1 boards | open |
+| 10 | 04 script | friction | The ported `styles/history.json` is v1's live history, so assigning a pack by topic fit collides with it silently: `terminal` drew a rotation advisory because v1 used `terminal` on 2026-08-22 | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -64,3 +67,20 @@ The stage contract does say pick then record, so a strictly serial run would giv
 Two options, neither applied yet. Make `--pick` accept the packs already claimed today and exclude them, or fold the style pack into the `sameness` gate, which already refuses a structure, a hook pattern and a duration that repeat.
 
 Sidestepped for this run by assigning packs on topic fit, which is what `styles/README.md` asks for anyway: `signal` for the Ornith model release (kinetic type, benchmarks and news) and `terminal` for the Unsloth video, which is entirely about flags and settings.
+
+### 9. The entity gates are noise (open)
+
+What the extractor returns for the two briefs written today:
+
+- Ornith: `Ornith`, `Ornith-1.5`, `Terminus-2`, `Terminal`, `Terminus`, `Qwen3.5 and Gemma4`, `GB and BF16`, `GPQA Diamond 86.4`, `Ornith AI`, `OpenHands for SWE-bench and Harbor`, `Terminus-2 for Terminal-Bench`, `Ornith-1.5-9B`, `Qwen3.5`, `Gemma4`, `Q5_K_M`, `Q6_K`, `Q8_0`, `BF16`, `Terminus-2 46.2`, `MIT`, `OpenHands`, `Harbor`. That is 22 for a script the band caps at 130 words, so `entity_spend`'s floor of half is arithmetically out of reach.
+- Unsloth: `LAN`, `Auto`, `Settings`, `LAN Remote Access`, `Cloudflare`. `Auto` is the adjective from "Auto compaction"; `Settings` is a menu; `LAN` duplicates `LAN Remote Access`. `top2` demanded `Auto`, which would have forced an unrelated feature into the video.
+
+Three failure modes in one: phrases split across conjunctions and prepositions, file-format and license tokens treated as named examples, and generic capitalised words admitted. Both writers noticed, refused, and recorded the reason in `notes_for_review`, which is the behaviour we want from a writer and the wrong reason to need it.
+
+This is not new. `entity_spend` fails on 35 of the 38 v1 boards, so the gate has been firing on nearly everything since v1 and has been trained into background noise. A gate that always fails teaches you to ignore gates.
+
+Proposed fix, not applied: rebuild `extract_entities` on the curated product vocabulary that already exists in `skills/trend-radar/scripts/scoring.py` (`PRODUCTS`, about 60 named products, vendors and hardware with regexes), plus proper nouns that appear in the brief's thesis. Reject anything containing " and ", " for ", a digit-only tail, a license identifier or a quantization format. Then re-check the floor: half of three or four real entities is reachable, half of twenty-two is not.
+
+### 10. The inherited style ledger is live (open)
+
+`skills/render-shorts/styles/history.json` came across from v1 with its real rotation history, whose most recent entry is `terminal` on 2026-08-22. Assigning `terminal` to today's Unsloth video on topic fit therefore drew "style_pack 'terminal' same as previous video -- rotate". Harmless here, but it means the ledger is not a clean slate and any hand-assignment has to be checked against it. Related to finding 8.
