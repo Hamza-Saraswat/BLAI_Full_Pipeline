@@ -40,6 +40,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 23 | long-form 03 | quality | The researcher assigned to interrogate a piece of folklore found the folklore is narrower than believed and reverses under measurement. That instruction is worth keeping in the research contract | working as designed |
 | 24 | long-form 03 | friction | A units trap no gate could catch: Ollama prints context tiers in GiB, GPU vendors print GB. "24 GiB" is about 25.8 GB, so a 24 GB card sits just under Ollama's threshold, not at it | recorded in the brief |
 
+| 25 | long-form 04 | quality | **A brief can contradict itself and nothing checks it.** The brief's `process_steps` told the writer to "leave about a gigabyte of slack" while its own `unverified` list called specific headroom advice folklore with no measurements behind it. The outline writer noticed, refused the instruction, and substituted a sourced check instead | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -180,3 +182,13 @@ Four researchers in parallel, one question each, 19 distinct fetched sources int
 **A units trap.** Ollama documents context tiers in GiB; every GPU vendor prints GB. Twenty-four GiB is about 25.8 GB, so a twenty-four gigabyte card sits just below Ollama's threshold rather than at it, and gets the smaller default context. No gate could catch this. It is in the brief's `unverified` section as a warning to the writer.
 
 The same run also produced four more model-card contradictions, including Ornith's 9B card recommending an eighty-gigabyte GPU for a file its own table sizes at 17.9 GB, which independently reproduces the contradiction found in the Shorts brief for the same model.
+
+### 25. The brief contradicted itself, and the writer caught it (open)
+
+`process_steps` item three reads "Subtract both from your card's memory and leave about a gigabyte of slack". `unverified` item two reads "Specific headroom advice such as 'leave 512 MiB' or 'leave ten to twenty percent' is folklore. The guide that carries it contains no benchmarks and no author measurements."
+
+Those cannot both be followed. The outline writer resolved it correctly and said so: it asserted no headroom figure anywhere, and replaced the slack line with the llama.cpp maintainer's statement that the runtime slice is not calculable, plus `ollama ps` as an empirical check the viewer can run. That is the better answer, and it came from the writer reading the `unverified` list as binding on the rest of the brief rather than as an appendix.
+
+Two things follow. The good one: the `unverified` list is doing real work as a guard on the brief's own confident sections, which is more than it was designed for. The bad one: I wrote that brief, the research validator passed it, and nothing anywhere compares a brief's instructions against its own caveats. A brief that tells a writer to state a number it elsewhere calls folklore will usually be obeyed rather than questioned.
+
+Proposed fix, not applied: add an audit row to the research contract requiring that no `process_step`, `suggested_outline` or `thesis` asserts something the same brief's `unverified` list disowns, and have the writer flag rather than silently resolve such a conflict. A mechanical version is possible for the obvious cases: flag when a number appears in both a confident field and an unverified entry.
