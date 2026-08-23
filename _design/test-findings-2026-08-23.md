@@ -52,6 +52,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 31 | long-form 05 | quality | **A scene hint carries an implicit truth claim, and no gate knows it.** The writer refused `terminal-replay` for two beats because nothing ran on this machine: using it would "dress published documentation as a measurement". It chose `code-typing` instead. Nothing in the spec, the schema or the validator connects a scene type to whether a capture exists | open |
 | 32 | long-form 05 | quality | The writer rejected the brief's own suggested analogy because the analogy's stated limit contradicted the chapter it was meant to serve, then caught a second analogy that had crept in disguised as a different picture. The one-analogy rule held only because the writer enforced it on itself; the gate counts markers and found zero | working as designed |
 
+| 33 | render pre-flight | blocker | **Manim was never installed and both Shorts need it.** The Ornith storyboard assigns two scenes to `manim` and the Unsloth one four. `skills/render-shorts/setup.md` documents a venv at `skills/render-shorts/manim/.venv`; nobody had run it, so the first Manim scene of the render would have failed | **fixed** |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -242,3 +244,13 @@ Proposed fix, not applied: make `terminal-replay` require a resolvable `capture_
 Two behaviours worth recording. The writer rejected the brief's suitcase analogy because "its own stated break, a suitcase does not get heavier as the trip runs, contradicts the exact property chapter 2 exists to teach" -- reading an analogy's declared limit as a disqualifier rather than as a footnote. Then, during its own review, it found a second picture that had crept in: a mixture-of-experts beat ending on a company-of-employees line, which is the receptionist analogy from the signature file wearing different clothes, and replaced it with the plain mechanism.
 
 The gate counts analogy markers and found zero, so neither the presence of the desk analogy nor the near-miss second one was visible to it. The rule held because the writer held it.
+
+### 33. A documented prerequisite that nobody executed (fixed)
+
+Caught by pre-flighting the render stack instead of discovering it mid-render. `python3 -c "import manim"` failed everywhere on this machine except v1's own venv at `BLAI_Animator/render/manim/.venv`. The ported skill shipped the Manim scene code, the fonts, the pack helpers and a setup document, and no environment to run any of it in.
+
+It would have failed on the first Manim scene of the first render, roughly ten minutes into Phase 4, after the voice stage had already succeeded.
+
+Fixed by running exactly what `setup.md` prescribes: `uv venv --python 3.12 .venv && uv pip install --python .venv manim==0.20.1`. Eight seconds, because uv, python3.12, cairo and pango were all already present. The documented smoke render then produced 540x960 at 15 fps, 4.93 s, in 1.5 s of wall clock, and the ported `blai_layout` and `blai_packs` helpers import cleanly against it. `.gitignore` already covers `.venv/` and `skills/render-shorts/**/media/`, so nothing from this leaks into the repo.
+
+The general lesson is worth more than the fix: the ICM validator checks that a tool has a setup guide, not that the guide was ever run. Every skill with a `setup.md` is a prerequisite nobody has verified until something renders. A cheap `tools/preflight.py` that runs each skill's documented verification command and reports what is missing would have caught this in seconds, and would catch the equivalent gap on the Spark before the first cloud-triggered build rather than after it.
