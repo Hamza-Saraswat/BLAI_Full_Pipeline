@@ -46,8 +46,8 @@
     "reach my ai rig remotely",
     "local ai on the couch"
   ],
-  "target_duration_s": 95,
-  "narration_full": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel. Unsloth binds to loopback, the address a machine uses to talk to itself. The docs call that this machine only. Nothing outside can reach it. That is the default, and it is deliberate. Change what it listens on, and the tunnel stops being necessary. In the desktop app that is Settings, then API keys, then the local network switch. It ships in preview. Or start it from the terminal with dash H, zero dot zero dot zero dot zero. That is a wildcard bind, listening on every address the machine has instead of only its own. It does not just flip on. Unsloth stops and makes you replace the auto-generated admin password first. After that it shows you the address to type on the other device. You can toggle it without restarting. Here is the part the release notes do not lead with. This is not a convenience toggle. It is an execution boundary. Unsloth's own docs say server-side tools run as your user. Anyone who reaches that server with your API key can run code on your machine. Network reach is code reach. So pass dash dash disable tools unless you meant to hand that out. Outside the house, the tunnel is right. Cloudflare publishes a public web address, and your own network cannot do that. Inside, nothing sits in the path. So no, reaching your own machine never needed somebody else's service. It needed three settings, one password, and one honest look at what your tools can run.",
+  "target_duration_s": 96,
+  "narration_full": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel through somebody else's service. Unsloth binds to loopback, the address a machine uses to talk to itself. The docs call that this machine only. Nothing outside can reach it. That is the default, and it is deliberate. Change what it listens on, and the tunnel stops being necessary. In the desktop app that is Settings, then API keys, then the local network switch. It ships in preview. Or start it from the terminal with dash H, zero dot zero dot zero dot zero. That is a wildcard bind, listening on every address the machine has instead of only its own. It does not just flip on. Unsloth stops and makes you replace the auto-generated admin password first. After that it shows you the address to type on the other device. You can toggle it without restarting. Here is the part the release notes do not lead with. This is not a convenience toggle. It is an execution boundary. Unsloth's own docs say server-side tools run as your user. Anyone who reaches that server with your API key can run code on your machine. Network reach is code reach. So pass dash dash disable tools unless you meant to hand that out. Outside the house, the tunnel is right. Cloudflare publishes a public web address, and your own network cannot do that. Inside, nothing sits in the path. So no, reaching your own machine never needed somebody else's service. It needed three settings, one password, and one honest look at what your tools can run.",
   "music_mood": "curious-tech",
   "scenes": [
     {
@@ -55,10 +55,10 @@
       "role": "hook",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel.",
-      "on_screen_text": "Unsloth won't answer from your couch | the fix you reach for: a tunnel",
-      "visual_brief": "Frame 1: on a near-black terminal field, the line UNSLOTH WON'T ANSWER FROM YOUR COUCH already fully legible in amber monospace, centred. Motion onset at 0.3s: a block cursor pops on at the end of the line and begins blinking. At 3s a second amber line types in beneath it, THE FIX YOU REACH FOR: A TUNNEL, one character at a time. At 6s a faint pipe of dashes draws left to right under both lines, then dims to grey as the cursor slides back to the top line.",
-      "est_duration_s": 9
+      "narration": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel through somebody else's service.",
+      "on_screen_text": "Unsloth won't answer from your couch | a tunnel through somebody else's service",
+      "visual_brief": "Frame 1: on a near-black terminal field, the line UNSLOTH WON'T ANSWER FROM YOUR COUCH already fully legible in amber monospace, centred. Motion onset at 0.3s: a block cursor pops on at the end of the line and begins blinking. At 3s a second amber line types in beneath it, A TUNNEL THROUGH SOMEBODY ELSE'S SERVICE, one character at a time. At 6s a faint pipe of dashes draws left to right under both lines, then dims to grey as the cursor slides back to the top line.",
+      "est_duration_s": 10
     },
     {
       "id": "s2",

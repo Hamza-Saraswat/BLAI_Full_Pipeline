@@ -20,6 +20,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 9 | 04 script | quality | **`entity_spend` and `top2` are unsatisfiable and fire on almost everything.** The extractor pulled 22 "entities" from the Ornith brief for a 104-word script, including sentence fragments (`GB and BF16`, `OpenHands for SWE-bench and Harbor`, `Terminus-2 46.2`), quantization format names and the license. From the Unsloth brief it produced `LAN`, `Auto`, `Settings`. Both gates failed on all four drafts, and `entity_spend` fails on 35 of the 38 v1 boards | open |
 | 10 | 04 script | friction | The ported `styles/history.json` is v1's live history, so assigning a pack by topic fit collides with it silently: `terminal` drew a rotation advisory because v1 used `terminal` on 2026-08-22 | open |
 
+| 11 | 04 script | blocker | **Two parallel writers collided on a shared scratchpad path.** Both generated their storyboard with a script at `scratchpad/build_b.py`; the second overwrote the first and its run regenerated the other writer's output file. In production these two drafts are parallel subagents inside one stage, so this is a live data-loss path | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -79,8 +81,20 @@ Three failure modes in one: phrases split across conjunctions and prepositions, 
 
 This is not new. `entity_spend` fails on 35 of the 38 v1 boards, so the gate has been firing on nearly everything since v1 and has been trained into background noise. A gate that always fails teaches you to ignore gates.
 
+**The gate is wrong in both directions.** It fails good scripts, and it passes on accidents. Unsloth draft B scored `entity_spend` 1.00 and `top2` present, apparently naming every entity including `Auto`. The script never mentions Auto compaction. The match came from the phrase "replace the auto-generated admin password": the entity regex uses word boundaries, and a hyphen is a word boundary, so `\bAuto\b` matched inside `auto-generated`. A gate satisfied by a coincidental substring carries no signal at all.
+
 Proposed fix, not applied: rebuild `extract_entities` on the curated product vocabulary that already exists in `skills/trend-radar/scripts/scoring.py` (`PRODUCTS`, about 60 named products, vendors and hardware with regexes), plus proper nouns that appear in the brief's thesis. Reject anything containing " and ", " for ", a digit-only tail, a license identifier or a quantization format. Then re-check the floor: half of three or four real entities is reachable, half of twenty-two is not.
 
 ### 10. The inherited style ledger is live (open)
 
 `skills/render-shorts/styles/history.json` came across from v1 with its real rotation history, whose most recent entry is `terminal` on 2026-08-22. Assigning `terminal` to today's Unsloth video on topic fit therefore drew "style_pack 'terminal' same as previous video -- rotate". Harmless here, but it means the ledger is not a clean slate and any hand-assignment has to be checked against it. Related to finding 8.
+
+### 11. Parallel writers overwrote each other's work (open)
+
+Reported by the `unsloth-B` writer, unprompted: "Another agent in this session overwrote `scratchpad/build_b.py` with its own generator mid-run, and my next invocation of that filename regenerated `2026-08-23-ornith-1-5-9b-draft-B.json` from *its* script, not mine."
+
+Two independent writers, told to write their own storyboard JSON, both reached for the same obvious scratch filename. The second write won, and running it emitted the wrong slug's file. The Ornith draft B file was later re-verified as coherent and carrying its own content, so nothing was lost this time, but only because the affected writer was still running and rewrote it.
+
+This is not a test artifact. The stage contract runs draft A and draft B as parallel subagents inside one stage, every day, for every video, and the same collision is available every time. Two videos are produced each morning, so four writers can be live at once.
+
+Proposed fix, not applied: the stage contract should hand each writer a private scratch directory (`.local-builds/<slug>/draft-<A|B>/`) and say so, and writers should be told to write only to their own draft path. A cheaper belt-and-braces version: have the stage verify after each draft that the file's `slug` and `structure` match what that writer was assigned, which is a two-line check and would have caught this immediately.
