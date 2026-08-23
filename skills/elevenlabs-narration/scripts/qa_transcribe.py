@@ -35,6 +35,13 @@ SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent.parent.parent
 WHISPER_MODEL = "small.en"
 DEFAULT_THRESHOLD = 0.03
+# Local test runs (no CUDA, no faster-whisper): the v1 checkout ships a built whisper.cpp and a
+# ggml model. Override with WHISPER_CPP_BIN / WHISPER_CPP_MODEL, or move the checkout with
+# BLAI_KOKORO_ROOT (the same variable generate_audio.py reads).
+V1_ROOT = pathlib.Path.home() / "Documents" / "Projects" / "BLAI_Animator"
+WHISPER_CPP_NAMES = ("whisper-cli", "whisper-cpp", "main")
+GGML_NAMES = ("ggml-base.en.bin", "ggml-small.en.bin")
+WHISPER_SAMPLE_RATE = 16000  # whisper.cpp reads 16 kHz mono only
 
 
 def log(msg: str) -> None:
@@ -169,22 +176,60 @@ def transcribe_faster_whisper(audio: pathlib.Path) -> dict:
     return {"engine": "faster-whisper", "model": WHISPER_MODEL, "text": text, "words": words, "segments": segs}
 
 
+def whisper_cpp_root() -> pathlib.Path:
+    root = (os.environ.get("BLAI_KOKORO_ROOT") or "").strip()
+    return (pathlib.Path(root).expanduser() if root else V1_ROOT) / "render" / "remotion" / "whisper.cpp"
+
+
 def find_whisper_cpp() -> tuple:
-    for name in ("whisper-cli", "whisper-cpp", "main"):
+    """(name, path) of a built whisper.cpp binary: WHISPER_CPP_BIN, then the v1 build, then PATH."""
+    cands = []
+    env_bin = (os.environ.get("WHISPER_CPP_BIN") or "").strip()
+    if env_bin:
+        cands.append(pathlib.Path(env_bin).expanduser())
+    wroot = whisper_cpp_root()
+    cands += [wroot / "build" / "bin" / "whisper-cli", wroot / "build" / "bin" / "main", wroot / "main"]
+    for c in cands:
+        if c.is_file() and os.access(str(c), os.X_OK):
+            return c.name, str(c)
+    for name in WHISPER_CPP_NAMES:
         path = shutil.which(name)
         if path:
             return name, path
     return None, None
 
 
+def find_whisper_cpp_model(binary: str) -> str:
+    cands = []
+    env_model = (os.environ.get("WHISPER_CPP_MODEL") or "").strip()
+    if env_model:
+        cands.append(pathlib.Path(env_model).expanduser())
+    wroot = whisper_cpp_root()
+    for name in GGML_NAMES:
+        cands += [wroot / name, pathlib.Path(binary).resolve().parent / name, wroot / "models" / name,
+                  pathlib.Path.home() / ".cache" / "whisper.cpp" / name]
+    found = next((c for c in cands if c.is_file()), None)
+    if found is None:
+        raise SystemExit("whisper.cpp model not found (looked under %s and ~/.cache/whisper.cpp); "
+                         "set WHISPER_CPP_MODEL to a ggml *.en.bin file" % wroot)
+    return str(found)
+
+
 def transcribe_whisper_cpp(audio: pathlib.Path, binary: str) -> dict:
-    model = os.environ.get("WHISPER_CPP_MODEL") or str(pathlib.Path.home() / ".cache" / "whisper.cpp" / "ggml-small.en.bin")
-    if not pathlib.Path(model).exists():
-        raise SystemExit("whisper.cpp model not found at %s (set WHISPER_CPP_MODEL)" % model)
+    model = find_whisper_cpp_model(binary)
     with tempfile.TemporaryDirectory() as tmp:
         prefix = pathlib.Path(tmp) / "out"
-        cmd = [binary, "-m", model, "-f", str(audio), "-oj", "-of", str(prefix), "-ml", "1", "-np"]
-        log("whisper.cpp: %s" % " ".join(cmd[:3]))
+        source = pathlib.Path(tmp) / "audio16k.wav"
+        if shutil.which("ffmpeg"):
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(audio), "-ar", str(WHISPER_SAMPLE_RATE),
+                            "-ac", "1", "-c:a", "pcm_s16le", str(source)], check=True)
+        else:
+            source = audio  # whisper.cpp will refuse anything that is not already 16 kHz mono
+        # -ml 1 alone splits on tokens ("pet af l op"), which the WER normalizer cannot rejoin;
+        # -sow makes each segment a whole word, so the diff compares words with words.
+        cmd = [binary, "-m", model, "-f", str(source), "-oj", "-of", str(prefix),
+               "-ml", "1", "-sow", "-np", "-l", "en"]
+        log("whisper.cpp: %s with %s" % (pathlib.Path(binary).name, pathlib.Path(model).name))
         proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if proc.returncode != 0:
             raise SystemExit("whisper.cpp failed: %s" % proc.stderr.strip()[-500:])
@@ -214,8 +259,9 @@ def transcribe(audio: pathlib.Path, engine: str) -> dict:
     name, path = find_whisper_cpp()
     if path:
         return transcribe_whisper_cpp(audio, path)
-    raise SystemExit("no transcription engine: pip install faster-whisper (recommended), or install whisper.cpp "
-                     "(whisper-cli on PATH) and set WHISPER_CPP_MODEL to a ggml-small.en.bin file")
+    raise SystemExit("no transcription engine: pip install faster-whisper (recommended), or build whisper.cpp "
+                     "(whisper-cli on PATH, under %s, or named by WHISPER_CPP_BIN) with a ggml *.en.bin model"
+                     % whisper_cpp_root())
 
 
 def dry_run_transcript(script_text: str, audio: pathlib.Path) -> dict:

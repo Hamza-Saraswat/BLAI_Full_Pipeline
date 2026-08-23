@@ -2,6 +2,8 @@
 
 Secrets never appear in any committed file. Two hosts hold them.
 
+A local test run needs none of them. `python3 build/build.py --once --local` builds voice and render on a developer machine with an offline Kokoro voice, prints the Telegram card and the Blotato body instead of sending them, and skips git-sync, so nothing below has to exist before the first video is rendered. It checks paths, not keys. See `build/README.md`, "Local test run on a Mac".
+
 ## Cloud environment (claude.ai/code environment "Default")
 
 Set these as environment variables on the cloud environment. Anyone with access to the environment can read them, so only low-risk keys go here.

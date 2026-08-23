@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Turn the character alignment into word captions (JSON) and an SRT file.
+"""Turn the narration alignment into word captions (JSON) and an SRT file.
 
 Usage:
   captions.py --alignment DIR/alignment.json --script FILE.txt --out DIR
               [--max-words 4] [--max-cue-s 1.8]
 
-Words come from the alignment (split on whitespace; a word's start is its first character's
-start, its end the last character's end). The alignment text is the aliased text that was sent
-to ElevenLabs ("D G X" for "DGX"), so the words are then matched back onto the original script
-words with difflib: 1:1 matches take the aligned time, replaced runs share the run's time span
-proportionally to word length. The viewer sees the script's spelling with the voice's timing.
+Words come from the alignment's `words` array when it has one (the local Kokoro engine measures
+word times with whisper.cpp and writes them there), otherwise from the character timestamps
+(split on whitespace; a word's start is its first character's start, its end the last character's
+end). Either way the alignment holds the aliased text that was sent to the engine ("D G X" for
+"DGX"), so the words are then matched back onto the original script words with difflib: 1:1
+matches take the aligned time, replaced runs share the run's time span proportionally to word
+length. The viewer sees the script's spelling with the voice's timing.
 
 Outputs: DIR/captions.json [{word, start, end}] and DIR/captions.srt (cues of 3-4 words, at most
 --max-cue-s seconds each, closed early at sentence punctuation). Exit 0/1. No network.
@@ -30,6 +32,16 @@ def log(msg: str) -> None:
 
 
 def words_from_alignment(al: dict) -> list:
+    """Prefer a measured `words` array; fall back to the character timestamps."""
+    listed = al.get("words")
+    if isinstance(listed, list) and listed:
+        out = []
+        for w in listed:
+            word = str(w.get("word", "")).strip()
+            if word:
+                out.append({"word": word, "start": float(w.get("start", 0.0)), "end": float(w.get("end", 0.0))})
+        if out:
+            return out
     chars = al["characters"]
     starts = al["character_start_times_seconds"]
     ends = al["character_end_times_seconds"]
@@ -131,13 +143,15 @@ def main() -> int:
     args = ap.parse_args()
 
     al = json.loads(pathlib.Path(args.alignment).read_text(encoding="utf-8"))
-    for key in ("characters", "character_start_times_seconds", "character_end_times_seconds"):
-        if key not in al:
-            raise SystemExit("alignment.json lacks %s" % key)
+    if not (isinstance(al.get("words"), list) and al["words"]):
+        for key in ("characters", "character_start_times_seconds", "character_end_times_seconds"):
+            if key not in al:
+                raise SystemExit("alignment.json lacks a words array and %s" % key)
     script_words = pathlib.Path(args.script).read_text(encoding="utf-8").split()
     aligned = words_from_alignment(al)
     if not aligned:
         raise SystemExit("alignment has no words")
+    log("timing source: %s" % (al.get("source") or "character timestamps"))
     words = map_to_script(aligned, script_words) if script_words else aligned
     out = pathlib.Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

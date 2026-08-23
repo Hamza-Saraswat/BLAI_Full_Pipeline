@@ -9,13 +9,21 @@ _design/builder-brief.md. build.py decides when a stage runs and what happens wh
 Library use (build/build.py):
     from stage_runner import STAGES, PUBLISH, Ctx, StageError, run_stage, poll_status
 CLI use:
-    python3 build/stage_runner.py --list
+    python3 build/stage_runner.py --list [--local]
     python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --dry-run
+    python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --local
     python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --poll
 
 Paths: repo root = BLAI_REPO_DIR (default: the parent of build/), per-slug binaries =
 BLAI_BUILD_DIR/<slug>/ (default $HOME/blai/builds). Every skill script path is computed from the
 repo root. Exit codes: 0 ok, 1 the stage failed, 2 usage.
+
+--local is the credential-free test mode for a developer machine (build/README.md, "Local test run
+on a Mac"). It needs no API key: voice stages pass --engine kokoro, publish only prints what
+publish.py --dry-run would send and leaves the note at approved, the gate card prints through
+send_card.py --dry-run while the note still reaches review, a failed WER gate warns instead of
+blocking (the local Whisper model, not the voice, sets that floor), the repo is the one this file
+lives in and the build dir is <repo>/.local-builds. build.py additionally skips git-sync.
 """
 from __future__ import annotations
 
@@ -33,8 +41,23 @@ import time
 from typing import Callable, NamedTuple
 
 HERE = pathlib.Path(__file__).resolve().parent
-REPO = pathlib.Path(os.environ.get("BLAI_REPO_DIR") or HERE.parent).resolve()
-BUILD_DIR = pathlib.Path(os.environ.get("BLAI_BUILD_DIR") or (pathlib.Path.home() / "blai" / "builds"))
+
+
+def _local_requested() -> bool:
+    """--local is read from argv (and BLAI_LOCAL) at import time, because REPO and BUILD_DIR are
+    module constants that build.py imports by value before it parses its own arguments."""
+    if "--local" in sys.argv[1:]:
+        return True
+    return (os.environ.get("BLAI_LOCAL") or "").strip().lower() not in ("", "0", "false", "no")
+
+
+LOCAL = _local_requested()
+if LOCAL:  # a developer machine: this checkout, its own build dir, no keys
+    REPO = HERE.parent.resolve()
+    BUILD_DIR = REPO / ".local-builds"
+else:
+    REPO = pathlib.Path(os.environ.get("BLAI_REPO_DIR") or HERE.parent).resolve()
+    BUILD_DIR = pathlib.Path(os.environ.get("BLAI_BUILD_DIR") or (pathlib.Path.home() / "blai" / "builds"))
 sys.path.insert(0, str(REPO / "tools"))
 import hubnote  # noqa: E402
 
@@ -60,6 +83,9 @@ CARD_TIMEOUT = 120
 
 UNATTENDED = ("Run stage {stage} for {slug} in unattended mode. Read CLAUDE.md, then "
               "stages/{stage}/CONTEXT.md, and follow it exactly. Build dir: {build}.")
+LOCAL_SUFFIX = (" Local test mode: no paid service is configured, so make no network call that needs "
+                "a key, pass --engine kokoro to generate_audio.py, pass --dry-run to every "
+                "send_card.py and publish.py call, and leave the hub note at review.")
 RECONCILE = ("Run stage 08-capture reconcile for {slug} in unattended mode. Read CLAUDE.md, then "
              "stages/08-capture/CONTEXT.md, and follow it exactly. Build dir: {build}. "
              "The capture results are in {build}/capture/capture.json.")
@@ -147,7 +173,7 @@ class Ctx:
     """What a stage function needs: the hub note, the paths, and helpers (run, claude, write,
     hub_update, journal) that print a plan instead of acting when dry_run is set."""
 
-    def __init__(self, note, dry_run: bool = False, fresh: bool = False, log=None):
+    def __init__(self, note, dry_run: bool = False, fresh: bool = False, log=None, local=None):
         self.note = pathlib.Path(note).resolve()
         self.meta, _ = hubnote.read(self.note)
         if not self.meta.get("slug") or self.meta.get("workspace") not in STAGES:
@@ -158,6 +184,7 @@ class Ctx:
         self.build = BUILD_DIR / self.slug
         self.dry_run = dry_run
         self.fresh = fresh
+        self.local = LOCAL if local is None else bool(local)
         self._log = log or (lambda m: print(m, file=sys.stderr, flush=True))
 
     # -- small helpers ------------------------------------------------------
@@ -215,12 +242,16 @@ class Ctx:
             self.say("  | " + line)
 
     def claude(self, prompt: str, name: str, max_turns: int = 200, timeout: int = CLAUDE_TIMEOUT) -> dict:
+        if self.local:
+            prompt += LOCAL_SUFFIX
         cmd = ["claude", "-p", "--dangerously-skip-permissions", "--output-format", "json",
                "--max-turns", str(max_turns), prompt]
         env = dict(os.environ)
         env.pop("CLAUDECODE", None)  # never look like a nested interactive session
         env["BLAI_BUILD_DIR"] = str(BUILD_DIR)
         env["BLAI_REPO_DIR"] = str(REPO)
+        if self.local:
+            env["BLAI_LOCAL"] = "1"
         res = self.run(cmd, name + "-claude", cwd=self.ws_dir, timeout=timeout, env=env, check=False)
         if self.dry_run:
             return {}
@@ -298,8 +329,9 @@ def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
         ctx.require(script, "narration text")
         source = ["--text", script]
     wav = out / "narration.wav"
+    engine = ["--engine", "kokoro"] if ctx.local else []  # local test runs need no ElevenLabs key
     if ctx.fresh or ctx.dry_run or not (wav.exists() and (out / "voice.json").exists()):
-        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", fmt],
+        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", fmt, *engine],
                 "generate_audio", timeout=VOICE_TIMEOUT)
     else:
         ctx.say("reusing %s (pass --fresh to regenerate)" % wav)
@@ -319,8 +351,13 @@ def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
     mism = qa.get("mismatches") or []
     if not qa.get("pass"):
         heard = "; ".join("expected %r heard %r" % (m.get("expected", ""), m.get("heard", "")) for m in mism[:3])
-        raise StageError("voice QA failed: WER %.3f, %d mismatch(es): %s" % (wer, len(mism), heard))
-    return "voice %.1fs, wer %.3f" % (float(voice.get("duration_s") or 0), wer)
+        if ctx.local:  # the local Whisper model sets the floor here, not the voice: warn, do not block
+            ctx.say("warning: local run, WER %.3f above threshold, %d mismatch(es): %s" % (wer, len(mism), heard))
+            ctx.journal("%s local: WER %.3f above threshold, not blocking (see build/README.md)" % (stage, wer))
+        else:
+            raise StageError("voice QA failed: WER %.3f, %d mismatch(es): %s" % (wer, len(mism), heard))
+    return "voice %.1fs, wer %.3f%s" % (float(voice.get("duration_s") or 0), wer,
+                                        " (%s)" % voice.get("engine") if ctx.local else "")
 
 
 def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
@@ -331,13 +368,16 @@ def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
         % (stage, socket.gethostname(), _now(), ctx.slug), "",
         "| Field | Value |", "|-------|-------|",
         "| Format | %s |" % fmt,
+        "| Engine | %s |" % (voice.get("engine") or "elevenlabs"),
         "| Duration | %.1f s |" % float(voice.get("duration_s") or 0),
+        "| Words per second | %s |" % voice.get("words_per_second", ""),
         "| Characters | %s |" % voice.get("chars", ""),
         "| Chunks | %s |" % voice.get("chunks", ""),
         "| Model | %s |" % voice.get("model", ""),
+        "| Alignment | %s |" % (voice.get("alignment_source") or "elevenlabs"),
         "| Credits estimate | %s |" % voice.get("credits_estimate", ""),
         "| WER | %.3f (threshold 0.03) |" % float(qa.get("wer") or 0),
-        "| QA | %s |" % ("pass" if qa.get("pass") else "FAIL"),
+        "| QA | %s |" % ("pass" if qa.get("pass") else ("FAIL, not blocking (local run)" if ctx.local else "FAIL")),
         "", "## Mismatches",
     ]
     lines += ['- at %.1f s: expected "%s", heard "%s"' % (float(m.get("at_s") or 0), m.get("expected", ""),
@@ -368,9 +408,14 @@ def _render(ctx: Ctx, stage: str, want_thumbnails: bool) -> str:
     if ctx.dry_run:
         for p, what in checks:
             ctx.plan("verify %s exists: %s" % (what, p))
-        ctx.plan("verify hub status == review (the stage sends the gate card)")
+        if ctx.local:
+            _local_gate_card(ctx, stage)
+        else:
+            ctx.plan("verify hub status == review (the stage sends the gate card)")
         return "dry-run"
     missing = [what for p, what in checks if not (p.exists() and p.stat().st_size > 0)]
+    if ctx.local:  # no Telegram token here: print the card the Spark would send, then open the gate
+        _local_gate_card(ctx, stage)
     status = ctx.refresh().get("status")
     if status != "review":
         missing.append("hub status is %r, expected review" % status)
@@ -378,6 +423,22 @@ def _render(ctx: Ctx, stage: str, want_thumbnails: bool) -> str:
         raise StageError("%s: after claude -p: %s" % (stage, "; ".join(missing)))
     ctx.link_artifact("Render", stage, ctx.slug + "-render")
     return "render ok, status=review"
+
+
+def _local_gate_card(ctx: Ctx, stage: str) -> None:
+    """Local mode: print the gate card through send_card.py --dry-run and put the note in review."""
+    cmd = [PY, SCRIPT["send_card"], "--kind", "gate", "--hub", ctx.note, "--dry-run"]
+    video = ctx.build / "render" / "final.mp4"
+    if ctx.dry_run or video.exists():
+        cmd += ["--video", video]
+    res = ctx.run(cmd, "gate-card-dry-run", timeout=CARD_TIMEOUT, check=False)
+    if not ctx.dry_run:
+        print(res.stdout, flush=True)
+        if res.returncode != 0:
+            ctx.say("warning: send_card.py --dry-run exited %d: %s" % (res.returncode, _tail(res.stderr, 3)))
+        if ctx.refresh().get("status") != "review":
+            ctx.hub_update(status="review")
+    ctx.journal("%s local: gate card printed with --dry-run, nothing sent, status=review" % stage)
 
 
 def stage_render_shorts(ctx: Ctx) -> str:
@@ -455,6 +516,14 @@ def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> 
     privacy = os.environ.get("BLAI_PUBLISH_PRIVACY", "").strip()
     if privacy:
         cmd += ["--privacy", privacy]
+    if ctx.local:  # nothing is uploaded and nothing is posted: print the body and stop at approved
+        res = ctx.run(cmd + ["--dry-run"], "publish-dry-run", timeout=PUBLISH_TIMEOUT, check=False)
+        if not ctx.dry_run:
+            print(res.stdout, flush=True)
+            if res.returncode != 0:
+                ctx.say("warning: publish.py --dry-run exited %d: %s" % (res.returncode, _tail(res.stderr, 4)))
+        ctx.journal("%s local: publishing skipped, printed publish.py --dry-run, status stays approved" % stage)
+        return "local: publish skipped (dry-run body printed), status stays approved"
     marker = ctx.build / "publish.json"  # one post per slug, even when a later step fails
     if marker.exists() and not ctx.fresh and not ctx.dry_run:
         ctx.say("reusing %s from an earlier attempt (not posting again)" % marker)
@@ -572,11 +641,11 @@ def find_stage(name: str, workspace: str):
     return None
 
 
-def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, log=None):
+def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, log=None, local=None):
     """Run one stage for one hub note. Returns (ok, seconds, message); never raises."""
     t0 = time.time()
     try:
-        ctx = Ctx(note, dry_run=dry_run, fresh=fresh, log=log)
+        ctx = Ctx(note, dry_run=dry_run, fresh=fresh, log=log, local=local)
         msg = stage.fn(ctx) or "ok"
         return True, time.time() - t0, msg
     except StageError as e:
@@ -585,21 +654,42 @@ def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, lo
         return False, time.time() - t0, "%s: %s" % (type(e).__name__, e)
 
 
+LOCAL_NOTES = [
+    "voice (06-voice, 09-voice): generate_audio.py --engine kokoro, no ElevenLabs key needed",
+    "voice QA: a WER above the threshold warns and journals instead of blocking the note",
+    "render (07-render, 10-render): claude -p is told it is a local run; the gate card prints "
+    "through send_card.py --dry-run and the note still reaches review",
+    "publish (08-publish, 11-publish): nothing is uploaded or posted; publish.py --dry-run is "
+    "printed and the note stays at approved",
+    "build.py: no required .env values (paths only), and git-sync is skipped",
+]
+
+
 def print_table() -> None:
     print("%-10s %-11s %-10s %s" % ("workspace", "stage", "kind", "what runs"))
     for st in all_stages():
         print("%-10s %-11s %-10s %s" % (st.workspace, st.name, st.kind, (st.fn.__doc__ or "").strip()))
     print("\nrepo: %s\nbuild dir: %s" % (REPO, BUILD_DIR))
+    if LOCAL:
+        print("\nlocal mode (--local): credential-free test run on this machine")
+        for line in LOCAL_NOTES:
+            print("  - " + line)
+    else:
+        print("\n--list --local shows what the credential-free local test mode changes")
 
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--list", action="store_true", help="print the stage table and exit")
+    ap.add_argument("--list", action="store_true", help="print the stage table and exit "
+                    "(with --local: what local mode changes)")
     ap.add_argument("--note", help="hub note: workspaces/<ws>/videos/<slug>.md")
-    ap.add_argument("--stage", help="stage to run, for example 06-voice or 11-publish")
+    ap.add_argument("--stage", metavar="NAME", help="run this one stage by hand, for example 06-voice "
+                    "or 11-publish (see --list for the names of both workspaces)")
     ap.add_argument("--poll", action="store_true", help="poll publish.py --status for a scheduled note")
     ap.add_argument("--dry-run", action="store_true", help="print the commands instead of running them")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs from earlier attempts")
+    ap.add_argument("--local", action="store_true", help="credential-free local test mode: Kokoro voice, "
+                    "no publish, no card sent, build dir <repo>/.local-builds")
     a = ap.parse_args(argv)
     if a.list:
         print_table()
@@ -611,7 +701,7 @@ def main(argv=None) -> int:
     meta, _ = hubnote.read(a.note)
     if a.poll:
         try:
-            state, url, _raw = poll_status(Ctx(a.note, dry_run=a.dry_run))
+            state, url, _raw = poll_status(Ctx(a.note, dry_run=a.dry_run, local=a.local))
         except StageError as e:
             print("poll failed: %s" % e, file=sys.stderr)
             return 1
@@ -622,8 +712,9 @@ def main(argv=None) -> int:
         print("no stage %s for workspace %s (see --list)" % (a.stage, meta.get("workspace")), file=sys.stderr)
         return 2
     if a.dry_run:
-        print("plan %s %s (%s):" % (stage.name, meta.get("slug"), stage.kind))
-    ok, secs, msg = run_stage(a.note, stage, dry_run=a.dry_run, fresh=a.fresh)
+        print("plan %s %s (%s)%s:" % (stage.name, meta.get("slug"), stage.kind,
+                                      ", local mode" if a.local else ""))
+    ok, secs, msg = run_stage(a.note, stage, dry_run=a.dry_run, fresh=a.fresh, local=a.local)
     print("%s %s %ds: %s" % (stage.name, "ok" if ok else "fail", secs, msg))
     return 0 if ok else 1
 

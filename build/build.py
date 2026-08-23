@@ -3,6 +3,7 @@
 
     python3 build/build.py --once [--dry-run] [--slug S] [--workspace shorts|long-form] [--fresh]
     python3 build/build.py --interval 300        # keep looping (the systemd timer normally does this)
+    python3 build/build.py --once --local        # credential-free test run on a developer machine
 
 One pass:
   1. take build/locks/build.lock (exit 0 quietly when another pass holds it)
@@ -16,6 +17,11 @@ One pass:
 --dry-run prints the planned commands and touches neither git nor the notes.
 --slug picks one note regardless of age: ready-to-build, blocked or stale building notes are
 (re)built, approved notes are published, scheduled notes are polled.
+--local is the credential-free test mode (build/README.md, "Local test run on a Mac"): no API key
+is required, only the paths; the voice stages run the local Kokoro engine; publishing does not
+happen (publish.py --dry-run is printed and the note stays at approved); the gate card prints
+through send_card.py --dry-run while the note still reaches review; git-sync is skipped;
+BLAI_BUILD_DIR is <repo>/.local-builds and BLAI_REPO_DIR is the repo this script lives in.
 Exit codes: 0 ok, 1 the pass hit an error, 2 configuration problem (empty required .env values).
 Logs: build/logs/<date>.log plus stderr. Per-slug binaries: $BLAI_BUILD_DIR/<slug>/.
 """
@@ -61,8 +67,8 @@ def load_env(path: pathlib.Path) -> int:
 
 load_env(HERE / ".env")  # before stage_runner reads BLAI_REPO_DIR / BLAI_BUILD_DIR
 sys.path.insert(0, str(HERE))
-import stage_runner as sr  # noqa: E402
-from stage_runner import BUILD_DIR, PUBLISH, REPO, STAGES, Ctx, StageError, poll_status, run_stage  # noqa: E402
+import stage_runner as sr  # noqa: E402  (reads --local from sys.argv: it fixes REPO and BUILD_DIR)
+from stage_runner import BUILD_DIR, LOCAL, PUBLISH, REPO, STAGES, Ctx, StageError, poll_status, run_stage  # noqa: E402
 import hubnote  # noqa: E402  (stage_runner put <repo>/tools on sys.path)
 
 HOST = socket.gethostname()
@@ -77,6 +83,28 @@ REQUIRED_ENV = ("ELEVENLABS_API_KEY", "ELEVEN_VOICE_ID", "BLOTATO_API_KEY", "BLO
 
 class PassError(Exception):
     """Abort the whole pass (for example git pull failed)."""
+
+
+def check_local_paths(log: "Log") -> int:
+    """--local requires paths, never keys. Returns 0 when the run can go ahead, else 2."""
+    problems = []
+    if not (REPO / "workspaces").is_dir() or not (REPO / "skills").is_dir():
+        problems.append("%s does not look like the repo (no workspaces/ and skills/)" % REPO)
+    if log.dry_run:  # a dry run creates nothing: check the parent instead
+        if not BUILD_DIR.exists() and not BUILD_DIR.parent.is_dir():
+            problems.append("build dir %s cannot be created: %s is not a directory" % (BUILD_DIR, BUILD_DIR.parent))
+    else:
+        try:
+            BUILD_DIR.mkdir(parents=True, exist_ok=True)
+        except OSError as e:
+            problems.append("cannot create the build dir %s: %s" % (BUILD_DIR, e))
+    if problems:
+        log("error: local run cannot start: " + "; ".join(problems))
+        return 2
+    have = [k for k in REQUIRED_ENV if os.environ.get(k)]
+    log("local run: repo %s, build dir %s, %d of %d .env values set (none required)"
+        % (REPO, BUILD_DIR, len(have), len(REQUIRED_ENV)))
+    return 0
 
 
 class Log:
@@ -114,6 +142,12 @@ def git(*args: str):
 
 def git_sync(log: Log, message: str) -> bool:
     """Commit everything and push via tools/git-sync.sh (rebase + retry). Returns True on success."""
+    if LOCAL:  # a local test run leaves the working tree exactly as it found it
+        if log.dry_run:
+            print("  git-sync skipped (--local): %r" % message)
+        else:
+            log("git-sync skipped (--local): %s" % message)
+        return True
     if log.dry_run:
         print("  git-sync %r" % message)
         return True
@@ -127,6 +161,9 @@ def git_sync(log: Log, message: str) -> bool:
 
 
 def git_refresh(log: Log) -> None:
+    if LOCAL:
+        log("git skipped (--local): no recovery commit, no pull --rebase, no push")
+        return
     if git("status", "--porcelain").stdout.strip():
         log("recovering uncommitted changes from an interrupted pass")
         git_sync(log, "build(%s): recover changes from an interrupted pass" % HOST)
@@ -187,6 +224,8 @@ def waits_for_window(meta: dict) -> str:
 
 def send_blocked_card(log: Log, p: pathlib.Path, reason: str) -> None:
     cmd = [sr.PY, str(sr.SCRIPT["send_card"]), "--kind", "blocked", "--hub", str(p), "--text", reason[:900]]
+    if LOCAL:  # no Telegram token on a local run: print the card instead of sending it
+        cmd.append("--dry-run")
     try:
         res = subprocess.run(cmd, capture_output=True, text=True, timeout=sr.CARD_TIMEOUT)
     except (subprocess.TimeoutExpired, FileNotFoundError) as e:
@@ -229,13 +268,15 @@ def build_note(log: Log, p: pathlib.Path, meta: dict, a) -> bool:
     ws, slug = meta["workspace"], meta["slug"]
     stages = STAGES[ws]
     if a.dry_run:
+        sync = "git-sync skipped (--local)" if LOCAL else "git-sync"
         print("build %s (%s, status %s): %s" % (slug, ws, meta.get("status"), " -> ".join(s.name for s in stages)))
-        print("  hub set status=building build_host=%s; journal 'build start'; git-sync" % HOST)
+        print("  hub set status=building build_host=%s; journal 'build start'; %s" % (HOST, sync))
         for st in stages:
             print("  stage %s (%s):" % (st.name, st.kind))
             run_stage(p, st, dry_run=True, fresh=a.fresh, log=log)
-            print("  journal '%s ok <seconds>s'; git-sync (on failure: retry once, then status=blocked, "
-                  "blocked_reason, journal, git-sync, send_card.py --kind blocked)" % st.name)
+            print("  journal '%s ok <seconds>s'; %s (on failure: retry once, then status=blocked, "
+                  "blocked_reason, journal, %s, send_card.py --kind blocked%s)"
+                  % (st.name, sync, sync, " --dry-run" if LOCAL else ""))
         return True
     log("build start: %s (%s) on %s" % (slug, ws, HOST))
     hubnote.update(p, status="building", build_host=HOST, blocked_reason="")
@@ -255,9 +296,10 @@ def publish_note(log: Log, p: pathlib.Path, meta: dict, a) -> bool:
     ws, slug = meta["workspace"], meta["slug"]
     stage = PUBLISH[ws]
     if a.dry_run:
-        print("publish %s (%s, status %s): %s" % (slug, ws, meta.get("status"), stage.name))
+        print("publish %s (%s, status %s): %s%s" % (slug, ws, meta.get("status"), stage.name,
+                                                    " (local: printed, not sent)" if LOCAL else ""))
         run_stage(p, stage, dry_run=True, fresh=a.fresh, log=log)
-        print("  journal '%s ok <seconds>s'; git-sync" % stage.name)
+        print("  journal '%s ok <seconds>s'; %s" % (stage.name, "git-sync skipped (--local)" if LOCAL else "git-sync"))
         return True
     if meta.get("status") == "blocked":  # a blocked publish is retried from approved
         hubnote.update(p, status="approved", blocked_reason="")
@@ -305,7 +347,12 @@ def poll_note(log: Log, p: pathlib.Path, meta: dict, a) -> None:
 
 # -- one pass -----------------------------------------------------------------
 def run_pass(a, log: Log) -> int:
-    log("pass start host=%s repo=%s build_dir=%s%s" % (HOST, REPO, BUILD_DIR, " (dry-run)" if a.dry_run else ""))
+    log("pass start host=%s repo=%s build_dir=%s%s%s" % (HOST, REPO, BUILD_DIR,
+        " (local)" if LOCAL else "", " (dry-run)" if a.dry_run else ""))
+    if LOCAL:
+        log("local mode: no key is required, only the paths above")
+        for line in sr.LOCAL_NOTES:
+            log("  - " + line)
     if not a.dry_run:
         try:
             git_refresh(log)
@@ -361,14 +408,21 @@ def main(argv=None) -> int:
     ap.add_argument("--workspace", choices=list(WORKSPACES), help="scan one workspace only")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs of earlier attempts "
                     "(regenerate audio, capture again, post again)")
+    ap.add_argument("--local", action="store_true", help="credential-free test run on this machine: "
+                    "Kokoro voice, no publish, no card sent, no git-sync, build dir <repo>/.local-builds")
     a = ap.parse_args(argv)
     log = Log(a.dry_run)
-    missing = [k for k in REQUIRED_ENV if not os.environ.get(k)]
-    if missing and not a.dry_run:
-        log("error: build/.env has empty required values: %s; not picking up work" % ", ".join(missing))
-        return 2
-    if missing:
-        log("note: empty required values ignored in dry-run: %s" % ", ".join(missing))
+    if a.local:
+        rc = check_local_paths(log)
+        if rc:
+            return rc
+    else:
+        missing = [k for k in REQUIRED_ENV if not os.environ.get(k)]
+        if missing and not a.dry_run:
+            log("error: build/.env has empty required values: %s; not picking up work" % ", ".join(missing))
+            return 2
+        if missing:
+            log("note: empty required values ignored in dry-run: %s" % ", ".join(missing))
     if a.dry_run:
         return run_pass(a, log)
     fd = acquire_lock(LOCK)

@@ -53,6 +53,13 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 32 | long-form 05 | quality | The writer rejected the brief's own suggested analogy because the analogy's stated limit contradicted the chapter it was meant to serve, then caught a second analogy that had crept in disguised as a different picture. The one-analogy rule held only because the writer enforced it on itself; the gate counts markers and found zero | working as designed |
 
 | 33 | render pre-flight | blocker | **Manim was never installed and both Shorts need it.** The Ornith storyboard assigns two scenes to `manim` and the Unsloth one four. `skills/render-shorts/setup.md` documents a venv at `skills/render-shorts/manim/.venv`; nobody had run it, so the first Manim scene of the render would have failed | **fixed** |
+| 34 | long-form 06 | quality | **The two scenes that most need text render none.** `TitleCard.tsx:20` and `EndCard.tsx:18` pass `lowerThird={false}`, and `SceneFrame.tsx:136` gates all on-screen text behind it. The outline's binding "6.19 GB on screen by 0:20" fails -- the digits first draw at s03, ~34 s in -- and the payoff decision rule at beat 5.10 is spoken over a card that types nothing | open |
+| 35 | long-form 06 | friction | `ComparisonTable.tsx` caps at 4 columns and 6 rows; the outline specified six columns. The outline stage has no visibility into renderer capacity, so it can specify a table that cannot be drawn and nothing says so until the spec silently truncates | open |
+| 36 | long-form 06 | friction | **The verify rule and the card scene types are in tension.** Narration must concatenate back byte for byte and every scene's narration must be non-empty, so a chapter card has to carry its whole beat. The five cards run 13.6-16.8 s against the library's 4-15 s guidance | open |
+| 37 | long-form 06 | quality | **Finding 31 recurring one stage down.** Three `chart` beats were downgraded to `diagram`, `stat-callout` and `comparison-table` because those findings are published as orderings, not scores, and inventing `series.values` would fabricate a measurement. Two agents, two stages, same unforced refusal -- and still no gate behind it | working as designed |
+| 38 | hub notes | friction | **No stage fills the Artifacts block.** After seven long-form and five Shorts stages, every hub note still read "(filled by stage 03)". Frontmatter updated correctly because the audits and `hub-note.schema.json` check frontmatter; nothing checks the body, which is the surface a human opens in Obsidian | **fixed** |
+| 39 | long-form 05 | quality | The "nothing here was measured by us" beat lands at ~0:16, over a card that draws no text, in the window where long-form retention is decided. Editorially right, structurally three disadvantages on one beat. A reviewer call, not a gate | open |
+| 40 | 07 package | quality | **The SEO rubric cannot fail this package.** It scored 100/100 honestly and the score carries no information: one row scores the script's promise and calls it packaging (missing finding 34 entirely), another asks stage 07 to certify pixel dimensions of stills stage 10 has not rendered. Self-scored, with no fresh-context reader, unlike the script stage | open |
 
 ## Detail
 
@@ -254,3 +261,72 @@ It would have failed on the first Manim scene of the first render, roughly ten m
 Fixed by running exactly what `setup.md` prescribes: `uv venv --python 3.12 .venv && uv pip install --python .venv manim==0.20.1`. Eight seconds, because uv, python3.12, cairo and pango were all already present. The documented smoke render then produced 540x960 at 15 fps, 4.93 s, in 1.5 s of wall clock, and the ported `blai_layout` and `blai_packs` helpers import cleanly against it. `.gitignore` already covers `.venv/` and `skills/render-shorts/**/media/`, so nothing from this leaks into the repo.
 
 The general lesson is worth more than the fix: the ICM validator checks that a tool has a setup guide, not that the guide was ever run. Every skill with a `setup.md` is a prerequisite nobody has verified until something renders. A cheap `tools/preflight.py` that runs each skill's documented verification command and reports what is missing would have caught this in seconds, and would catch the equivalent gap on the Spark before the first cloud-triggered build rather than after it.
+
+### 34. The two scenes that most need text are the two that render none (open)
+
+`TitleCard.tsx:20` and `EndCard.tsx:18` both pass `lowerThird={false}` to `SceneFrame`, and `SceneFrame.tsx:136` gates all on-screen text behind that flag. So a title card and an end card draw no `on_screen_text` at all, whatever the spec puts there.
+
+Both ends of this episode are damaged by it:
+
+- **The hook.** Beat 1.1 is the contradiction the whole episode hangs on -- twenty-seven billion parameters in a 6.19 GB file -- and it is also thumbnail concept 1. The outline made "6.19 GB on screen by 0:20" a binding requirement. It fails: beat 1.1 is `s01`, `s01` must be the title card, and the digits first render at `s03`, about 34 seconds in. A viewer who clicked the thumbnail for those two numbers does not see them again for half a minute.
+- **The payoff.** Beat 5.10 is the decision rule, the one line a viewer would pause and screenshot. `end-card` draws nothing, so it is spoken and gone.
+
+The script and spec are both innocent here; the spec author flagged both and could not route around them, because the chapter/card scene types are the only ones allowed at those positions.
+
+Fix: give `TitleCard` a subtitle slot and `EndCard` a persistent rule line, or drop the `lowerThird={false}` override on both and let the layout decide. This is a render-library change, roughly one prop each.
+
+### 35. The comparison table caps below what the outline asked for (open)
+
+`ComparisonTable.tsx` is built for 4 columns and 6 rows. The winning outline specified a six-column running table. The spec correctly clipped to Contender | File size | Fits | Quality, repeated at `s22`, `s24`, `s34` and `s36` with rows accumulating and only the Quality cell changing -- which preserves the discipline the outline was actually protecting, so the damage is small.
+
+Worth recording anyway, because the outline stage has no visibility into renderer capacity. It can specify a table the renderer cannot draw and nothing says so until the spec stage quietly truncates it. The scene library's caps belong in the outline stage's references.
+
+### 36. The verify rule and the card scene types pull against each other (open)
+
+Stage 06's binding check is that the scenes' narration concatenates back to the narration file byte for byte -- the guarantee that no beat is dropped, merged or invented. The schema also requires every scene's `narration` to be non-empty. Together they mean a chapter card cannot carry a short card-only line: it must carry the whole beat that sits at that position.
+
+Result: the five chapter and title cards run 13.6 to 16.8 seconds each, against the scene library's 4-15 second guidance for cards. Nothing is broken -- the binding 45 second cap is nowhere near -- but a 16 second chapter card is a 16 second pause in an episode, five times.
+
+The tension is structural, not a bug in either rule. The honest fix is for the script stage to write short card lines into the narration file itself, so the cards have their own text to carry and the concat check still holds.
+
+### 37. The spec refused to draw charts it had no numbers for (working as designed)
+
+Three beats carried a `chart` hint. The spec author downgraded all three -- to `diagram`, `stat-callout` and `comparison-table` -- with the reason that those findings are published as orderings and directions, not as scores. A `chart` scene needs `series.values`; inventing plausible heights to draw a curve or a bar swap would have fabricated a measurement.
+
+This is finding 31 recurring at the next stage down, and again nothing forced it. Two different agents, at two different stages, independently refused to let a visual assert something the sources do not support. The pattern is worth protecting: it is the difference between a channel whose numbers are real and one whose numbers look real.
+
+Same structural gap as 31, though. Nothing in the schema or the renderer would have stopped a fabricated `series.values`. The rule lives in the agents' judgement, not in a gate.
+
+### 38. No stage fills the hub note's Artifacts block (fixed)
+
+Every stage contract's Process ends with "Update the hub", and the Outputs table names the Artifacts link. After seven long-form stages and five Shorts stages, every hub note still read:
+
+```
+- Research: (filled by stage 03)
+- Script: (filled by stage 04)
+```
+
+Stages did update the frontmatter -- `status` moved correctly through `idea`, `researched`, `scripted` -- because the audit tables check frontmatter fields and `check_outputs.py` validates them against `hub-note.schema.json`. Nothing checks the note's body, so the placeholders survived every stage in both workspaces.
+
+This matters more than it looks. The hub note is the human surface: the thing that opens in Obsidian on a phone when the Telegram card says a video is ready for review. Its navigation section was a list of unfulfilled promises pointing at nothing.
+
+Fixed for the long-form run by filling all seven links. The general fix is a `check_outputs.py` rule that fails any committed hub note containing `(filled by stage`, for a stage whose output actually exists on disk -- three lines, and it makes the contract self-enforcing rather than aspirational.
+
+### 39. The honesty beat sits in the most fragile window (open)
+
+Beat 1.2 -- "Nothing in this episode was measured by us" -- lands at roughly 0:16, over a card that draws no text (finding 34). It is editorially the right call and I would not cut it. But putting the deflating beat second, in the window where long-form retention is decided, and giving it no visual, is three disadvantages stacked on one beat.
+
+The alternative is not to hide it: move it after the first real payoff, so a viewer has been given something before being told what the episode cannot do. Worth putting to the reviewer rather than deciding in a gate.
+
+### 40. The SEO rubric cannot fail this package (open)
+
+Stage 07 scored 100 of 100. It is an honest score by the rubric's own rows -- I checked each one mechanically -- and it is close to worthless, because none of the eight rows tests anything that was actually wrong.
+
+Two specific defects:
+
+- **A row that scores the wrong thing.** "First 30 s carry the promise" passes because the promise is in the narration. Finding 34 is that the first 34 seconds render no text at all. The rubric asks about the script and calls it a packaging check.
+- **A row that cannot be evaluated at all.** The thumbnail row asks stage 07 to certify `>= 1280x720` and `<= 2 MB` for stills that stage 10 has not created yet. Stage 07 can only score the concepts and assume the rest, which means the row is unfalsifiable at the moment it is scored.
+
+Both Shorts scored 92 and 95, this episode 100, and the spread carries no information. The rubric is also self-scored by the agent that wrote the package, with no adversarial pass -- unlike the script stage, which gets a fresh-context judge.
+
+Fix, in order of value: move the pixel conditions to stage 10 where the files exist; add a row that fails when a beat's on-screen text does not render (checkable from the spec plus the scene library); and give packaging the same fresh-context second reader the script gets.

@@ -8,7 +8,12 @@ Every narration is transcribed and compared with the script before it reaches th
 - Threshold: WER 0.03 (about one wrong word in 33). Above it the script exits 1 and the stage must not continue to render.
 - The reference is compared as written and with the pronunciation aliases applied; the better score counts. A mismatch that survives both is real.
 - Normalization before the diff: lowercase, punctuation stripped, digits spelled out (years as "twenty twenty six", prices as "twenty nine dollars", percent), spelled letters collapsed ("D G X" and "DGX" are the same word). Numbers are still the most common real miss; check them first.
-- Engines: `faster-whisper` with `small.en` (CUDA float16 on the Spark, int8 on CPU); fallback `whisper-cli` from whisper.cpp with `WHISPER_CPP_MODEL`. Whisper errors exist too, so listen before acting on a single-word mismatch in a proper noun.
+- Engines: `faster-whisper` with `small.en` (CUDA float16 on the Spark, int8 on CPU); fallback a built `whisper-cli` from whisper.cpp, looked for as `WHISPER_CPP_BIN`, then in the local checkout's `render/remotion/whisper.cpp/build/bin/`, then on PATH, with the model from `WHISPER_CPP_MODEL` or a `ggml-*.en.bin` beside it. The audio is resampled to 16 kHz mono first, because whisper.cpp reads nothing else, and the transcript is asked for one whole word per segment (`-ml 1 -sow`); token-level output alone splits `petaflop` into four "words" and triples the measured WER.
+- Whisper errors exist too, so listen before acting on a single-word mismatch in a proper noun.
+
+## Local test runs
+
+`build.py --local` and `stage_runner.py --local` warn and journal instead of blocking on this gate, because the local model sets the floor. `ggml-base.en` is smaller than `small.en` and misses homophones by itself (`buy` heard as `by`, `Mac's` as `max`, `there` as `their`): on a clean 259-word Kokoro take that alone measured 0.031, just over the threshold, with no synthesis error in it. Read a local WER as a smoke test that the words are there in roughly the right order. Pronunciation is judged on the real engine, or by ear.
 
 ## What to do with a failure
 
