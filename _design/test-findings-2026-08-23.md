@@ -24,6 +24,13 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 
 | 12 | 04 script | quality | **Blind writers converged on the same hook.** The two Unsloth drafts, written by workers who could not see each other, opened with "Unsloth won't answer from the couch" and "Unsloth won't answer from your couch". The variety in the two-draft design comes from structure, not from the opening | open |
 
+| 13 | tooling | blocker | **`tools/reset-run.py` silently skipped every ledger.** It assumed a bare JSON list; `script-ledger.json` is `{_doc, entries}` and `styles/history.json` is `{_rule, used}`, so a reset removed the files and left the ledger entries behind. That is exactly the half-cleaned state the plan warned would make the next run lie | **fixed** |
+| 14 | 04 script | quality | **The judge found permitted labels still failing the content test.** Draft A's two labels were legal (has_process true, under the cap, each naming an action) and the gate passed them, but deleting "Step one:" loses nothing, and the draft opened a count it never closed: Step one, Step two, then "Now pick up the laptop" | open |
+| 15 | 04 script | quality | **Both judges, independently, said the rubric rewards engineering over teaching.** Ornith: the draft that explains the mechanism lost by seven to the one that skips it. Unsloth: "the rubric picked the better-engineered one over the better-written moment." The rubric scores hook mechanics in three places and teaching in none | open |
+| 16 | 04 script | quality | The rubric is structurally biased against `myth-bust`: rows 1, 2 and 6 all punish a shape that must state the belief before breaking it. B lost four points on shape before a question of craft was asked; on craft rows alone A led 12-9, not 21-14 | open |
+| 17 | 04 script | quality | A factual drift no gate can see: the winning Ornith draft says "Nobody outside Ornith has reproduced that yet" where the brief says "No independent reproduction was found". Absence of evidence compressed into an assertion | open |
+| 18 | 04 script | friction | The voice rules contain rules no gate checks and readers disagree about. The Unsloth judge read the winner as breaking "not antithetical, at most once per script" at least twice; a mechanical scan finds one, which is compliant. Neither `validate_storyboard.py` nor `eval_short.py` contains the word | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -110,3 +117,25 @@ This is the brief working as designed and the draft design working less well tha
 The consequence is that two drafts buy less variety than the plan assumed. The shapes differ, the payoffs differ, the endings differ, but the first three seconds, which is where the retention cliff is, can be nearly identical. The judge then chooses between two videos that open the same way.
 
 Proposed fixes, none applied. Assign each writer a different hook pattern from the library alongside its structure, so A opens on a number and B opens on a situation. Or have the judge score hook distance between the drafts and refuse a pair whose hooks share their first four words, which is a check the variety ledger already computes for the between-video case (`hook_head`).
+
+### 13. The reset tool did not reset (fixed)
+
+Written in Phase 0 precisely so repeated runs would not inherit each other, and it handled one of the three ledger shapes. `python3 tools/reset-run.py --slug ... --dry-run` listed eight files to remove and no ledger lines at all. `prune_ledger` tested `isinstance(data, list)` and returned early otherwise, so `script-ledger.json` (`{_doc, entries}`) and `styles/history.json` (`{_rule, used}`) were skipped in silence. Fixed to handle all three shapes and to log loudly when a fourth appears rather than returning quietly.
+
+### 14 to 16. What the judges found in the rubric
+
+Two judges with fresh context, no access to each other, reached the same verdict about the instrument they were given.
+
+**Labels can be legal and still be the old habit.** The Unsloth judge scored draft A's navigation 1 of 3 and explained why better than the rule does: "Delete 'Step one:' and you get 'Open Settings and switch on network access' -- nothing lost, and stronger for opening on the verb." Worse, the draft announced a count and abandoned it: Step one, Step two, then "Now pick up the laptop", so a viewer waits for a third that never lands. And the labels arrive at second thirty-seven, after a four-sentence detour, functioning as a re-entry marker after a digression rather than as help for someone's hands. The gate's structure whitelist is necessary and not sufficient; the judge's row 5 is doing the real work.
+
+**The rubric cannot see teaching.** The Ornith judge: "it scores hook mechanics three separate times (rows 1, 2, and half of 6) and scores teaching zero times, which is why the draft that explains the mechanism lost by seven to the draft that skips it." The losing draft owned the only real explanation in the pair, that a four-bit build keeps fewer bits per stored number so the file shrinks, and the grafting rules correctly forbade rescuing it. The Unsloth judge reached the same place from the other side: draft A held "the only moment in either script with a pulse" and lost.
+
+**And it is biased against shapes that must set up before they pay off.** Rows 1, 2 and 6 all reward getting concrete in the first five words. A myth-bust has to state the belief first. Four of B's seven-point deficit were structural, not craft.
+
+Proposed fixes, none applied. Add a teaching row (does a viewer who did not know the mechanism now know it). Score rows 1 and 2 once rather than three times. Let row 6 compare against the ledger only, not against "the obvious treatment", which double-counts shape. And consider whether a perfect 21 on the first run means the ceiling is too low.
+
+### 17 and 18. Two things no gate can catch
+
+The winning Ornith draft narrows "No independent reproduction was found" into "Nobody outside Ornith has reproduced that yet". Its own description field states it correctly, so the drift is in the spoken line only. No gate compares a claim's strength against the brief's wording, and it is not obvious one could.
+
+Separately, the voice rules' "not antithetical, at most once per script" is checked by nothing, and the two readings of the winning Unsloth draft disagree: the judge counted at least two, a regex scan counts one. A rule that careful readers score differently and no gate measures is a rule that will drift. Either give it a checkable definition, or move it out of Hard Constraints and into the judge's rubric where a human-style reading belongs.

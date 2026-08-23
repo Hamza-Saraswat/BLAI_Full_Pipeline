@@ -2,7 +2,7 @@
 slug: 2026-08-23-unsloth-lan-remote
 workspace: shorts
 title: Unsloth added auto compaction and LAN access
-status: researched
+status: scripted
 pillar: how-to
 series: ""
 structure: ""
@@ -10,7 +10,7 @@ format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-23
-updated: "2026-08-23T12:43:24Z"
+updated: "2026-08-23T13:14:55Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""

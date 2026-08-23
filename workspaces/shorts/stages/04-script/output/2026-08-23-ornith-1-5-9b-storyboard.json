@@ -1,0 +1,128 @@
+{
+  "slug": "2026-08-23-ornith-1-5-9b",
+  "topic": "Ornith 1.5 9B, a dense nine-billion-parameter model whose four-bit build fits a mid-range gaming card",
+  "title": "Ornith 1.5 9B fits an 8 GB card",
+  "description": "Ornith 1.5 9B fits an 8 GB card: the four-bit GGUF build of the 9B dense model is 5.63 GB.\n\nOrnith's model card reports 70.6 on SWE-bench Verified, the test that hands a model real bugs from real open-source repositories and scores it on whether the project's own tests pass. Those figures are Ornith's own, averaged over five runs with the git history stripped and network access disabled during solving. No independent reproduction of the 9B was found.\n\nYou'll learn what the four-bit build weighs, what that score actually measures, and how far to trust a number the lab published about itself.\n\nSources: huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF and ornith.ai/ornith_1_5.html\n\nSubscribe for local AI on hardware you already own.\n\n(Narration is AI-generated.)\n\n#Ornith #LocalAI #SWEbench",
+  "hashtags": [
+    "#Ornith",
+    "#LocalAI",
+    "#SWEbench",
+    "#GGUF"
+  ],
+  "tags": [
+    "ornith 1.5 9b",
+    "ornith 9b",
+    "ornith ai",
+    "ornith gguf",
+    "swe-bench verified",
+    "9b model",
+    "local llm",
+    "run llm locally",
+    "8gb gpu llm",
+    "q4_k_m",
+    "gguf quantization",
+    "coding model local",
+    "single gpu llm",
+    "small model big score",
+    "llama cpp",
+    "ollama",
+    "local ai coding assistant",
+    "self-reported benchmarks",
+    "mid range gpu ai"
+  ],
+  "hook_text": "5.63 GB fixes real bugs",
+  "hook_candidates": [
+    "5.63 GB fixes real bugs",
+    "Nothing serious fits 8 GB. This does.",
+    "The whole coding model is 5.63 GB",
+    "Your 8 GB card is enough",
+    "70.6 on SWE-bench, in 5.63 GB",
+    "One file, 5.63 GB, real bugs fixed",
+    "A 9B model scored 70.6",
+    "Six gigabytes of model, fixing real bugs",
+    "This 5.63 GB file fixes bugs",
+    "8 GB card, 9B model, real bugs"
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES, REFRAMES",
+  "target_duration_s": 36,
+  "narration_full": "Just under six gigabytes on disk, and that's a whole coding model. You've got eight gigabytes on your card, and a standing rule that nothing serious fits. This one does. It's Ornith's nine-billion-parameter model, squeezed into that single file. On S W E bench Verified, it scores seventy point six. That test hands a model real bugs from real open-source projects. Ornith ran those numbers itself. Averaged over five runs, with the git history stripped and the network switched off. Nobody outside Ornith has reproduced that yet. So pull the file tonight and hand it a bug that already beat you.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Just under six gigabytes on disk, and that's a whole coding model.",
+      "on_screen_text": "5.63 GB | the whole model",
+      "visual_brief": "Frame 1: 5.63 GB set huge in amber on the flat near-black field, fully legible before anything else, a single file glyph beside it. Motion onset at 0.25s: the number scale-punches once and a four-pixel rule draws left to right underneath it. At 2s the words THE WHOLE MODEL fade in below the rule. At 4s the file glyph shrinks to the size of a card slot and settles there.",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You've got eight gigabytes on your card, and a standing rule that nothing serious fits.",
+      "on_screen_text": "your card: 8 GB | nothing serious fits",
+      "visual_brief": "The frame splits: a graphics card outline on the left stamped 8 GB, its empty slot drawn on the right. At 2s a row of oversized model files slides in from the right edge and every one of them overhangs the slot. At 4s each oversized file fades to muted grey and a red rule draws straight across the row.",
+      "est_duration_s": 5.5
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "This one does. It's Ornith's nine-billion-parameter model, squeezed into that single file.",
+      "on_screen_text": "Ornith 9B | one file, fits",
+      "visual_brief": "The red rule erases and one file card survives at centre, labelled Ornith 9B. At 1s it drops into the card slot from the previous beat and lands in success green. At 3s a caliper draws across the slot space still free beside it. At 5s the caliper's label pops in and holds.",
+      "est_duration_s": 5.0
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "On S W E bench Verified, it scores seventy point six. That test hands a model real bugs from real open-source projects.",
+      "on_screen_text": "SWE-bench Verified: 70.6 | real bugs, real repos",
+      "visual_brief": "A single bar grows from zero and locks, the figure counting up to 70.6 in amber beside it. At 3s the bar's label swaps to SWE-BENCH VERIFIED. At 5s three repository cards slide in underneath, each carrying a red issue ticket. At 7s one ticket switches to green as the project's own tests pass, and the other two follow a beat behind.",
+      "est_duration_s": 8.0,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Ornith ran those numbers itself. Averaged over five runs, with the git history stripped and the network switched off.",
+      "on_screen_text": "Ornith's own numbers | 5 runs, averaged | git history stripped, network off",
+      "visual_brief": "Five identical run tiles draw into a row, each filling with its own result. At 2s they collapse into one averaged tile and the count settles. At 4s a git log panel appears alongside and its commit rows erase from the bottom up. At 6s a network icon pops, then switches to a struck-through grey.",
+      "est_duration_s": 6.5
+    },
+    {
+      "id": "s6",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Nobody outside Ornith has reproduced that yet. So pull the file tonight and hand it a bug that already beat you.",
+      "on_screen_text": "no outside reproduction | your card is enough",
+      "visual_brief": "The averaged score panel dims and a label fades in over it reading NOT YET REPRODUCED. At 2s the panel slides away, then the graphics card returns at centre with the file seated in its slot. At 4s a red issue ticket drops onto the card and the file glyph from frame 1 reappears beside it. At 6s the wordmark settles into the lower third and the frame stops moving, rhyming with the opening composition.",
+      "est_duration_s": 7.0
+    }
+  ],
+  "notes_for_review": "Four spoken numbers: five point six three rounded to 'just under six gigabytes' (the surprise, spoken in s1 against 5.63 GB on screen), nine billion parameters (what it is), seventy point six on SWE-bench Verified (the reason to care), five runs (the rigour inside the catch). Context window and GPQA left unspent per the brief's note; the download count was not needed. No analogy: the signature file has no picture for 'small model, big score' and the brief's hatchback is not in it, so the plain mechanism carries the beat. 'S W E bench' is written the way it is said, per the lexicon convention that renders GGUF as 'G G U F'. The close says nobody outside has reproduced the figure rather than naming the harness, because OpenHands and Harbor are not Ornith's. top2 wants 'Ornith-1.5' as well as 'Ornith'; the on-screen card reads 'Ornith 9B' on purpose, because the version digits 1.5 are never spoken and an unspoken number on screen is a render loop-back."
+}

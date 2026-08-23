@@ -32,22 +32,40 @@ def rm(path: pathlib.Path, dry: bool, log: list) -> None:
 
 
 def prune_ledger(path: pathlib.Path, slug: str, dry: bool, log: list) -> None:
+    """Ledgers come in three shapes and a reset that misses one lets the next run lie:
+    a bare list, {"_doc": ..., "entries": [...]} (script-ledger), and {"_rule": ..., "used": [...]}
+    (styles/history). Handle all three, and say so loudly if a new shape appears."""
     if not path.exists():
         return
     try:
         data = json.loads(path.read_text() or "[]")
     except json.JSONDecodeError:
-        log.append("skipped unreadable ledger " + str(path.relative_to(ROOT)))
+        log.append("SKIPPED unreadable ledger " + str(path.relative_to(ROOT)))
         return
-    if not isinstance(data, list):
+
+    if isinstance(data, list):
+        key, items = None, data
+    elif isinstance(data, dict) and isinstance(data.get("entries"), list):
+        key, items = "entries", data["entries"]
+    elif isinstance(data, dict) and isinstance(data.get("used"), list):
+        key, items = "used", data["used"]
+    else:
+        log.append("SKIPPED %s: unrecognised ledger shape %s"
+                   % (path.relative_to(ROOT), list(data)[:4] if isinstance(data, dict) else type(data).__name__))
         return
-    kept = [e for e in data if not (isinstance(e, dict) and e.get("slug") == slug)]
-    if len(kept) == len(data):
+
+    kept = [e for e in items if not (isinstance(e, dict) and e.get("slug") == slug)]
+    if len(kept) == len(items):
         return
     log.append(("would drop" if dry else "dropped") + " %d entry(s) from %s"
-               % (len(data) - len(kept), path.relative_to(ROOT)))
-    if not dry:
-        path.write_text(json.dumps(kept, indent=2) + "\n")
+               % (len(items) - len(kept), path.relative_to(ROOT)))
+    if dry:
+        return
+    if key is None:
+        data = kept
+    else:
+        data[key] = kept
+    path.write_text(json.dumps(data, indent=2) + "\n")
 
 
 def main() -> int:

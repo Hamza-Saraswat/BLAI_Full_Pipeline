@@ -1,0 +1,145 @@
+{
+  "slug": "2026-08-23-unsloth-lan-remote",
+  "topic": "Unsloth v0.1.801-beta lets you reach Unsloth Desktop from another device on your own network",
+  "title": "Unsloth LAN access without a tunnel",
+  "description": "Unsloth LAN access without a tunnel: reach your own box from your own network.\n\nYour model runs on the machine in the other room and you are on the couch. Unsloth binds to loopback by default, so it is unreachable on purpose. One switch changes that, and the same switch moves where your code can be run from.\n\nYou'll learn: why loopback blocks your phone, where the LAN Remote Access switch lives, what the forced password change is for, when a Cloudflare tunnel is still the right tool, and why --disable-tools exists.\n\nSources are in the pinned comment. (Narration is AI-generated.)",
+  "hashtags": [
+    "#unsloth",
+    "#localai",
+    "#selfhosted",
+    "#homelab"
+  ],
+  "hook_text": "Unsloth won't answer from your couch",
+  "hook_candidates": [
+    "Unsloth won't answer from your couch",
+    "Your model is in the other room",
+    "Unsloth ignores your phone on purpose",
+    "You don't need a tunnel to your own box",
+    "Same house, same network, no tunnel",
+    "Unsloth listens to itself and nobody else",
+    "One setting reaches Unsloth from the couch",
+    "Cloudflare is for outside the house",
+    "Unsloth's LAN switch is not a convenience",
+    "Turning on LAN access hands out your shell"
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "EQUIPS, TEACHES",
+  "tags": [
+    "unsloth",
+    "unsloth lan access",
+    "unsloth remote access",
+    "unsloth without cloudflare",
+    "unsloth desktop",
+    "local llm remote access",
+    "access local ai from phone",
+    "run llm on lan",
+    "loopback vs 0.0.0.0",
+    "wildcard bind",
+    "cloudflare tunnel alternative",
+    "self hosted ai",
+    "home lab llm",
+    "local ai security",
+    "disable tools llm server",
+    "lan remote access preview",
+    "reach my ai rig remotely",
+    "local ai on the couch"
+  ],
+  "target_duration_s": 96,
+  "narration_full": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel through somebody else's service. Unsloth binds to loopback, the address a machine uses to talk to itself. The docs call that this machine only. Nothing outside can reach it. That is the default, and it is deliberate. Change what it listens on, and the tunnel stops being necessary. In the desktop app that is Settings, then API keys, then the local network switch. It ships in preview. Or start it from the terminal with dash H, zero dot zero dot zero dot zero. That is a wildcard bind, listening on every address the machine has instead of only its own. It does not just flip on. Unsloth stops and makes you replace the auto-generated admin password first. After that it shows you the address to type on the other device. You can toggle it without restarting. Here is the part the release notes do not lead with. This is not a convenience toggle. It is an execution boundary. Unsloth's own docs say server-side tools run as your user. Anyone who reaches that server with your API key can run code on your machine. Network reach is code reach. So pass dash dash disable tools unless you meant to hand that out. Outside the house, the tunnel is right. Cloudflare publishes a public web address, and your own network cannot do that. Inside, nothing sits in the path. So no, reaching your own machine never needed somebody else's service. It needed three settings, one password, and one honest look at what your tools can run.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Unsloth will not answer from your couch. Your model is in the other room. You are not. The fix you reach for is a tunnel through somebody else's service.",
+      "on_screen_text": "Unsloth won't answer from your couch | a tunnel through somebody else's service",
+      "visual_brief": "Frame 1: on a near-black terminal field, the line UNSLOTH WON'T ANSWER FROM YOUR COUCH already fully legible in amber monospace, centred. Motion onset at 0.3s: a block cursor pops on at the end of the line and begins blinking. At 3s a second amber line types in beneath it, A TUNNEL THROUGH SOMEBODY ELSE'S SERVICE, one character at a time. At 6s a faint pipe of dashes draws left to right under both lines, then dims to grey as the cursor slides back to the top line.",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Unsloth binds to loopback, the address a machine uses to talk to itself. The docs call that this machine only. Nothing outside can reach it. That is the default, and it is deliberate.",
+      "on_screen_text": "loopback = this machine only | nothing outside can connect",
+      "visual_brief": "A single amber rectangle labelled YOUR BOX sits centre-frame. At 1s an arrow draws out of its right edge, curves round and lands back on the same box; the caption LOOPBACK types in beside the loop. At 4s the phrase THIS MACHINE ONLY fades up under the box. At 7s two small grey device outlines, a phone and a laptop, slide in from the left edge; at 9s their arrows toward the box draw halfway, then pop and fade out short of the wall.",
+      "est_duration_s": 11
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Change what it listens on, and the tunnel stops being necessary. In the desktop app that is Settings, then API keys, then the local network switch. It ships in preview.",
+      "on_screen_text": "Settings > API keys > LAN access | LAN Remote Access, preview",
+      "visual_brief": "Three amber pills sit on a horizontal rule, left to right, each dim. At 1s the first pill lights and its label types in: SETTINGS. At 4s the second lights the same way: API KEYS. At 6s the third lights: LAN ACCESS, and a small toggle beside it slides from off to on with a pop. At 8s a grey tag fades up under the rule reading PREVIEW.",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Or start it from the terminal with dash H, zero dot zero dot zero dot zero. That is a wildcard bind, listening on every address the machine has instead of only its own.",
+      "on_screen_text": "unsloth studio -H 0.0.0.0 | wildcard bind: every address",
+      "visual_brief": "A terminal prompt sits centred on black. At 0.5s the command types in character by character: unsloth studio -H 0.0.0.0, with the flag in brighter amber. At 4s the flag pulses once and the caption WILDCARD BIND fades up beneath it. At 7s three faint address rows draw in below, stacked, and each lights in turn as a tick lands beside it, so the single box now answers on all of them.",
+      "est_duration_s": 11
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "It does not just flip on. Unsloth stops and makes you replace the auto-generated admin password first. After that it shows you the address to type on the other device. You can toggle it without restarting.",
+      "on_screen_text": "change the auto-generated password | toggle without a restart",
+      "visual_brief": "The toggle from the settings row sits centre-frame, half thrown. At 1s it snaps back to off and a red-amber bar draws across it. At 4s a password field slides up over the bar and a row of dots types in, then the bar fades and the toggle swings to on. At 8s an address card pops in at the right with a phone outline beside it. At 11s a small NO RESTART tag fades up under the toggle and pulses once.",
+      "est_duration_s": 13
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Here is the part the release notes do not lead with. This is not a convenience toggle. It is an execution boundary.",
+      "on_screen_text": "LAN access is not a toggle | it is an execution boundary",
+      "visual_brief": "The frame splits down the middle. At 0.5s the left half fades up with a small grey toggle icon and the word CONVENIENCE typing in under it. At 3s the right half lights amber and a hard vertical rule draws floor to ceiling between the halves. At 5s the left half dims to almost nothing while the words EXECUTION BOUNDARY land on the right, large.",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Unsloth's own docs say server-side tools run as your user. Anyone who reaches that server with your API key can run code on your machine. Network reach is code reach. So pass dash dash disable tools unless you meant to hand that out.",
+      "on_screen_text": "unsloth studio --disable-tools | LAN reach = code reach",
+      "visual_brief": "A grid of small grey device tiles fills the frame, the box among them in amber. At 1s a key icon pops onto one tile and an arrow draws from it to the box. At 4s a shell prompt opens on the box and a command types itself, unprompted. At 7s the caption RUNS AS YOUR USER fades up across the grid. At 10s the flag --disable-tools types in at the foot of the frame and every arrow but one erases. At 13s every tile but the box fades to grey and the surviving arrow pulses once.",
+      "est_duration_s": 15
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Outside the house, the tunnel is right. Cloudflare publishes a public web address, and your own network cannot do that. Inside, nothing sits in the path.",
+      "on_screen_text": "outside the house: Cloudflare tunnel | inside: nothing in the path",
+      "visual_brief": "A house outline sits centre-frame with the amber box inside it. At 1s a phone slides in outside the walls and a long dashed pipe draws from it, out through a cloud glyph, and lands on the box; the label CLOUDFLARE types in on the cloud. At 6s the outside phone and the pipe fade out. At 8s a second phone pops in inside the walls and a short straight line draws direct to the box, no cloud, and pulses once when it lands.",
+      "est_duration_s": 9
+    },
+    {
+      "id": "s9",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So no, reaching your own machine never needed somebody else's service. It needed three settings, one password, and one honest look at what your tools can run.",
+      "on_screen_text": "no tunnel inside the house | three settings, one password",
+      "visual_brief": "The grey dashed tunnel from the opening frame draws back in across the centre, then erases from both ends inward until nothing is left. At 4s the amber line NO TUNNEL INSIDE THE HOUSE lands where it was, in the same type and position as frame 1. At 7s two short lines fade up beneath it, THREE SETTINGS and ONE PASSWORD, and the cursor blinks once. Final 0.5s: the wordmark settles bottom centre, silent.",
+      "est_duration_s": 9
+    }
+  ],
+  "notes_for_review": "myth-bust, smooth-explainer, terminal pack. No analogy: none of the signature pictures fits a bind address, so the mechanism is stated plainly. Zero numbers spoken on purpose. The port and the compaction figures are either off-topic or flagged unverified for the desktop path in the brief. Issue 9207 is not mentioned, and no claim is made about it being closed. Style-pack rotation will flag 'terminal' as a repeat of the previous video: the pack was assigned."
+}
