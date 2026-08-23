@@ -5,12 +5,12 @@ title: Which local model actually fits your GPU
 status: researched
 pillar: ""
 series: benchmarks
-structure: ""
+structure: buyers-guide
 format: ""
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-23
-updated: "2026-08-23T13:37:35Z"
+updated: "2026-08-23T13:58:23Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""

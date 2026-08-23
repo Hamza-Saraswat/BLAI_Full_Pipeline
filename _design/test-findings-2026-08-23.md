@@ -46,6 +46,9 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 27 | long-form 04 | note | **The private scratch directory fixed finding 11.** Each writer was given `.local-builds/<slug>/outline-<A\|B>/` and told never to use a shared path. No collision, and one writer left its verification script in its own directory where it belongs | **fix validated** |
 | 28 | long-form 04 | quality | Both writers independently refused the brief's folklore instruction, not just one. Two blind readers treating the `unverified` list as binding on the rest of the brief is stronger evidence than one | working as designed |
 
+| 29 | 03 research | quality | **Root cause of the convergence finding, and it is mechanical.** Every brief's `## Summary` is byte-identical to its `## Thesis`, in both workspaces. `brief-format.md` asks Summary for three to five lines carrying the thesis, the most arresting number, the strongest concrete case, what could not be verified and any source conflict. Collapsing five things into one sentence removed most of what a writer had to diverge on | open |
+| 30 | long-form 04 | friction | The outline judge's tiebreak could not have worked: it falls back to "missing or empty ledger scores everyone 3", but the ledger is present with the episode in it and merely has no structure recorded yet, which is a third state the rubric does not name | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -206,3 +209,17 @@ That the reasoning is sound in both cases is the point. Given one brief, one hoo
 **The scratch fix works.** Finding 11 was a live data-loss path: two Shorts writers used `scratchpad/build_b.py` and one regenerated the other's output. This round each writer was given a private directory under `.local-builds/<slug>/` and told never to use a shared path. No collision occurred, and outline A's verification script sits in its own directory. The instruction is cheap and should go into the stage contracts rather than into individual prompts.
 
 **And the guard held twice.** Both writers, independently, refused the brief's "leave about a gigabyte of slack" because the same brief's `unverified` list calls headroom figures folklore. One writer doing that is a good writer; two doing it blind means the `unverified` list is reliably read as binding. That is worth stating in the research contract explicitly, since it is currently an emergent property rather than a documented one.
+
+### 29. Why both writers wrote the same hook, twice (open)
+
+The outline judge traced the convergence to its cause rather than restating it: "the brief's `## Summary` and `## Thesis` are the same sentence word for word, and both `## Angle` lines restate it. The angle was decided before this stage opened, so two outlines could only buy ordering and shape."
+
+Checked, and it is true of both briefs written today, Shorts and long-form. `brief-format.md` specifies Summary as "Three to five lines for the reviewer: the thesis, the most arresting number, the strongest concrete case, what could not be verified, any conflict between sources." What the briefs actually carry is the thesis sentence, repeated.
+
+This is the mechanical half of findings 12 and 26. Two writers converge partly because writers converge, and partly because the document that is supposed to hand them five distinct things hands them one thing twice. Fixing the summary will not eliminate convergence, but it widens what there is to diverge on, and it costs nothing.
+
+Fix: an audit row in the research contract stating that Summary is not a restatement of the thesis and must carry the five elements the format file names. Worth pairing with the finding 12 fix of assigning each writer a different hook pattern.
+
+### 30. A third ledger state the rubric does not name (open)
+
+The judge reported that its tiebreak was unusable. The rubric's Difference row says to score everyone 3 when the ledger is missing or empty; here the ledger exists and contains this very episode, but with an empty `structure` field, because stage 02 creates the entry and stage 04 fills the shape in. The judge handled it sensibly by scoring distance from the brief's own suggested outline and saying so, but the rubric should name the state rather than relying on a judge to invent a rule.
