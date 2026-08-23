@@ -69,6 +69,13 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 47 | 10 render | quality | **Finding 34 measured against real audio.** The hook's numbers are spoken at 0:03 and first drawn at 0:22 (`s01` title-card 0-10.6 s draws no text, `s02` quote 10.6-22.0 s, `s03` first digits). Better than the 34 s the estimates implied, still twenty-two seconds of the thumbnail's promise being undrawn | open |
 | 48 | 10 render | blocker | **The episode renders and fails its own release gate.** 493.4 s against a 648-792 s window; every other lint check passes. The script stage's 1,500-2,100 word band and the render stage's 720 s target were set independently and never reconciled: at the measured 3.69 wps a script that passes stage 05 cannot produce an episode that passes stage 10 | open |
 | 49 | 10 render | note | **The scene library holds up at full resolution.** Tables, charts with labelled axes, kinetic text, chapter headers, progress bar and word-timed captions all render correctly in brand colours. Minor: chart y-axis auto-scale leaves half the plot empty, and a chart label rounds 6.19 to 6.2 while the narration says 6.19 | working as designed |
+| 50 | 07 render | note | **Both Shorts pilots published clean on attempt 2**, 0 linter violations each. Rendering costs under 17 s of compute per scene; each scene took ~13 min end to end, almost all of it reading rule files and working around findings 51-55. The cost of a scene is comprehension, not computation | working as designed |
+| 51 | 07 render | blocker | **The documented Manim safe area is not the one in the code.** Docs say 900x1160 / `SAFE_Y_MIN -3.7778`; shipped `blai_layout.py` uses 870x950 / `-2.2222`. Laying out to the documented value puts content 210 px into the caption band and fails `safe_zone_check --scene`. Stale numbers survive in two rule files and in the module's own inline comments | open |
+| 52 | 07 render | quality | **The documented reference scene is the wrong style pack.** `SETUP-NOTES.md` and `styles/signal.md` both call `index.html` the signal hello-world; it is a finished axon-pack scene, and the `hello.mp4` beside it does not exist. A worker following the docs silently produces the wrong pack, and nothing linted would catch it | open |
+| 53 | 07 render | quality | **The pack's own snippet fails `hyperframes inspect`, and `inspect` is not in the verify list.** Masked text rises trip `clipped_text`/`text_box_overflow`; root-caused into the CLI's `isVisibleElement()` opacity-0.2 cutoff. Fix: start opacity >= 0.2 plus `data-layout-allow-overflow`. `lint` passes through all of it. Also `data-layout-bleed` does not exist in pinned 0.7.31 | open |
+| 54 | 07 render | blocker | **GSAP was never vendored, so all 15 HyperFrames renders depended on a live CDN fetch** -- on a stack meant to run unattended on a Spark. `rules/hyperframes-1.md` already said where the copy belonged. Vendored 3.14.2 there. Still open: `package.json` scripts call `npx --yes` and bypass the lockfile pin | **fixed** |
+| 55 | 07 render | quality | **Two silent Manim degradations.** `mob_class=Text` still yields serif digits, because `DecimalNumber` calls `mob_class(string)` with no kwargs -- bind font/weight with `functools.partial` first. And non-frame-aligned `run_time`s inflate duration, since Manim emits `ceil(run_time*fps)` per animation and the rounding accumulates | open |
+| 56 | 04 script | quality | **Finding 42 reaches the Shorts briefs.** Scenes came in 9-38% shorter than `est_duration_s`, and briefs schedule beats by wall clock, so beats land after their scene ends (s1's 4 s beat in a 3.16 s scene). Briefs should specify beats by narration phrase, not by second -- phrase timing survives re-timing | open |
 
 ## Detail
 
@@ -454,3 +461,79 @@ Worth recording what came out right, because most of it did. At 1920x1080 the sc
 Two small composition notes, neither worth a fix on its own: the chart's y-axis tops out at 50 for a 25.3 maximum, so the upper half is empty, and a two-row comparison table leaves a large gap between the table and the lower third. Both are auto-scaling questions, not defects.
 
 One number to watch: the chart draws `6.2` where the lower third and the narration both say `6.19`. The brand rule is that a number on screen is also spoken. A one-decimal bar label against a two-decimal spoken figure is a small breach of it, and it will recur wherever a chart label rounds.
+
+### 50. Both Shorts pilots published, and both spent most of their effort on wrong documentation (open)
+
+The two pilot scenes -- s1 HyperFrames and s4 Manim, Ornith Short, `signal` pack -- both published clean on their second attempt with zero render errors:
+
+| | duration | assigned | linters | render wall time |
+|---|---|---|---|---|
+| s1 hyperframes | 3.1667 s | 3.16 | `lint_video` 0/0, `safe_zone --scene` 0 violations (max luma 13 vs 140 threshold), `hyperframes lint`/`validate`/`inspect` all clean | 8.1 s draft + 8.3 s final |
+| s4 manim | 6.9660 s | 6.96 | `lint_video` 0/0, `safe_zone --scene` 0 violations at `--stills 24` (max luma 15 vs 140) | 2.6 s draft + 6.8 s final |
+
+Rendering is nearly free -- **under 17 seconds of compute per scene**. Each scene took roughly 13 minutes end to end, essentially all of it reading five rule files and working around the four documentation defects below. That ratio is the finding: the cost of a scene is comprehension, not computation, and most of the comprehension cost was avoidable.
+
+Findings 51 to 57 are what they hit. All of them are now in `.local-builds/WORKER-BRIEFING.md`, which the remaining thirteen workers read after the rule files, so the same time is not spent fourteen more times.
+
+### 51. The Manim safe area in the docs is not the safe area in the code (open)
+
+The worst of the four, because it fails silently into a linter error rather than a crash.
+
+| | `scene-agent.md` and `SETUP-NOTES.md` | shipped `blai_layout.py` |
+|---|---|---|
+| safe area | 900 x 1160 px | **870 x 950 px** |
+| margins | left 60, right 120, top 310, bottom 450 | left **90**, right 120, top 310, bottom **660** |
+| `SAFE_Y_MIN` | -3.7778 | **-2.2222** |
+| `SAFE_CENTER` | (-0.2222, +0.5185) | **(-0.1111, +1.2963)** |
+
+The code is the correct and stricter authority -- its own module docstring explains that the bottom margin deliberately absorbs the caption band and that left went 60 to 90. But the stale numbers survive in two rule files *and* in `blai_layout.py`'s own inline comments beside each constant. Anyone laying out to the documented `SAFE_Y_MIN` puts content 210 px into the caption band and fails `safe_zone_check.py --scene`.
+
+Fix: correct the px-to-unit table in `SETUP-NOTES.md`, the "Safe area 900 x 1160" line in `scene-agent.md`, and the inline comments. Better still, have those docs quote the constants rather than restate them.
+
+### 52. The documented reference scene is the wrong style pack (open)
+
+`SETUP-NOTES.md` ("Reference artifacts") and `styles/signal.md` ("Implementation") both say `hyperframes/index.html` is the 5-second signal hello-world with `hello.mp4` beside it. Neither is true: `index.html` is a finished **axon-pack** scene from the DGX Spark video (9.71 s, loading `packs/axon.css`), and `hello.mp4` does not exist in that directory.
+
+A worker who follows the docs and copies `index.html` as a starting point silently produces a scene in the wrong style pack. Nothing would catch it -- `style_pack` is checked by humans, not a linter -- so it could ship. The real reference is `packs/<pack>-snippet.html`.
+
+### 53. The pack's own snippet fails the audit, and the check that catches it is not in the verify list (open)
+
+`packs/signal-snippet.html` technique #4 does `tl.from("#stat-row", {y: 140, opacity: 0})` inside an `overflow:hidden` wrapper -- the documented way to do a text rise. That exact combination produces `clipped_text` and `text_box_overflow` **errors** plus a `container_overflow` warning.
+
+The pilot traced it into the CLI source. `isVisibleElement()` drops any element whose opacity chain is below 0.2; once the text is dropped, `hasOwnTextCandidate()` promotes the `.line` **mask** to a text element; and `clippedTextIssue()` has no allow-overflow guard, so `data-layout-allow-overflow` cannot suppress it. Verified fix: keep the tween's start opacity at or above 0.2 (0.25 is visually identical, the text is behind a mask anyway) **and** put `data-layout-allow-overflow` on the wrapper. Probes: opacity 0 + allow-overflow = 1 error; pure rise, no opacity = 0 errors 2 warnings; opacity 0.25 + allow-overflow = clean.
+
+The compounding problem: **`hyperframes lint` passes through all of it.** Only `inspect` catches it, and `inspect` appears in neither `scene-agent.md` rule 8 nor the `hyperframes-1.md` self-check, both of which ask only for `lint`. It is fast and it is the only thing that catches masked-text defects. It should be in both lists.
+
+Related, same family: `data-layout-bleed="true"` is recommended by `vendor/hyperframes-core/references/data-attributes.md` as the narrow-scope opt-out and **does not exist in the pinned 0.7.31** -- the vendored docs are ahead of the pinned CLI, which knows only `data-layout-ignore`, `data-layout-check='ignore'` and `data-layout-allow-overflow`.
+
+### 54. GSAP was a single point of failure for fifteen renders (fixed)
+
+`rules/hyperframes-1.md` says GSAP 3.14.2 loads from jsdelivr "so the first render needs network **or a vendored copy next to `packs/vendor/rough.js`**". There was no vendored copy: `packs/vendor/` held only `rough.js`, and `gsap` was absent from `node_modules`. Every HyperFrames scene in both Shorts depended on a live CDN fetch at render time, with no fallback, on a stack whose whole point is to run unattended on a Spark.
+
+Fixed: `gsap.min.js` 3.14.2 (72,779 bytes, verified header) is now vendored at `packs/vendor/gsap.min.js`, which is exactly where the rule file already said it should be.
+
+Related and not yet fixed: `package.json`'s `check`, `render` and `dev` scripts all invoke `npx --yes hyperframes@0.7.31`, which re-resolves from the network instead of using the pinned local devDependency. `./node_modules/.bin/hyperframes` -- which `SETUP-NOTES.md` itself calls "THE verified command" -- is faster and cannot drift. The scripts should use it.
+
+### 55. Two Manim traps that produce plausible-looking wrong output (open)
+
+Neither raises an error; both silently degrade the frame.
+
+**Serif digits.** `manim-1.md` whitelists `DecimalNumber`/`Integer` "for count-ups only with `mob_class=Text`". Necessary but not sufficient: `DecimalNumber._set_submobjects_from_number` calls `mob_class(string)` with **no kwargs**, so no font or weight ever reaches the digits and Pango falls back to its default serif face -- the exact failure the same rule file warns about two bullets earlier for raw `Text()`. The fix is to bind them first: `functools.partial(Text, font=BRAND_FONT, weight=BOLD)`. `color=` does propagate; `edge_to_fix=ORIGIN` is also needed for a centred count-up, since the default `LEFT` pins the left edge and the number drifts off-centre as its digit count grows. Worth promoting into `blai_layout.py` as a `brand_number()` helper so nobody has to know this.
+
+**Duration inflation.** Manim emits `ceil(run_time * fps)` frames **per animation**, so every segment rounds up independently and the error accumulates. The pilot's human-round times summed to exactly 6.96 s and rendered at 7.066 s -- inside the 0.15 s tolerance by 0.04 s, and a scene with more cuts would miss outright. The fix is to express every `run_time` and `wait` as a whole number of frames chosen to sum to the target. Note the assigned duration may not even be representable: 6.96 s is 208.8 frames at 30 fps, so 209 is the nearest. This belongs in `manim-1.md` step 4; it is the difference between "usually fine" and deterministic.
+
+### 56. Finding 42 reaches the Shorts briefs, and it costs beats (open)
+
+The words-per-second error is not confined to long-form. Every Shorts scene brief was written against `est_duration_s`, and the narration came in 9 to 38 % shorter:
+
+| Ornith | est | assigned | | Unsloth | est | assigned |
+|---|---|---|---|---|---|---|
+| s1 | 4.5 | 3.16 (-30%) | | s1 | 10.0 | 6.64 (-34%) |
+| s2 | 5.5 | **3.41 (-38%)** | | s5 | 13.0 | 9.92 (-24%) |
+| s4 | 8.0 | 6.96 (-13%) | | s6 | 8.0 | 5.32 (-34%) |
+
+The concrete damage: briefs schedule beats by wall clock ("At 2s", "At 4s"), and those beats no longer exist. The s1 brief's 4-second beat -- the file glyph shrinking to a card slot -- cannot happen in a 3.16 s scene; the pilot dropped it. The s4 brief's clock runs 0/3/5/7 s against a 6.96 s scene, so its final beat would land after the scene ends; that pilot re-anchored every beat to the narration word timings instead, which is what scene-agent rule 6 asks for anyway.
+
+So the storyboard stage is writing visual briefs in a unit (wall-clock seconds) that the voice stage then invalidates. The durable fix is for briefs to specify beats **by narration phrase**, not by second, since the phrase timing is what survives re-timing. That is a storyboard-format change, and it would also make the briefs read better.
+
+Smaller, same root: several briefs specify "motion onset at 0.25s", but `hyperframes-1.md` forbids motion before frame 9 (t = 0.2667 s). Every such brief is 0.017 s inside the illegal zone. Either the boundary or the brief convention should move; right now they contradict for any brief that picks 0.25 as a round number.
