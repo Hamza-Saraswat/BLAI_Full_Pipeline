@@ -49,6 +49,9 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 29 | 03 research | quality | **Root cause of the convergence finding, and it is mechanical.** Every brief's `## Summary` is byte-identical to its `## Thesis`, in both workspaces. `brief-format.md` asks Summary for three to five lines carrying the thesis, the most arresting number, the strongest concrete case, what could not be verified and any source conflict. Collapsing five things into one sentence removed most of what a writer had to diverge on | open |
 | 30 | long-form 04 | friction | The outline judge's tiebreak could not have worked: it falls back to "missing or empty ledger scores everyone 3", but the ledger is present with the episode in it and merely has no structure recorded yet, which is a third state the rubric does not name | open |
 
+| 31 | long-form 05 | quality | **A scene hint carries an implicit truth claim, and no gate knows it.** The writer refused `terminal-replay` for two beats because nothing ran on this machine: using it would "dress published documentation as a measurement". It chose `code-typing` instead. Nothing in the spec, the schema or the validator connects a scene type to whether a capture exists | open |
+| 32 | long-form 05 | quality | The writer rejected the brief's own suggested analogy because the analogy's stated limit contradicted the chapter it was meant to serve, then caught a second analogy that had crept in disguised as a different picture. The one-analogy rule held only because the writer enforced it on itself; the gate counts markers and found zero | working as designed |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -223,3 +226,19 @@ Fix: an audit row in the research contract stating that Summary is not a restate
 ### 30. A third ledger state the rubric does not name (open)
 
 The judge reported that its tiebreak was unusable. The rubric's Difference row says to score everyone 3 when the ledger is missing or empty; here the ledger exists and contains this very episode, but with an empty `structure` field, because stage 02 creates the entry and stage 04 fills the shape in. The judge handled it sensibly by scoring distance from the brief's own suggested outline and saying so, but the rubric should name the state rather than relying on a judge to invent a rule.
+
+### 31. Scene hints make claims (open)
+
+The winning outline's visual philosophy asked for a terminal capture in chapter five. The writer refused it: "because nothing ran on this bench, beats 5.7 and 5.9 use the `code-typing` scene hint rather than `terminal-replay`, since `terminal-replay` requires a `capture_ref` in `capture.json` and would dress published documentation as a measurement."
+
+That is the right call and nothing forced it. `terminal-replay` renders as a recording of a command running, which tells a viewer, without a word being spoken, that we ran it. For an episode whose value types are deliberately EQUIPS and TEACHES rather than PROVES, and which states out loud that nothing here was measured by us, a terminal replay of somebody else's documentation is a lie told in pictures.
+
+The gap is real: `longform-spec.schema.json` lets any scene name a `capture_ref`, and the render stage falls back to a labelled placeholder when a capture is missing, so a `terminal-replay` with no capture degrades quietly rather than failing. Nothing checks that a scene type implying first-party measurement is backed by one.
+
+Proposed fix, not applied: make `terminal-replay` require a resolvable `capture_ref` at spec time, and have the spec stage refuse the scene type when the run has no experiment plan. That is a small validator rule and it protects the channel's strongest asset, which is that its measurements are real.
+
+### 32. The one-analogy rule is self-enforced (working as designed)
+
+Two behaviours worth recording. The writer rejected the brief's suitcase analogy because "its own stated break, a suitcase does not get heavier as the trip runs, contradicts the exact property chapter 2 exists to teach" -- reading an analogy's declared limit as a disqualifier rather than as a footnote. Then, during its own review, it found a second picture that had crept in: a mixture-of-experts beat ending on a company-of-employees line, which is the receptionist analogy from the signature file wearing different clothes, and replaced it with the plain mechanism.
+
+The gate counts analogy markers and found zero, so neither the presence of the desk analogy nor the near-miss second one was visible to it. The rule held because the writer held it.
