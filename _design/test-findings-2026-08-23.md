@@ -33,6 +33,9 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 
 | 19 | 05 package | friction | The validator advises every description to contain "(narration is ai-generated", inherited from v1 where narration was a stock synthetic voice. `shared/playbook/compliance.md` says an own-voice clone is explicitly exempt from disclosure. The gate and the playbook now disagree | open |
 
+| 20 | long-form 01 | quality | The long-form radar's series spread is healthy where the Shorts lane spread was not: benchmarks 25, inference-engineering 15, my-dgx-spark-projects 12, beyond-llms 5, local-ai-for-dummies 3. But `dgx-spark-specific` returned **0 items in seven days**, which is a content-planning signal rather than a defect | note |
+| 21 | long-form 02 | quality | **Second confirmation of finding 5.** `llama.cpp` scored 94.2 and ranked first on an autocomplete depth of 90, which is what any broad brand head term scores. It is a changelog, not an episode. `selection-rules.md` discards before sorting, so the rule order caught it, but the score alone would have chosen it | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -149,3 +152,15 @@ Separately, the voice rules' "not antithetical, at most once per script" is chec
 The v2 compliance page says the opposite for the production case: YouTube's disclosure policy does not require a label for "cloning one's own voice to create voice overs or dubs", so a channel narrated by the creator's own professional clone should not be carrying a synthetic-media disclosure at all. Both package notes were written to the playbook and neither carries the string, so the advisory will fire on every future script.
 
 It is only an advisory, which is the mild version of finding 9: a check that fires on everything teaches people to stop reading checks. Proposed fix, not applied: make the advisory conditional on the voice engine recorded in `voice.config.json`, firing for a stock or designed voice and staying silent for a professional clone of the creator. That also keeps it honest during local test runs, which use Kokoro and therefore genuinely should disclose.
+
+### 20 and 21. The long-form thinking half, stages 01 and 02
+
+**The radar is healthier in long-form than in Shorts.** Same sources, same relevance gate, a seven-day window instead of forty-eight hours: 158 candidates, 29 dropped off-topic, 124 kept, and the series grouping actually spreads (benchmarks 25, inference-engineering-at-home 15, my-dgx-spark-projects 12, beyond-llms 5, local-ai-for-dummies 3). Finding 2, where a source-shaped lane classifier pushed 54 of 64 Shorts items into `news-react`, does not reproduce here, because the long-form series are defined by subject rather than by recency.
+
+`dgx-spark-specific` returned zero items across seven days. Not a bug: there was no DGX Spark news this week. Worth noticing because that series is one of six in the rotation and the rotation rule assumes each has viable candidates.
+
+**The head-term problem is now confirmed twice.** In Shorts it buried the day's biggest story at rank 11 of 11. In long-form it promoted a changelog to rank 1 of 7 at 94.2, on an autocomplete depth of 90 for the bare string `llama cpp`. Both are the same defect seen from opposite ends: search depth measures how established a phrase is, not how good an episode would be.
+
+The pipeline survived it because `selection-rules.md` orders the operations correctly, discarding candidates that cannot carry ten minutes before sorting by opportunity, and the radar's episode-signal line had already called that candidate a changelog. That is a real safeguard and it should be said plainly: the rule order is doing work the score cannot.
+
+The pick is `2026-08-23-which-model-fits-gpu`, a `buyers-guide`-shaped episode on the `benchmarks` series. Value types are EQUIPS and TEACHES, deliberately not PROVES, because the DGX Spark is unreachable from this machine and the episode therefore rests on published file sizes and memory arithmetic rather than a first-party measurement. That also means stage 03 will produce no experiment plan, which is the input stage 08 needs in order to test its skip-cleanly path.
