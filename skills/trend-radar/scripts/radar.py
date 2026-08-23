@@ -255,9 +255,10 @@ def digest(items: list, args, now, status: dict, stats: dict, groups: list, labe
     lines = ["# Trend radar: %s, %s" % (args.workspace, args.date), ""]
     lines.append("- Window: %d h ending %s%s" % (args.hours, rl.iso(now), " (dry-run clock, fixtures)" if args.dry_run else ""))
     lines.append("- Sources: " + ", ".join("%s %s" % (name, describe(status[name])) for name, _ in SOURCES))
-    lines.append("- Candidates %d, merged %d cross-source duplicate(s), dropped %d by dedupe (%d by title, %d by url), kept %d, listed %d" % (
+    lines.append("- Candidates %d, merged %d cross-source duplicate(s), dropped %d by dedupe (%d by title, %d by url), dropped %d off-topic, kept %d, listed %d" % (
         stats["candidates"], stats["merged"], stats["dropped_title"] + stats["dropped_url"],
-        stats["dropped_title"], stats["dropped_url"], len(items), len(listed)))
+        stats["dropped_title"], stats["dropped_url"], stats.get("dropped_off_topic", 0),
+        len(items), len(listed)))
     lines.append("- Grouped by %s from brand-vault/content-pillars.md; score 0-100 per rules/scoring.md" % label)
     lines += ["", "## Top 10", ""]
     for rank, item in enumerate(items[:10], 1):
@@ -329,6 +330,24 @@ def main(argv=None) -> int:
     rl.log("radar", "dedupe keys: " + "; ".join(notes))
     items, dropped = dedupe(items, titles, urls)
 
+    # relevance gate: this channel is about running AI on your own hardware, and the
+    # discussion sources rank by popularity, not by topic.
+    relevant, off_topic = [], []
+    for item in items:
+        ok, why = scoring.relevance(item["title"] + " " + item["summary"] + " " + (item.get("url") or ""),
+                                    item.get("products") or [])
+        if ok:
+            item["signals"]["relevance"] = why
+            relevant.append(item)
+        else:
+            off_topic.append(item["title"])
+    dropped["off_topic"] = len(off_topic)
+    if off_topic:
+        rl.log("radar", "dropped %d off-topic item(s): %s"
+               % (len(off_topic), "; ".join(t[:48] for t in off_topic[:4])
+                  + (" ..." if len(off_topic) > 4 else "")))
+    items = relevant
+
     shorts = args.workspace == "shorts"
     for item in items:
         text = item["title"] + " " + item["summary"]
@@ -340,7 +359,8 @@ def main(argv=None) -> int:
         for private in ("_kinds", "_tag", "_keys"):
             item.pop(private, None)
 
-    stats = {"candidates": len(raw), "merged": merged, "dropped_title": dropped["title"], "dropped_url": dropped["url"]}
+    stats = {"candidates": len(raw), "merged": merged, "dropped_title": dropped["title"],
+             "dropped_url": dropped["url"], "dropped_off_topic": dropped.get("off_topic", 0)}
     json_path = out_dir / ("%s-radar.json" % args.date)
     md_path = out_dir / ("%s-radar.md" % args.date)
     groups, label = (scoring.LANE_ORDER, "Shorts lane") if shorts else (scoring.SERIES_ORDER, "long-form series")

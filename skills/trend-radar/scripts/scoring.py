@@ -316,3 +316,31 @@ def series(text: str, kinds: set, pipeline_tag: str | None, product_names: list[
     if "runtime" in kinds or "format" in kinds:
         return "inference-engineering-at-home"
     return "local-ai-for-dummies"
+
+# --- relevance ------------------------------------------------------------
+# A radar item must be about running AI on your own hardware. Hacker News ranks by
+# points, so without this gate a marathon medal story and a crypto disappearance
+# scored 38 and 49 on the 2026-08-23 live run purely on discussion volume.
+# An item passes when it names a known product OR carries a topic term.
+TOPIC_TERMS = [
+    r"\bl\.?l\.?m\b", r"\bslm\b", r"local ai", r"local model", r"on-?device", r"self-?host",
+    r"\bgpu\b", r"\bvram\b", r"\bnpu\b", r"\btpu\b", r"unified memory", r"memory bandwidth",
+    r"quantiz", r"\bgguf\b", r"\bfp(?:8|4|16)\b", r"\bint(?:4|8)\b", r"\bkv[ -]?cache\b",
+    r"\btoken(?:s|/s| per second)\b", r"context window", r"fine[- ]?tun", r"\blora\b",
+    r"open[- ]weights?", r"open[- ]source model", r"inference", r"\bprompt\b", r"embedding",
+    r"transformer", r"mixture of experts", r"\bmoe\b", r"diffusion", r"text[- ]to[- ]speech",
+    r"speech[- ]to[- ]text", r"\bagent(?:s|ic)?\b", r"\brag\b", r"vector (?:db|database|store)",
+    r"\bmodel weights?\b", r"\bcheckpoint\b", r"\bbenchmark\b", r"\bai\b",
+]
+_TOPIC_RES = [re.compile(rx, re.I) for rx in TOPIC_TERMS]
+
+
+def relevance(text: str, product_names) -> tuple[bool, str]:
+    """True when the item is about local AI. Returns (ok, reason)."""
+    if product_names:
+        return True, "product:" + product_names[0]
+    for rx in _TOPIC_RES:
+        m = rx.search(text or "")
+        if m:
+            return True, "topic:" + m.group(0).lower()
+    return False, "no product and no topic term"

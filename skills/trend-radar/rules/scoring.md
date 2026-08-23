@@ -113,3 +113,11 @@ read `title + summary`:
 
 The group is stored in `signals.group`; the top-level item keys stay exactly
 `id, title, url, source, published_at, signals, products, summary, why_now, score`.
+
+## Relevance gate
+
+Scoring runs first, then every item must pass a relevance test before it reaches the digest: it names a known product, or its title, summary or URL carries a topic term (`TOPIC_TERMS` in `scripts/scoring.py`: llm, local ai, gpu, vram, quantization, kv cache, tokens per second, fine-tuning, inference, mixture of experts, and the rest). Everything else is dropped and counted on the digest's stats line.
+
+This exists because the discussion sources rank by popularity, not by topic. On the first live run, 2026-08-23, Hacker News contributed a story about a missing crypto executive that scored 49 and a story about a marathon medal that scored 38, both on discussion volume alone, both with no product and no topic term. Neither is a video this channel could make.
+
+The gate is deliberately generous: one topic term is enough, and `ai` alone passes. It removes items that are about nothing we cover, not items that are a stretch. Tightening it is a scoring change, not a relevance change.
