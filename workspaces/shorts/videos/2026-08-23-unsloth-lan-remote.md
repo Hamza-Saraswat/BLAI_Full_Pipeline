@@ -1,8 +1,8 @@
 ---
 slug: 2026-08-23-unsloth-lan-remote
 workspace: shorts
-title: Unsloth added auto compaction and LAN access
-status: scripted
+title: "Unsloth LAN access, no tunnel"
+status: ready-to-build
 pillar: how-to
 series: ""
 structure: ""
@@ -10,9 +10,9 @@ format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-23
-updated: "2026-08-23T13:14:55Z"
+updated: "2026-08-23T13:22:13Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: ""

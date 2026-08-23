@@ -31,6 +31,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 17 | 04 script | quality | A factual drift no gate can see: the winning Ornith draft says "Nobody outside Ornith has reproduced that yet" where the brief says "No independent reproduction was found". Absence of evidence compressed into an assertion | open |
 | 18 | 04 script | friction | The voice rules contain rules no gate checks and readers disagree about. The Unsloth judge read the winner as breaking "not antithetical, at most once per script" at least twice; a mechanical scan finds one, which is compliant. Neither `validate_storyboard.py` nor `eval_short.py` contains the word | open |
 
+| 19 | 05 package | friction | The validator advises every description to contain "(narration is ai-generated", inherited from v1 where narration was a stock synthetic voice. `shared/playbook/compliance.md` says an own-voice clone is explicitly exempt from disclosure. The gate and the playbook now disagree | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -139,3 +141,11 @@ Proposed fixes, none applied. Add a teaching row (does a viewer who did not know
 The winning Ornith draft narrows "No independent reproduction was found" into "Nobody outside Ornith has reproduced that yet". Its own description field states it correctly, so the drift is in the spoken line only. No gate compares a claim's strength against the brief's wording, and it is not obvious one could.
 
 Separately, the voice rules' "not antithetical, at most once per script" is checked by nothing, and the two readings of the winning Unsloth draft disagree: the judge counted at least two, a regex scan counts one. A rule that careful readers score differently and no gate measures is a rule that will drift. Either give it a checkable definition, or move it out of Hard Constraints and into the judge's rubric where a human-style reading belongs.
+
+### 19. The AI-disclosure advisory contradicts the compliance rule (open)
+
+`validate_storyboard.py` raises an advisory when a description does not contain the substring `(narration is ai-generated`. That rule came from v1, where narration was Kokoro, a stock synthetic voice.
+
+The v2 compliance page says the opposite for the production case: YouTube's disclosure policy does not require a label for "cloning one's own voice to create voice overs or dubs", so a channel narrated by the creator's own professional clone should not be carrying a synthetic-media disclosure at all. Both package notes were written to the playbook and neither carries the string, so the advisory will fire on every future script.
+
+It is only an advisory, which is the mild version of finding 9: a check that fires on everything teaches people to stop reading checks. Proposed fix, not applied: make the advisory conditional on the voice engine recorded in `voice.config.json`, firing for a stock or designed voice and staying silent for a professional clone of the creator. That also keeps it honest during local test runs, which use Kokoro and therefore genuinely should disclose.
