@@ -2,7 +2,7 @@
 slug: 2026-08-23-which-model-fits-gpu
 workspace: long-form
 title: Which local model actually fits your GPU
-status: idea
+status: researched
 pillar: ""
 series: benchmarks
 structure: ""
@@ -10,7 +10,7 @@ format: ""
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-23
-updated: "2026-08-23T13:29:43Z"
+updated: "2026-08-23T13:37:35Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""

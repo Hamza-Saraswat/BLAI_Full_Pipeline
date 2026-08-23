@@ -36,6 +36,10 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 20 | long-form 01 | quality | The long-form radar's series spread is healthy where the Shorts lane spread was not: benchmarks 25, inference-engineering 15, my-dgx-spark-projects 12, beyond-llms 5, local-ai-for-dummies 3. But `dgx-spark-specific` returned **0 items in seven days**, which is a content-planning signal rather than a defect | note |
 | 21 | long-form 02 | quality | **Second confirmation of finding 5.** `llama.cpp` scored 94.2 and ranked first on an autocomplete depth of 90, which is what any broad brand head term scores. It is a changelog, not an episode. `selection-rules.md` discards before sorting, so the rule order caught it, but the score alone would have chosen it | open |
 
+| 22 | long-form 03 | quality | **The deep research caught a vendor formula that would have produced a wrong episode.** NVIDIA's published KV-cache formula counts attention heads; every modern grouped-query model (Qwen3-8B: 32 query heads, 8 key-value heads) is overstated four times by it. A script quoting the vendor doc verbatim would tell viewers to budget four times the memory they need | working as designed |
+| 23 | long-form 03 | quality | The researcher assigned to interrogate a piece of folklore found the folklore is narrower than believed and reverses under measurement. That instruction is worth keeping in the research contract | working as designed |
+| 24 | long-form 03 | friction | A units trap no gate could catch: Ollama prints context tiers in GiB, GPU vendors print GB. "24 GiB" is about 25.8 GB, so a 24 GB card sits just under Ollama's threshold, not at it | recorded in the brief |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -164,3 +168,15 @@ It is only an advisory, which is the mild version of finding 9: a check that fir
 The pipeline survived it because `selection-rules.md` orders the operations correctly, discarding candidates that cannot carry ten minutes before sorting by opportunity, and the radar's episode-signal line had already called that candidate a changelog. That is a real safeguard and it should be said plainly: the rule order is doing work the score cannot.
 
 The pick is `2026-08-23-which-model-fits-gpu`, a `buyers-guide`-shaped episode on the `benchmarks` series. Value types are EQUIPS and TEACHES, deliberately not PROVES, because the DGX Spark is unreachable from this machine and the episode therefore rests on published file sizes and memory arithmetic rather than a first-party measurement. That also means stage 03 will produce no experiment plan, which is the input stage 08 needs in order to test its skip-cleanly path.
+
+### 22 to 24. What deep research bought
+
+Four researchers in parallel, one question each, 19 distinct fetched sources into a brief carrying 21 claims, 12 key numbers and 10 unverified items. Three results are worth recording as evidence that the stage pays for itself.
+
+**A vendor's own formula is wrong for modern models.** NVIDIA publishes the per-token cache cost as two times layers times heads times head dimension times precision. That counts attention heads, which is correct only for older multi-head models such as Llama 2 7B. Qwen3-8B has thirty-two query heads and eight key-value heads, so the published formula overstates its cache four times over. A writer quoting the vendor documentation verbatim, which is exactly what a careful writer would do, would have told viewers to budget four times the memory they need. The brief now carries both the published formula and the correction.
+
+**Interrogating folklore found the folklore.** One researcher was told that the "bigger model at lower precision beats smaller at higher precision" claim is widely repeated and often unsourced, and that finding weak support would be more valuable than a confident answer. It found the origin (Dettmers and Zettlemoyer 2023, four-bit almost universally optimal), established how narrow that result is (zero-shot accuracy only, models to 2022, no instruction tuning, no reasoning), and found a 2025 study across roughly seventeen hundred inference scenarios where the ordering reverses: eight billion at eight-bit beats fourteen billion at four-bit. That reversal is now the episode's spine. The instruction that produced it should live in the research contract rather than in one prompt.
+
+**A units trap.** Ollama documents context tiers in GiB; every GPU vendor prints GB. Twenty-four GiB is about 25.8 GB, so a twenty-four gigabyte card sits just below Ollama's threshold rather than at it, and gets the smaller default context. No gate could catch this. It is in the brief's `unverified` section as a warning to the writer.
+
+The same run also produced four more model-card contradictions, including Ornith's 9B card recommending an eighty-gigabyte GPU for a file its own table sizes at 17.9 GB, which independently reproduces the contradiction found in the Shorts brief for the same model.
