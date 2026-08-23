@@ -408,9 +408,11 @@ def main(argv=None) -> int:
     ap.add_argument("--workspace", choices=list(WORKSPACES), help="scan one workspace only")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs of earlier attempts "
                     "(regenerate audio, capture again, post again)")
-    ap.add_argument("--local", action="store_true", help="credential-free test run on this machine: "
-                    "Kokoro voice, no publish, no card sent, no git-sync, build dir <repo>/.local-builds")
+    ap.add_argument("--local", action="store_true", help="credential-free test run on this machine: Kokoro "
+                    "voice, no publish, no card sent, no git-sync, build dir <repo>/.local-builds "
+                    "(BLAI_LOCAL=1 does the same for a whole shell)")
     a = ap.parse_args(argv)
+    a.local = a.local or LOCAL  # BLAI_LOCAL already moved REPO and BUILD_DIR; keep the checks in step
     log = Log(a.dry_run)
     if a.local:
         rc = check_local_paths(log)

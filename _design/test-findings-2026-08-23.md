@@ -60,6 +60,10 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 38 | hub notes | friction | **No stage fills the Artifacts block.** After seven long-form and five Shorts stages, every hub note still read "(filled by stage 03)". Frontmatter updated correctly because the audits and `hub-note.schema.json` check frontmatter; nothing checks the body, which is the surface a human opens in Obsidian | **fixed** |
 | 39 | long-form 05 | quality | The "nothing here was measured by us" beat lands at ~0:16, over a card that draws no text, in the window where long-form retention is decided. Editorially right, structurally three disadvantages on one beat. A reviewer call, not a gate | open |
 | 40 | 07 package | quality | **The SEO rubric cannot fail this package.** It scored 100/100 honestly and the score carries no information: one row scores the script's promise and calls it packaging (missing finding 34 entirely), another asks stage 07 to certify pixel dimensions of stills stage 10 has not rendered. Self-scored, with no fresh-context reader, unlike the script stage | open |
+| 41 | tooling | friction | **`git add -A` commits other agents' in-progress work.** I swept a running agent's half-finished voice shim into an unrelated commit. `tools/git-sync.sh` does the same `add -A` in production, and the repo root is a live Obsidian vault the user hand-edits, so a routine firing mid-edit will commit and push a half-written note | open |
+| 42 | 09 voice | quality | **The episode-length target rests on a constant nobody measured, and it is 41% off.** Kokoro `am_eric` measured at 4.22 wps against the assumed 2.9; the outline targets 2.5. The same 1,838-word script is 7:15 or 12:15 depending on which file you believe. The render re-times from captions so it still renders, but every upstream length target is wrong | open |
+| 43 | 09 voice | blocker | **`concat_wavs` wrote relative paths into the ffmpeg concat list**, which ffmpeg resolves against the list file's directory, so every relative `--out` doubled the path and failed. Shared code path, so ElevenLabs would have hit it on any narration needing more than one chunk -- i.e. every episode | **fixed** |
+| 44 | 09 voice | blocker | **The pronunciation gate measured tokens, not words, and could never have run.** `-ml 1` without `-sow` split `petaflop` into `pet af l op`, over-reporting WER by 3.4x (0.1038 vs 0.0309); it also fed 44.1 kHz audio to a 16 kHz-only binary. Both fixed; local mode now warns rather than blocks, since the true 0.0309 is all `base.en` homophones | **fixed** |
 
 ## Detail
 
@@ -330,3 +334,47 @@ Two specific defects:
 Both Shorts scored 92 and 95, this episode 100, and the spread carries no information. The rubric is also self-scored by the agent that wrote the package, with no adversarial pass -- unlike the script stage, which gets a fresh-context judge.
 
 Fix, in order of value: move the pixel conditions to stage 10 where the files exist; add a row that fails when a beat's on-screen text does not render (checkable from the spec plus the scene library); and give packaging the same fresh-context second reader the script gets.
+
+### 41. `git add -A` commits whatever anyone else is mid-edit (open)
+
+I committed `86e2353` ("Long-form stage 07 package; findings 34-40") while a background agent was part-way through the voice shim, and swept its entire in-progress working tree into my commit. The agent noticed and reported it: it never ran `git commit`, and the commit message describes maybe a third of what the commit contains. Nothing was lost, and the branch is a test branch, but the history now lies about what changed when.
+
+The same pattern is in production code. `tools/git-sync.sh` runs `git add -A` on the whole repo, and its own header says it exists so that "two cloud routines and the Spark build agent can all push the same morning". Separate checkouts make that safe between hosts. What it is not safe against is the thing that makes this repo unusual: **the repo root is a live Obsidian vault the user edits by hand.** A routine firing at 09:00 while a half-written note sits in the vault will commit that note, under the pipeline's message, and push it.
+
+Fix: give `git-sync.sh` an explicit path list from the caller (`git add "$@"`) and have the stage runner pass the directories that stage owns. It is a small change and it turns a whole-tree commit into a scoped one.
+
+### 42. The episode length target rests on an unmeasured constant, and the measurement disagrees by 41 % (open)
+
+The voice shim measured Kokoro `am_eric` at **4.22 words per second** over the 259-word golden narration: 61.373 s of audio, one chunk, ffprobe-confirmed. The pipeline had been assuming 2.9.
+
+Three different rates are baked into three different files, and none of them was measured until today:
+
+| Where | Rate | This 1,838-word script becomes |
+|---|---|---|
+| Outline chapter targets ("150 words per minute") | 2.50 | 12:15 |
+| `skills/script-gates/voice.config.json` `wps` | 2.90 | 10:33 |
+| v1's own measured `am_eric` | 3.67 | 8:20 |
+| **Measured here today** | **4.22** | **7:15** |
+
+So the episode written to be twelve minutes will render at about seven and a quarter. The render itself is fine -- `render_longform.py` re-times every scene from the caption words and only falls back to `est_duration_s` when captions are missing (line 447), which is the right design and is why this is a planning defect rather than a broken render. What it breaks is everything upstream: the outline's per-chapter second targets, the script stage's word bands, the spec's 722 s total, and the chapter times in the package.
+
+Two caveats, both from the agent that measured it. This is the *Kokoro* rate, not the ElevenLabs clone that will actually ship, and `voice.config.json` describes the clone, so it was correctly left alone. And it is one voice on one text: v1 measured the same voice at 3.67, so text choice moves this by about 15 %.
+
+The durable fix is already in: every run now writes `words_per_second` into `voice.json`, so the number accumulates from real renders instead of being guessed once. What still needs deciding, once the clone exists, is which rate the *script* stage should target -- and that decision belongs to the user, because it is really a question about how fast the channel should talk.
+
+### 43. A path bug in the shared voice path that would have hit ElevenLabs too (fixed)
+
+`concat_wavs` wrote relative paths into the ffmpeg concat list. ffmpeg resolves entries in a concat list against the list file's own directory, so any relative `--out` doubled the path and the concatenation failed. This sits in the shared code path, not the Kokoro branch, so the ElevenLabs run would have hit it the first time a narration was long enough to need more than one chunk -- which for a twelve-minute episode is always. Fixed with absolute paths.
+
+Worth noting how it was found: only by running the thing. No gate, schema or review would have caught a relative-path assumption inside an ffmpeg helper.
+
+### 44. The pronunciation gate was measuring tokens, not words, and could never have run (fixed)
+
+Two compounding bugs in `qa_transcribe.py`, the Whisper check that is supposed to catch the voice mispronouncing a model name:
+
+1. It passed `-ml 1` without `-sow`, so whisper.cpp returned **tokens** rather than words: `petaflop` came back as `pet af l op`. Every multi-syllable technical term -- which is most of what this channel says -- was scored as four errors. Measured WER on the golden take was **0.1038**; with `-sow` the same audio measures **0.0309**. The gate has been over-reporting error by 3.4x.
+2. It fed 44.1 kHz audio to a whisper.cpp build that only reads 16 kHz. That path could never have produced a transcript at all.
+
+Both fixed. The real WER of 0.0309 sits just over the 0.03 gate, and all eight mismatches are `base.en` homophones (`buy`/`by`, `Mac's`/`max`, `there`/`their`, `Spark's`/`sparks`) with no synthesis error among them. So local mode warns and journals rather than blocking -- otherwise no local run could reach the render stage -- and both voice CONTEXT files now record that the local check is a smoke test, not the pronunciation gate.
+
+The general shape here is the same as finding 33: a documented quality gate that had never been executed, and was broken in two independent ways when it finally was.

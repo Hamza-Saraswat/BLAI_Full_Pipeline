@@ -689,8 +689,9 @@ def main(argv=None) -> int:
     ap.add_argument("--dry-run", action="store_true", help="print the commands instead of running them")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs from earlier attempts")
     ap.add_argument("--local", action="store_true", help="credential-free local test mode: Kokoro voice, "
-                    "no publish, no card sent, build dir <repo>/.local-builds")
+                    "no publish, no card sent, build dir <repo>/.local-builds (BLAI_LOCAL=1 does the same)")
     a = ap.parse_args(argv)
+    a.local = a.local or LOCAL  # BLAI_LOCAL already moved REPO and BUILD_DIR; keep the stages in step
     if a.list:
         print_table()
         return 0
