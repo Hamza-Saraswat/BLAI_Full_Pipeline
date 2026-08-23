@@ -15,6 +15,8 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 6 | 03 research | friction | Research depth is real but source count is below the contract: 4 fetched sources per pick against the 8-12 the scope file asks for. Without FireCrawl every source is one WebFetch, so depth costs wall-clock rather than money | open |
 | 7 | 03 research | quality | **The two briefs each surfaced a source contradiction the writer would otherwise have spoken as fact.** Unsloth: the release notes describe LAN access as shipped while issue 9207 still reads open and unresolved. Ornith: Terminal-Bench 2.1 is 46.2 on the model card and 47.0 in secondary coverage, and the card claims a single 80GB GPU while giving the BF16 size as ~19 GB | working as designed |
 
+| 8 | 04 script | quality | Style-pack rotation is sequential-only: `style_rotation.py --pick` compares against the last recorded entry, so two Shorts produced in the same morning both returned `signal`. It is order-dependent, and the contract's pick-then-record sequence only saves it if the two runs are strictly serial | open |
+
 ## Detail
 
 ### 1. Radar relevance gate (fixed)
@@ -52,3 +54,13 @@ This is the research stage doing its job, and it is worth recording as evidence 
 **Ornith.** Terminal-Bench 2.1 is 46.2 on the model card and 47.0 in secondary coverage, so the brief forbids speaking the number without picking one. The same card says the model "serves on a single 80GB GPU" in BF16 while giving the BF16 size as ~19 GB; the 80GB line looks inherited from the 397B family member. Every benchmark is self-reported, though with unusually strict controls (five runs averaged, git history stripped, network disabled during solving), and the brief records both halves of that.
 
 Both briefs also carry the three new writer fields. `has_process` is true for Unsloth with four real steps and false for Ornith, which means positional labels are legal in one script and banned in the other. That is the first live exercise of the label rule.
+
+### 8. Style packs collide between same-day siblings (open)
+
+`python3 skills/render-shorts/scripts/style_rotation.py --pick --slug <slug>` returned `signal` for both of today's Shorts, because the ledger's last entry is the only thing it compares against and neither had been recorded yet. Two videos on the same feed, the same day, in the same look.
+
+The stage contract does say pick then record, so a strictly serial run would give the second one a different pack. That makes the rule correct but fragile: the two picks of a day are produced by the same routine and nothing forces them to be serial, and a re-run of one slug would re-pick against a ledger that now contains the other.
+
+Two options, neither applied yet. Make `--pick` accept the packs already claimed today and exclude them, or fold the style pack into the `sameness` gate, which already refuses a structure, a hook pattern and a duration that repeat.
+
+Sidestepped for this run by assigning packs on topic fit, which is what `styles/README.md` asks for anyway: `signal` for the Ornith model release (kinetic type, benchmarks and news) and `terminal` for the Unsloth video, which is entirely about flags and settings.
