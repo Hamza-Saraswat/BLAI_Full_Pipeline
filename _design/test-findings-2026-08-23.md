@@ -64,6 +64,11 @@ Severity: **blocker** stops a real run; **quality** ships bad work; **friction**
 | 42 | 09 voice | quality | **The episode-length target rests on a constant nobody measured, and it is 41% off.** Kokoro `am_eric` measured at 4.22 wps against the assumed 2.9; the outline targets 2.5. The same 1,838-word script is 7:15 or 12:15 depending on which file you believe. The render re-times from captions so it still renders, but every upstream length target is wrong | open |
 | 43 | 09 voice | blocker | **`concat_wavs` wrote relative paths into the ffmpeg concat list**, which ffmpeg resolves against the list file's directory, so every relative `--out` doubled the path and failed. Shared code path, so ElevenLabs would have hit it on any narration needing more than one chunk -- i.e. every episode | **fixed** |
 | 44 | 09 voice | blocker | **The pronunciation gate measured tokens, not words, and could never have run.** `-ml 1` without `-sow` split `petaflop` into `pet af l op`, over-reporting WER by 3.4x (0.1038 vs 0.0309); it also fed 44.1 kHz audio to a 16 kHz-only binary. Both fixed; local mode now warns rather than blocks, since the true 0.0309 is all `base.en` homophones | **fixed** |
+| 45 | 10 render | quality | **The lower third overlaps the quote attribution.** `SceneFrame.tsx:70` raises the lower third by `CAPTION_BAND_PX` (110) when captions are on; `Quote.tsx:41` fixes the attribution at +150. 40 px apart, both drawing taller text. Triggers precisely when the feature is used as intended | open |
+| 46 | 10 render | note | 15 of 44 scenes set `captions_on`, so **36% of the episode carries burned-in captions**. This follows `scene-library.md:24` and the SRT sidecar ships alongside, so it is a deliberate rule -- but muted autoplay is how a small channel gets watched, so it deserves an explicit decision rather than an inherited default | reviewer call |
+| 47 | 10 render | quality | **Finding 34 measured against real audio.** The hook's numbers are spoken at 0:03 and first drawn at 0:22 (`s01` title-card 0-10.6 s draws no text, `s02` quote 10.6-22.0 s, `s03` first digits). Better than the 34 s the estimates implied, still twenty-two seconds of the thumbnail's promise being undrawn | open |
+| 48 | 10 render | blocker | **The episode renders and fails its own release gate.** 493.4 s against a 648-792 s window; every other lint check passes. The script stage's 1,500-2,100 word band and the render stage's 720 s target were set independently and never reconciled: at the measured 3.69 wps a script that passes stage 05 cannot produce an episode that passes stage 10 | open |
+| 49 | 10 render | note | **The scene library holds up at full resolution.** Tables, charts with labelled axes, kinetic text, chapter headers, progress bar and word-timed captions all render correctly in brand colours. Minor: chart y-axis auto-scale leaves half the plot empty, and a chart label rounds 6.19 to 6.2 while the narration says 6.19 | working as designed |
 
 ## Detail
 
@@ -378,3 +383,74 @@ Two compounding bugs in `qa_transcribe.py`, the Whisper check that is supposed t
 Both fixed. The real WER of 0.0309 sits just over the 0.03 gate, and all eight mismatches are `base.en` homophones (`buy`/`by`, `Mac's`/`max`, `there`/`their`, `Spark's`/`sparks`) with no synthesis error among them. So local mode warns and journals rather than blocking -- otherwise no local run could reach the render stage -- and both voice CONTEXT files now record that the local check is a smoke test, not the pronunciation gate.
 
 The general shape here is the same as finding 33: a documented quality gate that had never been executed, and was broken in two independent ways when it finally was.
+
+### 45. The lower third and the quote attribution land on top of each other (open)
+
+Visible in the first draft render, at 18 s. The quote scene's source line ("Build Local AI") is struck through by the lower third's text ("Not measured here. Every source named.").
+
+The arithmetic, and it is exact:
+
+- `SceneFrame.tsx:70` -- `const bottom = 1080 - SAFE.bottom + (raised ? CAPTION_BAND_PX : 0)`, and `CAPTION_BAND_PX = 110`.
+- `Quote.tsx:41` -- attribution at `bottom: 1080 - SAFE.bottom + 150`.
+
+So the two sit 40 px apart while both draw text taller than 40 px. And the lower third only raises when `captions_on` is true, which for a quote scene citing a source is exactly the case you would set it. The collision is not an edge case; it is what happens when the feature is used as intended.
+
+Fix: either raise the quote attribution by `CAPTION_BAND_PX` too when captions are on, or give `Quote` its own attribution slot above the lower-third band. One line either way.
+
+### 46. Two thirds of the episode carries no burned-in captions, by design (reviewer call)
+
+15 of 44 scenes set `data.captions_on`, covering **177 s of 493 s -- 36 %**. The other 64 % renders with no on-screen words beyond its own lower third.
+
+This is not a defect: `skills/render-longform/rules/scene-library.md:24` says to use captions "for scenes that define a term or cite a number, not everywhere; the SRT sidecar carries the full text", and the spec author followed that rule selectively and correctly. `captions.srt` (463 cues) ships alongside for YouTube's own caption track.
+
+It is still worth a decision from the reviewer rather than a default, because the two things are not equivalent. The SRT covers accessibility and anyone who turns CC on. Burned-in captions are a retention device for muted autoplay, and muted autoplay is a large share of how a small channel gets watched. The current split means a viewer scrolling past with sound off sees words for about a third of the episode.
+
+Recorded here as a question, not a change: the rule may well be right for a twelve-minute explainer where the visuals carry the argument. It should be an explicit choice, not an inherited default.
+
+### 47. Finding 34, measured (open)
+
+The estimated timings put the first on-screen digits at about 34 s. Against real audio it is better than that, and still bad:
+
+| | Time | What is on screen |
+|---|---|---|
+| `s01` title-card | 0.0 - 10.6 s | title and series chip only; no numbers, no lower third (`lowerThird={false}`) |
+| `s02` quote | 10.6 - 22.0 s | the "nothing was measured by us" card |
+| `s03` kinetic-text | 22.0 - 34.6 s | **first appearance of the hook's numbers** |
+
+So the contradiction the thumbnail sells -- 27 billion parameters, 6.19 GB -- is spoken at 0:03 and first drawn at 0:22. A viewer who clicked for those two numbers waits twenty-two seconds to see them.
+
+The rest of the frame is sound: the title card renders correctly in brand colours with the series chip and wordmark, kinetic-text emphasises its key phrase in amber and reads cleanly, and the chapter header and progress bar are both present and correct. The problem is confined to what `TitleCard` is allowed to draw.
+
+### 48. The episode renders, and fails its own release gate on duration (open)
+
+The first full long-form render completed: **493.4 s, 1920x1080, h264, yuv420p, 30 fps, AAC 48 kHz, 27.4 MB, 386.9 s of wall clock** on this Mac. Every lint check passed except one.
+
+```
+FAIL duration: 493.4 (expected 648 to 792 s (target 720 +/- 10 %))
+```
+
+Passing: exists, codec, resolution, fps, pix_fmt, color_range (`tv`, so `--color-space=bt709` did apply), audio_stream, audio_codec, audio_rate. Failing: duration, by 155 seconds.
+
+This is finding 42 arriving at the gate, and it is the whole chain in one line. The outline set chapter targets at 150 words per minute. The script wrote 1,838 words to fill twelve minutes at that rate. The voice actually runs at 3.69 words per second. The episode came out at 8:13, and `lint_longform.py --target-s 720` correctly refused it.
+
+Two things follow.
+
+**The gate works.** It caught a real inconsistency on the first episode that ever reached it, which is exactly what it is for. Nothing here argues for loosening it.
+
+**Every long-form episode will fail it until the constant is fixed.** To land inside the 648-792 s window at 3.69 wps the script needs roughly **2,400 to 2,900 words**, against the 1,500-2,100 band the script stage currently enforces. So the script gate and the render gate are asking for incompatible things: a script that passes stage 05 cannot produce an episode that passes stage 10. The bands were set independently and never reconciled against a measured voice.
+
+Fix, once the ElevenLabs clone exists and its rate is measured: derive the script stage's word band from `voice.config.json` rather than hard-coding it, so the two gates move together. Until then this failure is expected and should be journalled rather than treated as a render defect.
+
+### 49. What the full render looks like (working as designed)
+
+Worth recording what came out right, because most of it did. At 1920x1080 the scene library reads well:
+
+- **comparison-table** -- Unsloth's file listing with FILE/SIZE headers, `UD-IQ1_S 6.19 GB` and `UD-Q6_K_XL 25.3 GB`, chapter header, lower third carrying the repository name as its source line.
+- **chart** -- proper GB axis with gridlines and labelled ticks, two amber bars with value labels, category labels underneath, a legend, and the publisher named in the lower third.
+- **kinetic-text** -- key phrase emphasised in amber, fully legible, good rhythm.
+- **end-card** -- wordmark, handle and a next-episode line, cleanly set.
+- Chapter header and chapter progress bar present and correct throughout; captions word-timed with the active word in amber.
+
+Two small composition notes, neither worth a fix on its own: the chart's y-axis tops out at 50 for a 25.3 maximum, so the upper half is empty, and a two-row comparison table leaves a large gap between the table and the lower third. Both are auto-scaling questions, not defects.
+
+One number to watch: the chart draws `6.2` where the lower third and the narration both say `6.19`. The brand rule is that a number on screen is also spoken. A one-decimal bar label against a two-decimal spoken figure is a small breach of it, and it will recur wherever a chart label rounds.
