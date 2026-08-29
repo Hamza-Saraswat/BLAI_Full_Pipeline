@@ -22,7 +22,7 @@ Sweep the local-AI world for the last 48 hours and write a scored, deduplicated 
 4. For the top 15 items write a one-line so-what per `references/so-what-rules.md`; flag any item that contradicts a claim in a published Short's title.
 5. Run the audit checks below. If any fail, revise before saving.
 6. Save `output/[date]-radar.md` (the script's digest plus your lines).
-7. Unattended: `../../../../tools/git-sync.sh "shorts: [date] radar"`.
+7. Unattended: `../../../../tools/git-sync.sh "shorts: [date] radar" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Audit
 

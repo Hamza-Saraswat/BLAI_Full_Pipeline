@@ -26,7 +26,7 @@ Turn the finished script into everything the upload needs: titles, description, 
 4. Write `output/[slug]-package.md` with the manifest block; run `python3 ../../../../tools/check_outputs.py`.
 5. Run the audit checks below. If any fail, revise before saving.
 6. Update the hub note: `title`, `seo_score`, `status: ready-to-build`, Artifacts link.
-7. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] package"`.
+7. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] package" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Checkpoints
 

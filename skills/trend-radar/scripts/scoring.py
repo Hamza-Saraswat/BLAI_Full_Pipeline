@@ -270,6 +270,11 @@ def lane(title: str, summary: str, kinds: set, product_names: list[str]) -> str:
             return candidate
     if versus:
         return "comparison"
+    # Finding 2 (2026-08-23 dry run): without this, release-shaped sources put 54 of 64 items in
+    # news-react. A runnable release IS a how-to candidate: the video is "install and run it",
+    # not "it shipped". Only time-bound events with nothing to run stay news.
+    if kinds & {"model", "runtime", "format"} and named:
+        return "how-to"
     return "news-react"
 
 

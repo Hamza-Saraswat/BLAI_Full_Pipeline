@@ -13,6 +13,7 @@ Turn the brief into two competing drafts, judge them, and hand the winner to the
 | Brand vault | `../../../../brand-vault/identity.md` | "Audience" | Who is listening |
 | Reference | `references/script-structures.md` | Full file | The menu, the rotation rule, how to pick two |
 | Reference | `references/hook-library.md` | Full file | Hook patterns and scoring |
+| Reference | `references/scene-constraints.md` | Full file | What the renderer can actually draw; briefs must be legal on arrival |
 | Reference | `references/judge-rubric.md` | Full file | How the winner is chosen |
 | Reference | `references/script-format.md` | Full file | Layout of the script note, the drafts note and the storyboard mapping |
 | Skill | `../../../../skills/script-gates/SKILL.md` | Full file | Validator, eval gates, variety check, normalizer |
@@ -24,14 +25,14 @@ Turn the brief into two competing drafts, judge them, and hand the winner to the
 ## Process
 
 1. Read the brief and the hub note. Rank the structures by fit and take the **top two**, both clearing the rotation rule. Confirm the two locked value types and write the promise in one sentence. **[Checkpoint]** -- present the two structures, the value types and the promise.
-2. Write 10 hook candidates per hook-library.md and score them. Keep the best two, one for each draft. **[Checkpoint]** -- present the 10 with the two picks marked.
-3. Write **draft A and draft B in parallel**, one worker each. A worker receives only: the brief, the voice-rule sections, signature-analogies.md, its own structure row, the hook library, its band row and the Shorts platform row. Neither worker sees the other's draft.
+2. Write 10 hook candidates per hook-library.md and score them. Keep the best two, one for each draft, **from two different hook patterns** -- blind writers converge on the same opening when nothing forces divergence (finding 12: both Unsloth drafts opened on the same couch line). Each writer's packet names its assigned pattern. **[Checkpoint]** -- present the 10 with the two picks marked.
+3. Write **draft A and draft B in parallel**, one worker each, each in its own private scratch directory (`.local-builds/[slug]/draft-A/` and `draft-B/`; never a shared scratch path -- finding 11 lost work to a collision). A worker receives only: the brief, the voice-rule sections, signature-analogies.md, its own structure row, its assigned hook pattern, its band row and the Shorts platform row. Neither worker sees the other's draft.
 4. Pick the style pack (`style_rotation.py --pick --slug [slug]`) and build a storyboard JSON for each draft per script-format.md.
 5. Run `normalize_narration.py`, `validate_storyboard.py` and `eval_short.py --ledger output/script-ledger.json` on both. Fix blockers inside the draft that has them; a draft still failing after two rounds is withdrawn and the other wins by default.
 6. Judge the survivors per judge-rubric.md. Apply any graft the rubric allows. Write `output/[slug]-drafts.md`.
 7. Run the audit checks below. If any fail, revise before saving.
 8. Save the winner as `output/[slug]-script.md` and `output/[slug]-storyboard.json`; run `variety_check.py record --storyboard output/[slug]-storyboard.json --ledger output/script-ledger.json`; record the style pack (`style_rotation.py --record`); update the hub note (`status: scripted`, `structure`, `style_pack`, `value_types`, Artifacts link, Decisions).
-9. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] script"`.
+9. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] script" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Checkpoints
 

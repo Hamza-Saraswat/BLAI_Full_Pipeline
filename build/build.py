@@ -151,7 +151,10 @@ def git_sync(log: Log, message: str) -> bool:
     if log.dry_run:
         print("  git-sync %r" % message)
         return True
-    res = subprocess.run([str(REPO / "tools" / "git-sync.sh"), message], cwd=str(REPO),
+    # Scoped add (finding 41): the repo root doubles as a live Obsidian vault on the Mac.
+    res = subprocess.run([str(REPO / "tools" / "git-sync.sh"), message,
+                          "workspaces/shorts", "skills/render-shorts/styles/history.json"],
+                         cwd=str(REPO),
                          capture_output=True, text=True)
     for line in (res.stdout + res.stderr).strip().splitlines()[-3:]:
         log("git-sync: " + line)

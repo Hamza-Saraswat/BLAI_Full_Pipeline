@@ -26,7 +26,7 @@ Turn the storyboard, the narration and the captions into `final.mp4`, pass the m
 4. Run `lint_video.py` and `safe_zone_check.py` on `final.mp4`; fix and re-assemble on failure.
 5. Run the audit checks below. If any fail, fix before sending the card; if they cannot be fixed, set the hub note to `blocked`.
 6. Write `output/[slug]-render.md`; update the hub (`status: review`, `preview_url` when a link is used); send `send_card.py --kind gate --hub [hub] --video [build-dir]/[slug]/render/final.mp4`.
-7. `../../../../tools/git-sync.sh "shorts: [slug] render"`.
+7. `../../../../tools/git-sync.sh "shorts: [slug] render" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Audit
 

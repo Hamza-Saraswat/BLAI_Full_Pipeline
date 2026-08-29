@@ -22,7 +22,7 @@ Schedule the approved Short on YouTube through Blotato and record where it went.
 3. Write `output/[slug]-publish.md`; update the hub (`status: scheduled`, `blotato_post_id`, `publish_slot`); create `../../published/[slug].md` per publish-note-format.md.
 4. Send `send_card.py --kind checklist --hub [hub]`.
 5. Run the audit checks below. If any fail, set the hub note to `blocked` with the reason.
-6. `../../../../tools/git-sync.sh "shorts: [slug] publish"`.
+6. `../../../../tools/git-sync.sh "shorts: [slug] publish" workspaces/shorts skills/render-shorts/styles/history.json`.
 7. On later runs: `publish.py --status [id]`; when published, set `status: published` and `youtube_url` in the hub note and the published note.
 
 ## Audit

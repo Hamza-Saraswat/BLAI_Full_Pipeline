@@ -93,7 +93,11 @@ read `title + summary`:
    how does, understanding, deep dive, plain English, "in N seconds". Topic words alone
    (quantization, KV cache, MoE) do not make an explainer; a release that mentions them is news
 6. a versus phrase in the title with fewer than two products still lands in `comparison`
-7. everything else is `news-react`, the lane for things that shipped, changed or broke
+7. a release of something runnable (kind `model`, `runtime` or `format`, with a named product)
+   lands in `how-to`: the video a release enables is "install and run it", not "it shipped".
+   Added after the 2026-08-23 dry run put 54 of 64 items in `news-react` purely because
+   GitHub releases and HN posts are news-shaped (finding 2)
+8. everything else is `news-react`, the lane for time-bound events with nothing to run
 
 
 ## Relevance gate

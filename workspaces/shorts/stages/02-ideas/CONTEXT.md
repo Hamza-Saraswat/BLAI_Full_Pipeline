@@ -25,7 +25,7 @@ Turn the radar digest into scored candidates and pick today's two Shorts.
 5. Create one hub note per pick: `python3 ../../../../tools/new-run.py --workspace shorts --title "..." --pillar [lane] --format [band] --value-types "A,B" --date [date]`.
 6. Write `output/[date]-ideas.md` per ideas-format.md. Run the audit checks below. If any fail, revise before saving.
 7. Send the FYI: `python3 ../../../../skills/telegram-gate/scripts/send_card.py --kind fyi-ideas --ideas output/[date]-ideas.md --hub ../../videos/[first-pick-slug].md` (skip with a note when `TELEGRAM_BOT_TOKEN` is absent).
-8. Unattended: `../../../../tools/git-sync.sh "shorts: [date] ideas"`.
+8. Unattended: `../../../../tools/git-sync.sh "shorts: [date] ideas" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Checkpoints
 

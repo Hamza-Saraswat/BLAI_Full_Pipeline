@@ -78,6 +78,17 @@ def main():
                     pass
             for e in check(meta, schemas["hub-note.schema"]):
                 failures += 1; print("FAIL %s: %s" % (note.relative_to(ROOT), e))
+            # Finding 38: stages update frontmatter but nothing checked the body, so every
+            # "(filled by stage NN)" placeholder survived every stage. Fail the placeholder
+            # only when that stage's output for this slug actually exists on disk.
+            body = note.read_text(encoding="utf-8")
+            for m in re.finditer(r"^- (\w[\w ]*): \(filled by stage (\d\d)\)", body, re.M):
+                stage_dirs = list(wsdir.glob("stages/%s-*" % m.group(2)))
+                slug = meta.get("slug", "")
+                if slug and any((sd / "output").glob(slug + "*") for sd in stage_dirs):
+                    failures += 1
+                    print("FAIL %s: Artifacts link '%s' still reads '(filled by stage %s)' but that "
+                          "stage's output exists" % (note.relative_to(ROOT), m.group(1), m.group(2)))
         for pkg in sorted(wsdir.glob("stages/*-package/output/*-package.md")):
             man = manifest_from_package(pkg)
             if man is None:

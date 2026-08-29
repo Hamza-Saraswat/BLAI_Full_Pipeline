@@ -28,6 +28,7 @@ python3 scripts/style_rotation.py --pick --slug <slug> --topic "DGX Spark vs Mac
 python3 scripts/style_rotation.py --record <pack> --slug <slug>                          # on approval
 ```
 
+Two Shorts in one morning: the second `--pick` passes the first's pack via `--exclude`, because the ledger only records on approval and two concurrent picks would otherwise both draw the same pack (finding 8, 2026-08-23 dry run).
 - `--pick` excludes the previous entry's pack, scores the remaining six by keyword hits in the storyboard (topic, title, hook, narration, visual briefs) or `--topic`, breaks ties by least recent use, and falls back to `signal`. The writer may overrule the pick with a better topic-fit argument, but never into the previous pack.
 - `--record` appends `{slug, pack, date}` and refuses a repeat of the last entry (`--force` exists for a deliberate series lock, and must be explained in the hub note). Record once, when the storyboard is approved, not at every re-script.
 - The history is committed text; keep it in `styles/history.json` so cloud routines and the Spark read the same ledger.

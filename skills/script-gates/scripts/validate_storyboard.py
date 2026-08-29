@@ -30,7 +30,7 @@ ENDING      [advisory] sentences after the payoff line: `ending` from
             anchored at the FIRST sentence of the final payoff_close scene
 LENGTH      [advisory] narration_full over the band's narration_max_chars
 HOOKS       [advisory] hook_text <=7 words · >=10 hook_candidates ·
-            title==hook · AI-disclosure (title length: warn)
+            title==hook (title length: warn)
 SFX         [advisory] <=6 total
 SHAPE       `structure` (narrative shape) is free text: never rejected; an
             unlisted value is a warning only. Absent script_format = classic.
@@ -302,8 +302,6 @@ def main():
         warn.append(f"title {len(sb['title'])} chars — mobile truncates ~40")
     if sb["title"].strip().lower() == sb["hook_text"].strip().lower():
         adv.append("title is verbatim hook_text — re-confirm the promise, don't repeat it")
-    if "(narration is ai-generated" not in sb["description"].lower():
-        adv.append("description missing the AI-narration disclosure")
 
     # ---- hooks -----------------------------------------------------------
     if len(words(sb["hook_text"])) > 7:

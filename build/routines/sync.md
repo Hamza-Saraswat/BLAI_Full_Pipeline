@@ -21,6 +21,8 @@ Cron is UTC; the local times in the routine files assume CT summer time. Move th
 
 The shorts and retro routines were created on 2026-08-22 (disabled, no connectors attached); the two long-form routines from that batch were disabled for good on 2026-08-29 when long-form was scrapped, and can be deleted at claude.ai/code/routines. Links: https://claude.ai/code/routines/<id>.
 
+The registered shorts prompts predate the scoped `git-sync.sh` call (finding 41); re-create them from these files before enabling.
+
 ## Create body
 
 ```json

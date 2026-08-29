@@ -6,7 +6,7 @@ video, pick by topic fit, record the pick when the storyboard is approved.
 
 Usage:
   style_rotation.py --pick --slug S [--history styles/history.json] [--storyboard FILE.json]
-                    [--topic "text"] [--json]
+                    [--topic "text"] [--exclude PACK[,PACK]] [--json]
   style_rotation.py --record PACK --slug S [--history styles/history.json] [--date YYYY-MM-DD]
                     [--force] [--dry-run]
 
@@ -15,6 +15,11 @@ Usage:
 topic, title, hook_text and narration when --storyboard is given, or from
 --topic. Ties go to the least recently used pack. With no hints the default
 pack (signal) wins unless it was the last one used.
+
+--exclude removes packs from the candidate set on top of the never-twice rule. Two Shorts
+produced the same morning run --pick concurrently, and the ledger only records on approval,
+so without it both draws return the same pack (finding 8, 2026-08-23 dry run): the second
+pick passes the first pick's pack via --exclude.
 
 --record appends {slug, pack, date} to the history file and refuses a pack
 that equals the previous entry (unless --force) or is not a known pack.
@@ -117,11 +122,12 @@ def recency_rank(history: Dict[str, Any]) -> Dict[str, int]:
     return rank
 
 
-def pick(history: Dict[str, Any], text: str) -> Dict[str, Any]:
+def pick(history: Dict[str, Any], text: str, exclude: Optional[List[str]] = None) -> Dict[str, Any]:
     last = last_pack(history)
     scores = score_packs(text)
     rec = recency_rank(history)
-    candidates = [p for p in PACKS if p != last]
+    banned = {last} | set(exclude or [])
+    candidates = [p for p in PACKS if p not in banned] or [p for p in PACKS if p != last]
     best_score = max(scores[p] for p in candidates)
     if best_score > 0:
         top = [p for p in candidates if scores[p] == best_score]
@@ -173,6 +179,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument("--history", default=DEFAULT_HISTORY)
     ap.add_argument("--storyboard", help="storyboard JSON for topic-fit hints (--pick)")
     ap.add_argument("--topic", help="free text for topic-fit hints (--pick)")
+    ap.add_argument("--exclude", default="", help="comma-separated packs to skip on top of the never-twice rule (--pick); pass the sibling Short's pack when two are produced the same day")
     ap.add_argument("--json", action="store_true", help="--pick prints a JSON object instead of the bare pack name")
     ap.add_argument("--date", default=dt.date.today().isoformat(), help="date for --record (default today)")
     ap.add_argument("--force", action="store_true", help="--record even if it repeats the last pack")
@@ -181,7 +188,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     try:
         if args.pick:
             history = load_history(args.history)
-            result = pick(history, hint_text(args.storyboard, args.topic))
+            result = pick(history, hint_text(args.storyboard, args.topic),
+                          [x.strip() for x in args.exclude.split(",") if x.strip()])
             result["slug"] = args.slug
             log("style_rotation: %s (%s)" % (result["pack"], result["reason"]))
             print(json.dumps(result, indent=2) if args.json else result["pack"])

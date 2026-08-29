@@ -2,7 +2,9 @@
 
 The judge reads two drafts written from two different structures, plus the voice rules and the last five entries of `output/script-ledger.json`. It has not seen either draft being written, and it does not rewrite them: it scores, picks, and grafts.
 
-Score every row 0 to 3 for each draft. Maximum 21. The higher total wins. On a tie, the winner is the draft that scores higher on row 6 (difference), because two similar videos are worse than one imperfect one.
+Score every row 0 to 3 for each draft. Maximum 24. The higher total wins. On a tie, the winner is the draft that scores higher on row 6 (difference), because two similar videos are worse than one imperfect one.
+
+Fairness note (finding 16): rows 1, 2 and 6 all touch the opening, which structurally punishes `myth-bust` -- a shape that must state the belief before breaking it. Score a myth-bust's row 2 from the moment the break lands, not from the statement of the myth.
 
 | # | Row | 0 | 1 | 2 | 3 |
 |---|-----|---|---|---|---|
@@ -13,6 +15,7 @@ Score every row 0 to 3 for each draft. Maximum 21. The higher total wins. On a t
 | 5 | **Navigation** | positional labels on things that are not steps | labels used legally but mechanically | transitions carry content | every transition names what changed, and the script could not be reordered without breaking |
 | 6 | **Difference** | same structure or hook pattern as either of the last two scripts | same closing move or same duration as the recent run | recognisably a different shape | different shape, different opening rhythm, different landing |
 | 7 | **The repeat test** | nothing here a viewer would say out loud | the fact is repeatable, the phrasing is not | one line a viewer could repeat to a friend | the payoff line is the repeatable one, and it is the last thing they hear |
+| 8 | **Teaching** | the viewer ends knowing THAT something is true, not WHY | the mechanism is named but not shown | the mechanism is shown once, concretely | the viewer could now predict a case the script never mentions |
 
 ## Grafting
 
@@ -31,3 +34,5 @@ Write `output/[slug]-drafts.md`: both drafts in full, the score table for each r
 - It does not rewrite prose it merely dislikes. Taste changes go in the voice rules, not into one script.
 - It does not overrule a gate. If both drafts fail a hard gate, both go back; the judge picks only between candidates that pass.
 - It does not reward length, density or cleverness on their own. A shorter draft that lands wins.
+- It applies the deletion test to every label (finding 14): a legal label ("Step one:") that costs nothing when deleted is mechanical filler and caps row 5 at 1 -- and a count that opens ("Step one, Step two") must close or it caps row 5 at 1.
+- It checks factual drift against the brief (finding 17): a claim the brief states as absence of evidence ("no independent reproduction was found") must not be spoken as an assertion ("nobody has reproduced it"). One drifted claim caps row 3 at 1.
