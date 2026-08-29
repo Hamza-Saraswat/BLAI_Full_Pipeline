@@ -41,4 +41,42 @@ runner-up contradiction; #3 beats it by naming the viewer's own hardware.
 Two blind writers, private directories (`.local-builds/<slug>/draft-A/`, `draft-B/`), packets per
 the stage contract. Neither sees the other. Gates run by each writer; the judge reads both after.
 
-(Judge report follows.)
+Both drafts passed all gates (validator advisories only: the assigned hook's referent, and the
+stale-2.9wps pacing line; eval `gate1_ready: true` for both). Full drafts archived as
+`[slug]-draft-A.json` / `-draft-B.json`; prose in each writer's private directory.
+
+Live proof of the finding-9 demotion: the winning board scores `entity_spend 0.154` -- under the
+old hard gate that alone would have blocked it; as an advisory it informs and blocks nothing.
+
+## Judge report (fresh context, amended rubric: 8 rows, max 24)
+
+**Winner: Draft B (number-first), 23 to 21.**
+
+| Row | A (myth-bust) | B (number-first) |
+|---|---|---|
+| Hook | 3 | 3 |
+| Payoff timing | 2 (fairness note applied; the break still lands ~6s) | 3 |
+| Specificity | 3 | 3 |
+| Voice | 3 | 3 |
+| Navigation | 2 (s5/s6 commute) | 3 (locked chain) |
+| Difference | 3 (empty ledger, by rule) | 3 |
+| Repeat test | 2 | 2 |
+| Teaching (new row) | 3 | 3 |
+| **Total** | **21** | **23** |
+
+**Drift ruling** (new rubric check): Draft A's "GLM-5.3" shorthand over Flash's 93.09 GB ruled
+FAIR (headline's own wording; error direction conservative; description names Flash) -- and the
+ruling is outcome-robust (a stricter cap still leaves B ahead 23-19). Symmetric flag on B's
+"your gaming card holds thirty-two gigabytes" (flagship spoken as the viewer's own): same
+conservative class, no cap, carried into notes_for_review for the human reviewer.
+
+**Graft applied (the full two-sentence budget):** A's "The license opened. The memory didn't."
+now closes B's s6 -- the most repeatable line in either draft, patching B's row-7 weakness; zero
+rewriting of surrounding beats; the payoff line remains the last thing spoken. Post-graft: 133
+words, ~36.5s at the measured 3.65 wps, inside the classic sweet band.
+
+**No hook graft:** rows tied at 3; the rule did not trigger.
+
+**What myth-bust needed:** the measurement inside the hook, and a spine whose beats cannot
+commute. Recorded for the weekly retro.
+

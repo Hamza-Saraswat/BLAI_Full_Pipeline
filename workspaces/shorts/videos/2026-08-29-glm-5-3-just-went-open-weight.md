@@ -2,14 +2,14 @@
 slug: 2026-08-29-glm-5-3-just-went-open-weight
 workspace: shorts
 title: "GLM-5.3 just went open-weight: what actually fits your GPU"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: number-first
 format: classic
-style_pack: ""
+style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-29
-updated: "2026-08-29T19:08:42Z"
+updated: "2026-08-29T19:35:12Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-08-29-radar]]
 - Ideas: [[stages/02-ideas/output/2026-08-29-ideas]]
 - Research: [[stages/03-research/output/2026-08-29-glm-5-3-just-went-open-weight-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-08-29-glm-5-3-just-went-open-weight-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)

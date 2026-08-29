@@ -1,0 +1,151 @@
+{
+  "slug": "2026-08-29-glm-5-3-just-went-open-weight",
+  "topic": "GLM-5.3-Flash open-weight release and the 93 GB memory floor",
+  "title": "GLM-5.3-Flash: 93 GB Is the Small One",
+  "description": "GLM-5.3-Flash went open weight, and its smallest GGUF is 93.09 GB, more than any consumer GPU holds. The catch is the architecture: 18B active parameters sounds small, but a mixture of experts keeps all 320B resident, so memory follows the total. Unsloth's guide sizes the release for 128 GB unified-memory machines. You'll learn why active parameters don't set the memory bill, and the one check that saves a wasted download. Sources: zai-org model card, Unsloth's GLM-5.3-Flash guide, unsloth/GLM-5.3-Flash-GGUF file sizes. Full local-AI builds every week: subscribe to Build Local AI. (Narration is AI-generated.)",
+  "hashtags": [
+    "#GLM53Flash",
+    "#LocalAI",
+    "#OpenWeights"
+  ],
+  "tags": [
+    "glm-5.3-flash",
+    "glm 5.3",
+    "glm 5.3 flash gguf",
+    "open weight models",
+    "can i run glm 5.3 locally",
+    "93 gb model",
+    "unsloth glm guide",
+    "1-bit quantization",
+    "ud-iq1_s",
+    "mixture of experts memory",
+    "active vs total parameters",
+    "128gb unified memory",
+    "mac studio llm",
+    "dgx spark",
+    "local llm hardware",
+    "gguf file size",
+    "how much vram for glm",
+    "rtx 5090 32 gb",
+    "llama.cpp glm",
+    "download glm 5.3"
+  ],
+  "hook_text": "93.09 GB. The small one.",
+  "hook_candidates": [
+    "Ninety-three gigabytes, and that is the small one.",
+    "The small one is ninety-three gigabytes.",
+    "Even the one-bit build is ninety-three gigabytes.",
+    "Ninety-three gigabytes. That is the entry ticket.",
+    "Your card holds thirty-two. The small file is ninety-three.",
+    "Open weights, sure. The smallest file is ninety-three gigabytes.",
+    "Ninety-three gigabytes buys you the worst version.",
+    "The starter file is ninety-three gigabytes.",
+    "Ninety-three gigabytes, before you even pick a good one.",
+    "The smallest copy they ship is ninety-three gigabytes."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "EQUIPS, TEACHES",
+  "target_duration_s": 35,
+  "narration_full": "Ninety-three gigabytes, and that is the small one. GLM Flash went open weight, free to download. You want it on your machine tonight. Its smallest file spends a single bit per weight. Your gaming card holds thirty-two gigabytes of memory. The page says eighteen billion active parameters. Sounds runnable. But it's a mixture of experts, a whole staff behind a receptionist. Each word wakes a few specialists. Memory keeps the whole building, because the receptionist picks fresh every word. All three hundred twenty billion parameters stay loaded. This drop is for unified memory, where processor and graphics share a single pool. Unsloth's guide sizes it for one hundred twenty-eight gigabyte machines. Before you download, read your total memory. If it's smaller than the file, close the tab.",
+  "analogy": {
+    "vehicle": "the receptionist",
+    "mapping": "Active parameters are the few specialists the receptionist wakes for each word; total parameters are the whole staff that must stay in the building, loaded, because any of them could be picked next.",
+    "limit": "The receptionist picks fresh for every word, so it is never one hand-off per question, and the building never shrinks: idle experts stay resident."
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Ninety-three gigabytes, and that is the small one.",
+      "on_screen_text": "93.09 GB | the small one",
+      "visual_brief": "Frame 1, fully composed and legible: a dark silicon wafer fills the frame, faint die grid etched across it, giant amber 93.09 GB centered in the safe area. Motion onset at t=0.35s: the number scales gently from 1.0 to 1.04 on 'Ninety-three gigabytes'. The caption 'the small one' fades in beneath on 'the small one'. Only those two elements move; first and last eight frames hold stable.",
+      "est_duration_s": 2.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "GLM Flash went open weight, free to download. You want it on your machine tonight.",
+      "on_screen_text": "GLM Flash · open weights | free to download",
+      "visual_brief": "Centered stack on dark PCB texture: a chip badge reading 'GLM Flash' with a status row 'open weights' rises in place on 'went open weight'; the caption 'free to download' fades in beneath on 'free to download'. On 'your machine tonight', a small etched tower-PC icon fades in at the stack base. One amber accent on the status row; at most two elements animate at once.",
+      "est_duration_s": 4.1
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Its smallest file spends a single bit per weight. Your gaming card holds thirty-two gigabytes of memory.",
+      "on_screen_text": "the smallest file | your card: 32 GB",
+      "visual_brief": "Split compare: left, a stack of file shards labeled 'the smallest file' rises in place on 'spends a single bit per weight'; right, a GPU card outline with '32 GB' etched on the heat spreader fades in on 'thirty-two gigabytes of memory'. After that phrase, the file stack's top shards glow amber, towering past the card outline. Everything stays inside the margins; the card never moves.",
+      "est_duration_s": 4.7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "The page says eighteen billion active parameters. Sounds runnable. But it's a mixture of experts, a whole staff behind a receptionist.",
+      "on_screen_text": "18B active parameters | a staff behind a receptionist",
+      "visual_brief": "A die-shot grid of identical expert cores in dim silicon gray fills the safe area. A counter chip '18B active parameters' fades in top-center on 'eighteen billion active parameters' and settles on 'Sounds runnable'. On 'a whole staff behind a receptionist', one core at the grid edge lights amber as the receptionist and a thin routing trace draws from it into the field. Chip and trace are the only movers.",
+      "est_duration_s": 5.8,
+      "render_notes": "Silicon pack: expert cores as uniform SRAM blocks; receptionist core slightly larger at the grid edge; single amber accent."
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Each word wakes a few specialists. Memory keeps the whole building, because the receptionist picks fresh every word. All three hundred twenty billion parameters stay loaded.",
+      "on_screen_text": "each word wakes a few | all 320B stay loaded",
+      "visual_brief": "Diagram flow: the amber receptionist node routes a trace to a small cluster of cores that light on 'wakes a few specialists'. On 'Memory keeps the whole building', the entire core field rises to a steady half glow behind the lit cluster. The trace redraws to a different cluster on 'picks fresh every word'. A footer chip 'all 320B stay loaded' fades in on 'three hundred twenty billion parameters stay loaded'.",
+      "est_duration_s": 7.1,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "This drop is for unified memory, where processor and graphics share a single pool. Unsloth's guide sizes it for one hundred twenty-eight gigabyte machines.",
+      "on_screen_text": "unified memory: one shared pool | Unsloth's guide: 128 GB machines",
+      "visual_brief": "Centered stack: CPU die and GPU die sit on one wide memory slab, clean silicon blocks; the slab caption 'one shared pool' fades in on 'share a single pool'. A small guide chip 'Unsloth' rises in place on 'Unsloth's guide'. On 'one hundred twenty-eight gigabyte machines', the slab edge lights amber and the caption '128 GB machines' fades in beneath it. Two movers maximum at any moment.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s7",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Before you download, read your total memory. If it's smaller than the file, close the tab.",
+      "on_screen_text": "your total memory? | smaller than the file? close the tab",
+      "visual_brief": "Giant text card mirroring frame 1: 'your total memory?' centered where the number stood, legible on 'read your total memory'. A thin amber rule draws beneath it on 'smaller than the file'. Hard cut to 'close the tab' as a single centered block on 'close the tab'. Wordmark settles in the final half second; the last frame rhymes with frame 1, same composition, same amber on dark wafer. Nothing follows.",
+      "est_duration_s": 4.4,
+      "render_notes": "Echo the s1 wafer backdrop exactly; wordmark settle in the final 0.5s."
+    }
+  ],
+  "notes_for_review": "Screen shows 93.09 GB while narration says ninety-three gigabytes; the rounding in speech is deliberate. Unsloth's 120.37 GB pick (UD-IQ3_XXS) is omitted to hold the five-number budget; s6 compresses claim 5 to 'sizes it for one hundred twenty-eight gigabyte machines'. The payoff check (total memory smaller than the file means close the tab) is the safe floor from the brief's process steps; Unsloth's stated need for the 1-bit build is 100 GB. The receptionist limit is the 'picks fresh every word' clause in s5. No CTA in narration by design; the ask lives in the description."
+}

@@ -1,0 +1,256 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-08-29T19:33:55+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-08-29-glm-5-3-just-went-open-weight-storyboard.json",
+    "research_path": null,
+    "project_record": null,
+    "ledger_path": null
+  },
+  "research_metrics": null,
+  "board_metrics": {
+    "number_spend": {
+      "total": 0,
+      "spent": 0,
+      "distinct": 0,
+      "score": null,
+      "detail": []
+    },
+    "entity_spend": {
+      "total": 0,
+      "found_count": 0,
+      "score": null,
+      "found": [],
+      "missing": [],
+      "top2": [],
+      "top2_present": false,
+      "entities": []
+    },
+    "skeleton": {
+      "sentences": 17,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "93.09 GB. The small one.",
+      "first_sentence": "Ninety-three gigabytes, and that is the small one."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "number-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 7,
+      "specific_count": 0,
+      "ratio": 0.0,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 2.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Ninety-three gigabytes, and that is the small one."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 4.1,
+          "specific": false,
+          "hits": [],
+          "narration": "GLM Flash went open weight, free to download. You want it on your machine tonight."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 4.7,
+          "specific": false,
+          "hits": [],
+          "narration": "Its smallest file spends a single bit per weight. Your gaming card holds thirty-two gigabytes of memory."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 5.8,
+          "specific": false,
+          "hits": [],
+          "narration": "The page says eighteen billion active parameters. Sounds runnable. But it's a mixture of experts, a whole staff behind a receptionist."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 7.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Each word wakes a few specialists. Memory keeps the whole building, because the receptionist picks fresh every word. All three hundred twenty billion parameters stay loaded."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 8.2,
+          "specific": false,
+          "hits": [],
+          "narration": "This drop is for unified memory, where processor and graphics share a single pool. Unsloth's guide sizes it for one hundred twenty-eight gigabyte machines. The license opened. The memory didn't."
+        },
+        {
+          "id": "s7",
+          "role": "payoff_close",
+          "est_duration_s": 4.4,
+          "specific": false,
+          "hits": [],
+          "narration": "Before you download, read your total memory. If it's smaller than the file, close the tab."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.4,
+      "words": 136,
+      "sentences": 17,
+      "est_speech_s": 46.9,
+      "vo_band_ok": true
+    },
+    "narration_full": "Ninety-three gigabytes, and that is the small one. GLM Flash went open weight, free to download. You want it on your machine tonight. Its smallest file spends a single bit per weight. Your gaming card holds thirty-two gigabytes of memory. The page says eighteen billion active parameters. Sounds runnable. But it's a mixture of experts, a whole staff behind a receptionist. Each word wakes a few specialists. Memory keeps the whole building, because the receptionist picks fresh every word. All three hundred twenty billion parameters stay loaded. This drop is for unified memory, where processor and graphics share a single pool. Unsloth's guide sizes it for one hundred twenty-eight gigabyte machines. The license opened. The memory didn't. Before you download, read your total memory. If it's smaller than the file, close the tab.",
+    "on_screen": "93.09 GB. The small one. | 93.09 GB | the small one | GLM Flash \u00b7 open weights | free to download | the smallest file | your card: 32 GB | 18B active parameters | a staff behind a receptionist | each word wakes a few | all 320B stay loaded | unified memory: one shared pool | Unsloth's guide: 128 GB machines | your total memory? | smaller than the file? close the tab"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-08-29-glm-5-3-just-went-open-weight-storyboard.json",
+        "scenes": 7,
+        "fk_grade": 6.4,
+        "words": 136,
+        "est_speech_s": 46.9,
+        "blockers": [],
+        "advisories": [
+          "s1: number without referent: '\u2026Ninety-three gigabytes' \u2014 name what it measures ('gigabytes of memory', 'billion parameters')",
+          "narration ~47s at 2.9wps vs target 35s"
+        ],
+        "violations": [
+          "s1: number without referent: '\u2026Ninety-three gigabytes' \u2014 name what it measures ('gigabytes of memory', 'billion parameters')",
+          "narration ~47s at 2.9wps vs target 35s"
+        ],
+        "warnings": [
+          "FK grade 6.4 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s2: 'GLM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "136 words \u2014 32-38s band wants ~85-110"
+        ]
+      }
+    },
+    "research": null
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [],
+    "detail": {
+      "number_spend": {
+        "spent": 0,
+        "heard": 0,
+        "total": 0,
+        "need": "n/a",
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": null,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 0,
+        "need": "n/a",
+        "total": 7
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "number-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": false,
+        "ok": null,
+        "reason": "not run: no --ledger was passed, so nothing checks this script against the last five"
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
