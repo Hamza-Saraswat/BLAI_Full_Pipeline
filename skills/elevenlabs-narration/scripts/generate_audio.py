@@ -337,7 +337,11 @@ def kokoro_paths(root) -> dict:
     }
 
 
-def choose_engine(requested: str, kk: dict, api_key: str, voice_id: str) -> tuple:
+def cbx_python(venv: str) -> pathlib.Path:
+    return pathlib.Path(venv).expanduser() / "bin" / "python"
+
+
+def choose_engine(requested: str, kk: dict, api_key: str, voice_id: str, cbx_venv: str = "") -> tuple:
     """Return (engine, reason). Raises SystemExit naming both options when neither is usable."""
     eleven_ok = bool(api_key and voice_id)
     kokoro_ok = kk["model"].exists()
@@ -352,13 +356,21 @@ def choose_engine(requested: str, kk: dict, api_key: str, voice_id: str) -> tupl
             raise SystemExit("--engine kokoro needs the model at %s (pass --kokoro-root or set "
                              "BLAI_KOKORO_ROOT)" % kk["model"])
         return "kokoro", "asked for with --engine kokoro"
+    cbx_ok = cbx_python(cbx_venv).exists() if cbx_venv else False
+    if requested == "chatterbox":
+        if not cbx_ok:
+            raise SystemExit("--engine chatterbox needs a venv with chatterbox-tts at %s "
+                             "(pass --cbx-venv or set BLAI_CHATTERBOX_VENV)" % cbx_venv)
+        return "chatterbox", "asked for with --engine chatterbox"
     if eleven_ok:
         return "elevenlabs", "ELEVENLABS_API_KEY and ELEVEN_VOICE_ID are both set"
     if kokoro_ok:
         return "kokoro", "%s not set, local model found at %s" % (eleven_missing, kk["model"])
+    if cbx_ok:
+        return "chatterbox", "%s not set, no kokoro model, chatterbox venv at %s" % (eleven_missing, cbx_venv)
     raise SystemExit("no voice engine: set ELEVENLABS_API_KEY and ELEVEN_VOICE_ID for ElevenLabs, "
-                     "or point --kokoro-root at a checkout with pipeline/models/kokoro-v1.0.onnx "
-                     "for the local Kokoro engine (looked at %s)" % kk["model"])
+                     "point --kokoro-root at a checkout with pipeline/models/kokoro-v1.0.onnx, "
+                     "or --cbx-venv at a Chatterbox venv (looked at %s and %s)" % (kk["model"], cbx_venv))
 
 
 def check_kokoro(kk: dict) -> None:
@@ -378,6 +390,21 @@ def kokoro_synth(kk: dict, text_file: pathlib.Path, out_wav: pathlib.Path, voice
     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     if proc.returncode != 0 or not out_wav.exists():
         raise SystemExit("kokoro tts_local.py exited %d: %s" % (proc.returncode, proc.stderr.strip()[-800:]))
+    try:
+        return json.loads(proc.stdout.strip().splitlines()[-1])
+    except (ValueError, IndexError):
+        return {}
+
+
+def cbx_synth(cbx_venv: str, text_file: pathlib.Path, out_wav: pathlib.Path, ref: str) -> dict:
+    """One chunk through chatterbox_tts.py inside the Chatterbox venv (24 kHz out)."""
+    runner = pathlib.Path(__file__).parent / "chatterbox_tts.py"
+    cmd = [str(cbx_python(cbx_venv)), str(runner), "--script-file", str(text_file), "--out", str(out_wav)]
+    if ref:
+        cmd += ["--ref", ref]
+    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if proc.returncode != 0 or not out_wav.exists():
+        raise SystemExit("chatterbox_tts.py exited %d: %s" % (proc.returncode, proc.stderr.strip()[-800:]))
     try:
         return json.loads(proc.stdout.strip().splitlines()[-1])
     except (ValueError, IndexError):
@@ -575,7 +602,7 @@ def main() -> int:
     src.add_argument("--text", help="plain-text narration file")
     src.add_argument("--storyboard", help="storyboard JSON; uses its narration_full field")
     ap.add_argument("--out", required=True, help="output directory")
-    ap.add_argument("--engine", choices=["auto", "elevenlabs", "kokoro"], default="auto",
+    ap.add_argument("--engine", choices=["auto", "elevenlabs", "kokoro", "chatterbox"], default="auto",
                     help="auto (default): ElevenLabs when its key and voice id are set, else local Kokoro")
     ap.add_argument("--voice-id", default=None, help="ElevenLabs voice id (default ELEVEN_VOICE_ID)")
     ap.add_argument("--model", default=None, help="model id (default ELEVEN_MODEL_ID or %s)" % DEFAULT_MODEL)
@@ -588,6 +615,11 @@ def main() -> int:
     ap.add_argument("--kokoro-speed", type=float, default=KOKORO_SPEED, help="Kokoro speed (default %s)" % KOKORO_SPEED)
     ap.add_argument("--kokoro-root", default=None, help="checkout that owns the Kokoro model, venv and "
                     "tts_local.py (default BLAI_KOKORO_ROOT or %s)" % KOKORO_ROOT)
+    ap.add_argument("--cbx-venv", default=os.environ.get("BLAI_CHATTERBOX_VENV", "").strip() or
+                    str(pathlib.Path.home() / "blai" / "voice" / "cbx-venv"),
+                    help="Chatterbox venv for --engine chatterbox (default BLAI_CHATTERBOX_VENV)")
+    ap.add_argument("--voice-ref", default=os.environ.get("BLAI_VOICE_REF", "").strip(),
+                    help="reference wav for the Chatterbox clone; empty = stock voice (stand-in)")
     ap.add_argument("--align", choices=["auto", "whisper", "proportional"], default="auto",
                     help="Kokoro word timing: auto (whisper.cpp when built, else proportional)")
     ap.add_argument("--dry-run", action="store_true", help="no network, no engine: silent wav + synthetic alignment")
@@ -634,12 +666,12 @@ def main() -> int:
     if args.dry_run:
         engine, why = (args.engine if args.engine != "auto" else "none"), "dry run: nothing is synthesized"
     else:
-        engine, why = choose_engine(args.engine, kk, api_key, voice_id)
+        engine, why = choose_engine(args.engine, kk, api_key, voice_id, args.cbx_venv)
     log("engine: %s (%s)" % (engine, why))
-    local = engine == "kokoro"
+    local = engine in ("kokoro", "chatterbox")
     credits = 0.0 if local else chars_sent * CREDITS_PER_CHAR.get(model, 1.0)
     usd = 0.0 if local else chars_sent / 1000.0 * USD_PER_1K_CHARS.get(model, 0.10)
-    engine_model = KOKORO_MODEL_NAME if local else model
+    engine_model = ("chatterbox" if engine == "chatterbox" else KOKORO_MODEL_NAME) if local else model
     log("%d chars (%d after aliases, %d alias hits), %d chunk(s), model %s, ~%d credits" % (
         len(original), chars_sent, sum(a["count"] for a in applied), len(chunks), engine_model, credits))
 
@@ -657,8 +689,13 @@ def main() -> int:
             offset += share
         source = "dry-run"
     elif local:
-        check_kokoro(kk)
-        log("kokoro: %s, voice %s, speed %s" % (kk["model"], args.kokoro_voice, args.kokoro_speed))
+        if engine == "kokoro":
+            check_kokoro(kk)
+            log("kokoro: %s, voice %s, speed %s" % (kk["model"], args.kokoro_voice, args.kokoro_speed))
+        else:
+            if not have("ffmpeg"):
+                raise SystemExit("ffmpeg is required to resample and concatenate chunks")
+            log("chatterbox: venv %s, ref %s" % (args.cbx_venv, args.voice_ref or "(stock voice, stand-in)"))
         offset = 0.0
         wavs = []
         durations = []
@@ -671,10 +708,16 @@ def main() -> int:
             else:
                 log("chunk %02d/%02d: %d chars" % (i + 1, len(chunks), len(chunk)))
                 chunk_txt.write_text(chunk + "\n", encoding="utf-8")
-                info = kokoro_synth(kk, chunk_txt, raw, args.kokoro_voice, args.kokoro_speed)
-                meta.write_text(json.dumps({"chars": len(chunk), "voice": args.kokoro_voice,
-                                            "speed": args.kokoro_speed, "engine": "kokoro",
-                                            "kokoro": info}), encoding="utf-8")
+                if engine == "kokoro":
+                    info = kokoro_synth(kk, chunk_txt, raw, args.kokoro_voice, args.kokoro_speed)
+                    meta.write_text(json.dumps({"chars": len(chunk), "voice": args.kokoro_voice,
+                                                "speed": args.kokoro_speed, "engine": "kokoro",
+                                                "kokoro": info}), encoding="utf-8")
+                else:
+                    info = cbx_synth(args.cbx_venv, chunk_txt, raw, args.voice_ref)
+                    meta.write_text(json.dumps({"chars": len(chunk), "engine": "chatterbox",
+                                                "ref": args.voice_ref or "stock",
+                                                "chatterbox": info}), encoding="utf-8")
             wav_chunk = chunks_dir / ("%02d-44k.wav" % i)
             decode_to_wav(raw, wav_chunk)               # 44.1 kHz mono, the pipeline's contract
             d = probe_duration(wav_chunk)

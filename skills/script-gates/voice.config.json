@@ -10,7 +10,9 @@
   },
   "voices_wps": {
     "kokoro:am_eric": 3.65,
-    "_kokoro_note": "Measured 2026-08-23 over three real narrations: 3.472 (101w Short), 3.795 (283w Short), 3.691 (1805w). Text choice moves it ~15%; 3.65 is the midpoint. Every run writes its own words_per_second into voice.json, so this accumulates from real renders."
+    "_kokoro_note": "Measured 2026-08-23 over three real narrations: 3.472 (101w Short), 3.795 (283w Short), 3.691 (1805w). Text choice moves it ~15%; 3.65 is the midpoint. Every run writes its own words_per_second into voice.json, so this accumulates from real renders.",
+    "chatterbox:stock": 3.35,
+    "_chatterbox_note": "Measured 2026-08-29, 13-word Mac CPU sample; refine from the Spark's longer runs. The cloned voice gets its own entry (chatterbox:<ref-name>) once the creator's reference lands."
   },
   "_note": "wps and wps_by_format are PROVISIONAL for the ElevenLabs clone and MUST be re-measured from the first three renders (audio duration / word count) and updated here. voices_wps holds MEASURED rates per engine:voice; scripts prefer voices_wps[engine:voice], then wps_by_format[script_format], then wps, then the band's wps_fallback in formats.json. Finding 42 (2026-08-23): the old flat 2.9 guess was 21-45% off every measured engine, which made every est_duration_s and the episode-length target wrong."
 }
