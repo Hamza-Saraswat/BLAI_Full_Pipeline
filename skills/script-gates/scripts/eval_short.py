@@ -21,8 +21,8 @@ gates_for(); the GATE_FALLBACKS dict below is only a per-key safety net)
   number_spend       classic: at least 2 and at most 5 key numbers spent;
                      smooth-explainer: a cap of 3. The floor is clamped to the
                      brief's own total so a thin brief cannot make it unreachable
-  entity_spend       >= 0.5 of the filtered named-entity set
-  top2               both top-ranked entities present (quality, then frequency)
+  entity_spend       >= 0.5 of the filtered named-entity set (ADVISORY since finding 9)
+  top2               both top-ranked entities present (ADVISORY since finding 9)
   hook_concrete      hook + first sentence carries a digit/number/entity
   scene_specificity  every scene but one (classic) / but two (smooth) carries a key
                      number, a named entity or a glossary term from the brief
@@ -907,9 +907,9 @@ def apply_gates(board, validator_blockers, fmt="classic", sameness=None):
     when no ledger was supplied, in which case that gate does not run at all
     and says so in the detail block."""
     if board is None:
-        return {"gate1_ready": False, "failures": ["no_storyboard"], "detail": {}}
+        return {"gate1_ready": False, "failures": ["no_storyboard"], "advisories": [], "detail": {}}
     G = gates_for(fmt)
-    f, d = [], {}
+    f, adv, d = [], [], {}
     # With no research brief there is nothing to "spend" — the spend gates are
     # not applicable rather than failed (keeps briefless boards from reading as
     # broken in the report).
@@ -942,13 +942,17 @@ def apply_gates(board, validator_blockers, fmt="classic", sameness=None):
                    "any" if maxc is None else str(maxc)))
             f.append("number_spend")
 
+    # entity_spend and top2 are ADVISORY, not hard gates (finding 9, 2026-08-23 dry run):
+    # the extractor's "entities" include sentence fragments, licenses and quant format names,
+    # so as hard gates they failed 35 of the 38 published boards and every fresh draft.
+    # They still appear in the report; the writer and the judge read them, nothing blocks on them.
     es = board["entity_spend"]
-    d["entity_spend"] = {"score": es["score"], "need": G["entity_spend"]["min_ratio"]}
+    d["entity_spend"] = {"score": es["score"], "need": G["entity_spend"]["min_ratio"], "advisory": True}
     if es["total"] and (es["score"] or 0) < G["entity_spend"]["min_ratio"]:
-        f.append("entity_spend")
-    d["top2"] = {"top2": es["top2"], "present": es["top2_present"]}
+        adv.append("entity_spend")
+    d["top2"] = {"top2": es["top2"], "present": es["top2_present"], "advisory": True}
     if es["total"] and not es["top2_present"]:
-        f.append("top2")
+        adv.append("top2")
 
     d["hook_concrete"] = {"concrete": board["hook"]["concrete"], "via": board["hook"]["via"],
                           **({} if G["hook_concrete"]["required"] else {"waived": True})}
@@ -962,6 +966,15 @@ def apply_gates(board, validator_blockers, fmt="classic", sameness=None):
                               "total": ss["total"]}
     if has_brief and ss["specific_count"] < need_spec:
         f.append("scene_specificity")
+
+    # Finding 18: "Not antithetical" (voice-rules) is checkable -- "not X, but Y" at most
+    # once per script. Advisory: judges disagreed on hand counts, so the mechanical count
+    # informs rather than blocks.
+    narration_all = board.get("narration_full") or ""
+    nxby = len(re.findall(r"\bnot\s+(?:a\s+|an\s+|the\s+)?\w+(?:\s\w+){0,3}?[,;]?\s+but\s+", narration_all, re.I))
+    d["not_x_but_y"] = {"count": nxby, "max": 1, "advisory": True}
+    if nxby > 1:
+        adv.append("not_x_but_y")
 
     sk = board["skeleton"]
     d["skeleton"] = {"density": sk["density"], "max": G["skeleton"]["max_density"]}
@@ -1036,7 +1049,7 @@ def apply_gates(board, validator_blockers, fmt="classic", sameness=None):
     if validator_blockers is not None and validator_blockers > G["validator"]["max_blockers"]:
         f.append("validator")
 
-    return {"gate1_ready": not f, "failures": f, "detail": d}
+    return {"gate1_ready": not f, "failures": f, "advisories": adv, "detail": d}
 
 
 def research_metrics(r):

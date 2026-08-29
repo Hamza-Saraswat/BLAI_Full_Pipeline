@@ -45,5 +45,5 @@ Not in either API, Studio only: impressions and impressions click-through rate, 
 ## Reading the numbers
 
 - Impressions CTR of 2 to 10 % is typical (YouTube's own FAQ). High CTR with low average view duration means the title or thumbnail over-promised; fix the package, not the script.
-- Shorts are judged by engaged views and "viewed vs swiped away" (Studio); a weak Short does not hurt the next long-form video, they are ranked per video.
+- Shorts are judged by engaged views and "viewed vs swiped away" (Studio); each video is ranked on its own.
 - Views/day across videos of different ages is a rough ranking key; retention is the signal that tells why. Until OAuth exists the retro states patterns only with two or more videos per group.

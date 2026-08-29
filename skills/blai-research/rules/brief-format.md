@@ -20,7 +20,12 @@ hub: "[[videos/2026-08-25-deepseek-v4-flash-128gb]]"
 # Research brief: Can DeepSeek V4 Flash run on 128 GB?
 
 ## Summary
-Three to five lines for the reviewer: the thesis, the most arresting number, the strongest concrete case, what could not be verified, any conflict between sources.
+Three to five lines for the reviewer, carrying five DISTINCT elements: the thesis, the most
+arresting number, the strongest concrete case, what could not be verified, any conflict between
+sources. The Summary is not a restatement of `## Thesis` -- in the 2026-08-23 dry run every
+brief's Summary was byte-identical to its Thesis, which collapsed the five things two blind
+writers had to diverge on into one sentence, and both writers then wrote the same hook
+(findings 12 and 29). If your Summary and Thesis read the same, the Summary is not done.
 
 ## Thesis
 One sentence: the single idea the video lands.
@@ -103,6 +108,5 @@ Open questions, conflicting sources, thin spots. Omit the heading when empty.
 | Depth | Sources fetched | Claims | Key numbers | Subagents |
 |-------|-----------------|--------|-------------|-----------|
 | `standard` (Shorts) | 8-12 | 5-10 | 3-8 | 2-3 |
-| `deep` (long-form) | 15-25 | 10-20 | 8-15 | 4-5 |
 
 A brief above the band is not better; it is a writer reading more than the video can spend.

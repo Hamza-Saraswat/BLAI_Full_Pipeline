@@ -93,23 +93,17 @@ read `title + summary`:
    how does, understanding, deep dive, plain English, "in N seconds". Topic words alone
    (quantization, KV cache, MoE) do not make an explainer; a release that mentions them is news
 6. a versus phrase in the title with fewer than two products still lands in `comparison`
-7. everything else is `news-react`, the lane for things that shipped, changed or broke
+7. a release of something runnable (kind `model`, `runtime` or `format`, with a named product)
+   lands in `how-to`: the video a release enables is "install and run it", not "it shipped".
+   Added after the 2026-08-23 dry run put 54 of 64 items in `news-react` purely because
+   GitHub releases and HN posts are news-shaped (finding 2)
+8. everything else is `news-react`, the lane for time-bound events with nothing to run
 
-## Series assignment (workspace long-form)
 
-1. `beyond-llms` for any Hugging Face pipeline other than text-generation, or speech, voice,
-   transcription, image or video generation keywords
-2. `dgx-spark-specific` when DGX Spark is named together with firmware, driver, ConnectX,
-   two Sparks, GB10, Spark OS, playbook, NCCL, 200 GbE, CUDA graphs on GB10, sm_121
-3. `my-dgx-spark-projects`: fine-tune, LoRA, Unsloth, agent, RAG, "I built", project, home lab
-4. `benchmarks`: benchmark, tok/s, throughput, latency, vs, faster, Nx, measured, side by side
-5. `inference-engineering-at-home`: quantization, GGUF, AWQ, FP8, FP4, NVFP4, KV cache, batch,
-   context window, speculative decoding, flash attention, kernels, CUDA graphs, offload, serving,
-   or any runtime name
-6. `local-ai-for-dummies`: explained, what is, beginner, basics, intro, why does, how does,
-   "cheaper than", "the math"
-7. no rule: a named model goes to `benchmarks`, a named runtime or format to
-   `inference-engineering-at-home`, the rest to `local-ai-for-dummies`
+## Relevance gate
 
-The group is stored in `signals.group`; the top-level item keys stay exactly
-`id, title, url, source, published_at, signals, products, summary, why_now, score`.
+Scoring runs first, then every item must pass a relevance test before it reaches the digest: it names a known product, or its title, summary or URL carries a topic term (`TOPIC_TERMS` in `scripts/scoring.py`: llm, local ai, gpu, vram, quantization, kv cache, tokens per second, fine-tuning, inference, mixture of experts, and the rest). Everything else is dropped and counted on the digest's stats line.
+
+This exists because the discussion sources rank by popularity, not by topic. On the first live run, 2026-08-23, Hacker News contributed a story about a missing crypto executive that scored 49 and a story about a marathon medal that scored 38, both on discussion volume alone, both with no product and no topic term. Neither is a video this channel could make.
+
+The gate is deliberately generous: one topic term is enough, and `ai` alone passes. It removes items that are about nothing we cover, not items that are a stretch. Tightening it is a scoring change, not a relevance change.

@@ -15,13 +15,13 @@ The five cloud routines are created and updated with the `RemoteTrigger` tool fr
 |---------|--------|----|--------------------------|---------|-------------------|
 | Shorts ideas | `blai-shorts-ideas` | `trig_01M1aFeB4XKCWyU8Ho2PxFv1` | `0 11 * * *` | `claude-sonnet-5` | vidIQ |
 | Shorts produce | `blai-shorts-produce` | `trig_01C8VWEn3GmqxXzwkoca7T7S` | `0 12 * * *` | `claude-opus-5` | none |
-| Long-form ideas | `blai-longform-ideas` | `trig_01UyPJJtjsuRWdRbUfVbv19r` | `0 11 * * 1,3,5` | `claude-sonnet-5` | vidIQ |
-| Long-form produce | `blai-longform-produce` | `trig_015mWBSsmqS3qLsErDsWTJyQ` | `0 12 * * 1,3,5` | `claude-opus-5` | none |
 | Weekly retro | `blai-weekly-retro` | `trig_015whWPfYgc5hREUHMPq8vP2` | `0 13 * * 0` | `claude-sonnet-5` | none |
 
 Cron is UTC; the local times in the routine files assume CT summer time. Move the ideas and produce crons one hour later in winter if 06:00/07:00 CT must hold.
 
-All five were created on 2026-08-22 (disabled, no connectors attached). Links: https://claude.ai/code/routines/<id>.
+The shorts and retro routines were created on 2026-08-22 (disabled, no connectors attached); the two long-form routines from that batch were disabled for good on 2026-08-29 when long-form was scrapped, and can be deleted at claude.ai/code/routines. Links: https://claude.ai/code/routines/<id>.
+
+The registered shorts prompts predate the scoped `git-sync.sh` call (finding 41); re-create them from these files before enabling.
 
 ## Create body
 

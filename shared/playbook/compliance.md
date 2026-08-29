@@ -5,7 +5,7 @@ Source: YouTube Partner Program "inauthentic content" policy (July 2025, clarifi
 ## Every video must
 
 1. Carry an original argument or research angle, not a template with swapped nouns. The package note states the original insight in one sentence (`original_insight` field).
-2. Vary structure, hook, visuals and narration across episodes (the rotation ledgers enforce this).
+2. Vary structure, hook, visuals and narration across videos (the rotation ledgers enforce this).
 3. Keep a real human voice and editorial stance: the creator's own cloned voice, the creator's own measurements where possible.
 4. Never present an AI persona as a human expert on health, legal, finance or political topics. When a topic touches those (EU AI Act, HIPAA, pricing advice), the narration attributes claims to named sources and speaks as the creator.
 5. Avoid slideshow-plus-TTS formats, templated storylines and scrolling-text videos.
@@ -17,7 +17,7 @@ Set `true` only when the video contains realistic synthetic footage of real peop
 
 ## Other flags
 
-`selfDeclaredMadeForKids` is always `false` (the side effects of `true` are effectively irreversible). Shorts set `notifySubscribers=false`; long-form `true`.
+`selfDeclaredMadeForKids` is always `false` (the side effects of `true` are effectively irreversible). Shorts set `notifySubscribers=false`.
 
 ## Reused content
 

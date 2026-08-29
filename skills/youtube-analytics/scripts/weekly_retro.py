@@ -26,7 +26,7 @@ REPO = HERE.parents[2]
 sys.path.insert(0, str(REPO / "tools"))
 import hubnote  # noqa: E402
 
-WORKSPACES = ("shorts", "long-form")
+WORKSPACES = ("shorts",)
 YT_ID_RE = re.compile(r"(?:youtu\.be/|[?&]v=|/shorts/|/live/|/embed/)([A-Za-z0-9_-]{11})")
 PILLAR_FILE = "brand-vault/content-pillars.md"
 TIMING_FILE = "shared/playbook/publish-timing.md"
@@ -230,18 +230,6 @@ def hypotheses(ranked: list, week: str):
                        % (h1, fmt(m1), n1, fmt(m2), h2, n2, h1))
             edits.append("- [ ] `%s`: note that %s:00 CT beat %s:00 CT by %.1fx in %s (%d vs %d Shorts) and put the "
                          "stronger daily idea there" % (TIMING_FILE, h1, h2, m1 / m2, week, n1, n2))
-    days = group_means([v for v in ranked if v["workspace"] == "long-form"], "slot")
-    if len(days) >= 2:
-        best = max(days.items(), key=lambda kv: kv[1][1])
-        hyp.append("Long-form: the %s slot led with %s views/day; with %d episodes a week this is a weak signal. Next "
-                   "week: keep the slots, revisit after four weeks." % (best[0], fmt(best[1][1]), len(days)))
-    by_ws = group_means(ranked, "workspace")
-    if len(by_ws) == 2:
-        ns, nl = by_ws["shorts"][0], by_ws["long-form"][0]
-        hyp.append("Shorts averaged %s views/day (%d video%s), long-form %s (%d episode%s). They are ranked separately "
-                   "by YouTube; compare each against its own previous week, not against each other."
-                   % (fmt(by_ws["shorts"][1]), ns, "" if ns == 1 else "s", fmt(by_ws["long-form"][1]), nl,
-                      "" if nl == 1 else "s"))
     scored = [v for v in ranked if v.get("seo")]
     if len(scored) >= 4:
         cut = statistics.median(v["seo"] for v in scored)
@@ -338,7 +326,7 @@ def fixture():
         "bbbbbbbbbb4": ("2026-08-18-install-load-serve", "shorts", "how-to", "how-to-three-moves", "axon", 79),
         "bbbbbbbbbb5": ("2026-08-19-clinic-cannot-paste-data", "shorts", "enterprise-privacy", "story-first", "silicon", 68),
         "bbbbbbbbbb6": ("2026-08-20-moe-made-physical", "shorts", "explainer", "worked-example", "sketch", 84),
-        "cccccccccc1": ("2026-08-18-spark-vs-5090-benchmarks", "long-form", "benchmarks", "", "", 90),
+        "cccccccccc1": ("2026-08-18-spark-vs-5090-benchmarks", "shorts", "news-react", "", "", 90),
     }
     videos = [{"slug": s, "workspace": ws, "title": s[11:].replace("-", " "), "pillar": pil, "structure": st,
                "style_pack": sp, "seo_score": seo, "published_slot": "", "video_id": vid}

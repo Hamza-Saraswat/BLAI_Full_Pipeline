@@ -52,6 +52,11 @@ What the reviewer should check (a number you rounded, a claim you softened, the 
 
 Rules: scene narration strings must concatenate exactly to `narration_full`; numbers are words in narration and digits on screen; a number on screen is spoken in the same scene; the last scene's role is `payoff_close`; the schema is `shared/schemas/storyboard.schema.json` and the validator in `skills/script-gates` is the judge.
 
+Two rules about time (findings 42 and 56, 2026-08-23 dry run):
+
+- `est_duration_s` = the scene's word count divided by the MEASURED words-per-second of the engine that will voice it (`skills/script-gates/voice.config.json`, `voices_wps`). Never a guessed rate: the old flat guess made every scene 9-38% longer on paper than in audio, and every brief's clock wrong with it.
+- `visual_brief` anchors every beat to a NARRATION PHRASE, never to a wall-clock second. "The rule draws under the number on 'gigabytes on disk'" survives re-timing; "at 4s the rule draws" pointed past the end of the scene in 6 of 15 rendered scenes. The renderer re-times scenes from the real word timings, so a phrase is the only stable address. Never schedule a beat before the words "motion onset" can legally begin (frame 9, t=0.30s).
+
 ## The drafts note
 
 `[slug]-drafts.md` holds both drafts, the judge's score table for every row, the winner, each graft with its reason, and two sentences on what the losing shape would have needed. Layout and scoring live in `judge-rubric.md`. This note is committed: the weekly retro reads it when one structure keeps losing.

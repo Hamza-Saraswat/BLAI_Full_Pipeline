@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Scoring for the trend radar: signal normalization, recency decay, product extraction,
-the why-now rubric, and lane or series assignment.
+the why-now rubric, and lane assignment.
 
 rules/scoring.md is the readable twin of this module. Change the two together.
 """
@@ -134,8 +134,6 @@ WHY_NOW = [
 _WHY_NOW_RES = [(kind, re.compile(pattern, re.I)) for kind, pattern in WHY_NOW]
 
 LANE_ORDER = ["news-react", "myth-bust", "comparison", "how-to", "explainer", "enterprise-privacy"]
-SERIES_ORDER = ["local-ai-for-dummies", "my-dgx-spark-projects", "benchmarks",
-                "inference-engineering-at-home", "dgx-spark-specific", "beyond-llms"]
 
 LANE_RULES = [
     ("comparison", r"\bvs\.?\b|versus|compared to|comparison|head[ -]to[ -]head|side by side|"
@@ -154,31 +152,6 @@ LANE_RULES = [
                   r"in \d+ seconds"),
 ]
 _LANE_RES = [(lane, re.compile(pattern, re.I)) for lane, pattern in LANE_RULES]
-
-BEYOND_LLM_TAGS = {"text-to-speech", "automatic-speech-recognition", "text-to-image",
-                   "text-to-video", "image-to-text"}
-SERIES_RULES = [
-    ("beyond-llms", r"text[ -]to[ -]speech|\btts\b|speech|whisper|\bvoice\b|\basr\b|transcri|"
-                    r"image generation|text[ -]to[ -]image|text[ -]to[ -]video|video model|"
-                    r"diffusion|\bflux\b|\bwan[ -]?\d|kokoro|comfyui|image[ -]to[ -]text|\bocr\b"),
-    ("dgx-spark-specific", r"firmware|driver|connectx|two (?:dgx )?sparks|dual[ -]spark|"
-                           r"2 dgx sparks|\bgb10\b|spark os|playbook|nvidia container|nccl|"
-                           r"200 ?gbe|cuda graphs? on gb10|sm_121"),
-    ("my-dgx-spark-projects", r"fine[ -]?tun|finetun|\blora\b|unsloth|\bagent|\brag\b|i built|"
-                              r"built a|project|home ?lab|here'?s the stack"),
-    ("benchmarks", r"benchmark|tok(?:ens)?/s|tokens per second|throughput|latency|\bvs\.?\b|"
-                   r"versus|faster|slower|\d+(?:\.\d+)?x\b|measured|side by side|compared|"
-                   r"ran the same|results"),
-    ("inference-engineering-at-home", r"quantiz|\bgguf\b|\bawq\b|\bfp8\b|\bfp4\b|nvfp4|kv cache|"
-                                      r"batch|context (?:length|window)|speculative|flash attention|"
-                                      r"kernel|cuda graph|offload|serving|vllm|llama\.cpp|sglang|"
-                                      r"tensorrt|ollama|lm studio|exllama|\bmlx\b|\bexo\b"),
-    ("local-ai-for-dummies", r"explained|what is|what are|beginner|for dummies|basics|\bintro|"
-                             r"plain|why (?:does|do|is|are|your|local)|understanding|how does|"
-                             r"cheaper than|the math"),
-]
-_SERIES_RES = [(series, re.compile(pattern, re.I)) for series, pattern in SERIES_RULES]
-
 
 def log_norm(value, full: float) -> float:
     """0..1 on a log scale; reaches 1.0 at `full` and stays there."""
@@ -297,22 +270,38 @@ def lane(title: str, summary: str, kinds: set, product_names: list[str]) -> str:
             return candidate
     if versus:
         return "comparison"
+    # Finding 2 (2026-08-23 dry run): without this, release-shaped sources put 54 of 64 items in
+    # news-react. A runnable release IS a how-to candidate: the video is "install and run it",
+    # not "it shipped". Only time-bound events with nothing to run stay news.
+    if kinds & {"model", "runtime", "format"} and named:
+        return "how-to"
     return "news-react"
 
 
-def series(text: str, kinds: set, pipeline_tag: str | None, product_names: list[str]) -> str:
-    """Long-form series. Non-text models go to beyond-llms before any keyword rule fires."""
-    if pipeline_tag in BEYOND_LLM_TAGS:
-        return "beyond-llms"
-    hits = [name for name, regex in _SERIES_RES if regex.search(text or "")]
-    if "dgx-spark-specific" in hits and "DGX Spark" in product_names:
-        return "dgx-spark-specific"
-    for candidate in ("beyond-llms", "my-dgx-spark-projects", "benchmarks",
-                      "inference-engineering-at-home", "local-ai-for-dummies", "dgx-spark-specific"):
-        if candidate in hits:
-            return candidate
-    if "model" in kinds:
-        return "benchmarks"
-    if "runtime" in kinds or "format" in kinds:
-        return "inference-engineering-at-home"
-    return "local-ai-for-dummies"
+# --- relevance ------------------------------------------------------------
+# A radar item must be about running AI on your own hardware. Hacker News ranks by
+# points, so without this gate a marathon medal story and a crypto disappearance
+# scored 38 and 49 on the 2026-08-23 live run purely on discussion volume.
+# An item passes when it names a known product OR carries a topic term.
+TOPIC_TERMS = [
+    r"\bl\.?l\.?m\b", r"\bslm\b", r"local ai", r"local model", r"on-?device", r"self-?host",
+    r"\bgpu\b", r"\bvram\b", r"\bnpu\b", r"\btpu\b", r"unified memory", r"memory bandwidth",
+    r"quantiz", r"\bgguf\b", r"\bfp(?:8|4|16)\b", r"\bint(?:4|8)\b", r"\bkv[ -]?cache\b",
+    r"\btoken(?:s|/s| per second)\b", r"context window", r"fine[- ]?tun", r"\blora\b",
+    r"open[- ]weights?", r"open[- ]source model", r"inference", r"\bprompt\b", r"embedding",
+    r"transformer", r"mixture of experts", r"\bmoe\b", r"diffusion", r"text[- ]to[- ]speech",
+    r"speech[- ]to[- ]text", r"\bagent(?:s|ic)?\b", r"\brag\b", r"vector (?:db|database|store)",
+    r"\bmodel weights?\b", r"\bcheckpoint\b", r"\bbenchmark\b", r"\bai\b",
+]
+_TOPIC_RES = [re.compile(rx, re.I) for rx in TOPIC_TERMS]
+
+
+def relevance(text: str, product_names) -> tuple[bool, str]:
+    """True when the item is about local AI. Returns (ok, reason)."""
+    if product_names:
+        return True, "product:" + product_names[0]
+    for rx in _TOPIC_RES:
+        m = rx.search(text or "")
+        if m:
+            return True, "topic:" + m.group(0).lower()
+    return False, "no product and no topic term"

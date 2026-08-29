@@ -1,0 +1,150 @@
+{
+  "slug": "2026-08-29-glm-5-3-just-went-open-weight",
+  "topic": "GLM-5.3 went open-weight but its smallest build outsizes every consumer GPU",
+  "title": "GLM-5.3 is free. Can your GPU run it?",
+  "description": "GLM-5.3 just went open-weight, and the smallest GGUF build is 93.09 GB. That is more than any consumer GPU holds, including the 32 GB flagship card. The catch is the architecture: 18B active parameters ride on 320B total, and memory follows the total. You'll learn the one-line memory check that tells you whether a release fits your machine before you download a single gigabyte. Sizes are from the Unsloth GLM-5.3-Flash GGUF listing; Unsloth's own guide points 128 GB unified-memory machines at its 3-bit build. Subscribe to Build Local AI for what actually runs on the box you own. (Narration is AI-generated.)",
+  "hashtags": [
+    "#GLM53Flash",
+    "#LocalLLM",
+    "#BuildLocalAI"
+  ],
+  "tags": [
+    "glm-5.3",
+    "glm-5.3-flash",
+    "glm 5.3 open weight",
+    "can my gpu run glm 5.3",
+    "glm 5.3 system requirements",
+    "glm 5.3 gguf",
+    "unsloth gguf",
+    "open weight models",
+    "active vs total parameters",
+    "mixture of experts memory",
+    "moe vram requirements",
+    "128gb unified memory",
+    "mac studio local llm",
+    "dgx spark",
+    "run llm locally",
+    "local llm hardware guide",
+    "gguf quantization sizes",
+    "how much vram for llm",
+    "93 gb model download",
+    "build local ai"
+  ],
+  "hook_text": "GLM-5.3: free. Your GPU can't have it.",
+  "hook_candidates": [
+    "GLM-5.3 went free today. Your GPU still can't have it.",
+    "GLM-5.3 is open-weight now. Opening it is the problem.",
+    "The license opened today. The memory didn't.",
+    "GLM-5.3 just went free. The smallest file is 93.09 GB.",
+    "Everyone's downloading GLM-5.3 tonight. Almost nobody can run it.",
+    "GLM-5.3: free for every machine your house doesn't have.",
+    "18B active parameters. Your card still loses.",
+    "The hottest free model of the week needs 93 GB.",
+    "Open-weight isn't open-hardware. GLM-5.3 proves it.",
+    "Your GPU has 24 GB. This free model starts at 93."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "EQUIPS, TEACHES",
+  "target_duration_s": 34,
+  "narration_full": "GLM five point three went free today. Your GPU still can't have it. Unsloth's smallest build is ninety-three point zero nine gigabytes of storage. Open weight promised you could run it. Eighteen billion active parameters, a size your card handles. The full model holds three hundred twenty billion parameters. Those are specialists behind a receptionist. She wakes a few per word, then re-picks. Anyone might be next, so everyone stays in memory. It serves machines holding one hundred twenty-eight gigabytes of unified memory. Processor and graphics share the pool. Usually the belief holds: shrunken builds fit your card. This one's the exception. The license opened. The memory didn't. Run the check: your machine's memory against the smallest file. If yours is smaller, close the tab.",
+  "analogy": {
+    "vehicle": "the receptionist",
+    "mapping": "The receptionist is the router; the specialists are the experts holding all three hundred twenty billion parameters; waking a few per word is the eighteen billion active slice; everyone staying in memory is why the total sets the memory bill.",
+    "limit": "She re-picks for every word, so it is never one hand-off; stated in the same beat ('then re-picks. Anyone might be next')."
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "GLM five point three went free today. Your GPU still can't have it.",
+      "on_screen_text": "Free today. Your GPU can't have it.",
+      "visual_brief": "Frame 1, fully composed and legible: a dark silicon die shot fills the safe area, package substrate edges visible, the die etched GLM-5.3, amber tracer lines idle. Hook text 'GLM-5.3: free. Your GPU can't have it.' sits centered above the die. Motion onset at 0.35s: on 'went free today' the amber traces ripple outward across the die, one element animating. On 'still can't have it' a smaller consumer GPU die fades in below at true relative scale, its traces staying dark. This die-over-dark-GPU composition is the loop anchor and returns in the final frame.",
+      "est_duration_s": 3.56
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Unsloth's smallest build is ninety-three point zero nine gigabytes of storage. Open weight promised you could run it.",
+      "on_screen_text": "Smallest build: 93.09 GB",
+      "visual_brief": "Wafer-dark background. On 'Unsloth's smallest build' a file outline etched in silicon fades in with the small static label 'Smallest build:'. On 'ninety-three point zero nine gigabytes' the giant amber figure 93.09 GB rises in place as the only animating text block and parks center frame. On 'promised you could run it' a thin padlock trace beside the number etches from closed to open while all text holds still. Hard cuts between text states, no cross-dissolves, one amber accent.",
+      "est_duration_s": 4.93,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Eighteen billion active parameters, a size your card handles. The full model holds three hundred twenty billion parameters.",
+      "on_screen_text": "18B active | 320B total",
+      "visual_brief": "Split-compare on a die floorplan. Left half labeled 18B active: a small cluster of core tiles. Right half labeled 320B total: the full core grid, mostly unlit. On 'eighteen billion active parameters' the left cluster's amber traces pulse once. On 'a size your card handles' a slim GPU card silhouette fades in under the left label. On 'three hundred twenty billion parameters' the right grid's tile outlines brighten row by row to show sheer count while the silhouette stays put. Labels static, one region animating at a time.",
+      "est_duration_s": 4.93,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Those are specialists behind a receptionist. She wakes a few per word, then re-picks. Anyone might be next, so everyone stays in memory.",
+      "on_screen_text": "Memory follows total, not active",
+      "visual_brief": "Diagram-flow on the die: a small router block top center, fan-out traces down to a grid of expert tiles. On 'specialists behind a receptionist' the fan-out traces fade in from router to tiles. On 'wakes a few per word' three scattered tiles light amber. On 'then re-picks' the lit trio hard-swaps to a different trio. On 'everyone stays in memory' every tile's outline glows faint, lit or not, and the caption 'Memory follows total, not active' appears via hard cut at the bottom of the safe area. At most two elements moving at once.",
+      "est_duration_s": 6.3
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "It serves machines holding one hundred twenty-eight gigabytes of unified memory. Processor and graphics share the pool.",
+      "on_screen_text": "Fits: 128 GB unified memory",
+      "visual_brief": "A unified-memory board shot in silicon-etch style: one wide memory slab bridging a CPU block and a GPU block. On 'one hundred twenty-eight gigabytes' the figure 128 GB scales in centered above the slab, the sole animating text. On 'unified memory' the static label 'Fits: 128 GB unified memory' hard-cuts in beneath it. On 'share the pool' two amber traces light from the CPU block and the GPU block into the same slab and meet in the middle.",
+      "est_duration_s": 4.66,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Usually the belief holds: shrunken builds fit your card. This one's the exception. The license opened. The memory didn't.",
+      "on_screen_text": "Most models fit | This one doesn't",
+      "visual_brief": "Split-compare of two release shelves. Left, labeled 'Most models fit': a stack of small die packages settling neatly inside a consumer card outline. Right, labeled 'This one doesn't': a single oversized package overhanging the same card outline. On 'usually the belief holds' the left packages fade into place. On 'shrunken builds fit your card' the left card outline pulses amber once. On 'this one's the exception' the right package's overhanging edge glows amber. On 'the license opened' an open-padlock trace etches beside the right package, recalling s2. On 'the memory didn't' everything freezes.",
+      "est_duration_s": 5.21
+    },
+    {
+      "id": "s7",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Run the check: your machine's memory against the smallest file. If yours is smaller, close the tab.",
+      "on_screen_text": "Your memory < smallest file | Close the tab",
+      "visual_brief": "Return to the frame-one composition: the etched GLM-5.3 die above, the dark consumer GPU die below, a deliberate loop-anchor recall. On 'run the check' the line 'Your memory < smallest file' rises in place between the two dies as the single animating text block. On 'the smallest file' the dark GPU die's outline pulses once, nothing else moving. On 'close the tab' the line hard-swaps to 'Close the tab', all motion stops, and the final half second is the wordmark settle over the still die, rhyming with frame 1.",
+      "est_duration_s": 4.66,
+      "render_notes": "The etched GLM-5.3 on the die is the documented loop-anchor recall exception: digits recalled visually, spoken back in s1."
+    }
+  ],
+  "notes_for_review": "All numbers verbatim from the brief: 93.09 GB (UD-IQ1_S), 320B/18B, 128 GB devices; nothing rounded, the full 'point zero nine' is spoken once. The hook and title say GLM-5.3 while the measured files belong to the Flash variant, the release's small model (full GLM-5.3 is 753B); the description names GLM-5.3-Flash, flag if narration should too. The 1-bit detail (even the one-bit quant is 93 GB) and the UD-IQ3_XXS name stay out of narration to hold the number band at five; the description carries the 3-bit pick. The receptionist's limit (re-picks every word) sits in the same beat; the on-screen line 'Memory follows total, not active' is the script's single not-X-but-Y and it is on screen only. s7's etched GLM-5.3 die is the loop-anchor recall exception, digits recalled visually and spoken in s1."
+}

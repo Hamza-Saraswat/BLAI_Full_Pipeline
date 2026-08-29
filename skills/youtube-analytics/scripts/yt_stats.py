@@ -37,7 +37,7 @@ except ImportError:  # running outside the repo: slug mapping is skipped
 
 API = "https://www.googleapis.com/youtube/v3/"
 DEFAULT_HANDLE = "@BuildLocalAI"
-WORKSPACES = ("shorts", "long-form")
+WORKSPACES = ("shorts",)
 YT_ID_RE = re.compile(r"(?:youtu\.be/|[?&]v=|/shorts/|/live/|/embed/)([A-Za-z0-9_-]{11})")
 FIXTURE = {
     "channel": {"id": "UCfixture000000000000000", "handle": "@buildlocalai", "title": "Build Local AI",
@@ -49,7 +49,7 @@ FIXTURE = {
         {"videoId": "9bZkp7q19f0", "slug": "2026-08-19-kv-cache-explained", "workspace": "shorts", "format": "short",
          "title": "KV cache, explained with a bookshelf", "publishedAt": "2026-08-19T23:00:00Z", "durationS": 55.0,
          "views": 1500, "likes": 90, "comments": 7},
-        {"videoId": "kJQP7kiw5Fk", "slug": "2026-08-18-spark-vs-5090-benchmarks", "workspace": "long-form", "format": "long",
+        {"videoId": "kJQP7kiw5Fk", "slug": "2026-08-18-spark-vs-5090-benchmarks", "workspace": "shorts", "format": "short",
          "title": "DGX Spark vs RTX 5090: 12 models measured", "publishedAt": "2026-08-18T14:00:00Z", "durationS": 720.0,
          "views": 6100, "likes": 380, "comments": 64},
     ],
@@ -183,8 +183,7 @@ def build_rows(ids: list, stats: dict, slugs: dict) -> list:
         else:
             row.update(s)
             d = s.get("durationS")
-            row["format"] = "short" if ws == "shorts" else "long" if ws == "long-form" else (
-                "short" if d is not None and d <= 180 else "long")
+            row["format"] = "short"
         rows.append(row)
     return rows
 

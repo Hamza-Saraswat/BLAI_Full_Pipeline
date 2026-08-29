@@ -2,7 +2,7 @@
 name: youtube-keyword-research
 description: Measure demand and competition for candidate YouTube keywords with free autocomplete fan-out, the Data API competition snapshot and the vidIQ MCP, then rank candidates with the opportunity score so the ideas stage picks searchable, winnable titles.
 metadata:
-  tags: "youtube, keyword-research, autocomplete, youtube-data-api, vidiq, opportunity-score, seo, shorts, long-form"
+  tags: "youtube, keyword-research, autocomplete, youtube-data-api, vidiq, opportunity-score, seo, shorts"
 ---
 
 # YouTube Keyword Research

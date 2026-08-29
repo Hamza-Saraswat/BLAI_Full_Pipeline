@@ -37,5 +37,5 @@ A claim the writer cannot trace is a claim the video cannot make (`brand-vault/v
 - Beliefs and common knowledge the agent did not fetch a page for.
 - Numbers found only in community sources.
 - Claims from a page that would not load or returned an empty body.
-- Anything our own hardware should measure (tokens per second on the Spark, load time, memory). Phrase it as the expectation; `skills/dgx-capture` supplies the measurement and the reconcile step rewrites the narration line.
+- Anything our own hardware should measure (tokens per second on the Spark, load time, memory). Phrase it as the expectation and attribute it ("NVIDIA's own number is..."); a first-party measurement can replace the line once one exists.
 - Write each as one plain sentence the writer can hedge or drop, never as a claim with a fake source.

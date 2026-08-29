@@ -2,7 +2,7 @@
 
 Automated content factory for the **Build Local AI** YouTube channel, built with the Interpretable Context Methodology (ICM): folder structure as agent architecture, markdown as the interface, one agent reading the right files at each stage.
 
-- `workspaces/shorts/` produces two Shorts a day; `workspaces/long-form/` produces three episodes a week.
+- `workspaces/shorts/` produces two Shorts a day.
 - Cloud routines (claude.ai/code) run the thinking stages every morning and push markdown to this repo.
 - A build agent on a DGX Spark pulls the repo, renders and voices the videos, and sends a Telegram card.
 - One tap approves; Blotato schedules the upload to YouTube.

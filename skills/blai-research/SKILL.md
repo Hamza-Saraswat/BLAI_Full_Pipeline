@@ -11,14 +11,14 @@ You produce the one artifact the script writer trusts as ground truth: a sourced
 
 ## When to Use
 
-- Stage 03 (research) of `workspaces/shorts` and `workspaces/long-form`, once an idea has a slug and a hub note.
+- Stage 03 (research) of `workspaces/shorts`, once an idea has a slug and a hub note.
 - A re-research after a rejected or unsupported claim (`shared/pipeline-overview.md`, "When to loop back"): every stage after 03 then re-runs.
-- Not for writing the script, choosing the structure, or measuring anything on our own hardware. Expected measurements go under Unverified; `skills/dgx-capture` replaces them with real numbers.
+- Not for writing the script, choosing the structure, or measuring anything on our own hardware. Expected measurements go under Unverified until a first-party number exists.
 
 ## What You Need Before Calling
 
 - The hub note `workspaces/<ws>/videos/<slug>.md` (title, pillar or series, format, value_types) and the ideas line that picked it.
-- Depth, named by the stage contract: `standard` (8-12 sources, Shorts) or `deep` (15-25 sources, long-form).
+- Depth, named by the stage contract: `standard` (8-12 sources).
 - The slug, today's date (ISO), and the output folder (the stage's `output/`).
 - FireCrawl MCP tools (`firecrawl_search`, `firecrawl_scrape`) when the connector is attached and `FIRECRAWL_API_KEY` is set; otherwise `WebSearch` and `WebFetch`. A missing tool never fails the run (`rules/firecrawl-usage.md`).
 - `shared/schemas/research.schema.json` and the three rule files below. `brand-vault/identity.md` "Audience" section for who the brief serves.

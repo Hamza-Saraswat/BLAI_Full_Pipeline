@@ -9,13 +9,21 @@ _design/builder-brief.md. build.py decides when a stage runs and what happens wh
 Library use (build/build.py):
     from stage_runner import STAGES, PUBLISH, Ctx, StageError, run_stage, poll_status
 CLI use:
-    python3 build/stage_runner.py --list
+    python3 build/stage_runner.py --list [--local]
     python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --dry-run
+    python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --local
     python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --poll
 
 Paths: repo root = BLAI_REPO_DIR (default: the parent of build/), per-slug binaries =
 BLAI_BUILD_DIR/<slug>/ (default $HOME/blai/builds). Every skill script path is computed from the
 repo root. Exit codes: 0 ok, 1 the stage failed, 2 usage.
+
+--local is the credential-free test mode for a developer machine (build/README.md, "Local test run
+on a Mac"). It needs no API key: voice stages pass --engine kokoro, publish only prints what
+publish.py --dry-run would send and leaves the note at approved, the gate card prints through
+send_card.py --dry-run while the note still reaches review, a failed WER gate warns instead of
+blocking (the local Whisper model, not the voice, sets that floor), the repo is the one this file
+lives in and the build dir is <repo>/.local-builds. build.py additionally skips git-sync.
 """
 from __future__ import annotations
 
@@ -33,8 +41,23 @@ import time
 from typing import Callable, NamedTuple
 
 HERE = pathlib.Path(__file__).resolve().parent
-REPO = pathlib.Path(os.environ.get("BLAI_REPO_DIR") or HERE.parent).resolve()
-BUILD_DIR = pathlib.Path(os.environ.get("BLAI_BUILD_DIR") or (pathlib.Path.home() / "blai" / "builds"))
+
+
+def _local_requested() -> bool:
+    """--local is read from argv (and BLAI_LOCAL) at import time, because REPO and BUILD_DIR are
+    module constants that build.py imports by value before it parses its own arguments."""
+    if "--local" in sys.argv[1:]:
+        return True
+    return (os.environ.get("BLAI_LOCAL") or "").strip().lower() not in ("", "0", "false", "no")
+
+
+LOCAL = _local_requested()
+if LOCAL:  # a developer machine: this checkout, its own build dir, no keys
+    REPO = HERE.parent.resolve()
+    BUILD_DIR = REPO / ".local-builds"
+else:
+    REPO = pathlib.Path(os.environ.get("BLAI_REPO_DIR") or HERE.parent).resolve()
+    BUILD_DIR = pathlib.Path(os.environ.get("BLAI_BUILD_DIR") or (pathlib.Path.home() / "blai" / "builds"))
 sys.path.insert(0, str(REPO / "tools"))
 import hubnote  # noqa: E402
 
@@ -43,7 +66,6 @@ SCRIPT = {
     "generate_audio": SKILLS / "elevenlabs-narration" / "scripts" / "generate_audio.py",
     "qa_transcribe": SKILLS / "elevenlabs-narration" / "scripts" / "qa_transcribe.py",
     "captions": SKILLS / "elevenlabs-narration" / "scripts" / "captions.py",
-    "capture": SKILLS / "dgx-capture" / "scripts" / "capture.py",
     "publish": SKILLS / "blotato-publish" / "scripts" / "publish.py",
     "send_card": SKILLS / "telegram-gate" / "scripts" / "send_card.py",
 }
@@ -54,15 +76,14 @@ CLAUDE_TIMEOUT = 2 * 3600
 VOICE_TIMEOUT = 30 * 60
 QA_TIMEOUT = 30 * 60
 CAPTIONS_TIMEOUT = 10 * 60
-CAPTURE_TIMEOUT = 6 * 3600
 PUBLISH_TIMEOUT = 30 * 60
 CARD_TIMEOUT = 120
 
 UNATTENDED = ("Run stage {stage} for {slug} in unattended mode. Read CLAUDE.md, then "
               "stages/{stage}/CONTEXT.md, and follow it exactly. Build dir: {build}.")
-RECONCILE = ("Run stage 08-capture reconcile for {slug} in unattended mode. Read CLAUDE.md, then "
-             "stages/08-capture/CONTEXT.md, and follow it exactly. Build dir: {build}. "
-             "The capture results are in {build}/capture/capture.json.")
+LOCAL_SUFFIX = (" Local test mode: no paid service is configured, so make no network call that needs "
+                "a key, pass --engine kokoro to generate_audio.py, pass --dry-run to every "
+                "send_card.py and publish.py call, and leave the hub note at review.")
 
 VOICE_FIXTURE = {"duration_s": 0.0, "chars": 0, "chunks": 0, "credits_estimate": 0, "model": ""}
 QA_FIXTURE = {"wer": 0.0, "mismatches": [], "pass": True}
@@ -147,7 +168,7 @@ class Ctx:
     """What a stage function needs: the hub note, the paths, and helpers (run, claude, write,
     hub_update, journal) that print a plan instead of acting when dry_run is set."""
 
-    def __init__(self, note, dry_run: bool = False, fresh: bool = False, log=None):
+    def __init__(self, note, dry_run: bool = False, fresh: bool = False, log=None, local=None):
         self.note = pathlib.Path(note).resolve()
         self.meta, _ = hubnote.read(self.note)
         if not self.meta.get("slug") or self.meta.get("workspace") not in STAGES:
@@ -158,6 +179,7 @@ class Ctx:
         self.build = BUILD_DIR / self.slug
         self.dry_run = dry_run
         self.fresh = fresh
+        self.local = LOCAL if local is None else bool(local)
         self._log = log or (lambda m: print(m, file=sys.stderr, flush=True))
 
     # -- small helpers ------------------------------------------------------
@@ -215,12 +237,16 @@ class Ctx:
             self.say("  | " + line)
 
     def claude(self, prompt: str, name: str, max_turns: int = 200, timeout: int = CLAUDE_TIMEOUT) -> dict:
+        if self.local:
+            prompt += LOCAL_SUFFIX
         cmd = ["claude", "-p", "--dangerously-skip-permissions", "--output-format", "json",
                "--max-turns", str(max_turns), prompt]
         env = dict(os.environ)
         env.pop("CLAUDECODE", None)  # never look like a nested interactive session
         env["BLAI_BUILD_DIR"] = str(BUILD_DIR)
         env["BLAI_REPO_DIR"] = str(REPO)
+        if self.local:
+            env["BLAI_LOCAL"] = "1"
         res = self.run(cmd, name + "-claude", cwd=self.ws_dir, timeout=timeout, env=env, check=False)
         if self.dry_run:
             return {}
@@ -277,29 +303,25 @@ class Ctx:
             hubnote.write(self.note, meta, pat.sub(link, body, count=1))
 
 
-# -- voice (shorts 06, long-form 09) ------------------------------------------
-def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
+# -- voice (shorts 06) --------------------------------------------------------
+def _voice(ctx: Ctx, stage: str) -> str:
     out = ctx.build / "voice"
-    if fmt == "short":
-        storyboard = ctx.stage_out("04-script", "storyboard.json")
-        ctx.require(storyboard, "storyboard")
-        script = out / "narration.txt"
-        if ctx.dry_run:
-            ctx.plan("extract narration_full from %s -> %s" % (storyboard, script))
-        else:
-            text = json.loads(storyboard.read_text(encoding="utf-8")).get("narration_full", "").strip()
-            if not text:
-                raise StageError("storyboard has no narration_full: %s" % storyboard)
-            out.mkdir(parents=True, exist_ok=True)
-            script.write_text(text + "\n", encoding="utf-8")
-        source = ["--storyboard", storyboard]
+    storyboard = ctx.stage_out("04-script", "storyboard.json")
+    ctx.require(storyboard, "storyboard")
+    script = out / "narration.txt"
+    if ctx.dry_run:
+        ctx.plan("extract narration_full from %s -> %s" % (storyboard, script))
     else:
-        script = ctx.stage_out("05-script", "narration.txt")
-        ctx.require(script, "narration text")
-        source = ["--text", script]
+        text = json.loads(storyboard.read_text(encoding="utf-8")).get("narration_full", "").strip()
+        if not text:
+            raise StageError("storyboard has no narration_full: %s" % storyboard)
+        out.mkdir(parents=True, exist_ok=True)
+        script.write_text(text + "\n", encoding="utf-8")
+    source = ["--storyboard", storyboard]
     wav = out / "narration.wav"
+    engine = ["--engine", "kokoro"] if ctx.local else []  # local test runs need no ElevenLabs key
     if ctx.fresh or ctx.dry_run or not (wav.exists() and (out / "voice.json").exists()):
-        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", fmt],
+        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", "short", *engine],
                 "generate_audio", timeout=VOICE_TIMEOUT)
     else:
         ctx.say("reusing %s (pass --fresh to regenerate)" % wav)
@@ -313,31 +335,39 @@ def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
             "captions", timeout=CAPTIONS_TIMEOUT)
     voice = ctx.read_json(out / "voice.json", VOICE_FIXTURE)
     qa = ctx.read_json(out / "qa.json", QA_FIXTURE)
-    ctx.write_text(ctx.stage_out(stage, "voice.md"), voice_note(ctx, stage, fmt, voice, qa))
+    ctx.write_text(ctx.stage_out(stage, "voice.md"), voice_note(ctx, stage, voice, qa))
     ctx.link_artifact("Voice", stage, ctx.slug + "-voice")
     wer = float(qa.get("wer") or 0)
     mism = qa.get("mismatches") or []
     if not qa.get("pass"):
         heard = "; ".join("expected %r heard %r" % (m.get("expected", ""), m.get("heard", "")) for m in mism[:3])
-        raise StageError("voice QA failed: WER %.3f, %d mismatch(es): %s" % (wer, len(mism), heard))
-    return "voice %.1fs, wer %.3f" % (float(voice.get("duration_s") or 0), wer)
+        if ctx.local:  # the local Whisper model sets the floor here, not the voice: warn, do not block
+            ctx.say("warning: local run, WER %.3f above threshold, %d mismatch(es): %s" % (wer, len(mism), heard))
+            ctx.journal("%s local: WER %.3f above threshold, not blocking (see build/README.md)" % (stage, wer))
+        else:
+            raise StageError("voice QA failed: WER %.3f, %d mismatch(es): %s" % (wer, len(mism), heard))
+    return "voice %.1fs, wer %.3f%s" % (float(voice.get("duration_s") or 0), wer,
+                                        " (%s)" % voice.get("engine") if ctx.local else "")
 
 
-def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
+def voice_note(ctx: Ctx, stage: str, voice: dict, qa: dict) -> str:
     mism = qa.get("mismatches") or []
     lines = [
         "# Voice: %s" % ctx.slug, "",
         "Stage %s on %s at %s. Audio lives in `$BLAI_BUILD_DIR/%s/voice/` (binaries are never committed)."
         % (stage, socket.gethostname(), _now(), ctx.slug), "",
         "| Field | Value |", "|-------|-------|",
-        "| Format | %s |" % fmt,
+        "| Format | short |",
+        "| Engine | %s |" % (voice.get("engine") or "elevenlabs"),
         "| Duration | %.1f s |" % float(voice.get("duration_s") or 0),
+        "| Words per second | %s |" % voice.get("words_per_second", ""),
         "| Characters | %s |" % voice.get("chars", ""),
         "| Chunks | %s |" % voice.get("chunks", ""),
         "| Model | %s |" % voice.get("model", ""),
+        "| Alignment | %s |" % (voice.get("alignment_source") or "elevenlabs"),
         "| Credits estimate | %s |" % voice.get("credits_estimate", ""),
         "| WER | %.3f (threshold 0.03) |" % float(qa.get("wer") or 0),
-        "| QA | %s |" % ("pass" if qa.get("pass") else "FAIL"),
+        "| QA | %s |" % ("pass" if qa.get("pass") else ("FAIL, not blocking (local run)" if ctx.local else "FAIL")),
         "", "## Mismatches",
     ]
     lines += ['- at %.1f s: expected "%s", heard "%s"' % (float(m.get("at_s") or 0), m.get("expected", ""),
@@ -350,27 +380,25 @@ def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
 
 def stage_voice_shorts(ctx: Ctx) -> str:
     """generate_audio.py (storyboard) + qa_transcribe.py + captions.py -> <slug>-voice.md"""
-    return _voice(ctx, "06-voice", "short")
+    return _voice(ctx, "06-voice")
 
 
-def stage_voice_long(ctx: Ctx) -> str:
-    """generate_audio.py (narration.txt) + qa_transcribe.py + captions.py -> <slug>-voice.md"""
-    return _voice(ctx, "09-voice", "long")
-
-
-# -- render (shorts 07, long-form 10) -----------------------------------------
-def _render(ctx: Ctx, stage: str, want_thumbnails: bool) -> str:
+# -- render (shorts 07) -------------------------------------------------------
+def _render(ctx: Ctx, stage: str) -> str:
     ctx.claude(UNATTENDED.format(stage=stage, slug=ctx.slug, build=ctx.build), stage, max_turns=200)
     checks = [(ctx.build / "render" / "final.mp4", "final.mp4"),
               (ctx.stage_out(stage, "render.md"), "render note")]
-    if want_thumbnails:
-        checks.append((ctx.build / "render" / "thumbnails" / "1.png", "thumbnails/1.png"))
     if ctx.dry_run:
         for p, what in checks:
             ctx.plan("verify %s exists: %s" % (what, p))
-        ctx.plan("verify hub status == review (the stage sends the gate card)")
+        if ctx.local:
+            _local_gate_card(ctx, stage)
+        else:
+            ctx.plan("verify hub status == review (the stage sends the gate card)")
         return "dry-run"
     missing = [what for p, what in checks if not (p.exists() and p.stat().st_size > 0)]
+    if ctx.local:  # no Telegram token here: print the card the Spark would send, then open the gate
+        _local_gate_card(ctx, stage)
     status = ctx.refresh().get("status")
     if status != "review":
         missing.append("hub status is %r, expected review" % status)
@@ -380,59 +408,30 @@ def _render(ctx: Ctx, stage: str, want_thumbnails: bool) -> str:
     return "render ok, status=review"
 
 
+def _local_gate_card(ctx: Ctx, stage: str) -> None:
+    """Local mode: print the gate card through send_card.py --dry-run and put the note in review."""
+    cmd = [PY, SCRIPT["send_card"], "--kind", "gate", "--hub", ctx.note, "--dry-run"]
+    video = ctx.build / "render" / "final.mp4"
+    if ctx.dry_run or video.exists():
+        cmd += ["--video", video]
+    res = ctx.run(cmd, "gate-card-dry-run", timeout=CARD_TIMEOUT, check=False)
+    if not ctx.dry_run:
+        print(res.stdout, flush=True)
+        if res.returncode != 0:
+            ctx.say("warning: send_card.py --dry-run exited %d: %s" % (res.returncode, _tail(res.stderr, 3)))
+        if ctx.refresh().get("status") != "review":
+            ctx.hub_update(status="review")
+    ctx.journal("%s local: gate card printed with --dry-run, nothing sent, status=review" % stage)
+
+
 def stage_render_shorts(ctx: Ctx) -> str:
     """claude -p (stages/07-render/CONTEXT.md) -> render/final.mp4, <slug>-render.md, status=review"""
-    return _render(ctx, "07-render", want_thumbnails=False)
+    return _render(ctx, "07-render")
 
 
-def stage_render_long(ctx: Ctx) -> str:
-    """claude -p (stages/10-render/CONTEXT.md) -> final.mp4 + thumbnails, <slug>-render.md, status=review"""
-    return _render(ctx, "10-render", want_thumbnails=True)
 
-
-# -- capture (long-form 08) ---------------------------------------------------
-NO_EXPERIMENT = ("# Capture: {slug}\n\nNo experiment: `stages/03-research/output/{slug}-experiment.md` "
-                 "does not exist, so there was nothing to capture and nothing to reconcile "
-                 "(stage 08-capture on {host} at {now}).\n")
-
-
-def stage_capture(ctx: Ctx) -> str:
-    """capture.py (experiment plan, night window) then claude -p reconcile -> <slug>-capture.md"""
-    stage = "08-capture"
-    plan = ctx.stage_out("03-research", "experiment.md")
-    note = ctx.stage_out(stage, "capture.md")
-    if not plan.exists():
-        if ctx.dry_run:
-            ctx.plan("experiment file absent (%s): would write a 'no experiment' note and skip; "
-                     "with a plan the commands would be:" % plan)
-        else:
-            ctx.say("no experiment file (%s): nothing to capture" % plan)
-            ctx.write_text(note, NO_EXPERIMENT.format(slug=ctx.slug, host=socket.gethostname(), now=_now()))
-            ctx.link_artifact("Capture", stage, ctx.slug + "-capture")
-            return "no experiment, skipped"
-    window = (ctx.meta.get("capture_window") or "night").strip().lower() or "night"
-    cap = ctx.build / "capture"
-    if ctx.fresh or ctx.dry_run or not (cap / "capture.json").exists():
-        # cwd = repo root: plans reference python3 skills/dgx-capture/benchmarks/... relatively
-        ctx.run([PY, SCRIPT["capture"], "--plan", plan, "--out", cap, "--window", window],
-                "capture", cwd=REPO, timeout=CAPTURE_TIMEOUT)
-    else:
-        ctx.say("reusing %s (pass --fresh to capture again)" % (cap / "capture.json"))
-    ctx.claude(RECONCILE.format(slug=ctx.slug, build=ctx.build), stage, max_turns=100)
-    if ctx.dry_run:
-        ctx.plan("verify capture note exists: %s; verify hub status != blocked" % note)
-        return "dry-run"
-    meta = ctx.refresh()
-    if meta.get("status") == "blocked":
-        raise StageError("reconcile blocked the run: %s" % meta.get("blocked_reason", ""))
-    if not note.exists():
-        raise StageError("reconcile did not write %s" % note)
-    ctx.link_artifact("Capture", stage, ctx.slug + "-capture")
-    return "capture and reconcile ok"
-
-
-# -- publish (shorts 08, long-form 11) ----------------------------------------
-def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> str:
+# -- publish (shorts 08) ------------------------------------------------------
+def _publish(ctx: Ctx, stage: str, package_stage: str) -> str:
     if not ctx.dry_run and ctx.meta.get("status") != "approved":
         raise StageError("%s: hub status is %r, expected approved" % (stage, ctx.meta.get("status")))
     package = ctx.stage_out(package_stage, "package.md")
@@ -440,21 +439,17 @@ def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> 
     ctx.require(package, "package note")
     ctx.require(video, "final.mp4")
     cmd = [PY, SCRIPT["publish"], "--package", package, "--video", video, "--slot", "auto"]
-    if with_thumbnail:
-        pick = re.sub(r"\.(png|jpg)$", "", (ctx.meta.get("thumbnail_pick") or "1").strip()) or "1"
-        thumbs = ctx.build / "render" / "thumbnails"
-        # render_longform.py writes <n>.jpg next to <n>.png only when the png exceeds YouTube's 2 MB cap
-        thumb = thumbs / (pick + ".jpg") if (thumbs / (pick + ".jpg")).exists() else thumbs / (pick + ".png")
-        ctx.require(thumb, "thumbnail")
-        cmd += ["--thumbnail", thumb]
-        chapters = ctx.build / "render" / "chapters.json"  # measured chapter times from render_longform.py
-        if chapters.exists():
-            cmd += ["--chapters", chapters]
-        elif ctx.dry_run:
-            ctx.plan("adds --chapters %s when the render wrote it" % chapters)
     privacy = os.environ.get("BLAI_PUBLISH_PRIVACY", "").strip()
     if privacy:
         cmd += ["--privacy", privacy]
+    if ctx.local:  # nothing is uploaded and nothing is posted: print the body and stop at approved
+        res = ctx.run(cmd + ["--dry-run"], "publish-dry-run", timeout=PUBLISH_TIMEOUT, check=False)
+        if not ctx.dry_run:
+            print(res.stdout, flush=True)
+            if res.returncode != 0:
+                ctx.say("warning: publish.py --dry-run exited %d: %s" % (res.returncode, _tail(res.stderr, 4)))
+        ctx.journal("%s local: publishing skipped, printed publish.py --dry-run, status stays approved" % stage)
+        return "local: publish skipped (dry-run body printed), status stays approved"
     marker = ctx.build / "publish.json"  # one post per slug, even when a later step fails
     if marker.exists() and not ctx.fresh and not ctx.dry_run:
         ctx.say("reusing %s from an earlier attempt (not posting again)" % marker)
@@ -511,12 +506,7 @@ def write_published(ctx: Ctx, stage: str, post_id: str, slot: str) -> None:
 
 def stage_publish_shorts(ctx: Ctx) -> str:
     """publish.py (05-package, final.mp4, slot auto) -> <slug>-publish.md, published/<slug>.md, status=scheduled"""
-    return _publish(ctx, "08-publish", "05-package", with_thumbnail=False)
-
-
-def stage_publish_long(ctx: Ctx) -> str:
-    """publish.py (07-package, final.mp4, thumbnail <thumbnail_pick or 1>.png) -> <slug>-publish.md, status=scheduled"""
-    return _publish(ctx, "11-publish", "07-package", with_thumbnail=True)
+    return _publish(ctx, "08-publish", "05-package")
 
 
 def poll_status(ctx: Ctx):
@@ -546,20 +536,14 @@ STAGES = {
         Stage("06-voice", "mechanical", "shorts", stage_voice_shorts),
         Stage("07-render", "creative", "shorts", stage_render_shorts),
     ],
-    "long-form": [
-        Stage("08-capture", "mixed", "long-form", stage_capture),
-        Stage("09-voice", "mechanical", "long-form", stage_voice_long),
-        Stage("10-render", "creative", "long-form", stage_render_long),
-    ],
 }
 PUBLISH = {
     "shorts": Stage("08-publish", "mechanical", "shorts", stage_publish_shorts),
-    "long-form": Stage("11-publish", "mechanical", "long-form", stage_publish_long),
 }
 
 
 def all_stages():
-    for ws in ("shorts", "long-form"):
+    for ws in ("shorts",):
         for st in STAGES[ws]:
             yield st
         yield PUBLISH[ws]
@@ -572,11 +556,11 @@ def find_stage(name: str, workspace: str):
     return None
 
 
-def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, log=None):
+def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, log=None, local=None):
     """Run one stage for one hub note. Returns (ok, seconds, message); never raises."""
     t0 = time.time()
     try:
-        ctx = Ctx(note, dry_run=dry_run, fresh=fresh, log=log)
+        ctx = Ctx(note, dry_run=dry_run, fresh=fresh, log=log, local=local)
         msg = stage.fn(ctx) or "ok"
         return True, time.time() - t0, msg
     except StageError as e:
@@ -585,22 +569,44 @@ def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, lo
         return False, time.time() - t0, "%s: %s" % (type(e).__name__, e)
 
 
+LOCAL_NOTES = [
+    "voice (06-voice): generate_audio.py --engine kokoro, no ElevenLabs key needed",
+    "voice QA: a WER above the threshold warns and journals instead of blocking the note",
+    "render (07-render): claude -p is told it is a local run; the gate card prints "
+    "through send_card.py --dry-run and the note still reaches review",
+    "publish (08-publish): nothing is uploaded or posted; publish.py --dry-run is "
+    "printed and the note stays at approved",
+    "build.py: no required .env values (paths only), and git-sync is skipped",
+]
+
+
 def print_table() -> None:
     print("%-10s %-11s %-10s %s" % ("workspace", "stage", "kind", "what runs"))
     for st in all_stages():
         print("%-10s %-11s %-10s %s" % (st.workspace, st.name, st.kind, (st.fn.__doc__ or "").strip()))
     print("\nrepo: %s\nbuild dir: %s" % (REPO, BUILD_DIR))
+    if LOCAL:
+        print("\nlocal mode (--local): credential-free test run on this machine")
+        for line in LOCAL_NOTES:
+            print("  - " + line)
+    else:
+        print("\n--list --local shows what the credential-free local test mode changes")
 
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--list", action="store_true", help="print the stage table and exit")
+    ap.add_argument("--list", action="store_true", help="print the stage table and exit "
+                    "(with --local: what local mode changes)")
     ap.add_argument("--note", help="hub note: workspaces/<ws>/videos/<slug>.md")
-    ap.add_argument("--stage", help="stage to run, for example 06-voice or 11-publish")
+    ap.add_argument("--stage", metavar="NAME", help="run this one stage by hand, for example 06-voice "
+                    "or 11-publish (see --list for the names of both workspaces)")
     ap.add_argument("--poll", action="store_true", help="poll publish.py --status for a scheduled note")
     ap.add_argument("--dry-run", action="store_true", help="print the commands instead of running them")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs from earlier attempts")
+    ap.add_argument("--local", action="store_true", help="credential-free local test mode: Kokoro voice, "
+                    "no publish, no card sent, build dir <repo>/.local-builds (BLAI_LOCAL=1 does the same)")
     a = ap.parse_args(argv)
+    a.local = a.local or LOCAL  # BLAI_LOCAL already moved REPO and BUILD_DIR; keep the stages in step
     if a.list:
         print_table()
         return 0
@@ -611,7 +617,7 @@ def main(argv=None) -> int:
     meta, _ = hubnote.read(a.note)
     if a.poll:
         try:
-            state, url, _raw = poll_status(Ctx(a.note, dry_run=a.dry_run))
+            state, url, _raw = poll_status(Ctx(a.note, dry_run=a.dry_run, local=a.local))
         except StageError as e:
             print("poll failed: %s" % e, file=sys.stderr)
             return 1
@@ -622,8 +628,9 @@ def main(argv=None) -> int:
         print("no stage %s for workspace %s (see --list)" % (a.stage, meta.get("workspace")), file=sys.stderr)
         return 2
     if a.dry_run:
-        print("plan %s %s (%s):" % (stage.name, meta.get("slug"), stage.kind))
-    ok, secs, msg = run_stage(a.note, stage, dry_run=a.dry_run, fresh=a.fresh)
+        print("plan %s %s (%s)%s:" % (stage.name, meta.get("slug"), stage.kind,
+                                      ", local mode" if a.local else ""))
+    ok, secs, msg = run_stage(a.note, stage, dry_run=a.dry_run, fresh=a.fresh, local=a.local)
     print("%s %s %ds: %s" % (stage.name, "ok" if ok else "fail", secs, msg))
     return 0 if ok else 1
 

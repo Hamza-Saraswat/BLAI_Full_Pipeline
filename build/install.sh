@@ -183,14 +183,14 @@ fi
 
 # -- 7. render projects -----------------------------------------------------------------
 step "7. Render projects (npm install, Remotion browser)"
-for d in skills/render-shorts/remotion skills/render-shorts/hyperframes skills/render-longform/remotion; do
+for d in skills/render-shorts/remotion skills/render-shorts/hyperframes; do
   if [ -f "$REPO/$d/package.json" ]; then
     if (cd "$REPO/$d" && run npm install --no-audit --no-fund --loglevel=error); then ok "npm install $d"; else fail "npm install failed in $d"; fi
   else
     note "skip $d (no package.json in this checkout)"
   fi
 done
-for d in skills/render-shorts/remotion skills/render-longform/remotion; do
+for d in skills/render-shorts/remotion; do
   if [ -f "$REPO/$d/package.json" ]; then
     if (cd "$REPO/$d" && run npx remotion browser ensure); then ok "remotion browser ensure $d"; else fail "npx remotion browser ensure failed in $d"; fi
   fi

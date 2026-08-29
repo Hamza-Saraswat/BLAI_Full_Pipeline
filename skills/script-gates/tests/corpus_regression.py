@@ -70,9 +70,21 @@ def boards(corpus):
     """(slug, storyboard path) for every board, keyed by DIRECTORY name.
 
     The directory name is the board identity here, not the storyboard's `slug`
-    field: two corpus boards are byte-identical and share one internal slug."""
+    field: two corpus boards are byte-identical and share one internal slug.
+
+    Pinned to the 38 slugs frozen in baseline_validator.json: the corpus dir is
+    v1's LIVE output and its autopilot keeps adding boards (six landed between
+    2026-08-24 and 2026-08-28), so an unpinned glob makes the assertions rot
+    while the gates are innocent (finding 67)."""
     root = Path(corpus)
-    return [(p.parent.name, p) for p in sorted(root.glob("*/storyboard.json"))]
+    frozen = set(json.loads((Path(__file__).parent / "baseline_validator.json")
+                            .read_text())["boards"])
+    found = [(p.parent.name, p) for p in sorted(root.glob("*/storyboard.json"))
+             if p.parent.name in frozen]
+    skipped = len(list(root.glob("*/storyboard.json"))) - len(found)
+    if skipped:
+        print("corpus: %d newer board(s) outside the frozen 38 ignored" % skipped)
+    return found
 
 
 def score(slug, sb_path, tmp, ledger=None):

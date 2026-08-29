@@ -9,7 +9,7 @@
 | 401 | bad or missing `blotato-api-key` | exits 1 | check `BLOTATO_API_KEY` in `build/.env` |
 | 403 | account not connected, plan limit, or YouTube token expired on Blotato's side | exits 1 | reconnect the channel in Blotato, check `--accounts` |
 | 404 | unknown id (status) or wrong path | exits 1 | for `--status`, confirm `STATUS_PATH` in `publish.py` against the Blotato docs ("Get Post Status") |
-| 413 | media too large for the plan | exits 1 | re-encode or split; Shorts are small, long-form should stay under a few GB |
+| 413 | media too large for the plan | exits 1 | re-encode; a Short should be well under 100 MB |
 | 429 | rate limit, 30 requests per minute per key | waits `Retry-After` or 2, 4, 8, 16, 32 s and retries, 5 attempts | nothing; if it persists, another process is polling too fast |
 | 5xx | Blotato outage | same backoff, 5 attempts | wait; the slot still holds if it is more than 30 minutes away, otherwise rerun with `--slot auto` |
 
@@ -37,7 +37,7 @@ Polling rule: once every 10 minutes until `status` is `published` or a failure v
 
 ## Privacy and first-post check
 
-Keep `BLAI_PUBLISH_PRIVACY=private` until one post is verified end to end in YouTube Studio (title, description, chapters, thumbnail, synthetic-media flag, Shorts shelf). Then set it to `public`; the manifest's `privacy_status` only applies when the env value is empty.
+Keep `BLAI_PUBLISH_PRIVACY=private` until one post is verified end to end in YouTube Studio (title, description, synthetic-media flag, Shorts shelf). Then set it to `public`; the manifest's `privacy_status` only applies when the env value is empty.
 
 ## Cleanup
 

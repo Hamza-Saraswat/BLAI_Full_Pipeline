@@ -14,7 +14,7 @@ Fixture package note for `scripts/publish.py --dry-run`. The manifest block belo
     {"text": "The 4090 myth, measured", "type": "intriguing"},
     {"text": "Run a 30B model without a 4090", "type": "searchable"}
   ],
-  "description": "I loaded Qwen 3 at Q4 on the DGX Spark and measured it against the RTX 5090. One user: the 5090 wins. A room full of users: the Spark does.\n\nNumbers, commands and the full test in the long-form video.",
+  "description": "I loaded Qwen 3 at Q4 on the DGX Spark and measured it against the RTX 5090. One user: the 5090 wins. A room full of users: the Spark does.\n\nMore local AI on the channel: https://www.youtube.com/@BuildLocalAI",
   "hashtags": ["#Shorts", "#LocalAI", "#DGXSpark"],
   "tags": ["dgx spark", "rtx 5090", "local llm", "qwen"],
   "category_id": "28",
@@ -23,7 +23,6 @@ Fixture package note for `scripts/publish.py --dry-run`. The manifest block belo
   "notify_subscribers": false,
   "made_for_kids": false,
   "contains_synthetic_media": false,
-  "related_long_form_url": "https://www.youtube.com/watch?v=EXAMPLE1",
   "original_insight": "Single-stream speed and served throughput answer different questions; the 4090 myth conflates them.",
   "seo_score": 82,
   "reviewer_notes": "Fixture only."

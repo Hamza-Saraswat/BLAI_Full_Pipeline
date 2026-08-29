@@ -1,33 +1,46 @@
 #!/usr/bin/env python3
-"""Generate narration with ElevenLabs and keep character-level timestamps.
+"""Generate narration with ElevenLabs or with a local Kokoro model, and keep word timestamps.
 
 Usage:
-  generate_audio.py --text FILE.txt --out DIR [--voice-id ID] [--model eleven_multilingual_v2]
-                    [--format long|short] [--max-chars 4500] [--fade-ms 0] [--dry-run]
+  generate_audio.py --text FILE.txt --out DIR [--engine auto|elevenlabs|kokoro] [--voice-id ID]
+                    [--model eleven_multilingual_v2] [--format short] [--max-chars 4500]
+                    [--fade-ms 0] [--kokoro-voice am_eric] [--kokoro-speed 1.05]
+                    [--kokoro-root DIR] [--align auto|whisper|proportional] [--dry-run]
   generate_audio.py --storyboard FILE.json --out DIR ...   (reads the storyboard's narration_full)
 
-Outputs in DIR:
+Outputs in DIR (one contract for both engines, so no later stage changes):
   narration.wav    44.1 kHz mono PCM, all chunks concatenated
-  alignment.json   character timestamps for the whole narration (chunk times offset by the
-                   accumulated duration) plus the chunk table
+  alignment.json   {words[{word,start,end}], source, characters, character_*_times_seconds, chunks}
+                   character times are ElevenLabs' own when it ran, derived from the words otherwise
   chunks/NN.mp3    raw ElevenLabs output per chunk (mp3_44100_192) + chunks/NN.json (its alignment)
-  voice.json       {duration_s, chars, chunks, credits_estimate, model, voice_id_hint, ...}
+  chunks/NN.wav    raw Kokoro output per chunk (24 kHz) + chunks/NN.json + chunks/NN.txt
+  voice.json       {duration_s, chars, chunks, credits_estimate, model, engine, alignment_source, ...}
 
 Steps: apply pronunciation_dictionary.json aliases -> chunk at paragraph boundaries (<= --max-chars,
-one chunk for --format short) -> POST /v1/text-to-speech/{voice}/with-timestamps per chunk with
-previous_text/next_text and a pinned seed -> decode, measure, concatenate with ffmpeg -> write files.
+one chunk for --format short) -> synthesize each chunk -> decode, measure, concatenate with ffmpeg.
+ElevenLabs POSTs /v1/text-to-speech/{voice}/with-timestamps per chunk with previous_text/next_text
+and a pinned seed. Kokoro runs the v1 repo's pipeline/scripts/tts_local.py in its own venv, once per
+chunk, then times the words with whisper.cpp when a built binary is there ("source": "whisper") and
+otherwise by spreading each chunk's measured duration over its words by character length
+("source": "proportional"). Kokoro needs no key and makes no network call.
 
-Env (build/.env or the environment): ELEVENLABS_API_KEY, ELEVEN_VOICE_ID, ELEVEN_MODEL_ID, ELEVEN_SEED.
+--engine auto (the default) picks ElevenLabs when ELEVENLABS_API_KEY and ELEVEN_VOICE_ID are both
+set, else Kokoro when the local model file is there, else it fails naming both options. The engine
+that ran and the reason are printed to stderr as one line.
+
+Env (build/.env or the environment): ELEVENLABS_API_KEY, ELEVEN_VOICE_ID, ELEVEN_MODEL_ID,
+ELEVEN_SEED; BLAI_KOKORO_ROOT, WHISPER_CPP_BIN, WHISPER_CPP_MODEL for the local engine.
 --only-chunks 2,5 re-synthesizes just those chunks (pair with --seed for a fresh take) and reuses the
-stored mp3 + alignment of every other chunk, then rebuilds narration.wav and alignment.json.
---dry-run makes no network call: it writes a 3 s silent narration.wav and a synthetic alignment so
-qa_transcribe.py and captions.py can run. Exit 0 on success, 1 on failure. Logs go to stderr.
+stored audio + alignment of every other chunk, then rebuilds narration.wav and alignment.json.
+--dry-run makes no network call and starts no engine: it writes a 3 s silent narration.wav and a
+synthetic alignment so qa_transcribe.py and captions.py can run. Exit 0/1. Logs go to stderr.
 """
 from __future__ import annotations
 
 import argparse
 import base64
 import datetime as dt
+import difflib
 import json
 import os
 import pathlib
@@ -35,6 +48,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -52,6 +66,14 @@ DEFAULT_MODEL = "eleven_multilingual_v2"
 DEFAULT_SEED = 4242
 DEFAULT_MAX_CHARS = 4500
 DRY_RUN_SECONDS = 3.0
+
+# Local Kokoro engine (credential-free test runs). The v1 repo owns the model, the venv and the
+# runner; nothing here writes into it. Override with --kokoro-root or BLAI_KOKORO_ROOT when it moves.
+KOKORO_ROOT = pathlib.Path.home() / "Documents" / "Projects" / "BLAI_Animator"
+KOKORO_VOICE = "am_eric"
+KOKORO_SPEED = 1.05
+KOKORO_MODEL_NAME = "kokoro-v1.0"
+WHISPER_MODEL_NAME = "ggml-base.en.bin"
 
 # Per-request character limits per model (research section 3.1); unknown models get the v3 limit.
 MODEL_LIMITS = {
@@ -267,7 +289,9 @@ def probe_duration(path: pathlib.Path) -> float:
 def concat_wavs(wavs: list, out: pathlib.Path, fade_ms: int, durations: list) -> None:
     if fade_ms <= 0 or len(wavs) == 1:
         listing = out.parent / "concat.txt"
-        listing.write_text("".join("file '%s'\n" % str(p).replace("'", "'\\''") for p in wavs), encoding="utf-8")
+        # absolute paths: ffmpeg resolves a relative entry against the listing's own directory
+        listing.write_text("".join("file '%s'\n" % str(pathlib.Path(p).resolve()).replace("'", "'\\''")
+                                   for p in wavs), encoding="utf-8")
         run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(listing),
              "-ar", str(SAMPLE_RATE), "-ac", "1", "-c:a", "pcm_s16le", str(out)])
         listing.unlink(missing_ok=True)
@@ -294,6 +318,220 @@ def write_silence(path: pathlib.Path, seconds: float) -> None:
         w.setsampwidth(2)
         w.setframerate(SAMPLE_RATE)
         w.writeframes(b"\x00\x00" * int(seconds * SAMPLE_RATE))
+
+
+# ---------------------------------------------------------------------------- kokoro
+
+
+def kokoro_paths(root) -> dict:
+    """Where the v1 repo keeps the local voice: its venv python, the runner, the model files."""
+    root = pathlib.Path(root).expanduser()
+    return {
+        "root": root,
+        "python": root / "pipeline" / ".venv" / "bin" / "python",
+        "script": root / "pipeline" / "scripts" / "tts_local.py",
+        "config": root / "pipeline" / "voice.config.json",
+        "model": root / "pipeline" / "models" / "kokoro-v1.0.onnx",
+        "voices": root / "pipeline" / "models" / "voices-v1.0.bin",
+        "whisper": root / "render" / "remotion" / "whisper.cpp",
+    }
+
+
+def choose_engine(requested: str, kk: dict, api_key: str, voice_id: str) -> tuple:
+    """Return (engine, reason). Raises SystemExit naming both options when neither is usable."""
+    eleven_ok = bool(api_key and voice_id)
+    kokoro_ok = kk["model"].exists()
+    eleven_missing = " and ".join(n for n, v in (("ELEVENLABS_API_KEY", api_key),
+                                                 ("ELEVEN_VOICE_ID", voice_id)) if not v)
+    if requested == "elevenlabs":
+        if not eleven_ok:
+            raise SystemExit("--engine elevenlabs needs %s (build/.env or the environment)" % eleven_missing)
+        return "elevenlabs", "asked for with --engine elevenlabs"
+    if requested == "kokoro":
+        if not kokoro_ok:
+            raise SystemExit("--engine kokoro needs the model at %s (pass --kokoro-root or set "
+                             "BLAI_KOKORO_ROOT)" % kk["model"])
+        return "kokoro", "asked for with --engine kokoro"
+    if eleven_ok:
+        return "elevenlabs", "ELEVENLABS_API_KEY and ELEVEN_VOICE_ID are both set"
+    if kokoro_ok:
+        return "kokoro", "%s not set, local model found at %s" % (eleven_missing, kk["model"])
+    raise SystemExit("no voice engine: set ELEVENLABS_API_KEY and ELEVEN_VOICE_ID for ElevenLabs, "
+                     "or point --kokoro-root at a checkout with pipeline/models/kokoro-v1.0.onnx "
+                     "for the local Kokoro engine (looked at %s)" % kk["model"])
+
+
+def check_kokoro(kk: dict) -> None:
+    for key, what in (("python", "venv python"), ("script", "tts_local.py"), ("config", "voice.config.json"),
+                      ("model", "kokoro model"), ("voices", "voices bin")):
+        if not kk[key].exists():
+            raise SystemExit("kokoro %s not found: %s (pass --kokoro-root)" % (what, kk[key]))
+    if not have("ffmpeg"):
+        raise SystemExit("ffmpeg is required to resample and concatenate Kokoro chunks")
+
+
+def kokoro_synth(kk: dict, text_file: pathlib.Path, out_wav: pathlib.Path, voice: str, speed: float) -> dict:
+    """One chunk through the v1 runner. --no-normalize: our alias pass already fixed the spoken text."""
+    cmd = [str(kk["python"]), str(kk["script"]), "--script-file", str(text_file), "--out", str(out_wav),
+           "--engine", "kokoro", "--voice", voice, "--speed", "%g" % speed,
+           "--config", str(kk["config"]), "--no-normalize"]
+    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if proc.returncode != 0 or not out_wav.exists():
+        raise SystemExit("kokoro tts_local.py exited %d: %s" % (proc.returncode, proc.stderr.strip()[-800:]))
+    try:
+        return json.loads(proc.stdout.strip().splitlines()[-1])
+    except (ValueError, IndexError):
+        return {}
+
+
+# ------------------------------------------------------------------- word timing
+
+
+def find_whisper(kk: dict) -> tuple:
+    """A built whisper.cpp binary and an English model, or (None, None). No build is attempted."""
+    cands = []
+    env_bin = (os.environ.get("WHISPER_CPP_BIN") or "").strip()
+    if env_bin:
+        cands.append(pathlib.Path(env_bin).expanduser())
+    wroot = kk["whisper"]
+    cands += [wroot / "build" / "bin" / "whisper-cli", wroot / "build" / "bin" / "main", wroot / "main"]
+    for name in ("whisper-cli", "whisper-cpp", "main"):
+        found = shutil.which(name)
+        if found:
+            cands.append(pathlib.Path(found))
+    binary = next((c for c in cands if c.is_file() and os.access(str(c), os.X_OK)), None)
+    if binary is None:
+        return None, None
+    models = []
+    env_model = (os.environ.get("WHISPER_CPP_MODEL") or "").strip()
+    if env_model:
+        models.append(pathlib.Path(env_model).expanduser())
+    models += [wroot / WHISPER_MODEL_NAME, binary.parent / WHISPER_MODEL_NAME,
+               wroot / "models" / WHISPER_MODEL_NAME,
+               pathlib.Path.home() / ".cache" / "whisper.cpp" / WHISPER_MODEL_NAME]
+    model = next((m for m in models if m.is_file()), None)
+    if model is None:
+        return None, None
+    return binary, model
+
+
+def whisper_words(wav: pathlib.Path, binary: pathlib.Path, model: pathlib.Path) -> list:
+    """Word-level times from whisper.cpp: -ml 1 with -sow emits one JSON segment per word."""
+    with tempfile.TemporaryDirectory() as tmp:
+        wav16 = pathlib.Path(tmp) / "audio16k.wav"
+        run(["ffmpeg", "-y", "-v", "error", "-i", str(wav), "-ar", "16000", "-ac", "1",
+             "-c:a", "pcm_s16le", str(wav16)])  # whisper.cpp only reads 16 kHz mono
+        prefix = pathlib.Path(tmp) / "words"
+        cmd = [str(binary), "-m", str(model), "-f", str(wav16), "-oj", "-of", str(prefix),
+               "-ml", "1", "-sow", "-np", "-l", "en"]
+        proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        if proc.returncode != 0:
+            raise RuntimeError("whisper.cpp exited %d: %s" % (proc.returncode, proc.stderr.strip()[-400:]))
+        data = json.loads(pathlib.Path(str(prefix) + ".json").read_text(encoding="utf-8"))
+    words = []
+    for item in data.get("transcription", []):
+        text = (item.get("text") or "").strip()
+        if not text:
+            continue
+        offs = item.get("offsets") or {}
+        words.append({"word": text, "start": float(offs.get("from", 0)) / 1000.0,
+                      "end": float(offs.get("to", 0)) / 1000.0})
+    return words
+
+
+def norm_word(word: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", word.lower())
+
+
+def map_heard_onto_script(spoken: list, heard: list, duration: float) -> list:
+    """Give every word we sent a time: 1:1 matches take the heard time, a run that whisper heard
+    differently shares the run's span by word length, a run it missed shares the gap before the next
+    word it did hear. The words stay the ones we sent, so captions.py still maps them to the script."""
+    a = [norm_word(w) for w in spoken]
+    b = [norm_word(w["word"]) for w in heard]
+    out = []
+    last_end = 0.0
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(a=a, b=b, autojunk=False).get_opcodes():
+        if tag == "equal":
+            for k in range(i2 - i1):
+                h = heard[j1 + k]
+                out.append({"word": spoken[i1 + k], "start": h["start"], "end": h["end"]})
+                last_end = h["end"]
+            continue
+        if tag == "insert":  # whisper heard words we never sent: keep the clock, drop the words
+            if j2 > j1:
+                last_end = heard[j2 - 1]["end"]
+            continue
+        block = spoken[i1:i2]
+        if j2 > j1:
+            span_start, span_end = heard[j1]["start"], heard[j2 - 1]["end"]
+        else:  # nothing heard here: fill the gap up to the next word whisper did hear
+            span_start = last_end
+            span_end = heard[j1]["start"] if j1 < len(heard) else duration
+        span_start = max(span_start, last_end)
+        span_end = max(span_end, span_start)
+        total = float(sum(max(1, len(norm_word(w))) for w in block)) or 1.0
+        t = span_start
+        for w in block:
+            share = (span_end - span_start) * max(1, len(norm_word(w))) / total
+            out.append({"word": w, "start": t, "end": t + share})
+            t += share
+        last_end = span_end
+    return [{"word": w["word"], "start": round(max(0.0, w["start"]), 4),
+             "end": round(max(w["start"], min(w["end"], duration)), 4)} for w in out]
+
+
+def proportional_words(chunks: list, records: list) -> list:
+    """Fallback timing: each chunk's measured duration split over its words by character length."""
+    words = []
+    for chunk, rec in zip(chunks, records):
+        parts = chunk.split()
+        if not parts:
+            continue
+        total = float(sum(max(1, len(p)) for p in parts))
+        t = float(rec["offset_s"])
+        for p in parts:
+            share = float(rec["duration_s"]) * max(1, len(p)) / total
+            words.append({"word": p, "start": round(t, 4), "end": round(t + share, 4)})
+            t += share
+    return words
+
+
+def words_to_chars(words: list) -> dict:
+    """Character arrays derived from word times (a space between words), so every reader of the
+    old character contract keeps working when ElevenLabs did not produce one."""
+    chars: list = []
+    starts: list = []
+    ends: list = []
+    for i, w in enumerate(words):
+        if i:
+            chars.append(" ")
+            starts.append(round(words[i - 1]["end"], 4))
+            ends.append(round(w["start"], 4))
+        text = w["word"]
+        span = max(0.0, float(w["end"]) - float(w["start"]))
+        n = max(1, len(text))
+        for k, c in enumerate(text):
+            chars.append(c)
+            starts.append(round(float(w["start"]) + span * k / n, 4))
+            ends.append(round(float(w["start"]) + span * (k + 1) / n, 4))
+    return {"characters": chars, "character_start_times_seconds": starts, "character_end_times_seconds": ends}
+
+
+def chars_to_words(al: dict) -> list:
+    """The word split captions.py has always used, so an ElevenLabs alignment keeps its timing."""
+    words = []
+    cur: list = []
+    for c, s, e in zip(al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]):
+        if c.isspace():
+            if cur:
+                words.append({"word": "".join(x[0] for x in cur), "start": cur[0][1], "end": cur[-1][2]})
+                cur = []
+            continue
+        cur.append((c, float(s), float(e)))
+    if cur:
+        words.append({"word": "".join(x[0] for x in cur), "start": cur[0][1], "end": cur[-1][2]})
+    return words
 
 
 # -------------------------------------------------------------------------- alignment
@@ -337,20 +575,29 @@ def main() -> int:
     src.add_argument("--text", help="plain-text narration file")
     src.add_argument("--storyboard", help="storyboard JSON; uses its narration_full field")
     ap.add_argument("--out", required=True, help="output directory")
+    ap.add_argument("--engine", choices=["auto", "elevenlabs", "kokoro"], default="auto",
+                    help="auto (default): ElevenLabs when its key and voice id are set, else local Kokoro")
     ap.add_argument("--voice-id", default=None, help="ElevenLabs voice id (default ELEVEN_VOICE_ID)")
     ap.add_argument("--model", default=None, help="model id (default ELEVEN_MODEL_ID or %s)" % DEFAULT_MODEL)
-    ap.add_argument("--format", choices=["long", "short"], default="long", help="short = one chunk")
+    ap.add_argument("--format", choices=["short"], default="short", help="short = one chunk")
     ap.add_argument("--max-chars", type=int, default=DEFAULT_MAX_CHARS, help="chunk size cap (default %d)" % DEFAULT_MAX_CHARS)
     ap.add_argument("--fade-ms", type=int, default=0, help="optional fade in/out per chunk at the stitch (0 = plain concat)")
     ap.add_argument("--seed", type=int, default=None, help="override ELEVEN_SEED (use a new seed when regenerating a bad chunk)")
-    ap.add_argument("--only-chunks", default="", help="comma-separated chunk indexes to regenerate; others reuse DIR/chunks/NN.mp3")
-    ap.add_argument("--dry-run", action="store_true", help="no network: silent wav + synthetic alignment")
+    ap.add_argument("--only-chunks", default="", help="comma-separated chunk indexes to regenerate; others reuse DIR/chunks/NN.*")
+    ap.add_argument("--kokoro-voice", default=KOKORO_VOICE, help="Kokoro voice id (default %s)" % KOKORO_VOICE)
+    ap.add_argument("--kokoro-speed", type=float, default=KOKORO_SPEED, help="Kokoro speed (default %s)" % KOKORO_SPEED)
+    ap.add_argument("--kokoro-root", default=None, help="checkout that owns the Kokoro model, venv and "
+                    "tts_local.py (default BLAI_KOKORO_ROOT or %s)" % KOKORO_ROOT)
+    ap.add_argument("--align", choices=["auto", "whisper", "proportional"], default="auto",
+                    help="Kokoro word timing: auto (whisper.cpp when built, else proportional)")
+    ap.add_argument("--dry-run", action="store_true", help="no network, no engine: silent wav + synthetic alignment")
     args = ap.parse_args()
 
     load_env()
     model = args.model or os.environ.get("ELEVEN_MODEL_ID") or DEFAULT_MODEL
     voice_id = args.voice_id or os.environ.get("ELEVEN_VOICE_ID", "")
     api_key = os.environ.get("ELEVENLABS_API_KEY", "")
+    kk = kokoro_paths(args.kokoro_root or os.environ.get("BLAI_KOKORO_ROOT") or KOKORO_ROOT)
     try:
         seed = args.seed if args.seed is not None else int(os.environ.get("ELEVEN_SEED", DEFAULT_SEED))
     except ValueError:
@@ -384,12 +631,20 @@ def main() -> int:
     else:
         chunks = chunk_text(paragraphs, max_chars)
     chars_sent = sum(len(c) for c in chunks)
-    credits = chars_sent * CREDITS_PER_CHAR.get(model, 1.0)
-    usd = chars_sent / 1000.0 * USD_PER_1K_CHARS.get(model, 0.10)
+    if args.dry_run:
+        engine, why = (args.engine if args.engine != "auto" else "none"), "dry run: nothing is synthesized"
+    else:
+        engine, why = choose_engine(args.engine, kk, api_key, voice_id)
+    log("engine: %s (%s)" % (engine, why))
+    local = engine == "kokoro"
+    credits = 0.0 if local else chars_sent * CREDITS_PER_CHAR.get(model, 1.0)
+    usd = 0.0 if local else chars_sent / 1000.0 * USD_PER_1K_CHARS.get(model, 0.10)
+    engine_model = KOKORO_MODEL_NAME if local else model
     log("%d chars (%d after aliases, %d alias hits), %d chunk(s), model %s, ~%d credits" % (
-        len(original), chars_sent, sum(a["count"] for a in applied), len(chunks), model, credits))
+        len(original), chars_sent, sum(a["count"] for a in applied), len(chunks), engine_model, credits))
 
     records = []
+    words = None
     if args.dry_run:
         log("dry run: writing %.0f s of silence and a synthetic alignment (no API call)" % DRY_RUN_SECONDS)
         write_silence(out / "narration.wav", DRY_RUN_SECONDS)
@@ -401,6 +656,59 @@ def main() -> int:
                             "offset_s": round(offset, 4), "alignment": synthetic_alignment(chunk, share)})
             offset += share
         source = "dry-run"
+    elif local:
+        check_kokoro(kk)
+        log("kokoro: %s, voice %s, speed %s" % (kk["model"], args.kokoro_voice, args.kokoro_speed))
+        offset = 0.0
+        wavs = []
+        durations = []
+        for i, chunk in enumerate(chunks):
+            raw = chunks_dir / ("%02d.wav" % i)          # 24 kHz, straight from Kokoro
+            meta = chunks_dir / ("%02d.json" % i)
+            chunk_txt = chunks_dir / ("%02d.txt" % i)    # exactly what the engine was asked to say
+            if only and i not in only and raw.exists() and meta.exists():
+                log("chunk %02d/%02d: reusing %s" % (i + 1, len(chunks), raw.name))
+            else:
+                log("chunk %02d/%02d: %d chars" % (i + 1, len(chunks), len(chunk)))
+                chunk_txt.write_text(chunk + "\n", encoding="utf-8")
+                info = kokoro_synth(kk, chunk_txt, raw, args.kokoro_voice, args.kokoro_speed)
+                meta.write_text(json.dumps({"chars": len(chunk), "voice": args.kokoro_voice,
+                                            "speed": args.kokoro_speed, "engine": "kokoro",
+                                            "kokoro": info}), encoding="utf-8")
+            wav_chunk = chunks_dir / ("%02d-44k.wav" % i)
+            decode_to_wav(raw, wav_chunk)               # 44.1 kHz mono, the pipeline's contract
+            d = probe_duration(wav_chunk)
+            records.append({"index": i, "file": "chunks/%02d.wav" % i, "chars": len(chunk),
+                            "duration_s": round(d, 4), "offset_s": round(offset, 4)})
+            wavs.append(wav_chunk)
+            durations.append(d)
+            offset += d
+        concat_wavs(wavs, out / "narration.wav", args.fade_ms, durations)
+        for w in wavs:
+            w.unlink(missing_ok=True)
+        duration = wav_duration(out / "narration.wav")
+        spoken = " ".join(chunks).split()
+        binary, wmodel = (None, None) if args.align == "proportional" else find_whisper(kk)
+        if args.align == "whisper" and binary is None:
+            raise SystemExit("--align whisper needs a built whisper.cpp binary and an English model "
+                             "(looked under %s; set WHISPER_CPP_BIN and WHISPER_CPP_MODEL)" % kk["whisper"])
+        if binary is not None:
+            log("alignment: whisper.cpp %s with %s" % (binary.name, wmodel.name))
+            try:
+                heard = whisper_words(out / "narration.wav", binary, wmodel)
+                if not heard:
+                    raise RuntimeError("whisper.cpp returned no words")
+                words = map_heard_onto_script(spoken, heard, duration)
+                source = "whisper"
+                log("alignment: %d words heard, %d script words timed" % (len(heard), len(words)))
+            except (RuntimeError, OSError, ValueError, KeyError) as e:
+                log("alignment: whisper.cpp failed (%s); falling back to proportional timing" % e)
+                words = None
+        elif args.align != "proportional":
+            log("alignment: no built whisper.cpp under %s; using proportional timing" % kk["whisper"])
+        if words is None:
+            words = proportional_words(chunks, records)
+            source = "proportional"
     else:
         if not api_key:
             raise SystemExit("ELEVENLABS_API_KEY is not set (build/.env or environment)")
@@ -442,11 +750,18 @@ def main() -> int:
         duration = wav_duration(out / "narration.wav")
         source = "elevenlabs"
 
-    alignment = build_alignment(records)
+    if words is None:  # ElevenLabs and dry run: the character alignment is the source of truth
+        alignment = build_alignment(records)
+        words = chars_to_words(alignment)
+    else:              # Kokoro: word times are measured, character times are derived from them
+        alignment = words_to_chars(words)
     alignment.update({
+        "words": [{"word": w["word"], "start": round(float(w["start"]), 4), "end": round(float(w["end"]), 4)}
+                  for w in words],
         "text": "\n".join(c for c in chunks),
         "source": source,
-        "model": model,
+        "engine": engine,
+        "model": engine_model,
         "sample_rate": SAMPLE_RATE,
         "duration_s": round(duration, 4),
         "chunks": [{k: v for k, v in r.items() if k != "alignment"} for r in records],
@@ -460,18 +775,27 @@ def main() -> int:
         "chunks": len(chunks),
         "credits_estimate": round(credits),
         "usd_estimate": round(usd, 4),
-        "model": model,
-        "voice_id_hint": ("..." + voice_id[-4:]) if voice_id else "none",
+        "model": engine_model,
+        "engine": engine,
+        "alignment_source": source,
+        "voice_id_hint": (args.kokoro_voice if local else
+                          (("..." + voice_id[-4:]) if voice_id else "none")),
         "format": args.format,
         "seed": seed,
-        "output_format": OUTPUT_FORMAT,
-        "voice_settings": VOICE_SETTINGS,
+        "output_format": "wav_24000" if local else OUTPUT_FORMAT,
+        "voice_settings": {"voice": args.kokoro_voice, "speed": args.kokoro_speed} if local else VOICE_SETTINGS,
         "aliases_applied": applied,
+        "script_words": len(original.split()),
+        "aligned_words": len(words),
+        # pacing: script words per second of finished audio (skills/script-gates/voice.config.json wps)
+        "words_per_second": round(len(original.split()) / duration, 3) if duration else 0.0,
         "dry_run": bool(args.dry_run),
         "created": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
     (out / "voice.json").write_text(json.dumps(voice, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"out": str(out), "duration_s": voice["duration_s"], "chunks": len(chunks),
+                      "engine": engine, "alignment_source": source,
+                      "words_per_second": voice["words_per_second"],
                       "credits_estimate": voice["credits_estimate"], "dry_run": bool(args.dry_run)}))
     return 0
 

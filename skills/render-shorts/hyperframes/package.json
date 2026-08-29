@@ -6,9 +6,9 @@
     "hyperframes": "0.7.31"
   },
   "scripts": {
-    "dev": "npx --yes hyperframes@0.7.31 preview",
-    "check": "npx --yes hyperframes@0.7.31 lint && npx --yes hyperframes@0.7.31 validate && npx --yes hyperframes@0.7.31 inspect",
-    "render": "npx --yes hyperframes@0.7.31 render",
-    "publish": "npx --yes hyperframes@0.7.31 publish"
+    "dev": "./node_modules/.bin/hyperframes preview",
+    "check": "./node_modules/.bin/hyperframes lint && ./node_modules/.bin/hyperframes validate && ./node_modules/.bin/hyperframes inspect --samples 40 --at-transitions --strict",
+    "render": "./node_modules/.bin/hyperframes render",
+    "publish": "./node_modules/.bin/hyperframes publish"
   }
 }

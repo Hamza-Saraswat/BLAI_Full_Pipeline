@@ -15,15 +15,3 @@ Agents load only the pillar or series section the current run falls under.
 
 Rotation: pillar and structure must differ from the previous day's picks; at most one `news-react` per day.
 
-## Long-form Series
-
-| Series | Angle | Episode shapes | Default scene types |
-|--------|-------|----------------|---------------------|
-| `local-ai-for-dummies` | One concept per episode, explained from zero with one worked example carried the whole way | "What is a token, really", "Why your GPU's doorway matters" | kinetic-text, diagram, comparison-table, mascot-talk |
-| `my-dgx-spark-projects` | What I built on the Spark this week, with the real numbers and the real failures | fine-tune runs, serving setups, agent experiments | terminal-replay, code-typing, stat-callout, chapter-card |
-| `benchmarks` | Named models on named hardware, measured by us | tokens per second, load time, memory, quality spot checks | chart, comparison-table, terminal-replay |
-| `inference-engineering-at-home` | The flags and formats that change what fits and how fast it runs | quantization formats, KV cache, FP8/FP4, batch size, context | code-typing, diagram, stat-callout |
-| `dgx-spark-specific` | Everything NVIDIA-specific about the box | firmware, drivers, containers, networking two Sparks | terminal-replay, diagram |
-| `beyond-llms` | Video, voice and image models you can run locally | TTS, image generation, video models, speech-to-text | comparison-table, b-roll, stat-callout |
-
-Rotation: no series twice in a row. The `my-dgx-spark-projects` series draws from notes in `workspaces/long-form/input/` (the priority lane).

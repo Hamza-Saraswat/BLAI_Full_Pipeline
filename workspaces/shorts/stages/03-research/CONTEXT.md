@@ -21,7 +21,7 @@ Turn each of today's picks into a sourced brief. Facts in the brief bind every l
 4. Write `output/[slug]-brief.md` and `output/[slug]-brief.json`.
 5. Run `python3 ../../../../skills/blai-research/scripts/validate_research.py output/[slug]-brief.json`. Run the audit checks below. If any fail, revise before saving.
 6. Update the hub note: `status: researched`, Artifacts link.
-7. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] research"`.
+7. Unattended: `../../../../tools/git-sync.sh "shorts: [slug] research" workspaces/shorts skills/render-shorts/styles/history.json`.
 
 ## Checkpoints
 
@@ -39,6 +39,8 @@ Turn each of today's picks into a sourced brief. Facts in the brief bind every l
 | Specifics | at least 3 key numbers and 2 named products or tools |
 | Audience | no claim explains something the Audience section says viewers already know |
 | Writer fields | `viewer_situation`, `objection` and `has_process` are all present; when `has_process` is true, `process_steps` lists actions the viewer performs |
+| Summary | carries the five elements of brief-format.md and is not a restatement of the thesis (finding 29) |
+| Self-consistency | nothing in `process_steps` or `claims` asserts what `unverified` lists as folklore (finding 25) |
 
 ## Outputs
 

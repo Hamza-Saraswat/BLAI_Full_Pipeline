@@ -22,7 +22,6 @@ frontmatter has no title), read with `tools/hubnote.py`:
 - `DIR/../../../videos/*.md` and `DIR/../../../published/*.md`, the workspace that owns the
   output folder when `DIR` is the default `workspaces/<ws>/stages/01-radar/output`
 - `<dedupe-dir>/videos/*.md` and `<dedupe-dir>/published/*.md` when `--dedupe-dir` is given
-  (pass the other workspace to keep Shorts and long-form from chasing the same story)
 - in `--dry-run` without `--dedupe-dir`: `fixtures/dedupe-workspace/`
 
 An item whose normalized title equals one of those titles is dropped. Hub-note titles are

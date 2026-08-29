@@ -15,8 +15,6 @@ jobs:
           python-version: "3.12"
       - name: ICM conventions (shorts)
         run: python3 tools/validate.py workspaces/shorts --allow-outputs
-      - name: ICM conventions (long-form)
-        run: python3 tools/validate.py workspaces/long-form --allow-outputs
       - name: Hub notes and packages against schemas
         run: python3 tools/check_outputs.py
       - name: Python syntax

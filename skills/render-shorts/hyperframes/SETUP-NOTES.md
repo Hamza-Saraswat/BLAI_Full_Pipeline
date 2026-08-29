@@ -85,11 +85,12 @@ npx -y skills@1.5.14 add remotion-dev/skills    --agent claude-code --skill '*' 
   on low-RAM machines, `--low-memory-mode` exists.
 - For CI-grade runs: `render --strict` fails on lint errors; `validate` runtime-checks JS errors,
   missing assets, contrast in headless Chrome.
-- GSAP comes from a CDN, so first render needs network (or vendor the file locally later).
+- GSAP is vendored at `packs/vendor/gsap.min.js` (3.14.2); the snippets load it locally, no network needed at render (finding 54).
 - Cloud alternative exists (`hyperframes cloud`) if local Chrome/ffmpeg ever become a problem.
 
 ## Reference artifacts in this directory
 
-- `index.html` -- 5 s, 1080x1920\@30 "BUILD LOCAL AI" GSAP hello-world (accent-bar wipe, staggered
-  word rise, subline fade, slow push-in).
-- `hello.mp4` -- verified render of the above (1.1 MB).
+- `index.html` is a FINISHED AXON-PACK SCENE (s2 of the DGX Spark video), NOT a hello-world, and
+  `hello.mp4` does not exist here (finding 52). **The reference for a new scene is
+  `packs/<pack>-snippet.html`** -- copying `index.html` silently gives you the wrong style pack,
+  and nothing lints the pack choice.
