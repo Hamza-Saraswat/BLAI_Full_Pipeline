@@ -105,6 +105,8 @@ What could not be tested here remains: the Spark, the paid APIs, the cloud routi
 | 64 | 11 publish | quality | **The composed description put its hashtags in the middle.** `publish.py` strips the estimated chapter lines from their correct position and `compose_description` re-appends the measured block past the hashtags already in the string. `titles-descriptions.md` wants hashtags last | **fixed** |
 | 65 | 11 publish | quality | **The manifest thumbnail path resolves against the package note, but the stills live in the build dir.** Three valid 1280x720 thumbnails exist and the upload proceeds silently without one. A long-form episode publishing with no custom thumbnail should be an error, not a log line | open |
 | 66 | 11 publish | note | **Publish dry-runs are otherwise correct on all three videos.** Privacy, notify, kids and synthetic flags all right per format; Shorts drew an 18:00 CT slot and the episode the next 09:00 CT, exactly per `publish-timing.md`; the stale `publish_slot_hint` was caught rather than scheduled into the past | working as designed |
+| 67 | tests | quality | **The corpus regression read v1's LIVE output dir**; six new old-style boards landed during the week and broke assertion 1 with every gate innocent. Pinned to the 38 frozen slugs | **fixed** |
+| 68 | voice | friction | **Bake-off install traps**: uv venvs lack setuptools; `resemble-perth` needs `pkg_resources` (removed in setuptools 81+) -- pin `setuptools<81`. OpenVoice V2 dropped on this Mac at ENOSPC (8.7 GB free); disk is now a preflight-worthy number | recorded |
 
 ## Detail
 
@@ -688,3 +690,26 @@ Everything else in the Blotato body matched the playbooks without intervention:
 The Shorts landed on an 18:00 CT slot and the episode on the next 09:00 CT, which is exactly what `publish-timing.md` specifies for each format. `publish.py` also noticed the Ornith package's `publish_slot_hint` was already in the past and said so before picking the next free slot rather than scheduling into history.
 
 Both Shorts drew the same 18:00 slot, which is expected in dry-run: nothing is reserved because nothing is written. In a real run the first would set `publish_slot` on its hub note and the second would see it taken. Worth confirming once against a live run, but it is not evidence of a bug.
+
+### 67. The corpus regression read a LIVE directory, and v1 kept publishing into it (fixed)
+
+Discovered during the shorts-only rebuild (2026-08-29). `corpus_regression.py` globbed
+`BLAI_Animator/out/*/storyboard.json` -- v1's live output tree. v1's autopilot produced six more
+boards between 2026-08-24 and 2026-08-28, all in its old stage-label style, so `positional_labels`
+correctly failed them and assertion 1 ("fails EXACTLY the ten label boards") broke while every gate
+was innocent. The five assertions had rotted without a single line of gate code changing.
+
+Fixed by pinning `boards()` to the 38 slugs frozen in `baseline_validator.json`; newer boards are
+counted and ignored with a printed line. The general lesson is the hermetic-test rule: a regression
+suite that reads a directory another system writes to is a race, not a test.
+
+### 68. The voice bake-off's install traps, and a disk floor (recorded)
+
+Chatterbox on a uv venv needs two undocumented things: uv ships no setuptools, and
+`resemble-perth` (the watermarker) imports `pkg_resources`, which setuptools >= 81 REMOVED --
+the fix is `setuptools<81`. Without it `ChatterboxTTS.from_pretrained` dies with an opaque
+`'NoneType' object is not callable`. Both belong in the integration note if Chatterbox wins.
+
+OpenVoice V2's install (its own torch copy) hit `No space left on device` on this Mac's 8.7 GB
+free and was dropped; it stays license-qualified for a Spark retry. The build machine's disk is
+now a preflight-worthy number: voice models are 3+ GB each and renders need working room.
