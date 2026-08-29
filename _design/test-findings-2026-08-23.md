@@ -107,6 +107,8 @@ What could not be tested here remains: the Spark, the paid APIs, the cloud routi
 | 66 | 11 publish | note | **Publish dry-runs are otherwise correct on all three videos.** Privacy, notify, kids and synthetic flags all right per format; Shorts drew an 18:00 CT slot and the episode the next 09:00 CT, exactly per `publish-timing.md`; the stale `publish_slot_hint` was caught rather than scheduled into the past | working as designed |
 | 67 | tests | quality | **The corpus regression read v1's LIVE output dir**; six new old-style boards landed during the week and broke assertion 1 with every gate innocent. Pinned to the 38 frozen slugs | **fixed** |
 | 68 | voice | friction | **Bake-off install traps**: uv venvs lack setuptools; `resemble-perth` needs `pkg_resources` (removed in setuptools 81+) -- pin `setuptools<81`. OpenVoice V2 dropped on this Mac at ENOSPC (8.7 GB free); disk is now a preflight-worthy number | recorded |
+| 69 | proof run | note | **The rebuilt pipeline made a complete Short end to end** (radar -> gate card, 2026-08-29): every fix exercised live, all gates pass, 39.13 s at -14.1 LUFS, loop 0.955. The finding-38 rule caught a real miss during the run | working as designed |
+| 70 | 07 render | quality | **Silicon pack: sound, with a chip()-shaped hole.** Hard-coded fs40 die label, pin-stub overhang, 1.15-drop safe-box breach (confirmed x2); no `silicon_board_grid()` helper despite the style file mandating the grid at frame 1 | open |
 
 ## Detail
 
@@ -713,3 +715,40 @@ the fix is `setuptools<81`. Without it `ChatterboxTTS.from_pretrained` dies with
 OpenVoice V2's install (its own torch copy) hit `No space left on device` on this Mac's 8.7 GB
 free and was dropped; it stays license-qualified for a Spark retry. The build machine's disk is
 now a preflight-worthy number: voice models are 3+ GB each and renders need working room.
+
+### 69. The proof run: the refactored shorts-only pipeline made a complete Short end to end (working as designed)
+
+2026-08-29, stages 01-08 on the rebuilt tree, from a live radar sweep to a gate card:
+
+- **Radar**: 75 items kept, 15 off-topic dropped; the finding-2 lane fix flipped the distribution
+  (news-react 54/64 before, 28/75 after -- runnable releases now read as the video they enable).
+- **Ideas**: 8 candidates, autocomplete-scored; the Breeze-TTS discard documented a fresh failure
+  mode (depth counts homonym noise -- "breeze tag" is not TTS demand).
+- **Research**: the pick's premise inverted honestly -- GLM-5.3-Flash's SMALLEST build is 93.09 GB,
+  and the brief's new five-element Summary rule + both new audit rows passed on first use.
+- **Script**: two blind writers under different structures AND different hook patterns (finding 12
+  fix) produced genuinely different drafts; the amended judge (teaching row, myth-bust fairness,
+  drift ruling, deletion test) picked number-first 23-21 with one legal graft. The finding-9
+  demotion proved itself live: the winner scores entity_spend 0.154, which the old hard gate would
+  have blocked.
+- **Voice**: Kokoro 38.06 s, and the repaired pronunciation gate posted its FIRST clean pass
+  (WER 0.0147; it could never run at all before finding 44).
+- **Render**: 7 scenes, 7 published, 11 attempts total, first live use of the silicon pack; one
+  worker wedged before writing anything and its respawn published in one attempt.
+- **Assembly**: 39.13 s, -14.1 LUFS, lint PASS, safe-zone PASS, loop 0.955 (scene anchor 0.9878,
+  measured not eyeballed, per the new rule 11).
+- **Publish**: gate card + Blotato body correct on dry-run; private; 18:00 CT slot.
+
+Every fix made in this rebuild was exercised by the run that followed it, and the finding-38 rule
+caught a real miss (an unfilled hub Artifacts link) during the run itself.
+
+### 70. Silicon pack, first live use: sound, with a chip()-shaped hole (open)
+
+Seven scenes across both toolchains. The pack's tokens, fonts, traces, pulses and glow law all
+behaved as documented. Confirmed defects, two workers independently: `chip()` hard-codes its die
+label at font_size 40 (no kwargs; long labels overflow), its fixed pin stubs overflow near-safe-
+width chips, and the canonical 1.15-scale component drop breaches the safe box at mid-animation
+for wide elements (the same trap class as `Indicate`; rule: size to SAFE_W/1.15 or shift-drop).
+Missing helper: `styles/silicon.md` mandates the board grid at frame 1 but `blai_packs.py` ships
+no `silicon_board_grid()`, so every worker copies a 25-line block from the hello scene. Snippet
+traps (board-bg placement, unscoped selectors) were folded into the snippet header during the run.

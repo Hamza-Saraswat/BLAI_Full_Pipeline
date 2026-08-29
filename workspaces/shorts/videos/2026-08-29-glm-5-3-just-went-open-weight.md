@@ -2,7 +2,7 @@
 slug: 2026-08-29-glm-5-3-just-went-open-weight
 workspace: shorts
 title: "GLM-5.3-Flash: the 93 GB \"small\" build"
-status: ready-to-build
+status: review
 pillar: how-to
 structure: number-first
 format: classic
@@ -14,7 +14,7 @@ publish_slot: ""
 seo_score: 88
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: "local-mac"
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -27,11 +27,14 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-08-29-glm-5-3-just-went-open-weight-brief]]
 - Script: [[stages/04-script/output/2026-08-29-glm-5-3-just-went-open-weight-script]]
 - Package: [[stages/05-package/output/2026-08-29-glm-5-3-just-went-open-weight-package]]
-- Voice: (filled by stage 06)
-- Render: (filled by stage 07)
+- Voice: [[stages/06-voice/output/2026-08-29-glm-5-3-just-went-open-weight-voice]]
+- Render: [[stages/07-render/output/2026-08-29-glm-5-3-just-went-open-weight-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
 
 ## Build journal
+- voice: kokoro 1 chunk 38.06s, whisper alignment, wer 0.0147 PASS, 3.494 wps
+- scenes: 7/7 published, 11 attempts total (one wedged worker respawned), all inside tolerance
+- assembly: 39.13s, -14.1 LUFS, lint PASS, safe-zone PASS, loop PASS 0.955
 
