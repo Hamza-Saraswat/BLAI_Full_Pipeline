@@ -14,7 +14,6 @@ Port of the v1 pipeline's proven gates, plus the two gates v1 lacked. Four stdli
 - Stage 04 (script) of `workspaces/shorts`, right after the storyboard JSON is regenerated from the script file, and again after every fix.
 - Stage 06 (voice), to produce the spoken-form narration the voice engine reads.
 - Any re-script run triggered from Telegram (`rescript:<slug>`).
-- Not for long-form: the two bands above are Shorts physics. Long-form scripts have their own gate in this skill, `scripts/validate_longform.py`, documented in `rules/longform-gates.md`; `skills/render-longform/scripts/lint_longform.py` lints the rendered mp4, not the script. The number and term rules still apply to long-form narration and `normalize_narration.py --text` works on any string.
 
 ## What You Need Before Calling
 
@@ -96,7 +95,6 @@ All paths below are relative to the repo root. Every script has `--help`.
 
 - `rules/format-bands.md`: what every knob in the classic and smooth-explainer bands means, how the validator applies it, and why `structure` is independent of the band.
 - `rules/number-and-term-rules.md`: spoken numbers, acronyms and product names, on-screen versus narration, the lexicon, and exactly what the validator and normalizer check.
-- `rules/longform-gates.md`: the long-form script gate (`scripts/validate_longform.py`), owned by the long-form workspace. It imports this skill's banned-word tables and sentence splitting from `validate_storyboard.py` so both gates ban the same words.
 - `rules/eval-gates.md`: the nine `eval_short.py` gates one line each, per-format differences, the `positional_labels` rule and its action-verb heuristic, and which gates are soft (entity_spend, top2).
 - `rules/variety.md`: the ledger's fields, the hook-pattern classifier, the five `sameness` rules and the repeated-phrase advisory, and how a run proceeds past a failure by writing a Decisions block.
 

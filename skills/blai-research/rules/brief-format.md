@@ -103,6 +103,5 @@ Open questions, conflicting sources, thin spots. Omit the heading when empty.
 | Depth | Sources fetched | Claims | Key numbers | Subagents |
 |-------|-----------------|--------|-------------|-----------|
 | `standard` (Shorts) | 8-12 | 5-10 | 3-8 | 2-3 |
-| `deep` (long-form) | 15-25 | 10-20 | 8-15 | 4-5 |
 
 A brief above the band is not better; it is a writer reading more than the video can spend.

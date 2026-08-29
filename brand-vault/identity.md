@@ -13,7 +13,7 @@ Build Local AI (BLAI) teaches people to build and run AI on their own hardware, 
 
 ## Channel Facts
 
-- YouTube: @BuildLocalAI. Two Shorts every day; long-form three times a week.
+- YouTube: @BuildLocalAI. Two Shorts every day.
 - Flagship hardware: an NVIDIA DGX Spark (GB10, 128 GB unified memory) on the creator's desk, plus consumer GPUs and Macs.
 - Standing lanes: DGX Spark; open models (Qwen, DeepSeek, Llama, Mistral, GLM, Nemotron); runtimes (llama.cpp, vLLM, Ollama, LM Studio, SGLang); fine-tuning with Unsloth; the enterprise and small-business data-privacy angle.
 - Measured lessons from the first month: named products beat abstract advice; search viewers watch about twice as long as feed viewers; the retention cliff is seconds 3 to 8, so the payoff must start by second 4.

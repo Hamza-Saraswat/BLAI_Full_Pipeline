@@ -2,13 +2,13 @@
 """Schedule a YouTube upload through Blotato from a package note's manifest.
 
 Usage:
-  publish.py --package FILE-package.md --video final.mp4 [--thumbnail FILE.png]
+  publish.py --package FILE-package.md --video final.mp4
              [--slot auto|ISO] [--privacy private|public|unlisted] [--dry-run]
   publish.py --status POST_SUBMISSION_ID [--dry-run]
   publish.py --accounts [--dry-run]
 
 Flow: parse the ```json manifest in the package note -> validate it against
-shared/schemas/publish-manifest.schema.json (plus YouTube limits) -> upload the video (and thumbnail) to R2
+shared/schemas/publish-manifest.schema.json (plus YouTube limits) -> upload the video to R2
 with r2.py under previews/<slug>/ -> pick the slot (--slot ISO, else manifest publish_slot_hint, else the
 next free slot from slots.py, skipping slots already taken in hub notes) -> POST /v2/posts -> print
 {post_submission_id, scheduled_time, media_url, thumbnail_url}.
@@ -48,7 +48,6 @@ SCHEMA_PATH = REPO_ROOT / "shared" / "schemas" / "publish-manifest.schema.json"
 MAX_DESCRIPTION_BYTES = 5000
 MAX_TITLE_CHARS = 100
 MAX_HASHTAGS = 3
-MAX_THUMBNAIL_BYTES = 2 * 1024 * 1024
 RETRY_ATTEMPTS = 5
 PRIVACY_VALUES = ("private", "public", "unlisted")
 
@@ -161,7 +160,7 @@ def validate_manifest(m: dict, schema_path: pathlib.Path = SCHEMA_PATH) -> list:
 
 def compose_description(m: dict) -> str:
     """Assemble the description in the order titles-descriptions.md prescribes:
-    body, chapters, links and credits, hashtags last.
+    body, links and credits, hashtags last.
 
     Anything appended here has to land *above* a hashtag block the description already
     carries, or the hashtags stop being last and the playbook order breaks.
@@ -174,13 +173,6 @@ def compose_description(m: dict) -> str:
     if lines and lines[-1].strip() and all(w.startswith("#") for w in lines[-1].split()):
         tail = lines.pop().strip()
         desc = "\n".join(lines).rstrip()
-
-    chapters = m.get("chapters") or []
-    if chapters and isinstance(chapters, list) and str(chapters[0].get("time", "")) not in desc:
-        desc += "\n\nChapters\n" + "\n".join("%s %s" % (c.get("time", ""), c.get("label", "")) for c in chapters)
-    related = m.get("related_long_form_url")
-    if related and related not in desc:
-        desc += "\n\nFull video: %s" % related
 
     if tail:
         desc += "\n\n" + tail
@@ -336,9 +328,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--package", help="<slug>-package.md with the ```json manifest")
     ap.add_argument("--video", help="final.mp4 to upload")
-    ap.add_argument("--thumbnail", help="thumbnail image (png/jpg); default: manifest.thumbnail relative to the package note")
     ap.add_argument("--slot", default="auto", help="auto (default) or an ISO-8601 time with offset")
-    ap.add_argument("--chapters", metavar="FILE", help="JSON list of {time, label} with MEASURED chapter times (long-form); replaces the manifest's chapters and any MM:SS lines already in the description")
     ap.add_argument("--privacy", choices=PRIVACY_VALUES, default=None)
     ap.add_argument("--status", metavar="ID", help="print the normalized status of a post submission")
     ap.add_argument("--accounts", action="store_true", help="list connected Blotato accounts")
@@ -378,49 +368,17 @@ def main() -> int:
         raise SystemExit("video not found: %s" % video)
 
     manifest = read_manifest(package)
-    if args.chapters:
-        raw = json.loads(pathlib.Path(args.chapters).read_text(encoding="utf-8"))
-        if isinstance(raw, dict):
-            raw = raw.get("chapters", [])
-        # render_longform.py writes {number,label,scene,start_s,timestamp}; the manifest schema wants
-        # {time,label}. Accept either key and drop the extras so the manifest still validates.
-        measured = []
-        if isinstance(raw, list):
-            for c in raw:
-                if not isinstance(c, dict):
-                    measured = []; break
-                stamp = c.get("time", c.get("timestamp", ""))
-                measured.append({"time": str(stamp), "label": str(c.get("label", ""))})
-        if not measured or measured[0]["time"] not in ("00:00", "0:00", "00:00:00"):
-            log("--chapters must be a non-empty list whose first entry is 00:00"); return 1
-        manifest["chapters"] = measured
-        # drop any estimated chapter lines (and a bare "Chapters" header) so compose_description re-adds the measured ones
-        kept = [ln for ln in str(manifest.get("description", "")).splitlines()
-                if not re.match(r"^\s*\d{1,2}:\d{2}(:\d{2})?\s+\S", ln) and ln.strip().lower() != "chapters"]
-        manifest["description"] = re.sub(r"\n{3,}", "\n\n", "\n".join(kept)).strip()
     errors = validate_manifest(manifest)
     desc = compose_description(manifest)
     desc_bytes = len(desc.encode("utf-8"))
     if desc_bytes > MAX_DESCRIPTION_BYTES:
-        errors.append("description is %d bytes after chapters and hashtags, max %d" % (desc_bytes, MAX_DESCRIPTION_BYTES))
+        errors.append("description is %d bytes after hashtags, max %d" % (desc_bytes, MAX_DESCRIPTION_BYTES))
     if errors:
         for e in errors:
             log("manifest error: %s" % e)
         raise SystemExit("manifest failed validation (%d error(s)); nothing uploaded" % len(errors))
     slug = manifest["slug"]
 
-    thumb = pathlib.Path(args.thumbnail) if args.thumbnail else None
-    if thumb is None and manifest.get("thumbnail"):
-        cand = (package.parent / manifest["thumbnail"]).resolve()
-        if cand.exists():
-            thumb = cand
-        else:
-            log("manifest thumbnail %s not found next to the package note; continuing without it" % manifest["thumbnail"])
-    if thumb is not None:
-        if not thumb.exists():
-            raise SystemExit("thumbnail not found: %s" % thumb)
-        if thumb.stat().st_size > MAX_THUMBNAIL_BYTES:
-            log("thumbnail is %.1f MB; YouTube accepts up to 2 MB" % (thumb.stat().st_size / 1e6))
 
     privacy = args.privacy or os.environ.get("BLAI_PUBLISH_PRIVACY", "").strip().lower() or manifest["privacy_status"]
     if privacy not in PRIVACY_VALUES:
@@ -434,8 +392,6 @@ def main() -> int:
 
     media_url = r2.upload(video, "previews/%s/final.mp4" % slug, "video/mp4", dry_run=args.dry_run)
     thumbnail_url = None
-    if thumb is not None:
-        thumbnail_url = r2.upload(thumb, "previews/%s/thumbnail%s" % (slug, thumb.suffix.lower() or ".png"), dry_run=args.dry_run)
 
     body = build_body(manifest, account_id or "ACCOUNT_ID", media_url, thumbnail_url, privacy, scheduled)
     log("%s %s: title %r, %s, %d-byte description, slot %s" % (

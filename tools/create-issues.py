@@ -14,7 +14,7 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-LABELS = {"foundations": "0e8a16", "shorts": "1d76db", "long-form": "5319e7", "spark": "d93f0b",
+LABELS = {"foundations": "0e8a16", "shorts": "1d76db", "spark": "d93f0b",
           "skill": "fbca04", "needs-human": "b60205"}
 
 

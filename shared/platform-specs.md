@@ -18,16 +18,3 @@ Both formats stay complete here; each workspace's stage contracts point at one r
 | Thumbnail | none (99.9 % of Shorts views come from the feed) |
 | Notify subscribers | false |
 
-## Long-form (workspaces/long-form)
-
-| Spec | Value |
-|------|-------|
-| Canvas | 1920 x 1080, 30 fps, H.264 / yuv420p, AAC 48 kHz, loudness about -14 LUFS |
-| Length | 8-20 min target; 1,200-3,000 narration words; chapters at least 3, each at least 60 s |
-| Safe area | lower thirds and captions inside 1728 x 972 centered (5 % margins) |
-| Captions | SRT sidecar uploaded with the video; burned-in captions only for on-screen terms |
-| Chapters | `00:00` first, ascending, each 10 s or longer; list goes in the description |
-| Thumbnail | 1280 x 720 or larger, 16:9, JPG or PNG, 2 MB or less; at most 4 words, at most 3 focus areas; 3 variants rendered |
-| Hook | first 30 s carry the promise and the first concrete thing; the one surprising number by 0:20 |
-| Pacing | new information at least every 30 s; visual change at least every 8 s |
-| Notify subscribers | true |

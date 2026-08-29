@@ -3,31 +3,119 @@
   "title": "BLAI publish manifest",
   "description": "The JSON block inside <slug>-package.md. publish.py maps it onto Blotato's POST /v2/posts; a future direct YouTube uploader maps the same fields onto videos.insert.",
   "type": "object",
-  "required": ["slug", "format", "title", "title_variants", "description", "hashtags", "privacy_status", "notify_subscribers", "made_for_kids", "contains_synthetic_media", "original_insight", "seo_score"],
+  "required": [
+    "slug",
+    "format",
+    "title",
+    "title_variants",
+    "description",
+    "hashtags",
+    "privacy_status",
+    "notify_subscribers",
+    "made_for_kids",
+    "contains_synthetic_media",
+    "original_insight",
+    "seo_score"
+  ],
   "properties": {
-    "slug": {"type": "string"},
-    "format": {"enum": ["short", "long"]},
-    "title": {"type": "string", "maxLength": 100},
-    "title_variants": {
-      "type": "array", "minItems": 3,
-      "items": {"type": "object", "required": ["text", "type"], "properties": {"text": {"type": "string", "maxLength": 100}, "type": {"enum": ["searchable", "intriguing"]}}}
+    "slug": {
+      "type": "string"
     },
-    "description": {"type": "string"},
-    "hashtags": {"type": "array", "minItems": 1, "maxItems": 3, "items": {"type": "string", "pattern": "^#[A-Za-z0-9_]+$"}},
-    "tags": {"type": "array", "maxItems": 25, "items": {"type": "string"}},
-    "category_id": {"type": "string", "default": "28"},
-    "default_language": {"type": "string", "default": "en"},
-    "privacy_status": {"enum": ["private", "unlisted", "public"]},
-    "notify_subscribers": {"type": "boolean"},
-    "made_for_kids": {"type": "boolean", "const": false},
-    "contains_synthetic_media": {"type": "boolean"},
-    "playlist_ids": {"type": "array", "items": {"type": "string"}},
-    "thumbnail": {"type": "string", "description": "relative path to the chosen thumbnail still (long-form only)"},
-    "chapters": {"type": "array", "items": {"type": "object", "required": ["time", "label"], "properties": {"time": {"type": "string", "pattern": "^\\d{2}:\\d{2}(:\\d{2})?$"}, "label": {"type": "string"}}}},
-    "publish_slot_hint": {"type": "string", "description": "optional ISO-8601 override; otherwise publish.py picks the next free slot"},
-    "related_long_form_url": {"type": "string"},
-    "original_insight": {"type": "string", "minLength": 20},
-    "seo_score": {"type": "number", "minimum": 0, "maximum": 100},
-    "reviewer_notes": {"type": "string"}
+    "format": {
+      "const": "short"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "title_variants": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "type"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "type": {
+            "enum": [
+              "searchable",
+              "intriguing"
+            ]
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "hashtags": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "pattern": "^#[A-Za-z0-9_]+$"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 25,
+      "items": {
+        "type": "string"
+      }
+    },
+    "category_id": {
+      "type": "string",
+      "default": "28"
+    },
+    "default_language": {
+      "type": "string",
+      "default": "en"
+    },
+    "privacy_status": {
+      "enum": [
+        "private",
+        "unlisted",
+        "public"
+      ]
+    },
+    "notify_subscribers": {
+      "type": "boolean"
+    },
+    "made_for_kids": {
+      "type": "boolean",
+      "const": false
+    },
+    "contains_synthetic_media": {
+      "type": "boolean"
+    },
+    "playlist_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publish_slot_hint": {
+      "type": "string",
+      "description": "optional ISO-8601 override; otherwise publish.py picks the next free slot"
+    },
+    "original_insight": {
+      "type": "string",
+      "minLength": 20
+    },
+    "seo_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "reviewer_notes": {
+      "type": "string"
+    }
   }
 }

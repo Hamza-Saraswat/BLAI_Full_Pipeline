@@ -6,7 +6,7 @@ What `scripts/generate_audio.py` does and why. Source: research sections 3.1 and
 
 | Model | Per-request limit | Chunk cap used | Credits per char | Role |
 |-------|-------------------|----------------|------------------|------|
-| `eleven_multilingual_v2` | 10,000 chars | 4,500 | 1 | long-form default (the stable model) |
+| `eleven_multilingual_v2` | 10,000 chars | 4,500 | 1 | default (the stable model) |
 | `eleven_v3` | 5,000 chars | 4,500 | 1 | Shorts test model (more expressive, audio tags) |
 | `eleven_flash_v2_5` | 40,000 chars | 4,500 | 0.5 | cheap drafts, timing checks |
 
@@ -39,7 +39,7 @@ Change a setting in one place (`VOICE_SETTINGS` in `generate_audio.py`) and note
 
 Run the first 3-5 videos in both arms and compare in the weekly retro.
 
-1. Long-form: PVC + `eleven_multilingual_v2` (primary) versus a stock or Voice Design voice + the same model (control). Measure WER from `qa.json`, regeneration rate, and retention at 30 s and 50 %.
+1. PVC + `eleven_multilingual_v2` (primary) versus a stock or Voice Design voice + the same model (control). Measure WER from `qa.json`, regeneration rate, and retention at 30 s and 50 %.
 2. Shorts: IVC (or the PVC, if it sounds right) + `eleven_v3` versus PVC + Multilingual v2. v3 allows audio tags such as `[excited]` or `[slowly]` inside the text; keep them out of the script file and add them only in a Shorts-specific pass if the test wins.
 3. Keep the loser's voice id on file as the outage hedge; the clone recordings also train a Cartesia or Inworld voice.
 4. Concurrency: Creator allows 5 parallel requests; the script runs chunks sequentially on purpose (previous/next text needs order).

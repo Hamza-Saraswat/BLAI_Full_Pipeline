@@ -1,6 +1,6 @@
 # build/ : the DGX Spark build agent
 
-The Spark runs the stages that need a GPU, a browser, a voice or a key: voice, capture, render, publish. Cloud routines produce the text; this folder turns it into video. Everything here is user-level (no root service), idempotent, and driven by hub-note statuses (`shared/pipeline-overview.md`).
+The Spark runs the stages that need a GPU, a browser, a voice or a key: voice, render, publish. Cloud routines produce the text; this folder turns it into video. Everything here is user-level (no root service), idempotent, and driven by hub-note statuses (`shared/pipeline-overview.md`).
 
 ## What is here
 
@@ -46,7 +46,7 @@ Manual passes (the venv python has the dependencies):
 ~/blai/venv/bin/python build/build.py --once --dry-run          # plan only, touches nothing
 ~/blai/venv/bin/python build/build.py --once                    # one real pass
 ~/blai/venv/bin/python build/build.py --once --slug <slug>      # this note only: rebuild a blocked one, publish an approved one
-~/blai/venv/bin/python build/build.py --once --slug <slug> --fresh   # ignore earlier audio/captures/posts in the build dir
+~/blai/venv/bin/python build/build.py --once --slug <slug> --fresh   # ignore earlier audio/posts in the build dir
 ~/blai/venv/bin/python build/stage_runner.py --list             # the stage table
 ~/blai/venv/bin/python build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --dry-run
 python3 build/build.py --once --local                           # no keys, local voice: see the next section
@@ -71,7 +71,7 @@ python3 build/build.py --once --local
 python3 build/build.py --once --local --slug <slug>           # or pick the note yourself
 python3 build/build.py --once --local --slug <slug> --fresh   # ignore audio from an earlier attempt
 
-# 3. or one stage at a time (shorts 06-voice, 07-render; long-form 08-capture, 09-voice, 10-render)
+# 3. or one stage at a time (shorts 06-voice, 07-render)
 python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 06-voice --local
 python3 build/stage_runner.py --note workspaces/shorts/videos/<slug>.md --stage 07-render --local
 
@@ -89,8 +89,6 @@ python3 skills/elevenlabs-narration/scripts/generate_audio.py --text <narration.
 python3 skills/elevenlabs-narration/scripts/qa_transcribe.py --audio "$OUT/narration.wav" --script <narration.txt> --out "$OUT"
 python3 skills/elevenlabs-narration/scripts/captions.py --alignment "$OUT/alignment.json" --script <narration.txt> --out "$OUT"
 ```
-
-A long-form note that carries an experiment plan waits for the 01:00-06:00 CT capture window; set `capture_window: any` in its hub note to build it now. Without a plan, `08-capture` writes a "no experiment" note and moves on, which is the normal Mac case.
 
 ### What differs from a real run
 
@@ -117,14 +115,13 @@ There is nothing to undo. Drop `--local` and the Spark path runs unchanged: `BLA
 
 1. Takes `build/locks/build.lock`; exits quietly if another pass holds it (the timer also never overlaps a running service).
 2. Commits and pushes anything an interrupted pass left behind, then `git pull --rebase`. A failed pull ends the pass; the next one retries.
-3. For every hub note with `status: approved`: runs the publish stage (`08-publish` or `11-publish`), which uploads to R2, posts to Blotato for the next slot (`shared/playbook/publish-timing.md`), writes `<slug>-publish.md` and `published/<slug>.md`, sets `status: scheduled`, and sends the checklist card.
+3. For every hub note with `status: approved`: runs the publish stage (`08-publish`), which uploads to R2, posts to Blotato for the next slot (`shared/playbook/publish-timing.md`), writes `<slug>-publish.md` and `published/<slug>.md`, sets `status: scheduled`, and sends the checklist card.
 4. For every `status: scheduled` note whose slot has passed: `publish.py --status`; on published sets `status: published` and `youtube_url` (also in `published/<slug>.md`).
-5. Builds the oldest `status: ready-to-build` note, one per pass: sets `status: building` and `build_host`, pushes, then runs the workspace's stages in order and pushes after each. Shorts: `06-voice`, `07-render`. Long-form: `08-capture`, `09-voice`, `10-render`. The render stage sends the Telegram gate card and leaves `status: review`; the Telegram bot turns your tap into `approved` or `rejected`.
-6. A long-form note with an experiment plan waits for the 01:00-06:00 CT capture window unless its hub note says `capture_window: any`.
+5. Builds the oldest `status: ready-to-build` note, one per pass: sets `status: building` and `build_host`, pushes, then runs the workspace's stages in order and pushes after each: `06-voice`, then `07-render`. The render stage sends the Telegram gate card and leaves `status: review`; the Telegram bot turns your tap into `approved` or `rejected`.
 
-Every stage appends `<stage> ok|fail <seconds>s` to the hub note's Build journal. A failed stage is retried once (voice and capture reuse what the first attempt produced, so the retry is cheap); then the note gets `status: blocked`, a `blocked_reason`, a journal line, a push and a Telegram blocked card. A stage that blocks the note itself (the capture reconcile rule when a measured number is out of tolerance) is not retried. Fix the cause, then `build.py --once --slug <slug>` (add `--fresh` after changing the pronunciation dictionary or the experiment plan). A blocked publish is retried from `approved` the same way; the post id of a successful Blotato call is kept in the build dir so a retry never posts twice.
+Every stage appends `<stage> ok|fail <seconds>s` to the hub note's Build journal. A failed stage is retried once (voice reuses what the first attempt produced, so the retry is cheap); then the note gets `status: blocked`, a `blocked_reason`, a journal line, a push and a Telegram blocked card. Fix the cause, then `build.py --once --slug <slug>` (add `--fresh` after changing the pronunciation dictionary). A blocked publish is retried from `approved` the same way; the post id of a successful Blotato call is kept in the build dir so a retry never posts twice.
 
-Per-slug binaries: `$BLAI_BUILD_DIR/<slug>/{voice,capture,render,logs}/`. Nothing binary enters git; the markdown notes under `stages/*/output/` are the audit trail.
+Per-slug binaries: `$BLAI_BUILD_DIR/<slug>/{voice,render,logs}/`. Nothing binary enters git; the markdown notes under `stages/*/output/` are the audit trail.
 
 ## Stage table
 
@@ -133,10 +130,6 @@ Per-slug binaries: `$BLAI_BUILD_DIR/<slug>/{voice,capture,render,logs}/`. Nothin
 | shorts | `06-voice` | mechanical | `generate_audio.py --storyboard`, `qa_transcribe.py`, `captions.py`; writes `<slug>-voice.md` (duration, chars, chunks, WER, mismatches, pass/fail); a failed QA blocks with the mismatches |
 | shorts | `07-render` | creative | `claude -p --dangerously-skip-permissions --output-format json --max-turns 200 "Run stage 07-render for <slug> in unattended mode. ..."` in `workspaces/shorts`; verifies `render/final.mp4`, `<slug>-render.md`, `status: review` |
 | shorts | `08-publish` | mechanical | `publish.py --package stages/05-package/output/<slug>-package.md --video render/final.mp4 --slot auto` |
-| long-form | `08-capture` | mixed | `capture.py --plan stages/03-research/output/<slug>-experiment.md --window <capture_window or night>`, then `claude -p` "Run stage 08-capture reconcile ..."; without an experiment file it writes a "no experiment" note and moves on |
-| long-form | `09-voice` | mechanical | as `06-voice` with `--text stages/05-script/output/<slug>-narration.txt --format long` |
-| long-form | `10-render` | creative | `claude -p` "Run stage 10-render ..."; verifies `final.mp4`, `thumbnails/1.png`, `<slug>-render.md`, `status: review` |
-| long-form | `11-publish` | mechanical | as `08-publish` with `--thumbnail render/thumbnails/<thumbnail_pick or 1>.png` (the `.jpg` twin when the png exceeds 2 MB) and `--chapters render/chapters.json` (measured times) when present, package from `stages/07-package` |
 
 `claude -p` runs with a 2 h timeout, stdout captured to the day log and to `$BLAI_BUILD_DIR/<slug>/logs/`. It needs a logged-in `claude` and `node` on the unit's PATH (`install.sh` links nvm's node into `~/.local/bin`).
 
@@ -152,8 +145,7 @@ Per-slug binaries: `$BLAI_BUILD_DIR/<slug>/{voice,capture,render,logs}/`. Nothin
 | `git pull --rebase failed` in the log | the deploy key is not on GitHub with write access, or `ssh -T git@github-blai` fails |
 | Render stage blocked with `claude -p failed` | `claude` not logged in (`claude` then `/login`), or `node` missing from `~/.local/bin`; the full `claude` output is in `$BLAI_BUILD_DIR/<slug>/logs/` |
 | Voice stage blocked with `voice QA failed` | add the term to `skills/elevenlabs-narration/pronunciation_dictionary.json`, commit, then `build.py --once --slug <slug> --fresh` |
-| Long-form note never starts | it has an experiment plan and waits for 01:00-06:00 CT; set `capture_window: any` in the hub note to run now |
 | Units vanish after logout | `loginctl enable-linger $USER` (needs sudo once) |
 | `--local` says `no voice engine` | the Kokoro model is not where it is expected: `python3 build/stage_runner.py --list --local` prints the repo it uses, and `BLAI_KOKORO_ROOT` or `generate_audio.py --kokoro-root` moves it |
 | `--local` voice sounds right but the captions drift | `alignment.json` says `"source": "proportional"`, so no whisper.cpp binary was found; build one or set `WHISPER_CPP_BIN` and `WHISPER_CPP_MODEL` |
-| `another pass holds build/locks/build.lock` | a pass is still running (renders take minutes, captures hours); `ps -ef \| grep build.py` |
+| `another pass holds build/locks/build.lock` | a pass is still running (renders take minutes); `ps -ef \| grep build.py` |

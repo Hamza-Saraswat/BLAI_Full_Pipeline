@@ -9,7 +9,7 @@ metadata:
 
 ## When to Use
 
-- The voice stage of either workspace (Shorts stage 06, long-form stage 08) on the DGX Spark, after the script and storyboard passed the script gates.
+- The voice stage (Shorts stage 06) on the DGX Spark, after the script and storyboard passed the script gates.
 - Regenerating narration after a script fix, a QA failure or a pronunciation-dictionary change.
 - Producing `captions.json` and `captions.srt` for the render skills and for the YouTube caption upload.
 
@@ -31,7 +31,7 @@ Not for: recording or training the clone (that is a one-time manual task, see `r
 
 ## How It Works
 
-1. `scripts/generate_audio.py --text FILE.txt --out DIR [--format long|short] [--engine auto|elevenlabs|kokoro]` applies `pronunciation_dictionary.json`, chunks at paragraph boundaries (<= 4,500 chars, one chunk for Shorts), synthesizes each chunk with the chosen engine (ElevenLabs: `/v1/text-to-speech/{voice}/with-timestamps` with `previous_text`, `next_text`, a pinned seed and fixed voice settings), then writes `DIR/chunks/NN.mp3` or `NN.wav`, `DIR/narration.wav` (44.1 kHz mono), `DIR/alignment.json` (`words[{word,start,end}]`, `source`, and character times) and `DIR/voice.json` (`duration_s`, `chars`, `chunks`, `credits_estimate`, `model`, `engine`, `alignment_source`, `words_per_second`, `voice_id_hint`).
+1. `scripts/generate_audio.py --text FILE.txt --out DIR [--format short] [--engine auto|elevenlabs|kokoro]` applies `pronunciation_dictionary.json`, chunks at paragraph boundaries (<= 4,500 chars, one chunk for Shorts), synthesizes each chunk with the chosen engine (ElevenLabs: `/v1/text-to-speech/{voice}/with-timestamps` with `previous_text`, `next_text`, a pinned seed and fixed voice settings), then writes `DIR/chunks/NN.mp3` or `NN.wav`, `DIR/narration.wav` (44.1 kHz mono), `DIR/alignment.json` (`words[{word,start,end}]`, `source`, and character times) and `DIR/voice.json` (`duration_s`, `chars`, `chunks`, `credits_estimate`, `model`, `engine`, `alignment_source`, `words_per_second`, `voice_id_hint`).
 2. `scripts/qa_transcribe.py --audio DIR/narration.wav --script FILE.txt --out DIR` transcribes with Whisper, normalizes both texts, computes the word-level WER and writes `DIR/transcript.json` and `DIR/qa.json` (`wer`, `pass`, `mismatches[{expected, heard, at_s}]`). Exit 1 above the 0.03 threshold.
 3. On failure, find the chunk from `at_s` and re-run step 1 with `--only-chunks N --seed <new>`; add a dictionary entry when a term, not the take, is the problem (`rules/qa-loop.md`).
 4. `scripts/captions.py --alignment DIR/alignment.json --script FILE.txt --out DIR` turns the alignment (its `words` array when it has one, else the character times) into `captions.json` (`[{word, start, end}]`, script spelling, voice timing) and `captions.srt` (3-4 words per cue, max 1.8 s).

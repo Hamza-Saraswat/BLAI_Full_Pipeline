@@ -18,4 +18,4 @@ The viewer sees a real measurement from our hardware that settles a claim (token
 
 ## How to Use
 
-At the ideas stage (Shorts) or the outline stage (long-form), tag each candidate with the value types it naturally delivers. The chosen candidate's two locked types are written into the hub note and checked in the script audit: a script that does not deliver its locked types is revised, not saved.
+At the ideas stage, tag each candidate with the value types it naturally delivers. The chosen candidate's two locked types are written into the hub note and checked in the script audit: a script that does not deliver its locked types is revised, not saved.

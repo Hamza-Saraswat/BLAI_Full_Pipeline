@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Trend radar: run every source, merge, score, dedupe, and write the daily radar files.
 
-    python3 radar.py --workspace shorts|long-form --date YYYY-MM-DD [--hours 48] [--out DIR]
+    python3 radar.py --workspace shorts --date YYYY-MM-DD [--hours 48] [--out DIR]
                      [--dedupe-dir workspaces/<ws>] [--dry-run]
 
 Writes DIR/<date>-radar.json (a list of items with id, title, url, source, published_at,
 signals, products, summary, why_now, score) and DIR/<date>-radar.md (a digest grouped by Shorts
-lane or by long-form series, at least the top 30). Default DIR is
+lane, at least the top 30). Default DIR is
 workspaces/<workspace>/stages/01-radar/output under the repo root.
 
 Sources that lack their key are skipped with a stderr note; a source that errors is skipped
@@ -277,7 +277,7 @@ def digest(items: list, args, now, status: dict, stats: dict, groups: list, labe
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--workspace", required=True, choices=["shorts", "long-form"])
+    ap.add_argument("--workspace", required=True, choices=["shorts"])
     ap.add_argument("--date", required=True, help="run date YYYY-MM-DD, used in the output file names")
     ap.add_argument("--hours", type=int, default=48, help="look-back window for the sources (default 48)")
     ap.add_argument("--out", help="output folder (default workspaces/<ws>/stages/01-radar/output)")
@@ -348,11 +348,8 @@ def main(argv=None) -> int:
                   + (" ..." if len(off_topic) > 4 else "")))
     items = relevant
 
-    shorts = args.workspace == "shorts"
     for item in items:
-        text = item["title"] + " " + item["summary"]
-        item["signals"]["group"] = (scoring.lane(item["title"], item["summary"], item["_kinds"], item["products"]) if shorts
-                                    else scoring.series(text, item["_kinds"], item["_tag"], item["products"]))
+        item["signals"]["group"] = scoring.lane(item["title"], item["summary"], item["_kinds"], item["products"])
     items.sort(key=lambda it: it["published_at"] or "", reverse=True)   # newest first among equal scores
     items.sort(key=lambda it: it["score"], reverse=True)
     for item in items:
@@ -363,7 +360,7 @@ def main(argv=None) -> int:
              "dropped_url": dropped["url"], "dropped_off_topic": dropped.get("off_topic", 0)}
     json_path = out_dir / ("%s-radar.json" % args.date)
     md_path = out_dir / ("%s-radar.md" % args.date)
-    groups, label = (scoring.LANE_ORDER, "Shorts lane") if shorts else (scoring.SERIES_ORDER, "long-form series")
+    groups, label = scoring.LANE_ORDER, "Shorts lane"
     try:
         json_path.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         md_path.write_text(digest(items, args, now, status, stats, groups, label), encoding="utf-8")

@@ -12,7 +12,7 @@
 
 ## What shipped
 
-A table, one row per video published in the week, oldest first: slug, workspace, pillar (or long-form series), structure, style pack, slot (weekday and CT time), views, views/day, delta. Below it: how many shipped, how many have stats, and up to three catalog movers (older videos with the largest delta this week).
+A table, one row per video published in the week, oldest first: slug, pillar, structure, style pack, slot (weekday and CT time), views, views/day, delta. Below it: how many shipped, how many have stats, and up to three catalog movers (older videos with the largest delta this week).
 
 ## What worked
 

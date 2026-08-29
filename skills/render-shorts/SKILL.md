@@ -14,7 +14,7 @@ Port of the v1 BLAI Animator render stack (Remotion assembly, HyperFrames and Ma
 - Re-rendering one scene after a reject with feedback, or re-assembling after scene fixes.
 - Picking or recording the style pack for a new storyboard (`scripts/style_rotation.py`).
 - Running the release gates on any Short (`scripts/lint_video.py`, `scripts/safe_zone_check.py`).
-- Not for long-form episodes (`skills/render-longform`) and not for writing or changing scripts.
+- Not for writing or changing scripts.
 
 ## What You Need Before Calling
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Scoring for the trend radar: signal normalization, recency decay, product extraction,
-the why-now rubric, and lane or series assignment.
+the why-now rubric, and lane assignment.
 
 rules/scoring.md is the readable twin of this module. Change the two together.
 """
@@ -134,8 +134,6 @@ WHY_NOW = [
 _WHY_NOW_RES = [(kind, re.compile(pattern, re.I)) for kind, pattern in WHY_NOW]
 
 LANE_ORDER = ["news-react", "myth-bust", "comparison", "how-to", "explainer", "enterprise-privacy"]
-SERIES_ORDER = ["local-ai-for-dummies", "my-dgx-spark-projects", "benchmarks",
-                "inference-engineering-at-home", "dgx-spark-specific", "beyond-llms"]
 
 LANE_RULES = [
     ("comparison", r"\bvs\.?\b|versus|compared to|comparison|head[ -]to[ -]head|side by side|"
@@ -154,31 +152,6 @@ LANE_RULES = [
                   r"in \d+ seconds"),
 ]
 _LANE_RES = [(lane, re.compile(pattern, re.I)) for lane, pattern in LANE_RULES]
-
-BEYOND_LLM_TAGS = {"text-to-speech", "automatic-speech-recognition", "text-to-image",
-                   "text-to-video", "image-to-text"}
-SERIES_RULES = [
-    ("beyond-llms", r"text[ -]to[ -]speech|\btts\b|speech|whisper|\bvoice\b|\basr\b|transcri|"
-                    r"image generation|text[ -]to[ -]image|text[ -]to[ -]video|video model|"
-                    r"diffusion|\bflux\b|\bwan[ -]?\d|kokoro|comfyui|image[ -]to[ -]text|\bocr\b"),
-    ("dgx-spark-specific", r"firmware|driver|connectx|two (?:dgx )?sparks|dual[ -]spark|"
-                           r"2 dgx sparks|\bgb10\b|spark os|playbook|nvidia container|nccl|"
-                           r"200 ?gbe|cuda graphs? on gb10|sm_121"),
-    ("my-dgx-spark-projects", r"fine[ -]?tun|finetun|\blora\b|unsloth|\bagent|\brag\b|i built|"
-                              r"built a|project|home ?lab|here'?s the stack"),
-    ("benchmarks", r"benchmark|tok(?:ens)?/s|tokens per second|throughput|latency|\bvs\.?\b|"
-                   r"versus|faster|slower|\d+(?:\.\d+)?x\b|measured|side by side|compared|"
-                   r"ran the same|results"),
-    ("inference-engineering-at-home", r"quantiz|\bgguf\b|\bawq\b|\bfp8\b|\bfp4\b|nvfp4|kv cache|"
-                                      r"batch|context (?:length|window)|speculative|flash attention|"
-                                      r"kernel|cuda graph|offload|serving|vllm|llama\.cpp|sglang|"
-                                      r"tensorrt|ollama|lm studio|exllama|\bmlx\b|\bexo\b"),
-    ("local-ai-for-dummies", r"explained|what is|what are|beginner|for dummies|basics|\bintro|"
-                             r"plain|why (?:does|do|is|are|your|local)|understanding|how does|"
-                             r"cheaper than|the math"),
-]
-_SERIES_RES = [(series, re.compile(pattern, re.I)) for series, pattern in SERIES_RULES]
-
 
 def log_norm(value, full: float) -> float:
     """0..1 on a log scale; reaches 1.0 at `full` and stays there."""
@@ -299,23 +272,6 @@ def lane(title: str, summary: str, kinds: set, product_names: list[str]) -> str:
         return "comparison"
     return "news-react"
 
-
-def series(text: str, kinds: set, pipeline_tag: str | None, product_names: list[str]) -> str:
-    """Long-form series. Non-text models go to beyond-llms before any keyword rule fires."""
-    if pipeline_tag in BEYOND_LLM_TAGS:
-        return "beyond-llms"
-    hits = [name for name, regex in _SERIES_RES if regex.search(text or "")]
-    if "dgx-spark-specific" in hits and "DGX Spark" in product_names:
-        return "dgx-spark-specific"
-    for candidate in ("beyond-llms", "my-dgx-spark-projects", "benchmarks",
-                      "inference-engineering-at-home", "local-ai-for-dummies", "dgx-spark-specific"):
-        if candidate in hits:
-            return candidate
-    if "model" in kinds:
-        return "benchmarks"
-    if "runtime" in kinds or "format" in kinds:
-        return "inference-engineering-at-home"
-    return "local-ai-for-dummies"
 
 # --- relevance ------------------------------------------------------------
 # A radar item must be about running AI on your own hardware. Hacker News ranks by

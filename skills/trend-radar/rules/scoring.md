@@ -95,24 +95,6 @@ read `title + summary`:
 6. a versus phrase in the title with fewer than two products still lands in `comparison`
 7. everything else is `news-react`, the lane for things that shipped, changed or broke
 
-## Series assignment (workspace long-form)
-
-1. `beyond-llms` for any Hugging Face pipeline other than text-generation, or speech, voice,
-   transcription, image or video generation keywords
-2. `dgx-spark-specific` when DGX Spark is named together with firmware, driver, ConnectX,
-   two Sparks, GB10, Spark OS, playbook, NCCL, 200 GbE, CUDA graphs on GB10, sm_121
-3. `my-dgx-spark-projects`: fine-tune, LoRA, Unsloth, agent, RAG, "I built", project, home lab
-4. `benchmarks`: benchmark, tok/s, throughput, latency, vs, faster, Nx, measured, side by side
-5. `inference-engineering-at-home`: quantization, GGUF, AWQ, FP8, FP4, NVFP4, KV cache, batch,
-   context window, speculative decoding, flash attention, kernels, CUDA graphs, offload, serving,
-   or any runtime name
-6. `local-ai-for-dummies`: explained, what is, beginner, basics, intro, why does, how does,
-   "cheaper than", "the math"
-7. no rule: a named model goes to `benchmarks`, a named runtime or format to
-   `inference-engineering-at-home`, the rest to `local-ai-for-dummies`
-
-The group is stored in `signals.group`; the top-level item keys stay exactly
-`id, title, url, source, published_at, signals, products, summary, why_now, score`.
 
 ## Relevance gate
 

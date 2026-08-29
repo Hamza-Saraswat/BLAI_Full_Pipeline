@@ -10,7 +10,7 @@ Synthesize the narration with the creator's cloned voice, check it against the s
 | Skill | `../../../../skills/elevenlabs-narration/SKILL.md` | Full file | Commands and settings |
 | Skill rule | `../../../../skills/elevenlabs-narration/rules/qa-loop.md` | Full file | What to do when the transcript disagrees with the script |
 | Skill data | `../../../../skills/elevenlabs-narration/pronunciation_dictionary.json` | Full file | Aliases applied before synthesis |
-| Engine | `build/.env` (`ELEVENLABS_API_KEY`, `ELEVEN_VOICE_ID`) or the local Kokoro model | Whether they are set, never the values | `--engine auto` takes ElevenLabs when both are set and the local Kokoro engine otherwise; a local test run passes `--engine kokoro` and needs no key |
+| Engine | `../../../../build/.env.example` | Whether `ELEVENLABS_API_KEY` and `ELEVEN_VOICE_ID` are set in the runtime env it templates, never the values | `--engine auto` takes ElevenLabs when both are set, else the local engine; a local test run passes `--engine kokoro` and needs no key |
 | Skill | `../../../../skills/script-gates/SKILL.md` | "normalize_narration.py" | Safety net for digits and acronyms |
 | Reference | `references/voice-note-format.md` | Full file | Layout of the voice note |
 

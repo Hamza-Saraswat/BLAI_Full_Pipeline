@@ -1,6 +1,6 @@
 # BLAI Full Pipeline
 
-Two ICM workspaces that turn local-AI news and Hamza's DGX Spark work into YouTube Shorts (2 a day) and long-form videos (3 a week). Cloud routines run the thinking stages, the DGX Spark runs the build stages, and one Telegram tap per video approves publishing.
+One ICM workspace that turns local-AI news and Hamza's DGX Spark work into YouTube Shorts (2 a day). Cloud routines run the thinking stages, the DGX Spark runs the build stages, and one Telegram tap per video approves publishing.
 
 ## Folder Map
 
@@ -13,7 +13,6 @@ BLAI/
 ├── skills/                (bundled skills: research, gates, narration, render, publish, telegram, obsidian)
 ├── workspaces/
 │   ├── shorts/            (Shorts pipeline, stages 01-08)
-│   └── long-form/         (long-form pipeline, stages 01-11)
 ├── build/                 (DGX Spark build agent: installer, systemd units, build loop, Telegram bot)
 ├── tools/                 (validate.py, hubnote.py, new-run.py, git-sync.sh)
 ├── analytics/             (weekly retro notes)
@@ -25,7 +24,7 @@ BLAI/
 
 | Keyword | Action |
 |---------|--------|
-| `setup` | Run `setup` inside each workspace (`workspaces/shorts`, `workspaces/long-form`) |
+| `setup` | Run `setup` inside the workspace (`workspaces/shorts`) |
 | `status` | Render the pipeline status of both workspaces (see each workspace `CLAUDE.md`) |
 
 ## Routing
@@ -33,7 +32,6 @@ BLAI/
 | Task | Go To |
 |------|-------|
 | Anything about Shorts (ideas, research, script, package, build, publish) | `workspaces/shorts/CLAUDE.md` |
-| Anything about long-form episodes | `workspaces/long-form/CLAUDE.md` |
 | Change how the channel sounds or who it is for | `brand-vault/CONTEXT.md` |
 | Change posting rules, timing, SEO rubric, compliance | `shared/playbook/` |
 | Set up or debug the DGX Spark build agent or the Telegram bot | `build/README.md` |

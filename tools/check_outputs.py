@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """Check committed hub notes and package manifests against shared/schemas (stdlib only; a small
 subset of JSON Schema: required, enum, pattern, type, minItems/maxItems, maxLength, const).
-Also runs the long-form script gate (skills/script-gates/scripts/validate_longform.py) over every
-committed stages/05-script/output/*-script.md that has a sibling narration file; its BLOCKERS count
-as failures here, its advisories do not.
 
     python3 tools/check_outputs.py            # whole repo
 Exit 1 on the first workspace with failures.
@@ -11,7 +8,6 @@ Exit 1 on the first workspace with failures.
 import json
 import pathlib
 import re
-import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -67,39 +63,11 @@ def manifest_from_package(path):
     return json.loads(m.group(1)) if m else None
 
 
-def longform_gate(script):
-    """Blocker findings from validate_longform.py for one committed long-form script.
-
-    Skipped (no findings) when the narration sibling or the validator is absent: the gate needs the
-    narration file the voice stage reads, and the skill may not be checked out. Advisories (exit 3)
-    are the writer's business, not this tool's.
-    """
-    stem = script.name[:-len("-script.md")]
-    narration = script.with_name(stem + "-narration.txt")
-    validator = ROOT / "skills" / "script-gates" / "scripts" / "validate_longform.py"
-    if not narration.exists() or not validator.exists():
-        return []
-    cmd = [sys.executable, str(validator), "--script", str(script),
-           "--narration", str(narration), "--json"]
-    outline = script.parents[2] / "04-outline" / "output" / (stem + "-outline.md")
-    if outline.exists():
-        cmd += ["--outline", str(outline)]
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True)
-    except OSError as e:
-        return ["could not run validate_longform.py (%s)" % e]
-    if proc.returncode not in (0, 1, 3):
-        return ["validate_longform.py exited %d: %s" % (proc.returncode, proc.stderr.strip()[:200])]
-    try:
-        return json.loads(proc.stdout).get("blockers", [])
-    except ValueError:
-        return ["validate_longform.py printed no JSON report"]
-
 
 def main():
     schemas = {p.stem: json.loads(p.read_text()) for p in (ROOT / "shared" / "schemas").glob("*.json")}
     failures = 0
-    for ws in ("shorts", "long-form"):
+    for ws in ("shorts",):
         wsdir = ROOT / "workspaces" / ws
         for note in sorted((wsdir / "videos").glob("*.md")):
             meta, _ = hubnote.read(note)
@@ -116,12 +84,6 @@ def main():
                 failures += 1; print("FAIL %s: no ```json manifest block" % pkg.relative_to(ROOT)); continue
             for e in check(man, schemas["publish-manifest.schema"]):
                 failures += 1; print("FAIL %s: %s" % (pkg.relative_to(ROOT), e))
-        for script in sorted(wsdir.glob("stages/05-script/output/*-script.md")):
-            for e in longform_gate(script):
-                failures += 1; print("FAIL %s: %s" % (script.relative_to(ROOT), e))
-        for spec in sorted(wsdir.glob("stages/*-spec/output/*-spec.json")):
-            for e in check(json.loads(spec.read_text()), schemas["longform-spec.schema"]):
-                failures += 1; print("FAIL %s: %s" % (spec.relative_to(ROOT), e))
     print("check_outputs: %d failure(s)" % failures)
     return 1 if failures else 0
 

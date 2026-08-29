@@ -23,7 +23,7 @@ MCP connector traffic is routed through Anthropic and needs no allowlist entry.
 
 | Connector | URL | Attach to |
 |-----------|-----|-----------|
-| vidIQ MCP (custom connector, OAuth) | `https://mcp.vidiq.com/mcp` | `blai-shorts-ideas`, `blai-longform-ideas` |
+| vidIQ MCP (custom connector, OAuth) | `https://mcp.vidiq.com/mcp` | `blai-shorts-ideas` |
 
 Add it once at claude.ai/customize/connectors, then attach it to the two ideas routines.
 
@@ -37,8 +37,6 @@ The cloud block of `shared/env-template.md`.
 |---------|-----------|--------------------|-------|--------|
 | `blai-shorts-ideas` | `0 11 * * *` | 06:00 daily | claude-sonnet-5 | `cd workspaces/shorts` then `ideas --unattended` |
 | `blai-shorts-produce` | `0 12 * * *` | 07:00 daily | claude-opus-5 | `cd workspaces/shorts` then `produce --unattended` |
-| `blai-longform-ideas` | `0 11 * * 1,3,5` | 06:00 Mon/Wed/Fri | claude-sonnet-5 | `cd workspaces/long-form` then `ideas --unattended` |
-| `blai-longform-produce` | `0 12 * * 1,3,5` | 07:00 Mon/Wed/Fri | claude-opus-5 | `cd workspaces/long-form` then `produce --unattended` |
 | `blai-weekly-retro` | `0 13 * * 0` | 08:00 Sunday | claude-sonnet-5 | `cd analytics` then `retro --unattended` |
 
 The exact prompt text lives in `build/routines/*.md` and is pushed with `build/routines/sync.md` instructions. Routines are created disabled and enabled once the environment variables exist.

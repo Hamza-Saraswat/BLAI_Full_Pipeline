@@ -16,12 +16,12 @@ Turn the finished script into everything the upload needs: titles, description, 
 | Playbook | `../../../../shared/playbook/publish-timing.md` | "Defaults" | Slot hint |
 | Brand vault | `../../../../brand-vault/voice-rules.md` | "Hard Constraints" | No hype in titles either |
 | Reference | `references/package-format.md` | Full file | Layout and the manifest block |
-| Archive | `../../published/` | Frontmatter titles and URLs | Related long-form link; no duplicate titles |
+| Archive | `../../published/` | Frontmatter titles and URLs | Closest related video for the description; no duplicate titles |
 
 ## Process
 
 1. Write three titles (one searchable, two intriguing), each naming the product; pick one and tag its type.
-2. Write the description (first 150 characters: keyword and promise; a related long-form or channel line; 2-3 hashtags), the tags list, category `28`, the flags (`notify_subscribers: false`, `made_for_kids: false`, `contains_synthetic_media` per compliance.md) and the `original_insight` sentence.
+2. Write the description (first 150 characters: keyword and promise; a related-video or channel line; 2-3 hashtags), the tags list, category `28`, the flags (`notify_subscribers: false`, `made_for_kids: false`, `contains_synthetic_media` per compliance.md) and the `original_insight` sentence.
 3. Score with seo-rubric.md and revise until the score is 80 or higher. **[Checkpoint]** -- present titles, description and score.
 4. Write `output/[slug]-package.md` with the manifest block; run `python3 ../../../../tools/check_outputs.py`.
 5. Run the audit checks below. If any fail, revise before saving.

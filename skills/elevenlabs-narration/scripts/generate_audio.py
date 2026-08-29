@@ -3,7 +3,7 @@
 
 Usage:
   generate_audio.py --text FILE.txt --out DIR [--engine auto|elevenlabs|kokoro] [--voice-id ID]
-                    [--model eleven_multilingual_v2] [--format long|short] [--max-chars 4500]
+                    [--model eleven_multilingual_v2] [--format short] [--max-chars 4500]
                     [--fade-ms 0] [--kokoro-voice am_eric] [--kokoro-speed 1.05]
                     [--kokoro-root DIR] [--align auto|whisper|proportional] [--dry-run]
   generate_audio.py --storyboard FILE.json --out DIR ...   (reads the storyboard's narration_full)
@@ -579,7 +579,7 @@ def main() -> int:
                     help="auto (default): ElevenLabs when its key and voice id are set, else local Kokoro")
     ap.add_argument("--voice-id", default=None, help="ElevenLabs voice id (default ELEVEN_VOICE_ID)")
     ap.add_argument("--model", default=None, help="model id (default ELEVEN_MODEL_ID or %s)" % DEFAULT_MODEL)
-    ap.add_argument("--format", choices=["long", "short"], default="long", help="short = one chunk")
+    ap.add_argument("--format", choices=["short"], default="short", help="short = one chunk")
     ap.add_argument("--max-chars", type=int, default=DEFAULT_MAX_CHARS, help="chunk size cap (default %d)" % DEFAULT_MAX_CHARS)
     ap.add_argument("--fade-ms", type=int, default=0, help="optional fade in/out per chunk at the stitch (0 = plain concat)")
     ap.add_argument("--seed", type=int, default=None, help="override ELEVEN_SEED (use a new seed when regenerating a bad chunk)")

@@ -10,7 +10,7 @@ only when every request of a run failed. A missing key is a skip with a stderr n
 |--------|--------|-----|--------|-----------------|
 | Reddit | `reddit.py` | optional `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` (OAuth); `REDDIT_USER_AGENT` (default `blai-radar/1.0`) | `--hours` exactly, from the `top` listing of the matching period | What home users are running, measuring and complaining about right now |
 | Hacker News | `hn.py` | none (Algolia) | `--hours` exactly (`created_at_i` filter) | Which releases and write-ups the wider developer crowd rates |
-| Hugging Face | `hf_trending.py` | none | models created in the last `max(--hours, 336)` h (two weeks) | Which new models people are pulling; non-text pipelines feed the `beyond-llms` series |
+| Hugging Face | `hf_trending.py` | none | models created in the last `max(--hours, 336)` h (two weeks) | Which new models people are pulling; non-text pipelines are radar-worthy too (speech, image, video) |
 | GitHub releases | `github_releases.py` | optional `GITHUB_TOKEN` (raises the limit from 60 to 5,000 req/h) | releases published in the last `max(--hours, 168)` h | What the runtimes shipped, with the release notes that name the break or the speedup |
 | YouTube | `youtube_recent.py` | `YT_API_KEY`, skipped without it | 7 days, fixed, ordered by views | What the audience already watches on the topic and how fast it is moving (views per hour) |
 | FireCrawl | `firecrawl_search.py` | `FIRECRAWL_API_KEY`, skipped without it | past week (`tbs=qdr:w`) | Vendor news, firmware, pricing and regulation that never reach Reddit or HN in time |

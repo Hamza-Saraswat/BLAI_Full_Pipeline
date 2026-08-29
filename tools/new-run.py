@@ -19,7 +19,6 @@ import hubnote  # noqa: E402
 
 STAGES = {
     "shorts": ["01-radar", "02-ideas", "03-research", "04-script", "05-package", "06-voice", "07-render", "08-publish"],
-    "long-form": ["01-radar", "02-ideas", "03-research", "04-outline", "05-script", "06-spec", "07-package", "08-capture", "09-voice", "10-render", "11-publish"],
 }
 
 

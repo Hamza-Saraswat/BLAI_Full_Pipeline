@@ -66,7 +66,6 @@ SCRIPT = {
     "generate_audio": SKILLS / "elevenlabs-narration" / "scripts" / "generate_audio.py",
     "qa_transcribe": SKILLS / "elevenlabs-narration" / "scripts" / "qa_transcribe.py",
     "captions": SKILLS / "elevenlabs-narration" / "scripts" / "captions.py",
-    "capture": SKILLS / "dgx-capture" / "scripts" / "capture.py",
     "publish": SKILLS / "blotato-publish" / "scripts" / "publish.py",
     "send_card": SKILLS / "telegram-gate" / "scripts" / "send_card.py",
 }
@@ -77,7 +76,6 @@ CLAUDE_TIMEOUT = 2 * 3600
 VOICE_TIMEOUT = 30 * 60
 QA_TIMEOUT = 30 * 60
 CAPTIONS_TIMEOUT = 10 * 60
-CAPTURE_TIMEOUT = 6 * 3600
 PUBLISH_TIMEOUT = 30 * 60
 CARD_TIMEOUT = 120
 
@@ -86,9 +84,6 @@ UNATTENDED = ("Run stage {stage} for {slug} in unattended mode. Read CLAUDE.md, 
 LOCAL_SUFFIX = (" Local test mode: no paid service is configured, so make no network call that needs "
                 "a key, pass --engine kokoro to generate_audio.py, pass --dry-run to every "
                 "send_card.py and publish.py call, and leave the hub note at review.")
-RECONCILE = ("Run stage 08-capture reconcile for {slug} in unattended mode. Read CLAUDE.md, then "
-             "stages/08-capture/CONTEXT.md, and follow it exactly. Build dir: {build}. "
-             "The capture results are in {build}/capture/capture.json.")
 
 VOICE_FIXTURE = {"duration_s": 0.0, "chars": 0, "chunks": 0, "credits_estimate": 0, "model": ""}
 QA_FIXTURE = {"wer": 0.0, "mismatches": [], "pass": True}
@@ -308,30 +303,25 @@ class Ctx:
             hubnote.write(self.note, meta, pat.sub(link, body, count=1))
 
 
-# -- voice (shorts 06, long-form 09) ------------------------------------------
-def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
+# -- voice (shorts 06) --------------------------------------------------------
+def _voice(ctx: Ctx, stage: str) -> str:
     out = ctx.build / "voice"
-    if fmt == "short":
-        storyboard = ctx.stage_out("04-script", "storyboard.json")
-        ctx.require(storyboard, "storyboard")
-        script = out / "narration.txt"
-        if ctx.dry_run:
-            ctx.plan("extract narration_full from %s -> %s" % (storyboard, script))
-        else:
-            text = json.loads(storyboard.read_text(encoding="utf-8")).get("narration_full", "").strip()
-            if not text:
-                raise StageError("storyboard has no narration_full: %s" % storyboard)
-            out.mkdir(parents=True, exist_ok=True)
-            script.write_text(text + "\n", encoding="utf-8")
-        source = ["--storyboard", storyboard]
+    storyboard = ctx.stage_out("04-script", "storyboard.json")
+    ctx.require(storyboard, "storyboard")
+    script = out / "narration.txt"
+    if ctx.dry_run:
+        ctx.plan("extract narration_full from %s -> %s" % (storyboard, script))
     else:
-        script = ctx.stage_out("05-script", "narration.txt")
-        ctx.require(script, "narration text")
-        source = ["--text", script]
+        text = json.loads(storyboard.read_text(encoding="utf-8")).get("narration_full", "").strip()
+        if not text:
+            raise StageError("storyboard has no narration_full: %s" % storyboard)
+        out.mkdir(parents=True, exist_ok=True)
+        script.write_text(text + "\n", encoding="utf-8")
+    source = ["--storyboard", storyboard]
     wav = out / "narration.wav"
     engine = ["--engine", "kokoro"] if ctx.local else []  # local test runs need no ElevenLabs key
     if ctx.fresh or ctx.dry_run or not (wav.exists() and (out / "voice.json").exists()):
-        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", fmt, *engine],
+        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", "short", *engine],
                 "generate_audio", timeout=VOICE_TIMEOUT)
     else:
         ctx.say("reusing %s (pass --fresh to regenerate)" % wav)
@@ -345,7 +335,7 @@ def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
             "captions", timeout=CAPTIONS_TIMEOUT)
     voice = ctx.read_json(out / "voice.json", VOICE_FIXTURE)
     qa = ctx.read_json(out / "qa.json", QA_FIXTURE)
-    ctx.write_text(ctx.stage_out(stage, "voice.md"), voice_note(ctx, stage, fmt, voice, qa))
+    ctx.write_text(ctx.stage_out(stage, "voice.md"), voice_note(ctx, stage, voice, qa))
     ctx.link_artifact("Voice", stage, ctx.slug + "-voice")
     wer = float(qa.get("wer") or 0)
     mism = qa.get("mismatches") or []
@@ -360,14 +350,14 @@ def _voice(ctx: Ctx, stage: str, fmt: str) -> str:
                                         " (%s)" % voice.get("engine") if ctx.local else "")
 
 
-def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
+def voice_note(ctx: Ctx, stage: str, voice: dict, qa: dict) -> str:
     mism = qa.get("mismatches") or []
     lines = [
         "# Voice: %s" % ctx.slug, "",
         "Stage %s on %s at %s. Audio lives in `$BLAI_BUILD_DIR/%s/voice/` (binaries are never committed)."
         % (stage, socket.gethostname(), _now(), ctx.slug), "",
         "| Field | Value |", "|-------|-------|",
-        "| Format | %s |" % fmt,
+        "| Format | short |",
         "| Engine | %s |" % (voice.get("engine") or "elevenlabs"),
         "| Duration | %.1f s |" % float(voice.get("duration_s") or 0),
         "| Words per second | %s |" % voice.get("words_per_second", ""),
@@ -390,21 +380,14 @@ def voice_note(ctx: Ctx, stage: str, fmt: str, voice: dict, qa: dict) -> str:
 
 def stage_voice_shorts(ctx: Ctx) -> str:
     """generate_audio.py (storyboard) + qa_transcribe.py + captions.py -> <slug>-voice.md"""
-    return _voice(ctx, "06-voice", "short")
+    return _voice(ctx, "06-voice")
 
 
-def stage_voice_long(ctx: Ctx) -> str:
-    """generate_audio.py (narration.txt) + qa_transcribe.py + captions.py -> <slug>-voice.md"""
-    return _voice(ctx, "09-voice", "long")
-
-
-# -- render (shorts 07, long-form 10) -----------------------------------------
-def _render(ctx: Ctx, stage: str, want_thumbnails: bool) -> str:
+# -- render (shorts 07) -------------------------------------------------------
+def _render(ctx: Ctx, stage: str) -> str:
     ctx.claude(UNATTENDED.format(stage=stage, slug=ctx.slug, build=ctx.build), stage, max_turns=200)
     checks = [(ctx.build / "render" / "final.mp4", "final.mp4"),
               (ctx.stage_out(stage, "render.md"), "render note")]
-    if want_thumbnails:
-        checks.append((ctx.build / "render" / "thumbnails" / "1.png", "thumbnails/1.png"))
     if ctx.dry_run:
         for p, what in checks:
             ctx.plan("verify %s exists: %s" % (what, p))
@@ -443,57 +426,12 @@ def _local_gate_card(ctx: Ctx, stage: str) -> None:
 
 def stage_render_shorts(ctx: Ctx) -> str:
     """claude -p (stages/07-render/CONTEXT.md) -> render/final.mp4, <slug>-render.md, status=review"""
-    return _render(ctx, "07-render", want_thumbnails=False)
+    return _render(ctx, "07-render")
 
 
-def stage_render_long(ctx: Ctx) -> str:
-    """claude -p (stages/10-render/CONTEXT.md) -> final.mp4 + thumbnails, <slug>-render.md, status=review"""
-    return _render(ctx, "10-render", want_thumbnails=True)
 
-
-# -- capture (long-form 08) ---------------------------------------------------
-NO_EXPERIMENT = ("# Capture: {slug}\n\nNo experiment: `stages/03-research/output/{slug}-experiment.md` "
-                 "does not exist, so there was nothing to capture and nothing to reconcile "
-                 "(stage 08-capture on {host} at {now}).\n")
-
-
-def stage_capture(ctx: Ctx) -> str:
-    """capture.py (experiment plan, night window) then claude -p reconcile -> <slug>-capture.md"""
-    stage = "08-capture"
-    plan = ctx.stage_out("03-research", "experiment.md")
-    note = ctx.stage_out(stage, "capture.md")
-    if not plan.exists():
-        if ctx.dry_run:
-            ctx.plan("experiment file absent (%s): would write a 'no experiment' note and skip; "
-                     "with a plan the commands would be:" % plan)
-        else:
-            ctx.say("no experiment file (%s): nothing to capture" % plan)
-            ctx.write_text(note, NO_EXPERIMENT.format(slug=ctx.slug, host=socket.gethostname(), now=_now()))
-            ctx.link_artifact("Capture", stage, ctx.slug + "-capture")
-            return "no experiment, skipped"
-    window = (ctx.meta.get("capture_window") or "night").strip().lower() or "night"
-    cap = ctx.build / "capture"
-    if ctx.fresh or ctx.dry_run or not (cap / "capture.json").exists():
-        # cwd = repo root: plans reference python3 skills/dgx-capture/benchmarks/... relatively
-        ctx.run([PY, SCRIPT["capture"], "--plan", plan, "--out", cap, "--window", window],
-                "capture", cwd=REPO, timeout=CAPTURE_TIMEOUT)
-    else:
-        ctx.say("reusing %s (pass --fresh to capture again)" % (cap / "capture.json"))
-    ctx.claude(RECONCILE.format(slug=ctx.slug, build=ctx.build), stage, max_turns=100)
-    if ctx.dry_run:
-        ctx.plan("verify capture note exists: %s; verify hub status != blocked" % note)
-        return "dry-run"
-    meta = ctx.refresh()
-    if meta.get("status") == "blocked":
-        raise StageError("reconcile blocked the run: %s" % meta.get("blocked_reason", ""))
-    if not note.exists():
-        raise StageError("reconcile did not write %s" % note)
-    ctx.link_artifact("Capture", stage, ctx.slug + "-capture")
-    return "capture and reconcile ok"
-
-
-# -- publish (shorts 08, long-form 11) ----------------------------------------
-def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> str:
+# -- publish (shorts 08) ------------------------------------------------------
+def _publish(ctx: Ctx, stage: str, package_stage: str) -> str:
     if not ctx.dry_run and ctx.meta.get("status") != "approved":
         raise StageError("%s: hub status is %r, expected approved" % (stage, ctx.meta.get("status")))
     package = ctx.stage_out(package_stage, "package.md")
@@ -501,18 +439,6 @@ def _publish(ctx: Ctx, stage: str, package_stage: str, with_thumbnail: bool) -> 
     ctx.require(package, "package note")
     ctx.require(video, "final.mp4")
     cmd = [PY, SCRIPT["publish"], "--package", package, "--video", video, "--slot", "auto"]
-    if with_thumbnail:
-        pick = re.sub(r"\.(png|jpg)$", "", (ctx.meta.get("thumbnail_pick") or "1").strip()) or "1"
-        thumbs = ctx.build / "render" / "thumbnails"
-        # render_longform.py writes <n>.jpg next to <n>.png only when the png exceeds YouTube's 2 MB cap
-        thumb = thumbs / (pick + ".jpg") if (thumbs / (pick + ".jpg")).exists() else thumbs / (pick + ".png")
-        ctx.require(thumb, "thumbnail")
-        cmd += ["--thumbnail", thumb]
-        chapters = ctx.build / "render" / "chapters.json"  # measured chapter times from render_longform.py
-        if chapters.exists():
-            cmd += ["--chapters", chapters]
-        elif ctx.dry_run:
-            ctx.plan("adds --chapters %s when the render wrote it" % chapters)
     privacy = os.environ.get("BLAI_PUBLISH_PRIVACY", "").strip()
     if privacy:
         cmd += ["--privacy", privacy]
@@ -580,12 +506,7 @@ def write_published(ctx: Ctx, stage: str, post_id: str, slot: str) -> None:
 
 def stage_publish_shorts(ctx: Ctx) -> str:
     """publish.py (05-package, final.mp4, slot auto) -> <slug>-publish.md, published/<slug>.md, status=scheduled"""
-    return _publish(ctx, "08-publish", "05-package", with_thumbnail=False)
-
-
-def stage_publish_long(ctx: Ctx) -> str:
-    """publish.py (07-package, final.mp4, thumbnail <thumbnail_pick or 1>.png) -> <slug>-publish.md, status=scheduled"""
-    return _publish(ctx, "11-publish", "07-package", with_thumbnail=True)
+    return _publish(ctx, "08-publish", "05-package")
 
 
 def poll_status(ctx: Ctx):
@@ -615,20 +536,14 @@ STAGES = {
         Stage("06-voice", "mechanical", "shorts", stage_voice_shorts),
         Stage("07-render", "creative", "shorts", stage_render_shorts),
     ],
-    "long-form": [
-        Stage("08-capture", "mixed", "long-form", stage_capture),
-        Stage("09-voice", "mechanical", "long-form", stage_voice_long),
-        Stage("10-render", "creative", "long-form", stage_render_long),
-    ],
 }
 PUBLISH = {
     "shorts": Stage("08-publish", "mechanical", "shorts", stage_publish_shorts),
-    "long-form": Stage("11-publish", "mechanical", "long-form", stage_publish_long),
 }
 
 
 def all_stages():
-    for ws in ("shorts", "long-form"):
+    for ws in ("shorts",):
         for st in STAGES[ws]:
             yield st
         yield PUBLISH[ws]
@@ -655,11 +570,11 @@ def run_stage(note, stage: Stage, dry_run: bool = False, fresh: bool = False, lo
 
 
 LOCAL_NOTES = [
-    "voice (06-voice, 09-voice): generate_audio.py --engine kokoro, no ElevenLabs key needed",
+    "voice (06-voice): generate_audio.py --engine kokoro, no ElevenLabs key needed",
     "voice QA: a WER above the threshold warns and journals instead of blocking the note",
-    "render (07-render, 10-render): claude -p is told it is a local run; the gate card prints "
+    "render (07-render): claude -p is told it is a local run; the gate card prints "
     "through send_card.py --dry-run and the note still reaches review",
-    "publish (08-publish, 11-publish): nothing is uploaded or posted; publish.py --dry-run is "
+    "publish (08-publish): nothing is uploaded or posted; publish.py --dry-run is "
     "printed and the note stays at approved",
     "build.py: no required .env values (paths only), and git-sync is skipped",
 ]

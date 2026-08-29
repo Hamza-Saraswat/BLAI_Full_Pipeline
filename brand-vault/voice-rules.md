@@ -12,7 +12,7 @@ These are errors. If narration, on-screen text, a title or a description contain
 6. No claim that is not verified in our own setup or traced to a cited source in the research brief.
 7. **Nothing follows the payoff.** No spoken call to action, no "next up" tease, no summary of the summary. The ask lives in the description and the pinned comment; the wordmark settle is visual only. The last spoken sentence is the payoff itself, and the video stops within a second of it.
 8. No em dashes in narration. Write like people talk; contractions are welcome.
-9. Sentence length: hard cap 20 words; average at most 15 in Shorts and 18 in long-form.
+9. Sentence length: hard cap 20 words; average at most 15.
 10. **No positional labels.** "Stage one", "step two", "part three", "phase one" are banned unless the video walks the viewer through a process they will perform. Then, and only then, at most three of them, each naming the action ("Step two: quantize it"). Numbering components, layers, reasons or moves in an argument is always wrong: those are not stages.
 11. **You are talking to one person.** Second person is the default. "We" is reserved for things we actually did ("we measured twenty-two tokens a second on our Spark"). Never "one might", never "users can", never "people often".
 
@@ -67,18 +67,16 @@ The register is warm and wry: personality lives in the phrasing, not in jokes yo
 
 - The viewer's situation is named inside the first three sentences: "You've got a 4090." "You downloaded the model and it will not load."
 - Ask a question only when the viewer can answer it from what they own ("How much memory is in your box?"). A question they cannot answer is filler.
-- Second person for what the viewer does. First person plural for what we measured. First person singular in long-form for what I ran.
+- Second person for what the viewer does. First person plural for what we measured.
 
 | Format | Person | Example |
 |--------|--------|---------|
 | Shorts, both bands | second person | "You download it. Then you hit the wall." |
-| Long-form, concept-deep-dive and buyers-guide | second person | "You are choosing between two boxes." |
-| Long-form, build-along | first person singular for the work, second person for the advice | "I loaded it at midnight and it fell over. You would want the FP8 build." |
 | Our own measurements, any format | first person plural | "We measured twenty-two tokens a second on our Spark." |
 
 ## Pacing
 
-Concrete first. Reach for the specific thing, the named product and the real number, before reaching for a metaphor. One idea per beat. New information every 5 to 8 seconds in a Short and at least every 30 seconds in long-form. State the honest trade-off when one exists ("you lose a little accuracy, and here's when you'd care") and only then. Rhythm: short sentence, short sentence, one longer sentence that explains. Read every line aloud; if you run out of breath or have to back up to parse it, it fails.
+Concrete first. Reach for the specific thing, the named product and the real number, before reaching for a metaphor. One idea per beat. New information every 5 to 8 seconds. State the honest trade-off when one exists ("you lose a little accuracy, and here's when you'd care") and only then. Rhythm: short sentence, short sentence, one longer sentence that explains. Read every line aloud; if you run out of breath or have to back up to parse it, it fails.
 
 ## What the Voice Is NOT
 

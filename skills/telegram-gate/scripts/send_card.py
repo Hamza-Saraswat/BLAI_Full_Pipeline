@@ -103,8 +103,7 @@ def card_blocked(meta: dict, body: str, slug: str, text: str) -> tuple:
 def card_checklist(meta: dict, body: str, slug: str, url_override: str) -> tuple:
     title = meta.get("title") or first_heading(body) or slug
     url = url_override or meta.get("youtube_url") or "(youtube_url not set yet)"
-    is_short = (meta.get("format") or meta.get("workspace") or "").lower().startswith("short")
-    third = "Shorts: add the related long-form video link" if is_short else "Long-form: run Test and Compare on the thumbnails (desktop Studio)"
+    third = "Add the related-video link"
     lines = ["<b>Published: %s</b>" % tgapi.esc(title), tgapi.esc(url), "Studio tasks (no API exists for these):",
              "1. Pin a comment", "2. End screen and cards", "3. %s" % third, "4. Community post"]
     return "\n".join(lines), None, slug

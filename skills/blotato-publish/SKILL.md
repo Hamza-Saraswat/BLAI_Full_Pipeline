@@ -9,7 +9,7 @@ metadata:
 
 ## When to Use
 
-- The publish stage (Shorts stage 08, long-form stage 11) on the DGX Spark, after the hub note reached `approved` through the Telegram gate.
+- The publish stage (Shorts stage 08) on the DGX Spark, after the hub note reached `approved` through the Telegram gate.
 - Polling a scheduled post until YouTube has it (`--status`), or listing the connected accounts once during setup (`--accounts`).
 - Computing a slot for planning (`slots.py`) without posting anything.
 
@@ -18,15 +18,15 @@ Not for: uploading drafts for review (the gate card links the R2 preview directl
 ## What You Need Before Calling
 
 - `build/.env` with `BLOTATO_API_KEY`, `BLOTATO_YOUTUBE_ACCOUNT_ID`, `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_BASE_URL`, and `BLAI_PUBLISH_PRIVACY` (`private` until the first post is verified).
-- The package note `<slug>-package.md` with a manifest that follows `shared/schemas/publish-manifest.schema.json`, the rendered `final.mp4` that passed the lint scripts, and for long-form the chosen thumbnail still.
+- The package note `<slug>-package.md` with a manifest that follows `shared/schemas/publish-manifest.schema.json` and the rendered `final.mp4` that passed the lint scripts.
 - `boto3` installed (`pip install boto3`); `python-dotenv` optional.
 - The approval time (now) and, for a Short, awareness that two Shorts a day fill 11:00 and 18:00 CT in order.
 
 ## How It Works
 
-1. `scripts/publish.py --package FILE-package.md --video final.mp4 [--thumbnail FILE.png] [--slot auto|ISO] [--privacy ...]` parses the manifest and validates it (schema checks, title <= 100 chars, <= 3 hashtags, description <= 5,000 bytes after chapters and hashtags); any error exits 1 before an upload.
-2. The video and thumbnail go to R2 with `scripts/r2.py` under `previews/<slug>/`; the public URLs become `mediaUrls[0]` and `thumbnailUrl`.
-3. The slot is `--slot ISO`, else a still-future `publish_slot_hint`, else `scripts/slots.py` (Shorts 11:00/18:00 CT, long-form next 09:00 CT, Sunday 10:00 after a Saturday approval, 30 minutes minimum lead, slots already in hub notes skipped).
+1. `scripts/publish.py --package FILE-package.md --video final.mp4 [--slot auto|ISO] [--privacy ...]` parses the manifest and validates it (schema checks, title <= 100 chars, <= 3 hashtags, description <= 5,000 bytes after hashtags); any error exits 1 before an upload.
+2. The video goes to R2 with `scripts/r2.py` under `previews/<slug>/`; the public URL becomes `mediaUrls[0]`.
+3. The slot is `--slot ISO`, else a still-future `publish_slot_hint`, else `scripts/slots.py` (11:00/18:00 CT, 30 minutes minimum lead, slots already in hub notes skipped).
 4. The body is built exactly as `rules/manifest-mapping.md` describes and sent to `POST https://backend.blotato.com/v2/posts` with the `blotato-api-key` header; 429 and 5xx retry with exponential backoff (5 attempts).
 5. stdout gets `{post_submission_id, scheduled_time, media_url, thumbnail_url}`; `--dry-run` prints the same plus the exact `body` without touching the network.
 6. `publish.py --status ID` prints `{post_submission_id, status, youtube_url, error, raw}`; `publish.py --accounts` prints `[{id, platform, name}]`.

@@ -9,12 +9,8 @@ properties:
     displayName: Status
   note.title:
     displayName: Title
-  note.workspace:
-    displayName: Workspace
   note.pillar:
     displayName: Pillar
-  note.series:
-    displayName: Series
   note.structure:
     displayName: Structure
   note.style_pack:
@@ -37,7 +33,6 @@ views:
         - 'status == "rejected"'
     order:
       - file.name
-      - note.workspace
       - note.status
       - note.title
       - note.blocked_reason
@@ -67,21 +62,6 @@ views:
       - note.seo_score
       - note.updated
   - type: table
-    name: Long-form pipeline
-    filters:
-      and:
-        - 'workspace == "long-form"'
-        - 'status != "published"'
-    groupBy:
-      property: note.status
-    order:
-      - file.name
-      - note.title
-      - note.series
-      - note.seo_score
-      - note.publish_slot
-      - note.updated
-  - type: table
     name: Scheduled and published
     filters:
       or:
@@ -89,7 +69,6 @@ views:
         - 'status == "published"'
     order:
       - file.name
-      - note.workspace
       - note.title
       - note.publish_slot
       - note.youtube_url

@@ -56,7 +56,7 @@ https://www.youtube.com/...
 Studio tasks (no API exists for these):
 1. Pin a comment
 2. End screen and cards
-3. Shorts: add the related long-form video link      (long-form: run Test and Compare on the thumbnails)
+3. Add the related-video link
 4. Community post
 ```
 

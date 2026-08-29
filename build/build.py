@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """BLAI build agent: the loop that runs on the DGX Spark.
 
-    python3 build/build.py --once [--dry-run] [--slug S] [--workspace shorts|long-form] [--fresh]
+    python3 build/build.py --once [--dry-run] [--slug S] [--workspace shorts] [--fresh]
     python3 build/build.py --interval 300        # keep looping (the systemd timer normally does this)
     python3 build/build.py --once --local        # credential-free test run on a developer machine
 
 One pass:
   1. take build/locks/build.lock (exit 0 quietly when another pass holds it)
   2. recover uncommitted changes left by an interrupted pass, then git pull --rebase
-  3. publish every hub note with status=approved (shorts 08-publish, long-form 11-publish)
+  3. publish every hub note with status=approved (shorts 08-publish)
   4. poll every note with status=scheduled; flip to published (+ youtube_url) when Blotato says so
   5. build the oldest note with status=ready-to-build, one per pass: status=building + build_host,
      push, run the workspace's Spark stages in order (stage_runner.STAGES), journal every stage,
@@ -74,7 +74,7 @@ import hubnote  # noqa: E402  (stage_runner put <repo>/tools on sys.path)
 HOST = socket.gethostname()
 LOCK = REPO / "build" / "locks" / "build.lock"
 LOG_DIR = REPO / "build" / "logs"
-WORKSPACES = ("shorts", "long-form")
+WORKSPACES = ("shorts",)
 # Keep in sync with the REQUIRED list in build/install.sh and the header of build/.env.example.
 REQUIRED_ENV = ("ELEVENLABS_API_KEY", "ELEVEN_VOICE_ID", "BLOTATO_API_KEY", "BLOTATO_YOUTUBE_ACCOUNT_ID",
                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID",
@@ -197,29 +197,6 @@ def parse_iso(value: str):
         return None
     return t if t.tzinfo else t.replace(tzinfo=dt.timezone.utc)
 
-
-def in_capture_window(now=None) -> bool:
-    """01:00-06:00 America/Chicago (shared/playbook/publish-timing.md)."""
-    try:
-        from zoneinfo import ZoneInfo
-        tz = ZoneInfo("America/Chicago")
-    except Exception:  # noqa: BLE001 - no tz database: assume CDT
-        tz = dt.timezone(dt.timedelta(hours=-5))
-    local = (now or dt.datetime.now(dt.timezone.utc)).astimezone(tz)
-    return 1 <= local.hour < 6
-
-
-def waits_for_window(meta: dict) -> str:
-    """Why a long-form note must wait (empty string when it can be built now)."""
-    if meta.get("workspace") != "long-form":
-        return ""
-    plan = REPO / "workspaces" / "long-form" / "stages" / "03-research" / "output" / (meta["slug"] + "-experiment.md")
-    if not plan.exists():
-        return ""
-    window = (meta.get("capture_window") or "night").strip().lower()
-    if window == "any" or in_capture_window():
-        return ""
-    return "has an experiment plan and capture_window=%s: waiting for the 01:00-06:00 CT window" % window
 
 
 def send_blocked_card(log: Log, p: pathlib.Path, reason: str) -> None:
@@ -384,10 +361,6 @@ def run_pass(a, log: Log) -> int:
     built = None
     for p, meta in rows:  # 3. build one note
         if p in touched or meta.get("status") not in buildable:
-            continue
-        why = waits_for_window(meta)
-        if why:
-            log("%s: %s" % (meta["slug"], why))
             continue
         if not build_note(log, p, meta, a):
             rc = 1

@@ -5,7 +5,7 @@
     python3 tools/reset-run.py --date 2026-08-23 --workspace shorts     # radar/ideas artifacts too
 
 Removes: the hub note, every stage output whose filename carries the slug, the slug's entry in
-script-ledger.json / episode-ledger.json / styles/history.json, the published note if one exists,
+script-ledger.json / styles/history.json, the published note if one exists,
 and the build folder under .local-builds/. Prints what it did; --dry-run prints without touching.
 """
 import argparse
@@ -17,7 +17,6 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 LEDGERS = [
     ROOT / "workspaces/shorts/stages/04-script/output/script-ledger.json",
-    ROOT / "workspaces/long-form/stages/02-ideas/output/episode-ledger.json",
     ROOT / "skills/render-shorts/styles/history.json",
 ]
 
@@ -72,12 +71,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug")
     ap.add_argument("--date", help="also remove date-keyed radar and ideas artifacts")
-    ap.add_argument("--workspace", choices=["shorts", "long-form", "both"], default="both")
+    ap.add_argument("--workspace", choices=["shorts"], default="shorts")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
     if not a.slug and not a.date:
         return ap.error("give --slug, --date, or both")
-    spaces = ["shorts", "long-form"] if a.workspace == "both" else [a.workspace]
+    spaces = [a.workspace]
     log: list = []
 
     for ws in spaces:
