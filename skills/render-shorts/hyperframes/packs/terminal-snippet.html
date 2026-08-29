@@ -24,7 +24,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="packs/vendor/gsap.min.js"></script>
     <link rel="stylesheet" href="packs/terminal.css" />
     <style>
       /* snippet-local layout only — all tokens/type come from the pack CSS */
@@ -123,6 +123,27 @@
         visible = !visible;
       }
       tl.set("#cursor", { opacity: 1 }, 4.55);
+
+      // 5) scramble-decode (the pack's signature transition for an incoming
+      //    headline; styles/terminal.md names it, this is the reference).
+      //    SEEK-SAFE: no Math.random(). Character i resolves at p >= (i+1)/n;
+      //    before that it shows a glyph chosen by a pure function of tween
+      //    progress, so every seeked frame renders identically (finding 59).
+      //    Usage: give the target element data-scramble with the final text,
+      //    then drive one proxy tween:
+      //
+      //      const GLYPHS = "!<>-_\\/[]{}=+*^?#";
+      //      const el = document.querySelector("#decoded");
+      //      const finalText = el.dataset.scramble;
+      //      const sc = { p: 0 };
+      //      tl.to(sc, { p: 1, duration: 0.2, ease: "none", onUpdate: () => {
+      //        const n = finalText.length;
+      //        el.textContent = Array.from(finalText, (ch, i) =>
+      //          sc.p >= (i + 1) / n
+      //            ? ch
+      //            : GLYPHS[(i * 17 + Math.floor(sc.p * 30) * 7) % GLYPHS.length]
+      //        ).join("");
+      //      } }, DECODE_START);
 
       window.__timelines["main"] = tl;
     </script>

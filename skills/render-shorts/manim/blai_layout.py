@@ -14,6 +14,10 @@ and 90 px left clear (matching safe_zone_check.py's strips):
     width:  1080 - 90 (left) - 120 (right)  = 870 px
     height: 1920 - 310 (top) - 660 (bottom incl. caption band) = 950 px
 
+Import these constants; NEVER retype a number from any document. Finding 51 (2026-08-23):
+the rule files and this module's own comments disagreed with the computed values three ways,
+and laying out to a stale number puts content 210 px into the caption band.
+
 px -> scene units (at the 1080x1920 design size):
     1 px = frame_width / 1080 = 8.0 / 1080 = 0.0074074 u
     (vertical is identical: frame_height / 1920 = 14.2222 / 1920 = 0.0074074 u)
@@ -38,6 +42,7 @@ __all__ = [
     "BRAND_ERROR",
     "BRAND_FONT",
     "brand_text",
+    "brand_number",
     "FRAME_W",
     "FRAME_H",
     "SAFE_TOP",
@@ -83,21 +88,21 @@ FRAME_W: float = float(config.frame_width)   # 8.0
 FRAME_H: float = float(config.frame_height)  # 14.2222...
 
 SAFE_TOP: float = FRAME_H * MARGIN_TOP_PX / CANVAS_H_PX        # 2.2963 u
-SAFE_BOTTOM: float = FRAME_H * MARGIN_BOTTOM_PX / CANVAS_H_PX  # 3.3333 u
-SAFE_LEFT: float = FRAME_W * MARGIN_LEFT_PX / CANVAS_W_PX      # 0.4444 u
+SAFE_BOTTOM: float = FRAME_H * MARGIN_BOTTOM_PX / CANVAS_H_PX  # 4.8889 u
+SAFE_LEFT: float = FRAME_W * MARGIN_LEFT_PX / CANVAS_W_PX      # 0.6667 u
 SAFE_RIGHT: float = FRAME_W * MARGIN_RIGHT_PX / CANVAS_W_PX    # 0.8889 u
 
 # Safe-area box in scene coordinates (origin = frame center, +y up)
-SAFE_X_MIN: float = -FRAME_W / 2 + SAFE_LEFT    # -3.5556
+SAFE_X_MIN: float = -FRAME_W / 2 + SAFE_LEFT    # -3.3333
 SAFE_X_MAX: float = FRAME_W / 2 - SAFE_RIGHT    # +3.1111
-SAFE_Y_MIN: float = -FRAME_H / 2 + SAFE_BOTTOM  # -3.7778
+SAFE_Y_MIN: float = -FRAME_H / 2 + SAFE_BOTTOM  # -2.2222
 SAFE_Y_MAX: float = FRAME_H / 2 - SAFE_TOP      # +4.8148
-SAFE_W: float = SAFE_X_MAX - SAFE_X_MIN         # 6.6667 u == 900 px
-SAFE_H: float = SAFE_Y_MAX - SAFE_Y_MIN         # 8.5926 u == 1160 px
+SAFE_W: float = SAFE_X_MAX - SAFE_X_MIN         # 6.4444 u == 870 px
+SAFE_H: float = SAFE_Y_MAX - SAFE_Y_MIN         # 7.0370 u == 950 px
 SAFE_CENTER: np.ndarray = np.array(
     [
-        (SAFE_X_MIN + SAFE_X_MAX) / 2.0,  # -0.2222 (safe box sits left of center)
-        (SAFE_Y_MIN + SAFE_Y_MAX) / 2.0,  # +0.5185 (and above center)
+        (SAFE_X_MIN + SAFE_X_MAX) / 2.0,  # -0.1111 (safe box sits left of center)
+        (SAFE_Y_MIN + SAFE_Y_MAX) / 2.0,  # +1.2963 (and well above center: the room below is the Shorts UI)
         0.0,
     ]
 )
@@ -149,6 +154,27 @@ def brand_text(s: str, **kwargs) -> "Mobject":
     kwargs.setdefault("weight", BOLD)
     kwargs.setdefault("color", BRAND_FG)
     return Text(s, **kwargs)
+
+
+def brand_number(value=0, **kwargs) -> "Mobject":
+    """Brand-conforming DecimalNumber for count-ups (finding 55).
+
+    ``mob_class=Text`` alone is NOT enough: DecimalNumber calls ``mob_class(char)``
+    with no kwargs, so no font or weight reaches the digits and Pango falls back
+    to serif -- the exact failure brand_text() exists to prevent. This binds the
+    font first. ``edge_to_fix=ORIGIN`` keeps a centred count-up centred (the
+    default LEFT pins the left edge, so the number drifts as digits grow).
+    """
+    import functools
+
+    from manim import BOLD, ORIGIN, DecimalNumber, Text
+
+    digit = functools.partial(Text, font=BRAND_FONT, weight=BOLD)
+    kwargs.setdefault("mob_class", digit)
+    kwargs.setdefault("edge_to_fix", ORIGIN)
+    kwargs.setdefault("color", BRAND_ACCENT)
+    kwargs.setdefault("num_decimal_places", 1)
+    return DecimalNumber(value, **kwargs)
 
 
 def place_in_safe(mobject: Mobject, position: str = "center", buff: float = 0.15) -> Mobject:

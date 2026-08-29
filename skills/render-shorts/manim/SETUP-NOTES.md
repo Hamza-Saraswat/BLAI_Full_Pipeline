@@ -108,18 +108,19 @@ At 1080x1920 with frame 8.0 x 14.2222 u: **1 scene unit = 135 px on both axes**
 `blai_layout` stores margins as *fractions* of the live frame dims, so the same constants
 are correct at draft resolution too.
 
-Safe box: 900 x 1160 px = left 60 / right 120 / top 310 / bottom 450 px reserved.
+Safe box: 870 x 950 px = left 90 / right 120 / top 310 / bottom 660 px reserved (the bottom
+deliberately absorbs the caption band). Import the constants; never retype them (finding 51).
 
 | Constant | px | scene units (= px x 8/1080) |
 |---|---|---|
-| `SAFE_LEFT` | 60 | 0.444444 |
+| `SAFE_LEFT` | 90 | 0.666667 |
 | `SAFE_RIGHT` | 120 | 0.888889 |
 | `SAFE_TOP` | 310 | 2.296296 |
-| `SAFE_BOTTOM` | 450 | 3.333333 |
-| `SAFE_W` x `SAFE_H` | 900 x 1160 | 6.666667 x 8.592593 |
-| safe x-range | 60..960 | -3.555556 .. +3.111111 |
-| safe y-range (y up) | -- | -3.777778 .. +4.814815 |
-| `SAFE_CENTER` | (510, 730 from top-left) | (-0.222222, +0.518519, 0) |
+| `SAFE_BOTTOM` | 660 | 4.888889 |
+| `SAFE_W` x `SAFE_H` | 870 x 950 | 6.444444 x 7.037037 |
+| safe x-range | 90..960 | -3.333333 .. +3.111111 |
+| safe y-range (y up) | -- | -2.222222 .. +4.814815 |
+| `SAFE_CENTER` | (525, 785 from top-left) | (-0.111111, +1.296296, 0) |
 
 Note the safe center is **not** the frame center -- it sits left of and above (0,0).
 `place_in_safe(mobj, "center")` targets the safe center, which is what you want on Shorts.

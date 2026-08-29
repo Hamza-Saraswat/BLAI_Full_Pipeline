@@ -83,8 +83,8 @@ body {
   line-height: 1.1;
   letter-spacing: -2px;
 }
-.body-text { font-weight: 700; font-size: 56px; line-height: 1.3; }
-.term-text { font-weight: 400; font-size: 40px; line-height: 1.5; }
+.body-text { font-weight: 700; font-size: 64px; line-height: 1.3; }
+.term-text { font-weight: 400; font-size: 64px; line-height: 1.5; }
 .label {
   font-weight: 400;
   font-size: 36px;
@@ -92,7 +92,6 @@ body {
   text-transform: uppercase;
   color: var(--muted);
 }
-.accent { color: var(--accent); }
 .green  { color: var(--fg2); }
 .ok     { color: var(--ok); }
 .bad    { color: var(--bad); }
@@ -105,6 +104,9 @@ body {
 /* blinking block cursor — the █ glyph; blink driven by the GSAP
    timeline (530ms .set() toggles), NOT by CSS animation */
 .cursor { color: var(--fg2); }
+/* .accent sits AFTER .cursor so class="cursor accent" renders amber -- the
+   cascade silently dropped the accent when this rule came first (finding 59). */
+.accent { color: var(--accent); }
 
 /* ---- terminal window frame — the ONLY rounded corners in this pack ---- */
 .term-window {

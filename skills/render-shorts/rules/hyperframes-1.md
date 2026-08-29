@@ -14,7 +14,8 @@ Skip the upstream "make me a video" workflows (product launch, faceless explaine
 
 ## Composition contract
 
-- Project: `hyperframes/` (HyperFrames 0.7.31 pinned; `npm install` once; GSAP 3.14.2 loads from the jsdelivr CDN, so the first render needs network or a vendored copy next to `packs/vendor/rough.js`).
+- Project: `hyperframes/` (HyperFrames 0.7.31 pinned; `npm install` once; GSAP 3.14.2 is vendored at `packs/vendor/gsap.min.js` -- load it from there, never the CDN, so a render cannot fail on a network blip (finding 54)).
+- Invoke the CLI as `./node_modules/.bin/hyperframes`, never `npm run ...` -- the package scripts used to call `npx --yes`, which re-resolves from the network and bypasses the lockfile pin.
 - Author the scene as `index.html` in a working copy of `hyperframes/` (copy the folder minus `node_modules`, then symlink or reuse `node_modules`), or in place when scenes run one at a time. Pack assets resolve relative to the project root (`packs/...`).
 - Root element: `data-composition-id="main" data-start="0" data-duration="<seconds>" data-width="1080" data-height="1920"`, 30 fps. `data-duration` is EXACTLY the assigned scene duration (tolerance 0.15 s).
 - Every timed element: `class="clip"` plus `data-start`, `data-duration`, `data-track-index`.
@@ -66,11 +67,22 @@ Banned: Three.js, particle systems, stock photos or video, emoji as content, mor
 - Whole-scene push-ins expand content into the margins: at scale 1.04 a 96 px padded edge lands at about 78 px, inside the left strip. Skip push-ins (preferred) or pad content 140 px or more.
 - First and last 8 frames: no motion. For a hook scene the hook text is already on screen at frame 1; motion may begin at frame 9. Stable is not empty.
 
+## Audit traps the pack snippets do not warn about (all verified 2026-08-23)
+
+- **Masked text rises.** Inside an `overflow:hidden` line wrapper, `tl.from(el, {y, opacity: 0})` trips `clipped_text` + `text_box_overflow` in `inspect`: below 0.2 opacity the audit drops the element, promotes the MASK to a text element, and `data-layout-allow-overflow` alone cannot suppress it. Fix, FOR MASKED TEXT ONLY: start opacity >= 0.2 (0.25 is invisible behind the mask) AND `data-layout-allow-overflow` on the wrapper -- and the `y` offset must exceed the wrapper's rendered height or the first line ghosts at 0.25 opacity.
+- **Do NOT generalise that opacity floor.** `fromTo` renders its "from" state immediately, so `{opacity: 0.25}` on an UNMASKED element sits visibly on screen from frame 0. Unmasked elements start at `opacity: 0`. No linter catches the ghost; only a mid-scene still does.
+- **Occlusion.** A deliberate overlay on text (strike-through, badge) trips `text_occluded`. `data-layout-allow-occlusion` exists in 0.7.31 and must sit on the OCCLUDED TEXT or an ancestor of it, never on the covering element (`hasAllowOcclusionFlag` walks up from the text). `data-layout-bleed` does NOT exist in 0.7.31 despite the vendored docs recommending it.
+- **Butted tweens.** Two tweens on one element that touch end-to-start intermittently false-warn `overlapping_gsap_tweens` (float accumulation). Leave a 0.02 s gap between punch-up and punch-down.
+- **CSS transform + GSAP.** `transform: scaleX(0)` in CSS plus a GSAP `to()` on `scaleX` trips `gsap_css_transform_conflict`. Use `tl.fromTo(el, {scaleX: 0}, {scaleX: 1, ...})` with no CSS transform -- exempt, and `immediateRender` still gives the correct frame 1.
+- **`ch` units** resolve against the element's OWN font-size and ignore letter-spacing. A rule sized in `ch` inside a 16 px default div comes out ~4x short, and a pack's negative letter-spacing shifts every `ch` indent off the character grid; both pass every linter and only a still catches them. Set an explicit `font-size` (and `letter-spacing: 0`) on any non-text element sized in `ch`.
+- **Duration rounding.** The renderer ceils `data-duration x fps` once for the whole composition (unlike Manim's per-animation ceil), so error is bounded under one frame -- but set `data-duration` to the nearest whole-frame value anyway so assembly gets predictable lengths.
+- **Stepped eases** produce their first visible change one step late (SteppedEase returns 0 at progress 0): a hook scene relying on `steps(N)` for its <= 0.5 s motion onset must pair it with a `.set()` or start earlier.
+
 ## Self-check before handing back
 
-1. `npx hyperframes lint` passes (0 errors).
+1. All three audits pass on the exact source that rendered: `./node_modules/.bin/hyperframes lint` (0 errors), `validate` (no console errors), and `inspect --samples 40 --at-transitions --strict` (0 issues) -- `lint` alone passes every masked-text and occlusion defect above; `inspect`'s bare default samples only 9 timeline points and catches mid-animation defects by luck.
 2. `ffprobe`: 1080x1920, 30 fps, duration within 0.15 s of the assignment.
 3. Three stills (start, middle, end): all text inside the safe area, at most 8 words, brand colors only, matches the `visual_brief`.
-4. `python3 scripts/safe_zone_check.py <mp4> --scene` passes (`--scene` adds the caption band).
+4. `python3 scripts/safe_zone_check.py <mp4> --scene --stills 9` passes (`--scene` adds the caption band; 9+ stills reach mid-animation frames).
 5. `python3 scripts/lint_video.py <mp4>` passes in scene mode.
 6. Copy the mp4 to `<scenes-dir>/<scene_id>.mp4`. It must be 1080x1920 at 30 fps, H.264 yuv420p, silent; `scripts/assemble.py` conforms anything else with ffmpeg (letterboxed in brand navy) and logs a warning, which is a defect in the scene, not a feature.

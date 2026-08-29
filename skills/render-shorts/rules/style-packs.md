@@ -38,3 +38,12 @@ Two Shorts in one morning: the second `--pick` passes the first's pack via `--ex
 - Every scene carries a `layout_archetype` (`centered-stack`, `split-compare`, `timeline`, `grid`, `giant-number`, `diagram-flow`); adjacent scenes may not repeat one.
 - Scene rhythm: vary durations (do not make every scene about 8 s); stillness is contrast, use it after motion bursts.
 - The hook scene opens on a finished composition in the pack's own voice (typed prompt, chalk word, drafted guide, iso slab, punch card, lit trace, or a kinetic headline), never on a generic title card.
+
+## Text classes: content vs chrome (finding 58)
+
+Every pack's `.headline` and `.body-text` (and terminal's `.term-text`) are CONTENT classes:
+>= 64 px, safe for anything the viewer must read. Everything smaller (`.label`, `.kicker`,
+`.designator`, `.value`, `.chip-label`, `.ref-marker`, `.title-block`, `.fab-mark`, ...) is
+CHROME: decorative texture that may sit under 64 px precisely because nothing depends on
+reading it. A worker who puts copy in a chrome class fails the minimum-text-height rule by
+following the pack -- three workers hit this independently before the split was written down.

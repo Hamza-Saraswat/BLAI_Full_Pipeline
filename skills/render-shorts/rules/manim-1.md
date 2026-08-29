@@ -55,6 +55,30 @@ class SceneS2(Scene):       # class name = Scene + scene id, e.g. SceneS2 for s2
 - Before the final render, add `self.add(safe_zone_debug())` once, render one draft, verify nothing escapes, then REMOVE the debug rect.
 - The safe center is not the frame center (it sits left of and above (0,0)); `place_in_safe(m, "center")` targets the safe center, which is what you want on Shorts.
 
+## Timing and teardown traps (all hit in real renders, 2026-08-23)
+
+- **Frame-align every duration.** Manim emits `ceil(run_time * fps)` frames PER ANIMATION, so
+  human-round times accumulate upward: 12 segments summing to exactly 6.96 s rendered 7.066 s.
+  Express every `run_time` and `wait` as `n / 30.0` with the `n`s chosen to sum to the target
+  frame count; note the assigned duration may not be representable at 30 fps (6.96 s = 208.8
+  frames -> use 209) and confirm with `ffprobe nb_frames`.
+- **`Blink` cannot be frame-accounted.** It is a `Succession` whose child run_times sum in float
+  (`0.4+0.4+0.4 = 1.2000000000000002` -> ceil gives 37 frames, not 36) and it computes its own
+  total. Hand-cut blinks with `self.add`/`self.remove` between exact-frame waits instead -- also
+  more on-pack for `terminal`.
+- **`Scene.remove()` does not extract families** in CE 0.20.1: removing a VGroup whose children
+  were added individually by `play()` is a SILENT NO-OP, and `self.remove(*vgroup)` unpacks only
+  one level. Track the mobjects that actually reached the scene in a flat list and remove that.
+- **`Indicate(scale_factor=1.12)` leaves the safe area** at the punch peak when the text was
+  sized to the full safe width, and `safe_zone_check` samples mid-animation frames. Size any
+  punched text to `SAFE_W / 1.12`.
+- **Digits:** use `blai_layout.brand_number()` for count-ups. `mob_class=Text` alone still gives
+  serif digits (DecimalNumber passes no kwargs to the digit class) and the default
+  `edge_to_fix=LEFT` makes a centred number drift as digits grow.
+- **File naming:** the scene file is `<scene_id>.py` and every probe/throwaway script carries the
+  scene id too (`s5probe.py`, not `probe.py`) -- Manim keys `media/videos/<module_stem>/` on the
+  file stem, and that tree is shared between parallel workers.
+
 ## Retry procedure (bounded)
 
 1. Write the scene, draft render.

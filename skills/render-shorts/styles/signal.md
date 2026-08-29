@@ -21,6 +21,6 @@ Default pack. Best: benchmarks/numbers, comparisons (X vs Y), takes on
 news, anything without a better-fitting specialist pack.
 
 ## Implementation
-- HF: `skills/render-shorts/hyperframes/packs/signal.css` + reference `index.html` (the
-  existing hello template is this pack).
+- HF: `skills/render-shorts/hyperframes/packs/signal.css` + reference
+  `packs/signal-snippet.html` (NOT `index.html`, which is a finished axon scene -- finding 52).
 - Manim: existing `blai_layout.py` defaults (BRAND_* + brand_text).
