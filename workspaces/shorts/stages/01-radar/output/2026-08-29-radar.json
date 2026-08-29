@@ -1,0 +1,2351 @@
+[
+  {
+    "id": "hn-a51ad146dc",
+    "title": "GLM-5.3 is now open-weight",
+    "url": "https://huggingface.co/zai-org/GLM-5.3",
+    "source": "hn",
+    "published_at": "2026-08-28T15:20:13Z",
+    "signals": {
+      "points": 767,
+      "num_comments": 260,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.6707,
+      "age_h": 27.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hf"
+      ],
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Zhipu",
+      "Hugging Face"
+    ],
+    "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;Zai_org&#x2F;status&#x2F;2093354097122455713\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;Zai_org&#x2F;status&#x2F;2093354097122455713</a><p><a href=\"https:&#x2F;&#x2F;z.ai&#x2F;blog&#x2F;glm-5.3\" rel=\"nofollow\">https:&#x2F;&#x2F;z.ai&#x2F;blog&#x2F;",
+    "why_now": "Shipped: 767 points, 260 comments on HN, 28 h ago",
+    "score": 77
+  },
+  {
+    "id": "hn-91d4ae4339",
+    "title": "Run Qwen3.8 27B locally: real numbers from my Mac Studio",
+    "url": "https://terminalbytes.com/run-qwen-3-8-27b-locally/",
+    "source": "hn",
+    "published_at": "2026-08-28T15:24:44Z",
+    "signals": {
+      "points": 126,
+      "num_comments": 96,
+      "signal": 0.868,
+      "signal_parts": {
+        "points": 0.849,
+        "comments": 0.912
+      },
+      "decay": 0.6714,
+      "age_h": 27.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Mac Studio"
+    ],
+    "summary": "",
+    "why_now": "Measured: 126 points, 96 comments on HN, 28 h ago",
+    "score": 65
+  },
+  {
+    "id": "github-e0db0e5d69",
+    "title": "llama.cpp b10687",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10687",
+    "source": "github",
+    "published_at": "2026-08-29T18:23:05Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10687",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9912,
+      "age_h": 0.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "gpt-oss"
+    ],
+    "summary": "<details open> opencl: use a better matmul path on two Adreno GPU generations (#27640) * opencl: default the Adreno xmem F16xF32 GEMM on for X2E kernel_mul_mm_f16_f32_l4_lm is the slowest matmul this backend has on Adreno: on the X2-90 it runs the gpt-oss-20b attention projections at roughly a quart",
+    "why_now": "Shipped: ggml-org/llama.cpp b10687 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-10ab0490cb",
+    "title": "llama.cpp b10686",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10686",
+    "source": "github",
+    "published_at": "2026-08-29T16:46:00Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10686",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9683,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> metal : assert shared memory padding (#27951) * metal : assert shared memory padding * cont : add ref </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/43867822> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://",
+    "why_now": "Shipped: ggml-org/llama.cpp b10686 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-79798056cf",
+    "title": "llama.cpp b10685",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10685",
+    "source": "github",
+    "published_at": "2026-08-29T16:23:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10685",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9632,
+      "age_h": 2.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Apple M4",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> metal : add remaining fa-vec tunings for M4 Pro (#27915) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/43865923> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downlo",
+    "why_now": "Shipped: ggml-org/llama.cpp b10685 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-4383b621e0",
+    "title": "ollama v0.33.2",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.33.2",
+    "source": "github",
+    "published_at": "2026-08-27T20:31:47Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.33.2",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.5112,
+      "age_h": 46.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Claude"
+    ],
+    "summary": "## What's Changed * Ollama's app now follows the system appearance again, restoring dark mode support * Fixed the macOS app to properly hand off to an already-running instance instead of starting a second one * The Claude Desktop proxy no longer interrupts in-flight requests when the model catalog u",
+    "why_now": "Shipped: ollama/ollama v0.33.2 released, 46 h ago",
+    "score": 45
+  },
+  {
+    "id": "hn-9e1b9585c2",
+    "title": "Ask HN: How to break Claude Code addiction?",
+    "url": "https://news.ycombinator.com/item?id=49491745",
+    "source": "hn",
+    "published_at": "2026-08-29T17:43:13Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 5,
+      "signal": 0.327,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.357
+      },
+      "decay": 0.9817,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "TL;DR: How can I break my workaholic Claude Code addiction?<p>Hello HN users, I really appreciate you reading this. I can&#x27;t think of a better audience for this question. If this issue has affected you in any way, I would be really thankful to you if you could leave a comment on this post.<p>MY",
+    "why_now": "Broke: 5 points, 5 comments on HN, 1 h ago",
+    "score": 42
+  },
+  {
+    "id": "github-eb34537f5e",
+    "title": "unsloth v0.1.804-beta: Qwen3.8-Flash-Next + GLM-5.3-Flash",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.804-beta",
+    "source": "github",
+    "published_at": "2026-08-27T13:09:58Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.804-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.4596,
+      "age_h": 53.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "GLM"
+    ],
+    "summary": "Qwen3.8-Flash-Next and GLM-5.3-Flash can now run locally in Unsloth! * Run Qwen3.8-Flash on 75GB RAM, GLM-5.3-Flash on 102GB RAM+VRAM * 5x Faster inference for RAM offloading * \"Infinite\" repeated compaction now works * 100+ chat, reliability and performance improvements Qwen Guide: https://unsloth.",
+    "why_now": "Shipped: unslothai/unsloth v0.1.804-beta released, 2 d ago",
+    "score": 42
+  },
+  {
+    "id": "hn-a1b02a6424",
+    "title": "Show HN: We built open OpenRouter that turns usage into a better model",
+    "url": "https://github.com/experientiallabs/experiential",
+    "source": "hn",
+    "published_at": "2026-08-27T21:18:35Z",
+    "signals": {
+      "points": 213,
+      "num_comments": 46,
+      "signal": 0.888,
+      "signal_parts": {
+        "points": 0.94,
+        "comments": 0.767
+      },
+      "decay": 0.517,
+      "age_h": 45.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open source model",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "Hi HN, we built an open source model gateway. It&#x27;s a single place to manage our own self hosted, frontier, and open source models in one place.<p>It’s is rust native, built for concurrency, and implements all the config quirks across models and providers (streaming formats, tool calls, model pa",
+    "why_now": "Shipped: 213 points, 46 comments on HN, 46 h ago",
+    "score": 39
+  },
+  {
+    "id": "github-0cb38851ba",
+    "title": "vllm v0.28.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+    "source": "github",
+    "published_at": "2026-08-26T09:46:30Z",
+    "signals": {
+      "repo": "vllm-project/vllm",
+      "tag": "v0.28.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.3095,
+      "age_h": 81.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hn"
+      ],
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "Kimi"
+    ],
+    "summary": "# v0.28.0 ## Highlights This release features 584 commits from 270 contributors (76 new)! * **Kimi-K3 performance push**: a major optimization effort for Kimi-K3 across the stack -- Decode Context Parallel (DCP) support (#50484), fused FlashKDA decode and prefill kernels (#50654, #51311, #52458), Si",
+    "why_now": "Shipped: vllm-project/vllm v0.28.0 released, 3 d ago",
+    "score": 38
+  },
+  {
+    "id": "github-6f555d38a3",
+    "title": "ollama v0.33.1",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.33.1",
+    "source": "github",
+    "published_at": "2026-08-26T18:09:57Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.33.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.3493,
+      "age_h": 72.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "MLX",
+      "Qwen",
+      "llama.cpp"
+    ],
+    "summary": "## What's Changed * MLX: Qwen3.8 Flash Next support * cmake: make external compat patches idempotent * MLX and llama.cpp update * mlxrunner: add structured output support * mlxrunner: avoid Metal GPU timeouts when loading models from slow storage ## New Contributors * @pd95 made their first contribu",
+    "why_now": "Shipped: ollama/ollama v0.33.1 released, 3 d ago",
+    "score": 36
+  },
+  {
+    "id": "hf-de90f909a0",
+    "title": "unsloth/Qwen3.8-Flash-Next-GGUF",
+    "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-26T12:29:32Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 548,
+      "downloads": 188061,
+      "trendingScore": 541.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.871,
+      "signal_parts": {
+        "trending": 0.828,
+        "likes": 0.913,
+        "downloads": 0.879
+      },
+      "decay": 0.3218,
+      "age_h": 78.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 548 likes, 188.1k downloads, trending score 541, created 2026-08-26",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 548 likes, 188.1k downloads, trending score 541, 3 d ago",
+    "score": 36
+  },
+  {
+    "id": "github-e3c3ac5cf1",
+    "title": "transformers v5.16.1: Release v5.16.1",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.16.1",
+    "source": "github",
+    "published_at": "2026-08-26T14:50:01Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.16.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.3329,
+      "age_h": 76.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM"
+    ],
+    "summary": "# Release v5.16.1 This is a special release as we include GLM! (and a few small fixes) # GLM-5.3-Flash <img width=\"4239\" height=\"2643\" alt=\"image\" src=\"https://github.com/user-attachments/assets/17bc9c29-758b-44c8-8230-42f945ded209\" /> GLM-5.3-Flash, the first **natively multimodal model** in the GL",
+    "why_now": "Shipped: huggingface/transformers v5.16.1 released, 3 d ago",
+    "score": 35
+  },
+  {
+    "id": "hf-aac9553c9b",
+    "title": "unsloth/GLM-5.3-Flash-GGUF",
+    "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-26T14:21:15Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 266,
+      "downloads": 27288,
+      "trendingScore": 263.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.771,
+      "signal_parts": {
+        "trending": 0.734,
+        "likes": 0.809,
+        "downloads": 0.739
+      },
+      "decay": 0.3306,
+      "age_h": 76.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "GLM",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 266 likes, 27.3k downloads, trending score 263, created 2026-08-26",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 266 likes, 27.3k downloads, trending score 263, 3 d ago",
+    "score": 34
+  },
+  {
+    "id": "github-22af9dbf54",
+    "title": "transformers v5.16.0: Release: v5.16.0",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.16.0",
+    "source": "github",
+    "published_at": "2026-08-26T12:35:15Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.16.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.3223,
+      "age_h": 78.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "# Release v5.16.0 ## New Model additions ### Qwen4-Exp <img width=\"2241\" height=\"693\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c838b5ba-ffea-42da-baa9-3f66178e3671\" /> Qwen4-Exp builds on Qwen3.5's hybrid text and multimodal architecture with three key components: GatedResidual (G",
+    "why_now": "Shipped: huggingface/transformers v5.16.0 released, 3 d ago",
+    "score": 34
+  },
+  {
+    "id": "hn-d869002b41",
+    "title": "Ask HN: Why do we need MCP?",
+    "url": "https://news.ycombinator.com/item?id=49488654",
+    "source": "hn",
+    "published_at": "2026-08-29T10:26:48Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 13,
+      "signal": 0.427,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.526
+      },
+      "decay": 0.8838,
+      "age_h": 8.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Why not just publish your API docs and let the client&#x27;s bot chain together what calls need to be made.<p>You could even repurpose the MCP so you only ever produce the API documentation as EVERY response. No LLM necessary.",
+    "why_now": "Discussed: 8 points, 13 comments on HN, 9 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-78fc0d55ca",
+    "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+    "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+    "source": "hn",
+    "published_at": "2026-08-29T07:47:04Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.8505,
+      "age_h": 11.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 3 points, 2 comments on HN, 11 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-d9093dae68",
+    "title": "Debian has published the official results for the 2026 GR on LLM usage",
+    "url": "https://vote.debian.org/~secretary/gr_llm/results.txt",
+    "source": "hn",
+    "published_at": "2026-08-29T04:48:52Z",
+    "signals": {
+      "points": 14,
+      "num_comments": 7,
+      "signal": 0.456,
+      "signal_parts": {
+        "points": 0.475,
+        "comments": 0.414
+      },
+      "decay": 0.8148,
+      "age_h": 14.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 14 points, 7 comments on HN, 14 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-15ae1bdb37",
+    "title": "Agentic SQL for Free: Qwen3.8 27B and DuckDB",
+    "url": "https://motherduck.com/blog/Agentic-SQL-for-Free-with-Qwen3.8-27B-and-DuckDB/",
+    "source": "hn",
+    "published_at": "2026-08-29T13:50:28Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9282,
+      "age_h": 5.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 5 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-6115461aa6",
+    "title": "Show HN: Metis - An agent harness pushing DeepSeek to Opus-tier coding (82%)",
+    "url": "https://github.com/Wholiver/metis",
+    "source": "hn",
+    "published_at": "2026-08-29T02:36:07Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.7892,
+      "age_h": 16.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 16 h ago",
+    "score": 31
+  },
+  {
+    "id": "hf-8c886f3d5d",
+    "title": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+    "url": "https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-26T11:15:13Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 97,
+      "downloads": 20275,
+      "trendingScore": 89.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.655,
+      "signal_parts": {
+        "trending": 0.592,
+        "likes": 0.664,
+        "downloads": 0.718
+      },
+      "decay": 0.3161,
+      "age_h": 79.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 97 likes, 20.3k downloads, trending score 89, created 2026-08-26",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 97 likes, 20.3k downloads, trending score 89, 3 d ago",
+    "score": 31
+  },
+  {
+    "id": "hf-adf5d2a9bf",
+    "title": "zai-org/GLM-5.3-Flash",
+    "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "source": "hf",
+    "published_at": "2026-08-25T06:43:14Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 1599,
+      "downloads": 189793,
+      "trendingScore": 1528.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.982,
+      "signal_parts": {
+        "trending": 0.965,
+        "likes": 1.0,
+        "downloads": 0.88
+      },
+      "decay": 0.2094,
+      "age_h": 108.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 1.6k likes, 189.8k downloads, trending score 1.5k, created 2026-08-25",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 1.6k likes, 189.8k downloads, trending score 1.5k, 5 d ago",
+    "score": 31
+  },
+  {
+    "id": "hf-5b80bb682b",
+    "title": "alibaba-pai/MiniMax-H3-Acc-LoRAs",
+    "url": "https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs",
+    "source": "hf",
+    "published_at": "2026-08-26T03:48:27Z",
+    "signals": {
+      "pipeline_tag": "text-to-video",
+      "likes": 140,
+      "downloads": 13767,
+      "trendingScore": 136.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.682,
+      "signal_parts": {
+        "trending": 0.647,
+        "likes": 0.716,
+        "downloads": 0.69
+      },
+      "decay": 0.2839,
+      "age_h": 87.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Alibaba",
+      "group": "how-to"
+    },
+    "products": [
+      "Alibaba",
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "text-to-video model on Hugging Face, 140 likes, 13.8k downloads, trending score 136, created 2026-08-26",
+    "why_now": "Shipped: new on Hugging Face (text-to-video), 140 likes, 13.8k downloads, trending score 136, 4 d ago",
+    "score": 30
+  },
+  {
+    "id": "github-f8a46c5a40",
+    "title": "open-webui v0.11.1",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+    "source": "github",
+    "published_at": "2026-08-25T21:17:57Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.11.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.2584,
+      "age_h": 93.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 🚦 **Human in the loop tool approval.** Where an administrator has turned it on, you can switch a conversation from letting tools run freely to being asked first, so a model that wants to use a tool stops and waits for you to allow or deny it, one call at a time in a saved conversation, b",
+    "why_now": "Shipped: open-webui/open-webui v0.11.1 released, 4 d ago",
+    "score": 30
+  },
+  {
+    "id": "github-3a1c41b21a",
+    "title": "unsloth v0.1.803-beta: Bug Fixes + Auto compaction + LAN Remote Access",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.803-beta",
+    "source": "github",
+    "published_at": "2026-08-25T13:12:45Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.803-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.23,
+      "age_h": 101.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "MLX",
+      "AMD"
+    ],
+    "summary": "Thanks for the support for Qwen3.8-27B and Unsloth Desktop! This is a bug fix release with 170+ PRs. * **MLX fixed** - Some MLX and Mac runtimes did not run correctly * **LAN API keyless / password-less** + Keyboard shortcuts * **XET / HTTP download toggle** - clearer download progress * **AMD bug f",
+    "why_now": "Shipped with a known break: unslothai/unsloth v0.1.803-beta released, 4 d ago",
+    "score": 29
+  },
+  {
+    "id": "hn-aa4bd78b6b",
+    "title": "Qwen3.8-27B and Radeon R9700 and 13-year-old Pentium = actual good performance",
+    "url": "https://mateusznowak.dev/articles/running-qwen38-legacy-hardware/",
+    "source": "hn",
+    "published_at": "2026-08-28T21:58:56Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7382,
+      "age_h": 21.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Radeon"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 21 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-df25f1ad16",
+    "title": "GLM5.3 unsloth GGUFs are now up",
+    "url": "https://huggingface.co/unsloth/GLM-5.3-GGUF",
+    "source": "hn",
+    "published_at": "2026-08-28T18:21:32Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7006,
+      "age_h": 24.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Unsloth"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 25 h ago",
+    "score": 28
+  },
+  {
+    "id": "github-16c9de48d2",
+    "title": "unsloth v0.1.802-beta: Bug Fixes + Auto compaction + LAN Remote Access",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.802-beta",
+    "source": "github",
+    "published_at": "2026-08-25T11:27:29Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.802-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.2242,
+      "age_h": 103.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "MLX",
+      "AMD"
+    ],
+    "summary": "Thanks for the support for Qwen3.8-27B and Unsloth Desktop! This is a bug fix release with 170+ PRs. * **MLX fixed** - Some MLX and Mac runtimes did not run correctly * **LAN API keyless / password-less** is now supported * **XET / HTTP download toggle** - clearer download progress * **AMD bug fixes",
+    "why_now": "Shipped with a known break: unslothai/unsloth v0.1.802-beta released, 4 d ago",
+    "score": 28
+  },
+  {
+    "id": "hn-96a1add3f1",
+    "title": "Is this the DeepSeek moment for Local Models?",
+    "url": "https://vijaykodam.substack.com/p/is-this-the-deepseek-moment-for-local",
+    "source": "hn",
+    "published_at": "2026-08-29T08:11:38Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8555,
+      "age_h": 10.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 11 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-78d51f51ca",
+    "title": "Qwen 3.8 on 1x32GB Radeon wrote Minecraft clone in 24 hours (Rust, WebGPU, WASM)",
+    "url": "https://qwencraft.home.chrisdell.info/?server=wss://qwencraft.home.chrisdell.info",
+    "source": "hn",
+    "published_at": "2026-08-28T15:44:16Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.6746,
+      "age_h": 27.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Radeon"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 27 h ago",
+    "score": 27
+  },
+  {
+    "id": "hf-5bbf41891b",
+    "title": "Qwen/Qwen3.8-Flash-Next",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+    "source": "hf",
+    "published_at": "2026-08-24T08:24:59Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 4265,
+      "downloads": 52341,
+      "trendingScore": 4112.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 1.0,
+      "signal_parts": {
+        "trending": 1.0,
+        "likes": 1.0,
+        "downloads": 0.786
+      },
+      "decay": 0.1517,
+      "age_h": 130.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 4.3k likes, 52.3k downloads, trending score 4.1k, created 2026-08-24",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 4.3k likes, 52.3k downloads, trending score 4.1k, 5 d ago",
+    "score": 27
+  },
+  {
+    "id": "hn-82d42bf822",
+    "title": "Ask HN: Best open source way to run local open-weight LLMs in 2026?",
+    "url": "https://news.ycombinator.com/item?id=49477063",
+    "source": "hn",
+    "published_at": "2026-08-28T11:26:37Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.634,
+      "age_h": 31.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "explainer"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "As we are lucky to have great open weight models these days, I was wondering what is the recommended way to run these models locally, while staying with open source software that doesn&#x27;t track you etc?<p>The only tool I&#x27;ve really tested is Ollama, but learned recently that it is pivoting i",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 32 h ago",
+    "score": 26
+  },
+  {
+    "id": "hf-3c09e6d884",
+    "title": "tencent/Hy4-preview",
+    "url": "https://huggingface.co/tencent/Hy4-preview",
+    "source": "hf",
+    "published_at": "2026-08-27T08:52:40Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 273,
+      "downloads": 1394,
+      "trendingScore": 270.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.775,
+      "signal_parts": {
+        "trending": 0.737,
+        "likes": 0.812,
+        "downloads": 0.524
+      },
+      "decay": 0.432,
+      "age_h": 58.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 273 likes, 1.4k downloads, trending score 270, created 2026-08-27",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 273 likes, 1.4k downloads, trending score 270, 2 d ago",
+    "score": 26
+  },
+  {
+    "id": "hn-e70e7937ae",
+    "title": "Show HN: DeepSeekGUI - A Windows desktop client for DeepSeek's coding agent",
+    "url": "https://github.com/See-Sol-Lab/DeepSeekGUI",
+    "source": "hn",
+    "published_at": "2026-08-29T11:02:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8914,
+      "age_h": 8.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Hi HN, I built a desktop client for DeepSeek Harness (DeepSeek&#x27;s open-source coding agent).<p>V1 wraps the official Harness Web UI in an Electron shell with some desktop additions -- installer, system tray, built-in browser panel (visible Edge, so you can watch the agent browse), and a sandboxe",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 8 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-422f280051",
+    "title": "Running Llama 3.1 405B",
+    "url": "https://a11ce.com/llama-3.1-405b.html",
+    "source": "hn",
+    "published_at": "2026-08-28T20:01:27Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7177,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Llama",
+      "group": "how-to"
+    },
+    "products": [
+      "Llama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 23 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-2d4b732664",
+    "title": "Release v0.32.15 · Ollama/Ollama",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.32.15",
+    "source": "hn",
+    "published_at": "2026-08-28T15:35:45Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.6732,
+      "age_h": 27.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 27 h ago",
+    "score": 23
+  },
+  {
+    "id": "hf-d40f262a3d",
+    "title": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
+    "source": "hf",
+    "published_at": "2026-08-24T08:25:23Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 154,
+      "downloads": 44281,
+      "trendingScore": 149.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.717,
+      "signal_parts": {
+        "trending": 0.659,
+        "likes": 0.73,
+        "downloads": 0.774
+      },
+      "decay": 0.1517,
+      "age_h": 130.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "FP8",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 154 likes, 44.3k downloads, trending score 149, created 2026-08-24",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 154 likes, 44.3k downloads, trending score 149, 5 d ago",
+    "score": 23
+  },
+  {
+    "id": "hf-12ce1865a3",
+    "title": "alibaba-pai/MiniMax-H3-Fun-Controlnet-Union",
+    "url": "https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union",
+    "source": "hf",
+    "published_at": "2026-08-24T03:18:07Z",
+    "signals": {
+      "pipeline_tag": "text-to-video",
+      "likes": 161,
+      "downloads": 4250,
+      "trendingScore": 158.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.702,
+      "signal_parts": {
+        "trending": 0.667,
+        "likes": 0.736,
+        "downloads": 0.605
+      },
+      "decay": 0.1409,
+      "age_h": 135.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Alibaba",
+      "group": "how-to"
+    },
+    "products": [
+      "Alibaba",
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "text-to-video model on Hugging Face, 161 likes, 4.2k downloads, trending score 158, created 2026-08-24",
+    "why_now": "Shipped: new on Hugging Face (text-to-video), 161 likes, 4.2k downloads, trending score 158, 6 d ago",
+    "score": 23
+  },
+  {
+    "id": "hn-711d6d3e53",
+    "title": "Show HN: Tokensift, an open-sourced token-efficiency linter for LLM prompts",
+    "url": "https://github.com/ritenv/tokensift",
+    "source": "hn",
+    "published_at": "2026-08-29T06:33:51Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 3,
+      "signal": 0.303,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.276
+      },
+      "decay": 0.8356,
+      "age_h": 12.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 5 points, 3 comments on HN, 12 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-f0ca507127",
+    "title": "Cut Claude Code Bill by Routing to DeepSeek or Grok",
+    "url": "https://news.ycombinator.com/item?id=49488963",
+    "source": "hn",
+    "published_at": "2026-08-29T11:18:02Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8948,
+      "age_h": 7.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "DeepSeek",
+      "Grok"
+    ],
+    "summary": "Tried this with Leanroute.dev MCP, it really works. Posted a blog post about this - https:&#x2F;&#x2F;leanroute.dev&#x2F;blog&#x2F;cut-claude-code-bills-60-percent-multi-provider-routing<p>Try it out and let me know.",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-7aa682090c",
+    "title": "How to run Qwen3.8-27B on a single 16GB card",
+    "url": "https://www.autodidacts.io/how-to-fit-qwen3-8-27b-into-16gb-vram-run-with-llama-cpp-rtx-3080-flags-quantizations/",
+    "source": "hn",
+    "published_at": "2026-08-28T16:51:55Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.6857,
+      "age_h": 26.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 26 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-bc577d6a41",
+    "title": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
+    "url": "https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree",
+    "source": "hf",
+    "published_at": "2026-08-27T00:28:06Z",
+    "signals": {
+      "pipeline_tag": "text-to-video",
+      "likes": 136,
+      "downloads": 0,
+      "trendingScore": 135.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.679,
+      "signal_parts": {
+        "trending": 0.646,
+        "likes": 0.712,
+        "downloads": 0.0
+      },
+      "decay": 0.3826,
+      "age_h": 66.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-video model on Hugging Face, 136 likes, 0 downloads, trending score 135, created 2026-08-27",
+    "why_now": "Shipped: new on Hugging Face (text-to-video), 136 likes, 0 downloads, trending score 135, 3 d ago",
+    "score": 20
+  },
+  {
+    "id": "hn-3b5c938725",
+    "title": "Building an LLM runtime in 700 lines of C",
+    "url": "https://github.com/ryanssenn/gemma4.c",
+    "source": "hn",
+    "published_at": "2026-08-29T13:10:09Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.9193,
+      "age_h": 5.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 6 h ago",
+    "score": 19
+  },
+  {
+    "id": "hn-05f45dd4d9",
+    "title": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
+    "url": "https://arstechnica.com/ai/2026/08/ibms-new-granite-4-2-models-ride-the-wave-of-interest-in-local-llms/",
+    "source": "hn",
+    "published_at": "2026-08-28T10:08:27Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.6222,
+      "age_h": 32.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Granite",
+      "group": "how-to"
+    },
+    "products": [
+      "Granite"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 33 h ago",
+    "score": 19
+  },
+  {
+    "id": "hf-f392ab5cfe",
+    "title": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF",
+    "url": "https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-19T23:11:19Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 113,
+      "downloads": 47817,
+      "trendingScore": 111.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.7,
+      "signal_parts": {
+        "trending": 0.621,
+        "likes": 0.686,
+        "downloads": 0.78
+      },
+      "decay": 0.05,
+      "age_h": 235.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 113 likes, 47.8k downloads, trending score 111, created 2026-08-19",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 113 likes, 47.8k downloads, trending score 111, 10 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-b5dafa81eb",
+    "title": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+    "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+    "source": "hf",
+    "published_at": "2026-08-19T14:53:08Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 910,
+      "downloads": 645554,
+      "trendingScore": 322.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.873,
+      "signal_parts": {
+        "trending": 0.76,
+        "likes": 0.986,
+        "downloads": 0.968
+      },
+      "decay": 0.05,
+      "age_h": 244.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 910 likes, 645.6k downloads, trending score 322, created 2026-08-19",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 910 likes, 645.6k downloads, trending score 322, 10 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-402fc93e09",
+    "title": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+    "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-18T06:38:41Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 342,
+      "downloads": 1768313,
+      "trendingScore": 113.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.812,
+      "signal_parts": {
+        "trending": 0.623,
+        "likes": 0.845,
+        "downloads": 1.0
+      },
+      "decay": 0.05,
+      "age_h": 276.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 342 likes, 1.8M downloads, trending score 113, created 2026-08-18",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 342 likes, 1.8M downloads, trending score 113, 12 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-291a1dc682",
+    "title": "orcarouter/Qwen3.8-27B-Uncensored",
+    "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored",
+    "source": "hf",
+    "published_at": "2026-08-18T02:05:08Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 206,
+      "downloads": 42987,
+      "trendingScore": 113.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.698,
+      "signal_parts": {
+        "trending": 0.623,
+        "likes": 0.772,
+        "downloads": 0.772
+      },
+      "decay": 0.05,
+      "age_h": 280.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 206 likes, 43.0k downloads, trending score 113, created 2026-08-18",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 206 likes, 43.0k downloads, trending score 113, 12 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-058c8d9a43",
+    "title": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-17T15:15:19Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 738,
+      "downloads": 1061687,
+      "trendingScore": 222.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.856,
+      "signal_parts": {
+        "trending": 0.711,
+        "likes": 0.956,
+        "downloads": 1.0
+      },
+      "decay": 0.05,
+      "age_h": 291.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 738 likes, 1.1M downloads, trending score 222, created 2026-08-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 738 likes, 1.1M downloads, trending score 222, 12 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-986432e0db",
+    "title": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
+    "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
+    "source": "hf",
+    "published_at": "2026-08-17T14:10:50Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1207,
+      "downloads": 97508,
+      "trendingScore": 261.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.866,
+      "signal_parts": {
+        "trending": 0.733,
+        "likes": 1.0,
+        "downloads": 0.832
+      },
+      "decay": 0.05,
+      "age_h": 292.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "MLX",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 1.2k likes, 97.5k downloads, trending score 261, created 2026-08-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 1.2k likes, 97.5k downloads, trending score 261, 12 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-c8641f5d3f",
+    "title": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+    "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-16T13:18:55Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 435,
+      "downloads": 1485837,
+      "trendingScore": 148.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.829,
+      "signal_parts": {
+        "trending": 0.658,
+        "likes": 0.88,
+        "downloads": 1.0
+      },
+      "decay": 0.05,
+      "age_h": 317.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 435 likes, 1.5M downloads, trending score 148, created 2026-08-16",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 435 likes, 1.5M downloads, trending score 148, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-8d89aca6d7",
+    "title": "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+    "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-16T07:34:08Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 548,
+      "downloads": 215892,
+      "trendingScore": 156.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.789,
+      "signal_parts": {
+        "trending": 0.665,
+        "likes": 0.913,
+        "downloads": 0.889
+      },
+      "decay": 0.05,
+      "age_h": 323.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 548 likes, 215.9k downloads, trending score 156, created 2026-08-16",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 548 likes, 215.9k downloads, trending score 156, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-ea1bf4e0ad",
+    "title": "LLMs are making me lose my savviness",
+    "url": "https://pgaleone.eu/ai/2026/08/29/losing-savviness/",
+    "source": "hn",
+    "published_at": "2026-08-29T18:38:52Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9949,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 0 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-cde48e9e9c",
+    "title": "Songs created by AI banned from Australia's music charts",
+    "url": "https://www.bbc.com/news/articles/c20vl4vm2pno",
+    "source": "hn",
+    "published_at": "2026-08-28T17:29:31Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.6919,
+      "age_h": 25.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 1 comments on HN, 26 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-b98e8ee7fb",
+    "title": "SwarmWorld: Stigmergic technological evolution in societies of LLM agents",
+    "url": "https://arxiv.org/abs/2608.26081",
+    "source": "hn",
+    "published_at": "2026-08-29T14:59:33Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9438,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-a14c051691",
+    "title": "Show HN: Telem - Route agent web search across providers and inspect the traces",
+    "url": "https://telem.ai/",
+    "source": "hn",
+    "published_at": "2026-08-27T19:13:57Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 2,
+      "signal": 0.335,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.219
+      },
+      "decay": 0.5017,
+      "age_h": 47.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "TL;DR: Web search open router that routes agent web search across providers (Exa, Parallel, Tavily, Brave, SerpAPI etc.), and traces web search results with quality metrics, so you can visualize whether a bad agent run is a web search problem or a reasoning problem.<p>I work in venture capital, and",
+    "why_now": "Shipped: 8 points, 2 comments on HN, 48 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-746ceddd64",
+    "title": "Results for LLM usage in Debian (vote)",
+    "url": "https://lists.debian.org/debian-vote/2026/08/msg00360.html",
+    "source": "hn",
+    "published_at": "2026-08-29T11:01:02Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8911,
+      "age_h": 8.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 8 h ago",
+    "score": 13
+  },
+  {
+    "id": "hf-687f29af06",
+    "title": "BreezeBlue/Breeze-TTS-2",
+    "url": "https://huggingface.co/BreezeBlue/Breeze-TTS-2",
+    "source": "hf",
+    "published_at": "2026-08-25T16:39:34Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 185,
+      "downloads": 1017,
+      "trendingScore": 184.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.722,
+      "signal_parts": {
+        "trending": 0.687,
+        "likes": 0.756,
+        "downloads": 0.501
+      },
+      "decay": 0.2417,
+      "age_h": 98.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 185 likes, 1.0k downloads, trending score 184, created 2026-08-25",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 185 likes, 1.0k downloads, trending score 184, 4 d ago",
+    "score": 13
+  },
+  {
+    "id": "hn-ee9c3cbe41",
+    "title": "Beyond the Editing Canvas: Evidence Divergence in Ooxml-to-LLM Ingestion",
+    "url": "https://arxiv.org/abs/2608.25880",
+    "source": "hn",
+    "published_at": "2026-08-29T06:07:07Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8303,
+      "age_h": 12.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 13 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-d4e3a402af",
+    "title": "A local scrubber for text you're about to send to an LLM",
+    "url": "https://github.com/Sushmey/Redact/tree/main",
+    "source": "hn",
+    "published_at": "2026-08-29T17:29:10Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9784,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c2cb2a69e9",
+    "title": "Is the LLM smart or are you not?",
+    "url": "https://blog.troed.se/posts/the-anchoring-effect-and-cognitive-simplicity/",
+    "source": "hn",
+    "published_at": "2026-08-29T17:13:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9747,
+      "age_h": 1.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-b486f7741d",
+    "title": "OpenLake: Fast, Durable Storage for LLM Inference and Training",
+    "url": "https://www.theopenlake.com/blog/introducing-openlake",
+    "source": "hn",
+    "published_at": "2026-08-29T15:00:32Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.944,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-376c341423",
+    "title": "Three mistakes of new AI teams",
+    "url": "https://softwaredoug.com/blog/2026/08/29/ai-team-mistakes",
+    "source": "hn",
+    "published_at": "2026-08-29T14:41:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9396,
+      "age_h": 4.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 11
+  },
+  {
+    "id": "hf-2a3741beb3",
+    "title": "pipecat-ai/phonellm-alpha-1",
+    "url": "https://huggingface.co/pipecat-ai/phonellm-alpha-1",
+    "source": "hf",
+    "published_at": "2026-08-24T18:47:20Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 132,
+      "downloads": 2668,
+      "trendingScore": 131.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.675,
+      "signal_parts": {
+        "trending": 0.642,
+        "likes": 0.708,
+        "downloads": 0.571
+      },
+      "decay": 0.1762,
+      "age_h": 120.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 132 likes, 2.7k downloads, trending score 131, created 2026-08-24",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 132 likes, 2.7k downloads, trending score 131, 5 d ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f4ef389f54",
+    "title": "Show HN: Hi agent - run `npx microfeed/CLI manage` to deploy CMS on Cloudflare",
+    "url": "https://docs.microfeed.org/start-here/",
+    "source": "hn",
+    "published_at": "2026-08-28T18:55:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7063,
+      "age_h": 24.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 24 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-0913988ccb",
+    "title": "Feel the tokens/s before you buy the GPU",
+    "url": "https://llmspeed.dev/",
+    "source": "hn",
+    "published_at": "2026-08-29T18:25:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9918,
+      "age_h": 0.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:gpu",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-f5e543a2c2",
+    "title": "Ask AI buttons like social media links for webpages",
+    "url": "https://llmcheck.app/ai-ask-buttons/",
+    "source": "hn",
+    "published_at": "2026-08-29T13:29:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9235,
+      "age_h": 5.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-a099558b61",
+    "title": "What we optimise for when we reach for an LLM",
+    "url": "https://exploring-better-ways.bellroy.com/what-we-optimise-for-when-we-reach-for-an-llm.html",
+    "source": "hn",
+    "published_at": "2026-08-29T10:54:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8897,
+      "age_h": 8.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-7b12636a06",
+    "title": "LightSwitch - In-Network and Photonic LLM Inference in Transit",
+    "url": "https://github.com/pisantifrancesco89/Project-LightSwitch",
+    "source": "hn",
+    "published_at": "2026-08-29T09:51:22Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8763,
+      "age_h": 9.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-6d19621b60",
+    "title": "Agent Security Is a Systems Problem: What 247 Papers Say About Secure AI Agents",
+    "url": "https://www.truefoundry.com/blog/llm-agent-security-runtime-control-planes",
+    "source": "hn",
+    "published_at": "2026-08-29T07:36:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8483,
+      "age_h": 11.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-72f901d657",
+    "title": "PhoneLLM Alpha 1: Open-weight LLM for voice agent use cases",
+    "url": "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
+    "source": "hn",
+    "published_at": "2026-08-28T18:41:30Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.704,
+      "age_h": 24.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 24 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-b2e65aa56d",
+    "title": "Audio8/Audio8-TTS-Preview-0.1b",
+    "url": "https://huggingface.co/Audio8/Audio8-TTS-Preview-0.1b",
+    "source": "hf",
+    "published_at": "2026-08-19T04:49:51Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 188,
+      "downloads": 5231,
+      "trendingScore": 107.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.687,
+      "signal_parts": {
+        "trending": 0.616,
+        "likes": 0.759,
+        "downloads": 0.62
+      },
+      "decay": 0.05,
+      "age_h": 254.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 188 likes, 5.2k downloads, trending score 107, created 2026-08-19",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 188 likes, 5.2k downloads, trending score 107, 11 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-8fe139008e",
+    "title": "thomsonreuters/Thomson-1.0-Small",
+    "url": "https://huggingface.co/thomsonreuters/Thomson-1.0-Small",
+    "source": "hf",
+    "published_at": "2026-08-18T15:33:05Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 150,
+      "downloads": 831,
+      "trendingScore": 144.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.69,
+      "signal_parts": {
+        "trending": 0.655,
+        "likes": 0.726,
+        "downloads": 0.487
+      },
+      "decay": 0.05,
+      "age_h": 267.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 150 likes, 831 downloads, trending score 144, created 2026-08-18",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 150 likes, 831 downloads, trending score 144, 11 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-0e21a0270d",
+    "title": "ornith-ai/Ornith-1.5-35B-A3B",
+    "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+    "source": "hf",
+    "published_at": "2026-08-18T06:24:38Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 493,
+      "downloads": 106562,
+      "trendingScore": 171.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.787,
+      "signal_parts": {
+        "trending": 0.677,
+        "likes": 0.898,
+        "downloads": 0.838
+      },
+      "decay": 0.05,
+      "age_h": 276.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 493 likes, 106.6k downloads, trending score 171, created 2026-08-18",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 493 likes, 106.6k downloads, trending score 171, 12 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-87aadad925",
+    "title": "apodex/Apodex-1.1-mini",
+    "url": "https://huggingface.co/apodex/Apodex-1.1-mini",
+    "source": "hf",
+    "published_at": "2026-08-17T04:06:32Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 102,
+      "downloads": 1804,
+      "trendingScore": 98.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.638,
+      "signal_parts": {
+        "trending": 0.605,
+        "likes": 0.671,
+        "downloads": 0.543
+      },
+      "decay": 0.05,
+      "age_h": 302.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 102 likes, 1.8k downloads, trending score 98, created 2026-08-17",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 102 likes, 1.8k downloads, trending score 98, 13 d ago",
+    "score": 2
+  }
+]
