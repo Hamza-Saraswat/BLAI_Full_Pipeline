@@ -23,6 +23,24 @@ You produce the one artifact the script writer trusts as ground truth: a sourced
 - FireCrawl MCP tools (`firecrawl_search`, `firecrawl_scrape`) when the connector is attached and `FIRECRAWL_API_KEY` is set; otherwise `WebSearch` and `WebFetch`. A missing tool never fails the run (`rules/firecrawl-usage.md`).
 - `shared/schemas/research.schema.json` and the three rule files below. `brand-vault/identity.md` "Audience" section for who the brief serves.
 
+## FireCrawl (when FIRECRAWL_API_KEY is set)
+
+Four endpoints, used deliberately (credit hygiene is contractual: 8-12 sources per brief, every
+fetch cached into the stage's `output/`, never re-fetched for the same slug):
+
+- **Search** (`POST /v1/search` with `scrapeOptions.formats=["markdown"]`) -- discovery AND
+  acquisition in one call: results arrive with full page markdown. The radar's
+  `firecrawl_search.py` is the reference client.
+- **Scrape with a JSON schema** -- structured assist for the brief: pull `key_numbers[]` and
+  claim quotes from a model card or docs page directly into the brief's JSON shape. The writer
+  stays the author; extraction is an instrument.
+- **Parse** -- PDFs and DOCX to markdown (arXiv papers, vendor PDFs) instead of mangled fetches.
+- **Map** -- cheap URL discovery on a docs site or HF repo before scraping the right page.
+
+NOT used: Crawl (whole-site, credit furnace with no contract need), Agent / Browser Sandbox /
+Interact (they duplicate the agent running this skill). Without the key, fall back to the
+agent's own web search and fetch, one source at a time.
+
 ## How It Works
 
 1. **Plan.** Restate the idea in one line. Decompose it into 3-5 research questions the video must answer: what the thing is, why it matters to someone running AI on their own hardware, the load-bearing number or numbers, the concrete case or story, the common misconception. Note what the hub note and ideas line already steer toward (a smooth explainer wants one scenario that carries the whole script; a news-react wants the dated event and its one consequence).

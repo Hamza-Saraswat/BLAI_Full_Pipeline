@@ -94,11 +94,13 @@ def checks(quick: bool):
     kroot = pathlib.Path(os.environ.get("BLAI_KOKORO_ROOT", "").strip() or
                          (pathlib.Path.home() / "Documents" / "Projects" / "BLAI_Animator"))
     kokoro = (kroot / "pipeline" / "models" / "kokoro-v1.0.onnx").exists()
-    yield {"check": "voice-engine", "required": True, "ok": eleven or kokoro,
-           "detail": ("elevenlabs keys set" if eleven else "") +
-                     (" + " if eleven and kokoro else "") +
-                     ("kokoro model at %s" % kroot if kokoro else "") or
-                     "no ELEVENLABS_API_KEY/ELEVEN_VOICE_ID and no kokoro model (BLAI_KOKORO_ROOT)"}
+    cbx_venv = pathlib.Path(os.environ.get("BLAI_CHATTERBOX_VENV", "").strip() or
+                            (pathlib.Path.home() / "blai" / "voice" / "cbx-venv"))
+    chatterbox = (cbx_venv / "bin" / "python").exists()
+    engines = [n for n, on in (("elevenlabs", eleven), ("kokoro", kokoro), ("chatterbox", chatterbox)) if on]
+    yield {"check": "voice-engine", "required": True, "ok": bool(engines),
+           "detail": (" + ".join(engines)) or
+                     "no ELEVENLABS keys, no kokoro model (BLAI_KOKORO_ROOT), no chatterbox venv (BLAI_CHATTERBOX_VENV)"}
 
     # -- optional: whisper alignment (captions fall back to proportional) -------
     wbin = (os.environ.get("WHISPER_CPP_BIN") or "").strip()

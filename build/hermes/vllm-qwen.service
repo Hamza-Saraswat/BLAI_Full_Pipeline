@@ -1,0 +1,18 @@
+# ~/.config/systemd/user/vllm-qwen.service
+# Reproduces the hand-launched Docker vLLM (qwen-base at :8000) so the wired provider
+# endpoint survives reboots. FILL ExecStart from `docker inspect` of the current container
+# at install time (image, mounts, --model, --served-model-name qwen-base, port 8000);
+# add --gpu-memory-utilization 0.75 to leave headroom for Chatterbox and renders.
+[Unit]
+Description=vLLM qwen-base (local provider endpoint, no pipeline duties yet)
+After=network-online.target docker.service
+
+[Service]
+Type=simple
+# ExecStart=docker run --rm --name vllm-qwen ... (filled at install from docker inspect)
+ExecStop=/usr/bin/docker stop vllm-qwen
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=default.target

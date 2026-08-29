@@ -1,0 +1,15 @@
+# ~/.config/systemd/user/hermes-telegram.service
+# The messaging gateway is a separate long-running process from the dashboard.
+[Unit]
+Description=Hermes messaging gateway (Telegram)
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/hermes gateway start
+WorkingDirectory=%h/blai/repo
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=default.target

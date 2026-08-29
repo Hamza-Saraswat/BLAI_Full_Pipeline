@@ -1,0 +1,17 @@
+# ~/.config/systemd/user/hermes-serve.service
+# Hermes backend/dashboard with chat WebSocket channels enabled.
+# Pin HERMES_DASHBOARD_SESSION_TOKEN in ~/.hermes/.env first (openssl rand -base64 32):
+# the default mints a new token per restart and silently invalidates saved clients.
+[Unit]
+Description=Hermes Agent dashboard/backend (BLAI factory)
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/hermes serve
+WorkingDirectory=%h/blai/repo
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
