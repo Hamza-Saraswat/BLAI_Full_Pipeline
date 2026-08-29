@@ -1,0 +1,157 @@
+{
+  "slug": "2026-08-29-glm-5-3-just-went-open-weight",
+  "topic": "GLM-5.3 went open-weight; what its smallest local build actually needs",
+  "generated_at": "2026-08-29T19:20:00Z",
+  "depth": "standard",
+  "thesis": "GLM-5.3-Flash is MIT-licensed and open-weight, but its smallest GGUF is 93.09 GB, so no consumer GPU can hold it: this release is for 128 GB unified-memory machines, not your graphics card.",
+  "explanation_path": "Open the headline everyone saw, then put the smallest file size next to the biggest consumer card. Explain why the 18B-active number does not rescue it: every expert must be resident, so memory follows total parameters, not active ones. Land on the one machine class the drop actually serves and the one-line check a viewer performs before downloading anything.",
+  "viewer_situation": "Owns a gaming GPU between 8 and 24 GB, saw 'GLM-5.3 is now open-weight' at the top of Hacker News, and is deciding whether to download it tonight.",
+  "objection": "It says 18B active parameters, and 18B models run fine on my card, so surely a quant of this fits.",
+  "has_process": true,
+  "process_steps": [
+    "Read your machine's total GPU or unified memory (About This Mac, or nvidia-smi).",
+    "Open the Files tab of unsloth/GLM-5.3-Flash-GGUF and read the size of the smallest folder, UD-IQ1_S: 93.09 GB.",
+    "If your number is under 100 GB, close the tab: no quant of this model fits. At 128 GB, Unsloth's own guide points you at UD-IQ3_XXS."
+  ],
+  "claims": [
+    {
+      "claim": "GLM-5.3-Flash has 320B total parameters and 18B active parameters",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "source_title": "zai-org/GLM-5.3-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "GLM-5.3-Flash is released under the MIT license",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "source_title": "zai-org/GLM-5.3-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "The smallest published GGUF build, UD-IQ1_S, totals 93.09 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
+      "source_title": "unsloth/GLM-5.3-Flash-GGUF file listing (per-folder sizes summed via the HF API)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "The 2-bit UD-Q2_K_XL build totals 108.72 GB and the 4-bit UD-Q4_K_XL 199.71 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
+      "source_title": "unsloth/GLM-5.3-Flash-GGUF file listing (HF API)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "Unsloth's own guide puts the 1-bit build at 100 GB of memory and recommends UD-IQ3_XXS as the quant that fits on 128GB devices",
+      "source_url": "https://unsloth.ai/docs/models/glm-5.3-flash.md",
+      "source_title": "Unsloth: GLM-5.3-Flash, how to run locally",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "The open-weight announcement carried 767 points and 260 comments on Hacker News within 28 hours",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3",
+      "source_title": "BLAI radar 2026-08-29 (HN metadata for the GLM-5.3 item)",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "The full GLM-5.3 (non-Flash) is 753B parameters, so the Flash variant IS the small one",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3",
+      "source_title": "zai-org/GLM-5.3 model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-29"
+    },
+    {
+      "claim": "The Flash base repo shows 189.8k downloads and the GGUF repo 27.3k within days of release",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
+      "source_title": "Hugging Face trending metadata (radar sweep + HF API)",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-08-29"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "smallest GGUF (UD-IQ1_S)",
+      "value": "93.09 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF"
+    },
+    {
+      "label": "2-bit UD-Q2_K_XL",
+      "value": "108.72 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF"
+    },
+    {
+      "label": "3-bit UD-IQ3_XXS (the 128 GB pick)",
+      "value": "120.37 GB",
+      "source_url": "https://unsloth.ai/docs/models/glm-5.3-flash.md"
+    },
+    {
+      "label": "4-bit UD-Q4_K_XL",
+      "value": "199.71 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF"
+    },
+    {
+      "label": "total / active parameters",
+      "value": "320B / 18B",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+    },
+    {
+      "label": "1-bit memory need (Unsloth)",
+      "value": "100 GB",
+      "source_url": "https://unsloth.ai/docs/models/glm-5.3-flash.md"
+    },
+    {
+      "label": "biggest consumer GPU VRAM",
+      "value": "32 GB (RTX 5090)",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "the receptionist",
+      "mapping": "18B active parameters is the one receptionist who answers; 320B total is the whole staff directory that still has to be in the building",
+      "limit": "the building never gets smaller at night: every expert stays resident even when idle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Open-weight means you can run it on your GPU",
+      "reality": "The license opens; the memory does not. The smallest build is 93.09 GB against a 32 GB flagship card."
+    },
+    {
+      "myth": "18B active parameters means it needs what an 18B model needs",
+      "reality": "Active parameters set compute per token, not memory: all 320B of experts must sit in memory for routing to reach them."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "MoE (mixture of experts)",
+      "definition": "A model built of many expert sub-networks; each token uses a few, but all of them stay loaded"
+    },
+    {
+      "term": "UD quant",
+      "definition": "Unsloth Dynamic quantization: different layers stored at different bit widths to keep quality at low size"
+    },
+    {
+      "term": "unified memory",
+      "definition": "One memory pool shared by CPU and GPU, as on a Mac Studio or a DGX Spark, so the whole pool can hold weights"
+    }
+  ],
+  "unverified": [
+    "Tokens-per-second on any 128 GB device: Unsloth's guide gives no speed figures, and nothing here was measured on our hardware.",
+    "The HN thread's comment texts (the endpoint rate-limited at fetch time); only the point and comment counts from the radar metadata are used.",
+    "Whether llama.cpp needs special flags for the glm_moe_dsa architecture; the guide shows none."
+  ],
+  "suggested_outline": "Hook: the headline number against the file size. Then the receptionist beat for 320/18. Then the ladder: 93 to 200 GB, and the one machine class it serves at 128 GB. Payoff: the one-line memory check before you download 93 GB for nothing.",
+  "notes": "Angle sharpened from the ideas note: the pick promised 'what fits your GPU' and the honest answer is 'nothing does'; the EQUIPS is the check that saves a wasted download, the TEACHES is active-vs-total memory."
+}
