@@ -111,6 +111,13 @@ Everything else is the real thing: the same scripts, the same stage order, the s
 
 There is nothing to undo. Drop `--local` and the Spark path runs unchanged: `BLAI_REPO_DIR`, `BLAI_BUILD_DIR` and `build/.env` are read again, ElevenLabs is chosen as soon as `ELEVENLABS_API_KEY` and `ELEVEN_VOICE_ID` are both set, and publishing, cards and git-sync come back. Delete `.local-builds/` to reclaim the space, and re-run the voice stage with `--fresh` once the real voice exists, because Kokoro audio, captions and scene timings do not carry over. `BLAI_LOCAL=1` switches a whole shell into local mode, so `unset BLAI_LOCAL` if you exported it.
 
+## Preflight
+
+Every pass starts with `python3 tools/preflight.py --quick`: each render/voice prerequisite's
+own documented smoke check, one line each. A missing tool fails the pass BEFORE any note is
+touched (finding 33: Manim was documented and never installed, and would have died ten minutes
+into the first render). Run it yourself after any machine change; `--json` for machines.
+
 ## What a pass does
 
 1. Takes `build/locks/build.lock`; exits quietly if another pass holds it (the timer also never overlaps a running service).

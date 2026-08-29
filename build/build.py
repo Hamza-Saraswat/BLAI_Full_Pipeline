@@ -401,6 +401,15 @@ def main(argv=None) -> int:
             return 2
         if missing:
             log("note: empty required values ignored in dry-run: %s" % ", ".join(missing))
+    # Finding 33: verify every documented prerequisite BEFORE touching a note. A missing tool
+    # discovered mid-render blocks a note that was fine; discovered here it blocks nothing.
+    pf = subprocess.run([sys.executable, str(REPO / "tools" / "preflight.py"), "--quick"],
+                        capture_output=True, text=True)
+    for line in (pf.stdout or "").strip().splitlines():
+        log("preflight: " + line)
+    if pf.returncode != 0:
+        log("error: preflight failed; fix the tools above, nothing was started")
+        return 1
     if a.dry_run:
         return run_pass(a, log)
     fd = acquire_lock(LOCK)
