@@ -85,7 +85,9 @@ def main():
             for m in re.finditer(r"^- (\w[\w ]*): \(filled by stage (\d\d)\)", body, re.M):
                 stage_dirs = list(wsdir.glob("stages/%s-*" % m.group(2)))
                 slug = meta.get("slug", "")
-                if slug and any((sd / "output").glob(slug + "*") for sd in stage_dirs):
+                has_output = slug and any(True for sd in stage_dirs
+                                          for _ in (sd / "output").glob(slug + "*"))
+                if has_output:
                     failures += 1
                     print("FAIL %s: Artifacts link '%s' still reads '(filled by stage %s)' but that "
                           "stage's output exists" % (note.relative_to(ROOT), m.group(1), m.group(2)))

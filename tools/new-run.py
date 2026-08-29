@@ -35,7 +35,7 @@ def main():
     ap.add_argument("--slug", help="full slug YYYY-MM-DD-topic; derived from --title and --date when omitted")
     ap.add_argument("--title", default="")
     ap.add_argument("--date", default=dt.date.today().isoformat())
-    for f in ("pillar", "series", "structure", "format", "style_pack", "value_types"):
+    for f in ("pillar", "structure", "format", "style_pack", "value_types"):
         ap.add_argument("--" + f.replace("_", "-"), dest=f, default="")
     a = ap.parse_args()
 
@@ -51,7 +51,7 @@ def main():
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = {
         "slug": slug, "workspace": a.workspace, "title": a.title, "status": "idea",
-        "pillar": a.pillar, "series": a.series, "structure": a.structure, "format": a.format,
+        "pillar": a.pillar, "structure": a.structure, "format": a.format,
         "style_pack": a.style_pack, "value_types": a.value_types, "created": a.date, "updated": now,
         "publish_slot": "", "seo_score": 0, "feedback": "", "blocked_reason": "", "build_host": "",
         "preview_url": "", "youtube_url": "", "blotato_post_id": "",

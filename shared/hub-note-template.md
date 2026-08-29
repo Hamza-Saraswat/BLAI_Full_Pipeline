@@ -11,7 +11,6 @@ workspace: shorts
 title: ""
 status: idea
 pillar: ""
-series: ""
 structure: ""
 format: ""
 style_pack: ""
