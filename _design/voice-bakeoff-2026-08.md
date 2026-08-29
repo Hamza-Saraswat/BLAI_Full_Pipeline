@@ -20,8 +20,15 @@ listening test against their own 1-3 minute recording.
   Two install traps for the integration note: uv venvs ship no setuptools, and
   `resemble-perth` needs `pkg_resources`, which setuptools >= 81 removed -- pin
   `setuptools<81`. Model: ~3.0 GB from HF on first run; loads in 23 s on MPS.
-  Smoke: default voice + cloned-from-reference samples (stand-in reference = a Kokoro
-  clip until the creator's recording arrives). Results appended below when the run lands.
+  Smoke: COMPLETE. Both samples transcribe at **WER 0.0** (whisper base.en, zero mismatches),
+  cleaner than Kokoro's 0.015-0.031 on the same checker.
+  - `cbx_default` (stock voice): 9.32 s from the 40-word test line.
+  - `cbx_cloned` (cloned from the stand-in reference): 11.80 s -> ~3.4 wps.
+  - MPS caveats, both worked around: torchaudio's sinc resampler and the HiFiGAN vocoder each
+    hit "Output channels > 65536 not supported at the MPS device" on the CLONED path only.
+    The default path renders on MPS; the cloned path runs on CPU (RTF ~6.6x -- a 38 s Short
+    would take ~4 min, fine for an unattended overnight build, and a non-issue on the Spark's
+    CUDA). Listening set delivered to the creator 2026-08-29.
 - **OpenVoice V2**: install ABORTED -- its own torch copy hit `No space left on device`
   on this 8.7-GB-free disk. Qualified on license; revisit on the Spark (3.1 TB free)
   only if Chatterbox fails the listening test.
