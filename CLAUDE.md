@@ -12,9 +12,9 @@ BLAI/
 ├── shared/                (platform specs, posting playbook, schemas, env template, pipeline overview)
 ├── skills/                (bundled skills: research, gates, narration, render, publish, telegram, obsidian)
 ├── workspaces/
-│   ├── shorts/            (Shorts pipeline, stages 01-08)
+│   └── shorts/            (Shorts pipeline, stages 01-08)
 ├── build/                 (DGX Spark build agent: installer, systemd units, build loop, Telegram bot)
-├── tools/                 (validate.py, hubnote.py, new-run.py, git-sync.sh)
+├── tools/                 (validate.py, check_outputs.py, preflight.py, hubnote.py, new-run.py, reset-run.py, git-sync.sh)
 ├── analytics/             (weekly retro notes)
 ├── research/              (the two source documents; build-time reference only)
 └── _design/               (workflow map, stage contracts, validation report)
@@ -25,7 +25,7 @@ BLAI/
 | Keyword | Action |
 |---------|--------|
 | `setup` | Run `setup` inside the workspace (`workspaces/shorts`) |
-| `status` | Render the pipeline status of both workspaces (see each workspace `CLAUDE.md`) |
+| `status` | Render the pipeline status (see the workspace `CLAUDE.md`) |
 
 ## Routing
 
@@ -43,6 +43,6 @@ BLAI/
 1. `cd` into a workspace before producing anything. Its `CLAUDE.md` takes over and names exactly what to load.
 2. Never write a secret (API key, token, voice id) into any committed file. Secrets live in the cloud environment or the Spark's `.env`; see `shared/env-template.md`.
 3. Text outputs are committed (they are the audit trail and the Obsidian archive); audio, video and images never are. `.gitignore` enforces the split.
-4. Commit and push with `tools/git-sync.sh "<message>"`; it rebases and retries so routines and the Spark can push the same morning.
+4. Commit and push with `tools/git-sync.sh "<message>" <paths>`; it rebases and retries so routines and the Spark can push the same morning. Always pass the paths the stage owns -- the repo root is a live Obsidian vault, and an unscoped add commits the user's half-written notes (finding 41).
 5. Do not read other runs' outputs to learn how to write. Reference files are the source of quality (ICM Pattern 14). Reading `published/` for dedupe is the one allowed exception.
 6. The research documents in `research/` are build-time references. Do not load them while producing a video.
