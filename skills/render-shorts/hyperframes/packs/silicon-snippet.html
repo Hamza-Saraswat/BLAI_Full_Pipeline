@@ -34,6 +34,12 @@
   bg + board grid touch the margins.
   First 8 and last 8 frames are motion-free.
 ============================================================ -->
+<!-- TRAPS (verified 2026-08-29, first live use): (1) .board-bg must sit INSIDE the
+     composition root div; as a body-level sibling the linter mistakes it for the root
+     and throws root_missing_composition_id/dimensions. (2) Scope every GSAP selector
+     to the root ("#scene .pad", never ".pad") or 0.7.31 lint fails unscoped_gsap_selector.
+     (3) The pack's .label/.designator/.value/.fab-mark classes are CHROME (<64px);
+     viewer-read text needs scene-local sizes >=64px. -->
 <html lang="en" data-resolution="portrait">
   <head>
     <meta charset="UTF-8" />
@@ -187,7 +193,7 @@
         2.6
       );
       // pads flash amber on contact (machine-instant .set), settle to tin
-      tl.set(".pad", { backgroundColor: "#FFB347" }, 3.05); /* --accent */
+      tl.set("#scene .pad", { backgroundColor: "#FFB347" }, 3.05); /* --accent */
       tl.to(".pad", { backgroundColor: "#8FA0A8", duration: 0.4, ease: "power2.inOut" }, 3.25); /* --tin */
 
       // 6) silkscreen: dashed box FADES in (dashes never draw), then the
