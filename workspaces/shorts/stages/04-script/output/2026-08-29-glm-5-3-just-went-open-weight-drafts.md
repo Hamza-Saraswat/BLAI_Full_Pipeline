@@ -43,7 +43,7 @@ the stage contract. Neither sees the other. Gates run by each writer; the judge 
 
 Both drafts passed all gates (validator advisories only: the assigned hook's referent, and the
 stale-2.9wps pacing line; eval `gate1_ready: true` for both). Full drafts archived as
-`[slug]-draft-A.json` / `-draft-B.json`; prose in each writer's private directory.
+`[slug]-draft-a.json` / `-draft-b.json`; prose in each writer's private directory.
 
 Live proof of the finding-9 demotion: the winning board scores `entity_spend 0.154` -- under the
 old hard gate that alone would have blocked it; as an advisory it informs and blocks nothing.
