@@ -1,0 +1,199 @@
+{
+  "slug": "2026-08-30-dgx-spark-has-128-gb-and-a-70b",
+  "topic": "DGX Spark has 128 GB and a 70B still crawls at 2.7 tokens/s",
+  "generated_at": "2026-08-30T03:46:37Z",
+  "depth": "standard",
+  "thesis": "On a DGX Spark the 128 GB decides what loads, but the 273 GB/s of memory bandwidth decides how fast it talks: a dense 70B decodes at 2.7 tokens per second because every written token re-reads the weights, so the winning move is choosing models by active bytes per token, not parameter count.",
+  "explanation_path": "Open on the pair of facts that does not add up for new owners: the spec sheet's 128 GB of unified memory, and LMSYS's measured 803 tps prefill but 2.7 tps decode for Llama 3.1 70B (FP8) on the same box. Separate the two jobs first: reading a prompt happens all at once and is compute work, the Spark's 1 PFLOP FP4 strength; writing the answer happens one token at a time, and each token re-reads the model's weights from memory once, which makes single-stream decode bandwidth work. Then the arithmetic becomes the point: 273 GB/s divided by roughly 70 GB of FP8 weights gives a ceiling near 3.9 tok/s, and 2.7 measured is that ceiling with overhead, not a misconfiguration. The turn is that decode reads the active parameters, not the total: the same 70B at q4_K_M writes at 4.423 tok/s, GPT-OSS-120B (an MoE reading only a few billion active parameters per token) writes at 41 to 55 tok/s, and speculative decoding stacks further on a bandwidth-starved box. Land on the decision rule a buyer can reuse: on unified-memory hardware you shop by active bytes read per token, not by how many parameters fit.",
+  "claims": [
+    {
+      "claim": "LMSYS benchmarked Llama 3.1 70B (FP8) on the DGX Spark at 803 tps prefill and 2.7 tps decode.",
+      "source_url": "https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/",
+      "source_title": "NVIDIA DGX Spark In-Depth Review: A New Standard for Local AI Inference",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "The DGX Spark's memory is 128 GB LPDDR5x unified system memory on a 256-bit interface at 4266 MHz, delivering 273 GB/s of bandwidth shared by CPU and GPU.",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html",
+      "source_title": "Hardware Overview -- DGX Spark User Guide",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "NVIDIA advertises the DGX Spark as running AI development and testing workloads with models up to 200 billion parameters at the desktop.",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "source_title": "Personal AI Supercomputer Powered by Blackwell | NVIDIA DGX Spark",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "At small batch sizes each generated token requires passing all of the model's parameters through memory (two bytes per parameter at 16-bit), which makes single-user decode memory-bandwidth bound rather than compute bound.",
+      "source_url": "https://kipp.ly/p/transformer-inference-arithmetic",
+      "source_title": "Transformer Inference Arithmetic",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "The single-stream decode ceiling on the Spark is simple arithmetic: max tokens/sec is memory bandwidth divided by bytes read per token, so a 70B model in FP8 (about 70 GB of weights) caps at 273 divided by 70, roughly 3.9 tok/s, with 2.7 to 3 tok/s in practice.",
+      "source_url": "https://spark.enverge.ai/blog/dgx-spark-prefill-vs-decode",
+      "source_title": "How fast is the DGX Spark, really? Prefill vs. decode, and the 273 GB/s wall",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "The same Llama 3.1 70B decodes at 4.423 tokens per second in q4_K_M on Ollama (firmware 580.95.05, Ollama v0.12.6), against 2.7 tps in FP8 on SGLang: harder quantization reads fewer bytes per token.",
+      "source_url": "https://ollama.com/blog/nvidia-spark-performance",
+      "source_title": "NVIDIA DGX Spark performance | Ollama Blog",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "GPT-OSS-120B, a mixture-of-experts model in MXFP4, decodes at 41.14 tokens per second on Ollama on the same DGX Spark, faster than the dense 70B despite being the larger model, because decode reads only the active experts.",
+      "source_url": "https://ollama.com/blog/nvidia-spark-performance",
+      "source_title": "NVIDIA DGX Spark performance | Ollama Blog",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "NVIDIA's own inference table (ISL 2048, OSL 128, batch size 1) records GPT-OSS-120B in MXFP4 on llama.cpp at 1725.47 tokens/sec prompt processing and 55.37 tokens/sec token generation on one DGX Spark.",
+      "source_url": "https://developer.nvidia.com/blog/how-nvidia-dgx-sparks-performance-enables-intensive-ai-tasks/",
+      "source_title": "How NVIDIA DGX Spark's Performance Enables Intensive AI Tasks",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "Prefill is the Spark's strength: LMSYS measured GPT-OSS 20B (MXFP4) at 2,053 tps prefill on the Spark against 10,108 tps on an RTX PRO 6000 Blackwell, and the gap, roughly 4x, is the bandwidth limit showing up only where the workload is not already compute bound.",
+      "source_url": "https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/",
+      "source_title": "NVIDIA DGX Spark In-Depth Review: A New Standard for Local AI Inference",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-08-30"
+    },
+    {
+      "claim": "Exxact's engine comparison on the DGX Spark found a dense 70B drops to about 6 tok/s while a 120B-class MoE runs about 20 to 26 tok/s, concluding the box is bandwidth-bound and total size matters less than active parameter size.",
+      "source_url": "https://www.exxactcorp.com/blog/deep-learning/comparing-inference-engines-on-dgx-spark",
+      "source_title": "Comparing Ollama, vLLM, DS4 on NVIDIA DGX Spark | Exxact Blog",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-08-30"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "DGX Spark memory bandwidth",
+      "value": "273 GB/s",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "DGX Spark unified system memory",
+      "value": "128 GB LPDDR5x",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    },
+    {
+      "label": "Llama 3.1 70B (FP8) on SGLang, prefill / decode",
+      "value": "803 tps prefill / 2.7 tps decode",
+      "source_url": "https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/"
+    },
+    {
+      "label": "Llama 3.1 70B (q4_K_M) on Ollama, decode",
+      "value": "4.423 tokens per second",
+      "source_url": "https://ollama.com/blog/nvidia-spark-performance"
+    },
+    {
+      "label": "GPT-OSS-120B (MXFP4) on Ollama, decode",
+      "value": "41.14 tokens per second",
+      "source_url": "https://ollama.com/blog/nvidia-spark-performance"
+    },
+    {
+      "label": "GPT-OSS-120B (MXFP4) on llama.cpp, token generation (NVIDIA, ISL 2048 / OSL 128, BS=1)",
+      "value": "55.37 tokens/sec",
+      "source_url": "https://developer.nvidia.com/blog/how-nvidia-dgx-sparks-performance-enables-intensive-ai-tasks/"
+    },
+    {
+      "label": "Single-stream decode ceiling, 70B in FP8 (about 70 GB of weights)",
+      "value": "273 / 70 = 3.9 tok/s",
+      "source_url": "https://spark.enverge.ai/blog/dgx-spark-prefill-vs-decode"
+    },
+    {
+      "label": "DGX Spark AI compute at FP4 precision (with sparsity)",
+      "value": "1 PFLOP",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A library with an enormous reading room and one narrow door",
+      "mapping": "The 128 GB is how many books fit in the room (what loads); the 273 GB/s is the width of the door (how fast volumes move); writing each token means carrying the whole active collection through the door once, so a dense 70B crawls while an MoE that only carries a few shelves per token walks fast",
+      "limit": "Breaks for batched serving and prefill: many readers share one carry and the door stops being the constraint, which is why RAG and multi-user serving feel fine on the same box"
+    },
+    {
+      "vehicle": "A pickup truck's payload bed versus its top highway speed",
+      "mapping": "Capacity (128 GB) is what the bed can hold, bandwidth (273 GB/s) is how fast the truck can move with that load; a 70B fits in the bed but the truck cannot cruise at chat speed with it",
+      "limit": "Breaks because quantization actually shrinks the load itself, which no truck analogy covers: Q4 makes the same model lighter per token, not just easier to carry"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "128 GB of unified memory means any model that fits will run well.",
+      "reality": "Capacity decides what loads; bandwidth decides how fast it talks. A dense 70B that fits perfectly still decodes at 2.7 tps (claim 1)."
+    },
+    {
+      "myth": "A 120B model must be slower than a 70B on the same box.",
+      "reality": "GPT-OSS-120B (MoE, MXFP4) writes at 41.14 to 55.37 tok/s, ten to fifteen times the dense 70B, because decode reads only the active parameters per token (claims 7 and 8)."
+    },
+    {
+      "myth": "2.7 tok/s on a 70B means the Spark is misconfigured or needs a settings fix.",
+      "reality": "It is the arithmetic ceiling of 273 GB/s divided by about 70 GB of FP8 weights, reproduced across SGLang benchmarks and owner forum reports; configuration cannot beat the division (claim 5)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "tokens per second (tok/s)",
+      "definition": "How many chunks of text the model reads or writes per second; below roughly 10 tok/s a chat feels like watching someone type."
+    },
+    {
+      "term": "unified memory",
+      "definition": "One pool of memory the CPU and GPU share, so huge models load without copying into a separate, smaller VRAM."
+    },
+    {
+      "term": "memory bandwidth",
+      "definition": "How many gigabytes per second the chip can move between memory and compute; on the Spark it is 273 GB/s."
+    },
+    {
+      "term": "quantization",
+      "definition": "Storing each weight in fewer bytes (FP8 is 1 byte, Q4 about half a byte) so each token read moves fewer bytes, trading a little quality for speed."
+    },
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model split into many expert subnetworks where only a few activate per token, so a 120B MoE may read only a few billion parameters' worth of weights per token."
+    },
+    {
+      "term": "prefill versus decode",
+      "definition": "Prefill reads your whole prompt at once (compute-bound, fast on the Spark); decode writes the answer one token at a time (bandwidth-bound, the Spark's weak spot)."
+    },
+    {
+      "term": "speculative decoding",
+      "definition": "A small draft model proposes several tokens that the big model verifies in one read, so accepted tokens cost almost no bandwidth."
+    }
+  ],
+  "unverified": [
+    "The exact context length and batch settings behind LMSYS's 2.7 tps decode figure for Llama 3.1 70B (FP8) are not stated in the passages read; the review lists models and backends but not per-run context.",
+    "Owner reports on the NVIDIA developer forums of about 3 tok/s on dense 70B FP8 models are community posts; they corroborate but are not independent measurements.",
+    "Our own DGX Spark has not re-run the 70B FP8 benchmark this week; a first-party measurement would replace the cited figures.",
+    "Enverge's prefill claim of about 4x a Mac Studio M3 Ultra comes from a companion post not fetched this run."
+  ],
+  "suggested_outline": "LMSYS ran Llama 3.1 70B (FP8) on a DGX Spark: 803 tps reading your prompt, 2.7 tps writing the answer. Same box, same model, two speeds.\nThe 128 GB decides what loads; the 273 GB/s decides how fast it talks. Every written token re-reads the weights, and 273 divided by about 70 GB of FP8 weights is a ceiling near 3.9 tok/s.\nWhat a token actually reads is the active parameters, not the total: the same 70B at Q4 writes at 4.4 tok/s, GPT-OSS-120B (an MoE) writes at 41 to 55. On this box you shop by active bytes per token, not parameter count.",
+  "notes": "Cross-source consistency: 2.7 tps (LMSYS, SGLang FP8), 4.423 tok/s (Ollama, q4_K_M) and about 6 tok/s (Exxact, dense 70B, engine unspecified) are different quantization and runtime configurations of the same model class, not disagreements; the video should name the config when it names a number. The Ollama blog calls the GB10's unified memory '120GB of VRAM', which is loose wording for the shared LPDDR5x pool; cite the NVIDIA docs for the memory facts instead. NVIDIA's developer-blog table is batch-1 generation, matching the single-user scenario of the video.",
+  "viewer_situation": "You just unboxed a DGX Spark (or you are about to order one) and the first thing you want to run is the biggest model the 128 GB can hold, expecting cloud-chat speed.",
+  "has_process": false,
+  "objection": "Sure, FP8 on SGLang is slow, but Ollama already gets 4.4 tok/s on the same 70B and NVIDIA's table shows 55 on GPT-OSS-120B, so is the 'wall' really a hardware limit or just a bad model choice?"
+}
