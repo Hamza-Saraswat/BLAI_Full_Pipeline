@@ -83,11 +83,13 @@ def main() -> int:
         else:
             raise
 
-    import torchaudio
+    # soundfile, not torchaudio.save: torchaudio 2.11+ delegates save to the separate
+    # torchcodec package and ImportErrors without it (hit live on the Spark, 2026-08-29).
+    import soundfile as sf
 
     out = pathlib.Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    torchaudio.save(str(out), wav.cpu(), model.sr)
+    sf.write(str(out), wav.squeeze(0).cpu().numpy(), model.sr)
     print(json.dumps({"duration_s": round(wav.shape[-1] / model.sr, 3), "device": dev,
                       "cloned": bool(ref), "sample_rate": model.sr}))
     return 0
