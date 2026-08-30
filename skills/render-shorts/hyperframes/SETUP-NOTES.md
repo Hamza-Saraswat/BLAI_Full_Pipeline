@@ -75,7 +75,13 @@ npx -y skills@1.5.14 add remotion-dev/skills    --agent claude-code --skill '*' 
 
 ## Gotchas hit / to know
 
-- **No real gotchas -- everything worked first try.** Lint passed clean, render succeeded, symlink survived.
+- **No real gotchas on macOS -- everything worked first try.** Lint passed clean, render succeeded, symlink survived.
+- **Linux ARM64 (DGX Spark) render host:** `render` fails with "Chrome Headless Shell is not available /
+  Chrome not found" and even tries `apt-get install chromium-browser`, even when `doctor` reports Chrome OK.
+  Fix: put the browser path IN the render command --
+  `HYPERFRAMES_BROWSER_PATH=$HOME/.cache/ms-playwright/chromium-1234/chrome-linux/chrome ./node_modules/.bin/hyperframes render ...`
+  (the var set in an earlier shell is not reliably inherited by the render process; `lint`/`validate`/`inspect`
+  are unaffected). Verified 2026-08-30 on the Spark (6.17.0-1021-nvidia, aarch64), playwright chromium 151.
 - `init` prints a deprecation warning for transitive `node-domexception` -- harmless.
 - `init` scaffolds its own `AGENTS.md`/`CLAUDE.md` **inside** `skills/render-shorts/hyperframes/` (project-local
   agent guidance; distinct from the repo-root AGENTS.md).
