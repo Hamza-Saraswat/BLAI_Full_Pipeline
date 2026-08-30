@@ -24,9 +24,9 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-08-30-radar]]
 - Ideas: [[stages/02-ideas/output/2026-08-30-ideas]]
-- Research: (filled by stage 03)
-- Script: (filled by stage 04)
-- Package: (filled by stage 05)
+- Research: [[stages/03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief]]
+- Script: [[stages/04-script/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-script]]
+- Package: [[stages/05-package/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
