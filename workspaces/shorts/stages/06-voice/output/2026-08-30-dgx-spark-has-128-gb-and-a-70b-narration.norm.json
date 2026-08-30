@@ -1,0 +1,61 @@
+{
+  "full": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one. You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game. Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types. Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling. Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks. So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead. What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably. The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks. Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts.",
+  "words": 373,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one.",
+      "words": 26,
+      "changed": false
+    },
+    {
+      "id": "s2",
+      "text": "You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game.",
+      "words": 40,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types.",
+      "words": 31,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling.",
+      "words": 43,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks.",
+      "words": 43,
+      "changed": false
+    },
+    {
+      "id": "s6",
+      "text": "So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead.",
+      "words": 43,
+      "changed": false
+    },
+    {
+      "id": "s7",
+      "text": "What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably.",
+      "words": 66,
+      "changed": false
+    },
+    {
+      "id": "s8",
+      "text": "The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks.",
+      "words": 48,
+      "changed": false
+    },
+    {
+      "id": "s9",
+      "text": "Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts.",
+      "words": 33,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

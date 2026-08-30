@@ -83,6 +83,10 @@ MODEL_LIMITS = {
     "eleven_turbo_v2_5": 40000,
     "eleven_flash_v2": 30000,
     "eleven_turbo_v2": 30000,
+    # Chatterbox truncates a long single-pass generation (observed: a 2147-char
+    # chunk came back as exactly 40.0 s of audio on the Spark, 2026-08-30). Keep
+    # each call near-25 s of speech so short-format runs chunk instead of clipping.
+    "chatterbox": 600,
 }
 CREDITS_PER_CHAR = {"eleven_flash_v2_5": 0.5, "eleven_turbo_v2_5": 0.5, "eleven_flash_v2": 0.5, "eleven_turbo_v2": 0.5}
 USD_PER_1K_CHARS = {"eleven_flash_v2_5": 0.05, "eleven_turbo_v2_5": 0.05, "eleven_flash_v2": 0.05, "eleven_turbo_v2": 0.05}
@@ -648,7 +652,15 @@ def main() -> int:
     original = read_input_text(args)
     aliases = load_aliases()
     text, applied = apply_aliases(original, aliases)
-    limit = MODEL_LIMITS.get(model, MODEL_LIMITS["eleven_v3"])
+    if args.dry_run:
+        engine, why = (args.engine if args.engine != "auto" else "none"), "dry run: nothing is synthesized"
+    else:
+        engine, why = choose_engine(args.engine, kk, api_key, voice_id, args.cbx_venv)
+    log("engine: %s (%s)" % (engine, why))
+    # The chunk limit is engine-aware: MODEL_LIMITS carries an entry per local engine
+    # whose single-pass cap is tighter than the ElevenLabs model id's (chatterbox
+    # truncates long generations; kokoro and elevenlabs keep the model-id limit).
+    limit = MODEL_LIMITS.get(engine, MODEL_LIMITS.get(model, MODEL_LIMITS["eleven_v3"]))
     max_chars = min(args.max_chars, limit)
     paragraphs = split_paragraphs(text)
     if not paragraphs:
@@ -658,16 +670,11 @@ def main() -> int:
         if len(whole) <= limit:
             chunks = [whole]
         else:
-            log("short narration is %d chars, above the %s limit of %d; chunking anyway" % (len(whole), model, limit))
+            log("short narration is %d chars, above the %s limit of %d; chunking anyway" % (len(whole), engine if engine in MODEL_LIMITS else model, limit))
             chunks = chunk_text(paragraphs, max_chars)
     else:
         chunks = chunk_text(paragraphs, max_chars)
     chars_sent = sum(len(c) for c in chunks)
-    if args.dry_run:
-        engine, why = (args.engine if args.engine != "auto" else "none"), "dry run: nothing is synthesized"
-    else:
-        engine, why = choose_engine(args.engine, kk, api_key, voice_id, args.cbx_venv)
-    log("engine: %s (%s)" % (engine, why))
     local = engine in ("kokoro", "chatterbox")
     credits = 0.0 if local else chars_sent * CREDITS_PER_CHAR.get(model, 1.0)
     usd = 0.0 if local else chars_sent / 1000.0 * USD_PER_1K_CHARS.get(model, 0.10)

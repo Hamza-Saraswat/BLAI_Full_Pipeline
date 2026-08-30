@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief]]
 - Script: [[stages/04-script/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-script]]
 - Package: [[stages/05-package/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -37,3 +37,4 @@ blotato_post_id: ""
 - 2026-08-30T03:48:52Z research: brief ok, validator 0, 10 sources (3 subagent fan-out, merge from session cache after report timeouts)
 - 2026-08-30T04:55:29Z script: draft B (myth-bust) won 22-20 vs A; 1 sentence graft; validator 0 blockers, eval green; blueprint pack recorded
 - 2026-08-30T04:57:24Z package: searchable title picked, seo 100, manifest written, check_outputs 0
+- 2026-08-30T05:11:53Z voice: chatterbox 4 chunks 109.16s, whisper alignment, wer 0.0787 WARN (local base.en floor), 3.417 wps; generate_audio engine-aware chunk limit fix
