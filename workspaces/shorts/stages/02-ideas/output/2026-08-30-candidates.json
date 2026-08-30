@@ -1,0 +1,270 @@
+[
+  {
+    "title": "DGX Spark has 128 GB and a 70B still crawls at 2.7 tokens/s",
+    "keyword": "dgx spark 70b",
+    "lane": "explainer",
+    "band": "smooth-explainer",
+    "angle": "Everyone reads 128 GB as 'runs anything'; the measurement says memory bandwidth and quantization decide Spark speed, not capacity.",
+    "radar": [
+      "NVIDIA DGX Spark 70B LLM Performance Explained",
+      "NVIDIA DGX Spark performance \u00b7 Ollama Blog"
+    ],
+    "sources": 2,
+    "value": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "autocomplete": {
+      "depth_score": 9
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Perplexity's Portable Computer runs its whole agent stack on a DGX Spark",
+    "keyword": "perplexity portable computer",
+    "lane": "news-react",
+    "band": "classic",
+    "angle": "A flagship cloud agent just went local-first: harness, orchestrator and post-trained models all run on one desktop box.",
+    "radar": [
+      "Today we're launching Portable Computer on @NVIDIA ...",
+      "Portable Computer: Local-First AI"
+    ],
+    "sources": 2,
+    "value": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "autocomplete": {
+      "depth_score": 1
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "llama.cpp b10688: update tonight if you're on Apple Silicon",
+    "keyword": "llama.cpp update",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "One update command picks up Metal fa-vec tunings for the M2; re-time your usual model before and after.",
+    "radar": [
+      "llama.cpp b10688"
+    ],
+    "sources": 1,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 8
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "DGX Spark firmware stuck since February: how to check yours",
+    "keyword": "dgx spark firmware update",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "An owner's SoC capsule staged but never applied; one version check tells you if yours is stuck too.",
+    "radar": [
+      "DGX Spark FE: SoC capsule shows ESRT last_attempt ...",
+      "DGX Spark Release Notes"
+    ],
+    "sources": 2,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 3
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "NVIDIA Sync: drive your DGX Spark from a laptop",
+    "keyword": "nvidia sync",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "Install Sync on the laptop, add the Spark, launch apps on it -- the official answer to the headless box.",
+    "radar": [
+      "NVIDIA Sync -- DGX Spark User Guide"
+    ],
+    "sources": 1,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 188
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Qwen 3.8 Flash Next is already on the DGX Spark forum",
+    "keyword": "qwen 3.8 flash next",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "GB10 owners are posting Qwen 3.8 Flash Next projects; the number nobody has posted yet is tokens/s.",
+    "radar": [
+      "Qwen 3.8 Flash Next - DGX Spark / GB10 Projects"
+    ],
+    "sources": 1,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 3
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Open weights is not open source: what the GLM and DeepSeek licenses actually say",
+    "keyword": "open weights vs open source",
+    "lane": "comparison",
+    "band": "smooth-explainer",
+    "angle": "Two labels everyone treats as one; the licenses say different things and the difference decides what you may build.",
+    "radar": [
+      "Open weights vs open source: what licenses actually say"
+    ],
+    "sources": 1,
+    "value": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "autocomplete": {
+      "depth_score": 7
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "DGX Spark remote access: inference from anywhere",
+    "keyword": "dgx spark remote access",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "Pangolin's writeup turns the desk box into a home inference server you can reach away from home.",
+    "radar": [
+      "NVIDIA DGX Spark Remote Access: Run Inference From ..."
+    ],
+    "sources": 1,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 10
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Run Claude Code on a local model: the Unsloth guide",
+    "keyword": "run claude code locally",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "Two guides this week walk Claude Code onto llama.cpp and local GGUFs; the setup is shorter than the myth.",
+    "radar": [
+      "How to Run Local LLMs with Claude Code",
+      "How to Run Claude Code Locally: Comprehensive Guide"
+    ],
+    "sources": 2,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 7
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Moe-Direct: MoE models bigger than your RAM on an RTX 5080",
+    "keyword": "moe-direct",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "A Show HN streams MoE weights from disk so a consumer desktop runs models far larger than its RAM.",
+    "radar": [
+      "Show HN: Moe-Direct - MoE Models far larger than your RAM, on a consumer desktop"
+    ],
+    "sources": 1,
+    "value": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "autocomplete": {
+      "depth_score": 16
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "vLLM decode context parallelism: long context without the crawl",
+    "keyword": "vllm context parallelism",
+    "lane": "explainer",
+    "band": "smooth-explainer",
+    "angle": "vLLM's new blog splits the decode phase across GPUs; the mechanism behind long-context speedups in one diagram.",
+    "radar": [
+      "Efficient Decode Context Parallelism with vLLM for Long Context Workloads"
+    ],
+    "sources": 1,
+    "value": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "autocomplete": {
+      "depth_score": 0
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  },
+  {
+    "title": "Local LLM Hub: your Obsidian vault talks to your local models",
+    "keyword": "obsidian local llm",
+    "lane": "how-to",
+    "band": "classic",
+    "angle": "A community plugin pipes Obsidian notes into local models; your second brain never leaves the machine.",
+    "radar": [
+      "Local LLM Hub - Obsidian Plugin"
+    ],
+    "sources": 1,
+    "value": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 6
+    },
+    "named_product": true,
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null
+  }
+]
