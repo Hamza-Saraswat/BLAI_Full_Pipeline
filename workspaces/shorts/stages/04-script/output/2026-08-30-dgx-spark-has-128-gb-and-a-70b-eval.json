@@ -1,0 +1,551 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-08-30T04:54:42+00:00",
+  "slug": "winner",
+  "inputs": {
+    "storyboard_path": "output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-storyboard.json",
+    "research_path": "../03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief.json",
+    "project_record": null,
+    "ledger_path": "output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "benchmark": 5,
+      "primary": 2,
+      "community": 2,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.3,
+    "key_numbers_total": 8,
+    "entities_total": 16,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "enverge.ai",
+      "exxactcorp.com",
+      "kipp.ly",
+      "lmsys.org",
+      "nvidia.com",
+      "ollama.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "DGX Spark memory bandwidth",
+          "value": "273 GB/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two hundred seventy-three",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "DGX Spark unified system memory",
+          "value": "128 GB LPDDR5x",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "128",
+          "scene_ids": [
+            "s2",
+            "s8"
+          ]
+        },
+        {
+          "label": "Llama 3.1 70B (FP8) on SGLang, prefill / decode",
+          "value": "803 tps prefill / 2.7 tps decode",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Llama 3.1 70B (q4_K_M) on Ollama, decode",
+          "value": "4.423 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPT-OSS-120B (MXFP4) on Ollama, decode",
+          "value": "41.14 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPT-OSS-120B (MXFP4) on llama.cpp, token generation (NVIDIA, ISL 2048 / OSL 128, BS=1)",
+          "value": "55.37 tokens/sec",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Single-stream decode ceiling, 70B in FP8 (about 70 GB of weights)",
+          "value": "273 / 70 = 3.9 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "273",
+          "scene_ids": [
+            "s6"
+          ]
+        },
+        {
+          "label": "DGX Spark AI compute at FP4 precision (with sparsity)",
+          "value": "1 PFLOP",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 16,
+      "found_count": 3,
+      "score": 0.188,
+      "found": [
+        "Spark",
+        "GPT-OSS-120B",
+        "LMSYS"
+      ],
+      "missing": [
+        "DGX Spark",
+        "NVIDIA",
+        "GB LPDDR5x",
+        "MXFP4",
+        "Llama",
+        "ISL",
+        "OSL 128",
+        "FP8",
+        "Ollama",
+        "RTX PRO 6000",
+        "q4_K_M",
+        "Blackwell",
+        "GB of FP8"
+      ],
+      "top2": [
+        "Spark",
+        "DGX Spark"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 8,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 6,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB LPDDR5x",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MXFP4",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Llama",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT-OSS-120B",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "ISL",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OSL 128",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP8",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LMSYS",
+          "tier": 2,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "RTX PRO 6000",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "q4_K_M",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Blackwell",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of FP8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 36,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Spark"
+      ],
+      "hook_text": "Your Spark isn't slow. Doorway's narrow.",
+      "first_sentence": "Your Spark isn't slow, its doorway is narrow."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 9,
+      "specific_count": 7,
+      "ratio": 0.778,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "entity:Spark",
+            "entity:LMSYS"
+          ],
+          "narration": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 11.9,
+          "specific": true,
+          "hits": [
+            "num:128 GB LPDDR5x",
+            "entity:Spark"
+          ],
+          "narration": "You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": false,
+          "hits": [],
+          "narration": "Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s"
+          ],
+          "narration": "Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "num:273 / 70 = 3.9 tok/s"
+          ],
+          "narration": "So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 19.7,
+          "specific": true,
+          "hits": [
+            "entity:GPT-OSS-120B"
+          ],
+          "narration": "What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 14.3,
+          "specific": true,
+          "hits": [
+            "num:128 GB LPDDR5x"
+          ],
+          "narration": "The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks."
+        },
+        {
+          "id": "s9",
+          "role": "payoff_close",
+          "est_duration_s": 9.9,
+          "specific": false,
+          "hits": [],
+          "narration": "Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.9,
+      "words": 390,
+      "sentences": 36,
+      "est_speech_s": 134.5,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one. You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game. Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types. Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling. Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks. So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead. What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably. The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks. Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts.",
+    "on_screen": "Your Spark isn't slow. Doorway's narrow. | Your Spark isn't slow. Its doorway is narrow. | 2.7 tok/s, LMSYS | 128 GB unified memory | fits = fast? | reads: 803 tok/s | writes: 2.7 tok/s | every token re-reads the weights | doorway = 273 GB/s | ~70 GB/token, ceiling < 4 tok/s | 2.7 = ceiling + overhead | 4-bit: half the bytes | GPT-OSS-120B: bigger, chats | 128 GB decides what loads | 200B-class, on a desk | GB re-read per token | 273 | that = your tok/s"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-storyboard.json",
+        "scenes": 9,
+        "fk_grade": 5.9,
+        "words": 390,
+        "est_speech_s": 134.5,
+        "blockers": [],
+        "advisories": [
+          "s6: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s7: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s7: narration ~68 words (~23s on screen) \u2014 long single-render scene; split the beat",
+          "s8: narration ~52 words (~18s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "violations": [
+          "s6: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s7: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s7: narration ~68 words (~23s on screen) \u2014 long single-render scene; split the beat",
+          "s8: narration ~52 words (~18s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "warnings": [
+          "title 47 chars \u2014 mobile truncates ~40",
+          "FK grade 5.9 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually']",
+          "s4: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s7: 20s scene with ~4 visual beats in brief \u2014 need a change every ~3s",
+          "s8: 14s scene with ~3 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "../03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.188,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Spark",
+          "DGX Spark"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Spark"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 7,
+        "total": 9
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "output/script-ledger.json",
+        "comparisons": 1,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

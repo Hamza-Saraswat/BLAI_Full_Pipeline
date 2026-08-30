@@ -1,0 +1,147 @@
+{
+  "slug": "2026-08-30-dgx-spark-has-128-gb-and-a-70b",
+  "topic": "DGX Spark has 128 GB and a 70B still crawls at 2.7 tokens/s",
+  "title": "DGX Spark speed math: bandwidth beats gigabytes",
+  "description": "Everyone reads 128 GB as 'runs anything'. A measured 2.7 tokens per second says otherwise. You'll learn the one division that predicts chat speed on a DGX Spark, and why a bigger model can be the faster one. Subscribe for daily local-AI shorts. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DGXSpark",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "Your Spark isn't slow. Doorway's narrow.",
+  "hook_candidates": [
+    "You load the biggest model that fits. It answers like a fax machine.",
+    "Your Spark isn't slow. Its doorway is narrow.",
+    "This 120B model outruns a 70B on the same desk.",
+    "Eight hundred three tokens in. Two point seven out.",
+    "You unbox the Spark, feed it a 70B, and wait. And wait.",
+    "The model isn't dumb. The road it walks is narrow.",
+    "Seventy or one-twenty billion? One division decides.",
+    "LMSYS benchmarked a 70B on the Spark. The decode crawled.",
+    "The model that fits is not the model that talks.",
+    "You bought 128 gigabytes. Your chatbot still types two words a second."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 110,
+  "narration_full": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one. You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game. Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types. Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling. Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks. So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead. What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably. The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks. Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts.",
+  "analogy": {
+    "vehicle": "A kitchen where the chef chops instantly and every ingredient fits through one narrow door",
+    "mapping": "The chef is the compute; the door is the 273 GB/s memory bus; every written token carries one ingredient through",
+    "limit": "Breaks for reading your prompt, which arrives in one wide delivery"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your Spark isn't slow, its doorway is narrow. L M S Y S measured two point seven tokens a second from a seventy-billion-parameter model on one.",
+      "on_screen_text": "Your Spark isn't slow. Its doorway is narrow. | 2.7 tok/s, LMSYS",
+      "visual_brief": "Frame 1: the hook line sits over a DGX Spark on a desk, fully legible; on \"Your Spark isn't slow\" the line holds; on \"two point seven tokens a second\" a chat bubble stalls mid-word and 2.7 tok/s snaps in beneath the hook line within half a second.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You ordered the Spark for a hundred twenty-eight gigabytes of unified memory, or the order page is still open. The plan writes itself: load the biggest model that fits, expect chat speed. Everyone's math says fitting is the whole game.",
+      "on_screen_text": "128 GB unified memory | fits = fast?",
+      "visual_brief": "On \"a hundred twenty-eight gigabytes\" the spec sheet line 128 GB highlights; on \"load the biggest model that fits\" a giant model box drops cleanly into the memory pool; on \"the whole game\" a checkmark appears beside \"fits = fast?\" and wobbles.",
+      "est_duration_s": 11.9
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Same box, same model, two speeds. It reads your prompt at eight hundred three tokens a second. It writes the answer at two point seven, slower than your group chat types.",
+      "on_screen_text": "reads: 803 tok/s | writes: 2.7 tok/s",
+      "visual_brief": "On \"reads your prompt\" the prompt whooshes in as one fast bar labeled 803 tok/s; on \"writes the answer\" the reply types out letter by letter under 2.7 tok/s, stalling between words.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Why the gap. Reading is one wide pass of math, and the Spark's compute eats it. Writing is one token at a time, and each token re-reads the model's weights from memory. The compute barely works during decode. The memory does the hauling.",
+      "on_screen_text": "every token re-reads the weights",
+      "visual_brief": "On \"one wide pass\" the whole prompt lights up as a single block flowing into the chip; on \"each token re-reads\" a loop arrow cycles from memory to chip once per written word, the weight stack pulsing each cycle; on \"the memory does the hauling\" the arrow thickens while the compute block idles.",
+      "est_duration_s": 12.8
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Picture a kitchen where the chef chops instantly and every ingredient fits through one narrow door. The chef is the compute. The door is the memory bus: two hundred seventy-three gigabytes a second. For reading your prompt, one wide delivery, the picture breaks.",
+      "on_screen_text": "doorway = 273 GB/s",
+      "visual_brief": "On \"chef chops instantly\" the knife blurs through a pile; on \"one narrow door\" ingredients queue single file through a small door labeled 273 GB/s on \"two hundred seventy-three\"; on \"the picture breaks\" one wide prompt crate skips the door entirely.",
+      "est_duration_s": 12.8
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "So the speed ceiling is one division. Bandwidth divided by the gigabytes each token re-reads. A dense seventy-billion model in eight-bit re-reads about seventy gigabytes per token. The ceiling sits under four tokens a second. Two point seven is that ceiling with overhead.",
+      "on_screen_text": "~70 GB/token, ceiling < 4 tok/s | 2.7 = ceiling + overhead",
+      "visual_brief": "On \"one division\" a fraction assembles; on \"about seventy gigabytes\" the divisor fills with ~70 GB/token; on \"under four tokens a second\" the result line draws at < 4 tok/s; on \"Two point seven\" a measured bar lands just beneath that line.",
+      "est_duration_s": 12.8
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "What a token re-reads is the active weights, the slice the model actually uses. Quantize to four-bit and each token carries half the bytes. You give up a little accuracy, and casual chat never notices. Or a mixture of experts, a model that wakes only a few specialists per word. G P T O S S one twenty B is bigger on paper and chats comfortably.",
+      "on_screen_text": "4-bit: half the bytes | GPT-OSS-120B: bigger, chats",
+      "visual_brief": "On \"carries half the bytes\" the parcel moving through the door shrinks to half size; on \"wakes only a few specialists\" a grid of expert cells stays dark while three light up per word; on \"GPT-OSS one twenty B\" its chat bubble types out smoothly.",
+      "est_duration_s": 19.7
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The spec sheet did not lie. It printed the doorway's width in smaller type. A model that does not fit does not run. And those hundred twenty-eight gigabytes are why a two-hundred-billion-parameter model loads on a desk at all. Capacity picks what loads. Bandwidth picks how it talks.",
+      "on_screen_text": "128 GB decides what loads | 200B-class, on a desk",
+      "visual_brief": "On \"does not fit\" an oversized model box bounces off the Spark outline; on \"loads on a desk\" the 200B-class box settles inside the 128 GB pool; on \"Bandwidth picks\" a speed gauge hand rises beside the memory pool.",
+      "est_duration_s": 14.3
+    },
+    {
+      "id": "s9",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Before you download a model for this box, find the gigabytes it re-reads per token. Divide two hundred seventy-three by it. That one number tells you the chat speed before the download starts.",
+      "on_screen_text": "GB re-read per token | 273 | that = your tok/s",
+      "visual_brief": "On \"find the gigabytes\" the active-bytes line on a model card highlights; on \"Divide two hundred seventy-three\" the mini formula fills with 273 over that number; on \"chat speed\" the result lands in the green; the doorway line from frame 1 settles back with the wordmark.",
+      "est_duration_s": 9.9
+    }
+  ],
+  "notes_for_review": "Working values for title/description/hashtags; stage 05 overwrites. Draft B (myth-bust, wrong-diagnosis hook). Writer flags: scene 6 derives 'about seventy gigabytes' and 'under four tokens a second' from claim 5 without quoting the 3.9 row verbatim; scene 8's two-hundred-billion is claim 3 (NVIDIA advertising), not a key-number row. hook_text trimmed to 6 words for the schema.",
+  "tags": [
+    "dgx spark",
+    "dgx spark 70b",
+    "nvidia dgx spark",
+    "dgx spark llm",
+    "llama 70b local",
+    "memory bandwidth",
+    "tokens per second",
+    "run llm locally",
+    "local llm",
+    "ollama dgx spark",
+    "gpt oss 120b",
+    "llm quantization",
+    "unified memory",
+    "local ai",
+    "home ai server"
+  ],
+  "hook_pattern": "wrong-diagnosis"
+}

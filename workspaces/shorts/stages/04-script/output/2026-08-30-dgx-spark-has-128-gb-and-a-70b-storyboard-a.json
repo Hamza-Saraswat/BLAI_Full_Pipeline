@@ -1,0 +1,147 @@
+{
+  "slug": "2026-08-30-dgx-spark-has-128-gb-and-a-70b",
+  "topic": "DGX Spark has 128 GB and a 70B still crawls at 2.7 tokens/s",
+  "title": "Why your DGX Spark chats slow: the 273 GB/s doorway",
+  "description": "Why does a 70B model crawl on a desktop box with 128 GB of memory? The answer is one division. You'll learn why memory bandwidth, not capacity, decides chat speed on an NVIDIA DGX Spark, and how to predict any model's speed before you download it. Subscribe for daily local-AI shorts. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DGXSpark",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "Feed it a 70B. 2.7 tok/s",
+  "hook_candidates": [
+    "You load the biggest model that fits. It answers like a fax machine.",
+    "Your Spark isn't slow. Its doorway is narrow.",
+    "This 120B model outruns a 70B on the same desk.",
+    "Eight hundred three tokens in. Two point seven out.",
+    "You unbox the Spark, feed it a 70B, and wait. And wait.",
+    "The model isn't dumb. The road it walks is narrow.",
+    "Seventy or one-twenty billion? One division decides.",
+    "LMSYS benchmarked a 70B on the Spark. The decode crawled.",
+    "The model that fits is not the model that talks.",
+    "You bought 128 gigabytes. Your chatbot still types two words a second."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "smooth-explainer",
+  "structure": "worked-example",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 110,
+  "narration_full": "You unbox the Spark, feed it a seventy B, and wait. And wait. L M S Y S timed the reply at two point seven tokens a second. The spec sheet leads with capacity: room for enormous models, up to two hundred billion parameters, says NVIDIA. It fits. It just takes its time. The quieter line is memory bandwidth: two hundred seventy-three gigabytes per second, the chip's carrying speed. Here is what changes when you hit enter. Reading your prompt is one big block of math, done in one pass. The Spark is quick at it. Writing the answer is the other job: one chunk of text at a time, each token re-reading the model's weights. Picture a chef who chops instantly, but every ingredient arrives through one narrow doorway. The chef is the compute. The doorway is that two hundred seventy-three gigabytes per second. Reading arrives in one wide pass, where the picture breaks. Writing walks every ingredient through, one per token. So do the division the spec sheet skips. A seventy B in F P eight, one byte per weight, is about seventy gigabytes of weights. Two hundred seventy-three divided by seventy lands just under four tokens a second. Two point seven is that ceiling with overhead, not a misconfiguration. Tokens per second is bandwidth divided by bytes read. That is the whole mechanism. The same seventy B, stored smaller. q four K M keeps each weight in about half a byte, half the traffic through the doorway. On Ollama the same model climbs past four tokens a second. You give up a little accuracy, and casual chat never notices. Keep the bytes. Wake less of the model. G P T O S S one twenty B holds a hundred twenty billion parameters. It wakes only a slice per token. The same Spark writes it at forty-one point one four tokens a second. Fewer bytes per token, and the doorway clears. So before your next download, run the division yourself. Find the bytes each token reads, and split two hundred seventy-three by that number. Under ten tokens a second, chat feels like watching someone type. On this box you shop by active bytes per token, not by parameter count.",
+  "analogy": {
+    "vehicle": "A chef who chops instantly, but every ingredient arrives through one narrow doorway",
+    "mapping": "The chef is the compute; the doorway is the 273 GB/s memory bus; each written token walks one ingredient through",
+    "limit": "Breaks for reading your prompt, which arrives in one wide pass"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You unbox the Spark, feed it a seventy B, and wait. And wait. L M S Y S timed the reply at two point seven tokens a second.",
+      "on_screen_text": "You unbox the Spark, feed it a 70B… | then 2.7 tok/s",
+      "visual_brief": "Frame 1: hook line fully legible, cursor blinking within half a second. On \"feed it a seventy B\" a model card lands beside the small box; on \"And wait\" the reply cursor creeps; on \"two point seven\" a counter freezes.",
+      "est_duration_s": 8.4
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The spec sheet leads with capacity: room for enormous models, up to two hundred billion parameters, says NVIDIA. It fits. It just takes its time. The quieter line is memory bandwidth: two hundred seventy-three gigabytes per second, the chip's carrying speed.",
+      "on_screen_text": "up to 200B parameters | 273 GB/s",
+      "visual_brief": "On \"spec sheet\" a product page scrolls; on \"two hundred billion parameters\" the capacity line highlights; on \"quieter line\" the highlight slides down to 273 GB/s.",
+      "est_duration_s": 12.2
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Here is what changes when you hit enter. Reading your prompt is one big block of math, done in one pass. The Spark is quick at it. Writing the answer is the other job: one chunk of text at a time, each token re-reading the model's weights.",
+      "on_screen_text": "Read: one wide pass | Write: one token at a time",
+      "visual_brief": "On \"Reading your prompt\" the prompt flies in as a single block; on \"Writing the answer\" letters appear one by one while a weight stack pulses once per token.",
+      "est_duration_s": 14.0
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Picture a chef who chops instantly, but every ingredient arrives through one narrow doorway. The chef is the compute. The doorway is that two hundred seventy-three gigabytes per second. Reading arrives in one wide pass, where the picture breaks. Writing walks every ingredient through, one per token.",
+      "on_screen_text": "one narrow doorway | 273 GB/s",
+      "visual_brief": "On \"chops instantly\" the knife blurs; on \"one narrow doorway\" ingredients squeeze through a tight door; on \"one wide pass\" a whole shelf slides through a wide opening; on \"one per token\" single items file through.",
+      "est_duration_s": 14.0
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "centered-stack",
+      "narration": "So do the division the spec sheet skips. A seventy B in F P eight, one byte per weight, is about seventy gigabytes of weights. Two hundred seventy-three divided by seventy lands just under four tokens a second.",
+      "on_screen_text": "273 ÷ 70 → under 4 tok/s",
+      "visual_brief": "On \"do the division\" the equation builds term by term; on \"one byte per weight\" each weight shrinks to a single block; on \"just under four\" the result settles below a line marked 4.",
+      "est_duration_s": 11.3
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Two point seven is that ceiling with overhead, not a misconfiguration. Tokens per second is bandwidth divided by bytes read. That is the whole mechanism.",
+      "on_screen_text": "2.7 = ceiling + overhead | tok/s = bandwidth ÷ bytes",
+      "visual_brief": "On \"Two point seven\" a measured bar stops just under the ceiling line; on \"bandwidth divided by bytes read\" the formula locks into place.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The same seventy B, stored smaller. q four K M keeps each weight in about half a byte, half the traffic through the doorway. On Ollama the same model climbs past four tokens a second. You give up a little accuracy, and casual chat never notices.",
+      "on_screen_text": "q4_K_M ≈ ½ byte per weight | 4+ tok/s",
+      "visual_brief": "On \"stored smaller\" the weight blocks shrink to half size; on \"half the traffic\" the doorway empties faster; on \"climbs past four\" the speed needle crosses the line marked 4.",
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Keep the bytes. Wake less of the model. G P T O S S one twenty B holds a hundred twenty billion parameters. It wakes only a slice per token. The same Spark writes it at forty-one point one four tokens a second. Fewer bytes per token, and the doorway clears.",
+      "on_screen_text": "GPT-OSS-120B | 41.14 tok/s",
+      "visual_brief": "On \"a hundred twenty billion parameters\" a grid of 120 tiles fills; on \"wakes only a slice\" a few tiles light per step; on \"forty-one point one four\" the counter sprints.",
+      "est_duration_s": 15.2
+    },
+    {
+      "id": "s9",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So before your next download, run the division yourself. Find the bytes each token reads, and split two hundred seventy-three by that number. Under ten tokens a second, chat feels like watching someone type. On this box you shop by active bytes per token, not by parameter count.",
+      "on_screen_text": "shop by active bytes per token",
+      "visual_brief": "On \"run the division yourself\" the formula returns as a two-line checklist; on \"shop by active bytes\" the desk from frame 1 returns and the wordmark settles.",
+      "est_duration_s": 14.3
+    }
+  ],
+  "notes_for_review": "Working values for title/description/hashtags; stage 05 overwrites. Draft A (worked-example, situation hook). Writer flags: 'climbs past four' and 'just under four' paraphrase brief numbers 4.423 and 3.9 to protect the 3-number cap; 128 GB is never spoken. hook_text trimmed to 7 words for the schema. On-screen text beats use | separators.",
+  "tags": [
+    "dgx spark",
+    "dgx spark 70b",
+    "nvidia dgx spark",
+    "dgx spark llm",
+    "llama 70b local",
+    "memory bandwidth",
+    "tokens per second",
+    "run llm locally",
+    "local llm",
+    "ollama dgx spark",
+    "gpt oss 120b",
+    "llm quantization",
+    "unified memory",
+    "local ai",
+    "home ai server"
+  ],
+  "hook_pattern": "situation"
+}

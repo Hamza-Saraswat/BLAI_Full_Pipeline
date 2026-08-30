@@ -2,14 +2,14 @@
 slug: 2026-08-30-dgx-spark-has-128-gb-and-a-70b
 workspace: shorts
 title: DGX Spark has 128 GB and a 70B still crawls at 2.7 tokens/s
-status: researched
+status: scripted
 pillar: explainer
-structure: ""
+structure: myth-bust
 format: smooth-explainer
-style_pack: ""
+style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-08-30
-updated: "2026-08-30T03:48:52Z"
+updated: "2026-08-30T04:55:29Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -35,3 +35,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-08-30T03:48:52Z research: brief ok, validator 0, 10 sources (3 subagent fan-out, merge from session cache after report timeouts)
+- 2026-08-30T04:55:29Z script: draft B (myth-bust) won 22-20 vs A; 1 sentence graft; validator 0 blockers, eval green; blueprint pack recorded

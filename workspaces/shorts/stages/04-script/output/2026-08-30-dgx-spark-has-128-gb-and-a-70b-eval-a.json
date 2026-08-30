@@ -1,0 +1,570 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-08-30T04:43:01+00:00",
+  "slug": "draft-a",
+  "inputs": {
+    "storyboard_path": "output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-storyboard-a.json",
+    "research_path": "../03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief.json",
+    "project_record": null,
+    "ledger_path": "output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "benchmark": 5,
+      "primary": 2,
+      "community": 2,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.3,
+    "key_numbers_total": 8,
+    "entities_total": 16,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "enverge.ai",
+      "exxactcorp.com",
+      "kipp.ly",
+      "lmsys.org",
+      "nvidia.com",
+      "ollama.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 4,
+      "distinct": 3,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "DGX Spark memory bandwidth",
+          "value": "273 GB/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two hundred seventy-three",
+          "scene_ids": [
+            "s2",
+            "s4"
+          ]
+        },
+        {
+          "label": "DGX Spark unified system memory",
+          "value": "128 GB LPDDR5x",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Llama 3.1 70B (FP8) on SGLang, prefill / decode",
+          "value": "803 tps prefill / 2.7 tps decode",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Llama 3.1 70B (q4_K_M) on Ollama, decode",
+          "value": "4.423 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPT-OSS-120B (MXFP4) on Ollama, decode",
+          "value": "41.14 tokens per second",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "41.14",
+          "scene_ids": [
+            "s8"
+          ]
+        },
+        {
+          "label": "GPT-OSS-120B (MXFP4) on llama.cpp, token generation (NVIDIA, ISL 2048 / OSL 128, BS=1)",
+          "value": "55.37 tokens/sec",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Single-stream decode ceiling, 70B in FP8 (about 70 GB of weights)",
+          "value": "273 / 70 = 3.9 tok/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Two hundred seventy-three",
+          "scene_ids": [
+            "s5",
+            "s7",
+            "s8"
+          ]
+        },
+        {
+          "label": "DGX Spark AI compute at FP4 precision (with sparsity)",
+          "value": "1 PFLOP",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one",
+          "scene_ids": [
+            "s3"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 16,
+      "found_count": 5,
+      "score": 0.312,
+      "found": [
+        "Spark",
+        "NVIDIA",
+        "GPT-OSS-120B",
+        "Ollama",
+        "q4_K_M"
+      ],
+      "missing": [
+        "DGX Spark",
+        "GB LPDDR5x",
+        "MXFP4",
+        "Llama",
+        "ISL",
+        "OSL 128",
+        "FP8",
+        "LMSYS",
+        "RTX PRO 6000",
+        "Blackwell",
+        "GB of FP8"
+      ],
+      "top2": [
+        "Spark",
+        "DGX Spark"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 8,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 6,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB LPDDR5x",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MXFP4",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Llama",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT-OSS-120B",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "ISL",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OSL 128",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP8",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 2,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "LMSYS",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RTX PRO 6000",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "q4_K_M",
+          "tier": 2,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Blackwell",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of FP8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 36,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "entity:Spark"
+      ],
+      "hook_text": "Feed it a 70B. 2.7 tok/s",
+      "first_sentence": "You unbox the Spark, feed it a seventy B, and wait."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 9,
+      "specific_count": 7,
+      "ratio": 0.778,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 8.4,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "You unbox the Spark, feed it a seventy B, and wait. And wait. L M S Y S timed the reply at two point seven tokens a second."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 12.2,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s",
+            "entity:NVIDIA"
+          ],
+          "narration": "The spec sheet leads with capacity: room for enormous models, up to two hundred billion parameters, says NVIDIA. It fits. It just takes its time. The quieter line is memory bandwidth: two hundred seventy-three gigabytes per second, the chip's carrying speed."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 14.0,
+          "specific": true,
+          "hits": [
+            "num:1 PFLOP",
+            "entity:Spark"
+          ],
+          "narration": "Here is what changes when you hit enter. Reading your prompt is one big block of math, done in one pass. The Spark is quick at it. Writing the answer is the other job: one chunk of text at a time, each token re-reading the model's weights."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 14.0,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s"
+          ],
+          "narration": "Picture a chef who chops instantly, but every ingredient arrives through one narrow doorway. The chef is the compute. The doorway is that two hundred seventy-three gigabytes per second. Reading arrives in one wide pass, where the picture breaks. Writing walks every ingredient through, one per token."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 11.3,
+          "specific": true,
+          "hits": [
+            "num:273 / 70 = 3.9 tok/s"
+          ],
+          "narration": "So do the division the spec sheet skips. A seventy B in F P eight, one byte per weight, is about seventy gigabytes of weights. Two hundred seventy-three divided by seventy lands just under four tokens a second."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 7.5,
+          "specific": false,
+          "hits": [],
+          "narration": "Two point seven is that ceiling with overhead, not a misconfiguration. Tokens per second is bandwidth divided by bytes read. That is the whole mechanism."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 13.4,
+          "specific": true,
+          "hits": [
+            "num:273 / 70 = 3.9 tok/s",
+            "entity:Ollama",
+            "entity:q4_K_M"
+          ],
+          "narration": "The same seventy B, stored smaller. q four K M keeps each weight in about half a byte, half the traffic through the doorway. On Ollama the same model climbs past four tokens a second. You give up a little accuracy, and casual chat never notices."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 15.2,
+          "specific": true,
+          "hits": [
+            "num:41.14 tokens per second",
+            "num:273 / 70 = 3.9 tok/s",
+            "entity:Spark",
+            "entity:GPT-OSS-120B"
+          ],
+          "narration": "Keep the bytes. Wake less of the model. G P T O S S one twenty B holds a hundred twenty billion parameters. It wakes only a slice per token. The same Spark writes it at forty-one point one four tokens a second. Fewer bytes per token, and the doorway clears."
+        },
+        {
+          "id": "s9",
+          "role": "payoff_close",
+          "est_duration_s": 14.3,
+          "specific": false,
+          "hits": [],
+          "narration": "So before your next download, run the division yourself. Find the bytes each token reads, and split two hundred seventy-three by that number. Under ten tokens a second, chat feels like watching someone type. On this box you shop by active bytes per token, not by parameter count."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.7,
+      "words": 377,
+      "sentences": 36,
+      "est_speech_s": 130.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "You unbox the Spark, feed it a seventy B, and wait. And wait. L M S Y S timed the reply at two point seven tokens a second. The spec sheet leads with capacity: room for enormous models, up to two hundred billion parameters, says NVIDIA. It fits. It just takes its time. The quieter line is memory bandwidth: two hundred seventy-three gigabytes per second, the chip's carrying speed. Here is what changes when you hit enter. Reading your prompt is one big block of math, done in one pass. The Spark is quick at it. Writing the answer is the other job: one chunk of text at a time, each token re-reading the model's weights. Picture a chef who chops instantly, but every ingredient arrives through one narrow doorway. The chef is the compute. The doorway is that two hundred seventy-three gigabytes per second. Reading arrives in one wide pass, where the picture breaks. Writing walks every ingredient through, one per token. So do the division the spec sheet skips. A seventy B in F P eight, one byte per weight, is about seventy gigabytes of weights. Two hundred seventy-three divided by seventy lands just under four tokens a second. Two point seven is that ceiling with overhead, not a misconfiguration. Tokens per second is bandwidth divided by bytes read. That is the whole mechanism. The same seventy B, stored smaller. q four K M keeps each weight in about half a byte, half the traffic through the doorway. On Ollama the same model climbs past four tokens a second. You give up a little accuracy, and casual chat never notices. Keep the bytes. Wake less of the model. G P T O S S one twenty B holds a hundred twenty billion parameters. It wakes only a slice per token. The same Spark writes it at forty-one point one four tokens a second. Fewer bytes per token, and the doorway clears. So before your next download, run the division yourself. Find the bytes each token reads, and split two hundred seventy-three by that number. Under ten tokens a second, chat feels like watching someone type. On this box you shop by active bytes per token, not by parameter count.",
+    "on_screen": "Feed it a 70B. 2.7 tok/s | You unbox the Spark, feed it a 70B\u2026 | then 2.7 tok/s | up to 200B parameters | 273 GB/s | Read: one wide pass | Write: one token at a time | one narrow doorway | 273 GB/s | 273 \u00f7 70 \u2192 under 4 tok/s | 2.7 = ceiling + overhead | tok/s = bandwidth \u00f7 bytes | q4_K_M \u2248 \u00bd byte per weight | 4+ tok/s | GPT-OSS-120B | 41.14 tok/s | shop by active bytes per token"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-storyboard-a.json",
+        "scenes": 9,
+        "fk_grade": 5.7,
+        "words": 377,
+        "est_speech_s": 130.0,
+        "blockers": [],
+        "advisories": [
+          "hook_text >7 words: 'Feed it a 70B. 2.7 tok/s'",
+          "s3: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "s4: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "s8: narration ~52 words (~18s on screen) \u2014 long single-render scene; split the beat",
+          "s9: narration ~49 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "ending 'resolution-or-recap': 3 sentences follow the payoff line (at most 2): cut to the payoff and stop: 'Find the bytes each token reads, and split two hundred seventy-three by that num\u2026'"
+        ],
+        "violations": [
+          "hook_text >7 words: 'Feed it a 70B. 2.7 tok/s'",
+          "s3: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "s4: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "s8: narration ~52 words (~18s on screen) \u2014 long single-render scene; split the beat",
+          "s9: narration ~49 words (~17s on screen) \u2014 long single-render scene; split the beat",
+          "ending 'resolution-or-recap': 3 sentences follow the payoff line (at most 2): cut to the payoff and stop: 'Find the bytes each token reads, and split two hundred seventy-three by that num\u2026'"
+        ],
+        "warnings": [
+          "title 51 chars \u2014 mobile truncates ~40",
+          "FK grade 5.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s7: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s8: 15s scene with ~4 visual beats in brief \u2014 need a change every ~3s",
+          "s9: 14s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "../03-research/output/2026-08-30-dgx-spark-has-128-gb-and-a-70b-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.312,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Spark",
+          "DGX Spark"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "entity:Spark"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 7,
+        "total": 9
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "output/script-ledger.json",
+        "comparisons": 1,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
