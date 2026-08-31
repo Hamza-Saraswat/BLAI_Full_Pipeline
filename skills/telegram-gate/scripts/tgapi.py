@@ -150,8 +150,13 @@ class Telegram:
             payload["reply_markup"] = keyboard
         return self.call("sendMessage", payload)
 
-    def send_video(self, path: pathlib.Path, caption: str, keyboard: dict | None = None) -> dict:
+    def send_video(self, path: pathlib.Path, caption: str, keyboard: dict | None = None,
+                   width: int = 0, height: int = 0) -> dict:
         payload = {"chat_id": self.chat_id, "caption": caption[:CAPTION_LIMIT], "parse_mode": "HTML", "supports_streaming": True}
+        # Without explicit dimensions Telegram guesses and can render a 9:16
+        # Short as a square-ish preview in the chat (seen on the first gate card).
+        if width and height:
+            payload.update({"width": int(width), "height": int(height)})
         if keyboard:
             payload["reply_markup"] = keyboard
         data = b"" if self.dry_run else path.read_bytes()

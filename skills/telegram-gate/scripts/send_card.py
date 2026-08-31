@@ -169,7 +169,16 @@ def main() -> int:
             tg.clear_keyboard(old.get("chat_id") or chat_id, old.get("message_id"))
 
     if attach:
-        result = tg.send_video(pathlib.Path(args.video), text, keyboard)
+        vw = vh = 0
+        try:
+            import subprocess
+            probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                                    "-show_entries", "stream=width,height", "-of", "csv=p=0",
+                                    args.video], capture_output=True, text=True, timeout=30)
+            vw, vh = (int(x) for x in probe.stdout.strip().split(",")[:2])
+        except Exception:
+            pass  # dimensions are a nicety; the send must not fail over them
+        result = tg.send_video(pathlib.Path(args.video), text, keyboard, width=vw, height=vh)
     else:
         result = tg.send_message(text, keyboard, preview=(args.kind in ("gate", "checklist")))
     message_id = result.get("message_id") if isinstance(result, dict) else None
