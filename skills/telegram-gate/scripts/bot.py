@@ -9,7 +9,9 @@ Callbacks (rules/callbacks.md):
   reject:<slug>    hub status=rejected; the next text message becomes the hub's feedback
   rerender:<slug>  hub status=ready-to-build, feedback=re-render
   rescript:<slug>  hub status=rejected; after the feedback message, POST {"text": "rescript <slug>: <feedback>"}
-                   to ROUTINE_RESCRIPT_URL (Bearer ROUTINE_RESCRIPT_TOKEN); journal only when unset
+                   to ROUTINE_RESCRIPT_URL (Bearer ROUTINE_RESCRIPT_TOKEN); journal only when unset.
+                   Hermes deployment (2026-09): the URL stays unset; the 08:30 CT produce cron job
+                   rescans hubs at status rejected with feedback and re-runs stages 04-05 for them.
   retry:<slug>     hub status=ready-to-build, blocked_reason cleared
   swap:<date>:<n>  append "swap pick 2 for idea n" to workspaces/<ws>/stages/02-ideas/output/<date>-picks.md
 Every hub change runs tools/git-sync.sh "telegram: <slug> <action>" (skipped in --dry-run).

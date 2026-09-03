@@ -43,7 +43,7 @@ Open on the pair of facts that does not add up for new owners: the spec sheet's 
 5. **The single-stream decode ceiling on the Spark is simple arithmetic: max tokens/sec is memory bandwidth divided by bytes read per token, so a 70B model in FP8 (about 70 GB of weights) caps at 273 divided by 70, roughly 3.9 tok/s, with 2.7 to 3 tok/s in practice.**
    - Source: How fast is the DGX Spark, really? Prefill vs. decode, and the 273 GB/s wall, https://spark.enverge.ai/blog/dgx-spark-prefill-vs-decode
    - Tier: community | Confidence: medium | Accessed: 2026-08-30 | Via: web_extract
-   - Quote: "A 70B model in FP8 is about 70 GB of weights, so **273 ÷ 70 ≈ 3.9 tok/s** — a hard ceiling, ~2.7–3 in practice."
+   - Quote: "A 70B model in FP8 is about 70 GB of weights, so **273 ÷ 70 ≈ 3.9 tok/s** -- a hard ceiling, ~2.7–3 in practice."
 6. **The same Llama 3.1 70B decodes at 4.423 tokens per second in q4_K_M on Ollama (firmware 580.95.05, Ollama v0.12.6), against 2.7 tps in FP8 on SGLang: harder quantization reads fewer bytes per token.**
    - Source: NVIDIA DGX Spark performance | Ollama Blog, https://ollama.com/blog/nvidia-spark-performance
    - Tier: benchmark | Confidence: high | Accessed: 2026-08-30 | Via: web_extract

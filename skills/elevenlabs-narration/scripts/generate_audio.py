@@ -406,6 +406,11 @@ def cbx_synth(cbx_venv: str, text_file: pathlib.Path, out_wav: pathlib.Path, ref
     cmd = [str(cbx_python(cbx_venv)), str(runner), "--script-file", str(text_file), "--out", str(out_wav)]
     if ref:
         cmd += ["--ref", ref]
+    # Delivery params travel with the chosen voice (build/.env), not with the script.
+    for env_name, flag in (("BLAI_VOICE_EXAGGERATION", "--exaggeration"), ("BLAI_VOICE_CFG_WEIGHT", "--cfg-weight")):
+        val = os.environ.get(env_name, "").strip()
+        if val:
+            cmd += [flag, val]
     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     if proc.returncode != 0 or not out_wav.exists():
         raise SystemExit("chatterbox_tts.py exited %d: %s" % (proc.returncode, proc.stderr.strip()[-800:]))

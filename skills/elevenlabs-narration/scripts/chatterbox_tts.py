@@ -30,6 +30,8 @@ def main() -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--ref", default="", help="reference wav to clone; empty = stock voice")
     ap.add_argument("--device", default="auto", choices=["auto", "cuda", "mps", "cpu"])
+    ap.add_argument("--exaggeration", type=float, default=None, help="emotion intensity (model default 0.5)")
+    ap.add_argument("--cfg-weight", type=float, default=None, help="pacing/adherence (model default 0.5)")
     a = ap.parse_args()
 
     import os
@@ -71,6 +73,10 @@ def main() -> int:
     def synth(device: str):
         model = ChatterboxTTS.from_pretrained(device=device)
         kwargs = {"audio_prompt_path": ref} if ref else {}
+        if a.exaggeration is not None:
+            kwargs["exaggeration"] = a.exaggeration
+        if a.cfg_weight is not None:
+            kwargs["cfg_weight"] = a.cfg_weight
         return model, model.generate(text, **kwargs)
 
     try:

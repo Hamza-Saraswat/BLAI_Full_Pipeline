@@ -362,8 +362,8 @@ def run_pass(a, log: Log) -> int:
             poll_note(log, p, meta, a)
     buildable = {"ready-to-build"} | ({"blocked", "building"} if a.slug else set())
     built = None
-    for p, meta in rows:  # 3. build one note
-        if p in touched or meta.get("status") not in buildable:
+    for p, meta in rows:  # 3. build one note (skipped under --publish-only: Hermes cron owns the builds)
+        if a.publish_only or p in touched or meta.get("status") not in buildable:
             continue
         if not build_note(log, p, meta, a):
             rc = 1
@@ -381,6 +381,9 @@ def main(argv=None) -> int:
     ap.add_argument("--interval", type=int, default=300, help="seconds between passes without --once (default 300)")
     ap.add_argument("--dry-run", action="store_true", help="print the plan; run nothing, write nothing, no git")
     ap.add_argument("--slug", help="work on this slug only (rebuilds blocked or stale building notes)")
+    ap.add_argument("--publish-only", action="store_true",
+                    help="steps 1-2 only (publish approved, poll scheduled); never builds. The Hermes cron "
+                         "publish poller runs this every 15 minutes while agent sessions own stages 06-07")
     ap.add_argument("--workspace", choices=list(WORKSPACES), help="scan one workspace only")
     ap.add_argument("--fresh", action="store_true", help="ignore build-dir outputs of earlier attempts "
                     "(regenerate audio, capture again, post again)")
