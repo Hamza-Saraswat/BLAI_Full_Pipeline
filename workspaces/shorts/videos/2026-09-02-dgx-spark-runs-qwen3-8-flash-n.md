@@ -37,3 +37,5 @@ blotato_post_id: ""
 - 2026-09-03T02:00:39Z 03-research ok: 8 sources, 8 claims, validator exit 0; unattended decision: 2.6x cited over 1.9x (names model+framework)
 - 2026-09-03T02:43:36Z 04-script ok: drafts A(news-react-so-what) vs B(comparison-ladder), judge 22-21 A, graft of B bandwidth figures applied; validator 0 blockers, eval gates all pass (entity_spend 0.25 advisory: brief entity set carries vLLM/Qwen3.6/Qwen4 artifacts the script rightly omits, top2 present); sameness pass via explicit hook_pattern named-contradiction (classifier saw the digit); normalizer scenes_changed=2; ledger + silicon pack recorded
 - 2026-09-03T02:44:44Z 05-package ok: seo rubric 100/100, check_outputs exit 0, title searchable (dgx spark keyword first), 3 hashtags, 12 tags, slot hint left empty for the publisher's own 11:00/18:00 CT rule
+- 2026-09-03T07:18:49Z 06-voice ok 33.96s
+- 2026-09-03T07:19:02Z 06-voice ok 33.96s

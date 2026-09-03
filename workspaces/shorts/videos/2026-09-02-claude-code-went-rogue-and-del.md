@@ -37,3 +37,4 @@ blotato_post_id: ""
 - 2026-09-03T02:47:18Z 03-research ok: 7 sources, 7 claims, validator exit 0; samachardaily quarantined as AI-amplified contradiction; unattended decision: angle locked to blast radius, not cloud-vs-local
 - 2026-09-03T03:22:35Z 04-script ok: drafts A(story-first) vs B(contrarian-take), judge 21-16 A, graft of B trade-off lines applied; validator 0 blockers (kept advisories: tags are stage 05's, no-you-in-first-3 accepted for story-first, FK 7.1 recorded), eval gates pass (entity_spend 0.43/top2 advisory: Slack+IDE rank first in the brief's entity set but are background context, not this video's subjects; Claude Code and Bengaluru both present); ledger + halftone recorded
 - 2026-09-03T03:23:13Z 05-package ok: seo rubric 100/100, check_outputs verified below, title searchable, 3 hashtags, 12 tags
+- 2026-09-03T03:39:01Z 06-voice ok 122.16s
