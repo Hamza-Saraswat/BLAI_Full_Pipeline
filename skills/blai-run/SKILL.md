@@ -22,6 +22,11 @@ carried every stage; these rules exist so that never repeats.
   validator exit N". Page contents must never enter the orchestrator's context.
 - A quota or rate-limit error from the provider ends the session cleanly: hub status untouched,
   one line in the report. The next scheduled run picks the slug up again.
+- **Scene workers run ONE AT A TIME**, never in parallel: `delegate_task` for scene 1, wait,
+  then scene 2. The 2026-09-03 02:00 build launched nine at once and the coding plan answered
+  "Rate limit reached for requests" (per-minute cap) on top of the 5-hour usage cap. Sequential
+  workers also spread the credit burn so one window can hold one Short.
+- Stage 06 voice and stage 07 assembly are scripts; run them directly, never through a worker.
 - Start by reading exactly two files: `workspaces/shorts/CLAUDE.md` and the stage `CONTEXT.md`
   you are about to run. Do not `ls`, `grep` or `find` to orient: every path is named in them.
 - Never `read_file` a generated artifact to "check" it. Run the check the contract names

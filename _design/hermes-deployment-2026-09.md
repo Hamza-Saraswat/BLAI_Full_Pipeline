@@ -91,6 +91,18 @@ per slug (context reset per slug); blai-run gains the one-slug-per-session and
 research-inside-delegate rules. Decision for the user: raise the Z.ai tier, or run one Short
 a day on this one.
 
+02:00 CT one-shot build (2026-09-03): the fresh window was emptied again on ONE slug without a
+finished render (9 GLM sessions, +6.8M tokens; the free fallback carried 214K), and a second
+429 appeared: "Rate limit reached for requests" (per-minute cap) from nine scene workers in
+parallel. Credits are not linear in tokens: a build's many short agent calls burn the bucket
+faster than produce's long ones. Children launched from the parent's `terminal(background=true)`
+did NOT inherit `build/.env` (voice landed in the repo's `.local-builds/`, not `~/blai/builds`):
+the child launch now sources `build/.env` explicitly. Rules added to blai-run: scene workers one
+at a time; voice/assembly are scripts. Today's recovery: per-slug one-shots at 07:05 (window
+resets 07:00) and 12:05 CT; regular build paused; ideas/produce paused pending the tier decision.
+Structural fix proposed: a deterministic `scene_worker.py` (llm_call for code -> render -> lint
+-> at most 3 fix rounds) so scenes stop being full agent sessions.
+
 ## Still parked
 
 Tailscale SSH `check` mode (`tailscale set --ssh=false` from the LAN), `tailscale serve --bg
