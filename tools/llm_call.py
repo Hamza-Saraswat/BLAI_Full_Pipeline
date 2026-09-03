@@ -95,7 +95,8 @@ def main() -> int:
     ap.add_argument("--system-file", required=True)
     ap.add_argument("--user-file", required=True)
     ap.add_argument("--out", default="")
-    ap.add_argument("--temperature", type=float, default=0.7)
+    ap.add_argument("--temperature", type=float, default=None,
+                    help="omitted unless given: kimi-k3 rejects anything but 1 (HTTP 400, 2026-09-02)")
     ap.add_argument("--max-tokens", type=int, default=4000)
     ap.add_argument("--timeout", type=int, default=300)
     ap.add_argument("--base-url", default="", help="override the provider's base_url")
@@ -111,13 +112,14 @@ def main() -> int:
 
     body = {
         "model": a.model,
-        "temperature": a.temperature,
         "max_tokens": a.max_tokens,
         "messages": [
             {"role": "system", "content": pathlib.Path(a.system_file).read_text(encoding="utf-8")},
             {"role": "user", "content": pathlib.Path(a.user_file).read_text(encoding="utf-8")},
         ],
     }
+    if a.temperature is not None:
+        body["temperature"] = a.temperature
     headers = {"Content-Type": "application/json"}
     if api_key:
         headers["Authorization"] = "Bearer " + api_key
