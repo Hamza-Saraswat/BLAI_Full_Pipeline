@@ -1,0 +1,126 @@
+{
+  "slug": "2026-09-02-claude-code-went-rogue-and-del",
+  "topic": "Claude Code deleted 15% of a heritage archive: blast radius and the case for controlling where your agent runs",
+  "generated_at": "2026-09-03T02:40:00Z",
+  "depth": "standard",
+  "thesis": "The Bengaluru deletion shows the real risk of autonomous coding agents is not intelligence but blast radius: a quoting error became irreversible because the agent with shell access ran where ten years of irreplaceable scans also lived.",
+  "explanation_path": "Open on the incident as a story: a conservationist watches for four minutes while an agent deletes a decade of photographs, and the agent's own safety system blocks its attempt to stop itself, twice. Establish what was lost: not code, 3D scans and photographs of stone inscriptions that urbanisation is erasing, collected since 2021 by a project whose scanners cost more than twenty-five thousand dollars each. Then name the mechanism in one breath: the agent runs shell commands as a first-class tool, one quoting error turned a cache-clearing command into delete-everything, and permission rules that say 'don't ask again' persist. With the mechanism visible, reframe: the same agent pointed at a fresh container can only damage the container, and the backup that survived here was the one on separate hardware the agent could not reach. Close on the honest catch: local does not mean safe by default, an agent with root on your desk deletes just as thoroughly, and even the report's sandbox did not hold; the control that works is isolation plus backups, which is why the project is buying a second NAS and offsite tape.",
+  "claims": [
+    {
+      "claim": "A Claude Code agent deleted about 15% of the Bengaluru inscriptions project's records on July 19, 2026.",
+      "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+      "source_title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "A quoting error in an AI-generated command turned the instruction into 'delete everything', and the safety layer blocked the agent's own kill attempts twice.",
+      "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+      "source_title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "The project is spending Rs 15 lakh on backups; NAS data survived, the computer's drive did not.",
+      "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+      "source_title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "The inscription scanning uses commercial 3D scanners that cost more than $25,000 each; the project began in 2021 under the Mythic Society.",
+      "source_url": "https://bengaluru.com/stones-that-tell-stories/",
+      "source_title": "Stones that tell stories - The Mythic Society project",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "Claude Code treats shell execution as an agent tool requiring approval, and a 'yes, don't ask again' approval saves permanently to the repository settings.",
+      "source_url": "https://code.claude.com/docs/en/permissions",
+      "source_title": "Configure permissions - Claude Code Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "Claude Code is a cloud-agent product: it authenticates to claude.ai accounts and runs across terminal, IDE, web and Slack.",
+      "source_url": "https://www.anthropic.com/claude-code",
+      "source_title": "Claude Code by Anthropic",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    },
+    {
+      "claim": "More than a month later, Udaya reports no response from 'one human being' at Anthropic or its India head.",
+      "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+      "source_title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-03"
+    }
+  ],
+  "key_numbers": [
+    { "label": "Share of project records lost", "value": "15%", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" },
+    { "label": "Duration of the destructive run", "value": "four minutes", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" },
+    { "label": "Agent's kill attempts blocked by its own safety layer", "value": "Twice", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" },
+    { "label": "Backup hardening spend", "value": "Rs 15 lakh", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" },
+    { "label": "Cost of each 3D scanner", "value": "more than $25,000", "source_url": "https://bengaluru.com/stones-that-tell-stories/" },
+    { "label": "Project start year", "value": "2021", "source_url": "https://bengaluru.com/stones-that-tell-stories/" },
+    { "label": "Agent version", "value": "v2.1.204", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" },
+    { "label": "Collection period of lost photographs", "value": "over the past decade", "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958" }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a forklift in a warehouse",
+      "mapping": "the agent is the forklift, shell access is the keys, and the working directory is the aisle it shares with ten years of shelved inventory; the Bengaluru failure is a forklift operating in the archive room, and the fix is not a smarter driver but a separate building",
+      "limit": "a forklift cannot write a better instruction for itself mid-crash, while the agent's kill attempt shows it partially could; the picture also undersells that the 'don't ask again' switch was already flipped"
+    },
+    {
+      "vehicle": "the intern with root",
+      "mapping": "an enthusiastic intern given the server password, one mis-typed command from deleting at the wrong depth, except the intern works at machine speed and its undo request needs a human",
+      "limit": "an intern can be trained by one incident; a model's behaviour is changed only by its vendor, and the report notes no human at the vendor responded after a month"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "the danger of coding agents is that they get too smart.",
+      "reality": "this agent was doing routine maintenance, a quoting error in a cache-clearing command did the damage, and its safety layer blocked its own stop attempt; the risk is an ordinary bug with shell access to irreplaceable data"
+    },
+    {
+      "myth": "local means safe.",
+      "reality": "an agent with shell access on your desk deletes just as thoroughly as a cloud one, the surviving copies in Bengaluru lived on separate NAS hardware the agent could not reach, and even the report's sandboxed environment was breached; isolation and backups are the controls, not geography"
+    }
+  ],
+  "glossary": [
+    { "term": "Claude Code", "definition": "Anthropic's agentic coding tool that runs in the terminal, IDE and cloud, and can execute shell commands as part of its work" },
+    { "term": "blast radius", "definition": "the set of things a failing system can damage; for an agent, everything its permissions and network can reach" },
+    { "term": "sandbox", "definition": "an isolated environment meant to contain a program's effects; here, a boundary the agent reportedly breached" },
+    { "term": "NAS (Network-Attached Storage)", "definition": "a separate storage box on the local network; the backup copy the deletion could not touch" },
+    { "term": "quoting error", "definition": "a misplaced quote character that changes what a shell treats as the command versus data, turning one command into another" },
+    { "term": "3D scan", "definition": "a detailed digital model of a physical object, here stone inscriptions made with commercial scanners" },
+    { "term": "permission rules", "definition": "the allow, ask and deny settings that decide what an agent may run without a human's approval" }
+  ],
+  "unverified": [
+    "Whether a specific permission mode (ask for all shell commands) or a stricter sandbox would have prevented this deletion; the report says the agent breached the sandboxed environment but names no setting.",
+    "Udaya's X posts are quoted by the report but were not fetched directly this session.",
+    "The samachardaily's claims of an official forensic investigation could not be traced to any primary source and read as AI-generated amplification; do not cite.",
+    "Anthropic's side: no company statement was found; the report says it 'could not reach Anthropic for comment'.",
+    "What the lost 'four or five software programmes' were, and whether any lost photographs exist in lower-resolution copies elsewhere."
+  ],
+  "suggested_outline": "Hook: for four minutes a man watched an AI agent delete a decade of work, and the agent's own safety system blocked its attempt to stop, twice.\nWhat was lost and why it is irreplaceable: 15% of the records of a project scanning disappearing inscription stones with scanners that cost more than twenty-five thousand dollars each.\nThe mechanism and the reframe: a quoting error in a shell command, permanent 'don't ask again' approvals, and the real control is blast radius, isolation plus backups, the second NAS and offsite tape, not model quality or geography.",
+  "notes": "Tier note: the Deccan Herald piece is the incident's primary reporting (byline, date, direct quotes); graded docs because the X posts it quotes were not fetched directly. The samachardaily article contradicts the original on material facts and is not citable. The local-AI angle must stay honest: this is not evidence that cloud agents are unsafe and local ones are safe; it is evidence that blast radius decides outcomes.",
+  "viewer_situation": "You let a coding agent run shell commands in the folder where your real work lives, and you have never tested what it can delete.",
+  "has_process": true,
+  "process_steps": [
+    "List what your agent can reach: working directory, home folder, mounted NAS, cloud sync.",
+    "Move irreplaceable files to storage the agent cannot write: a separate NAS or an offsite copy.",
+    "Set permission rules to ask before every shell command, and delete any saved 'don't ask again' rules.",
+    "Run the agent in a sandbox or container with only the project folder mounted.",
+    "Test the restore path once; a backup untested is a rumor."
+  ],
+  "objection": "A skeptical engineer says: this is a backups story wearing an AI costume, the user approved permanent shell access and kept a decade of irreplaceable scans on a workstation drive, and no permission system saves someone from that."
+}
