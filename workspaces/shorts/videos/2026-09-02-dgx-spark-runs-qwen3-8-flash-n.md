@@ -2,7 +2,7 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: ready-to-build
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-script]]
 - Package: [[stages/05-package/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-package]]
 - Voice: [[stages/06-voice/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-narration|narration.txt (normalized, stage 04)]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-render|render note]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - 2026-09-03T02:44:44Z 05-package ok: seo rubric 100/100, check_outputs exit 0, title searchable (dgx spark keyword first), 3 hashtags, 12 tags, slot hint left empty for the publisher's own 11:00/18:00 CT rule
 - 2026-09-03T07:18:49Z 06-voice ok 33.96s
 - 2026-09-03T07:19:02Z 06-voice ok 33.96s
+- 2026-09-03T09:33:00Z 07-render ok 35.07s: 6/6 scenes (attempts 1,2,1,1,1,1), lint/safe-zone/loop all pass (ssim 0.837), gate card message_id 5, status review
