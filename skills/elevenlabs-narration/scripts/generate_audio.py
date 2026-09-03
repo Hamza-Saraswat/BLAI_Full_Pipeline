@@ -444,6 +444,9 @@ def find_whisper(kk: dict) -> tuple:
         models.append(pathlib.Path(env_model).expanduser())
     models += [wroot / WHISPER_MODEL_NAME, binary.parent / WHISPER_MODEL_NAME,
                wroot / "models" / WHISPER_MODEL_NAME,
+               # the binary's own checkout (build/bin/whisper-cli -> models/): a WHISPER_CPP_BIN
+               # outside the Kokoro tree found the binary but not the model (Spark, 2026-09-02)
+               binary.parent.parent.parent / "models" / WHISPER_MODEL_NAME,
                pathlib.Path.home() / ".cache" / "whisper.cpp" / WHISPER_MODEL_NAME]
     model = next((m for m in models if m.is_file()), None)
     if model is None:

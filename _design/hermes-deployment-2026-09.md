@@ -45,14 +45,34 @@ re-reading its own context). Moonshot bill ~$27.
 Reference = the user's own channel ((AI)gentic Bros, `K9cl9QiSjvQ`, 188-207s, chosen by a
 whisper density scan: 3.84 words/s, single speaker), loudnorm I=-18, 24 kHz mono ->
 `~/blai/voice/refs/hamza-yt-01.wav`. Three clones of the test line rendered on the GB10 in ~9s
-each (neutral 0.5/0.5, calm 0.3/0.7, energetic 0.7/0.3). Wiring waits on the user's pick:
-`BLAI_VOICE_REF` + the two params in `build/.env`, then a full-narration regen for the measured
-`voices_wps["chatterbox:hamza-yt-01"]`.
+each (neutral 0.5/0.5, calm 0.3/0.7, energetic 0.7/0.3). **User picked neutral.** Wired:
+`BLAI_VOICE_REF`, `BLAI_VOICE_EXAGGERATION=0.5`, `BLAI_VOICE_CFG_WEIGHT=0.5` in `build/.env`.
+Full regen of the 2026-08-30 narration in the clone: 373 words / 116.56 s = **3.20 wps** ->
+`voices_wps["chatterbox:hamza-yt-01"]`. That regen fell back to proportional timing:
+`find_whisper` found `WHISPER_CPP_BIN` but searched for the model only under the Kokoro tree.
+Fixed twice over: `WHISPER_CPP_MODEL` added to `build/.env`, and the resolver now also checks
+the binary's own checkout (`.../models/`). Forced `--align whisper` in the clone: 29 heard / 33
+timed, source whisper.
 
-## Publishing preconditions found tonight
+## Publishing, closed the same night
 
-`publish.py --accounts` returned `[]`: no YouTube channel is connected inside Blotato yet. R2
-keys also absent. Both are user actions; the poller stays paused until then.
+`publish.py --accounts` first returned `[]`: the YouTube channel was not connected inside
+Blotato. The user connected it (account id 48833, "Hamza (BuildLocalAI)"), created the R2
+bucket `blai-media` with an Account API token scoped to it (ListBuckets is 403 by design), and
+enabled the r2.dev public URL. Verified end to end: `r2.py upload` -> public fetch HTTP 200 ->
+`r2.py delete`. `BLAI_PUBLISH_PRIVACY=private` until the first post is checked in Studio.
+
+Two more corrections on the way:
+- `build.py` listed `ELEVENLABS_API_KEY`/`ELEVEN_VOICE_ID` as REQUIRED env, so the publish-only
+  pass refused to start on a Chatterbox box. Voice keys removed from `REQUIRED_ENV`,
+  `install.sh` and `.env.example`; the engine choice is preflight's voice-engine check.
+- Hermes cron `--script` takes ONLY a bare filename under `~/.hermes/scripts/` (`.sh` via
+  bash); inline commands and absolute paths are rejected. Scripts: `blai-preflight.sh`,
+  `blai-publish.sh` (both run under `~/blai/venv`, which has boto3 + python-dotenv; the
+  system python has neither). Both test-fired: succeeded.
+
+First scheduled dry cycle (2026-09-02 evening): `blai-ideas` on GLM = 1,330,226 tokens, zero
+K3; picks `2026-09-02-claude-code-went-rogue-and-del`, `2026-09-02-dgx-spark-runs-qwen3-8-flash-n`.
 
 ## Still parked
 
