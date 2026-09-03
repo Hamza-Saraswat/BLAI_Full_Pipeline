@@ -14,6 +14,14 @@ carried every stage; these rules exist so that never repeats.
 
 - One trigger per session: `ideas` (stages 01-02) or `produce <slug>` (03-05) or `build <slug>`
   (06-07 + gate card). Never chain triggers in one session; the cron jobs do the sequencing.
+- **One slug per session.** The cron parent only launches `hermes -z "... <slug> ..." -m glm-5.3
+  --provider zai --skill blai-run,blai-produce` as `terminal(background=true)` and waits with
+  `process`; it never runs a stage itself. Context is the cost: the 2026-09-02 produce session
+  carried two slugs and burned 15.8M tokens, most of it re-reading its own history.
+- **Stage 03 fetches happen inside one `delegate_task`** whose only return is "brief written,
+  validator exit N". Page contents must never enter the orchestrator's context.
+- A quota or rate-limit error from the provider ends the session cleanly: hub status untouched,
+  one line in the report. The next scheduled run picks the slug up again.
 - Start by reading exactly two files: `workspaces/shorts/CLAUDE.md` and the stage `CONTEXT.md`
   you are about to run. Do not `ls`, `grep` or `find` to orient: every path is named in them.
 - Never `read_file` a generated artifact to "check" it. Run the check the contract names

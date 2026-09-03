@@ -73,6 +73,23 @@ Two more corrections on the way:
 
 First scheduled dry cycle (2026-09-02 evening): `blai-ideas` on GLM = 1,330,226 tokens, zero
 K3; picks `2026-09-02-claude-code-went-rogue-and-del`, `2026-09-02-dgx-spark-runs-qwen3-8-flash-n`.
+`blai-produce` (both slugs, ONE session) = 15.8M GLM tokens; both hubs reached ready-to-build;
+writers + judge went through `llm_call.py` on K3 (drafts notes: "judge: kimi-k3 via
+tools/llm_call.py"), invisible to `hermes insights` because they are not Hermes sessions.
+`blai-build` died after stage 06 (voice ok 122 s in the clone): **HTTP 429 "Usage limit reached
+for 5 hour"** from the Z.ai coding plan (2K credits/5h; reset 01:38 CT). Measured: ~19M tokens
+consumed the whole 5-hour bucket, i.e. ~1 credit per 10K tokens on this tier. The weekly cap is
+10K credits (~100M tokens): at tonight's rate (~37M/day for two Shorts) the tier supports about
+one Short every 2-3 days. The fallback then failed too: `x-preview-f-free` is no longer served
+by the keyless relay (HTTP 401 "not supported"); the relay lists `deepseek-v4-flash-free`,
+`nemotron-3-ultra-free` and others.
+
+Response the same night: ideas + produce PAUSED; a one-shot `blai-build-once` at 02:00 CT
+(after the reset) builds the two finished Shorts; fallback chain repointed at the served free
+models; produce/build jobs rewritten as thin parents that launch one `hermes -z` child session
+per slug (context reset per slug); blai-run gains the one-slug-per-session and
+research-inside-delegate rules. Decision for the user: raise the Z.ai tier, or run one Short
+a day on this one.
 
 ## Still parked
 
