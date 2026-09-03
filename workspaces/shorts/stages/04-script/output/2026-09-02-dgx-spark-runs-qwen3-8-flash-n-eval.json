@@ -1,0 +1,473 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-03T02:43:16+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 8,
+    "claims_by_quality": {
+      "benchmark": 2,
+      "primary": 5,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.75,
+    "key_numbers_total": 11,
+    "entities_total": 8,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.385,
+    "source_domains": [
+      "apple.com",
+      "huggingface.co",
+      "nvidia.com",
+      "orangelogic.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 11,
+      "spent": 5,
+      "distinct": 5,
+      "score": 0.455,
+      "detail": [
+        {
+          "label": "DGX Spark throughput, Qwen3.8-Flash-Next coding, single box, community measurement",
+          "value": "~43tok/sec",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "43",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Throughput ceiling before MTP, same setup",
+          "value": "20tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "20 tok/s",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Model size, BF16 source",
+          "value": "~180B in total (360 GB BF16 source)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "360 GB",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "NVFP4 checkpoint size",
+          "value": "135 GB (~2.7x)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "135 GB",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "DGX Spark unified memory",
+          "value": "128 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark memory bandwidth",
+          "value": "Up to273GB/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "273",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "Mac Studio M5 Ultra memory bandwidth",
+          "value": "1.2TB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "NVIDIA-claimed inference speedup on agentic models",
+          "value": "up to 2.6x",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Native context length of Qwen3.8-Flash-Next",
+          "value": "262,144 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Context fitted on the Spark in the forum run",
+          "value": "200k context",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Time to get running with the installer, poster's estimate",
+          "value": "~ 30 mins",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 8,
+      "found_count": 2,
+      "score": 0.25,
+      "found": [
+        "Qwen3.8-Flash-Next",
+        "Mac Studio"
+      ],
+      "missing": [
+        "GB BF16",
+        "M5 Ultra",
+        "Qwen4",
+        "Qwen3.6 35B",
+        "vLLM",
+        "Mac Studio Ultra 1.2"
+      ],
+      "top2": [
+        "Qwen3.8-Flash-Next",
+        "Mac Studio"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Qwen3.8-Flash-Next",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Mac Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Ultra",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.6 35B",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac Studio Ultra 1.2",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 13,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:~43tok/sec"
+      ],
+      "hook_text": "DGX Spark: 43 tok/s in coding",
+      "first_sentence": "DGX Spark runs a frontier model at forty-three tokens a second."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:~43tok/sec"
+          ],
+          "narration": "DGX Spark runs a frontier model at forty-three tokens a second. Word-pieces per second, from one owner's coding test."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Qwen3.8-Flash-Next"
+          ],
+          "narration": "So a frontier coder keeps pace from your desk. The model is Qwen three point eight Flash Next. Two ideas do the work."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:~180B in total (360 GB BF16 source)",
+            "num:135 GB (~2.7x)"
+          ],
+          "narration": "Quantization, storing weights in fewer bits, shrinks it from three hundred sixty gigabytes to one hundred thirty-five. It fits."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 5.5,
+          "specific": true,
+          "hits": [
+            "num:20tok/s"
+          ],
+          "narration": "Multi-token prediction, a draft layer writing several tokens per step. Without it, twenty tokens a second."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:Up to273GB/s",
+            "entity:Mac Studio"
+          ],
+          "narration": "One owner, one experimental build. The Spark reads weights at two hundred seventy-three gigabytes a second; a Mac Studio Ultra more than quadruples that."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 4.5,
+          "specific": false,
+          "hits": [],
+          "narration": "Judge boxes by tokens per second in your workload. Not bandwidth."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.6,
+      "words": 117,
+      "sentences": 13,
+      "est_speech_s": 40.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "DGX Spark runs a frontier model at forty-three tokens a second. Word-pieces per second, from one owner's coding test. So a frontier coder keeps pace from your desk. The model is Qwen three point eight Flash Next. Two ideas do the work. Quantization, storing weights in fewer bits, shrinks it from three hundred sixty gigabytes to one hundred thirty-five. It fits. Multi-token prediction, a draft layer writing several tokens per step. Without it, twenty tokens a second. One owner, one experimental build. The Spark reads weights at two hundred seventy-three gigabytes a second; a Mac Studio Ultra more than quadruples that. Judge boxes by tokens per second in your workload. Not bandwidth.",
+    "on_screen": "DGX Spark: 43 tok/s in coding | DGX Spark: 43 tok/s in coding | Qwen3.8-Flash-Next, from your desk | 360 GB to 135 GB: it fits | 20 tok/s without MTP | One owner. Spark: 273 GB/s | tok/s in your workload. Not bandwidth"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 5.6,
+        "words": 117,
+        "est_speech_s": 40.3,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 55 chars \u2014 mobile truncates ~40",
+          "FK grade 5.6 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-02-dgx-spark-runs-qwen3-8-flash-n-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 5,
+        "heard": 5,
+        "total": 11,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.25,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen3.8-Flash-Next",
+          "Mac Studio"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:~43tok/sec"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 2,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

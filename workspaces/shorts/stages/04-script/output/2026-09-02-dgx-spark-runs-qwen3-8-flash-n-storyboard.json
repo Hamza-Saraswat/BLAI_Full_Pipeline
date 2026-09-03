@@ -1,0 +1,99 @@
+{
+  "slug": "2026-09-02-dgx-spark-runs-qwen3-8-flash-n",
+  "topic": "A single DGX Spark runs Qwen3.8-Flash-Next at 43 tok/s in coding: what that speed means for a local-first box",
+  "title": "DGX Spark runs Qwen3.8-Flash-Next at 43 tok/s in coding",
+  "description": "Working value; the package stage overwrites the final ones in its own note.",
+  "hashtags": ["#DGXSpark", "#LocalAI", "#Qwen"],
+  "hook_text": "DGX Spark: 43 tok/s in coding",
+  "hook_pattern": "named-contradiction",
+  "hook_candidates": [
+    "DGX Spark runs a frontier model at forty-three tokens a second.",
+    "DGX Spark or Mac Studio Ultra? One number decides.",
+    "Forty-three tokens a second, from a box on your desk.",
+    "One hundred eighty billion parameters. One desktop box.",
+    "You run local models. This box runs the frontier.",
+    "Your Mac is not too slow. Its doorway is.",
+    "Three hundred sixty gigabytes, squeezed into one hundred thirty-five.",
+    "A forum post just moved the local-AI goalposts.",
+    "Twenty tokens a second, then forty-three. One trick apart.",
+    "The bandwidth war is over. Nobody told your workload."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 38,
+  "narration_full": "DGX Spark runs a frontier model at forty-three tokens a second. Word-pieces per second, from one owner's coding test. So a frontier coder keeps pace from your desk. The model is Qwen three point eight Flash Next. Two ideas do the work. Quantization, storing weights in fewer bits, shrinks it from three hundred sixty gigabytes to one hundred thirty-five. It fits. Multi-token prediction, a draft layer writing several tokens per step. Without it, twenty tokens a second. One owner, one experimental build. The Spark reads weights at two hundred seventy-three gigabytes a second; a Mac Studio Ultra more than quadruples that. Judge boxes by tokens per second in your workload. Not bandwidth.",
+  "analogy": {
+    "vehicle": "none used; the script teaches the plain mechanism (quantize to fit, multi-token prediction for speed)",
+    "mapping": "the brief's loading-dock and one-burner analogies were offered and deliberately not spent; one analogy per script at most, and the mechanism carried the teaching rows without one",
+    "limit": "not applicable"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "DGX Spark runs a frontier model at forty-three tokens a second. Word-pieces per second, from one owner's coding test.",
+      "on_screen_text": "DGX Spark: 43 tok/s in coding",
+      "visual_brief": "Frame 1: black field, one GB10-style chip centered on a green PCB with thin traces, fully legible. Within 0.5 s, on 'forty-three tokens a second', a giant 43 scales in above the chip with tok/s beneath it. On 'one owner's coding test', a small forum-post card with a code window fades in lower right. Fade and scale only.",
+      "est_duration_s": 6.6,
+      "sfx": [{ "at": "start", "name": "pop" }]
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So a frontier coder keeps pace from your desk. The model is Qwen three point eight Flash Next. Two ideas do the work.",
+      "on_screen_text": "Qwen3.8-Flash-Next, from your desk",
+      "visual_brief": "Centered stack: a small desktop box outline under a monitor. On 'keeps pace', token chips rise from the box into a code editor at typing rhythm. On 'Qwen three point eight Flash Next', the model name settles in as a label beside the editor. On 'two ideas', two glowing blocks fade in on the chip die, labeled Q and MTP.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Quantization, storing weights in fewer bits, shrinks it from three hundred sixty gigabytes to one hundred thirty-five. It fits.",
+      "on_screen_text": "360 GB to 135 GB: it fits",
+      "visual_brief": "Diagram flow: on 'three hundred sixty gigabytes', a tall weight stack labeled 360 GB fades in at left. On 'shrinks', compression arrows scale it down to a short 135 GB block. On 'It fits', the small block drops into a Spark memory-pool outline, spare headroom glowing green. Scale and fade only.",
+      "est_duration_s": 6.6,
+      "sfx": [{ "at": "number-reveal", "name": "ding" }]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Multi-token prediction, a draft layer writing several tokens per step. Without it, twenty tokens a second.",
+      "on_screen_text": "20 tok/s without MTP",
+      "visual_brief": "Split compare: left lane, on 'twenty tokens a second', a chip emits single tokens and a short bar labeled 20 tok/s rises. Right lane, on 'several tokens per step', the same chip emits three tokens at once and a tall bar rises, labeled only 'with MTP'. Bars rise, never slide.",
+      "est_duration_s": 5.5
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "One owner, one experimental build. The Spark reads weights at two hundred seventy-three gigabytes a second; a Mac Studio Ultra more than quadruples that.",
+      "on_screen_text": "One owner. Spark: 273 GB/s",
+      "visual_brief": "Grid: on 'one owner, one experimental build', two small caveat chips fade in, 'one owner' and 'experimental build'. On 'two hundred seventy-three gigabytes a second', a short bandwidth bar rises beside a tall Ultra bar roughly four times higher, unlabeled numerically, Ultra marked only by its name. Fade and rise only.",
+      "est_duration_s": 8.3,
+      "sfx": [{ "at": "number-reveal", "name": "tick" }]
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Judge boxes by tokens per second in your workload. Not bandwidth.",
+      "on_screen_text": "tok/s in your workload. Not bandwidth",
+      "visual_brief": "On 'tokens per second', the grid dims to gray. On 'in your workload', the payoff line rises center frame. On 'Not bandwidth', the qualifier drops in beneath it, wordmark settling on a clean centered frame that rhymes with frame 1's single focal phrase. Fade and rise only.",
+      "est_duration_s": 4.5
+    }
+  ],
+  "notes_for_review": "The forty-three figure is one forum owner's measurement; the script attributes it twice. 'More than quadruples that' compresses 273GB/s versus 1.2TB/s; the brief's exact figures are on record. The 200k context and the 2.6x NVIDIA claim were left unspent."
+}
