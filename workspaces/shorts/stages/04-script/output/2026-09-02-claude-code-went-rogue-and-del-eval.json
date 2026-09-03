@@ -1,0 +1,501 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-03T03:22:00+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-02-claude-code-went-rogue-and-del-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-02-claude-code-went-rogue-and-del-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 7,
+    "claims_by_quality": {
+      "docs": 4,
+      "community": 1,
+      "primary": 2
+    },
+    "pct_primary_docs": 0.857,
+    "key_numbers_total": 8,
+    "entities_total": 7,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.417,
+    "source_domains": [
+      "anthropic.com",
+      "bengaluru.com",
+      "claude.com",
+      "deccanherald.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "Share of project records lost",
+          "value": "15%",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "15%",
+          "scene_ids": [
+            "s03",
+            "s12"
+          ]
+        },
+        {
+          "label": "Duration of the destructive run",
+          "value": "four minutes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Agent's kill attempts blocked by its own safety layer",
+          "value": "Twice",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Backup hardening spend",
+          "value": "Rs 15 lakh",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Cost of each 3D scanner",
+          "value": "more than $25,000",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "twenty-five thousand",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "Project start year",
+          "value": "2021",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Agent version",
+          "value": "v2.1.204",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Collection period of lost photographs",
+          "value": "over the past decade",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 7,
+      "found_count": 3,
+      "score": 0.429,
+      "found": [
+        "Bengaluru",
+        "Udaya",
+        "Anthropic"
+      ],
+      "missing": [
+        "Slack",
+        "IDE",
+        "India",
+        "Mythic Society"
+      ],
+      "top2": [
+        "Slack",
+        "IDE"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Slack",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IDE",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Bengaluru",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Udaya",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Anthropic",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "India",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mythic Society",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 40,
+      "hits": 4,
+      "density": 0.1,
+      "offenders": [
+        "Then the asking changed.",
+        "First, move the irreplaceable to a box the agent cannot write.",
+        "Second, set permissions to ask before every shell command, and delete saved approvals.",
+        "Third, run the agent in a sandbox with only the project folder, then test one restore."
+      ]
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Bengaluru"
+      ],
+      "hook_text": "HERE'S WHAT BROKE",
+      "first_sentence": "A Bengaluru heritage project let an AI agent work beside a decade of scans."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "story-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 12,
+      "specific_count": 10,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Bengaluru"
+          ],
+          "narration": "A Bengaluru heritage project let an AI agent work beside a decade of scans. Here's what broke."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "entity:Udaya"
+          ],
+          "narration": "Udaya Kumar P L is the project's honorary director. For four minutes he watched an AI agent delete his files. The agent noticed and tried to kill the process. The safety layer blocked the rescue, then blocked it again. He shut the computer down himself."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 14.5,
+          "specific": true,
+          "hits": [
+            "num:15%",
+            "num:more than $25,000"
+          ],
+          "narration": "The loss was fifteen percent of the project's records. Not code. Original photographs of inscriptions, hero stones, temples, and coins. Urbanisation is erasing those stones, so the scans, detailed digital models, were irreplaceable. Each commercial scanner cost more than twenty-five thousand dollars."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "glossary:quoting error"
+          ],
+          "narration": "Name what changed: the command. A quoting error, one stray quote mark that turns words into a command, rewrote a cache-clearing chore into delete everything."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "entity:Anthropic"
+          ],
+          "narration": "Then the asking changed. The agent was Claude Code, Anthropic's tool that runs shell commands, typed orders the computer obeys. Answer yes, don't ask again, and the approval saves permanently to the project."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 14.1,
+          "specific": true,
+          "hits": [
+            "glossary:blast radius",
+            "glossary:sandbox"
+          ],
+          "narration": "What never changed was the reach. The agent worked where the archive lived. The risk was never intelligence; it was blast radius, everything a failing agent can reach. Inside a sandbox, an isolated environment, the same bug deletes only the sandbox."
+        },
+        {
+          "id": "s07",
+          "role": "foreshadow",
+          "est_duration_s": 14.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Name what survived: the backup. The copy on network-attached storage, a separate box on the network, came through untouched. The copy on his computer's drive did not. The agent could not reach the box, so the box could not burn."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 14.1,
+          "specific": true,
+          "hits": [
+            "entity:Anthropic"
+          ],
+          "narration": "Do not mistake this for a cloud story. The same agent with full permissions on your desk deletes just as thoroughly. The report says the agent breached even the sandboxed environment. And it says no human at Anthropic has answered him."
+        },
+        {
+          "id": "s09",
+          "role": "foreshadow",
+          "est_duration_s": 7.2,
+          "specific": false,
+          "hits": [],
+          "narration": "The project's answer is more copies, kept farther away. A second storage box the agent cannot write to, and offsite tape."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "glossary:sandbox"
+          ],
+          "narration": "The control is isolation plus tested backups: storage the agent cannot write, ask-before-shell permissions, a sandbox, one restore test. First, move the irreplaceable to a box the agent cannot write."
+        },
+        {
+          "id": "s11",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "glossary:sandbox"
+          ],
+          "narration": "Second, set permissions to ask before every shell command, and delete saved approvals. Third, run the agent in a sandbox with only the project folder, then test one restore. Ask-permissions interrupt your flow. Isolation takes setup and slows the loop."
+        },
+        {
+          "id": "s12",
+          "role": "payoff_close",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:15%"
+          ],
+          "narration": "Fifteen percent of the records are gone for good. The rest survived on a box the agent could not touch. The fix was never a smarter agent; it was a shorter reach."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 7.1,
+      "words": 413,
+      "sentences": 40,
+      "est_speech_s": 142.4,
+      "vo_band_ok": true
+    },
+    "narration_full": "A Bengaluru heritage project let an AI agent work beside a decade of scans. Here's what broke. Udaya Kumar P L is the project's honorary director. For four minutes he watched an AI agent delete his files. The agent noticed and tried to kill the process. The safety layer blocked the rescue, then blocked it again. He shut the computer down himself. The loss was fifteen percent of the project's records. Not code. Original photographs of inscriptions, hero stones, temples, and coins. Urbanisation is erasing those stones, so the scans, detailed digital models, were irreplaceable. Each commercial scanner cost more than twenty-five thousand dollars. Name what changed: the command. A quoting error, one stray quote mark that turns words into a command, rewrote a cache-clearing chore into delete everything. Then the asking changed. The agent was Claude Code, Anthropic's tool that runs shell commands, typed orders the computer obeys. Answer yes, don't ask again, and the approval saves permanently to the project. What never changed was the reach. The agent worked where the archive lived. The risk was never intelligence; it was blast radius, everything a failing agent can reach. Inside a sandbox, an isolated environment, the same bug deletes only the sandbox. Name what survived: the backup. The copy on network-attached storage, a separate box on the network, came through untouched. The copy on his computer's drive did not. The agent could not reach the box, so the box could not burn. Do not mistake this for a cloud story. The same agent with full permissions on your desk deletes just as thoroughly. The report says the agent breached even the sandboxed environment. And it says no human at Anthropic has answered him. The project's answer is more copies, kept farther away. A second storage box the agent cannot write to, and offsite tape. The control is isolation plus tested backups: storage the agent cannot write, ask-before-shell permissions, a sandbox, one restore test. First, move the irreplaceable to a box the agent cannot write. Second, set permissions to ask before every shell command, and delete saved approvals. Third, run the agent in a sandbox with only the project folder, then test one restore. Ask-permissions interrupt your flow. Isolation takes setup and slows the loop. Fifteen percent of the records are gone for good. The rest survived on a box the agent could not touch. The fix was never a smarter agent; it was a shorter reach.",
+    "on_screen": "HERE'S WHAT BROKE | HERE'S WHAT BROKE | 4 MINUTES WATCHING IT DELETE | 15% OF THE RECORDS | CACHE CLEANUP, THEN DELETE EVERYTHING | DON'T ASK AGAIN SAVES PERMANENTLY | BLAST RADIUS: EVERYTHING IT CAN REACH | NAS SAFE, DRIVE GONE | LOCAL IS NOT SAFE BY DEFAULT | SECOND STORAGE BOX + OFFSITE TAPE | MOVE THE IRREPLACEABLE | ASK BEFORE SHELL, THEN TEST RESTORES | 15% GONE, THE REST SAVED"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-02-claude-code-went-rogue-and-del-storyboard.json",
+        "scenes": 12,
+        "fk_grade": 7.1,
+        "words": 413,
+        "est_speech_s": 142.4,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "no second-person marker ('you', 'your', \"you're\") in the first three sentences: name the viewer's situation up front"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "no second-person marker ('you', 'your', \"you're\") in the first three sentences: name the viewer's situation up front"
+        ],
+        "warnings": [
+          "title 48 chars \u2014 mobile truncates ~40",
+          "FK grade 7.1 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s10: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-02-claude-code-went-rogue-and-del-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.429,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Slack",
+          "IDE"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Bengaluru"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 10,
+        "need": 10,
+        "total": 12
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.1,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "story-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 3,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
