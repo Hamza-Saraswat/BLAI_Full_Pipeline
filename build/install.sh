@@ -22,7 +22,7 @@ GITHUB_REPO="Hamza-Saraswat/BLAI_Full_Pipeline"
 DEPLOY_KEY="$HOME/.ssh/blai_deploy"
 NVM_VERSION="v0.40.3"
 # Keep in sync with REQUIRED_ENV in build/build.py and the header of build/.env.example.
-REQUIRED="ELEVENLABS_API_KEY ELEVEN_VOICE_ID BLOTATO_API_KEY BLOTATO_YOUTUBE_ACCOUNT_ID TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID R2_ACCOUNT_ID R2_ACCESS_KEY_ID R2_SECRET_ACCESS_KEY R2_BUCKET R2_PUBLIC_BASE_URL"
+REQUIRED="BLOTATO_API_KEY BLOTATO_YOUTUBE_ACCOUNT_ID TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID R2_ACCOUNT_ID R2_ACCESS_KEY_ID R2_SECRET_ACCESS_KEY R2_BUCKET R2_PUBLIC_BASE_URL"
 MANIM_APT="libcairo2-dev libpango1.0-dev pkg-config python3-dev build-essential"
 CHROME_APT="libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libasound2 fonts-liberation"
 

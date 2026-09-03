@@ -76,7 +76,9 @@ LOCK = REPO / "build" / "locks" / "build.lock"
 LOG_DIR = REPO / "build" / "logs"
 WORKSPACES = ("shorts",)
 # Keep in sync with the REQUIRED list in build/install.sh and the header of build/.env.example.
-REQUIRED_ENV = ("ELEVENLABS_API_KEY", "ELEVEN_VOICE_ID", "BLOTATO_API_KEY", "BLOTATO_YOUTUBE_ACCOUNT_ID",
+# Voice keys are NOT here: which engine speaks (ElevenLabs, Kokoro, Chatterbox) is preflight's
+# voice-engine check, and the Spark runs Chatterbox with no key at all (2026-09-02).
+REQUIRED_ENV = ("BLOTATO_API_KEY", "BLOTATO_YOUTUBE_ACCOUNT_ID",
                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID",
                 "R2_SECRET_ACCESS_KEY", "R2_BUCKET", "R2_PUBLIC_BASE_URL")
 
