@@ -201,9 +201,10 @@ class Health:
                 self.alert("disk", "DISK LOW: %.0f%% free on the build volume" % free_pct)
         except OSError:
             pass
-        rc, out, _ = sh(["nvidia-smi", "--query-gpu=memory.used,memory.total,utilization.gpu", "--format=csv,noheader"], timeout=20)
+        # GB10 unified memory reports N/A for memory fields; utilization is the useful number
+        rc, out, _ = sh(["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader"], timeout=20)
         if rc == 0 and out:
-            self.lines.append("gpu: " + out.splitlines()[0])
+            self.lines.append("gpu: utilization %s, %s C" % tuple(x.strip().replace(" %", "%") for x in out.splitlines()[0].split(",")[:2]))
 
     def cron(self) -> None:
         hermes = shutil.which("hermes") or str(pathlib.Path.home() / ".local" / "bin" / "hermes")
