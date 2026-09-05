@@ -2,18 +2,18 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: building
+status: blocked
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T21:56:30Z"
+updated: "2026-09-05T21:57:49Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -42,3 +42,6 @@ blotato_post_id: ""
 - 2026-09-03T09:33:00Z 07-render ok 35.07s: 6/6 scenes (attempts 1,2,1,1,1,1), lint/safe-zone/loop all pass (ssim 0.837), gate card message_id 5, status review
 - 2026-09-05T21:56:27Z 2026-09-05 re-queued for the scripted render (scene_worker.py) with the creator voice clone; the 2026-09-03 stock-voice cut is superseded
 - 2026-09-05T21:56:30Z build start on gn100-83c4
+- 2026-09-05T21:57:44Z 06-voice fail 71s (voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb')
+- 2026-09-05T21:57:49Z 06-voice fail 5s (voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb')
+- 2026-09-05T21:57:49Z blocked at 06-voice
