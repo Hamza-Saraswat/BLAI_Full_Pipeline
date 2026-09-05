@@ -152,6 +152,23 @@ each one a lesson now encoded in code):
    per run.
 5. s01 at 7.5 s needed two worker runs (3 rounds failed on `inspect --strict`, then 2 rounds
    passed): ~27.6K in / 6.6K out tokens = ~12 credits for the hardest scene so far.
+6. s03 failed six rounds across two runs on one `inspect --strict` WARNING (a label nested in
+   an accent span reads as a text overlap for 0.5 s). Worker now saves every round's report,
+   seeds a retried run with the previous run's last report, and escalates the final round to
+   GLM-5.3 (`--escalate`, `BLAI_SCENE_ESCALATE`). With the seeded report s03 passed on round 2
+   on Flash; escalation was never needed.
+
+**Build #6 (22:17-22:45 CT): status review, gate card 13 from the gate bot, 41.23 s in the
+clone, all gates green.** Per-scene (Flash, in/out tokens -> credits at standard rate):
+s01 27.6K/6.6K ~12 · s02 28.1K/7.3K ~12 · s03 27.2K/8.7K ~13 · s04 27.0K/4.8K ~10 ·
+s05 12.4K/2.1K ~4.5 (first round) · s06 reused (fit the window). Final renders ~52 credits,
+~115 counting every failed round of the evening; the agent build was ~2,000. Zero Hermes
+sessions, zero K3.
+
+Schedule re-enabled for one Short a day (fits Lite's 10K/week until stage 03-05 gets the same
+scripted treatment): 05:45 preflight · 06:00 ideas (GLM) · 06:30 produce, FIRST PICK ONLY
+(GLM child session, K3 writers) · 08:00 digest (K3) · 08:30 + 10:30 build (script) · publish
+poller 10:00-20:00. The second Sept-2 Short (ready-to-build) builds in the 08:30 pass.
 
 ## Still parked
 
