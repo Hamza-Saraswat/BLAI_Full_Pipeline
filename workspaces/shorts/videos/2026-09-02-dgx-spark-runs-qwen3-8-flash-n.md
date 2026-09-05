@@ -2,19 +2,19 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: building
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T22:33:13Z"
+updated: "2026-09-05T22:44:54Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -71,3 +71,6 @@ blotato_post_id: ""
 - 2026-09-05T22:31:26Z blocked at 07-render
 - 2026-09-05T22:33:13Z build start on gn100-83c4
 - 2026-09-05T22:33:20Z 06-voice ok 5s
+- 2026-09-05T22:42:59Z 07-render fail 577s (07-render: scene s05 failed: 1:"]}, {"round": 2, "failures": ["safe_zone_check exit 1:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": )
+- 2026-09-05T22:44:58Z 07-render ok 41.23s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 13
+- 2026-09-05T22:44:58Z 07-render ok 118s
