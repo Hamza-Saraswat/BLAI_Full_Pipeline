@@ -9,12 +9,12 @@ format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T23:16:47Z"
-publish_slot: "2026-09-06T11:00:00-05:00"
+updated: "2026-09-05T23:25:09Z"
+publish_slot: "2026-09-05T18:31:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\\\\\\""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -77,3 +77,4 @@ blotato_post_id: ed690d6c-c08b-482c-a10e-4cb2c05eb9ed
 - 2026-09-05T22:45:00Z build done, status review
 - 2026-09-05T23:15:34Z telegram approve (approved_at 2026-09-05T23:15:34Z)
 - 2026-09-05T23:16:48Z 08-publish ok 2s
+- 2026-09-05T23:25:09Z 08-publish re-issued PUBLIC for 2026-09-05T18:31:00-05:00 by the operator (submission e9c74c00-5ce8-4af6-b7af-66e2ea39d8d0); the private 11:00 copy ed690d6c-c08b-482c-a10e-4cb2c05eb9ed cancelled via API where possible
