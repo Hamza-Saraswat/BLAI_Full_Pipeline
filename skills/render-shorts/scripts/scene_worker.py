@@ -180,7 +180,7 @@ class Worker:
     def user_prompt(self, round_no: int, prev_code: str, report: str) -> str:
         u = "Scene packet (the spec):\n```json\n%s\n```\n\n%s" % (json.dumps(self.packet, indent=2, ensure_ascii=False),
                                                                 self.deliverable())
-        if round_no > 1:
+        if round_no > 1 or (report and prev_code):
             u += ("\n\nRound %d. The previous file FAILED verification. Fix exactly what the report names and keep "
                   "everything else.\n\nFailure report:\n%s\n\nPrevious file:\n```\n%s```" % (round_no, report, prev_code))
         return u
@@ -189,7 +189,11 @@ class Worker:
     def ask(self, round_no: int, prev_code: str, report: str) -> str:
         system, user = self.system_prompt(), self.user_prompt(round_no, prev_code, report)
         last = ""
-        for provider, model in self.chain:
+        chain = list(self.chain)
+        if round_no >= self.a.max_rounds and self.a.escalate and ":" in self.a.escalate:
+            # last round: the stronger seat first (Flash failed twice), the usual chain behind it
+            chain = [tuple(self.a.escalate.split(":", 1))] + chain
+        for provider, model in chain:
             try:
                 extra = {"thinking": {"type": "disabled"}} if provider == "zai" else None
                 text, usage = llm_call.complete(provider, model, system, user, max_tokens=self.a.max_tokens,
@@ -314,6 +318,13 @@ class Worker:
         t0 = time.time()
         code, report, attempts, pr, flags = "", "", 0, {}, []
         history = []
+        # A previous run of this scene (a stage retry) leaves its last report and file behind:
+        # start informed instead of repeating the same first draft.
+        prev_report = self.work / "last-report.txt"
+        if prev_report.exists() and not self.a.dry_run:
+            report = "A previous run of this scene failed with:\n" + prev_report.read_text(encoding="utf-8")[-3000:]
+            prev_file = self.hf_dir() / "index.html" if self.tool == "hyperframes" else self.work / ("%s.py" % self.sid)
+            code = read(prev_file) if prev_file.exists() else ""
         for round_no in range(1, self.a.max_rounds + 1):
             attempts = round_no
             if self.a.dry_run:
@@ -334,6 +345,9 @@ class Worker:
             if not fails and mp4 is not None:
                 fails, flags, pr = self.verify(mp4)
             history.append({"round": round_no, "failures": [f.splitlines()[0][:160] for f in fails]})
+            (self.work / ("round-%d.report.txt" % round_no)).write_text("\n\n".join(fails) or "PASS\n", encoding="utf-8")
+            if fails:
+                (self.work / "last-report.txt").write_text("\n\n".join(fails), encoding="utf-8")
             if not fails and mp4 is not None:
                 final = self.scenes / ("%s.mp4" % self.sid)
                 shutil.copy2(mp4, final)
@@ -363,6 +377,8 @@ def main() -> int:
     ap.add_argument("--model", default=os.environ.get("BLAI_SCENE_MODEL", "glm-5.3-flash"))
     ap.add_argument("--fallback", default=os.environ.get("BLAI_SCENE_FALLBACK", "opencode-free:nemotron-3-ultra-free"))
     ap.add_argument("--max-rounds", type=int, default=3)
+    ap.add_argument("--escalate", default=os.environ.get("BLAI_SCENE_ESCALATE", "zai:glm-5.3"),
+                    help="provider:model tried first on the LAST round (empty to disable)")
     ap.add_argument("--max-tokens", type=int, default=16000)
     ap.add_argument("--model-timeout", type=int, default=300)
     ap.add_argument("--dry-run", action="store_true", help="print prompt sizes and the provider chain; no calls")

@@ -131,6 +131,28 @@ Fixes, all live:
   systemd scope, up to three passes), paused until the schedule is re-enabled.
 - Z.ai tiers (docs): Lite 2K/5h + 10K/week; Pro 12K/60K; Max 28K/140K. Off-peak 50%.
 
+First scripted builds of the Sept-3 Short in the creator's clone (five passes the same evening,
+each one a lesson now encoded in code):
+1. Voice QA blocked at WER 0.068 on the clone. Six of eight "errors" were the transcriber's
+   spelling: "GB" for a spoken "gigabytes", "multitoken" for "multi-token", "3 .8" for "3.8",
+   and the phrase "tokens a second" never canonicalized because the transcript side was
+   normalized word by word. `qa_transcribe.py` now: a `_heard_as` table in
+   `pronunciation_dictionary.json` (canonical spoken form -> transcriber variants, incl. Qwen),
+   number-word hyphens split / other hyphens joined, spaced decimals collapsed, the joined pass
+   always adopted, and a spacing-only mismatch forgiven. Result 0.017 (two real one-word
+   slips). Threshold unchanged at 0.03.
+2. Six stale scene clips were reused under a 6 s longer narration ("segments win" cut the
+   audio). `stage_runner` now reuses a clip only if `ffprobe` duration fits the packet's target
+   within tolerance.
+3. `render_note.py` crashed on dict-shaped sfx cues AFTER the gate card was sent, so two cards
+   for a broken cut went out (their keyboards were cleared by the blocked card). The note is
+   written before the card now, then rewritten with the message id.
+4. `scene_worker.py` tripped on a dangling symlink left by the Sept-3 agent worker in the same
+   `workers/sNN/hf` directory (`.exists()` follows links). The project dir is rebuilt fresh
+   per run.
+5. s01 at 7.5 s needed two worker runs (3 rounds failed on `inspect --strict`, then 2 rounds
+   passed): ~27.6K in / 6.6K out tokens = ~12 credits for the hardest scene so far.
+
 ## Still parked
 
 Tailscale SSH `check` mode (`tailscale set --ssh=false` from the LAN), `tailscale serve --bg
