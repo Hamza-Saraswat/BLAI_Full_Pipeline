@@ -173,6 +173,12 @@ minutes out, submission e9c74c00, 18:31 CT, public. **Blotato's API has no cance
 Blotato's dashboard or in Studio. Moonshot balance API (`/v1/users/me/balance`) works: $10.99
 at 18:20 CT, far below the token-based estimate; the daily health report now watches it.
 
+Lesson from the hand re-issue: the poller (`build.py poll_note` -> `stage_runner.poll_status`)
+reads the submission id from the HUB note's `blotato_post_id` (and mirrors it in
+`published/<slug>.md`); a manual `publish.py` run must update both, or the poller keeps polling
+the superseded submission ("still scheduled at Blotato" while the new one was already live).
+Blotato reports the URL as `publicUrl`; `_find_url` already reads it.
+
 `tools/health_check.py` added (daily report + hourly alerts through the gate bot): services,
 preflight, blocked hubs, staleness, GLM quota probe with reset time, Kimi balance and 24 h
 spend (alert over $10), today's scene credits, disk/GPU, cron states, R2. `_design/
