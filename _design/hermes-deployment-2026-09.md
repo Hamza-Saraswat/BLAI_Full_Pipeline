@@ -165,6 +165,19 @@ s05 12.4K/2.1K ~4.5 (first round) · s06 reused (fit the window). Final renders 
 ~115 counting every failed round of the evening; the agent build was ~2,000. Zero Hermes
 sessions, zero K3.
 
+First publish (2026-09-05 evening): the operator approved card 13 at 18:15 CT; the poller booked
+the next slot (11:00 next day, private, submission ed690d6c). The operator then asked for it
+public now: `BLAI_PUBLISH_PRIVACY=public` in both env files, re-issued with `--slot` six
+minutes out, submission e9c74c00, 18:31 CT, public. **Blotato's API has no cancel route**
+(DELETE /v2/posts/<id> -> 404), so the private copy stays queued; the operator deletes it in
+Blotato's dashboard or in Studio. Moonshot balance API (`/v1/users/me/balance`) works: $10.99
+at 18:20 CT, far below the token-based estimate; the daily health report now watches it.
+
+`tools/health_check.py` added (daily report + hourly alerts through the gate bot): services,
+preflight, blocked hubs, staleness, GLM quota probe with reset time, Kimi balance and 24 h
+spend (alert over $10), today's scene credits, disk/GPU, cron states, R2. `_design/
+icm-token-audit-2026-09.md` answers "is ICM saving tokens" with the per-stage table.
+
 Schedule re-enabled for one Short a day (fits Lite's 10K/week until stage 03-05 gets the same
 scripted treatment): 05:45 preflight · 06:00 ideas (GLM) · 06:30 produce, FIRST PICK ONLY
 (GLM child session, K3 writers) · 08:00 digest (K3) · 08:30 + 10:30 build (script) · publish
