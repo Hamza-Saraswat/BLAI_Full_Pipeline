@@ -90,7 +90,7 @@ def provider_config(name: str) -> dict:
 
 def complete(provider: str, model: str, system: str, user: str, max_tokens: int = 4000,
              temperature: float | None = None, timeout: int = 300, base_url: str = "",
-             key_env: str = "") -> tuple:
+             key_env: str = "", extra_body: dict | None = None) -> tuple:
     """One chat completion for callers that import this module (scene_worker.py).
 
     Returns (text, usage_dict). Raises RuntimeError with the HTTP status in the message on
@@ -105,6 +105,8 @@ def complete(provider: str, model: str, system: str, user: str, max_tokens: int 
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
     if temperature is not None:
         body["temperature"] = temperature
+    if extra_body:
+        body.update(extra_body)  # e.g. {"thinking": {"type": "disabled"}} on Z.ai
     headers = {"Content-Type": "application/json"}
     if api_key:
         headers["Authorization"] = "Bearer " + api_key
@@ -119,12 +121,14 @@ def complete(provider: str, model: str, system: str, user: str, max_tokens: int 
     except (urllib.error.URLError, TimeoutError) as e:
         raise RuntimeError("HTTP 000 %s unreachable: %s" % (base, e))
     try:
-        text = data["choices"][0]["message"]["content"]
+        choice = data["choices"][0]
+        text = choice["message"]["content"] or ""
     except (KeyError, IndexError, TypeError):
         raise RuntimeError("unexpected response shape: %s" % json.dumps(data)[:300])
     usage = data.get("usage") or {}
     return text, {"model": data.get("model", model), "prompt_tokens": usage.get("prompt_tokens"),
-                  "completion_tokens": usage.get("completion_tokens"), "seconds": round(time.time() - t0, 1)}
+                  "completion_tokens": usage.get("completion_tokens"), "finish_reason": choice.get("finish_reason"),
+                  "seconds": round(time.time() - t0, 1)}
 
 
 def main() -> int:

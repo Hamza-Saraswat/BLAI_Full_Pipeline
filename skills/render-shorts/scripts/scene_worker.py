@@ -113,9 +113,14 @@ def stillness(mp4: pathlib.Path, seconds: float = 0.5) -> list:
 
 
 def extract_code(text: str) -> str:
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.S)  # reasoning leaked into content
     blocks = re.findall(r"```[a-zA-Z0-9_-]*\n(.*?)```", text, re.S)
     if blocks:
         return max(blocks, key=len).strip("\n") + "\n"
+    # an unterminated fence (truncated reply) still yields the file body
+    m = re.search(r"```[a-zA-Z0-9_-]*\n(.*)$", text, re.S)
+    if m:
+        return m.group(1).strip("\n") + "\n"
     return text.strip() + "\n"
 
 
@@ -153,14 +158,17 @@ class Worker:
     def deliverable(self) -> str:
         frames = int(round(self.target * FPS))
         if self.tool == "hyperframes":
-            return ("Deliver ONE fenced code block containing the COMPLETE index.html for this scene. It sits at the "
-                    "HyperFrames project root, links packs/vendor/gsap.min.js and packs/%s.css exactly like the pack "
-                    "snippet, and its root composition div carries data-duration=\"%.2f\" (%d frames at 30 fps). "
-                    "No prose, no explanations, no second block." % (self.pack, self.target, frames))
-        return ("Deliver ONE fenced code block containing the COMPLETE Python file %s.py defining class %s(Scene). "
-                "It is rendered from skills/render-shorts/manim/ (manim.cfg applies): import from blai_layout and "
-                "blai_packs, Text()/Pango only, total animation time exactly %.2f s (%d frames at 30 fps). No prose, "
-                "no second block." % (self.sid, self.scene_class(), self.target, frames))
+            return ("Deliver ONE fenced code block containing the COMPLETE index.html for this scene, under 260 lines. "
+                    "It sits at the HyperFrames project root, links packs/vendor/gsap.min.js and packs/%s.css exactly "
+                    "like the pack snippet, keeps the snippet's root composition contract (data-composition-id, "
+                    "data-width/data-height, data-duration=\"%.2f\" = %d frames at 30 fps, the window.__timelines "
+                    "registration). Start the reply with the fence; no prose before or after it, no second block."
+                    % (self.pack, self.target, frames))
+        return ("Deliver ONE fenced code block containing the COMPLETE Python file %s.py, under 200 lines, defining "
+                "class %s(Scene). It is rendered from skills/render-shorts/manim/ (manim.cfg applies): import from "
+                "blai_layout and blai_packs, Text()/Pango only, total animation time exactly %.2f s (%d frames at 30 "
+                "fps). Start the reply with the fence; no prose before or after it, no second block."
+                % (self.sid, self.scene_class(), self.target, frames))
 
     def scene_class(self) -> str:
         return "Scene" + self.sid.upper()
@@ -183,10 +191,18 @@ class Worker:
         last = ""
         for provider, model in self.chain:
             try:
+                extra = {"thinking": {"type": "disabled"}} if provider == "zai" else None
                 text, usage = llm_call.complete(provider, model, system, user, max_tokens=self.a.max_tokens,
-                                                timeout=self.a.model_timeout)
+                                                timeout=self.a.model_timeout, extra_body=extra)
                 usage.update({"round": round_no, "provider": provider})
                 self.usage.append(usage)
+                (self.work / ("round-%d.response.md" % round_no)).write_text(text, encoding="utf-8")
+                if usage.get("finish_reason") == "length":
+                    # a truncated file never lints; make the next round shorten it instead of guessing
+                    text = "```\n" + extract_code(text) + "```\n"
+                    self.truncated = True
+                else:
+                    self.truncated = False
                 return text
             except RuntimeError as e:
                 last = str(e)
@@ -298,7 +314,9 @@ class Worker:
                 return 0
             code = extract_code(self.ask(round_no, code, report))
             self.write_file(code)
-            fails = self.static_checks()
+            fails = ["reply truncated at max_tokens (%d): the file must be shorter; drop decoration, keep the "
+                     "contract" % self.a.max_tokens] if getattr(self, "truncated", False) else []
+            fails += self.static_checks() if not fails else []
             mp4 = None
             if not fails:
                 mp4, err = self.render()
@@ -336,7 +354,7 @@ def main() -> int:
     ap.add_argument("--model", default=os.environ.get("BLAI_SCENE_MODEL", "glm-5.3-flash"))
     ap.add_argument("--fallback", default=os.environ.get("BLAI_SCENE_FALLBACK", "opencode-free:nemotron-3-ultra-free"))
     ap.add_argument("--max-rounds", type=int, default=3)
-    ap.add_argument("--max-tokens", type=int, default=6000)
+    ap.add_argument("--max-tokens", type=int, default=16000)
     ap.add_argument("--model-timeout", type=int, default=300)
     ap.add_argument("--dry-run", action="store_true", help="print prompt sizes and the provider chain; no calls")
     a = ap.parse_args()
