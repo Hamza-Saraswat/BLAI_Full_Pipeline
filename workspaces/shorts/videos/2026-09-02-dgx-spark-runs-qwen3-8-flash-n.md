@@ -2,18 +2,18 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: blocked
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T21:57:49Z"
+updated: "2026-09-05T22:04:07Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-05T21:57:44Z 06-voice fail 71s (voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb')
 - 2026-09-05T21:57:49Z 06-voice fail 5s (voice QA failed: WER 0.068, 5 mismatch(es): expected 'qwen three point' heard 'q one three'; expected 'gigabytes' heard 'gb'; expected '' heard 'gb')
 - 2026-09-05T21:57:49Z blocked at 06-voice
+- 2026-09-05T22:04:07Z build start on gn100-83c4
