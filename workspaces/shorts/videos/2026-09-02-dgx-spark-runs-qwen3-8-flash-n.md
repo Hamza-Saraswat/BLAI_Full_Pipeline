@@ -2,19 +2,19 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: ready-to-build
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T21:56:27Z"
+updated: "2026-09-05T21:56:30Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -41,3 +41,4 @@ blotato_post_id: ""
 - 2026-09-03T07:19:02Z 06-voice ok 33.96s
 - 2026-09-03T09:33:00Z 07-render ok 35.07s: 6/6 scenes (attempts 1,2,1,1,1,1), lint/safe-zone/loop all pass (ssim 0.837), gate card message_id 5, status review
 - 2026-09-05T21:56:27Z 2026-09-05 re-queued for the scripted render (scene_worker.py) with the creator voice clone; the 2026-09-03 stock-voice cut is superseded
+- 2026-09-05T21:56:30Z build start on gn100-83c4
