@@ -215,15 +215,24 @@ class Worker:
 
     # -- files + renders ------------------------------------------------------
     def hf_dir(self) -> pathlib.Path:
+        """A fresh per-scene HyperFrames project on the first call of a run: an agent worker may
+        have left files (or a dangling symlink, which .exists() reports as absent) in the same
+        directory on an earlier day (2026-09-05, s02)."""
         hf = self.work / "hf"
-        hf.mkdir(exist_ok=True)
-        src = self.skill / "hyperframes"
-        for name in ("hyperframes.json", "meta.json", "package.json", "package-lock.json"):
-            if (src / name).exists() and not (hf / name).exists():
-                shutil.copy2(src / name, hf / name)
-        for link in ("node_modules", "packs"):
-            if not (hf / link).exists():
-                os.symlink(src / link, hf / link)
+        if not getattr(self, "_hf_ready", False):
+            if hf.exists() or hf.is_symlink():
+                shutil.rmtree(hf, ignore_errors=True)
+            hf.mkdir(parents=True, exist_ok=True)
+            src = self.skill / "hyperframes"
+            for name in ("hyperframes.json", "meta.json", "package.json", "package-lock.json"):
+                if (src / name).exists():
+                    shutil.copy2(src / name, hf / name)
+            for link in ("node_modules", "packs"):
+                target = hf / link
+                if target.is_symlink() or target.exists():
+                    target.unlink() if target.is_symlink() else shutil.rmtree(target)
+                os.symlink(src / link, target)
+            self._hf_ready = True
         return hf
 
     def write_file(self, code: str) -> pathlib.Path:
