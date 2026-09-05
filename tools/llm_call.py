@@ -88,6 +88,45 @@ def provider_config(name: str) -> dict:
     raise SystemExit("llm_call: unknown provider %r (not built in, not in %s)" % (name, cfg_path))
 
 
+def complete(provider: str, model: str, system: str, user: str, max_tokens: int = 4000,
+             temperature: float | None = None, timeout: int = 300, base_url: str = "",
+             key_env: str = "") -> tuple:
+    """One chat completion for callers that import this module (scene_worker.py).
+
+    Returns (text, usage_dict). Raises RuntimeError with the HTTP status in the message on
+    provider errors so a caller can decide whether to fall back (429/5xx) or stop (4xx)."""
+    cfg = provider_config(provider)
+    base = (base_url or cfg.get("base_url", "")).rstrip("/")
+    kenv = key_env or cfg.get("key_env", "")
+    api_key = hermes_env(kenv) if kenv else ""
+    if kenv and not api_key:
+        raise RuntimeError("llm_call: %s is empty (env and ~/.hermes/.env)" % kenv)
+    body = {"model": model, "max_tokens": max_tokens,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+    if temperature is not None:
+        body["temperature"] = temperature
+    headers = {"Content-Type": "application/json"}
+    if api_key:
+        headers["Authorization"] = "Bearer " + api_key
+    req = urllib.request.Request(base + "/chat/completions", data=json.dumps(body).encode("utf-8"),
+                                 headers=headers, method="POST")
+    t0 = time.time()
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise RuntimeError("HTTP %d from %s: %s" % (e.code, base, e.read()[:300].decode("utf-8", "replace")))
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise RuntimeError("HTTP 000 %s unreachable: %s" % (base, e))
+    try:
+        text = data["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, TypeError):
+        raise RuntimeError("unexpected response shape: %s" % json.dumps(data)[:300])
+    usage = data.get("usage") or {}
+    return text, {"model": data.get("model", model), "prompt_tokens": usage.get("prompt_tokens"),
+                  "completion_tokens": usage.get("completion_tokens"), "seconds": round(time.time() - t0, 1)}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--provider", required=True)

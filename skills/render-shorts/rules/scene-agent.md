@@ -10,6 +10,8 @@ Scope: one Shorts scene (HyperFrames or Manim) or the final assembly. The storyb
 
 Read, in this order: this file, the tool rule file, `styles/<pack>.md`, your scene object (`narration`, `on_screen_text`, `visual_brief`, `render_notes`). The brief is the spec; do not add ideas beyond it. `render_notes` are producer hints: honor them, but they never override brand rules or linters.
 
+Since 2026-09-05 the default worker is `scripts/scene_worker.py`: it hands these same files to the scene model verbatim and runs the verification in rule 8 itself, three rounds at most. An agent worker (`--agent-render`) follows the five-attempt rule below.
+
 ## Format hard tokens (machine-checked, not negotiable)
 
 - Canvas 1080 x 1920 at 30 fps, H.264 / yuv420p. Loudness of the final cut about -14 LUFS (assembly owns audio; scene clips are silent).

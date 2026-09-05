@@ -265,7 +265,8 @@ def main() -> int:
 
     tgapi.load_env()
     repo = pathlib.Path(args.repo).resolve() if args.repo else tgapi.REPO_ROOT
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    # BLAI_GATE_BOT_TOKEN wins: on the Spark TELEGRAM_BOT_TOKEN may belong to Hermes's chat bot.
+    token = os.environ.get("BLAI_GATE_BOT_TOKEN", "") or os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
     if not args.dry_run and (not token or not chat_id):
         raise SystemExit("TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must be set")

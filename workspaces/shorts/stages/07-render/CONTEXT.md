@@ -1,6 +1,6 @@
 # Stage 07: Render
 
-Turn the storyboard, the narration and the captions into `final.mp4`, pass the machine gates, and send the Telegram gate card. Creative: the build agent runs this stage through Claude Code.
+Turn the storyboard, the narration and the captions into `final.mp4`, pass the machine gates, and send the Telegram gate card. Scripted since 2026-09-05: `build/stage_runner.py` runs the steps below in order and the model is called only inside `scene_worker.py`; an agent runs this stage only with `--agent-render` (interactive creative work).
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Turn the storyboard, the narration and the captions into `final.mp4`, pass the m
 ## Process
 
 1. Read the storyboard and the Timing table; set each scene's target duration from the captions (within 0.15 s).
-2. Render scenes per scene-workflow.md: one worker per scene, three in parallel, draft first, verify, then final; at most 5 attempts per scene with the exact error fed back; a scene that fails 5 times blocks the run.
+2. Cut one packet per scene (`scene_packets.py`), then run `scene_worker.py` per scene, one at a time: it reads scene-agent.md, the tool rules and the pack file verbatim, asks the scene model (`BLAI_SCENE_MODEL`, default glm-5.3-flash) for the file, renders, verifies (ffprobe, `safe_zone_check.py --scene --stills 9`, `lint_video.py`, the HyperFrames audits), and re-asks with the exact failure report at most 3 rounds; a scene that fails 3 rounds blocks the run. (An agent worker per scene-workflow.md is the `--agent-render` fallback.)
 3. Run `assemble.py --slug [slug] --storyboard [storyboard] --audio [narration.wav] --captions [captions.json] --scenes-dir [build-dir]/[slug]/scenes --out [build-dir]/[slug]/render`.
 4. Run `lint_video.py` and `safe_zone_check.py` on `final.mp4`; fix and re-assemble on failure.
 5. Run the audit checks below. If any fail, fix before sending the card; if they cannot be fixed, set the hub note to `blocked`.

@@ -68,8 +68,21 @@ SCRIPT = {
     "captions": SKILLS / "elevenlabs-narration" / "scripts" / "captions.py",
     "publish": SKILLS / "blotato-publish" / "scripts" / "publish.py",
     "send_card": SKILLS / "telegram-gate" / "scripts" / "send_card.py",
+    "scene_timing": SKILLS / "render-shorts" / "scripts" / "scene_timing.py",
+    "scene_packets": SKILLS / "render-shorts" / "scripts" / "scene_packets.py",
+    "scene_worker": SKILLS / "render-shorts" / "scripts" / "scene_worker.py",
+    "assemble": SKILLS / "render-shorts" / "scripts" / "assemble.py",
+    "render_note": SKILLS / "render-shorts" / "scripts" / "render_note.py",
 }
 PY = sys.executable or "python3"
+RENDER_SKILL = SKILLS / "render-shorts"
+# The scripted render (2026-09-05) is the default; --agent-render (or BLAI_AGENT_RENDER=1) keeps
+# the claude -p path for interactive creative work. Scene model seats come from the env so the
+# seat map lives in build/.env, not here.
+AGENT_RENDER = ("--agent-render" in sys.argv[1:]
+                or (os.environ.get("BLAI_AGENT_RENDER") or "").strip().lower() not in ("", "0", "false", "no"))
+SCENE_TIMEOUT = 30 * 60
+ASSEMBLE_TIMEOUT = 40 * 60
 
 # Timeouts (seconds)
 CLAUDE_TIMEOUT = 2 * 3600
@@ -384,8 +397,82 @@ def stage_voice_shorts(ctx: Ctx) -> str:
 
 
 # -- render (shorts 07) -------------------------------------------------------
+def _scene_key(path: pathlib.Path) -> tuple:
+    """s1, s2, ... s10 in numeric order (ids are 's<N>' or 's0N')."""
+    m = re.search(r"(\d+)", path.name)
+    return (int(m.group(1)) if m else 0, path.name)
+
+
+def _render_scripted(ctx: Ctx, stage: str) -> None:
+    """scene_timing -> scene_packets -> scene_worker per scene (sequential) -> assemble -> render note
+    -> hub review -> gate card. No agent session; the model is called only inside scene_worker."""
+    storyboard = ctx.stage_out("04-script", "storyboard.json")
+    voice = ctx.build / "voice"
+    wav, captions = voice / "narration.wav", voice / "captions.json"
+    for p, what in ((storyboard, "storyboard"), (wav, "narration.wav"), (captions, "captions.json")):
+        ctx.require(p, what)
+    timing = ctx.build / "timing.json"
+    ctx.run([PY, SCRIPT["scene_timing"], "--storyboard", storyboard, "--captions", captions, "--out", timing],
+            "scene_timing", timeout=120)
+    packets = ctx.build / "scenes-work"
+    ctx.run([PY, SCRIPT["scene_packets"], "--storyboard", storyboard, "--timing", timing, "--out", packets],
+            "scene_packets", timeout=60)
+    scenes, workers = ctx.build / "scenes", ctx.build / "workers"
+    if not ctx.dry_run:
+        scenes.mkdir(parents=True, exist_ok=True)
+    packet_files = sorted(packets.glob("*-packet.json"), key=_scene_key) if packets.exists() else []
+    if ctx.dry_run and not packet_files:
+        ctx.plan("scene_worker.py per packet in %s (sequential, 3 rounds each)" % packets)
+    for packet in packet_files:
+        sid = packet.name[:-len("-packet.json")]
+        clip = scenes / ("%s.mp4" % sid)
+        if clip.exists() and not ctx.fresh:
+            ctx.say("scene %s: reusing %s (pass --fresh to re-render)" % (sid, clip))
+            continue
+        res = ctx.run([PY, SCRIPT["scene_worker"], "--packet", packet, "--work-dir", workers / sid,
+                       "--scenes-dir", scenes], "scene-" + sid, timeout=SCENE_TIMEOUT, check=False)
+        if not ctx.dry_run and res.returncode != 0:
+            raise StageError("%s: scene %s failed: %s" % (stage, sid, _tail(res.stdout or res.stderr, 4)))
+    render = ctx.build / "render"
+    res = ctx.run([PY, SCRIPT["assemble"], "--slug", ctx.slug, "--storyboard", storyboard, "--audio", wav,
+                   "--captions", captions, "--scenes-dir", scenes, "--out", render],
+                  "assemble", cwd=RENDER_SKILL, timeout=ASSEMBLE_TIMEOUT, check=False)
+    info = _parse_json(res.stdout) if not ctx.dry_run else {}
+    info = info if isinstance(info, dict) else {}
+    if not ctx.dry_run:
+        if res.returncode != 0 or not (render / "final.mp4").exists():
+            raise StageError("%s: assemble.py exited %d: %s" % (stage, res.returncode, _tail(res.stderr or res.stdout, 5)))
+        (render / "assemble.json").write_text(json.dumps(info, indent=2) + "\n", encoding="utf-8")
+        if not (info.get("lint_ok") and info.get("safe_zone_ok")):
+            raise StageError("%s: release gates failed: lint_ok=%s safe_zone_ok=%s warnings=%s" % (
+                stage, info.get("lint_ok"), info.get("safe_zone_ok"), (info.get("warnings") or [])[:3]))
+    note = ctx.stage_out(stage, "render.md")
+    message_id = ""
+    if ctx.local:
+        _local_gate_card(ctx, stage)
+    else:
+        ctx.hub_update(status="review")
+        card = ctx.run([PY, SCRIPT["send_card"], "--kind", "gate", "--hub", ctx.note, "--video", render / "final.mp4"],
+                       "gate-card", timeout=CARD_TIMEOUT, check=False)
+        if not ctx.dry_run:
+            if card.returncode != 0:
+                raise StageError("%s: send_card.py exited %d: %s" % (stage, card.returncode, _tail(card.stderr or card.stdout, 3)))
+            got = _parse_json(card.stdout) or {}
+            message_id = str(got.get("message_id") or "")
+    ctx.run([PY, SCRIPT["render_note"], "--slug", ctx.slug, "--assemble-json", render / "assemble.json",
+             "--workers-dir", workers, "--timing", timing, "--voice-json", voice / "voice.json", "--out", note,
+             "--card-message-id", message_id], "render_note", timeout=60)
+    if not ctx.dry_run:
+        ctx.journal("%s ok %.2fs: %d scenes via scene_worker.py, lint %s, safe-zone %s, loop %s, card message_id %s"
+                    % (stage, float(info.get("duration_s") or 0), len(packet_files), info.get("lint_ok"),
+                       info.get("safe_zone_ok"), info.get("loop_ok"), message_id or "none"))
+
+
 def _render(ctx: Ctx, stage: str) -> str:
-    ctx.claude(UNATTENDED.format(stage=stage, slug=ctx.slug, build=ctx.build), stage, max_turns=200)
+    if AGENT_RENDER:
+        ctx.claude(UNATTENDED.format(stage=stage, slug=ctx.slug, build=ctx.build), stage, max_turns=200)
+    else:
+        _render_scripted(ctx, stage)
     checks = [(ctx.build / "render" / "final.mp4", "final.mp4"),
               (ctx.stage_out(stage, "render.md"), "render note")]
     if ctx.dry_run:
@@ -397,13 +484,14 @@ def _render(ctx: Ctx, stage: str) -> str:
             ctx.plan("verify hub status == review (the stage sends the gate card)")
         return "dry-run"
     missing = [what for p, what in checks if not (p.exists() and p.stat().st_size > 0)]
-    if ctx.local:  # no Telegram token here: print the card the Spark would send, then open the gate
+    if ctx.local and AGENT_RENDER:  # no Telegram token here: print the card the Spark would send, then open the gate
         _local_gate_card(ctx, stage)
     status = ctx.refresh().get("status")
     if status != "review":
         missing.append("hub status is %r, expected review" % status)
     if missing:
-        raise StageError("%s: after claude -p: %s" % (stage, "; ".join(missing)))
+        raise StageError("%s: after %s: %s" % (stage, "claude -p" if AGENT_RENDER else "the scripted render",
+                                               "; ".join(missing)))
     ctx.link_artifact("Render", stage, ctx.slug + "-render")
     return "render ok, status=review"
 
