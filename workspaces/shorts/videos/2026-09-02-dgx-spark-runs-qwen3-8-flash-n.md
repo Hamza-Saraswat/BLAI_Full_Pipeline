@@ -2,19 +2,19 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: blocked
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T22:15:20Z"
+updated: "2026-09-05T22:17:01Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "\"07-render: 07-render: scene s02 failed: ^^^^^^^^^^^^^"
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\""
+blocked_reason: ""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -64,3 +64,4 @@ blotato_post_id: ""
   File "/home/buildlocalai/blai/repo/skills/render-shorts/scripts/scene_worker.py", line 226, in hf_dir
     os.symlin)
 - 2026-09-05T22:15:20Z blocked at 07-render
+- 2026-09-05T22:17:01Z build start on gn100-83c4
