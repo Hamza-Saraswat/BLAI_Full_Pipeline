@@ -1,6 +1,6 @@
 # Voice: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 
-Stage 06-voice on gn100-83c4 at 2026-09-05T22:08:59Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/voice/` (binaries are never committed).
+Stage 06-voice on gn100-83c4 at 2026-09-05T22:17:09Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/voice/` (binaries are never committed).
 
 | Field | Value |
 |-------|-------|
