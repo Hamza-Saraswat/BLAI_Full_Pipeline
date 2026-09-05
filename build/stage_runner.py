@@ -397,6 +397,14 @@ def stage_voice_shorts(ctx: Ctx) -> str:
 
 
 # -- render (shorts 07) -------------------------------------------------------
+def _clip_duration(mp4: pathlib.Path) -> float:
+    res = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp4)],
+                         capture_output=True, text=True, timeout=60)
+    if res.returncode != 0:
+        raise ValueError("ffprobe exit %d" % res.returncode)
+    return float(res.stdout.strip())
+
+
 def _scene_key(path: pathlib.Path) -> tuple:
     """s1, s2, ... s10 in numeric order (ids are 's<N>' or 's0N')."""
     m = re.search(r"(\d+)", path.name)
@@ -426,9 +434,20 @@ def _render_scripted(ctx: Ctx, stage: str) -> None:
     for packet in packet_files:
         sid = packet.name[:-len("-packet.json")]
         clip = scenes / ("%s.mp4" % sid)
-        if clip.exists() and not ctx.fresh:
-            ctx.say("scene %s: reusing %s (pass --fresh to re-render)" % (sid, clip))
-            continue
+        if clip.exists() and not ctx.fresh and not ctx.dry_run:
+            # Reuse only a clip that still fits ITS scene's window: a re-voiced narration moves
+            # every target (2026-09-05: six stale clips were reused under a 6 s longer narration).
+            try:
+                pk = json.loads(packet.read_text(encoding="utf-8"))
+                have = _clip_duration(clip)
+                if abs(have - float(pk["target_duration_s"])) <= float(pk.get("tolerance_s", 0.15)):
+                    ctx.say("scene %s: reusing %s (%.2fs fits target %.2fs; pass --fresh to re-render)"
+                            % (sid, clip, have, float(pk["target_duration_s"])))
+                    continue
+                ctx.say("scene %s: stale clip %.2fs vs target %.2fs; re-rendering" % (sid, have, float(pk["target_duration_s"])))
+            except (ValueError, KeyError, OSError) as e:
+                ctx.say("scene %s: cannot verify the existing clip (%s); re-rendering" % (sid, e))
+            clip.unlink()
         res = ctx.run([PY, SCRIPT["scene_worker"], "--packet", packet, "--work-dir", workers / sid,
                        "--scenes-dir", scenes], "scene-" + sid, timeout=SCENE_TIMEOUT, check=False)
         if not ctx.dry_run and res.returncode != 0:
@@ -447,6 +466,13 @@ def _render_scripted(ctx: Ctx, stage: str) -> None:
             raise StageError("%s: release gates failed: lint_ok=%s safe_zone_ok=%s warnings=%s" % (
                 stage, info.get("lint_ok"), info.get("safe_zone_ok"), (info.get("warnings") or [])[:3]))
     note = ctx.stage_out(stage, "render.md")
+
+    def write_note(message_id: str) -> None:
+        ctx.run([PY, SCRIPT["render_note"], "--slug", ctx.slug, "--assemble-json", render / "assemble.json",
+                 "--workers-dir", workers, "--timing", timing, "--voice-json", voice / "voice.json", "--out", note,
+                 "--card-message-id", message_id or "pending"], "render_note", timeout=60)
+
+    write_note("")  # the note exists BEFORE any card goes out: a note failure must never follow a sent card
     message_id = ""
     if ctx.local:
         _local_gate_card(ctx, stage)
@@ -459,9 +485,7 @@ def _render_scripted(ctx: Ctx, stage: str) -> None:
                 raise StageError("%s: send_card.py exited %d: %s" % (stage, card.returncode, _tail(card.stderr or card.stdout, 3)))
             got = _parse_json(card.stdout) or {}
             message_id = str(got.get("message_id") or "")
-    ctx.run([PY, SCRIPT["render_note"], "--slug", ctx.slug, "--assemble-json", render / "assemble.json",
-             "--workers-dir", workers, "--timing", timing, "--voice-json", voice / "voice.json", "--out", note,
-             "--card-message-id", message_id], "render_note", timeout=60)
+            write_note(message_id)
     if not ctx.dry_run:
         ctx.journal("%s ok %.2fs: %d scenes via scene_worker.py, lint %s, safe-zone %s, loop %s, card message_id %s"
                     % (stage, float(info.get("duration_s") or 0), len(packet_files), info.get("lint_ok"),

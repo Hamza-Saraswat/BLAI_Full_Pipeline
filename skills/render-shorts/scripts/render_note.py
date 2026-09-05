@@ -19,6 +19,15 @@ import pathlib
 import sys
 
 
+def _cue(c) -> str:
+    """assemble.py emits sfx cues as dicts ({sfx|name, at_ms|ms|start_ms}); older notes wrote 'pop@0ms'."""
+    if isinstance(c, dict):
+        name = c.get("sfx") or c.get("name") or c.get("id") or "sfx"
+        at = c.get("at_ms", c.get("ms", c.get("start_ms", "")))
+        return "%s@%sms" % (name, at) if at != "" else str(name)
+    return str(c)
+
+
 def load(path: str, default):
     p = pathlib.Path(path) if path else None
     if not p or not p.exists():
@@ -66,7 +75,7 @@ def main() -> int:
              "- Length: %.2f s; narration %.2f s" % (dur, narr),
              "- Scenes: %d/%d storyboard scenes rendered (%s)" % (len(rendered), len(order), ", ".join(rendered) or "none"),
              "- Captions: %s words; sfx cues %s; music %s" % (asm.get("caption_words", ""),
-                                                            ", ".join(asm.get("sfx_cues") or []) or "none",
+                                                            ", ".join(_cue(c) for c in (asm.get("sfx_cues") or [])) or "none",
                                                             asm.get("music") or "none"), "",
              "## Scene timings and attempts", "",
              "| Scene | Target s | Delivered s | Attempts | Model | Flags |", "|-------|----------|-------------|----------|-------|-------|"]
