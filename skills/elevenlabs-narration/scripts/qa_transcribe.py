@@ -170,6 +170,7 @@ def join_hyphens(text: str) -> str:
 
 def normalize_words(text: str) -> list:
     text = join_hyphens(text.lower()).replace("-", " ").replace("/", " ")
+    text = re.sub(r"(\d)\s+\.(\d)", r"\1.\2", text)  # whisper writes "3 .8" for "3.8"
     text = spell_numbers(text)
     text = re.sub(r"[^a-z0-9' ]+", " ", text)
     text = canonicalize_heard(" " + re.sub(r"\s+", " ", text) + " ").strip()
@@ -414,9 +415,11 @@ def main() -> int:
         for t in toks:
             hyp.append(t)
             hyp_times.append(float(w.get("start", 0.0)))
-    # collapse spelled letters across word boundaries ("d", "g", "x" arriving as separate words)
+    # collapse spelled letters across word boundaries ("d", "g", "x" arriving as separate words) and
+    # let multi-word heard-as variants ("tokens a second") canonicalize: the per-word pass above
+    # cannot see phrases, so the joined pass wins whenever it differs at all
     hyp_joined = normalize_words(" ".join(hyp))
-    if len(hyp_joined) != len(hyp):
+    if hyp_joined != hyp:
         times = []
         k = 0
         for t in hyp_joined:
