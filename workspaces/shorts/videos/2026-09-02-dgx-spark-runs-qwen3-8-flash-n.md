@@ -9,16 +9,16 @@ format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T23:25:09Z"
+updated: "2026-09-05T23:37:53Z"
 publish_slot: "2026-09-05T18:31:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\\\\\\\\""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ed690d6c-c08b-482c-a10e-4cb2c05eb9ed
+blotato_post_id: e9c74c00-5ce8-4af6-b7af-66e2ea39d8d0
 ---
 # DGX Spark runs Qwen3.8-Flash-Next at 43 tok/s in coding
 
