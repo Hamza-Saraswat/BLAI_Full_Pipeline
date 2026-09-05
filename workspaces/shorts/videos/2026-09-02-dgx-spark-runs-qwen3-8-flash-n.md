@@ -2,19 +2,19 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: review
+status: approved
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T22:44:54Z"
+updated: "2026-09-05T23:15:34Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -75,3 +75,4 @@ blotato_post_id: ""
 - 2026-09-05T22:44:58Z 07-render ok 41.23s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 13
 - 2026-09-05T22:44:58Z 07-render ok 118s
 - 2026-09-05T22:45:00Z build done, status review
+- 2026-09-05T23:15:34Z telegram approve (approved_at 2026-09-05T23:15:34Z)
