@@ -1,6 +1,6 @@
 # Voice: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 
-Stage 06-voice on gn100-83c4 at 2026-09-05T22:04:21Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/voice/` (binaries are never committed).
+Stage 06-voice on gn100-83c4 at 2026-09-05T22:05:52Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/voice/` (binaries are never committed).
 
 | Field | Value |
 |-------|-------|
@@ -13,14 +13,12 @@ Stage 06-voice on gn100-83c4 at 2026-09-05T22:04:21Z. Audio lives in `$BLAI_BUIL
 | Model | chatterbox |
 | Alignment | whisper |
 | Credits estimate | 0 |
-| WER | 0.035 (threshold 0.03) |
-| QA | FAIL |
+| WER | 0.017 (threshold 0.03) |
+| QA | pass |
 
 ## Mismatches
-- at 3.5 s: expected "per", heard "a"
 - at 10.6 s: expected "point", heard ""
 - at 19.3 s: expected "", heard "gigabytes"
-- at 26.2 s: expected "per", heard "a"
 
 ## Files
 
