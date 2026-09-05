@@ -2,18 +2,18 @@
 slug: 2026-08-30-dgx-spark-has-128-gb-and-a-70b
 workspace: shorts
 title: "DGX Spark: a 70B at 2.7 tokens a second"
-status: blocked
+status: review
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-08-30
-updated: "2026-08-30T06:46:07Z"
+updated: "2026-09-05T23:27:38Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "telegram gate card undeliverable: chat not found (receiving account has never /start-ed @blai_gate_bot); render complete, final.mp4 gates green"
+blocked_reason: ""
 build_host: ""
 preview_url: ""
 youtube_url: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - 2026-08-30T04:57:24Z package: searchable title picked, seo 100, manifest written, check_outputs 0
 - 2026-08-30T05:11:53Z voice: chatterbox 4 chunks 109.16s, whisper alignment, wer 0.0787 WARN (local base.en floor), 3.417 wps; generate_audio engine-aware chunk limit fix
 - 2026-08-30T06:46:07Z render: 9/9 scenes (16 attempts), assembly 110.23s, -14 LUFS, lint PASS, safe-zone PASS, loop PASS ssim 0.949; gate card send FAILED x2: chat not found
+- 2026-09-05T23:27:38Z 2026-09-05 status blocked -> review: the gate card was delivered on 2026-08-30 (message 3) after the operator /start-ed the gate bot; the stale blocked_reason was never cleared
