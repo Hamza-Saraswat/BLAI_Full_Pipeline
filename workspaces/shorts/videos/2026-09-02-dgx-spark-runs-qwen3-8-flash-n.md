@@ -14,7 +14,7 @@ publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\""
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -70,3 +70,4 @@ blotato_post_id: ""
 - 2026-09-05T22:31:26Z 07-render fail 241s (07-render: scene s03 failed:  {"round": 2, "failures": ["safe_zone_check exit 1:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": [{"mod)
 - 2026-09-05T22:31:26Z blocked at 07-render
 - 2026-09-05T22:33:13Z build start on gn100-83c4
+- 2026-09-05T22:33:20Z 06-voice ok 5s
