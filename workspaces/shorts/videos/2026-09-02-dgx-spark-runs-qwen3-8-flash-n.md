@@ -2,18 +2,18 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: building
+status: blocked
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T22:05:44Z"
+updated: "2026-09-05T22:07:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "\"07-render: render_note exited 1: Traceback (most recent call last):"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -51,3 +51,8 @@ blotato_post_id: ""
 - 2026-09-05T22:04:21Z blocked at 06-voice
 - 2026-09-05T22:05:44Z build start on gn100-83c4
 - 2026-09-05T22:05:52Z 06-voice ok 5s
+- 2026-09-05T22:06:32Z 07-render fail 38s (render_note exited 1: Traceback (most recent call last):
+  File "/home/buildlocalai/blai/repo/skills/render-shorts/scripts/render_note.py", line 95, in <module>)
+- 2026-09-05T22:07:10Z 07-render fail 37s (render_note exited 1: Traceback (most recent call last):
+  File "/home/buildlocalai/blai/repo/skills/render-shorts/scripts/render_note.py", line 95, in <module>)
+- 2026-09-05T22:07:10Z blocked at 07-render
