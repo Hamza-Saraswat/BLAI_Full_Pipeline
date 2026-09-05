@@ -129,10 +129,50 @@ def spell_numbers(text: str) -> str:
     return re.sub(r"\d+", lambda m: number_to_words(int(m.group(0))), text)
 
 
+NUMBER_WORDS = set(w for w in (globals().get("ONES") or []) if w) | {
+    "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred",
+    "thousand", "million", "billion", "trillion"}
+_HEARD_AS: dict | None = None
+
+
+def heard_as_table() -> dict:
+    """{canonical: [variants]} from pronunciation_dictionary.json `_heard_as` (the one source for
+    how a transcriber writes a spoken term), plus a built-in floor for storage units."""
+    global _HEARD_AS
+    if _HEARD_AS is None:
+        table = {"gigabytes": ["gb"], "megabytes": ["mb"], "terabytes": ["tb"], "kilobytes": ["kb"]}
+        pd = pathlib.Path(__file__).resolve().parent.parent / "pronunciation_dictionary.json"
+        try:
+            table.update(json.loads(pd.read_text(encoding="utf-8")).get("_heard_as") or {})
+        except (OSError, ValueError):
+            pass
+        _HEARD_AS = {k.lower(): sorted({v.lower() for v in vs} | {k.lower()}, key=len, reverse=True)
+                     for k, vs in table.items()}
+    return _HEARD_AS
+
+
+def canonicalize_heard(text: str) -> str:
+    for canonical, variants in heard_as_table().items():
+        for v in variants:
+            if v != canonical:
+                text = re.sub(r"\b%s\b" % re.escape(v), canonical, text)
+    return text
+
+
+def join_hyphens(text: str) -> str:
+    """forty-three -> 'forty three' (number words stay two words, like the transcriber writes
+    them); multi-token -> 'multitoken' (compounds join, however the transcriber spaces them)."""
+    def repl(m):
+        a, b = m.group(1), m.group(2)
+        return "%s %s" % (a, b) if (a in NUMBER_WORDS or b in NUMBER_WORDS) else a + b
+    return re.sub(r"\b([a-z]+)-([a-z]+)\b", repl, text)
+
+
 def normalize_words(text: str) -> list:
-    text = text.lower().replace("-", " ").replace("/", " ")
+    text = join_hyphens(text.lower()).replace("-", " ").replace("/", " ")
     text = spell_numbers(text)
     text = re.sub(r"[^a-z0-9' ]+", " ", text)
+    text = canonicalize_heard(" " + re.sub(r"\s+", " ", text) + " ").strip()
     words = [w.strip("'") for w in text.split()]
     words = [w for w in words if w]
     out: list = []
@@ -395,11 +435,19 @@ def main() -> int:
             dist2, ops2 = align(ref2, hyp)
             if dist2 / float(len(ref2)) < dist / float(len(ref)):
                 ref, dist, ops, ref_used = ref2, dist2, ops2, "script+aliases"
-    wer = dist / float(len(ref))
     counts = {"ref_words": len(ref), "hyp_words": len(hyp),
               "sub": sum(1 for o in ops if o[0] == "sub"), "ins": sum(1 for o in ops if o[0] == "ins"),
               "del": sum(1 for o in ops if o[0] == "del")}
     mism = mismatches_from_ops(ops, ref, hyp, hyp_times)
+    # A run whose two sides are the same letters with different spacing ("multi token" vs
+    # "multitoken") is the transcriber's spacing, not a mis-spoken word: forgive it and the
+    # edit operations it cost (2026-09-05, first cloned-voice QA).
+    forgiven = [m for m in mism if m["expected"].replace(" ", "") == m["heard"].replace(" ", "") and m["expected"]]
+    for m in forgiven:
+        dist -= max(len(m["expected"].split()), len(m["heard"].split()))
+        counts["forgiven_spacing"] = counts.get("forgiven_spacing", 0) + 1
+    mism = [m for m in mism if m not in forgiven]
+    wer = max(0, dist) / float(len(ref))
     passed = wer <= args.threshold
     qa = {"wer": round(wer, 4), "threshold": args.threshold, "pass": passed, "engine": transcript["engine"],
           "reference": ref_used, "mismatches": mism, "counts": counts}

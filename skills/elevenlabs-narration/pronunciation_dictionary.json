@@ -1,5 +1,18 @@
 {
   "_doc": "Alias rules applied by scripts/generate_audio.py to the narration text BEFORE it is sent to ElevenLabs. Matching is case-sensitive and whole-word (a term is not replaced when it is glued to other letters or digits, so 'OpenAI' is untouched by an 'AI' rule and '128GB' by a 'GB' rule). Longer terms win over shorter ones ('KV cache' before 'KV'). The spelled-out alias is what the voice reads; captions.py maps the timing back onto the original script words, so the viewer still sees 'DGX'. Upgrade path: ElevenLabs pronunciation dictionaries (POST /v1/pronunciation-dictionaries/add-from-file with a PLS file, then pass pronunciation_dictionary_locators [{pronunciation_dictionary_id, version_id}] in each text-to-speech request, up to 3 per request). Alias rules work on every model; IPA/CMU phoneme rules only on the older Flash v2 / Turbo v2 / English v1 models, not on Multilingual v2 or v3. Keep this file as the source of truth and generate the PLS from it when you switch.",
+  "_heard_as_doc": "Used by scripts/qa_transcribe.py, not by the voice: how a transcriber writes a spoken term. Both the script and the transcript are canonicalized with this table before the word-error rate is computed, so 'GB' heard for a spoken 'gigabytes' or 'q one' heard for 'Kwen' is not counted as an error. Keys are the canonical spoken form (lower case), values the variants. Add a row when qa.json shows the same false mismatch twice.",
+  "_heard_as": {
+    "qwen": ["kwen", "quen", "q one", "q when", "kuen", "chwen"],
+    "gigabytes": ["gb", "gigs", "gigabyte"],
+    "megabytes": ["mb", "megabyte"],
+    "terabytes": ["tb", "terabyte"],
+    "kilobytes": ["kb", "kilobyte"],
+    "gigahertz": ["ghz"],
+    "megahertz": ["mhz"],
+    "tokens per second": ["tokens a second", "tok s", "tok per second", "tokens per sec"],
+    "dgx": ["d g x", "dg x"],
+    "vllm": ["v l l m", "vlm"]
+  },
   "aliases": {
     "DGX": "D G X",
     "GB10": "G B ten",

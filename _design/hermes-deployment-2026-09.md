@@ -103,6 +103,34 @@ resets 07:00) and 12:05 CT; regular build paused; ideas/produce paused pending t
 Structural fix proposed: a deterministic `scene_worker.py` (llm_call for code -> render -> lint
 -> at most 3 fix rounds) so scenes stop being full agent sessions.
 
+## 2026-09-05: where the credits went, and the scripted render
+
+Z.ai's formula (`(input x 6.9 + cached x 1.7 + output x 24) / 10,000` for GLM-5.3) on four days
+of ledger (2.48M fresh input, ~56M cached re-reads, 0.72M output): **73% of credits were
+context re-reads**; a build was ~2,000 credits, a bucket. Four bucket exhaustions Sept 2-3.
+The Sept-3 07:05 build succeeded (6/6 scenes, card message 5) but in the STOCK voice and from
+the CHAT bot: cron-launched sessions never saw `build/.env` (no `BLAI_VOICE_REF`, and
+`TELEGRAM_BOT_TOKEN` resolved to Hermes's own bot). GLM's vision tool was unavailable to the
+workers; they verified stills programmatically.
+
+Fixes, all live:
+- `build/.env` mirrored into `~/.hermes/.env` (21 keys; secrets included, mode 600; gateway
+  restarted). New `BLAI_GATE_BOT_TOKEN`, read first by `send_card.py`/`bot.py`, so the two bots
+  can never collide again. Every cron job delivers to `telegram:<chat id>` (the digests had no
+  target and were lost).
+- **Scripted render.** `skills/render-shorts/scripts/scene_worker.py` (rules read verbatim ->
+  one completion -> HyperFrames lint/validate/inspect -> render -> ffprobe/safe-zone/lint_video
+  -> at most 3 rounds), `scene_packets.py`, `render_note.py`; `build/stage_runner.py::_render`
+  runs them in order (agent path only behind `--agent-render`). Stage-07 contract step 2,
+  the render skill and `scene-agent.md` updated; validator 17/17.
+- First live scene (s06, GLM-5.3-Flash): round 1 pass, 4.33 s vs 4.32 target, 12,379 in /
+  1,767 out tokens = **~4.3 credits**, 66 s wall. Attempt 1 had failed 3 rounds because the
+  reply hit a 6K output cap (thinking mode ate the budget): fixed with `thinking: disabled` on
+  Z.ai, a 16K cap, saved raw replies, truncation reported as a named failure.
+- `blai-build` is now `--no-agent --script blai-build.sh` (`build.py --once` under a 16 GiB
+  systemd scope, up to three passes), paused until the schedule is re-enabled.
+- Z.ai tiers (docs): Lite 2K/5h + 10K/week; Pro 12K/60K; Max 28K/140K. Off-peak 50%.
+
 ## Still parked
 
 Tailscale SSH `check` mode (`tailscale set --ssh=false` from the LAN), `tailscale serve --bg
