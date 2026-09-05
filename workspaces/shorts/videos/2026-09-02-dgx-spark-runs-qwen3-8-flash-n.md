@@ -2,19 +2,19 @@
 slug: 2026-09-02-dgx-spark-runs-qwen3-8-flash-n
 workspace: shorts
 title: DGX Spark runs a 180B model at 43 tok/s
-status: building
+status: blocked
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-02
-updated: "2026-09-05T22:17:01Z"
+updated: "2026-09-05T22:31:26Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
-FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\""
+blocked_reason: "07-render: 07-render: scene s03 failed:  {\\"round\\": 2, \\"failures\\": [\\"safe_zone_check exit 1:\\"]}, {\\"round\\": 3, \\"failures\\": [\\"hyperframes inspect exit 1:\\"]}], \\"usage\\": [{\\"model\\": \\"glm-5.3-flash\\", \\"prompt_tokens\\": 12420, \\"completion_tokens\\": 2755, \\"finish_reason\\": \\"stop\\", \\"seconds\\": 42.1, \\"round\\": 1, \\"provider\\": \\"zai\\"}, {\\"model\\": \\"glm-5.3-flash\\", \\"prompt_tokens\\": 15000, \\"completion_tokens\\": 2421, \\"fin"
+FileExistsError: "[Errno 17] File exists: '/home/buildlocalai/blai/repo/skills/render-shorts/hyperframes/node_modules' -> '/home/buildlocalai/blai/builds/2026-09-02-dgx-spark-runs-qwen3-8-flash-n/workers/s\\\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -66,3 +66,6 @@ blotato_post_id: ""
 - 2026-09-05T22:15:20Z blocked at 07-render
 - 2026-09-05T22:17:01Z build start on gn100-83c4
 - 2026-09-05T22:17:09Z 06-voice ok 5s
+- 2026-09-05T22:27:24Z 07-render fail 613s (07-render: scene s03 failed: nd": 2, "failures": ["hyperframes inspect exit 124:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": [{"mod)
+- 2026-09-05T22:31:26Z 07-render fail 241s (07-render: scene s03 failed:  {"round": 2, "failures": ["safe_zone_check exit 1:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": [{"mod)
+- 2026-09-05T22:31:26Z blocked at 07-render
