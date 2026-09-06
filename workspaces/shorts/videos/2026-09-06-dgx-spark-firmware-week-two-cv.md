@@ -2,14 +2,14 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T20:58:10Z"
+updated: "2026-09-06T20:58:13Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -53,3 +53,4 @@ blotato_post_id: ""
 - 2026-09-06T20:53:54Z 06-voice fail 6s (voice QA failed: WER 0.043, 4 mismatch(es): expected 'point' heard ''; expected 'point' heard ''; expected 'fwupdmgr' heard 'flopdom grudger')
 - 2026-09-06T20:53:54Z blocked at 06-voice
 - 2026-09-06T20:58:10Z 2026-09-06 build cancelled by the operator mid-render and restarted fresh
+- 2026-09-06T20:58:13Z build start on gn100-83c4
