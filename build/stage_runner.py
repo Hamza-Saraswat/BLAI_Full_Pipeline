@@ -333,6 +333,17 @@ def _voice(ctx: Ctx, stage: str) -> str:
     source = ["--storyboard", storyboard]
     wav = out / "narration.wav"
     engine = ["--engine", "kokoro"] if ctx.local else []  # local test runs need no ElevenLabs key
+    # Reuse a narration only if it was made with the voice configured NOW: on 2026-09-06 a
+    # stock-voice narration from a session that had lost the env was reused under the clone.
+    want_ref = (os.environ.get("BLAI_VOICE_REF") or "").strip() or "stock"
+    have_ref = ""
+    try:
+        have_ref = str(json.loads((out / "chunks" / "00.json").read_text(encoding="utf-8")).get("ref") or "stock")
+    except (OSError, ValueError):
+        pass
+    if wav.exists() and have_ref and have_ref != want_ref and not ctx.fresh:
+        ctx.say("voice: existing narration used ref %s, configured %s; regenerating" % (have_ref, want_ref))
+        ctx.fresh = True
     if ctx.fresh or ctx.dry_run or not (wav.exists() and (out / "voice.json").exists()):
         ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", "short", *engine],
                 "generate_audio", timeout=VOICE_TIMEOUT)
@@ -405,6 +416,26 @@ def _clip_duration(mp4: pathlib.Path) -> float:
     return float(res.stdout.strip())
 
 
+def _scene_failure_summary(sid: str, stdout: str, stderr: str) -> str:
+    """One human sentence from scene_worker's handback JSON (the raw dump was the blocked_reason
+    the operator saw on 2026-09-06: unreadable)."""
+    info = _parse_json(stdout)
+    if isinstance(info, dict) and info.get("history"):
+        rounds = len(info["history"])
+        last = info["history"][-1].get("failures") or []
+        gate = (last[0].split(" exit")[0] if last else "verification").replace("hyperframes ", "HyperFrames ")
+        tail = str(info.get("status", ""))
+        detail = ""
+        for line in tail.splitlines():
+            s = line.strip()
+            if s.startswith(("⚠", "✗", "x ", "duration", "resolution", "safe_zone")):
+                detail = s.lstrip("⚠✗x ").strip()[:110]
+                break
+        return "scene %s did not pass %s after %d round%s%s" % (sid, gate, rounds, "" if rounds == 1 else "s",
+                                                               (": " + detail) if detail else "")
+    return "scene %s failed: %s" % (sid, _tail(stderr or stdout, 2, 160))
+
+
 def _scene_key(path: pathlib.Path) -> tuple:
     """s1, s2, ... s10 in numeric order (ids are 's<N>' or 's0N')."""
     m = re.search(r"(\d+)", path.name)
@@ -451,7 +482,7 @@ def _render_scripted(ctx: Ctx, stage: str) -> None:
         res = ctx.run([PY, SCRIPT["scene_worker"], "--packet", packet, "--work-dir", workers / sid,
                        "--scenes-dir", scenes], "scene-" + sid, timeout=SCENE_TIMEOUT, check=False)
         if not ctx.dry_run and res.returncode != 0:
-            raise StageError("%s: scene %s failed: %s" % (stage, sid, _tail(res.stdout or res.stderr, 4)))
+            raise StageError("%s: %s" % (stage, _scene_failure_summary(sid, res.stdout, res.stderr)))
     render = ctx.build / "render"
     res = ctx.run([PY, SCRIPT["assemble"], "--slug", ctx.slug, "--storyboard", storyboard, "--audio", wav,
                    "--captions", captions, "--scenes-dir", scenes, "--out", render],

@@ -184,6 +184,30 @@ preflight, blocked hubs, staleness, GLM quota probe with reset time, Kimi balanc
 spend (alert over $10), today's scene credits, disk/GPU, cron states, R2. `_design/
 icm-token-audit-2026-09.md` answers "is ICM saving tokens" with the per-stage table.
 
+## 2026-09-06: first unattended morning, post-mortem
+
+What ran: preflight 05:45 ok; ideas 06:00 ok (two picks, FYI card 06:08); produce 06:30 ->
+`2026-09-06-dgx-spark-firmware-week-two-cv` ready-to-build by 07:31 (child session, K3
+writers); digest 08:00 (K3); health 08:05. Then three defects:
+1. The 08:35 build took the OLDEST ready-to-build note, the Sept-2 "Claude Code went rogue"
+   Short (the operator read "claude code" in the card as Claude Code running the factory; no
+   `claude -p` ran anywhere, the scripted render is the only path). It reused that note's
+   stock-voice narration from Sept 3, then scene s02 failed `inspect --strict` 3+3 rounds
+   (container overflow) and the note blocked with the worker's JSON as the reason. My
+   `blai-build.sh` stopped at the first non-zero pass, so today's Short never got a pass.
+2. The 10:35 build fired but collided with the publish poller's lock on the :30 tick and exited
+   ("another pass holds the lock").
+3. Messages: the blocked card carried a JSON dump; the health report was dense; the poller and
+   build jobs delivered their raw stdout to Telegram on every run; ideas/produce delivered the
+   agent's full report.
+Fixes: build script keeps passing until "nothing to do" and retries a held lock; build passes
+at 08:35/10:35/12:35 (off the poller grid); voice reuse checks the recorded ref against
+`BLAI_VOICE_REF`; scene failures become one sentence (`_scene_failure_summary`); worker
+rounds 5 with escalation from round 3; blocked/gate/ideas cards rewritten for a human;
+`health_check.py` rewritten as a morning report (digest + marked health lines) with `--html`
+text cards; the K3 digest job removed (the report covers it, zero tokens); poller/build/
+ideas/produce/preflight deliveries set to local.
+
 Schedule re-enabled for one Short a day (fits Lite's 10K/week until stage 03-05 gets the same
 scripted treatment): 05:45 preflight · 06:00 ideas (GLM) · 06:30 produce, FIRST PICK ONLY
 (GLM child session, K3 writers) · 08:00 digest (K3) · 08:30 + 10:30 build (script) · publish

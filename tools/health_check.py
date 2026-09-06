@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
-"""Factory health: one daily report, plus alerts the moment something needs the operator.
+"""Factory health for a human: one daily message, plus alerts the moment something needs you.
 
-    python3 tools/health_check.py --mode daily  [--send]   # 08:05 CT: the full picture
+    python3 tools/health_check.py --mode daily  [--send]   # 08:05 CT: digest + health, ~15 short lines
     python3 tools/health_check.py --mode alerts [--send]   # hourly: only what is wrong, deduped 6 h
 
-Checks: user services (hermes-gateway, hermes-serve, blai-telegram-bot), tools/preflight.py,
-hub notes (blocked with reasons, counts by status, today's staleness), the GLM coding-plan
-quota (a 5-token probe: HTTP 429 = bucket empty, with Z.ai's reset time), the Kimi balance
-(Moonshot /v1/users/me/balance; alert when the 24 h drop exceeds --kimi-daily-limit dollars),
-today's scene-worker credits (from workers/*/handback.json, Z.ai's multipliers), disk and GPU
-headroom, cron job states, the R2 public host. State lives in build/state/health.json.
+Daily message = a DIGEST (what posted, what waits for your tap, what failed and why, what is in
+production today) followed by HEALTH marks: services, preflight, the GLM coding-plan quota (a
+5-token probe; HTTP 429 = bucket empty, with Z.ai's reset time), the Kimi balance and its 24 h
+spend (alert over --kimi-daily-limit dollars), today's scene-worker credits, disk, GPU, cron
+jobs, the R2 public host. Every line starts with a mark: ok, warning, or failed. No jargon
+dumps: the reason a Short blocked is one sentence. State lives in build/state/health.json.
 
-Delivery: --send posts through skills/telegram-gate/scripts/send_card.py --kind text (the gate
-bot). Without --send the text is printed. Exit 0 always (a cron job must not flap); --strict
-exits 1 when any alert fired. Stdlib only.
+Delivery: --send posts Telegram HTML through skills/telegram-gate/scripts/send_card.py
+--kind text --html (the gate bot). Without --send the text is printed. Exit 0 always;
+--strict exits 1 when an alert fired. Stdlib only.
 """
 from __future__ import annotations
 
 import argparse
 import datetime as dt
 import glob
+import html
 import json
 import os
 import pathlib
@@ -38,11 +39,16 @@ import hubnote  # noqa: E402
 WS = REPO / "workspaces" / "shorts"
 STATE = REPO / "build" / "state" / "health.json"
 SERVICES = ("hermes-gateway.service", "hermes-serve.service", "blai-telegram-bot.service")
-STATUSES = ("idea", "researched", "scripted", "ready-to-build", "review", "approved", "scheduled",
-            "published", "rejected", "blocked")
-FLASH = (2.3, 0.56, 8.0)  # input, cached, output multipliers per 10K tokens (Z.ai docs)
+FLASH = (2.3, 0.56, 8.0)  # input, cached, output credit multipliers per 10K tokens (Z.ai docs)
 GLM53 = (6.9, 1.7, 24.0)
 DEDUPE_S = 6 * 3600
+OK, WARN, FAIL = "✅", "⚠️", "❌"
+STAGE_WORDS = {"01-radar": "radar", "02-ideas": "ideas", "03-research": "research", "04-script": "script",
+               "05-package": "package", "06-voice": "voice", "07-render": "render", "08-publish": "publish"}
+
+
+def esc(s) -> str:
+    return html.escape(str(s), quote=False)
 
 
 def sh(cmd, timeout=60, env=None) -> tuple:
@@ -57,11 +63,33 @@ def now_local() -> dt.datetime:
     return dt.datetime.now().astimezone()
 
 
+def human_reason(reason: str) -> str:
+    reason = (reason or "").strip()
+    stage = ""
+    changed = True
+    while changed:
+        changed = False
+        for key, word in STAGE_WORDS.items():
+            if reason.startswith(key + ":"):
+                reason, stage, changed = reason[len(key) + 1:].strip(), word, True
+    reason = reason.split("\n")[0][:140] or "no reason recorded"
+    return ("%s stage: %s" % (stage, reason)) if stage else reason
+
+
+def fmt_slot(iso: str) -> str:
+    try:
+        t = dt.datetime.fromisoformat(str(iso).strip('"'))
+        return t.strftime("%a %H:%M")
+    except ValueError:
+        return str(iso)
+
+
 class Health:
     def __init__(self, a):
         self.a = a
         self.alerts: list = []   # (fingerprint, text)
-        self.lines: list = []    # daily report lines
+        self.health: list = []   # (mark, text)
+        self.digest: list = []
         self.state = self.load_state()
 
     # -- state ----------------------------------------------------------------
@@ -78,19 +106,52 @@ class Health:
     def alert(self, key: str, text: str) -> None:
         self.alerts.append((key, text))
 
-    # -- checks ---------------------------------------------------------------
+    def mark(self, ok, text: str) -> None:
+        self.health.append((OK if ok else WARN, text))
+
+    # -- digest ---------------------------------------------------------------
+    def build_digest(self) -> None:
+        since = (now_local() - dt.timedelta(hours=36)).strftime("%Y-%m-%d")
+        rows = []
+        for p in hubnote.find(WS):
+            meta, _ = hubnote.read(p)
+            rows.append(meta)
+        posted = [m for m in rows if m.get("status") == "published" and str(m.get("updated", ""))[:10] >= since]
+        waiting = [m for m in rows if m.get("status") == "review"]
+        scheduled = [m for m in rows if m.get("status") == "scheduled"]
+        blocked = [m for m in rows if m.get("status") == "blocked"]
+        today = now_local().strftime("%Y-%m-%d")
+        producing = [m for m in rows if str(m.get("slug", "")).startswith(today)
+                     and m.get("status") in ("idea", "researched", "scripted", "ready-to-build")]
+        for m in posted:
+            self.digest.append("▶️ <b>Posted:</b> %s\n%s" % (esc(m.get("title") or m.get("slug")), esc(m.get("youtube_url") or "")))
+        for m in scheduled:
+            self.digest.append("⏰ <b>Posting %s:</b> %s" % (fmt_slot(m.get("publish_slot", "")), esc(m.get("title") or m.get("slug"))))
+        for m in waiting:
+            self.digest.append("\U0001f3ac <b>Waiting for your tap:</b> %s (its card is in this chat)" % esc(m.get("title") or m.get("slug")))
+        for m in blocked:
+            self.digest.append("%s <b>Failed:</b> %s\n%s. It retries on the next build pass; tap Retry on its card to go now."
+                               % (FAIL, esc(m.get("title") or m.get("slug")), esc(human_reason(str(m.get("blocked_reason") or "")))))
+            self.alert("blocked:" + str(m.get("slug")), "%s Build failed: %s. %s" % (FAIL, esc(m.get("title") or m.get("slug")),
+                                                                                   esc(human_reason(str(m.get("blocked_reason") or "")))))
+        for m in producing:
+            self.digest.append("\U0001f6e0 <b>In production:</b> %s (%s)" % (esc(m.get("title") or m.get("slug")), esc(m.get("status"))))
+        if not self.digest:
+            self.digest.append("Nothing moved in the last 36 hours.")
+
+    # -- health checks --------------------------------------------------------
     def services(self) -> None:
         if not shutil.which("systemctl"):
-            self.lines.append("services: systemctl not available here")
+            self.mark(True, "services: not checked on this host")
             return
         down = []
         for s in SERVICES:
             rc, out, _ = sh(["systemctl", "--user", "is-active", s], timeout=15)
             if out != "active":
-                down.append("%s=%s" % (s.replace(".service", ""), out or "unknown"))
+                down.append(s.replace(".service", ""))
         if down:
-            self.alert("services", "SERVICE DOWN: " + ", ".join(down))
-        self.lines.append("services: " + ("all 3 active" if not down else ", ".join(down)))
+            self.alert("services", "%s Service down: %s. Runs will not start until it is back." % (FAIL, ", ".join(down)))
+        self.mark(not down, "services: " + ("all running" if not down else "DOWN: " + ", ".join(down)))
 
     def preflight(self) -> None:
         rc, out, err = sh([sys.executable, REPO / "tools" / "preflight.py", "--quick", "--json"], timeout=120)
@@ -101,32 +162,20 @@ class Health:
             except ValueError:
                 continue
             if c.get("required") and not c.get("ok"):
-                failed.append("%s (%s)" % (c.get("check"), (c.get("detail") or "")[:60]))
+                failed.append(str(c.get("check")))
         if failed:
-            self.alert("preflight", "PREFLIGHT FAIL: " + "; ".join(failed))
-        self.lines.append("preflight: " + ("all required checks pass" if not failed else "; ".join(failed)))
+            self.alert("preflight", "%s Preflight failed: %s. Nothing will build until fixed." % (FAIL, ", ".join(failed)))
+        self.mark(not failed, "tools: " + ("all present" if not failed else "missing " + ", ".join(failed)))
 
-    def hubs(self) -> None:
-        counts = {}
-        blocked = []
-        for s in STATUSES:
-            paths = hubnote.find(WS, s)
-            if paths:
-                counts[s] = len(paths)
-            if s == "blocked":
-                for p in paths:
-                    meta, _ = hubnote.read(p)
-                    blocked.append("%s: %s" % (meta.get("slug"), str(meta.get("blocked_reason") or "")[:90]))
-        self.lines.append("hubs: " + (", ".join("%s %d" % (k, v) for k, v in counts.items()) or "none"))
-        for b in blocked:
-            self.alert("blocked:" + b.split(":")[0], "BLOCKED " + b)
+    def morning(self) -> None:
         today = now_local().strftime("%Y-%m-%d")
         ideas_note = WS / "stages" / "02-ideas" / "output" / ("%s-ideas.md" % today)
         hour = now_local().hour
         if hour >= 8 and not ideas_note.exists():
-            self.alert("stale-ideas", "NO IDEAS NOTE for %s by %02d:00 (the 06:00 job did not deliver)" % (today, hour))
-        self.lines.append("today: ideas note %s; hubs in review %d, scheduled %d" % (
-            "present" if ideas_note.exists() else "absent", counts.get("review", 0), counts.get("scheduled", 0)))
+            self.alert("stale-ideas", "%s No ideas run today by %02d:00. Tomorrow's 06:00 job will try again; ask me if you want it now." % (WARN, hour))
+            self.mark(False, "morning run: no ideas note today")
+        else:
+            self.mark(True, "morning run: ideas note %s" % ("present" if ideas_note.exists() else "not due yet"))
 
     def glm_quota(self) -> None:
         sysf, userf = REPO / "build" / "state" / "probe-sys.txt", REPO / "build" / "state" / "probe-user.txt"
@@ -137,43 +186,43 @@ class Health:
                            "--system-file", sysf, "--user-file", userf, "--max-tokens", "3"], timeout=60)
         msg = (err or out)[-300:]
         if rc == 0:
-            self.lines.append("glm: coding plan answering (probe ok)")
+            self.mark(True, "GLM plan: answering")
         elif "429" in msg and "limit" in msg.lower():
             reset = ""
             for tok in msg.split():
                 if tok.startswith("20") and ":" in tok:
                     reset = tok.strip("'\"}]).,")
-            self.alert("glm-quota", "GLM QUOTA REACHED (Z.ai coding plan)%s. Builds and produce will fail until then; free fallback covers scene code only."
-                       % ((" - resets " + reset + " Beijing") if reset else ""))
-            self.lines.append("glm: QUOTA REACHED %s" % reset)
+            self.alert("glm-quota", "%s GLM plan limit reached. Builds and scripts pause until the reset%s; free fallback covers scene code only."
+                       % (WARN, (" (" + reset + " Beijing time)") if reset else ""))
+            self.mark(False, "GLM plan: LIMIT REACHED%s" % ((", resets " + reset) if reset else ""))
         else:
-            self.alert("glm-error", "GLM PROBE FAILED: %s" % msg[-160:])
-            self.lines.append("glm: probe failed (%s)" % msg[-80:])
+            self.alert("glm-error", "%s GLM did not answer the probe: %s" % (WARN, esc(msg[-120:])))
+            self.mark(False, "GLM plan: probe failed")
 
     def kimi(self) -> None:
         key = os.environ.get("KIMI_API_KEY", "").strip()
         if not key:
-            self.lines.append("kimi: KIMI_API_KEY not in env; balance unknown")
+            self.mark(False, "Kimi: key not in env, balance unknown")
             return
-        req = urllib.request.Request("https://api.moonshot.ai/v1/users/me/balance",
-                                     headers={"Authorization": "Bearer " + key})
+        req = urllib.request.Request("https://api.moonshot.ai/v1/users/me/balance", headers={"Authorization": "Bearer " + key})
         try:
             with urllib.request.urlopen(req, timeout=20) as r:
                 bal = float((json.loads(r.read().decode("utf-8")).get("data") or {}).get("available_balance"))
         except Exception as e:  # noqa: BLE001
-            self.lines.append("kimi: balance query failed (%s)" % str(e)[:80])
+            self.mark(False, "Kimi: balance query failed (%s)" % esc(str(e)[:60]))
             return
         readings = [x for x in self.state.get("kimi", []) if time.time() - x["t"] < 8 * 86400]
         readings.append({"t": time.time(), "balance": bal})
         self.state["kimi"] = readings[-400:]
         older = [x for x in readings if time.time() - x["t"] >= 86400 - 1800]
         base = older[-1]["balance"] if older else readings[0]["balance"]
-        spent = round(base - bal, 2)
-        self.lines.append("kimi: balance $%.2f; spent last 24h $%.2f (limit $%.0f/day)" % (bal, max(0.0, spent), self.a.kimi_daily_limit))
+        spent = max(0.0, round(base - bal, 2))
+        ok = spent <= self.a.kimi_daily_limit and bal >= self.a.kimi_min_balance
+        self.mark(ok, "Kimi: $%.2f left, $%.2f spent in 24h (limit $%.0f/day)" % (bal, spent, self.a.kimi_daily_limit))
         if spent > self.a.kimi_daily_limit:
-            self.alert("kimi-spend", "KIMI SPEND $%.2f IN 24H exceeds the $%.0f/day limit (balance $%.2f)" % (spent, self.a.kimi_daily_limit, bal))
+            self.alert("kimi-spend", "%s Kimi spent $%.2f in 24h, over the $%.0f/day limit. Check the Moonshot console for what used it." % (WARN, spent, self.a.kimi_daily_limit))
         if bal < self.a.kimi_min_balance:
-            self.alert("kimi-balance", "KIMI BALANCE LOW: $%.2f (top up before the writers stall)" % bal)
+            self.alert("kimi-balance", "%s Kimi balance is $%.2f. Top up or the script writers stall." % (WARN, bal))
 
     def scene_credits(self) -> None:
         today = now_local().date()
@@ -190,30 +239,30 @@ class Health:
             for u in d.get("usage") or []:
                 m = FLASH if "flash" in str(u.get("model", "")) else GLM53
                 tot += ((u.get("prompt_tokens") or 0) * m[0] + (u.get("completion_tokens") or 0) * m[2]) / 10000.0
-        self.lines.append("scene credits today: ~%.0f over %d scene(s), %d failed (standard rate; off-peak halves it)" % (tot, scenes, fails))
+        self.mark(True, "GLM spent today: ~%.0f credits on %d scene%s%s" % (tot, scenes, "" if scenes == 1 else "s",
+                                                                          (", %d failed" % fails) if fails else ""))
 
     def resources(self) -> None:
         try:
             du = shutil.disk_usage(str(BUILD_DIR if BUILD_DIR.exists() else pathlib.Path.home()))
             free_pct = 100.0 * du.free / du.total
-            self.lines.append("disk: %.0f%% free (%.0f GB)" % (free_pct, du.free / 1e9))
+            self.mark(free_pct >= 10, "disk: %.0f%% free" % free_pct)
             if free_pct < 10:
-                self.alert("disk", "DISK LOW: %.0f%% free on the build volume" % free_pct)
+                self.alert("disk", "%s Disk is %.0f%% free. Renders will start failing." % (WARN, free_pct))
         except OSError:
             pass
-        # GB10 unified memory reports N/A for memory fields; utilization is the useful number
         rc, out, _ = sh(["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader"], timeout=20)
         if rc == 0 and out:
-            self.lines.append("gpu: utilization %s, %s C" % tuple(x.strip().replace(" %", "%") for x in out.splitlines()[0].split(",")[:2]))
+            parts = [x.strip().replace(" %", "%") for x in out.splitlines()[0].split(",")[:2]]
+            self.mark(True, "GPU: %s busy, %s C" % tuple(parts) if len(parts) == 2 else "GPU: " + out.splitlines()[0])
 
     def cron(self) -> None:
         hermes = shutil.which("hermes") or str(pathlib.Path.home() / ".local" / "bin" / "hermes")
         rc, out, _ = sh([hermes, "cron", "list", "--all"], timeout=60)
         if rc != 0:
-            self.lines.append("cron: hermes cron list failed")
+            self.mark(False, "schedule: could not list jobs")
             return
-        active, paused = [], []
-        cur = None
+        active, paused, cur = [], [], None
         for line in out.splitlines():
             s = line.strip()
             if s.endswith("[active]"):
@@ -221,42 +270,42 @@ class Health:
             elif s.endswith("[paused]"):
                 cur = "paused"
             elif s.startswith("Name:") and cur:
-                (active if cur == "active" else paused).append(s.split(":", 1)[1].strip())
+                (active if cur == "active" else paused).append(s.split(":", 1)[1].strip().replace("blai-", ""))
                 cur = None
-        self.lines.append("cron: %d active (%s)%s" % (len(active), ", ".join(active), ("; paused: " + ", ".join(paused)) if paused else ""))
+        self.mark(not paused, "schedule: %d jobs active%s" % (len(active), ("; paused: " + ", ".join(paused)) if paused else ""))
 
     def r2(self) -> None:
         base = os.environ.get("R2_PUBLIC_BASE_URL", "").strip()
         if not base:
             return
         try:
-            req = urllib.request.Request(base + "/", method="HEAD")
-            urllib.request.urlopen(req, timeout=15)
-            self.lines.append("r2: public host reachable")
+            urllib.request.urlopen(urllib.request.Request(base + "/", method="HEAD"), timeout=15)
+            self.mark(True, "video host: reachable")
         except Exception as e:  # noqa: BLE001
             code = getattr(e, "code", None)
             if code in (400, 403, 404):
-                self.lines.append("r2: public host reachable (HTTP %s on /)" % code)
+                self.mark(True, "video host: reachable")
             else:
-                self.alert("r2", "R2 PUBLIC HOST UNREACHABLE: %s" % str(e)[:80])
+                self.alert("r2", "%s The public video host is unreachable (%s). Posting will fail." % (FAIL, esc(str(e)[:60])))
+                self.mark(False, "video host: unreachable")
 
     # -- run ------------------------------------------------------------------
     def run(self) -> tuple:
+        self.build_digest()
         self.services()
         self.preflight()
-        self.hubs()
+        self.morning()
         self.glm_quota()
         self.kimi()
         self.scene_credits()
         self.resources()
         self.cron()
         self.r2()
-        stamp = now_local().strftime("%Y-%m-%d %H:%M %Z")
+        stamp = now_local().strftime("%a %b %-d, %H:%M")
         sent = self.state.setdefault("sent", {})
         fresh = []
         for key, text in self.alerts:
-            last = sent.get(key, 0)
-            if time.time() - last > DEDUPE_S:
+            if time.time() - sent.get(key, 0) > DEDUPE_S:
                 fresh.append(text)
                 sent[key] = time.time()
         for key in list(sent):
@@ -264,20 +313,20 @@ class Health:
                 del sent[key]
         self.save_state()
         if self.a.mode == "daily":
-            head = "BLAI health %s" % stamp
-            body = "\n".join(self.lines)
-            if self.alerts:
-                body += "\n\nATTENTION:\n" + "\n".join(t for _, t in self.alerts)
-            return head + "\n" + body, bool(self.alerts)
+            out = ["<b>BLAI morning report, %s</b>" % esc(stamp), ""]
+            out += self.digest
+            out += ["", "<b>Health</b>"]
+            out += ["%s %s" % (m, esc(t)) for m, t in self.health]
+            return "\n".join(out), bool(self.alerts)
         if fresh:
-            return "BLAI ALERT %s\n" % stamp + "\n".join(fresh), True
+            return "<b>BLAI alert, %s</b>\n" % esc(stamp) + "\n".join(fresh), True
         return "", False
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--mode", choices=["daily", "alerts"], default="daily")
-    ap.add_argument("--send", action="store_true", help="deliver through the gate bot (send_card.py --kind text)")
+    ap.add_argument("--send", action="store_true", help="deliver through the gate bot (send_card.py --kind text --html)")
     ap.add_argument("--kimi-daily-limit", type=float, default=float(os.environ.get("BLAI_KIMI_DAILY_LIMIT_USD", 10)))
     ap.add_argument("--kimi-min-balance", type=float, default=float(os.environ.get("BLAI_KIMI_MIN_BALANCE_USD", 5)))
     ap.add_argument("--strict", action="store_true")
@@ -287,7 +336,7 @@ def main() -> int:
         print(text)
         if a.send:
             rc, out, err = sh([sys.executable, REPO / "skills" / "telegram-gate" / "scripts" / "send_card.py",
-                               "--kind", "text", "--text", text], timeout=60)
+                               "--kind", "text", "--html", "--text", text], timeout=60)
             if rc != 0:
                 print("send failed: %s" % (err or out)[-200:], file=sys.stderr)
     return 1 if (a.strict and alerted) else 0

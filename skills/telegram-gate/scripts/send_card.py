@@ -46,18 +46,27 @@ def card_fyi_ideas(ideas_path: pathlib.Path, date: str) -> tuple:
     if not ideas:
         raise SystemExit("no ranked ideas found in %s (expected '## 1. Title' headings, see rules/cards.md)" % ideas_path)
     ws_name, _ = tgapi.workspace_of(ideas_path)
-    lines = ["<b>Ideas for %s</b>%s" % (tgapi.esc(date), " (%s)" % tgapi.esc(ws_name) if ws_name else ""),
-             "Default picks: 1 and 2. Tap Swap n to put idea n in pick 2."]
-    for idea in ideas:
+    lines = ["\U0001f4a1 <b>Today's picks (%s)</b>" % tgapi.esc(date)]
+    for idea in ideas[:2]:  # the two picks in full; the rest as one line each (2026-09-06: 12 full entries was a wall)
         head = "%d. <b>%s</b>" % (idea["rank"], tgapi.esc(idea["title"]))
         if idea.get("format"):
             head += " [%s]" % tgapi.esc(idea["format"])
         lines += ["", head]
         if idea.get("angle"):
             lines.append(tgapi.esc(idea["angle"]))
-        if idea.get("why_now"):
-            lines.append("<i>why now:</i> %s" % tgapi.esc(idea["why_now"]))
-    keyboard = tgapi.inline_keyboard([[("Swap %d" % i["rank"], "swap:%s:%d" % (date, i["rank"])) for i in ideas]])
+    others = ideas[2:]
+    if others:
+        lines += ["", "<i>Also ranked:</i> " + "; ".join("%d. %s" % (i["rank"], tgapi.esc(i["title"])) for i in others[:8])]
+    lines += ["", "Nothing to do unless you want a swap: tap Swap n to put idea n in pick 2."]
+    rows, row = [], []
+    for i in ideas[:8]:
+        row.append(("Swap %d" % i["rank"], "swap:%s:%d" % (date, i["rank"])))
+        if len(row) == 4:
+            rows.append(row)
+            row = []
+    if row:
+        rows.append(row)
+    keyboard = tgapi.inline_keyboard(rows)
     return "\n".join(lines), keyboard, "ideas:%s" % date
 
 
@@ -77,8 +86,10 @@ def card_gate(meta: dict, body: str, hub_path: pathlib.Path, slug: str, args) ->
     line2 = "format: %s | duration: %s | structure: %s" % (
         tgapi.esc(fmt), ("%d s" % round(duration)) if duration else "n/a", tgapi.esc(meta.get("structure") or "n/a"))
     line3 = "style: %s | seo: %s" % (tgapi.esc(meta.get("style_pack") or "n/a"), tgapi.esc(meta.get("seo_score") or "n/a"))
-    lines = ["<b>Gate: %s</b>" % tgapi.esc(title), tgapi.esc(slug), line2, line3,
-             "insight: %s" % (tgapi.esc(insight) if insight else "n/a")]
+    lines = ["\U0001f3ac <b>Ready to post: %s</b>" % tgapi.esc(title), line2, line3,
+             "insight: %s" % (tgapi.esc(insight) if insight else "n/a"),
+             "Approve posts it public at the next slot (11:00 or 18:00 CT). Reject asks you for a note.",
+             "<i>%s</i>" % tgapi.esc(slug)]
     attach = bool(args.video) and pathlib.Path(args.video).exists() and pathlib.Path(args.video).stat().st_size <= tgapi.MAX_VIDEO_BYTES
     if args.video and not attach:
         log("video missing or over 48 MB; linking the preview instead")
@@ -90,13 +101,31 @@ def card_gate(meta: dict, body: str, hub_path: pathlib.Path, slug: str, args) ->
     return "\n".join(lines), keyboard, slug, attach
 
 
+STAGE_WORDS = {"01-radar": "Radar", "02-ideas": "Ideas", "03-research": "Research", "04-script": "Script",
+               "05-package": "Package", "06-voice": "Voice", "07-render": "Render", "08-publish": "Publish"}
+
+
+def human_reason(reason: str) -> tuple:
+    """'07-render: 07-render: scene s02 did not pass ...' -> ('Render', 'scene s02 did not pass ...')."""
+    reason = (reason or "").strip()
+    stage = ""
+    changed = True
+    while changed:
+        changed = False
+        for key, word in STAGE_WORDS.items():
+            if reason.startswith(key + ":"):
+                reason = reason[len(key) + 1:].strip()
+                stage, changed = word, True
+    return stage, reason or "no reason recorded"
+
+
 def card_blocked(meta: dict, body: str, slug: str, text: str) -> tuple:
-    title = meta.get("title") or first_heading(body) or ""
-    reason = text or meta.get("blocked_reason") or "(no reason recorded)"
-    lines = ["<b>Blocked: %s</b>" % tgapi.esc(slug)]
-    if title:
-        lines.append(tgapi.esc(title))
-    lines.append("reason: %s" % tgapi.esc(reason))
+    title = meta.get("title") or first_heading(body) or slug
+    stage, what = human_reason(text or meta.get("blocked_reason") or "")
+    lines = ["❌ <b>Build failed: %s</b>" % tgapi.esc(title),
+             ("%s stage: %s" % (stage, tgapi.esc(what))) if stage else tgapi.esc(what),
+             "Next: the next build pass retries it on its own (08:35, 10:35, 12:35 CT). Tap Retry to queue it now.",
+             "<i>%s</i>" % tgapi.esc(slug)]
     return "\n".join(lines), tgapi.inline_keyboard([[("Retry", "retry:%s" % slug)]]), slug
 
 
@@ -120,6 +149,7 @@ def main() -> int:
     ap.add_argument("--package", help="package note for the original insight (default: linked from the hub)")
     ap.add_argument("--duration-s", type=float, default=None)
     ap.add_argument("--text", help="blocked reason, or the message for --kind text")
+    ap.add_argument("--html", action="store_true", help="--kind text: the message is already Telegram HTML (bold, italics); do not escape it")
     ap.add_argument("--repo", help="repo root for build/state (default: this repo)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
@@ -164,7 +194,7 @@ def main() -> int:
     else:
         if not args.text:
             raise SystemExit("--text is required for --kind text")
-        text, keyboard, key = tgapi.esc(args.text), None, (slug or "text")
+        text, keyboard, key = (args.text if args.html else tgapi.esc(args.text)), None, (slug or "text")
 
     if args.kind in ("gate", "blocked") and not args.dry_run:
         for old in tgapi.pop_messages(repo, key, kinds=("gate", "blocked")):

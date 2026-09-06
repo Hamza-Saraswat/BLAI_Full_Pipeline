@@ -39,11 +39,14 @@ Buttons, two rows: `Approve` `Reject` / `Re-render` `Re-script` with callbacks `
 Input: `--hub` and `--text "<stage>: <reason>"` (falls back to the hub's `blocked_reason`).
 
 ```
-<b>Blocked: 2026-08-25-topic-slug</b>
-Title
-reason: 07-render: safe_zone_check failed on scene 3
+❌ <b>Build failed: Title</b>
+Render stage: scene s03 did not pass safe_zone_check after 5 rounds: text inside the right rail
+Next: the next build pass retries it on its own (08:35, 10:35, 12:35 CT). Tap Retry to queue it now.
+<i>2026-08-25-topic-slug</i>
 ```
 
+The stage prefix (`07-render:`) becomes a word; the reason is one human sentence (the
+scripted render writes it from the worker's handback, never a JSON dump: 2026-09-06).
 Button: `Retry` with callback `retry:<slug>`.
 
 ## checklist (after Blotato reports published)

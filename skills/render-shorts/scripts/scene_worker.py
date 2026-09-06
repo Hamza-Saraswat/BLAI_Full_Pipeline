@@ -190,8 +190,8 @@ class Worker:
         system, user = self.system_prompt(), self.user_prompt(round_no, prev_code, report)
         last = ""
         chain = list(self.chain)
-        if round_no >= self.a.max_rounds and self.a.escalate and ":" in self.a.escalate:
-            # last round: the stronger seat first (Flash failed twice), the usual chain behind it
+        if round_no >= self.a.escalate_from and self.a.escalate and ":" in self.a.escalate:
+            # from round 3 on: the stronger seat first (Flash failed twice), the usual chain behind it
             chain = [tuple(self.a.escalate.split(":", 1))] + chain
         for provider, model in chain:
             try:
@@ -376,9 +376,11 @@ def main() -> int:
     ap.add_argument("--provider", default=os.environ.get("BLAI_SCENE_PROVIDER", "zai"))
     ap.add_argument("--model", default=os.environ.get("BLAI_SCENE_MODEL", "glm-5.3-flash"))
     ap.add_argument("--fallback", default=os.environ.get("BLAI_SCENE_FALLBACK", "opencode-free:nemotron-3-ultra-free"))
-    ap.add_argument("--max-rounds", type=int, default=3)
+    ap.add_argument("--max-rounds", type=int, default=int(os.environ.get("BLAI_SCENE_ROUNDS", 5)),
+                    help="scene-agent.md allows five attempts; a round costs ~4-13 credits")
     ap.add_argument("--escalate", default=os.environ.get("BLAI_SCENE_ESCALATE", "zai:glm-5.3"),
-                    help="provider:model tried first on the LAST round (empty to disable)")
+                    help="provider:model tried first from --escalate-from on (empty to disable)")
+    ap.add_argument("--escalate-from", type=int, default=3)
     ap.add_argument("--max-tokens", type=int, default=16000)
     ap.add_argument("--model-timeout", type=int, default=300)
     ap.add_argument("--dry-run", action="store_true", help="print prompt sizes and the provider chain; no calls")
