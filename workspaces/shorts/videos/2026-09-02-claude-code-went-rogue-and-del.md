@@ -2,18 +2,18 @@
 slug: 2026-09-02-claude-code-went-rogue-and-del
 workspace: shorts
 title: "AI agent deleted 15% of a heritage archive"
-status: blocked
+status: building
 pillar: enterprise-privacy
 structure: story-first
 format: smooth-explainer
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-09-02
-updated: "2026-09-06T13:40:37Z"
+updated: "2026-09-06T20:53:57Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "07-render: 07-render: scene s02 failed: }, {\\"round\\": 2, \\"failures\\": [\\"hyperframes inspect exit 1:\\"]}, {\\"round\\": 3, \\"failures\\": [\\"hyperframes inspect exit 1:\\"]}], \\"usage\\": [{\\"model\\": \\"glm-5.3-flash\\", \\"prompt_tokens\\": 11340, \\"completion_tokens\\": 4190, \\"finish_reason\\": \\"stop\\", \\"seconds\\": 64.3, \\"round\\": 1, \\"provider\\": \\"zai\\"}, {\\"model\\": \\"glm-5.3-flash\\", \\"prompt_tokens\\": 15207, \\"completion_tokens\\": 4985"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-06T13:35:26Z 07-render fail 275s (07-render: scene s02 failed: perframes validate exit 1:", "hyperframes inspect exit 1:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": )
 - 2026-09-06T13:40:37Z 07-render fail 311s (07-render: scene s02 failed: }, {"round": 2, "failures": ["hyperframes inspect exit 1:"]}, {"round": 3, "failures": ["hyperframes inspect exit 1:"]}], "usage": )
 - 2026-09-06T13:40:37Z blocked at 07-render
+- 2026-09-06T20:53:57Z build start on gn100-83c4
