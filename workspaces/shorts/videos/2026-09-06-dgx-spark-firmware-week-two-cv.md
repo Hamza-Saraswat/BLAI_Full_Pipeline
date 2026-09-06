@@ -2,14 +2,14 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: building
+status: review
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T21:01:55Z"
+updated: "2026-09-06T21:22:40Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-06-dgx-spark-firmware-week-two-cv-script]]
 - Package: [[stages/05-package/output/2026-09-06-dgx-spark-firmware-week-two-cv-package]]
 - Voice: [[stages/06-voice/output/2026-09-06-dgx-spark-firmware-week-two-cv-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-06-dgx-spark-firmware-week-two-cv-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -59,3 +59,5 @@ blotato_post_id: ""
 - 2026-09-06T20:59:22Z blocked at 06-voice
 - 2026-09-06T21:01:55Z build start on gn100-83c4
 - 2026-09-06T21:02:53Z 06-voice ok 56s
+- 2026-09-06T21:22:44Z 07-render ok 46.70s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 24
+- 2026-09-06T21:22:44Z 07-render ok 1188s
