@@ -2,18 +2,18 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: building
+status: blocked
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T20:58:13Z"
+updated: "2026-09-06T20:59:22Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.101, 7 mismatch(es): expected 'point' heard ''; expected 'point' heard ''; expected \\"doesn't\\" heard 'does and'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -54,3 +54,6 @@ blotato_post_id: ""
 - 2026-09-06T20:53:54Z blocked at 06-voice
 - 2026-09-06T20:58:10Z 2026-09-06 build cancelled by the operator mid-render and restarted fresh
 - 2026-09-06T20:58:13Z build start on gn100-83c4
+- 2026-09-06T20:59:16Z 06-voice fail 61s (voice QA failed: WER 0.101, 7 mismatch(es): expected 'point' heard ''; expected 'point' heard ''; expected "doesn't" heard 'does and')
+- 2026-09-06T20:59:22Z 06-voice fail 6s (voice QA failed: WER 0.101, 7 mismatch(es): expected 'point' heard ''; expected 'point' heard ''; expected "doesn't" heard 'does and')
+- 2026-09-06T20:59:22Z blocked at 06-voice
