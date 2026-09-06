@@ -1,8 +1,8 @@
 ---
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
-title: "DGX Spark firmware week: two CVEs fixed, patch now"
-status: scripted
+title: "DGX Spark firmware: fix 5 CVEs tonight"
+status: ready-to-build
 pillar: how-to
 structure: number-first
 format: classic
@@ -11,7 +11,7 @@ value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
 updated: "2026-09-06T11:07:10Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-09-06-ideas]]
 - Research: [[stages/03-research/output/2026-09-06-dgx-spark-firmware-week-two-cv-brief]]
 - Script: [[stages/04-script/output/2026-09-06-dgx-spark-firmware-week-two-cv-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-09-06-dgx-spark-firmware-week-two-cv-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -44,6 +44,8 @@ blotato_post_id: ""
 - Judge (kimi-k3): B number-first wins 18-16; grafts = A's apt + fwupdmgr command sentences into B's fix beat; judge scored row 4 zero for BOTH drafts (unglossed exploit terms) -- repaired post-judge with same-breath glosses (Hard Constraint 3).
 - Duration 51 s vs 32-38 sweet band: validator warning accepted (grafts + glosses cost the seconds); hard cap 60 respected. Style pack silicon (rotation-clean vs halftone).
 - Script title corrected from the hub's "two CVEs" to five UEFI flaws (facts bind; see stage 03 correction).
+- Checkpoint (05 step 3, unattended): three titles written (1 searchable + 2 intriguing, all naming DGX Spark); searchable chosen -- autocomplete depth 19 says search is the surface; description scored 100/100 on the rubric.
+- Title corrected to "DGX Spark firmware: fix 5 CVEs tonight" (38 chars, keyword at position 0) per the stage 03 fact correction; differs from every published title.
 
 ## Build journal
 
