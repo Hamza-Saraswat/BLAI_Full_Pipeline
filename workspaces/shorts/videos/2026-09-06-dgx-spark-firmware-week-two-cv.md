@@ -2,14 +2,14 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: review
+status: approved
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T21:22:40Z"
+updated: "2026-09-06T23:35:54Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -62,3 +62,4 @@ blotato_post_id: ""
 - 2026-09-06T21:22:44Z 07-render ok 46.70s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 24
 - 2026-09-06T21:22:44Z 07-render ok 1188s
 - 2026-09-06T21:22:46Z build done, status review
+- 2026-09-06T23:35:54Z telegram approve (approved_at 2026-09-06T23:35:54Z)
