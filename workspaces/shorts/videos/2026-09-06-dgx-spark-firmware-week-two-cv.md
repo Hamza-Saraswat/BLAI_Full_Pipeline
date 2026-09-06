@@ -2,11 +2,11 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware week: two CVEs fixed, patch now"
-status: idea
+status: scripted
 pillar: how-to
-structure: ""
+structure: number-first
 format: classic
-style_pack: ""
+style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
 updated: "2026-09-06T11:07:10Z"
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-06-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-06-ideas]]
 - Research: [[stages/03-research/output/2026-09-06-dgx-spark-firmware-week-two-cv-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-09-06-dgx-spark-firmware-week-two-cv-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,6 +38,12 @@ blotato_post_id: ""
 - Why: matches the ideas-note gap (competing titles are docs and forum threads, no creator video) and the hub title; slug unchanged.
 - Stage 03 audit: validator exit 0; 9 claims all source_url-fetched this run; 7 key numbers with units; writer fields present, 5 process steps.
 - Fact correction carried forward: NVIDIA bulletin 5867 (2026-08-25) fixes five CVEs, not two; CVE-2026-24263 is NULL-pointer deref (CWE-476), not OOB write. Script must follow the brief's classification; hub title's "two CVEs" is corrected at stage 05 titling.
+- Checkpoint (04 step 1, unattended): structures how-to-three-moves (A) + number-first (B) over story-first/news-react (rotation-banned); value types EQUIPS,TEACHES confirmed; promise: patch all five UEFI flaws tonight, five commands or Dashboard, landing on 1.110.13.
+- Checkpoint (04 step 2, unattended): 10 hooks scored, picks #2 (Tonight, A) and #1 (Number shock, B), different patterns per finding 12.
+- Stage 04 gates: validator 0 blockers (both drafts and winner); eval gate1_ready both drafts and winner, failures none, soft advisory entity_spend 0.2 (top2 DGX Spark + NVIDIA present); sameness ok vs 4 ledger entries; normalizer scenes_changed 3.
+- Judge (kimi-k3): B number-first wins 18-16; grafts = A's apt + fwupdmgr command sentences into B's fix beat; judge scored row 4 zero for BOTH drafts (unglossed exploit terms) -- repaired post-judge with same-breath glosses (Hard Constraint 3).
+- Duration 51 s vs 32-38 sweet band: validator warning accepted (grafts + glosses cost the seconds); hard cap 60 respected. Style pack silicon (rotation-clean vs halftone).
+- Script title corrected from the hub's "two CVEs" to five UEFI flaws (facts bind; see stage 03 correction).
 
 ## Build journal
 

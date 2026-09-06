@@ -7,12 +7,28 @@
     "units: numeric suffix -> spoken unit name. Matched as <number><unit> with optional space or hyphen.",
     "Anything ALL-CAPS (2+ chars) that is neither in keep nor say gets spelled out letter-by-letter as a safety net, and the storyboard validator raises an advisory so a human can add a real pronunciation here."
   ],
-
   "keep": [
-    "AI", "RAM", "PC", "GPU", "GPUs", "CPU", "CPUs", "LLM", "LLMs", "NVIDIA",
-    "US", "UK", "EU", "OK", "TV", "USB", "PDF", "CEO", "IT", "OS"
+    "AI",
+    "RAM",
+    "PC",
+    "GPU",
+    "GPUs",
+    "CPU",
+    "CPUs",
+    "LLM",
+    "LLMs",
+    "NVIDIA",
+    "US",
+    "UK",
+    "EU",
+    "OK",
+    "TV",
+    "USB",
+    "PDF",
+    "CEO",
+    "IT",
+    "OS"
   ],
-
   "say": {
     "RTX 4090": "R T X forty ninety",
     "RTX 5090": "R T X fifty ninety",
@@ -68,9 +84,10 @@
     "o1": "oh one",
     "o3": "oh three",
     "o1-mini": "oh one mini",
-    "K3": "K three"
+    "K3": "K three",
+    "UEFI": "you-ee-fi",
+    "NULL": "null"
   },
-
   "units": {
     "GB/s": "gigabytes a second",
     "TB/s": "terabytes a second",
