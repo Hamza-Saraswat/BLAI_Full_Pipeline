@@ -128,7 +128,9 @@ class Health:
         for m in scheduled:
             self.digest.append("⏰ <b>Posting %s:</b> %s" % (fmt_slot(m.get("publish_slot", "")), esc(m.get("title") or m.get("slug"))))
         for m in waiting:
-            self.digest.append("\U0001f3ac <b>Waiting for your tap:</b> %s (its card is in this chat)" % esc(m.get("title") or m.get("slug")))
+            # only a Short whose video is on THIS box is tappable here; August proof runs were built on the Mac
+            if (BUILD_DIR / str(m.get("slug")) / "render" / "final.mp4").exists():
+                self.digest.append("\U0001f3ac <b>Waiting for your tap:</b> %s (its card is in this chat)" % esc(m.get("title") or m.get("slug")))
         for m in blocked:
             self.digest.append("%s <b>Failed:</b> %s\n%s. It retries on the next build pass; tap Retry on its card to go now."
                                % (FAIL, esc(m.get("title") or m.get("slug")), esc(human_reason(str(m.get("blocked_reason") or "")))))
