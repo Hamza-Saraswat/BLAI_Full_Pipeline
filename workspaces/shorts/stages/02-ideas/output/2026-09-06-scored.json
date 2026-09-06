@@ -1,0 +1,414 @@
+[
+  {
+    "title": "Check your Claude settings: remote access may be silently on",
+    "angle": "A Tell HN report that Claude settings enabled remote access without asking.",
+    "lane": "enterprise-privacy",
+    "radar_items": [
+      "claude-remote-access-tellhn"
+    ],
+    "keyword": "claude code settings",
+    "value_types": [
+      "EQUIPS",
+      "REFRAMES"
+    ],
+    "autocomplete": {
+      "depth_score": 85
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": 2.906,
+    "competition_score": 0.0,
+    "opportunity": 100.0,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 2.906,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 1
+  },
+  {
+    "title": "DGX Spark firmware week: two CVEs fixed, patch now",
+    "angle": "CVE-2026-24262/24263 out-of-bounds writes in Spark firmware, fixed in the August drop.",
+    "lane": "how-to",
+    "radar_items": [
+      "cve-2026-24262",
+      "nvidia-product-security"
+    ],
+    "keyword": "dgx spark firmware",
+    "value_types": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 19
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": 0.1503,
+    "competition_score": 0.0,
+    "opportunity": 62.3,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 0.1503,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 2
+  },
+  {
+    "title": "Two DGX Sparks, one 200G link that throttles to 12",
+    "angle": "The fabric shows 200G but ib_write_bw reads 12-13 Gb/s until firmware updates remove NIC power-throttling.",
+    "lane": "myth-bust",
+    "radar_items": [
+      "dgx-spark-cluster-fabric",
+      "nvidia-sync-resource-monitor"
+    ],
+    "keyword": "dgx spark cluster",
+    "value_types": [
+      "TEACHES",
+      "PROVES"
+    ],
+    "autocomplete": {
+      "depth_score": 16
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": 0.0251,
+    "competition_score": 0.0,
+    "opportunity": 60.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 0.0251,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 3
+  },
+  {
+    "title": "SGLang v0.5.19: 786 PRs and a 2.4T Qwen3.8",
+    "angle": "The serving runtime your second GPU rig needs; single-card users skip.",
+    "lane": "news-react",
+    "radar_items": [
+      "sglang-v0519"
+    ],
+    "keyword": "sglang",
+    "value_types": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "autocomplete": {
+      "depth_score": 12
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.142,
+    "competition_score": 0.0,
+    "opportunity": 57.9,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.142,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 4
+  },
+  {
+    "title": "KV cache offload: your NVMe is the new VRAM",
+    "angle": "MLPerf now benchmarks storage for KV offload; same lever locally when VRAM overflows.",
+    "lane": "explainer",
+    "radar_items": [
+      "mlperf-storage-v30"
+    ],
+    "keyword": "kv cache offload",
+    "value_types": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "autocomplete": {
+      "depth_score": 8
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.309,
+    "competition_score": 0.0,
+    "opportunity": 55.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.309,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 5
+  },
+  {
+    "title": "Gerganov answers: llama.cpp after the Nvidia-HuggingFace deal",
+    "angle": "The founder's own roadmap statement, not the panic takes.",
+    "lane": "news-react",
+    "radar_items": [
+      "ggerganov-llamacpp-future"
+    ],
+    "keyword": "llama.cpp mac",
+    "value_types": [
+      "REFRAMES",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 5
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.4342,
+    "competition_score": 0.0,
+    "opportunity": 53.5,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.4342,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 6
+  },
+  {
+    "title": "Sageling: a local agent that runs Qwen 3.5 9B in-process on MLX",
+    "angle": "No server, no daemon: in-process MLX inference on a Mac.",
+    "lane": "news-react",
+    "radar_items": [
+      "sageling-mlx-agent"
+    ],
+    "keyword": "local ai agent mac",
+    "value_types": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "autocomplete": {
+      "depth_score": 4
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.476,
+    "competition_score": 0.0,
+    "opportunity": 52.9,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.476,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 7
+  },
+  {
+    "title": "Ollama 0.34 puts your local models inside ChatGPT Desktop",
+    "angle": "Your Ollama models now appear in ChatGPT Desktop, no API middleman.",
+    "lane": "how-to",
+    "radar_items": [
+      "ollama-v0340-rc1"
+    ],
+    "keyword": "ollama chatgpt desktop",
+    "value_types": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 4
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.476,
+    "competition_score": 0.0,
+    "opportunity": 52.9,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.476,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 8
+  },
+  {
+    "title": "Qwopus3.8-27B-Flash: 22k downloads in two days, but can it run?",
+    "angle": "The trending 27B GGUF vision model measured on real hardware.",
+    "lane": "news-react",
+    "radar_items": [
+      "qwopus-27b-flash-gguf"
+    ],
+    "keyword": "qwopus 27b",
+    "value_types": [
+      "TEACHES",
+      "PROVES"
+    ],
+    "autocomplete": {
+      "depth_score": 1
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.6012,
+    "competition_score": 0.0,
+    "opportunity": 51.0,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.6012,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 9
+  },
+  {
+    "title": "DGX OS 7.5.0 OTA kills display output: remove one package first",
+    "angle": "The OTA breaks displays if nvidia-drm-options-modeset0 is installed; remove it, then update.",
+    "lane": "how-to",
+    "radar_items": [
+      "dgx-os-750-display"
+    ],
+    "keyword": "dgx spark os update",
+    "value_types": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "autocomplete": {
+      "depth_score": 0
+    },
+    "competition": {
+      "reason": "YT_API_KEY not set; competition scan skipped"
+    },
+    "vidiq": {
+      "reason": "vidIQ connector not configured in this environment"
+    },
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.643,
+    "competition_score": 0.0,
+    "opportunity": 50.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.643,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 10
+  }
+]

@@ -1,0 +1,1491 @@
+[
+  {
+    "id": "github-00094246d1",
+    "title": "llama.cpp b10821",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10821",
+    "source": "github",
+    "published_at": "2026-09-06T09:58:54Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10821",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9852,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> metal : add remaining fa-vec tunings for M2 Max (#28458) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45551940> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downlo",
+    "why_now": "Shipped: ggml-org/llama.cpp b10821 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-82c1a686f2",
+    "title": "sglang v0.5.19",
+    "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.19",
+    "source": "github",
+    "published_at": "2026-09-05T02:27:42Z",
+    "signals": {
+      "repo": "sgl-project/sglang",
+      "tag": "v0.5.19",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.6249,
+      "age_h": 32.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:SGLang",
+      "group": "how-to"
+    },
+    "products": [
+      "SGLang",
+      "Qwen"
+    ],
+    "summary": "# Highlights *786 PRs from 214 contributors.* **New models in this release** (see the [cookbook](https://docs.sglang.io/cookbook) for all supported models): | Model | Type | PRs | Cookbook | |---|---|---|---| | Qwen3.8 (2.4T-A95B) | Autoregressive | [#35758](https://github.com/sgl-project/sglang/pul",
+    "why_now": "Shipped: sgl-project/sglang v0.5.19 released, 33 h ago",
+    "score": 52
+  },
+  {
+    "id": "github-f5524f7092",
+    "title": "ollama v0.34.0-rc1: v0.34.0",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1",
+    "source": "github",
+    "published_at": "2026-09-05T23:49:00Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.34.0-rc1",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8507,
+      "age_h": 11.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "ChatGPT",
+      "Apple"
+    ],
+    "summary": "## Use Ollama models in ChatGPT Desktop Ollama models can now be used directly in ChatGPT Desktop, so you can keep your existing workflow while running open models. Setup is available from the Ollama app on MacOS. This release also improves structured output performance on Apple Silicon, adds suppor",
+    "why_now": "Shipped: ollama/ollama v0.34.0-rc1 released (pre-release), 11 h ago",
+    "score": 51
+  },
+  {
+    "id": "hn-4491df165a",
+    "title": "Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace",
+    "url": "https://twitter.com/ggerganov/status/2095897173376618881",
+    "source": "hn",
+    "published_at": "2026-09-04T17:12:22Z",
+    "signals": {
+      "points": 76,
+      "num_comments": 27,
+      "signal": 0.732,
+      "signal_parts": {
+        "points": 0.761,
+        "comments": 0.664
+      },
+      "decay": 0.5468,
+      "age_h": 41.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "NVIDIA",
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 76 points, 27 comments on HN, 42 h ago",
+    "score": 49
+  },
+  {
+    "id": "github-aa6e3c4f5d",
+    "title": "llama.cpp b10819",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10819",
+    "source": "github",
+    "published_at": "2026-09-05T10:36:39Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10819",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.703,
+      "age_h": 24.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> metal : fix memory leak in early return (#28399) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45438612> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b1081",
+    "why_now": "Shipped: ggml-org/llama.cpp b10819 released (pre-release), 24 h ago",
+    "score": 45
+  },
+  {
+    "id": "github-a48d2f12d3",
+    "title": "llama.cpp b10818",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10818",
+    "source": "github",
+    "published_at": "2026-09-05T09:56:20Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10818",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.6962,
+      "age_h": 25.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> sycl : fix test-backend-ops CI break && restore Kronecker product FWHT support (#28016) (#28254) * Reapply \"sycl : add Kronecker product FWHT support for sizes 384, 640, 768, 12…\" (#28184) This reverts commit c845263f8b7d60113e213a3bd2d5cc6472ccf204. * tests : fix unused variable M in",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b10818 released (pre-release), 25 h ago",
+    "score": 45
+  },
+  {
+    "id": "hf-d1e5c1885f",
+    "title": "Jackrong/Qwopus3.8-27B-Flash-GGUF",
+    "url": "https://huggingface.co/Jackrong/Qwopus3.8-27B-Flash-GGUF",
+    "source": "hf",
+    "published_at": "2026-09-04T12:43:31Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 121,
+      "downloads": 22128,
+      "trendingScore": 120.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.678,
+      "signal_parts": {
+        "trending": 0.631,
+        "likes": 0.695,
+        "downloads": 0.724
+      },
+      "decay": 0.5125,
+      "age_h": 46.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 121 likes, 22.1k downloads, trending score 120, created 2026-09-04",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 121 likes, 22.1k downloads, trending score 120, 46 h ago",
+    "score": 42
+  },
+  {
+    "id": "firecrawl-95fe15822f",
+    "title": "Resource Monitor in NVIDIA Sync - DGX Spark / GB10",
+    "url": "https://forums.developer.nvidia.com/t/resource-monitor-in-nvidia-sync/382078",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "GB10"
+    ],
+    "summary": "4 days ago · Today NVIDIA Sync brought an update with the new Resource Monitor. ation even after all NVIDIA firmware updates DGX Spark / GB10 power",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-3d8f4e1956",
+    "title": "[DGX Spark] OTA update to DGX OS 7.5.0 kills all display output when ...",
+    "url": "https://forums.developer.nvidia.com/t/dgx-spark-ota-update-to-dgx-os-7-5-0-kills-all-display-output-when-nvidias-own-nvidia-drm-options-modeset0-package-is-installed/382452",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:DGX Spark",
+      "group": "how-to"
+    },
+    "products": [
+      "DGX Spark",
+      "NVIDIA"
+    ],
+    "summary": "# [[DGX Spark] OTA update to DGX OS 7.5.0 kills all display output when NVIDIA’s own nvidia-drm-options-modeset0 package is installed](https://forums.developer.nvidia.com/t/dgx-spark-ota-update-to-dgx-os-7-5-0-kills-all-display-output-when-nvidias-own-nvidia-drm-options-modeset0-package-is-installed",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-d784b98b9b",
+    "title": "DGX Spark Cluster: From Two Sparks to a Switched Fabric",
+    "url": "https://petronellatech.com/blog/dgx-spark-cluster-from-two-sparks-to-a-switched-fabric/?srsltid=AfmBOooLy020a94gT08YYDY5B4bep4gMm97leLMsF84mXPrMnD7-cpQx",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:DGX Spark",
+      "group": "myth-bust"
+    },
+    "products": [
+      "DGX Spark"
+    ],
+    "summary": "# DGX Spark Cluster: From Two Sparks to a Switched Fabric ## Frequently Asked Questions ### My link shows 200G but I only get 12 to 13 Gb/s. What is wrong? If that is an `ib_write_bw` figure, the NIC is firmware power-throttled; update the OS and firmware and reboot.",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-479066f7fb",
+    "title": "Product Security - NVIDIA",
+    "url": "https://www.nvidia.com/en-us/product-security/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "5 days ago · in these bulletins regarding driver or software package updates, NVIDIA DGX Spark - August 2026. NVIDIA DGX A100 Firmware - June 2022",
+    "why_now": "Broke: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-f7abaeccc0",
+    "title": "CVE-2026-24262 and CVE-2026-24263 specifically ...",
+    "url": "http://www.antihackingonline.com/potential-risk-of-cve/cve-2026-24262-and-cve-2026-24263-specifically-address-out-of-bounds-writes-in-the-dgx-spark-system-firmware-design-weakness-fixed-on-25th-aug-2025/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "7 days ago · CVE-2026-24263 NVIDIA DGX Spark contains a vulnerability in the system firmware, where a privileged attacker could be able to cause a NULL pointer dereference.",
+    "why_now": "Broke: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "hn-cc15feb485",
+    "title": "Show HN: We Beat MLPerf: Modern Storage for KV Offload and LLM Training",
+    "url": "https://www.theopenlake.com/blog/openlake-leads-mlperf-storage-v3-0",
+    "source": "hn",
+    "published_at": "2026-09-05T17:32:20Z",
+    "signals": {
+      "points": 35,
+      "num_comments": 1,
+      "signal": 0.481,
+      "signal_parts": {
+        "points": 0.628,
+        "comments": 0.138
+      },
+      "decay": 0.777,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 35 points, 1 comments on HN, 17 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-128eaae632",
+    "title": "Show HN: Rubato - Retro-Mac desk device mirrors AI coding state-ESP8266",
+    "url": "https://github.com/lovaxi/Rubato_Device",
+    "source": "hn",
+    "published_at": "2026-09-05T03:16:57Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.6324,
+      "age_h": 31.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Claude"
+    ],
+    "summary": "Hi everyone!<p>I have built an AI health device (ESP8266 + 240*240 screen). It can show AI Agents&#x27; status in real time with breathing bubble. And remind user dringking water, toilet, streth, etc.<p>support: DeepSeek Harness, opencode, OpenClaw, Claude Code, Cursor.<p>Hardware design, firmware a",
+    "why_now": "Shipped: 6 points, 2 comments on HN, 32 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-4a93a31116",
+    "title": "Show HN: Moadim.io - A scheduler for agents",
+    "url": "https://moadim.io/",
+    "source": "hn",
+    "published_at": "2026-09-04T23:50:29Z",
+    "signals": {
+      "points": 33,
+      "num_comments": 17,
+      "signal": 0.605,
+      "signal_parts": {
+        "points": 0.618,
+        "comments": 0.576
+      },
+      "decay": 0.6017,
+      "age_h": 35.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Why can&#x27;t we get an agent scheduler that supports all of the following:<p>- git compatible<p>- agent agnostic<p>- 100% open source<p>- os and system-agnostic<p>- multi-runner support<p>- support mcp&#x2F;ui&#x2F;http<p>- unlimited routines&#x2F;crons<p>So I built one, moadim.io is a local Rust",
+    "why_now": "Shipped: 33 points, 17 comments on HN, 35 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-062d855f3b",
+    "title": "Tell HN: Check your Claude settings, it may have silently enabled remote access",
+    "url": "https://news.ycombinator.com/item?id=49565799",
+    "source": "hn",
+    "published_at": "2026-09-04T15:09:47Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 6,
+      "signal": 0.355,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.388
+      },
+      "decay": 0.5309,
+      "age_h": 43.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I went to https:&#x2F;&#x2F;claude.ai&#x2F;code today and saw some of my most recent Claude CLI sessions appeared there. I have never explicitly enabled RC, specifically because of security concerns and the only sessions I previously had in https:&#x2F;&#x2F;claude.ai&#x2F;code were the ones I actua",
+    "why_now": "Broke: 6 points, 6 comments on HN, 44 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-447ddfbb5f",
+    "title": "Anyone using llama.cpp willing to test LlamaRack?",
+    "url": "https://github.com/brantje/LlamaRack",
+    "source": "hn",
+    "published_at": "2026-09-05T19:24:17Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7982,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 2 comments on HN, 16 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-d3388d44ea",
+    "title": "Show HN: Sageling - a local AI agent for Mac, Qwen 3.5 9B in-process via MLX",
+    "url": "https://sageling.ai/",
+    "source": "hn",
+    "published_at": "2026-09-04T19:30:31Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 1,
+      "signal": 0.296,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.138
+      },
+      "decay": 0.5652,
+      "age_h": 39.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "MLX",
+      "Google",
+      "Claude"
+    ],
+    "summary": "A lot of my non-developer friends still think that AI is basically just Google or something you ask to write something and then copy paste it around... if they use it at all. When I ask them why they don&#x27;t use the good stuff like Claude Cowork or its competitors, they tell me a few things: 1. W",
+    "why_now": "Shipped: 7 points, 1 comments on HN, 40 h ago",
+    "score": 29
+  },
+  {
+    "id": "hf-ca842e0b90",
+    "title": "OpenVDN/vdn-minimax-h3",
+    "url": "https://huggingface.co/OpenVDN/vdn-minimax-h3",
+    "source": "hf",
+    "published_at": "2026-09-02T05:03:41Z",
+    "signals": {
+      "pipeline_tag": "text-to-video",
+      "likes": 197,
+      "downloads": 0,
+      "trendingScore": 193.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.729,
+      "signal_parts": {
+        "trending": 0.693,
+        "likes": 0.765,
+        "downloads": 0.0
+      },
+      "decay": 0.2294,
+      "age_h": 102.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:MiniMax",
+      "group": "how-to"
+    },
+    "products": [
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "text-to-video model on Hugging Face, 197 likes, 0 downloads, trending score 193, created 2026-09-02",
+    "why_now": "Shipped: new on Hugging Face (text-to-video), 197 likes, 0 downloads, trending score 193, 4 d ago",
+    "score": 28
+  },
+  {
+    "id": "github-44530cc3f1",
+    "title": "ollama v0.33.3",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.33.3",
+    "source": "github",
+    "published_at": "2026-09-02T00:11:33Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.33.3",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.2138,
+      "age_h": 106.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "MLX",
+      "GGUF",
+      "llama.cpp"
+    ],
+    "summary": "## What's Changed * gemma4 now supports images and audio on MLX engine * Report cached prompt tokens * Honor GGUF model defined default parameters * MLX, MLX-C, llama.cpp update ## New Contributors * @marcelpetrick made their first contribution in https://github.com/ollama/ollama/pull/17579 **Full C",
+    "why_now": "Shipped: ollama/ollama v0.33.3 released, 4 d ago",
+    "score": 28
+  },
+  {
+    "id": "hf-4a54ca42dc",
+    "title": "nvidia/Qwen3.8-Flash-Next-NVFP4",
+    "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4",
+    "source": "hf",
+    "published_at": "2026-09-02T04:03:35Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 105,
+      "downloads": 13321,
+      "trendingScore": 104.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.65,
+      "signal_parts": {
+        "trending": 0.612,
+        "likes": 0.675,
+        "downloads": 0.687
+      },
+      "decay": 0.2261,
+      "age_h": 103.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "Qwen",
+      "NVFP4",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 105 likes, 13.3k downloads, trending score 104, created 2026-09-02",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 105 likes, 13.3k downloads, trending score 104, 4 d ago",
+    "score": 26
+  },
+  {
+    "id": "hn-056c6549fd",
+    "title": "Teardown: DeepSeek Harness",
+    "url": "https://github.com/jimy-r/agent-workspace-architecture/blob/main/teardowns/2026-09-05-deepseek-harness.md",
+    "source": "hn",
+    "published_at": "2026-09-06T02:43:19Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8871,
+      "age_h": 8.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 8 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-afd9e78f24",
+    "title": "Qwen Drive 1.0: A Vision-Language Foundation Model for Autonomous Driving",
+    "url": "https://github.com/QwenLM/Qwen-Drive-1.0",
+    "source": "hn",
+    "published_at": "2026-09-05T14:51:42Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7475,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-a6ecff4006",
+    "title": "Release Notes -- NVIDIA DGX OS 8 User Guide",
+    "url": "https://docs.nvidia.com/dgx/dgx-os-8-user-guide/8.0.0/release-notes.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "# Release Notes [#](https://docs.nvidia.com/dgx/dgx-os-8-user-guide/8.0.0/release-notes.html#release-notes) ## Supported DGX Systems [#](https://docs.nvidia.com/dgx/dgx-os-8-user-guide/8.0.0/release-notes.html#supported-dgx-systems) | x86_64 Systems | Support Status | Minimum DGX OS<br>ISO Release |",
+    "why_now": "Shipped: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-5b7708f229",
+    "title": "DGX OS Software Stack - NVIDIA Documentation",
+    "url": "https://docs.nvidia.com/dgx/dgx-os-8-user-guide/latest/appendix_c_dgx_software_stack.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "5 days ago · Updates Mellanox adapter firmware. For applicable DGX platforms, the DGX OS 8.0.0 ISO installs the nvidia-system-mlnx-drivers metapackage with the release ...",
+    "why_now": "Shipped: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-f13fe1157b",
+    "title": "Installing BaseOS 9 Software",
+    "url": "https://docs.nvidia.com/dgx/baseos-9-user-guide/9.0.0/installing-baseos.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "5 days ago · The DGX OS ISO installer installs the NVIDIA open GPU kernel modules and associated software automatically; therefore, it is not necessary to install these ...",
+    "why_now": "Discussed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "hn-94fa16e33a",
+    "title": "Show HN: Llama - Self-Hosted OSS Alternatives to Vercel and Supabase",
+    "url": "https://apps.lla.ma/",
+    "source": "hn",
+    "published_at": "2026-09-04T15:40:37Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.5348,
+      "age_h": 43.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Llama",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Llama"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 43 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-e5310e2527",
+    "title": "Using Blender with coding agents on macOS",
+    "url": "https://til.simonwillison.net/llms/blender-coding-agents-macos",
+    "source": "hn",
+    "published_at": "2026-09-06T04:56:40Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 0,
+      "signal": 0.269,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.0
+      },
+      "decay": 0.9161,
+      "age_h": 6.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 8 points, 0 comments on HN, 6 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-e95ed35734",
+    "title": "Show HN: I made DeepSeek a stock prophet in the chat",
+    "url": "https://chat.deepseek.com/share/najhhfle4n4e9brimh",
+    "source": "hn",
+    "published_at": "2026-09-05T19:10:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7956,
+      "age_h": 15.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-eaa55ba104",
+    "title": "Show HN: Learn/Practice Sudoku strategies web app",
+    "url": "https://sw-fun.github.io/sudoku/",
+    "source": "hn",
+    "published_at": "2026-09-04T14:35:45Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.5265,
+      "age_h": 44.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Grok",
+      "group": "how-to"
+    },
+    "products": [
+      "Grok"
+    ],
+    "summary": "So, I wanted to get better at Sudoku puzzles, and I watched a lot of strategy videos, but I just could not grok them.<p>Also I installed a bunch of free Sudoku games on my phone and got very (and I mean very) annoyed by the un-dismissible ads and calls to actions.<p>So, I vibe coded an ad-free Sudok",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 44 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-15ab462c7f",
+    "title": "Is your LLM Biased? Making ChatGPT evaluate itself",
+    "url": "https://think-twice.me/is-ai-biased-or-sexist-making-chatgpt-evaluate-itself/",
+    "source": "hn",
+    "published_at": "2026-09-05T13:57:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7379,
+      "age_h": 21.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-c0984a7c63",
+    "title": "Show HN: MyHandler - Local-first AI assistant for Windows, llama.cpp on Vulkan",
+    "url": "https://myhandler.ai/",
+    "source": "hn",
+    "published_at": "2026-09-04T19:07:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.5622,
+      "age_h": 39.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 40 h ago",
+    "score": 19
+  },
+  {
+    "id": "hn-19bee6e91c",
+    "title": "Show HN: Phntm-ONE: I built a local AI desk assistant",
+    "url": "https://www.phntmcore.com/",
+    "source": "hn",
+    "published_at": "2026-09-05T21:03:22Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.8174,
+      "age_h": 14.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:local ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;ve spent the past several months building something I call PHNTM-One. And I am really curious what HN thinks of the idea and the product I&#x27;ve built. The basic concept is an AI appliance that lives on your desk, is your personal assistant and is totally local running on your own hardware",
+    "why_now": "Shipped: 4 points, 1 comments on HN, 14 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-d7dd6c7586",
+    "title": "Show HN: I built a small arena where AI write robot and then fight each other",
+    "url": "https://github.com/nigrosimone/llms-robot-arena",
+    "source": "hn",
+    "published_at": "2026-09-06T07:01:28Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.944,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-5b7664a778",
+    "title": "Chinese businesses giving away AI tokens with coffee, credit cards, dumplings",
+    "url": "https://restofworld.org/2026/china-ai-tokens-consumer-rewards-credit-cards-telcos-deepseek/",
+    "source": "hn",
+    "published_at": "2026-09-04T20:39:30Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.5747,
+      "age_h": 38.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:tokens",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 0 comments on HN, 38 h ago",
+    "score": 12
+  },
+  {
+    "id": "hf-5c79cff5ab",
+    "title": "IFM/K2-Horizon-MoVA-36B-A4B",
+    "url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+    "source": "hf",
+    "published_at": "2026-09-01T23:01:25Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 180,
+      "downloads": 1723,
+      "trendingScore": 175.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.716,
+      "signal_parts": {
+        "trending": 0.68,
+        "likes": 0.752,
+        "downloads": 0.539
+      },
+      "decay": 0.2103,
+      "age_h": 108.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 180 likes, 1.7k downloads, trending score 175, created 2026-09-01",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 180 likes, 1.7k downloads, trending score 175, 4 d ago",
+    "score": 12
+  },
+  {
+    "id": "hn-c7bdaf2d7c",
+    "title": "Revealing a Hidden Class of Task-in-Prompt Adversarial Attacks on LLMs",
+    "url": "https://aclanthology.org/2025.acl-long.334/",
+    "source": "hn",
+    "published_at": "2026-09-06T05:53:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9287,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 5 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-6927ab66a2",
+    "title": "Prompt Humans Not LLMs",
+    "url": "https://write.as/cswaezc1bwdjd",
+    "source": "hn",
+    "published_at": "2026-09-05T16:06:32Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7611,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-8e95face6e",
+    "title": "LLM-as-a-Verifier",
+    "url": "https://github.com/llm-as-a-verifier/llm-as-a-verifier",
+    "source": "hn",
+    "published_at": "2026-09-06T03:52:57Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9021,
+      "age_h": 7.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 7 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-1dd4e72726",
+    "title": "An LLM runtime that boots from USB",
+    "url": "https://nightrun.io/",
+    "source": "hn",
+    "published_at": "2026-09-05T21:59:24Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8285,
+      "age_h": 13.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 13 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-dba920d3a1",
+    "title": "Show HN: Run open-weight OCR, VLM and vision models behind one API",
+    "url": "https://www.vlmrun.com/gateway",
+    "source": "hn",
+    "published_at": "2026-09-04T18:31:25Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.5573,
+      "age_h": 40.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "Hey HN. We built an openai-compatible API for running open-weight VLMs, OCR VLMs and ViT-based vision models.<p>The motivation was mostly frustration when running these models in production and discovering all the details around serving VLMs, especially around visual accuracy.<p>A few footguns we ke",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 40 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-4f996ed914",
+    "title": "Ask HN: Are Devtools Dead?",
+    "url": "https://news.ycombinator.com/item?id=49578837",
+    "source": "hn",
+    "published_at": "2026-09-05T17:43:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.779,
+      "age_h": 17.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Seeing this take everywhere lately: coding agents will eat the entire devtool category. Why pay for a linter, a migration tool, a monitoring integration, a testing product, when the agent just... does it?<p>Are devtools dead, or is it specifically human-workflow devtools that are dead while agent-in",
+    "why_now": "Measured: 1 points, 1 comments on HN, 17 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-d0ac707c31",
+    "title": "Show HN: Wayfinder - A reference implementation for evaluating AI applications",
+    "url": "https://github.com/DivakarUngatla/wayfinder",
+    "source": "hn",
+    "published_at": "2026-09-06T10:45:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9964,
+      "age_h": 0.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Testing is critical to software applications -- first to make sure they reliably serve the purpose they were built for, and then to make sure they stay that way as they grow, evolve and change. The same applies to AI applications as well. But testing AI applications is very different from testing cl",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-281fe4cafc",
+    "title": "AI Chip Regulation Is Not a Dystopian Surveillance State",
+    "url": "https://www.astralcodexten.com/p/ai-chip-regulation-is-not-a-dystopian",
+    "source": "hn",
+    "published_at": "2026-09-06T08:09:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9596,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:ai",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-7414ec6882",
+    "title": "How to evaluate LLMs before production",
+    "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+    "source": "hn",
+    "published_at": "2026-09-06T08:07:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9592,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-3ba9bf6ca3",
+    "title": "After OpenAI's Bots Went Rogue, Watchdogs Were Kept on a Short Leash",
+    "url": "https://www.nytimes.com/2026/09/03/technology/openai-hugging-face-hack.html",
+    "source": "hn",
+    "published_at": "2026-09-05T00:42:55Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.6094,
+      "age_h": 34.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 34 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-328ce406e3",
+    "title": "End-to-end infrastructure for training and inferencing open weight models",
+    "url": "https://docs.appliedcompute.com",
+    "source": "hn",
+    "published_at": "2026-09-04T21:25:49Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.5812,
+      "age_h": 37.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 38 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-becde01ec0",
+    "title": "BLLM / ALLM - before and after LLM",
+    "url": "https://news.ycombinator.com/item?id=49583058",
+    "source": "hn",
+    "published_at": "2026-09-06T03:30:00Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8972,
+      "age_h": 7.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Shall we start indicating the time as &quot;before llm&quot; and &quot;after llm&quot;? I&#x27;ve just talked with someone who wants to break into the industry and i&#x27;ve wrote something like &quot;i have few collogues who entered through contributing to open source, but it was before LLMs&quot;.",
+    "why_now": "Broke: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-df5144075d",
+    "title": "Accelerating LLM Inference with Lossless Speculative Decoding Algorithms (2025)",
+    "url": "https://arxiv.org/abs/2502.05202",
+    "source": "hn",
+    "published_at": "2026-09-06T02:51:10Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8888,
+      "age_h": 8.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-da23186343",
+    "title": "Local Multi-Agent Swarm: An ant farm for local LLM agents",
+    "url": "https://github.com/franciscocarloserra/local-multi-agent-swarm",
+    "source": "hn",
+    "published_at": "2026-09-04T18:54:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.5603,
+      "age_h": 40.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 40 h ago",
+    "score": 4
+  },
+  {
+    "id": "hf-490472760e",
+    "title": "XHToken/Spark-X2.5-1.7B",
+    "url": "https://huggingface.co/XHToken/Spark-X2.5-1.7B",
+    "source": "hf",
+    "published_at": "2026-08-24T06:34:03Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 94,
+      "downloads": 2439,
+      "trendingScore": 88.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.625,
+      "signal_parts": {
+        "trending": 0.591,
+        "likes": 0.659,
+        "downloads": 0.565
+      },
+      "decay": 0.05,
+      "age_h": 316.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 94 likes, 2.4k downloads, trending score 88, created 2026-08-24",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 94 likes, 2.4k downloads, trending score 88, 13 d ago",
+    "score": 2
+  }
+]
