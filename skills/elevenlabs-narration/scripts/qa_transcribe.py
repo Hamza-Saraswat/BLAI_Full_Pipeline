@@ -171,6 +171,9 @@ def join_hyphens(text: str) -> str:
 def normalize_words(text: str) -> list:
     text = join_hyphens(text.lower()).replace("-", " ").replace("/", " ")
     text = re.sub(r"(\d)\s+\.(\d)", r"\1.\2", text)  # whisper writes "3 .8" for "3.8"
+    # version strings ("1.0.4", "26.05.1") are spoken "one point zero point four"; the decimal rule
+    # below only knows one dot and dropped every second "point" (2026-09-06 firmware Short)
+    text = re.sub(r"\b(\d+)\.(\d+)\.(\d+)\b", r"\1 point \2 point \3", text)
     text = spell_numbers(text)
     text = re.sub(r"[^a-z0-9' ]+", " ", text)
     text = canonicalize_heard(" " + re.sub(r"\s+", " ", text) + " ").strip()

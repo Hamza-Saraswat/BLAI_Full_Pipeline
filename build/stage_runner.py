@@ -351,10 +351,23 @@ def _voice(ctx: Ctx, stage: str) -> str:
         ctx.say("reusing %s (pass --fresh to regenerate)" % wav)
     # qa_transcribe.py exits 1 when WER > threshold but still writes qa.json: read it, write the
     # voice note, then fail with the mismatches (a missing qa.json means the engine itself failed).
-    qa_res = ctx.run([PY, SCRIPT["qa_transcribe"], "--audio", wav, "--script", script, "--out", out],
-                     "qa_transcribe", timeout=QA_TIMEOUT, check=False)
-    if not ctx.dry_run and qa_res.returncode != 0 and not (out / "qa.json").exists():
-        raise StageError("qa_transcribe exited %d: %s" % (qa_res.returncode, _tail(qa_res.stderr or qa_res.stdout)))
+    # A local engine occasionally mangles a whole phrase (2026-09-06: "every version before the
+    # fix is exposed" came out as "two out of two"); re-synthesize just that chunk and re-check,
+    # at most twice, before blocking.
+    for attempt in range(3):
+        qa_res = ctx.run([PY, SCRIPT["qa_transcribe"], "--audio", wav, "--script", script, "--out", out],
+                         "qa_transcribe", timeout=QA_TIMEOUT, check=False)
+        if ctx.dry_run or qa_res.returncode == 0:
+            break
+        if not (out / "qa.json").exists():
+            raise StageError("qa_transcribe exited %d: %s" % (qa_res.returncode, _tail(qa_res.stderr or qa_res.stdout)))
+        bad = _chunks_with_mangled_phrases(out)
+        if not bad or attempt == 2 or ctx.local:
+            break
+        ctx.say("voice: QA failed on a mangled phrase; regenerating chunk(s) %s (try %d)" % (",".join(map(str, bad)), attempt + 1))
+        ctx.run([PY, SCRIPT["generate_audio"], *source, "--out", out, "--format", "short", *engine,
+                 "--only-chunks", ",".join(map(str, bad)), "--seed", str(int(time.time()) % 100000)],
+                "generate_audio-retry", timeout=VOICE_TIMEOUT)
     ctx.run([PY, SCRIPT["captions"], "--alignment", out / "alignment.json", "--script", script, "--out", out],
             "captions", timeout=CAPTIONS_TIMEOUT)
     voice = ctx.read_json(out / "voice.json", VOICE_FIXTURE)
@@ -400,6 +413,27 @@ def voice_note(ctx: Ctx, stage: str, voice: dict, qa: dict) -> str:
               "`narration.wav`, `alignment.json`, `captions.json`, `captions.srt`, `transcript.json`, "
               "`qa.json`, `voice.json`", ""]
     return "\n".join(lines)
+
+
+def _chunks_with_mangled_phrases(out: pathlib.Path) -> list:
+    """Chunk indexes (alignment.json `chunks[].index`) that contain a QA mismatch of three or
+    more words on either side: a phrase the engine mangled, not a name the transcriber misspelt."""
+    try:
+        qa = json.loads((out / "qa.json").read_text(encoding="utf-8"))
+        chunks = json.loads((out / "alignment.json").read_text(encoding="utf-8")).get("chunks") or []
+    except (OSError, ValueError):
+        return []
+    bad = set()
+    for m in qa.get("mismatches") or []:
+        if max(len(str(m.get("expected", "")).split()), len(str(m.get("heard", "")).split())) < 3:
+            continue
+        at = float(m.get("at_s") or 0)
+        for c in chunks:
+            start = float(c.get("offset_s") or 0)
+            if start <= at < start + float(c.get("duration_s") or 0) + 0.5:
+                bad.add(int(c.get("index", 0)))
+                break
+    return sorted(bad)
 
 
 def stage_voice_shorts(ctx: Ctx) -> str:
