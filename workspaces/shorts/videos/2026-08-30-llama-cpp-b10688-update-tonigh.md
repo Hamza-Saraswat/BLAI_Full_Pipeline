@@ -2,14 +2,14 @@
 slug: 2026-08-30-llama-cpp-b10688-update-tonigh
 workspace: shorts
 title: "llama.cpp b10688: update tonight if you're on Apple Silicon"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-30
-updated: "2026-08-30T03:21:08Z"
+updated: "2026-09-06T20:58:10Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-06T20:58:10Z 2026-09-06T20:58:10Z expired: not from today's picks (2026-09-06); the factory carries no backlog

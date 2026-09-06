@@ -1,20 +1,20 @@
 ---
 slug: 2026-08-29-glm-5-3-just-went-open-weight
 workspace: shorts
-title: "GLM-5.3-Flash: the 93 GB \"small\" build"
-status: review
+title: "GLM-5.3-Flash: the 93 GB \\\"small\\\" build"
+status: expired
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-08-29
-updated: "2026-08-29T19:35:52Z"
+updated: "2026-09-06T20:58:10Z"
 publish_slot: ""
 seo_score: 88
 feedback: ""
 blocked_reason: ""
-build_host: "local-mac"
+build_host: local-mac
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - voice: kokoro 1 chunk 38.06s, whisper alignment, wer 0.0147 PASS, 3.494 wps
 - scenes: 7/7 published, 11 attempts total (one wedged worker respawned), all inside tolerance
 - assembly: 39.13s, -14.1 LUFS, lint PASS, safe-zone PASS, loop PASS 0.955
-
+- 2026-09-06T20:58:10Z 2026-09-06T20:58:10Z expired: not from today's picks (2026-09-06); the factory carries no backlog

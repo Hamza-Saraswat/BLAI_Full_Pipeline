@@ -2,14 +2,14 @@
 slug: 2026-08-29-qwen3-8-27b-on-a-mac-studio-th
 workspace: shorts
 title: "Qwen3.8-27B on a Mac Studio: the numbers nobody prints"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-08-29
-updated: "2026-08-29T19:04:47Z"
+updated: "2026-09-06T20:58:10Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-06T20:58:10Z 2026-09-06T20:58:10Z expired: not from today's picks (2026-09-06); the factory carries no backlog

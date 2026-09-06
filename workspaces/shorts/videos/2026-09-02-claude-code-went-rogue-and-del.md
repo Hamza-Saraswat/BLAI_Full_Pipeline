@@ -2,14 +2,14 @@
 slug: 2026-09-02-claude-code-went-rogue-and-del
 workspace: shorts
 title: "AI agent deleted 15% of a heritage archive"
-status: building
+status: expired
 pillar: enterprise-privacy
 structure: story-first
 format: smooth-explainer
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-09-02
-updated: "2026-09-06T20:53:57Z"
+updated: "2026-09-06T20:58:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-06T13:40:37Z blocked at 07-render
 - 2026-09-06T20:53:57Z build start on gn100-83c4
 - 2026-09-06T20:57:00Z 06-voice ok 180s
+- 2026-09-06T20:58:10Z 2026-09-06T20:58:10Z expired: not from today's picks (2026-09-06); the factory carries no backlog
