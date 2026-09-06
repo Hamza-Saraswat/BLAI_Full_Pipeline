@@ -2,22 +2,22 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: approved
+status: scheduled
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T23:35:54Z"
-publish_slot: ""
+updated: "2026-09-06T23:45:46Z"
+publish_slot: "2026-09-07T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 9243cf61-5b27-472f-94b4-1bdf75a94267
 ---
 # DGX Spark firmware week: two CVEs fixed, patch now
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-06-dgx-spark-firmware-week-two-cv-package]]
 - Voice: [[stages/06-voice/output/2026-09-06-dgx-spark-firmware-week-two-cv-voice]]
 - Render: [[stages/07-render/output/2026-09-06-dgx-spark-firmware-week-two-cv-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-06-dgx-spark-firmware-week-two-cv-publish]]
 
 ## Decisions
 - Picked (rank 2, opportunity 62.3): firmware-CVE patch how-to; only candidate pairing high search demand ("dgx spark firmware", depth 19) with an actionable tonight step, and lane-legal vs yesterday's news-react/enterprise-privacy.
@@ -63,3 +63,4 @@ blotato_post_id: ""
 - 2026-09-06T21:22:44Z 07-render ok 1188s
 - 2026-09-06T21:22:46Z build done, status review
 - 2026-09-06T23:35:54Z telegram approve (approved_at 2026-09-06T23:35:54Z)
+- 2026-09-06T23:45:47Z 08-publish ok 2s
