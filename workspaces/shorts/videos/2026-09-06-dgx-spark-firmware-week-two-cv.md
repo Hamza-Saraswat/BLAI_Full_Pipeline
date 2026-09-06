@@ -2,19 +2,19 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T11:07:10Z"
+updated: "2026-09-06T20:52:38Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -48,4 +48,4 @@ blotato_post_id: ""
 - Title corrected to "DGX Spark firmware: fix 5 CVEs tonight" (38 chars, keyword at position 0) per the stage 03 fact correction; differs from every published title.
 
 ## Build journal
-
+- 2026-09-06T20:52:38Z build start on gn100-83c4
