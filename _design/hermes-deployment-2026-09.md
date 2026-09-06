@@ -208,6 +208,19 @@ rounds 5 with escalation from round 3; blocked/gate/ideas cards rewritten for a 
 text cards; the K3 digest job removed (the report covers it, zero tokens); poller/build/
 ideas/produce/preflight deliveries set to local.
 
+**No-backlog policy (operator, 2026-09-06 afternoon).** "Each day starts from that morning's
+picks; nothing older exists." Implemented: `tools/expire_backlog.py` (run first by
+`blai-build.sh`) sets every earlier in-flight note to the new hub status `expired`
+(schema enum + workspace status doc); an unattended `build.py` pass builds only today's slugs
+(`--slug` still rebuilds anything by hand). Applied at once: the four August proof-run notes and
+the Sept-2 "Claude Code went rogue" note expired; the running builds were cancelled and today's
+Short rebuilt fresh. That fresh build then blocked on voice QA (WER 0.10): two transcriber
+artifacts (version strings "1.0.4" losing a "point"; the command name `fwupdmgr`) and one REAL
+Chatterbox glitch, a phrase replaced by "two out of two". Fixes: version strings spelled with
+"point" in the QA normalizer, `fwupdmgr` aliased to "firmware update manager", and `_voice`
+now re-synthesizes only the chunk holding a mangled phrase (`--only-chunks`, new seed) and
+re-checks, twice at most, before blocking.
+
 Schedule re-enabled for one Short a day (fits Lite's 10K/week until stage 03-05 gets the same
 scripted treatment): 05:45 preflight · 06:00 ideas (GLM) · 06:30 produce, FIRST PICK ONLY
 (GLM child session, K3 writers) · 08:00 digest (K3) · 08:30 + 10:30 build (script) · publish
