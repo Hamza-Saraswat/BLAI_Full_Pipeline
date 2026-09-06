@@ -363,9 +363,15 @@ def run_pass(a, log: Log) -> int:
             touched.add(p)
             poll_note(log, p, meta, a)
     buildable = {"ready-to-build"} | ({"blocked", "building"} if a.slug else set())
+    today = dt.datetime.now().astimezone().strftime("%Y-%m-%d")
     built = None
     for p, meta in rows:  # 3. build one note (skipped under --publish-only: Hermes cron owns the builds)
         if a.publish_only or p in touched or meta.get("status") not in buildable:
+            continue
+        # No backlog (operator policy, 2026-09-06): an unattended pass builds only today's picks.
+        # Older notes are retired by tools/expire_backlog.py; --slug still rebuilds anything by hand.
+        if not a.slug and not str(meta.get("slug", "")).startswith(today):
+            log("%s: not from today's picks (%s); skipped" % (meta.get("slug"), today))
             continue
         if not build_note(log, p, meta, a):
             rc = 1

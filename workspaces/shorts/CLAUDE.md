@@ -38,7 +38,7 @@ shorts/
 
 ### How `status` works
 
-List hub notes with `python3 ../../tools/hubnote.py find . [status]` for each status, then render today's runs. A stage is COMPLETE for a slug when its output file exists:
+List hub notes with `python3 ../../tools/hubnote.py find . [status]` for each status, then render today's runs. No backlog (2026-09-06): every morning starts from that day's picks; `tools/expire_backlog.py` sets any earlier note still in flight to `expired` before a build pass, and an unattended `build.py` pass builds only today's slugs. A stage is COMPLETE for a slug when its output file exists:
 
 ```
 Pipeline Status: shorts  (2026-08-25)
