@@ -2,18 +2,18 @@
 slug: 2026-09-07-llama-cpp-b10835-fixes-cuda-fl
 workspace: shorts
 title: llama.cpp b10835 fixes flash attention
-status: building
+status: blocked
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-07
-updated: "2026-09-07T13:35:05Z"
+updated: "2026-09-07T13:36:53Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-brief]]
 - Script: [[stages/04-script/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-script]]
 - Package: [[stages/05-package/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -49,3 +49,6 @@ blotato_post_id: ""
 - 2026-09-07T12:30:50Z 04-script ok: A beat B 21-18 no grafts; validator 0/0; eval ready; ledger+style recorded
 - 2026-09-07T12:32:23Z 05-package ok: rubric 100/100, check_outputs 0 failures; hub ready-to-build
 - 2026-09-07T13:35:05Z build start on gn100-83c4
+- 2026-09-07T13:36:48Z 06-voice fail 100s (voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move')
+- 2026-09-07T13:36:53Z 06-voice fail 5s (voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move')
+- 2026-09-07T13:36:53Z blocked at 06-voice
