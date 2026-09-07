@@ -2,8 +2,9 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 title: "DGX Spark firmware: fix 5 CVEs tonight"
 published_slot: "2026-09-07T11:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=lbZA4smDpRo"
 blotato_post_id: 9243cf61-5b27-472f-94b4-1bdf75a94267
+updated: "2026-09-07T16:15:07Z"
 ---
 # DGX Spark firmware: fix 5 CVEs tonight
 

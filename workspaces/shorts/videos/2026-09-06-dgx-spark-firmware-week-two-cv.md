@@ -2,21 +2,21 @@
 slug: 2026-09-06-dgx-spark-firmware-week-two-cv
 workspace: shorts
 title: "DGX Spark firmware: fix 5 CVEs tonight"
-status: scheduled
+status: published
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-06
-updated: "2026-09-06T23:45:46Z"
+updated: "2026-09-07T16:15:07Z"
 publish_slot: "2026-09-07T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=lbZA4smDpRo"
 blotato_post_id: 9243cf61-5b27-472f-94b4-1bdf75a94267
 ---
 # DGX Spark firmware week: two CVEs fixed, patch now
@@ -64,3 +64,4 @@ blotato_post_id: 9243cf61-5b27-472f-94b4-1bdf75a94267
 - 2026-09-06T21:22:46Z build done, status review
 - 2026-09-06T23:35:54Z telegram approve (approved_at 2026-09-06T23:35:54Z)
 - 2026-09-06T23:45:47Z 08-publish ok 2s
+- 2026-09-07T16:15:07Z published https://www.youtube.com/watch?v=lbZA4smDpRo
