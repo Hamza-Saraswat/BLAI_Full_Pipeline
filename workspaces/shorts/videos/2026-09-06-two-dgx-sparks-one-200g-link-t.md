@@ -2,14 +2,14 @@
 slug: 2026-09-06-two-dgx-sparks-one-200g-link-t
 workspace: shorts
 title: "Two DGX Sparks, one 200G link that throttles to 12"
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-09-06
-updated: "2026-09-06T11:07:10Z"
+updated: "2026-09-07T13:35:02Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Format smooth-explainer: the viewer follows the fabric state change three times (link up, throttle, fixed); classic can't carry the catch.
 
 ## Build journal
-
+- 2026-09-07T13:35:02Z 2026-09-07T13:35:02Z expired: not from today's picks (2026-09-07); the factory carries no backlog
