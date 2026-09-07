@@ -2,14 +2,14 @@
 slug: 2026-09-07-llama-cpp-b10835-fixes-cuda-fl
 workspace: shorts
 title: "llama.cpp b10835 fixes CUDA flash attention: update tonight"
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-07
-updated: "2026-09-07T11:09:10Z"
+updated: "2026-09-07T11:43:30Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Lane news-react / classic; bands differ from yesterday and from pick 2.
 
 ## Build journal
-
+- 2026-09-07T11:43:30Z 03-research ok: validator 0, 10 claims, 7 key numbers, 12 sources

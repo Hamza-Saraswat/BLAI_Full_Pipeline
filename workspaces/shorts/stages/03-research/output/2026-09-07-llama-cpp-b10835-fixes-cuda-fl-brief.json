@@ -1,0 +1,210 @@
+{
+  "slug": "2026-09-07-llama-cpp-b10835-fixes-cuda-fl",
+  "topic": "llama.cpp release b10835 fixes a divergent barrier in CUDA f16 flash attention; NVIDIA GPU owners should update tonight",
+  "generated_at": "2026-09-07T11:37:48Z",
+  "depth": "standard",
+  "thesis": "On the morning of Sep 7, 2026, llama.cpp release b10835 fixed a divergent barrier that has lurked in the CUDA f16 flash attention kernel since the original native-MMA implementation, dropping compute-sanitizer errors from 3232 to 0, and NVIDIA GPU owners should update tonight.",
+  "explanation_path": "Start with what the viewer already runs: llama.cpp is the engine underneath the local-AI world, and apps like LM Studio and Ollama bundle it, so \"I don't use llama.cpp\" is almost never true. Then name flash attention: the trick that computes the model's attention step as one fused kernel, skipping a huge intermediate write to video memory -- same math, less memory, which is why the -fa flag is famous as a speed-and-VRAM tweak. The catch the video lands: inside the CUDA version of that kernel sits a barrier, a checkpoint every thread in a block must reach, and NVIDIA requires every thread execute the exact same barrier instruction. Since the first native-MMA kernel (PR #11583, Feb 1, 2025), one barrier sat inside a branch only some threads enter, which CUDA calls undefined behavior. Establish how it was caught and fixed: a synccheck run on an RTX 4070 reported thousands of divergent-barrier errors, PR #27870 moved the synchronization out of the branch, and errors went to zero with no measurable performance cost. Close on the update-tonight action: check your build number, grab the b10835 prebuilt binary for your GPU or rebuild with GGML_CUDA=ON, and know that LM Studio and Ollama users inherit the fix only when those apps bump their bundled engine.",
+  "claims": [
+    {
+      "claim": "Release b10835, published 07 Sep 08:08 as a Pre-release at commit b74f590, exists to ship one change titled \"ggml-cuda: fix divergent barrier in f16 flash attention (#27870)\" plus a follow-up \"ggml-cuda: avoid duplicate metadata pointer setup\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10835",
+      "source_title": "Release b10835",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "The root cause was a block-wide __syncthreads() sitting inside the threadIdx.y % np == 0 branch of the flash_attn_ext_f16_process_tile kernel, so not all threads reached the same barrier; PR #27870 moved the synchronization out of the branch while keeping the metadata work on the intended warps.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870",
+      "source_title": "ggml-cuda: fix divergent barrier in f16 flash attention (PR #27870)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "The fix is tool-verified: compute-sanitizer synccheck showed thousands of divergent-barrier errors on the flash attention op, and the PR author measured \"3232 errors before and 0 after this fix\" reproducing on an RTX 5090, CUDA 13.3, driver 610.43.02.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870",
+      "source_title": "ggml-cuda: fix divergent barrier in f16 flash attention (PR #27870)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "This was not a fresh regression: issue #27678 (opened Aug 24, 2026 by a reporter on build 10615, RTX 4070, CUDA toolkit 13.3.73, driver 610.57.04, attached run reporting \"4000 errors\") traces the warp-dependent barrier to the original native MMA FlashAttention implementation, introduced in commit 864a0b6 / PR #11583, and a maintainer confirmed against the CUDA docs that treating two different __syncthreads instances as interchangeable \"is therefore not correct\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/27678",
+      "source_title": "Misc. bug: CUDA FlashAttention synccheck reports divergent __syncthreads (Issue #27678)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "The scope is the NVIDIA CUDA backend with f16 flash attention: first reported on RTX 4070 (CUDA toolkit 13.3.73, driver 610.57.04), then reproduced, fixed, and tested on RTX 5090 (CUDA 13.3, driver 610.43.02), with the fix confirmed on the report thread as \"0 errors in 10/10 runs\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870",
+      "source_title": "ggml-cuda: fix divergent barrier in f16 flash attention (PR #27870)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "The fix costs nothing in speed: on Qwen3.8-27B-UD-Q4_K_XL.gguf with FlashAttention enabled at context depth 100k, pp512 moved from 1390.27 ± 21.66 to 1388.10 ± 21.43 t/s (-0.15%) and tg128 from 59.75 ± 0.06 to 59.73 ± 0.05 t/s (-0.03%), so the PR concludes \"No measurable performance regression.\"",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870",
+      "source_title": "ggml-cuda: fix divergent barrier in f16 flash attention (PR #27870)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "b10834, published 07 Sep 07:18 at commit 992cb50, shipped \"ggml: allow backend inputs to not create another split (#28387)\" -- the release immediately before the fix.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10834",
+      "source_title": "Release b10834",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "b10837, published 07 Sep 08:35 at commit 5202104, shipped \"caps : recheck typed content if template checks for string (#28511)\" -- 77 minutes after b10834, making it three releases in one morning with the fix in the middle.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10837",
+      "source_title": "Release b10837",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "Turning flash attention off has been the classic escape hatch for CUDA flash-attn-path faults: issue #26609 documents a deterministic \"CUDA error: an illegal memory access\" on Qwen3.6-35B MoE across release builds b10107, b10243, and b10488 that \"disappears with -fa off\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/26609",
+      "source_title": "CUDA illegal memory access in cudaStreamSynchronize (flash-attn path) with Qwen3.6-35B MoE + partial expert offload, deterministic, cross-build (b10107, b10243); disappears with -fa off (Issue #26609)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-07"
+    },
+    {
+      "claim": "Viewers can be exposed without running llama.cpp directly: LM Studio \"supports running LLMs on Mac, Windows, and Linux using llama.cpp\" through managed runtimes, and Ollama's repository vendors llama.cpp (an llama directory with a LLAMA_CPP_VERSION file) whose latest visible version bump is b10760 (#18199) -- older than the b10835 fix.",
+      "source_url": "https://lmstudio.ai/docs/app",
+      "source_title": "Welcome to LM Studio Docs!",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "compute-sanitizer divergent-barrier errors, before vs after fix (RTX 5090, CUDA 13.3)",
+      "value": "3232 errors before and 0 after this fix",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870"
+    },
+    {
+      "label": "compute-sanitizer ERROR SUMMARY in the original attached run (RTX 4070, build 10615)",
+      "value": "4000 errors",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/27678"
+    },
+    {
+      "label": "b10834 publish timestamp",
+      "value": "07 Sep 07:18",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10834"
+    },
+    {
+      "label": "b10835 publish timestamp",
+      "value": "07 Sep 08:08",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10835"
+    },
+    {
+      "label": "b10837 publish timestamp",
+      "value": "07 Sep 08:35",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10837"
+    },
+    {
+      "label": "pp512 @ d100000 before vs after fix, Qwen3.8-27B-UD-Q4_K_XL.gguf, FlashAttention enabled",
+      "value": "1390.27 ± 21.66 -> 1388.10 ± 21.43 t/s (-0.15%)",
+      "source_url": "https://github.com/ggml-org/llama.cpp/pull/27870"
+    },
+    {
+      "label": "Ollama's bundled llama.cpp, latest visible version bump on its repo page",
+      "value": "b10760",
+      "source_url": "https://github.com/ollama/ollama"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "every worker must clock into the same checkpoint",
+      "mapping": "a CUDA barrier (__syncthreads()) is a checkpoint every thread in a block has to hit before anyone continues; the code only told the threads matching threadIdx.y % np == 0 about it, so the checkpoint jams -- NVIDIA's rule is that all threads must execute the exact same barrier instruction",
+      "limit": "a jammed checkpoint is loud and visible, while a divergent barrier is undefined behavior -- it can mean wrong numbers, a hang, or nothing observable at all"
+    },
+    {
+      "vehicle": "doing the arithmetic in your head instead of photocopying the whole spreadsheet",
+      "mapping": "standard attention writes a huge intermediate matrix to slow video memory between steps; flash attention fuses the steps and keeps tiles in fast on-chip memory -- same result, shorter path",
+      "limit": "unlike a mental shortcut this is not an approximation, the math is identical; that is exactly why a bug here threatens correctness rather than speed"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "garbled output means my model file or my quant is corrupt",
+      "reality": "this fault lived in llama.cpp's CUDA kernel, not in the .gguf file; the engine mis-executes attention, so replacing the binary, not re-downloading the model, is the fix (claims 1, 2, 9)"
+    },
+    {
+      "myth": "flash attention is only a speed tweak, so a bug in it just makes things slower",
+      "reality": "flash attention reroutes attention through memory with identical math, and the fix measured \"No measurable performance regression\" (pp512 -0.15%); the danger was correctness -- undefined behavior from a broken barrier (claims 2, 6)"
+    },
+    {
+      "myth": "I use LM Studio or Ollama, so llama.cpp news is not about me",
+      "reality": "LM Studio runs models \"using llama.cpp\" and Ollama's repo carries a vendored llama.cpp whose latest visible bump is b10760; those apps inherit the fix only when they bump their bundled engine (claim 10)"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "llama.cpp",
+      "definition": "the open-source C/C++ engine that runs model files locally, and the engine bundled underneath apps like LM Studio and Ollama"
+    },
+    {
+      "term": "CUDA",
+      "definition": "NVIDIA's layer for running computation on its GPUs; a CUDA bug affects NVIDIA graphics cards, not Macs or AMD cards"
+    },
+    {
+      "term": "flash attention",
+      "definition": "a way of computing the model's attention step as one fused kernel that skips writing a huge intermediate matrix to video memory; same math, less memory"
+    },
+    {
+      "term": "f16",
+      "definition": "half-precision 16-bit floating point, the number format this attention kernel computes in"
+    },
+    {
+      "term": "barrier (__syncthreads())",
+      "definition": "a checkpoint inside a CUDA program that every thread in a block must reach before any of them continue"
+    },
+    {
+      "term": "divergent barrier",
+      "definition": "the failure where only some threads reach a given barrier, which CUDA's rules define as undefined behavior"
+    },
+    {
+      "term": "compute-sanitizer",
+      "definition": "NVIDIA's checking tool for GPU code; its synccheck mode is what reported the thousands of barrier errors"
+    },
+    {
+      "term": "build number (like b10835)",
+      "definition": "llama.cpp's numbered rolling builds; the b-number in your startup line tells you whether you have the fix"
+    },
+    {
+      "term": "quantization",
+      "definition": "shrinking a model file to fewer bits so it fits in video memory; often blamed for corruption, but this bug was in the engine, not the file"
+    }
+  ],
+  "unverified": [
+    "No fetched page shows a user seeing garbled or wrong text specifically from this divergent barrier; the grounded evidence is sanitizer errors (undefined behavior) plus separate flash-attn crash reports, so narration must hedge wrong output as a risk, not a documented symptom.",
+    "Whether this barrier is the root cause of the watchdog stalls in issue #27102 is only a collaborator's open question, not a conclusion.",
+    "The timezone behind the displayed 07 Sep 07:18 / 08:08 / 08:35 timestamps is unknown (GitHub renders viewer-local times); the Sep 7, 2026 date is corroborated by the pages.",
+    "Which llama.cpp version first turned flash attention on by default for CUDA; the benchmark states current builds default it on but names no version.",
+    "LM Studio's exact bundled llama.cpp build number tonight; its engines docs page returned 404 and the fetched docs page names no build number.",
+    "The ideas-note framing of three releases in four hours; the fetched release pages show a 77-minute span (07:18 to 08:35), which is what the narration should use."
+  ],
+  "suggested_outline": "b10835 landed this morning at 07 Sep 08:08, sandwiched between b10834 (07:18) and b10837 (08:35) -- three releases in 77 minutes, and the middle one exists to fix a single bug: a divergent barrier in CUDA f16 flash attention, with sanitizer errors falling from 3232 to 0\nWhat flash attention is and why this is a correctness bug, not a speed bug: the fused kernel that skips the giant intermediate write, the rule that every thread must hit the exact same barrier, and the branch that has broken that rule since the original kernel shipped in PR #11583 on Feb 1, 2025\nWhat you do tonight: check the build number your tool prints, grab the b10835 prebuilt for your GPU or rebuild with -DGGML_CUDA=ON, and if you sit behind LM Studio or Ollama, watch for their engine bump (Ollama's page shows b10760)",
+  "notes": "Timestamp conflict: the ideas framing says three releases in about four hours; the fetched release pages show b10834 at 07 Sep 07:18 and b10837 at 07 Sep 08:35, a 77-minute span -- trust the release pages and say 77 minutes. Numbering nuance: #27870 is the fixing pull request; the underlying bug report is issue #27678; do not call #27870 an issue on screen. Claim 10 spans two sources (LM Studio docs for the bundle statement, Ollama repo for b10760); the JSON cites the LM Studio docs URL and both URLs appear in the markdown Sources table. Ollama's b10760 is read from the latest visible commit touching its LLAMA_CPP_VERSION file on the fetched repo page; treat as at-least-b10760, dated before the fix, medium confidence. The LM Studio engines docs page returned 404 this session; the general docs page grounds the bundling statement. Update path grounded: the b10835 release page lists prebuilt Windows x64 CUDA 12 (12.4) and CUDA 13 (13.3) zips, and docs/build.md gives cmake -B build -DGGML_CUDA=ON plus cmake --build build --config Release.",
+  "viewer_situation": "You run a local model on your NVIDIA gaming GPU through llama.cpp, LM Studio, or Ollama, your copy is older than b10835, and you have not updated it tonight.",
+  "has_process": true,
+  "process_steps": [
+    "Check the build number your tool prints at startup (llama.cpp reports build N; the bug report shows \"build 10615\") or your app's runtime panel.",
+    "Download the b10835 prebuilt for your GPU from the releases page (for example the Windows x64 CUDA 12 or CUDA 13 zip) or run git pull and rebuild with cmake -B build -DGGML_CUDA=ON.",
+    "Replace the old binary or restart the server so the new build loads.",
+    "Confirm the startup line now reports the new build number, 10835."
+  ],
+  "objection": "A divergent barrier is undefined behavior, not a proven wrong-answer generator, and no fetched case shows garbled text from this exact bug -- update for the hygiene and the crash-adjacent reports, but do not tell viewers their old outputs were garbage."
+}
