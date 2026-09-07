@@ -1,0 +1,923 @@
+[
+  {
+    "id": "github-98a6545b3a",
+    "title": "llama.cpp b10837",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10837",
+    "source": "github",
+    "published_at": "2026-09-07T08:35:42Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10837",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9655,
+      "age_h": 2.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> caps : recheck typed content if template checks for string (#28511) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45690927> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/rele",
+    "why_now": "Shipped: ggml-org/llama.cpp b10837 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-3cc0d34925",
+    "title": "llama.cpp b10835",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10835",
+    "source": "github",
+    "published_at": "2026-09-07T08:08:50Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10835",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9592,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Llama"
+    ],
+    "summary": "<details open> ggml-cuda: fix divergent barrier in f16 flash attention (#27870) * ggml-cuda: fix divergent barrier in f16 flash attention * ggml-cuda: avoid duplicate metadata pointer setup </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attes",
+    "why_now": "Shipped: ggml-org/llama.cpp b10835 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-535053ef59",
+    "title": "llama.cpp b10834",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10834",
+    "source": "github",
+    "published_at": "2026-09-07T07:18:38Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10834",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9477,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> ggml: allow backend inputs to not create another split (#28387) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45674860> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases",
+    "why_now": "Shipped: ggml-org/llama.cpp b10834 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-8fb31a39b2",
+    "title": "Speculative Decoding in vLLM on AMD GPUs",
+    "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
+    "source": "hn",
+    "published_at": "2026-09-07T09:26:41Z",
+    "signals": {
+      "points": 19,
+      "num_comments": 3,
+      "signal": 0.45,
+      "signal_parts": {
+        "points": 0.525,
+        "comments": 0.276
+      },
+      "decay": 0.9774,
+      "age_h": 1.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "AMD"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 19 points, 3 comments on HN, 2 h ago",
+    "score": 52
+  },
+  {
+    "id": "hn-87019ef366",
+    "title": "How we monitor internal coding agents for misalignment",
+    "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/",
+    "source": "hn",
+    "published_at": "2026-09-06T16:37:55Z",
+    "signals": {
+      "points": 47,
+      "num_comments": 45,
+      "signal": 0.704,
+      "signal_parts": {
+        "points": 0.678,
+        "comments": 0.763
+      },
+      "decay": 0.7667,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 47 points, 45 comments on HN, 18 h ago",
+    "score": 46
+  },
+  {
+    "id": "firecrawl-32712fbc53",
+    "title": "4 more excellent local LLM projects you can run for free on a slow laptop",
+    "url": "https://www.howtogeek.com/more-excellent-local-llm-projects-you-can-run-free-slow-laptop/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "3 days ago · Cherry Studio is a local-first AI studio. Cherry Studio is a free, open-source desktop app that acts as a front end for local AI models running with Ollama. ...",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-163fd10ce9",
+    "title": "My Complete Local AI Setup - $7000+ - YouTube",
+    "url": "https://www.youtube.com/watch?v=eaEtNXWMwLY",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "# My Fully Local AI Coding Setup ($7,000+) 68,601 views • Sep 2, 2026 • #LocalLLM #HomeAIServer #OpenSourceAI ### [Running LLMs Locally Just Got Way Better - Ollama + MCP](https://www.youtube.com/watch?v=GAyNvq6Ayps) [![](https://i.ytimg.com/vi/GGzT7zVrRTU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpA",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-9d9479d160",
+    "title": "Run a local LLM with Ollama - Flavio Copes",
+    "url": "https://flaviocopes.com/ollama-local-llm/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "2 days ago · Run an LLM locally with Ollama, choose a model that fits, call the chat API from Node.js, stream replies, request JSON, and understand the limits.",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "hn-3496a04844",
+    "title": "Tell HN: Anthropic should make Claude the Author and me the Co-Author",
+    "url": "https://news.ycombinator.com/item?id=49593777",
+    "source": "hn",
+    "published_at": "2026-09-07T04:07:09Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.905,
+      "age_h": 6.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Anthropic",
+      "group": "news-react"
+    },
+    "products": [
+      "Anthropic",
+      "Claude"
+    ],
+    "summary": "Anthropic has been messing with this behavior as seen by the bugs below: https:&#x2F;&#x2F;github.com&#x2F;anthropics&#x2F;claude-code&#x2F;issues&#x2F;66602 https:&#x2F;&#x2F;github.com&#x2F;anthropics&#x2F;claude-code&#x2F;issues&#x2F;69835 etc<p>They seem to be too hell bent on getting their attr",
+    "why_now": "Broke: 4 points, 3 comments on HN, 7 h ago",
+    "score": 37
+  },
+  {
+    "id": "hn-74f353602f",
+    "title": "Cutting (Claude Code) token spend on dynamic workflows 80%",
+    "url": "https://news.ycombinator.com/item?id=49587379",
+    "source": "hn",
+    "published_at": "2026-09-06T15:21:57Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7528,
+      "age_h": 19.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Discovered something very interesting by chance a few days ago, and thought it might be interesting for other people running dynamic workflows with claude code. The workflow scripts themselves are javascript. Claude code knows the format and it can make a tool that composes workflows instead of goin",
+    "why_now": "Measured: 2 points, 2 comments on HN, 20 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-1afb60b51d",
+    "title": "Qwen-Scope: Decoding Intelligence, Unleashing Potential",
+    "url": "https://qwen.ai/blog?id=qwen-scope",
+    "source": "hn",
+    "published_at": "2026-09-06T15:45:23Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7571,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 26
+  },
+  {
+    "id": "firecrawl-8bba5082b2",
+    "title": "I Gave Local AI and the Cloud the Exact Same Job - YouTube",
+    "url": "https://www.youtube.com/watch?v=ujs0_cpAnaw",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "# I Gave Local AI and the Cloud the Exact Same Job 💸🧠 Cheap mini runs a 70B LLM 🤯 - [• Cheap mini runs a 70B LLM 🤯](https://www.youtube.com/watch?v=xyKEQjUzfAk) 🍏⚡ FREE Local LLMs on Apple Silicon | FAST! - [• FREE Local LLMs on Apple Silicon | FAST!](https://www.youtube.com/watch?v=bp2eev21Qfo)",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-f953c29161",
+    "title": "I Cancelled My $1200/Year AI Coding Subscription -- Here's the Local ...",
+    "url": "https://medium.com/@trends24/i-cancelled-my-1-200-year-ai-coding-subscription-heres-the-local-llm-that-actually-replaced-it-ba38228c8a1b",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "# I Cancelled My $1,200/Year AI Coding Subscription -- Here’s the Local LLM That Actually Replaced It (2026) [![Trends 24/7](https://miro.medium.com/v2/resize:fill:32:32/1*CfEhChWsADMTZI-rq1gCRw.png)](https://medium.com/@trends24?source=post_page---byline--ba38228c8a1b-------------------------------",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-a211f144f3",
+    "title": "I stopped downloading bigger local models and started running two ...",
+    "url": "https://www.xda-developers.com/stopped-downloading-bigger-local-models-started-running-two-small-ones-at-once/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:local model",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "7 days ago · Running local LLMs on limited hardware is a constant negotiation you have to have. There's always something bigger and newer dropping every other month, ...",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "hn-fe6cd4cfcd",
+    "title": "Show HN: Local audit trail for Claude Code tool calls",
+    "url": "https://github.com/zaghaghi/toolog",
+    "source": "hn",
+    "published_at": "2026-09-06T18:43:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7902,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Llama",
+      "GGUF"
+    ],
+    "summary": "A dead simple local audit trail for Claude Code tool calls. Energized by a rule-based risk analyser.<p>Give it a llama-cpp compatible GGUF model and it will give you a second opinion on risk locally.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-8910222331",
+    "title": "Unlimited Free DeepSeek API",
+    "url": "https://y-api.bestvirtualgoods.com/",
+    "source": "hn",
+    "published_at": "2026-09-06T15:07:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7503,
+      "age_h": 19.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-869300858e",
+    "title": "dealignai/GLM-5.3-CYBERSECURITY-FP8",
+    "url": "https://huggingface.co/dealignai/GLM-5.3-CYBERSECURITY-FP8",
+    "source": "hf",
+    "published_at": "2026-08-30T10:46:54Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 226,
+      "downloads": 18602,
+      "trendingScore": 181.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.735,
+      "signal_parts": {
+        "trending": 0.685,
+        "likes": 0.785,
+        "downloads": 0.712
+      },
+      "decay": 0.0623,
+      "age_h": 192.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "FP8",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 226 likes, 18.6k downloads, trending score 181, created 2026-08-30",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 226 likes, 18.6k downloads, trending score 181, 8 d ago",
+    "score": 19
+  },
+  {
+    "id": "hn-dd14c4830d",
+    "title": "Ask HN: (Why) Was the LLM breakthrough useful for images, audio, etc.?",
+    "url": "https://news.ycombinator.com/item?id=49588265",
+    "source": "hn",
+    "published_at": "2026-09-06T16:42:35Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 3,
+      "signal": 0.253,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.276
+      },
+      "decay": 0.7676,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "This has been bothering me for a while. I feel like I have a decent conceptual grasp of what LLMs are doing with written text. But it seems like they also unlocked a bunch of progress in understanding and generating images, audio, and video. I can’t twist my brain into understanding the connection.<",
+    "why_now": "Broke: 3 points, 3 comments on HN, 18 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-ca8b92742f",
+    "title": "Bobbin: Pentest with a local LLM, so target data never leaves your machine",
+    "url": "https://github.com/daniele110199/bobbin",
+    "source": "hn",
+    "published_at": "2026-09-06T21:11:56Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.819,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 14 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-7f727d9524",
+    "title": "I just don't care about your skill files",
+    "url": "https://news.ycombinator.com/item?id=49593930",
+    "source": "hn",
+    "published_at": "2026-09-07T04:33:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9108,
+      "age_h": 6.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "I get that LLMs can be modestly useful coding assistants. But this whole ecosystem of &quot;agents&quot; and harnesses and subsidized million dollar spends at pennies on the dollar, I just don&#x27;t get. What are you building? What useful work is being done? Because all I see is worse software bein",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 6 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-48160509d6",
+    "title": "Ask HN: How safe are our password managers in face of LLM cyber attacks?",
+    "url": "https://news.ycombinator.com/item?id=49588597",
+    "source": "hn",
+    "published_at": "2026-09-06T17:12:18Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7731,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey<p>With LLMs having infinite attack resources compared to human researchers, how safe are we?<p>We already know that you don&#x27;t need top tier frontier models to create an attack vector. You can just loop a mid-sized model until it bears result. Or run a small swarm of agents to achieve the sa",
+    "why_now": "Measured: 3 points, 0 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-89b08b4ef1",
+    "title": "Chess5.ai - Play Chess, Go, Xiangqi, Gomoku, and Othello Against LLMs",
+    "url": "https://chess5.ai/en",
+    "source": "hn",
+    "published_at": "2026-09-07T08:16:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9609,
+      "age_h": 2.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 3 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-dfee4cc7f2",
+    "title": "Show HN: CellularFlow - Continual-learning LLM using associative memory",
+    "url": "https://github.com/celcilin/cellularflow",
+    "source": "hn",
+    "published_at": "2026-09-06T23:16:18Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8439,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hf-cdc357f9c9",
+    "title": "microsoft/VibeVoice-ASR-Streaming-7B",
+    "url": "https://huggingface.co/microsoft/VibeVoice-ASR-Streaming-7B",
+    "source": "hf",
+    "published_at": "2026-09-02T15:46:22Z",
+    "signals": {
+      "pipeline_tag": "automatic-speech-recognition",
+      "likes": 132,
+      "downloads": 1144,
+      "trendingScore": 129.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.674,
+      "signal_parts": {
+        "trending": 0.64,
+        "likes": 0.708,
+        "downloads": 0.51
+      },
+      "decay": 0.1893,
+      "age_h": 115.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft",
+      "Hugging Face"
+    ],
+    "summary": "automatic-speech-recognition model on Hugging Face, 132 likes, 1.1k downloads, trending score 129, created 2026-09-02",
+    "why_now": "Shipped: new on Hugging Face (automatic-speech-recognition), 132 likes, 1.1k downloads, trending score 129, 5 d ago",
+    "score": 10
+  },
+  {
+    "id": "hn-b8385394b2",
+    "title": "I track LLM API prices daily, found a 33x cost gap in the same model",
+    "url": "https://news.ycombinator.com/item?id=49586810",
+    "source": "hn",
+    "published_at": "2026-09-06T14:23:53Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7424,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I kept finding LLM pricing comparison posts that were already stale, so I built a scraper that snapshots the full OpenRouter catalog (425 models, 58 providers) every day and diffs it against the previous day. It&#x27;s been running unattended for about a week now: https:&#x2F;&#x2F;costpertoken.dev<",
+    "why_now": "Measured: 2 points, 0 comments on HN, 21 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-0a721e5ef8",
+    "title": "Moral Competence Before Moral Content: Why LLM Agents Lack the Prerequisites",
+    "url": "https://arxiv.org/abs/2609.05036",
+    "source": "hn",
+    "published_at": "2026-09-07T08:07:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9589,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-9205beb845",
+    "title": "Privacy Leakage from Gradients in Split-LLM Training",
+    "url": "https://arxiv.org/abs/2609.04382",
+    "source": "hn",
+    "published_at": "2026-09-07T06:54:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9421,
+      "age_h": 4.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-0021db83d7",
+    "title": "Ask HN: Open-source AI policies and \"responsbility\"",
+    "url": "https://news.ycombinator.com/item?id=49594163",
+    "source": "hn",
+    "published_at": "2026-09-07T05:19:29Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9209,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "A common statement in a number of LLM&#x2F;AI policies regarding AI assisted contributions across open source projects is that the developer is &quot;responsible&quot; for their contribution even if it was made wholly or in part by AI. I understand in layman&#x27;s terms what this means and I can gu",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-6ca2c2885f",
+    "title": "APAC Alpha - Zero-lag Intel terminal for Asian markets",
+    "url": "https://news.ycombinator.com/item?id=49583347",
+    "source": "hn",
+    "published_at": "2026-09-06T04:34:12Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.6441,
+      "age_h": 30.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Intel",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Intel"
+    ],
+    "summary": "I built APAC Alpha (https:&#x2F;&#x2F;apacalpha.com) to solve a major data blind spot for individual and international investors looking at Asian markets.<p>The Problem:<p>Enterprise terminals like Bloomberg or LSEG are prohibitively expensive and largely gated against individual retail investors.<p",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 30 h ago",
+    "score": 7
+  },
+  {
+    "id": "hf-4a6dd2ae9a",
+    "title": "IFM/K2-Horizon-7B",
+    "url": "https://huggingface.co/IFM/K2-Horizon-7B",
+    "source": "hf",
+    "published_at": "2026-09-01T23:14:30Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 81,
+      "downloads": 2087,
+      "trendingScore": 79.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.607,
+      "signal_parts": {
+        "trending": 0.576,
+        "likes": 0.638,
+        "downloads": 0.553
+      },
+      "decay": 0.1491,
+      "age_h": 131.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 81 likes, 2.1k downloads, trending score 79, created 2026-09-01",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 81 likes, 2.1k downloads, trending score 79, 5 d ago",
+    "score": 7
+  },
+  {
+    "id": "hn-85d57520f5",
+    "title": "Show HN: MaskShift - a maximalist coding agent with zero NPM dependencies",
+    "url": "https://github.com/nafeeur/MaskShift",
+    "source": "hn",
+    "published_at": "2026-09-06T21:39:11Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8244,
+      "age_h": 13.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "MaskShift is a local-first coding agent harness. Features:<p>- Works with models that have no tool-calling API. Tool schemas are rendered into the system prompt and the model calls them by writing a block in its reply, parsed back into a normal tool call.<p>- No npm runtime dependencies. Daemon are",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-c302489c77",
+    "title": "Show HN: Local 3D LLM Sandbox a tiny assistant with an attitude",
+    "url": "https://github.com/franciscocarloserra/llm-sandbox/",
+    "source": "hn",
+    "published_at": "2026-09-06T14:28:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7432,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Built this small project as a proof of concept to see how fun it could be and how low latency it would be to interact with the local agent in a 3D environment.<p>Any feedback is welcome!",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  }
+]
