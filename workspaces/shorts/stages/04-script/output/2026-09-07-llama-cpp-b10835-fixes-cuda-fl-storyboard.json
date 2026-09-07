@@ -1,0 +1,101 @@
+{
+  "slug": "2026-09-07-llama-cpp-b10835-fixes-cuda-fl",
+  "topic": "llama.cpp b10835 fixes the CUDA f16 flash attention divergent barrier",
+  "title": "llama.cpp b10835 fixes its fast lane",
+  "description": "llama.cpp b10835 fixes a divergent barrier in the CUDA f16 flash attention kernel. What broke, what it risked, and the update you make tonight. (Narration is AI-generated.)",
+  "hashtags": [
+    "#llamacpp",
+    "#localai",
+    "#nvidia"
+  ],
+  "hook_text": "llama.cpp fixed its fast lane",
+  "hook_candidates": [
+    "llama.cpp just fixed its fast lane.",
+    "Your model file is fine. llama.cpp wasn't.",
+    "3232 errors to zero, in one update.",
+    "Three llama.cpp releases in seventy-seven minutes.",
+    "llama.cpp's fast lane was breaking GPU rules.",
+    "You updated the model. The engine was the bug.",
+    "Flash attention has been skipping checkpoints since February.",
+    "Your GPU's fast path was reading unfinished work.",
+    "b10835 fixes a bug older than your last download.",
+    "Same speed tonight, minus three thousand errors."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 34,
+  "narration_full": "llama.cpp fixed three thousand two hundred thirty-two errors to zero. Your card's fast mode is flash attention, a fused math path that skips a giant intermediate write. It's been broken since February. The program doing that math skipped a barrier, a checkpoint where one chunk of your card waits for another. Chunks could read unfinished work, risking wrong answers. The catch is the price. Prompt speed moved point one five percent, inside measurement noise. Your card was speeding. Now it speeds legally. So tonight, pull the newest llama.cpp build and keep flash attention on. Same speed, no broken rules.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "llama.cpp fixed three thousand two hundred thirty-two errors to zero.",
+      "on_screen_text": "llama.cpp fixed its fast lane | 3232 to 0",
+      "visual_brief": "Frame 1: the hook text sits fully legible over a dark lane graphic. On \"three thousand two hundred thirty-two\" a counter scales in beneath it showing 3232; on \"zero\" it flips to 0 in place.",
+      "est_duration_s": 3.4
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your card's fast mode is flash attention, a fused math path that skips a giant intermediate write. It's been broken since February.",
+      "on_screen_text": "fast mode, broken since Feb",
+      "visual_brief": "On \"flash attention\" a fused-path icon rises in place at left; on \"broken since February\" a right panel fades in with a hairline crack through the icon.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The program doing that math skipped a barrier, a checkpoint where one chunk of your card waits for another. Chunks could read unfinished work, risking wrong answers.",
+      "on_screen_text": "one chunk raced ahead",
+      "visual_brief": "On \"a checkpoint where one chunk of your card waits for another\" two glowing blocks rise in place with a dotted gate between them; on \"unfinished work\" the gate fades out and the right block flickers.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The catch is the price. Prompt speed moved point one five percent, inside measurement noise. Your card was speeding. Now it speeds legally.",
+      "on_screen_text": "-0.15% prompt speed",
+      "visual_brief": "On \"point one five percent\" a giant -0.15% scales in center; on \"speeds legally\" a small speedometer fades in beneath it, needle steady.",
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So tonight, pull the newest llama.cpp build and keep flash attention on. Same speed, no broken rules.",
+      "on_screen_text": "fast lane, fixed tonight",
+      "visual_brief": "On \"pull the newest llama.cpp build\" the text rises in place; on \"no broken rules\" the frame settles into the same centered lane stack as frame one.",
+      "est_duration_s": 5.9
+    }
+  ],
+  "notes_for_review": "Numbers rounded: 1390.27 to 1388.10 t/s spoken as 'point one five percent, inside measurement noise' per the PR's 'no measurable performance regression'. Bug kept as undefined behavior ('risking wrong answers'), never garbled output. The fast-lane picture is the hook's framing only; no sustained analogy.",
+  "tags": [
+    "llama.cpp",
+    "llama cpp",
+    "llamacpp",
+    "llama.cpp update",
+    "llama.cpp b10835",
+    "b10835",
+    "flash attention",
+    "cuda flash attention",
+    "ggml",
+    "local llm",
+    "local ai",
+    "run llm locally",
+    "nvidia gpu llm",
+    "llama.cpp nvidia",
+    "update llama.cpp"
+  ]
+}

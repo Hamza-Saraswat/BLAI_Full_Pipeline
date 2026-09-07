@@ -1,0 +1,551 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-07T12:30:50+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 1
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 7,
+    "entities_total": 26,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "github.com",
+      "lmstudio.ai"
+    ],
+    "domain_diversity": 2,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.286,
+      "detail": [
+        {
+          "label": "compute-sanitizer divergent-barrier errors, before vs after fix (RTX 5090, CUDA 13.3)",
+          "value": "3232 errors before and 0 after this fix",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "zero",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "compute-sanitizer ERROR SUMMARY in the original attached run (RTX 4070, build 10615)",
+          "value": "4000 errors",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "b10834 publish timestamp",
+          "value": "07 Sep 07:18",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "b10835 publish timestamp",
+          "value": "07 Sep 08:08",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "b10837 publish timestamp",
+          "value": "07 Sep 08:35",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "pp512 @ d100000 before vs after fix, Qwen3.8-27B-UD-Q4_K_XL.gguf, FlashAttention enabled",
+          "value": "1390.27 \u00b1 21.66 -> 1388.10 \u00b1 21.43 t/s (-0.15%)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "0.15%",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Ollama's bundled llama.cpp, latest visible version bump on its repo page",
+          "value": "b10760",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 26,
+      "found_count": 0,
+      "score": 0.0,
+      "found": [],
+      "missing": [
+        "RTX",
+        "Sep",
+        "f16",
+        "FlashAttention",
+        "b10834",
+        "MMA",
+        "pp512",
+        "MMA FlashAttention",
+        "Qwen3.6-35B MoE",
+        "b74f590",
+        "threadIdx.y",
+        "Qwen3.8-27B-UD-Q4_K_XL.gguf",
+        "tg128",
+        "b10837",
+        "b10107",
+        "b10243",
+        "b10488",
+        "Pre",
+        "Aug",
+        "LM Studio",
+        "Ollama",
+        "b10760",
+        "Mac",
+        "Windows",
+        "Linux",
+        "NVIDIA GPU"
+      ],
+      "top2": [
+        "RTX",
+        "Sep"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "RTX",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sep",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "f16",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FlashAttention",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10834",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MMA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "pp512",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MMA FlashAttention",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.6-35B MoE",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b74f590",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "threadIdx.y",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "tg128",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10837",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10107",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10243",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10488",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Pre",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Aug",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10760",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Windows",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA GPU",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:3232 errors before and 0 after this fix"
+      ],
+      "hook_text": "llama.cpp fixed its fast lane",
+      "first_sentence": "llama.cpp fixed three thousand two hundred thirty-two errors to zero."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 3.4,
+          "specific": true,
+          "hits": [
+            "num:3232 errors before and 0 after this fix"
+          ],
+          "narration": "llama.cpp fixed three thousand two hundred thirty-two errors to zero."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "glossary:flash attention"
+          ],
+          "narration": "Your card's fast mode is flash attention, a fused math path that skips a giant intermediate write. It's been broken since February."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": false,
+          "hits": [],
+          "narration": "The program doing that math skipped a barrier, a checkpoint where one chunk of your card waits for another. Chunks could read unfinished work, risking wrong answers."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "num:1390.27 \u00b1 21.66 -> 1388.10 \u00b1 21.43 t/s (-0.15%)"
+          ],
+          "narration": "The catch is the price. Prompt speed moved point one five percent, inside measurement noise. Your card was speeding. Now it speeds legally."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "glossary:llama.cpp",
+            "glossary:flash attention"
+          ],
+          "narration": "So tonight, pull the newest llama.cpp build and keep flash attention on. Same speed, no broken rules."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.8,
+      "words": 102,
+      "sentences": 11,
+      "est_speech_s": 35.2,
+      "vo_band_ok": true
+    },
+    "narration_full": "llama.cpp fixed three thousand two hundred thirty-two errors to zero. Your card's fast mode is flash attention, a fused math path that skips a giant intermediate write. It's been broken since February. The program doing that math skipped a barrier, a checkpoint where one chunk of your card waits for another. Chunks could read unfinished work, risking wrong answers. The catch is the price. Prompt speed moved point one five percent, inside measurement noise. Your card was speeding. Now it speeds legally. So tonight, pull the newest llama.cpp build and keep flash attention on. Same speed, no broken rules.",
+    "on_screen": "llama.cpp fixed its fast lane | llama.cpp fixed its fast lane | 3232 to 0 | fast mode, broken since Feb | one chunk raced ahead | -0.15% prompt speed | fast lane, fixed tonight"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 4.8,
+        "words": 102,
+        "est_speech_s": 35.2,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-07-llama-cpp-b10835-fixes-cuda-fl-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.0,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "RTX",
+          "Sep"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:3232 errors before and 0 after this fix"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
