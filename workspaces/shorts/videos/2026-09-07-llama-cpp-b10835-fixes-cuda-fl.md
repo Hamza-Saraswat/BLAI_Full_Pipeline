@@ -2,19 +2,19 @@
 slug: 2026-09-07-llama-cpp-b10835-fixes-cuda-fl
 workspace: shorts
 title: llama.cpp b10835 fixes flash attention
-status: ready-to-build
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-07
-updated: "2026-09-07T12:32:23Z"
+updated: "2026-09-07T13:35:05Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-09-07T11:43:30Z 03-research ok: validator 0, 10 claims, 7 key numbers, 12 sources
 - 2026-09-07T12:30:50Z 04-script ok: A beat B 21-18 no grafts; validator 0/0; eval ready; ledger+style recorded
 - 2026-09-07T12:32:23Z 05-package ok: rubric 100/100, check_outputs 0 failures; hub ready-to-build
+- 2026-09-07T13:35:05Z build start on gn100-83c4
