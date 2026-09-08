@@ -2,14 +2,14 @@
 slug: 2026-09-07-vibevoice-asr-7b-vs-whisper-mi
 workspace: shorts
 title: "VibeVoice-ASR-7B vs Whisper: Microsoft's local transcription bet"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-07
-updated: "2026-09-07T11:09:10Z"
+updated: "2026-09-08T13:35:01Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Picked (rank 2, opportunity 82.2): Microsoft shipped VibeVoice-ASR-Streaming-7B (1.1k downloads, 132 likes, trending 129 on HF this week); reframed from news-react to comparison lane against Whisper to hold the one-news-react cap; smooth-explainer because the trade-off needs its own beats. Our whisper.cpp daily runs give a cited reference point.
 
 ## Build journal
-
+- 2026-09-08T13:35:01Z 2026-09-08T13:35:01Z expired: not from today's picks (2026-09-08); the factory carries no backlog

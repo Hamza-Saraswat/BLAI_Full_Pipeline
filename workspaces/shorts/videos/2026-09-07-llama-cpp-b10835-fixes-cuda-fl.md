@@ -2,18 +2,18 @@
 slug: 2026-09-07-llama-cpp-b10835-fixes-cuda-fl
 workspace: shorts
 title: llama.cpp b10835 fixes flash attention
-status: blocked
+status: expired
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-07
-updated: "2026-09-07T13:36:53Z"
+updated: "2026-09-08T13:35:01Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-09-07T13:36:48Z 06-voice fail 100s (voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move')
 - 2026-09-07T13:36:53Z 06-voice fail 5s (voice QA failed: WER 0.039, 3 mismatch(es): expected 'cpp fixed' heard 'cp pfix'; expected 'write' heard 'right'; expected 'moved' heard 'move')
 - 2026-09-07T13:36:53Z blocked at 06-voice
+- 2026-09-08T13:35:01Z 2026-09-08T13:35:01Z expired: not from today's picks (2026-09-08); the factory carries no backlog
