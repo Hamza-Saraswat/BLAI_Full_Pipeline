@@ -1,6 +1,6 @@
 # Voice: 2026-09-08-mistral-raises-3b-euro-for-ope
 
-Stage 06-voice on gn100-83c4 at 2026-09-08T13:39:30Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-08-mistral-raises-3b-euro-for-ope/voice/` (binaries are never committed).
+Stage 06-voice on gn100-83c4 at 2026-09-08T14:24:30Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-08-mistral-raises-3b-euro-for-ope/voice/` (binaries are never committed).
 
 | Field | Value |
 |-------|-------|
@@ -13,12 +13,12 @@ Stage 06-voice on gn100-83c4 at 2026-09-08T13:39:30Z. Audio lives in `$BLAI_BUIL
 | Model | chatterbox |
 | Alignment | whisper |
 | Credits estimate | 0 |
-| WER | 0.034 (threshold 0.03) |
-| QA | FAIL |
+| WER | 0.025 (threshold 0.03) |
+| QA | pass |
 
 ## Mismatches
 - at 11.5 s: expected "published", heard "publish"
-- at 14.6 s: expected "point oh", heard "zero"
+- at 14.6 s: expected "point", heard ""
 - at 19.1 s: expected "an", heard "and"
 
 ## Files
