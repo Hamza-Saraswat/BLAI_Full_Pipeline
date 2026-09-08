@@ -2,14 +2,14 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: building
+status: review
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T14:24:22Z"
+updated: "2026-09-08T14:44:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-script|Script]] + [[stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-09-08-mistral-raises-3b-euro-for-ope-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-08-mistral-raises-3b-euro-for-ope-narration|Narration]] (spoken form, written by the stage 04 normalizer)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-08-mistral-raises-3b-euro-for-ope-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -48,3 +48,5 @@ blotato_post_id: ""
 - 2026-09-08T13:39:30Z blocked at 06-voice
 - 2026-09-08T14:24:22Z build start on gn100-83c4
 - 2026-09-08T14:24:30Z 06-voice ok 5s
+- 2026-09-08T14:44:52Z 07-render ok 39.50s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 38
+- 2026-09-08T14:44:52Z 07-render ok 1219s
