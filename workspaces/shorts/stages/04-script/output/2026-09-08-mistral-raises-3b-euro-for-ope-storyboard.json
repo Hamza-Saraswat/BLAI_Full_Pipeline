@@ -1,0 +1,121 @@
+{
+  "slug": "2026-09-08-mistral-raises-3b-euro-for-ope",
+  "topic": "Mistral raises EUR 3B for open-weight frontier AI",
+  "title": "Mistral tonight: Small 4 runs, Large 3 waits",
+  "description": "One rule decides which Mistral model runs on your hardware tonight.",
+  "hashtags": [
+    "#localAI",
+    "#Mistral",
+    "#openweights"
+  ],
+  "tags": [
+    "mistral ai",
+    "mistral funding",
+    "open weight models",
+    "open weights",
+    "local ai",
+    "local llm",
+    "run llm locally",
+    "mistral small 4",
+    "mistral large 3",
+    "ministral",
+    "apache 2.0 license",
+    "llama.cpp",
+    "lm studio",
+    "ai news",
+    "sovereign ai",
+    "european ai",
+    "samsung investment",
+    "mixture of experts",
+    "gguf",
+    "ai funding round"
+  ],
+  "hook_text": "Run Mistral tonight. Not 675B.",
+  "hook_candidates": [
+    "Three billion euros, and the open-weight pledge is already half true. * (A, number-shock)",
+    "You can already run Mistral tonight. Just not the six hundred seventy-five billion one. * (B, named-contradiction)",
+    "Six hundred seventy-five billion parameters, and it still wants eight GPUs.",
+    "Europe's biggest round ever just bet on downloadable weights.",
+    "Mistral raised three billion euros. Your GPU cares about one number.",
+    "The pledge says open weights. Your gaming PC already has proof.",
+    "You run open models at home. Mistral just made that a business model.",
+    "One hundred nineteen billion parameters, and it runs tonight.",
+    "Samsung just led three billion euros into open weights.",
+    "Frontier AI was supposed to leave your desk behind. It didn't."
+  ],
+  "style_pack": "halftone",
+  "script_format": "classic",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 37,
+  "narration_full": "You can already run Mistral tonight. Just not the six hundred seventy-five billion one. You run open models on a gaming PC or Mac. Mistral just raised three billion euros promising open weights, published files you run yourself. Both are Apache two point oh, a license allowing free commercial use. Both are mixtures of experts, an office lighting only the rooms in use, though you own the building. Small four lights six and a half billion parameters per word. Now the totals. Small four, one hundred nineteen billion parameters, runs on your box. The six hundred seventy-five billion one wants eight datacenter GPUs. So the rule: fits your GPU, Small four. Needs a datacenter, Large three.",
+  "analogy": {
+    "vehicle": "Giant office building where you only light the rooms in use",
+    "mapping": "Small 4 is a 119B-parameter building but only 6.5B lights are on per token, which is why it feels fast despite its size.",
+    "limit": "You still have to buy the whole building: disk and VRAM must hold all the experts even though only a few fire at a time."
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You can already run Mistral tonight. Just not the six hundred seventy-five billion one.",
+      "on_screen_text": "Run Mistral tonight. Not 675B.",
+      "visual_brief": "Frame 1: two model name cards side by side; on 'run Mistral tonight' the Small 4 card scales in bright from 0.30 s; on 'six hundred seventy-five billion' the Large 3 card fades in greyed out.",
+      "est_duration_s": 4.4
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You run open models on a gaming PC or Mac. Mistral just raised three billion euros promising open weights, published files you run yourself.",
+      "on_screen_text": "€3B for open weights",
+      "visual_brief": "On 'gaming PC or Mac' a desktop tower and laptop fade in; on 'three billion euros' the €3B figure rises in place above them; on 'published files' a download arrow lands on the machines.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Both are Apache two point oh, a license allowing free commercial use.",
+      "on_screen_text": "Apache 2.0, both models",
+      "visual_brief": "Both model cards return; on 'Apache two point oh' a license tag scales in, bridging the two cards to show one shared license.",
+      "est_duration_s": 3.8
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Both are mixtures of experts, an office lighting only the rooms in use, though you own the building. Small four lights six and a half billion parameters per word.",
+      "on_screen_text": "MoE: lit rooms, owned building | Small 4: 6.5B per word",
+      "visual_brief": "On 'office lighting only the rooms in use' a floor-plan grid fades in with a few rooms lit; on 'six and a half billion' the Small 4 label rises with 6.5B beside a mostly-dark Large 3 floor.",
+      "est_duration_s": 9.1
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Now the totals. Small four, one hundred nineteen billion parameters, runs on your box. The six hundred seventy-five billion one wants eight datacenter GPUs.",
+      "on_screen_text": "119B: your box | 675B: 8 datacenter GPUs",
+      "visual_brief": "On 'one hundred nineteen billion' the Small 4 card settles onto the desktop tower and fits; on 'eight datacenter GPUs' a server rack fades in beside Large 3, which stays off the desk.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So the rule: fits your GPU, Small four. Needs a datacenter, Large three.",
+      "on_screen_text": "Fits your GPU: Small 4",
+      "visual_brief": "On 'fits your GPU' the Small 4 card settles onto the desktop; the two-card frame rhymes with frame 1; final half second wordmark settle, no further motion.",
+      "est_duration_s": 4.1
+    }
+  ],
+  "notes_for_review": "A: Fortune benchmark claim softened to 'eighteen months behind' with the 'some benchmarks' qualifier kept; 'fits your gaming GPU' was replaced with 'downloadable tonight' because the brief carries no fit claim for Ministral. B: 'forty-one billion active' was cut to stay inside the five-number cap; the screen keeps the verbatim node line."
+}

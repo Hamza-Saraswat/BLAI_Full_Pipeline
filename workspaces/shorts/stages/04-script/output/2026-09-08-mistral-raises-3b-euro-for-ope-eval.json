@@ -1,0 +1,666 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-08T12:10:06+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-08-mistral-raises-3b-euro-for-ope-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 35,
+    "misconceptions_total": 6,
+    "unverified_ratio": 0.474,
+    "source_domains": [
+      "fortune.com",
+      "huggingface.co",
+      "mistral.ai",
+      "orrick.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 4,
+      "distinct": 3,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "Series D raise",
+          "value": "\u20ac3 billion",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three billion",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Post-money valuation",
+          "value": "more than \u20ac21 billion",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Mistral Large 3 parameters",
+          "value": "41B active and 675B total parameters",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "six hundred seventy-five billion",
+          "scene_ids": [
+            "s01",
+            "s05"
+          ]
+        },
+        {
+          "label": "Large 3 compressed-checkpoint target",
+          "value": "a single 8\u00d7A100 or 8\u00d7H100 node",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ministral 3 sizes",
+          "value": "three model sizes: 3B, 8B, and 14B parameters",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three billion",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Mistral Small 4 parameters",
+          "value": "119B parameters, with 6.5B activated per token",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one hundred nineteen",
+          "scene_ids": [
+            "s04",
+            "s05"
+          ]
+        },
+        {
+          "label": "Mistral Small 4 context length",
+          "value": "256k context length",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Series C, September 2025",
+          "value": "\u20ac1.7 billion at a post-investment valuation of \u20ac11.7 billion",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 35,
+      "found_count": 3,
+      "score": 0.086,
+      "found": [
+        "Large",
+        "Small",
+        "Mistral Small 4"
+      ],
+      "missing": [
+        "Europe",
+        "Mistral Large 3",
+        "A100",
+        "H100",
+        "European",
+        "Samsung Electronics",
+        "Scaleup Europe Fund",
+        "PSG Equity",
+        "Grand Duchy of Luxembourg",
+        "LM Studio",
+        "Series A",
+        "Series B",
+        "EQT",
+        "BlackRock",
+        "vLLM",
+        "ASML",
+        "Advent",
+        "Luxembourg",
+        "Ministral",
+        "American AI",
+        "All of Mistral",
+        "Nvidia",
+        "US Commerce Department",
+        "French National Assembly",
+        "Everything Mistral",
+        "Hugging Face",
+        "EUR 3",
+        "USD",
+        "Mistral Series C",
+        "Anthropic Mythos",
+        "Mistral CEO",
+        "Mistral Apache-2.0"
+      ],
+      "top2": [
+        "Large",
+        "Europe"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Large",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Europe",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral Large 3",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Small",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "A100",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "H100",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "European",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Samsung Electronics",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Scaleup Europe Fund",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "PSG Equity",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Grand Duchy of Luxembourg",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral Small 4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Series A",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Series B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "EQT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BlackRock",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ASML",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Advent",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Luxembourg",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ministral",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "American AI",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "All of Mistral",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nvidia",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "US Commerce Department",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "French National Assembly",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Everything Mistral",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "EUR 3",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "USD",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral Series C",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Anthropic Mythos",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral CEO",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral Apache-2.0",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "Run Mistral tonight. Not 675B.",
+      "first_sentence": "You can already run Mistral tonight."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "comparison-ladder",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.4,
+          "specific": true,
+          "hits": [
+            "num:41B active and 675B total parameters"
+          ],
+          "narration": "You can already run Mistral tonight. Just not the six hundred seventy-five billion one."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 7.5,
+          "specific": true,
+          "hits": [
+            "num:\u20ac3 billion",
+            "num:three model sizes: 3B, 8B, and 14B parameters"
+          ],
+          "narration": "You run open models on a gaming PC or Mac. Mistral just raised three billion euros promising open weights, published files you run yourself."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 3.8,
+          "specific": true,
+          "hits": [
+            "glossary:Apache 2.0"
+          ],
+          "narration": "Both are Apache two point oh, a license allowing free commercial use."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 9.1,
+          "specific": true,
+          "hits": [
+            "num:119B parameters, with 6.5B activated per token",
+            "entity:Small"
+          ],
+          "narration": "Both are mixtures of experts, an office lighting only the rooms in use, though you own the building. Small four lights six and a half billion parameters per word."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 7.5,
+          "specific": true,
+          "hits": [
+            "num:41B active and 675B total parameters",
+            "num:119B parameters, with 6.5B activated per token",
+            "entity:Small"
+          ],
+          "narration": "Now the totals. Small four, one hundred nineteen billion parameters, runs on your box. The six hundred seventy-five billion one wants eight datacenter GPUs."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 4.1,
+          "specific": true,
+          "hits": [
+            "entity:Large",
+            "entity:Small"
+          ],
+          "narration": "So the rule: fits your GPU, Small four. Needs a datacenter, Large three."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.8,
+      "words": 118,
+      "sentences": 12,
+      "est_speech_s": 40.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "You can already run Mistral tonight. Just not the six hundred seventy-five billion one. You run open models on a gaming PC or Mac. Mistral just raised three billion euros promising open weights, published files you run yourself. Both are Apache two point oh, a license allowing free commercial use. Both are mixtures of experts, an office lighting only the rooms in use, though you own the building. Small four lights six and a half billion parameters per word. Now the totals. Small four, one hundred nineteen billion parameters, runs on your box. The six hundred seventy-five billion one wants eight datacenter GPUs. So the rule: fits your GPU, Small four. Needs a datacenter, Large three.",
+    "on_screen": "Run Mistral tonight. Not 675B. | Run Mistral tonight. Not 675B. | \u20ac3B for open weights | Apache 2.0, both models | MoE: lit rooms, owned building | Small 4: 6.5B per word | 119B: your box | 675B: 8 datacenter GPUs | Fits your GPU: Small 4"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 5.8,
+        "words": 118,
+        "est_speech_s": 40.7,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 44 chars \u2014 mobile truncates ~40",
+          "FK grade 5.8 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-08-mistral-raises-3b-euro-for-ope-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 3,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.086,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Large",
+          "Europe"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "comparison-ladder",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
