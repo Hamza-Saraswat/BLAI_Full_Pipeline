@@ -2,22 +2,22 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: approved
+status: scheduled
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T14:51:12Z"
-publish_slot: ""
+updated: "2026-09-08T15:00:12Z"
+publish_slot: "2026-09-08T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: aaa6fc5c-de48-4dbd-8d1e-4d039ab78fa3
 ---
 # Mistral raises 3B euro for open-weight frontier AI
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-08-mistral-raises-3b-euro-for-ope-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-08-mistral-raises-3b-euro-for-ope-narration|Narration]] (spoken form, written by the stage 04 normalizer)
 - Render: [[stages/07-render/output/2026-09-08-mistral-raises-3b-euro-for-ope-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-08-mistral-raises-3b-euro-for-ope-publish]]
 
 ## Decisions
 - Picked (unattended): ranked 1 by opportunity (92.9, autocomplete depth 133); rotation rules cleared news-react for one slot today.
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-09-08T14:44:52Z 07-render ok 1219s
 - 2026-09-08T14:44:57Z build done, status review
 - 2026-09-08T14:51:12Z telegram approve (approved_at 2026-09-08T14:51:12Z)
+- 2026-09-08T15:00:13Z 08-publish ok 4s
