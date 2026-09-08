@@ -2,19 +2,19 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T12:11:59Z"
+updated: "2026-09-08T13:35:04Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - Package (unattended): searchable title chosen (search intent pick, autocomplete depth 133); rubric 100/100; check_outputs exit 0 after link fills. contains_synthetic_media false (typographic scenes, creator's own voice clone). Status ready-to-build; stages 06-08 belong to build/build.py.
 
 ## Build journal
-
+- 2026-09-08T13:35:04Z build start on gn100-83c4
