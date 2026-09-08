@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-09-08-mistral-raises-3b-euro-for-ope-brief|Brief]]
 - Script: [[stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-script|Script]] + [[stages/04-script/output/2026-09-08-mistral-raises-3b-euro-for-ope-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-09-08-mistral-raises-3b-euro-for-ope-package|Package]]
-- Voice: [[stages/06-voice/output/2026-09-08-mistral-raises-3b-euro-for-ope-narration|Narration|Narration]]
+- Voice: [[stages/06-voice/output/2026-09-08-mistral-raises-3b-euro-for-ope-narration|Narration]] (spoken form, written by the stage 04 normalizer)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
