@@ -1,0 +1,902 @@
+[
+  {
+    "id": "hn-3045481d86",
+    "title": "Mistral raises €3B",
+    "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+    "source": "hn",
+    "published_at": "2026-09-08T05:06:23Z",
+    "signals": {
+      "points": 502,
+      "num_comments": 352,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.918,
+      "age_h": 5.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 502 points, 352 comments on HN, 6 h ago",
+    "score": 93
+  },
+  {
+    "id": "github-8be94eb58a",
+    "title": "llama.cpp b10856",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10856",
+    "source": "github",
+    "published_at": "2026-09-08T10:49:05Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10856",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.997,
+      "age_h": 0.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> chat : split specialized parsers into common/parsers (#27764) * chat : split specialized parsers into common/parsers Move the 14 dedicated template parsers out of chat.cpp into one file each under common/parsers, mirroring the src/models split. chat.cpp keeps the template detection in",
+    "why_now": "Shipped: ggml-org/llama.cpp b10856 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-c1a53acf6c",
+    "title": "llama.cpp b10855",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10855",
+    "source": "github",
+    "published_at": "2026-09-08T10:03:31Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10855",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9861,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> opencl: properly handle non-contiguous inputs to conv2d (#28503) * opencl: fix conv2d non-contiguous strides * opencl: format </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45929809> **macOS/iOS:** - [macOS Apple S",
+    "why_now": "Shipped: ggml-org/llama.cpp b10855 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "hn-1606cfe2c2",
+    "title": "Multi-Agents LLM Financial Trading Framework",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "source": "hn",
+    "published_at": "2026-09-08T05:20:23Z",
+    "signals": {
+      "points": 58,
+      "num_comments": 36,
+      "signal": 0.716,
+      "signal_parts": {
+        "points": 0.714,
+        "comments": 0.72
+      },
+      "decay": 0.9211,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 58 points, 36 comments on HN, 6 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-49e1264c16",
+    "title": "llama.cpp b10853",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10853",
+    "source": "github",
+    "published_at": "2026-09-08T03:58:37Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b10853",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9032,
+      "age_h": 7.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Kimi",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> model : support Kimi-K3 recurrent-state rollback (#28466) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/45866131> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downl",
+    "why_now": "Shipped: ggml-org/llama.cpp b10853 released (pre-release), 7 h ago",
+    "score": 53
+  },
+  {
+    "id": "hn-89998dba81",
+    "title": "DeepSeek v4.1 Flash is now available for internal beta testing",
+    "url": "https://news.ycombinator.com/item?id=49607094",
+    "source": "hn",
+    "published_at": "2026-09-08T08:04:38Z",
+    "signals": {
+      "points": 10,
+      "num_comments": 3,
+      "signal": 0.377,
+      "signal_parts": {
+        "points": 0.42,
+        "comments": 0.276
+      },
+      "decay": 0.9583,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "DeepSeek V4.1 Flash is now available for internal beta testing. It uses a new model architecture, with native multimodal support, stronger capabilities, faster speed, and lower cost.<p>Keep the `base_url` unchanged and set the model name to `deepseek-v4.1-flash-expires-on-0910` to use it. Pricing is",
+    "why_now": "Shipped: 10 points, 3 comments on HN, 3 h ago",
+    "score": 46
+  },
+  {
+    "id": "hn-94961bbd46",
+    "title": "The smallest edge AI device for local LLMs",
+    "url": "https://tiiny.ai/",
+    "source": "hn",
+    "published_at": "2026-09-07T21:09:12Z",
+    "signals": {
+      "points": 22,
+      "num_comments": 17,
+      "signal": 0.557,
+      "signal_parts": {
+        "points": 0.549,
+        "comments": 0.576
+      },
+      "decay": 0.8184,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 22 points, 17 comments on HN, 14 h ago",
+    "score": 39
+  },
+  {
+    "id": "hn-ad44692d9b",
+    "title": "El Yayster - a resident LLM that inhabits Emacs",
+    "url": "https://github.com/yayster/yayster.el",
+    "source": "hn",
+    "published_at": "2026-09-07T19:50:21Z",
+    "signals": {
+      "points": 35,
+      "num_comments": 6,
+      "signal": 0.556,
+      "signal_parts": {
+        "points": 0.628,
+        "comments": 0.388
+      },
+      "decay": 0.803,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 35 points, 6 comments on HN, 15 h ago",
+    "score": 38
+  },
+  {
+    "id": "hn-86ca3ca943",
+    "title": "DeepSeek/Qwen are surprisingly well at generating code for DSCI pipelines",
+    "url": "https://chat.deepseek.com/share/jg3hcnatoliqs1ct5i",
+    "source": "hn",
+    "published_at": "2026-09-08T06:14:32Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.9332,
+      "age_h": 4.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "myth-bust"
+    },
+    "products": [
+      "DeepSeek",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 3 comments on HN, 5 h ago",
+    "score": 37
+  },
+  {
+    "id": "hn-b4c8733450",
+    "title": "Ollama replacement 2-4x faster for no extra compute cost",
+    "url": "https://github.com/omgitsbase/llmash",
+    "source": "hn",
+    "published_at": "2026-09-07T20:46:41Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 4,
+      "signal": 0.294,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.321
+      },
+      "decay": 0.814,
+      "age_h": 14.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Measured: 4 points, 4 comments on HN, 14 h ago",
+    "score": 35
+  },
+  {
+    "id": "hf-8253750774",
+    "title": "openbmb/MiniCPM5-2B",
+    "url": "https://huggingface.co/openbmb/MiniCPM5-2B",
+    "source": "hf",
+    "published_at": "2026-09-06T11:12:19Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 523,
+      "downloads": 2879,
+      "trendingScore": 419.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.85,
+      "signal_parts": {
+        "trending": 0.795,
+        "likes": 0.906,
+        "downloads": 0.577
+      },
+      "decay": 0.5013,
+      "age_h": 47.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 523 likes, 2.9k downloads, trending score 419, created 2026-09-06",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 523 likes, 2.9k downloads, trending score 419, 48 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-c2ba1ce270",
+    "title": "DeepSeek V4 Flash across 14 providers: cost, speed and caching",
+    "url": "https://www.inference.academy/benchmarks/serving-tradeoffs",
+    "source": "hn",
+    "published_at": "2026-09-07T20:46:17Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.8139,
+      "age_h": 14.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 14 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-1cdcd05958",
+    "title": "Peer-to-peer LLM inference in browser tabs, Qwen 3.8 27B",
+    "url": "https://github.com/Nehanth/swarmllm",
+    "source": "hn",
+    "published_at": "2026-09-07T20:08:22Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8065,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 15 h ago",
+    "score": 24
+  },
+  {
+    "id": "hf-3f20e695fc",
+    "title": "IFM/K2-Horizon-MoVA-36B-A4B-GGUF",
+    "url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B-GGUF",
+    "source": "hf",
+    "published_at": "2026-09-03T12:56:14Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 85,
+      "downloads": 4590,
+      "trendingScore": 85.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.615,
+      "signal_parts": {
+        "trending": 0.586,
+        "likes": 0.645,
+        "downloads": 0.61
+      },
+      "decay": 0.1817,
+      "age_h": 118.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 85 likes, 4.6k downloads, trending score 85, created 2026-09-03",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 85 likes, 4.6k downloads, trending score 85, 5 d ago",
+    "score": 24
+  },
+  {
+    "id": "hn-eee245eacd",
+    "title": "Ultra Instinct Claude Code",
+    "url": "https://github.com/infiniV/ultra-instinct-claude-code/blob/main/llms.txt",
+    "source": "hn",
+    "published_at": "2026-09-08T09:37:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9799,
+      "age_h": 1.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 1 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-4c20516670",
+    "title": "Show HN: Zero downtime embedding model upgrades",
+    "url": "https://github.com/arnsri33/embedflow",
+    "source": "hn",
+    "published_at": "2026-09-08T02:35:36Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 3,
+      "signal": 0.253,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.276
+      },
+      "decay": 0.8853,
+      "age_h": 8.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:embedding",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "People use embedding models all the time for rag&#x2F;semantic retrieval. However, when a newer, more desireable model comes out, there is an expensive (both in time and computational) cost of re-embedding every document in the database.<p>However, I figured out an interesting way to forgo that upfr",
+    "why_now": "Shipped: 3 points, 3 comments on HN, 8 h ago",
+    "score": 19
+  },
+  {
+    "id": "hf-f68712c009",
+    "title": "XHToken/Spark-X2.5-4B-GGUF",
+    "url": "https://huggingface.co/XHToken/Spark-X2.5-4B-GGUF",
+    "source": "hf",
+    "published_at": "2026-08-28T11:26:58Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 92,
+      "downloads": 49223,
+      "trendingScore": 88.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.686,
+      "signal_parts": {
+        "trending": 0.591,
+        "likes": 0.656,
+        "downloads": 0.782
+      },
+      "decay": 0.05,
+      "age_h": 263.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 92 likes, 49.2k downloads, trending score 88, created 2026-08-28",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 92 likes, 49.2k downloads, trending score 88, 11 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-628b144491",
+    "title": "Clean Web-to-Markdown: Fast HTML Extraction for LLMs and RAG",
+    "url": "https://markdown.usemy.cloud/",
+    "source": "hn",
+    "published_at": "2026-09-08T05:14:17Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9198,
+      "age_h": 5.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:rag",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 6 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-344fa6956c",
+    "title": "Uncensored Open-Weight Models: Redistribution as the Persistence Layer",
+    "url": "https://arxiv.org/abs/2609.05241",
+    "source": "hn",
+    "published_at": "2026-09-08T04:07:07Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.905,
+      "age_h": 6.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 7 h ago",
+    "score": 13
+  },
+  {
+    "id": "hf-7ee1f13757",
+    "title": "phasefield-audio/Irodori-TTS-v4.1-Anime",
+    "url": "https://huggingface.co/phasefield-audio/Irodori-TTS-v4.1-Anime",
+    "source": "hf",
+    "published_at": "2026-09-04T14:13:56Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 92,
+      "downloads": 0,
+      "trendingScore": 89.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.624,
+      "signal_parts": {
+        "trending": 0.592,
+        "likes": 0.656,
+        "downloads": 0.0
+      },
+      "decay": 0.2618,
+      "age_h": 92.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 92 likes, 0 downloads, trending score 89, created 2026-09-04",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 92 likes, 0 downloads, trending score 89, 4 d ago",
+    "score": 12
+  },
+  {
+    "id": "hn-4c76e99a82",
+    "title": "What Can You Do with a Local LLM?",
+    "url": "https://grigio.org/what-can-you-actually-do-with-a-local-llm/",
+    "source": "hn",
+    "published_at": "2026-09-08T10:14:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9887,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 1 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-0fe42a36a5",
+    "title": "We put an LLM in a PostgreSQL analyzer, then stopped letting it decide truth",
+    "url": "https://blog.elevarq.com/elevarq-1-0",
+    "source": "hn",
+    "published_at": "2026-09-08T01:15:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.8684,
+      "age_h": 9.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 2 comments on HN, 10 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-8be03d2d49",
+    "title": "Ask HN: What LLM are you using?",
+    "url": "https://news.ycombinator.com/item?id=49600138",
+    "source": "hn",
+    "published_at": "2026-09-07T16:32:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 3,
+      "signal": 0.168,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.276
+      },
+      "decay": 0.7656,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Is there a list of best llm by use case?",
+    "why_now": "Discussed: 1 points, 3 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-cc7f992388",
+    "title": "Show HN: Benzi - Code Intelligence Infrastructure for Frontier AI Models",
+    "url": "https://github.com/oooscoos/Benzi",
+    "source": "hn",
+    "published_at": "2026-09-07T16:05:58Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7608,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:embedding",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Roughly speaking, the way current AI coding agents&#x2F;harnesses work is by either: a) Pulling in appropriate text snippets of code across multiple files and handing them to the agent, or b) Parsing code to make high dimensional embeddings to approximate a symptom map, and hand that to the agent. B",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-67785fc67c",
+    "title": "\"Twenty years of brand building froze in time\": How coding agents select tools",
+    "url": "https://thenewstack.io/coding-agents-tool-choice/",
+    "source": "hn",
+    "published_at": "2026-09-07T18:52:02Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7919,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-2ea4e728c4",
+    "title": "LLM Guided Evolution for Circle Packing: Breaking 10 Packomania Records for $28",
+    "url": "https://arxiv.org/abs/2609.05093",
+    "source": "hn",
+    "published_at": "2026-09-08T01:42:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8741,
+      "age_h": 9.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 9 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-c1fca65c0e",
+    "title": "DoodleIQ - Rent your idle local-LLM machine to others by the second",
+    "url": "https://www.doodleiq.com/",
+    "source": "hn",
+    "published_at": "2026-09-07T21:25:19Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8216,
+      "age_h": 13.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 14 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-f129dadbd8",
+    "title": "Show HN: Security Scanning Tool",
+    "url": "https://hackymacky.vercel.app/",
+    "source": "hn",
+    "published_at": "2026-09-07T19:39:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.801,
+      "age_h": 15.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi Hackers,<p>I just found a couple of issues in my app, inspite of that i added all the Supabase and Vercel MCPs, i expected the LLM will be a little smarter and it will help me write a kind of okayish app. But inspite of taking care of it, i still found an issue in my RLS policies.<p>So I was thin",
+    "why_now": "Broke: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-9729523f63",
+    "title": "Show HN: Can you tell a real tweet of a certain user from an AI one?",
+    "url": "https://socialsimbench.com/",
+    "source": "hn",
+    "published_at": "2026-09-07T18:20:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7859,
+      "age_h": 16.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Just a small game I coded up for research.<p>After some limited tests, people tend to pick the AI-written post as the real one more than 55% of the time, almost 60%.<p>So apparently LLMs kinda pass the Turing test when it comes to social media posts and not even general social media posts, but posts",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-ab62096982",
+    "title": "Show HN: LLM Council: survival-of-the-fittest multi-modal deliberation",
+    "url": "https://github.com/Moiz-I/council-of-claude",
+    "source": "hn",
+    "published_at": "2026-09-07T16:15:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7627,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Inspired by how bee swarms find the best nest - scouts argue for their picks, strongest conviction wins. Same here: models independently respond, then anonymously review each other (no playing favorites), vouch&#x2F;challenge&#x2F;build on ideas, and a chairman synthesizes the survivor.<p>The cross-",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-62a2c52e2f",
+    "title": "Tracarbon: Track GPU power and carbon emissions while running local LLMs",
+    "url": "https://github.com/fvaleye/tracarbon",
+    "source": "hn",
+    "published_at": "2026-09-07T14:12:10Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7403,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:gpu",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  }
+]
