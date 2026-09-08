@@ -2,14 +2,14 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: review
+status: approved
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T14:44:48Z"
+updated: "2026-09-08T14:51:12Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-09-08T14:44:52Z 07-render ok 39.50s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 38
 - 2026-09-08T14:44:52Z 07-render ok 1219s
 - 2026-09-08T14:44:57Z build done, status review
+- 2026-09-08T14:51:12Z telegram approve (approved_at 2026-09-08T14:51:12Z)
