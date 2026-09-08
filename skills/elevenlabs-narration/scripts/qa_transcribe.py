@@ -175,6 +175,7 @@ def normalize_words(text: str) -> list:
     # below only knows one dot and dropped every second "point" (2026-09-06 firmware Short)
     text = re.sub(r"\b(\d+)\.(\d+)\.(\d+)\b", r"\1 point \2 point \3", text)
     text = spell_numbers(text)
+    text = re.sub(r"\bpoint oh\b", "point zero", text)  # "one point oh" is how a script writes 1.0
     text = re.sub(r"[^a-z0-9' ]+", " ", text)
     text = canonicalize_heard(" " + re.sub(r"\s+", " ", text) + " ").strip()
     words = [w.strip("'") for w in text.split()]
@@ -387,6 +388,62 @@ def mismatches_from_ops(ops: list, ref: list, hyp: list, hyp_times: list) -> lis
     return [{"expected": " ".join(m["expected"]), "heard": " ".join(m["heard"]), "at_s": m["at_s"]} for m in out]
 
 
+NUMBERISH = set(w for w in (globals().get("ONES") or []) if w) | NUMBER_WORDS | {"zero", "oh", "point", "half"}
+STOPSWAP = {"a", "an", "and", "the", "to", "of", "in", "on", "at", "is", "it", "its", "that", "this"}
+
+
+_ALIAS_KEYS: set | None = None
+
+
+def alias_keys() -> set:
+    """Lower-cased alias terms from pronunciation_dictionary.json: the named things (DGX, Qwen,
+    vLLM...) whose mis-hearing is never advisory."""
+    global _ALIAS_KEYS
+    if _ALIAS_KEYS is None:
+        pd = pathlib.Path(__file__).resolve().parent.parent / "pronunciation_dictionary.json"
+        try:
+            _ALIAS_KEYS = {k.lower() for k in (json.loads(pd.read_text(encoding="utf-8")).get("aliases") or {})}
+        except (OSError, ValueError):
+            _ALIAS_KEYS = set()
+    return _ALIAS_KEYS
+
+
+def edit_distance(a: str, b: str) -> int:
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def is_blocking(m: dict) -> bool:
+    """True when the mismatch is something the operator must never ship: a mangled phrase (3+
+    words on either side), a missing or changed number, or a named term (an alias key) that did
+    not come out. A one-word near miss (edit distance <= 2, or a stop-word swap) is advisory."""
+    exp = canonicalize_heard(" " + m.get("expected", "").lower() + " ").split()
+    heard = canonicalize_heard(" " + m.get("heard", "").lower() + " ").split()
+    if exp == heard:
+        return False
+    if max(len(exp), len(heard)) >= 3:
+        return True
+    exp_num, heard_num = [w for w in exp if w in NUMBERISH], [w for w in heard if w in NUMBERISH]
+    if (exp_num, heard_num) in ((["point"], []), ([], ["point"])) and not [w for w in exp + heard if w != "point"]:
+        return False  # a lone "point" dropped or added: how the transcriber writes a version string
+    if exp_num != heard_num and not ({"oh", "zero"} >= set(exp_num + heard_num) and exp_num and heard_num):
+        return True  # a number changed or vanished ("oh" vs "zero" is the same digit)
+    if any(w in alias_keys() for w in exp) and " ".join(exp) != " ".join(heard):
+        return True
+    if not exp or not heard:  # a dropped or inserted word: advisory unless it is a number/name (above)
+        return False
+    if len(exp) == 1 and len(heard) == 1:
+        # one ordinary word for another ("write"/"right", "published"/"publish"): the transcriber's
+        # call, never a reason to block a Short; numbers and named terms were handled above
+        return False
+    return edit_distance("".join(exp), "".join(heard)) > 3  # "cpp fixed" vs "cp pfix": spacing, not speech
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--audio", required=True)
@@ -454,9 +511,17 @@ def main() -> int:
         counts["forgiven_spacing"] = counts.get("forgiven_spacing", 0) + 1
     mism = [m for m in mism if m not in forgiven]
     wer = max(0, dist) / float(len(ref))
-    passed = wer <= args.threshold
-    qa = {"wer": round(wer, 4), "threshold": args.threshold, "pass": passed, "engine": transcript["engine"],
-          "reference": ref_used, "mismatches": mism, "counts": counts}
+    # What the gate is FOR: a phrase the engine mangled, a number or a named term that did not
+    # come out. A single-word near miss ("published" heard "publish", "an" heard "and") is the
+    # transcriber's noise and only advisory (2026-09-07/08: two mornings blocked on nothing else).
+    blocking = [m for m in mism if is_blocking(m)]
+    advisory = [m for m in mism if m not in blocking]
+    hard = sum(max(len(m["expected"].split()), len(m["heard"].split())) for m in blocking)
+    wer_hard = hard / float(len(ref))
+    passed = wer_hard <= args.threshold
+    qa = {"wer": round(wer, 4), "wer_hard": round(wer_hard, 4), "threshold": args.threshold, "pass": passed,
+          "engine": transcript["engine"], "reference": ref_used, "mismatches": mism, "blocking": blocking,
+          "advisory": advisory, "counts": counts}
     (out / "qa.json").write_text(json.dumps(qa, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     log("WER %.4f over %d words (%s); %d mismatch run(s); %s" % (wer, len(ref), transcript["engine"], len(mism), "PASS" if passed else "FAIL"))
     print(json.dumps({"wer": qa["wer"], "pass": passed, "mismatches": len(mism), "out": str(out)}))

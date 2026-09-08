@@ -424,9 +424,12 @@ def _chunks_with_mangled_phrases(out: pathlib.Path) -> list:
     except (OSError, ValueError):
         return []
     bad = set()
-    for m in qa.get("mismatches") or []:
-        if max(len(str(m.get("expected", "")).split()), len(str(m.get("heard", "")).split())) < 3:
-            continue
+    # qa_transcribe classifies mismatches (2026-09-08): only the blocking ones justify a new take
+    candidates = qa.get("blocking")
+    if candidates is None:  # older qa.json without the split: fall back to the phrase heuristic
+        candidates = [m for m in qa.get("mismatches") or []
+                      if max(len(str(m.get("expected", "")).split()), len(str(m.get("heard", "")).split())) >= 3]
+    for m in candidates:
         at = float(m.get("at_s") or 0)
         for c in chunks:
             start = float(c.get("offset_s") or 0)
