@@ -2,18 +2,18 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: blocked
+status: ready-to-build
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T13:39:30Z"
+updated: "2026-09-08T14:24:19Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.034, 3 mismatch(es): expected 'published' heard 'publish'; expected 'point oh' heard 'zero'; expected 'an' heard 'and'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
