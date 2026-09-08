@@ -2,18 +2,18 @@
 slug: 2026-09-08-mistral-raises-3b-euro-for-ope
 workspace: shorts
 title: "Mistral AI Small 4 vs Large 3: what fits"
-status: building
+status: blocked
 pillar: news-react
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T13:35:04Z"
+updated: "2026-09-08T13:39:30Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.034, 3 mismatch(es): expected 'published' heard 'publish'; expected 'point oh' heard 'zero'; expected 'an' heard 'and'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -43,3 +43,6 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-09-08T13:35:04Z build start on gn100-83c4
+- 2026-09-08T13:37:46Z 06-voice fail 159s (voice QA failed: WER 0.092, 6 mismatch(es): expected 'mistral' heard 'mistrial'; expected 'mistral' heard 'mistrial'; expected 'point oh' heard 'zero')
+- 2026-09-08T13:39:30Z 06-voice fail 104s (voice QA failed: WER 0.034, 3 mismatch(es): expected 'published' heard 'publish'; expected 'point oh' heard 'zero'; expected 'an' heard 'and')
+- 2026-09-08T13:39:30Z blocked at 06-voice
