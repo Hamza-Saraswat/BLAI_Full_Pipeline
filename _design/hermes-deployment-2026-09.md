@@ -221,6 +221,20 @@ Chatterbox glitch, a phrase replaced by "two out of two". Fixes: version strings
 now re-synthesizes only the chunk holding a mangled phrase (`--only-chunks`, new seed) and
 re-checks, twice at most, before blocking.
 
+## 2026-09-07 and 09-08: two mornings blocked at voice QA on transcriber noise
+
+Both days: ideas, research, script and package ran clean; the 08:35 build blocked at the voice
+check. Sept 7 (WER 0.039): "write" heard "right", "moved" heard "move", the `llama.cpp` alias
+transcribed "cp pfix". Sept 8 (WER 0.034): "published" heard "publish", "an" heard "and",
+"point oh" heard "zero" (the script's own wording for 1.0). No phrase, number or name was
+wrong on either day; the chunk-regeneration loop then re-rolled fresh tiny errors each try.
+The gate measured spelling, not meaning. Rewritten (`qa_transcribe.is_blocking`): a mismatch
+blocks only when it is a phrase (3+ words on either side), a changed or missing number, or a
+named term from the pronunciation dictionary; a single ordinary word for another is advisory
+and listed. `wer_hard` (blocking only) is what the 0.03 threshold applies to; `wer` stays in
+qa.json for the record. `_voice` regenerates chunks only for blocking mismatches. Eleven
+unit cases in the commit message's test; Sept 8 narration re-checked: pass, 0 blocking.
+
 Schedule re-enabled for one Short a day (fits Lite's 10K/week until stage 03-05 gets the same
 scripted treatment): 05:45 preflight · 06:00 ideas (GLM) · 06:30 produce, FIRST PICK ONLY
 (GLM child session, K3 writers) · 08:00 digest (K3) · 08:30 + 10:30 build (script) · publish
