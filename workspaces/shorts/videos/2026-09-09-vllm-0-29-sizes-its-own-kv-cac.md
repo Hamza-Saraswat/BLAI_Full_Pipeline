@@ -2,14 +2,14 @@
 slug: 2026-09-09-vllm-0-29-sizes-its-own-kv-cac
 workspace: shorts
 title: vLLM 0.29 sizes its own KV cache now
-status: building
+status: review
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-09
-updated: "2026-09-09T13:35:20Z"
+updated: "2026-09-09T13:49:37Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-script]] (+ [[stages/04-script/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-drafts|drafts]] and [[stages/04-script/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-package]]
 - Voice: [[stages/06-voice/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-09T13:35:20Z build start on gn100-83c4
 - 2026-09-09T13:36:23Z 06-voice ok 61s
+- 2026-09-09T13:49:41Z 07-render ok 40.33s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 43
+- 2026-09-09T13:49:41Z 07-render ok 795s
