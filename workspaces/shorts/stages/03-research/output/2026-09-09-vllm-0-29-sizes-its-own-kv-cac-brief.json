@@ -1,0 +1,182 @@
+{
+  "slug": "2026-09-09-vllm-0-29-sizes-its-own-kv-cac",
+  "topic": "vLLM 0.29 sizes its own KV cache",
+  "generated_at": "2026-09-09T11:49:23Z",
+  "depth": "standard",
+  "thesis": "vLLM 0.29 turns on Model Runner V2 for every model and finally measures CUDA-graph memory before sizing the KV cache, so a one-GPU server boots without you guessing a memory budget.",
+  "explanation_path": "Start with the KV cache itself, because the audience does not know the term: it is the memory where the model stores keys and values for every token it has already read, so it does not recompute them for each new word. Then show the GPU as a pie that gets eaten in order: model weights first, CUDA graphs (pre-recorded replays of the compute that make generation fast but cost memory) second, and the KV cache gets whatever is left. Establish the old game before the news: you set a budget cap with --gpu-memory-utilization (default 0.92 of the GPU), vLLM profiled at startup and handed the leftover to the KV cache -- but since vLLM 0.25.1 the MRV2 runner's graph-memory probe was a placeholder returning 0, so the cache ate the entire budget and graph capture then OOMed at boot. That is why the standard advice was to guess a lower budget or disable graphs. Only then deliver 0.29: MRV2 is now the default for all models, and it bootstraps a minimal KV cache, captures graphs into a throwaway pool, measures the free-memory delta, and sizes the real cache with that headroom accounted for. Close on what the viewer does differently: same serve command, watch the startup log where vLLM prints the auto-sized value, and optionally feed the logged --kv-cache-memory back to skip the profiling pass on the next boot.",
+  "claims": [
+    {
+      "claim": "vLLM v0.29.0 shipped Sep 9, 2026 with 594 commits from 277 contributors (91 new), and Model Runner V2 is now the default for all models.",
+      "source_url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+      "source_title": "v0.29.0 (release notes)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "MRV2 gained CUDA graph memory profiling that is factored into the KV cache auto-sizing, matching what MRV1 already did.",
+      "source_url": "https://github.com/vllm-project/vllm/pull/53306",
+      "source_title": "Profile CUDA graph memory usage in the V2 GPU model runner",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "Before the fix, MRV2's profiler was a placeholder returning 0, so the KV cache claimed the whole gpu_memory_utilization budget and capture_model() OOMed at startup on configs like Llama-3.1-70B FP8, TP=8 on L40S.",
+      "source_url": "https://github.com/vllm-project/vllm/pull/53306",
+      "source_title": "Profile CUDA graph memory usage in the V2 GPU model runner",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "The fix works by bootstrapping a minimal KV cache, capturing graphs into a throwaway pool, measuring the free-memory delta, then releasing the profiling state while keeping model weights.",
+      "source_url": "https://github.com/vllm-project/vllm/pull/53306",
+      "source_title": "Profile CUDA graph memory usage in the V2 GPU model runner",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "The budget knob survives: --gpu-memory-utilization is the fraction of GPU memory for the model executor with a default of 0.92, and vLLM automatically infers the KV cache size from it unless --kv-cache-memory-bytes is set.",
+      "source_url": "https://docs.vllm.ai/en/stable/cli/serve/",
+      "source_title": "vLLM serve (CLI reference)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "On startup vLLM logs the exact --kv-cache-memory value that reproduces the current allocation; passing it back on the next boot skips the memory-profiling measurement and the CUDA-graph memory estimation pass, and if a boot OOMs after hardware or co-tenant changes you remove the flag to re-profile.",
+      "source_url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
+      "source_title": "Optimization and Tuning",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "MRV1 is not deleted: it remains in use for a few ROCm models and features MRV2 does not yet support.",
+      "source_url": "https://github.com/vllm-project/vllm/pull/53183",
+      "source_title": "[Model Runner V2] Use MRV2 for all models by default",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "vLLM's own memory guide still teaches the old manual moves for a tight GPU: trim context length and batch size, cap CUDA graph capture sizes, or disable graphs entirely with enforce_eager.",
+      "source_url": "https://docs.vllm.ai/en/latest/configuration/conserving_memory/",
+      "source_title": "Conserving Memory",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-09"
+    },
+    {
+      "claim": "Community reception tracks the bug, not the release: users reproduced the startup OOM on other hardware, used VLLM_USE_V2_MODEL_RUNNER=0 as a workaround, and the issue was closed as completed by the fix PR.",
+      "source_url": "https://github.com/vllm-project/vllm/issues/49224",
+      "source_title": "[Bug]: Model Runner V2 (now default for dense models) skips CUDA graph memory reservation",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-09-09"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "default fraction of GPU memory one vLLM instance claims (--gpu-memory-utilization)",
+      "value": "0.92",
+      "source_url": "https://docs.vllm.ai/en/stable/cli/serve/"
+    },
+    {
+      "label": "commits in v0.29.0, from 277 contributors (91 new)",
+      "value": "594 commits",
+      "source_url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0"
+    },
+    {
+      "label": "persistent-batch rows MRV2 pre-allocates (max_num_reqs)",
+      "value": "1024 by default on most platforms",
+      "source_url": "https://docs.vllm.ai/en/latest/design/model_runner_v2/"
+    },
+    {
+      "label": "per-step logits memory cut from MRV2 batch-sharded sampling",
+      "value": "1/TP",
+      "source_url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Packing a moving truck",
+      "mapping": "The model weights and the CUDA graphs are furniture that must go in first; the KV cache is boxes that fill whatever space is left. Before 0.29 the packer never measured the furniture, filled the truck with boxes, and the couch was left on the curb (the startup OOM). 0.29 measures the furniture before loading boxes.",
+      "limit": "The truck's total size is still your guess (the 0.92 cap), and the analogy implies you could repack mid-drive, which the KV cache cannot do once allocated at startup."
+    },
+    {
+      "vehicle": "A restaurant's floor plan",
+      "mapping": "CUDA graphs are the kitchen equipment installed before opening; KV cache is diner table space sold against the same square footage. The old bug sold the equipment's floor space as tables, then opening night failed.",
+      "limit": "A restaurant can turn tables away, while vLLM instead evicts diners mid-meal and makes them re-order from scratch (preemption and recomputation), which no restaurant would survive."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "vLLM 0.29 removed gpu_memory_utilization, so you never set memory again.",
+      "reality": "The flag is still the budget cap with a default of 0.92; what changed is that CUDA-graph memory is now measured and subtracted before the KV cache is sized (claims 2, 3, 5)."
+    },
+    {
+      "myth": "\"KV cache auto-sizing\" means the cache grows and shrinks while serving.",
+      "reality": "The size is fixed once at startup by a profiling pass; if it runs short mid-serve, vLLM preempts requests and recomputes them later, and the docs' remedy is still to raise the budget knobs (claim 6)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "KV cache",
+      "definition": "The memory where a model stores keys and values for every token it has already read, so it does not recompute them for each new word."
+    },
+    {
+      "term": "vLLM",
+      "definition": "An open-source server that runs language models on your own GPU and serves them over an API."
+    },
+    {
+      "term": "CUDA graph",
+      "definition": "A pre-recorded sequence of GPU operations that replays faster than issuing them one at a time, at the cost of extra GPU memory."
+    },
+    {
+      "term": "Model Runner V2 (MRV2)",
+      "definition": "vLLM's rewritten execution core, now the default engine path for all models as of 0.29."
+    },
+    {
+      "term": "MRV1",
+      "definition": "The older model runner, still used for a few ROCm models and features MRV2 does not yet support."
+    },
+    {
+      "term": "gpu_memory_utilization",
+      "definition": "The vLLM setting that caps the fraction of GPU memory one server instance may use, 0.92 by default."
+    },
+    {
+      "term": "memory profiling",
+      "definition": "A startup pass where vLLM measures what it actually needs before deciding the KV cache size."
+    },
+    {
+      "term": "OOM (out of memory)",
+      "definition": "The crash when a program asks the GPU for more memory than is free."
+    },
+    {
+      "term": "preemption",
+      "definition": "When vLLM pauses a request, drops its cached tokens, and recomputes it later to free KV cache space."
+    }
+  ],
+  "unverified": [
+    "The legacy V1 runner reserved \"≈9.5 GiB\" for CUDA graph memory in the Llama-3.1-70B FP8 TP=8 L40S case; the figure appears only in community-tier issue #49224 and no fetched docs page corroborates it.",
+    "A DeepSeek-V4-Pro 861B run on B200 measured the KV cache oversized by \"approximately 15 GiB\", matching the CUDA-graph footprint; also community-tier only (issue #49224).",
+    "The exact wording of the startup log line that prints the auto-sized KV cache value was not shown on any fetched page; capture it on a first boot before quoting it in narration.",
+    "Whether the DGX Spark (GB10) hits the new profiling path identically is untested on our hardware; treat auto-sizing there as an expectation to measure, not a claim."
+  ],
+  "suggested_outline": "Open on the familiar failure: your vLLM box OOMs at startup and the advice was always \"lower gpu-memory-utilization\" -- that guess-the-headroom era is what 0.29 ends.\nDefine the KV cache in one sentence, then show the GPU pie: weights, CUDA graphs, cache -- and the bug where the cache ate the whole 0.92 budget because the graph probe returned 0.\nThe fix and the payoff: MRV2 default everywhere, graphs measured before sizing; upgrade, run the same serve command, read the startup log, and optionally pin the logged --kv-cache-memory to boot faster next time.",
+  "notes": "A Short speaks at most 3 numbers; the most arresting one is 0.92, the default fraction of GPU memory one vLLM instance claims (key number 1), with \"594 commits\" as the scale-of-release alternate. Two flag names exist for pinning the cache: the serve CLI documents --kv-cache-memory-bytes while the optimization guide writes --kv-cache-memory; quote whichever page you cite, do not merge them. The startup-log wording and the DGX Spark behavior are the two things to verify on first boot before narration locks. No source conflicts found; community issue #49224 is used only for reception and the workaround, never as the sole source of a number.",
+  "viewer_situation": "You run vLLM on one GPU box and you have already had to dial --gpu-memory-utilization down, or flip on enforce-eager, to stop a startup crash.",
+  "has_process": true,
+  "process_steps": [
+    "Upgrade the box to vLLM 0.29 with pip (the release ships as `pip install vllm` wheels).",
+    "Start the server with the same `vllm serve <model>` command you already use.",
+    "Watch the startup log for the KV cache size and the exact `--kv-cache-memory` value vLLM prints.",
+    "Pass that `--kv-cache-memory` value back on the next boot only if you want to skip the profiling pass.",
+    "If a boot OOMs after hardware or co-tenant changes, remove the pinned value so vLLM re-profiles."
+  ],
+  "objection": "Auto-sizing was always there: 0.29 just fixes the CUDA-graph measurement inside the same 0.92 budget you still have to set, and a pinned value only holds on the same GPU with the same free memory."
+}
