@@ -2,22 +2,22 @@
 slug: 2026-09-09-vllm-0-29-sizes-its-own-kv-cac
 workspace: shorts
 title: vLLM 0.29 sizes its own KV cache now
-status: approved
+status: scheduled
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-09
-updated: "2026-09-09T14:13:55Z"
-publish_slot: ""
+updated: "2026-09-09T15:00:24Z"
+publish_slot: "2026-09-09T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 49764a7a-aa53-401f-8cd6-6bc193e0ec7d
 ---
 # vLLM 0.29 sizes its own KV cache
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-package]]
 - Voice: [[stages/06-voice/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-voice]]
 - Render: [[stages/07-render/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-09-vllm-0-29-sizes-its-own-kv-cac-publish]]
 
 ## Decisions
 - 2026-09-09 research: angle confirmed (unattended).
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-09T13:49:41Z 07-render ok 795s
 - 2026-09-09T13:49:44Z build done, status review
 - 2026-09-09T14:13:55Z telegram approve (approved_at 2026-09-09T14:13:55Z)
+- 2026-09-09T15:00:25Z 08-publish ok 2s
