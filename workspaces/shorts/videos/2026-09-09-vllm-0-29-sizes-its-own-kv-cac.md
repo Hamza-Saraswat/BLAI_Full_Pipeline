@@ -2,19 +2,19 @@
 slug: 2026-09-09-vllm-0-29-sizes-its-own-kv-cac
 workspace: shorts
 title: vLLM 0.29 sizes its own KV cache now
-status: ready-to-build
+status: building
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-09
-updated: "2026-09-09T12:23:21Z"
+updated: "2026-09-09T13:35:20Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - Skipped TensorRT-LLM LoRA issue (rank 3): myth-bust repeats yesterday lane; skipped LTX 2.5 (rank 2): shares pick 1 how-to lane.
 
 ## Build journal
+- 2026-09-09T13:35:20Z build start on gn100-83c4
