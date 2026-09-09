@@ -1,0 +1,14 @@
+[reddit] mode: public json
+[reddit] r/LocalLLaMA failed: HTTP 403 for https://www.reddit.com/r/LocalLLaMA/top.json?t=week&limit=25&raw_json=1 (html body)
+[reddit] r/ollama failed: HTTP 403 for https://www.reddit.com/r/ollama/top.json?t=week&limit=25&raw_json=1 (html body)
+[reddit] r/LocalLLM failed: HTTP 403 for https://www.reddit.com/r/LocalLLM/top.json?t=week&limit=25&raw_json=1 (html body)
+[radar] reddit error: every subreddit failed
+[radar] hn: 64 item(s)
+[radar] hf: 17 item(s)
+[github] auth: anonymous (60 req/h)
+[radar] github: 10 item(s)
+[radar] youtube skipped: YT_API_KEY not set
+[radar] firecrawl: 8 item(s)
+[radar] dedupe keys: /home/buildlocalai/blai/repo/workspaces/shorts/videos: 12 title(s); /home/buildlocalai/blai/repo/workspaces/shorts/published: 3 title(s); workspaces/shorts/videos: 12 title(s); workspaces/shorts/published: 3 title(s); previous radars: 6
+[radar] dropped 20 off-topic item(s): Apparently CodePen 2.0 sends data to their serve; KDE's new Photos app offers a sleek alternative ; 'Global reckoning for big tech': Australia to fo; Australia to opt out of social media algorithms, ...
+[radar] kept 45 item(s); wrote 2026-09-09-radar.json and 2026-09-09-radar.md
