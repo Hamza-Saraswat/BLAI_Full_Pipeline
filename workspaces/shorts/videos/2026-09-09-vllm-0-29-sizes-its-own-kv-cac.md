@@ -2,21 +2,21 @@
 slug: 2026-09-09-vllm-0-29-sizes-its-own-kv-cac
 workspace: shorts
 title: vLLM 0.29 sizes its own KV cache now
-status: scheduled
+status: published
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-09
-updated: "2026-09-09T15:00:24Z"
+updated: "2026-09-09T16:15:27Z"
 publish_slot: "2026-09-09T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=sW1NffdySwk"
 blotato_post_id: 49764a7a-aa53-401f-8cd6-6bc193e0ec7d
 ---
 # vLLM 0.29 sizes its own KV cache
@@ -46,3 +46,4 @@ blotato_post_id: 49764a7a-aa53-401f-8cd6-6bc193e0ec7d
 - 2026-09-09T13:49:44Z build done, status review
 - 2026-09-09T14:13:55Z telegram approve (approved_at 2026-09-09T14:13:55Z)
 - 2026-09-09T15:00:25Z 08-publish ok 2s
+- 2026-09-09T16:15:27Z published https://www.youtube.com/watch?v=sW1NffdySwk
