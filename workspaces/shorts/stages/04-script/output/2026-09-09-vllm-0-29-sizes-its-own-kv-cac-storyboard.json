@@ -1,0 +1,111 @@
+{
+  "slug": "2026-09-09-vllm-0-29-sizes-its-own-kv-cac",
+  "topic": "vLLM 0.29 sizes its own KV cache",
+  "title": "vLLM 0.29 sizes its own KV cache",
+  "description": "vLLM 0.29 turns on Model Runner V2 and measures CUDA-graph memory before sizing the KV cache, so a one-GPU server boots without guessing a memory budget. You'll learn what changed, why boots crashed before, and the one log line to read. Upgrade with pip tonight. (Narration is AI-generated.)",
+  "hashtags": [
+    "#vLLM",
+    "#KVCache",
+    "#LocalAI"
+  ],
+  "tags": [
+    "vllm",
+    "vllm 0.29",
+    "kv cache",
+    "vllm kv cache",
+    "gpu memory utilization",
+    "vllm serve",
+    "model runner 2",
+    "mrv2",
+    "cuda graphs",
+    "local llm server",
+    "llm on your own gpu",
+    "vllm update",
+    "gpu memory",
+    "run ai locally",
+    "vllm out of memory fix"
+  ],
+  "hook_candidates": [
+    "vLLM stopped guessing your GPU memory budget.",
+    "Ninety-two percent. vLLM finally counts what it takes.",
+    "Your vLLM boot crash was vLLM's own blind spot.",
+    "vLLM finally measures the memory it forgot to count.",
+    "Zero-nine-two of your GPU: vLLM stops guessing the rest.",
+    "vLLM's cache ate the budget. 0.29 fixes the blind spot.",
+    "The startup crash you fixed by guessing? 0.29 measured it.",
+    "Boot, crash, lower the flag, retry. 0.29 ends that loop.",
+    "Your GPU budget, measured for the first time.",
+    "vLLM 0.29: the KV cache that sizes itself."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "classic",
+  "value_types": "TEACHES,EQUIPS",
+  "notes_for_review": "Startup-log wording is Unverified in the brief; s06/s05 show a generic log line, not a quote. Flag names differ across docs pages (--kv-cache-memory vs --kv-cache-memory-bytes); narration names neither. DGX Spark behavior untested on our hardware; no claim about it. The zero in 'the graph check returned zero' is the bug's number, not a key number.",
+  "structure": "worked-example",
+  "hook_text": "vLLM stopped guessing your memory",
+  "target_duration_s": 38,
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "vLLM stopped guessing your GPU memory budget. Crash at boot, lower the flag, retry.",
+      "on_screen_text": "vLLM stopped guessing memory",
+      "visual_brief": "Terminal-style frame, hard cuts, amber accent only. Frame 1: mono text 'vLLM stopped guessing memory' already centered; below it a thin GPU memory bar sits nearly full. Motion onset at 0.3s: the bar twitches in place. On 'crash at boot', a small tag 'crash at boot' fades in under the bar as the bar flickers; on 'retry', the bar empties and refills. No rounded chips; at most the bar and one tag animate at once.",
+      "est_duration_s": 4.8
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "One server claims ninety-two percent of GPU memory by default. Weights eat first, then CUDA graphs, pre-recorded replays that trade memory for speed.",
+      "on_screen_text": "0.92 of GPU memory by default",
+      "visual_brief": "On 'ninety-two percent', a giant amber '0.92' scales in at center with the caption 'of GPU memory by default' fading beneath. On 'Weights eat first', the number rises in place to the top as a horizontal budget bar fades in, its left segment filling amber for weights. On 'CUDA graphs', a second segment fills beside it, labeled 'CUDA graphs'. One text block animates at a time; nothing enters from an edge.",
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The KV cache, memory of what the model already read, gets leftovers.",
+      "on_screen_text": "weights -> graphs -> KV cache: leftovers",
+      "visual_brief": "The budget bar carries over, weights and graph segments settled. On 'The KV cache', a third segment rises in place at the bar's end, labeled 'KV cache'. On 'gets leftovers', that segment expands to fill only the remaining sliver, and the label 'leftovers' fades in above the sliver. The point lands visually: the cache owns whatever the first two did not take. Amber accent; at most segment plus label animating.",
+      "est_duration_s": 4.1
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "vLLM's graph check returned zero, less a measurement than a shrug. The cache claimed the whole budget. Startup ran out of memory.",
+      "on_screen_text": "graph check = 0 -> cache takes all -> OOM",
+      "visual_brief": "Three beats on one horizontal line. On 'The graph check returned zero', a mono chip fades in reading 'graph check = 0'. On 'The cache claimed the whole budget', the amber cache segment stretches to swallow the entire budget bar. On 'Startup ran out of memory', hard cut to the bar stamped 'OOM'. All entrances fade in place; never more than two elements moving; the wry line gets no visual gag, the bar carries it.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "This morning's release is five hundred ninety-four commits. The new engine, default for every model, measures graphs first, then sizes the cache to fit.",
+      "on_screen_text": "594 commits | engine now default",
+      "visual_brief": "Split frame. Left panel 'before': the swallowed bar from s04, frozen. Right panel 'after': on 'measures graphs first', a caliper bracket fades in around the graph segment and a measured tick mark appears; on 'sizes the cache to fit', the cache segment fills only the space left after weights and graphs, stopping cleanly at the bar's end. Caption 'engine now default' fades in at 0.3s before anything else moves.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Same vLLM command, same budget cap. The log prints the cache it picked, and the guessing was the bug.",
+      "on_screen_text": "same command -> logged cache size",
+      "visual_brief": "Centered terminal stack, hard cuts, amber accent. On 'Same command', a mono prompt line fades in. On 'The log prints the cache it picked', a log line fades in below it showing the chosen cache size. On 'The guessing was the bug', cut to the settled rhyme of frame 1: 'vLLM stopped guessing memory' centered and still, the memory bar beneath now neatly segmented into weights, graphs, cache. Nothing moves after the payoff lands; video ends inside a second.",
+      "est_duration_s": 6.6
+    }
+  ],
+  "narration_full": "vLLM stopped guessing your GPU memory budget. Crash at boot, lower the flag, retry. One server claims ninety-two percent of GPU memory by default. Weights eat first, then CUDA graphs, pre-recorded replays that trade memory for speed. The KV cache, memory of what the model already read, gets leftovers. vLLM's graph check returned zero, less a measurement than a shrug. The cache claimed the whole budget. Startup ran out of memory. This morning's release is five hundred ninety-four commits. The new engine, default for every model, measures graphs first, then sizes the cache to fit. Same vLLM command, same budget cap. The log prints the cache it picked, and the guessing was the bug."
+}
