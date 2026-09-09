@@ -2,14 +2,14 @@
 slug: 2026-09-08-open-weight-deepseek-models-wr
 workspace: shorts
 title: Open-weight DeepSeek models write data-pipeline code fine
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-08
-updated: "2026-09-08T11:08:38Z"
+updated: "2026-09-09T13:35:17Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Angle: the open-models-cant-code belief dismantled via the shared DeepSeek/Qwen DSCI session; smooth-explainer band. PROVES not claimed, no own measurement yet.
 
 ## Build journal
-
+- 2026-09-09T13:35:17Z 2026-09-09T13:35:17Z expired: not from today's picks (2026-09-09); the factory carries no backlog
