@@ -2,14 +2,14 @@
 slug: 2026-09-09-vllm-0-29-sizes-its-own-kv-cac
 workspace: shorts
 title: vLLM 0.29 sizes its own KV cache now
-status: review
+status: approved
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-09
-updated: "2026-09-09T13:49:37Z"
+updated: "2026-09-09T14:13:55Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-09T13:49:41Z 07-render ok 40.33s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 43
 - 2026-09-09T13:49:41Z 07-render ok 795s
 - 2026-09-09T13:49:44Z build done, status review
+- 2026-09-09T14:13:55Z telegram approve (approved_at 2026-09-09T14:13:55Z)
