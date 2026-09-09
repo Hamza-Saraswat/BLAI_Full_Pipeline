@@ -1,0 +1,1689 @@
+[
+  {
+    "title": "vLLM 0.29 sizes its own KV cache now",
+    "angle": "Model Runner V2 is default and CUDA-graph profiling auto-sizes the KV cache, so the server stops guessing memory",
+    "lane": "how-to",
+    "keyword": "vllm",
+    "products": "vLLM",
+    "why_now": "vLLM 0.29.0 shipped 2 h before the sweep (594 commits, MRV2 default)",
+    "radar_ids": "vllm-v0.29.0",
+    "value_tags": "TEACHES,EQUIPS",
+    "autocomplete": {
+      "seed": "vllm",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "vllm",
+        "vllm vs ollama",
+        "vllm tutorial",
+        "vllm explained",
+        "vllm office hours",
+        "vllm setup",
+        "vllm inference",
+        "vllm docker",
+        "vllm vs llama.cpp",
+        "vllm paged attention",
+        "vllm architecture",
+        "vllm amd",
+        "vllm apple silicon",
+        "vllm and sglang",
+        "vllm alex",
+        "vllm ai",
+        "vllm api",
+        "vllm agent",
+        "vllm and ray",
+        "vllm a16z",
+        "vllm benchmarks",
+        "llm basics",
+        "llm benchmarks",
+        "llm build",
+        "llm basics to advanced",
+        "llm bubble",
+        "llm base model",
+        "llm bias",
+        "llm bros",
+        "llm book",
+        "vllm code walkthrough",
+        "vllm cluster",
+        "vllm cpu",
+        "vllm configuration",
+        "vllm concurrency",
+        "vllm cpu docker",
+        "llm course",
+        "vllm channel",
+        "llm council",
+        "vllm colab",
+        "vllm deployment",
+        "vllm distributed",
+        "vllm dgx spark",
+        "vllm demo",
+        "vllm docker setup",
+        "ollama dual gpu",
+        "vllm deepseek",
+        "vllm deepseek ocr",
+        "llm dead end",
+        "vllm example",
+        "vllm engine",
+        "que es llm",
+        "vlm group",
+        "vllm for beginners",
+        "llm from scratch",
+        "vllm for windows",
+        "llm fine tuning",
+        "vllm flash attention",
+        "llm full course",
+        "llm fine tuning tutorial",
+        "llm for beginners",
+        "llm fundamentals",
+        "llm for dummies",
+        "vllm gpt-oss",
+        "ollama gui",
+        "vllm gguf",
+        "vllm getting started",
+        "vllm gpu",
+        "llm guardrails",
+        "llm guy",
+        "llm game",
+        "llm gateway",
+        "llm generative ai",
+        "vllm huggingface",
+        "vllm how to",
+        "vllm how to use",
+        "vllm horor",
+        "vllm hantu",
+        "how llm works",
+        "host vllm",
+        "vllm in hindi",
+        "strix halo llm",
+        "vllm install",
+        "vllm internals",
+        "vllm ibm",
+        "vllm intel arc",
+        "vllm inference tutorial",
+        "vllm install windows",
+        "vllm inference optimization",
+        "vllm implementation",
+        "vllm in windows",
+        "vllm kubernetes",
+        "vllm kv cache",
+        "vllm k8s",
+        "vllm kimi k2",
+        "kserve vllm",
+        "vllm local",
+        "vllm linux",
+        "vllm lmcache",
+        "vllm langchain",
+        "llm local",
+        "vllm local ai",
+        "vllm lora",
+        "vllm local llm",
+        "vllm litellm",
+        "vllm llama 3.1",
+        "vllm mac",
+        "vllm meetup",
+        "vllm multi gpu",
+        "vllm macos",
+        "vllm mlx",
+        "vllm multiple models",
+        "vllm multimodal",
+        "vllm multiple gpu",
+        "llm models",
+        "vllm moe",
+        "vllm nvidia",
+        "vllm n8n",
+        "llm news",
+        "llm neural networks",
+        "lm notebook",
+        "llm npc",
+        "llm neural network explained",
+        "llm n8n",
+        "llm nvidia",
+        "llm nlp",
+        "vllm omni",
+        "vllm on windows",
+        "vllm open webui",
+        "vllm on mac",
+        "vllm overview",
+        "vllm optimization",
+        "vllm on kubernetes",
+        "vllm ollama",
+        "vllm on cpu",
+        "vllm production stack",
+        "vllm pytorch",
+        "vllm project",
+        "vllm python",
+        "ollama proxmox",
+        "vllm performance",
+        "vllm parallel",
+        "vllm production",
+        "llm playlist",
+        "vllm qwen",
+        "vllm quantization",
+        "vllm qwen 2.5",
+        "vllm ray",
+        "vllm rocm",
+        "vllm rag",
+        "vllm red hat",
+        "vllm runpod",
+        "vllm rtx 5090",
+        "vllm router",
+        "vllm ray cluster",
+        "vllm run",
+        "runpod vllm serverless",
+        "vllm server",
+        "vllm sglang",
+        "vllm serving",
+        "vllm speculative decoding",
+        "vllm source code",
+        "vllm scheduler",
+        "vllm setup windows",
+        "vllm strix halo",
+        "vllm scaling",
+        "vllm tool calling",
+        "vllm tutorial for beginners",
+        "vllm triton",
+        "vllm tpu",
+        "llm tutorial",
+        "llm transformers explained",
+        "llm training",
+        "llm tutorial for beginners",
+        "llm transformer",
+        "vllm ui",
+        "vllm using docker",
+        "vllm ubuntu",
+        "vllm usage",
+        "ollama ui",
+        "ollama unraid",
+        "ollama ubuntu",
+        "ollama use cases",
+        "ollama update",
+        "ollama uses",
+        "vllm vs sglang",
+        "vllm vs triton",
+        "vllm vs lm studio",
+        "vllm v1",
+        "llm vizuara",
+        "vllm vs tgi",
+        "vllm vs llm",
+        "vllm vs",
+        "vllm windows",
+        "vllm with docker",
+        "vllm webui",
+        "vllm whisper",
+        "install vllm windows",
+        "how does llm work",
+        "opencode ollama",
+        "vllm zurich",
+        "vllm ziskind",
+        "alex ziskind llm",
+        "how to vlm carpet cleaning",
+        "how to use vllm",
+        "how to install vllm",
+        "how to install vllm on windows",
+        "how to setup vllm",
+        "how to run vllm",
+        "lmdeploy",
+        "vllm 2026",
+        "vscode vllm",
+        "tensorrt vs vllm",
+        "best llm",
+        "best llm for coding",
+        "best llm model",
+        "best llm to run locally",
+        "best llm 2025",
+        "best llm for writing",
+        "best llm for research",
+        "best llm model to run locally",
+        "best llm subscription",
+        "best llm for creative writing"
+      ],
+      "expansions": {
+        "vllm": [
+          "vllm",
+          "vllm vs ollama",
+          "vllm tutorial",
+          "vllm explained",
+          "vllm office hours",
+          "vllm setup",
+          "vllm inference",
+          "vllm docker",
+          "vllm vs llama.cpp",
+          "vllm paged attention"
+        ],
+        "vllm a": [
+          "vllm architecture",
+          "vllm amd",
+          "vllm apple silicon",
+          "vllm and sglang",
+          "vllm alex",
+          "vllm ai",
+          "vllm api",
+          "vllm agent",
+          "vllm and ray",
+          "vllm a16z"
+        ],
+        "vllm b": [
+          "vllm benchmarks",
+          "llm basics",
+          "llm benchmarks",
+          "llm build",
+          "llm basics to advanced",
+          "llm bubble",
+          "llm base model",
+          "llm bias",
+          "llm bros",
+          "llm book"
+        ],
+        "vllm c": [
+          "vllm code walkthrough",
+          "vllm cluster",
+          "vllm cpu",
+          "vllm configuration",
+          "vllm concurrency",
+          "vllm cpu docker",
+          "llm course",
+          "vllm channel",
+          "llm council",
+          "vllm colab"
+        ],
+        "vllm d": [
+          "vllm docker",
+          "vllm deployment",
+          "vllm distributed",
+          "vllm dgx spark",
+          "vllm demo",
+          "vllm docker setup",
+          "ollama dual gpu",
+          "vllm deepseek",
+          "vllm deepseek ocr",
+          "llm dead end"
+        ],
+        "vllm e": [
+          "vllm explained",
+          "vllm example",
+          "vllm engine",
+          "que es llm",
+          "vllm",
+          "vlm group"
+        ],
+        "vllm f": [
+          "vllm for beginners",
+          "llm from scratch",
+          "vllm for windows",
+          "llm fine tuning",
+          "vllm flash attention",
+          "llm full course",
+          "llm fine tuning tutorial",
+          "llm for beginners",
+          "llm fundamentals",
+          "llm for dummies"
+        ],
+        "vllm g": [
+          "vllm gpt-oss",
+          "ollama gui",
+          "vllm gguf",
+          "vllm getting started",
+          "vllm gpu",
+          "llm guardrails",
+          "llm guy",
+          "llm game",
+          "llm gateway",
+          "llm generative ai"
+        ],
+        "vllm h": [
+          "vllm huggingface",
+          "vllm how to",
+          "vllm how to use",
+          "vllm horor",
+          "vllm hantu",
+          "how llm works",
+          "host vllm",
+          "vllm office hours",
+          "vllm in hindi",
+          "strix halo llm"
+        ],
+        "vllm i": [
+          "vllm inference",
+          "vllm install",
+          "vllm internals",
+          "vllm ibm",
+          "vllm intel arc",
+          "vllm inference tutorial",
+          "vllm install windows",
+          "vllm inference optimization",
+          "vllm implementation",
+          "vllm in windows"
+        ],
+        "vllm j": [
+          "vllm"
+        ],
+        "vllm k": [
+          "vllm kubernetes",
+          "vllm kv cache",
+          "vllm k8s",
+          "vllm kimi k2",
+          "kserve vllm"
+        ],
+        "vllm l": [
+          "vllm local",
+          "vllm linux",
+          "vllm lmcache",
+          "vllm langchain",
+          "llm local",
+          "vllm local ai",
+          "vllm lora",
+          "vllm local llm",
+          "vllm litellm",
+          "vllm llama 3.1"
+        ],
+        "vllm m": [
+          "vllm mac",
+          "vllm meetup",
+          "vllm multi gpu",
+          "vllm macos",
+          "vllm mlx",
+          "vllm multiple models",
+          "vllm multimodal",
+          "vllm multiple gpu",
+          "llm models",
+          "vllm moe"
+        ],
+        "vllm n": [
+          "vllm nvidia",
+          "vllm n8n",
+          "llm news",
+          "llm neural networks",
+          "lm notebook",
+          "llm npc",
+          "llm neural network explained",
+          "llm n8n",
+          "llm nvidia",
+          "llm nlp"
+        ],
+        "vllm o": [
+          "vllm office hours",
+          "vllm omni",
+          "vllm on windows",
+          "vllm open webui",
+          "vllm on mac",
+          "vllm overview",
+          "vllm optimization",
+          "vllm on kubernetes",
+          "vllm ollama",
+          "vllm on cpu"
+        ],
+        "vllm p": [
+          "vllm paged attention",
+          "vllm production stack",
+          "vllm pytorch",
+          "vllm project",
+          "vllm python",
+          "ollama proxmox",
+          "vllm performance",
+          "vllm parallel",
+          "vllm production",
+          "llm playlist"
+        ],
+        "vllm q": [
+          "vllm qwen",
+          "vllm quantization",
+          "vllm qwen 2.5",
+          "vllm"
+        ],
+        "vllm r": [
+          "vllm ray",
+          "vllm rocm",
+          "vllm rag",
+          "vllm red hat",
+          "vllm runpod",
+          "vllm rtx 5090",
+          "vllm router",
+          "vllm ray cluster",
+          "vllm run",
+          "runpod vllm serverless"
+        ],
+        "vllm s": [
+          "vllm setup",
+          "vllm server",
+          "vllm sglang",
+          "vllm serving",
+          "vllm speculative decoding",
+          "vllm source code",
+          "vllm scheduler",
+          "vllm setup windows",
+          "vllm strix halo",
+          "vllm scaling"
+        ],
+        "vllm t": [
+          "vllm tutorial",
+          "vllm tool calling",
+          "vllm tutorial for beginners",
+          "vllm triton",
+          "vllm tpu",
+          "llm tutorial",
+          "llm transformers explained",
+          "llm training",
+          "llm tutorial for beginners",
+          "llm transformer"
+        ],
+        "vllm u": [
+          "vllm ui",
+          "vllm using docker",
+          "vllm ubuntu",
+          "vllm usage",
+          "ollama ui",
+          "ollama unraid",
+          "ollama ubuntu",
+          "ollama use cases",
+          "ollama update",
+          "ollama uses"
+        ],
+        "vllm v": [
+          "vllm vs ollama",
+          "vllm vs llama.cpp",
+          "vllm vs sglang",
+          "vllm vs triton",
+          "vllm vs lm studio",
+          "vllm v1",
+          "llm vizuara",
+          "vllm vs tgi",
+          "vllm vs llm",
+          "vllm vs"
+        ],
+        "vllm w": [
+          "vllm windows",
+          "vllm with docker",
+          "vllm webui",
+          "vllm whisper",
+          "how llm works",
+          "vllm open webui",
+          "install vllm windows",
+          "vllm code walkthrough",
+          "how does llm work",
+          "opencode ollama"
+        ],
+        "vllm x": [],
+        "vllm y": [
+          "vllm"
+        ],
+        "vllm z": [
+          "vllm zurich",
+          "vllm ziskind",
+          "alex ziskind llm",
+          "vllm"
+        ],
+        "how to vllm": [
+          "how to vlm carpet cleaning",
+          "how to use vllm",
+          "how to install vllm",
+          "how to install vllm on windows",
+          "how to setup vllm",
+          "how to run vllm",
+          "lmdeploy"
+        ],
+        "vllm 2026": [
+          "vllm 2026"
+        ],
+        "vllm vs": [
+          "vllm vs ollama",
+          "vllm vs llama.cpp",
+          "vllm vs sglang",
+          "vllm vs triton",
+          "vllm vs lm studio",
+          "vllm vs tgi",
+          "vllm vs llm",
+          "vllm vs",
+          "vscode vllm",
+          "tensorrt vs vllm"
+        ],
+        "vllm review": [
+          "vllm"
+        ],
+        "best vllm": [
+          "best llm",
+          "best llm for coding",
+          "best llm model",
+          "best llm to run locally",
+          "best llm 2025",
+          "best llm for writing",
+          "best llm for research",
+          "best llm model to run locally",
+          "best llm subscription",
+          "best llm for creative writing"
+        ]
+      },
+      "depth_score": 223,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:04:24Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": 2.9953,
+    "competition_score": 0.0,
+    "opportunity": 100.0,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 2.9953,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 1
+  },
+  {
+    "title": "LTX 2.5 makes DGX Spark a video box",
+    "angle": "LTX 2.5 ships NVFP4 + ComfyUI optimizations tuned for RTX and DGX Spark: faster local video gen on hardware you own",
+    "lane": "how-to",
+    "keyword": "ltx 2.5",
+    "products": "LTX 2.5, DGX Spark, ComfyUI",
+    "why_now": "NVIDIA's IFA 2026 post named LTX 2.5 with NVFP4/FastVideo ComfyUI enhancements",
+    "radar_ids": "sparks-fly-ifa",
+    "value_tags": "TEACHES,EQUIPS",
+    "autocomplete": {
+      "seed": "ltx 2.5",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "ltx 2.5",
+        "ltx live",
+        "ltx collection",
+        "ltx infinity",
+        "ltx force",
+        "ltx english",
+        "ltx academy",
+        "ltx expo",
+        "lhg lte18",
+        "4g+ cat6 ac1200 wireless dual band gigabit router",
+        "ltx experience",
+        "best battery powered router",
+        "best battery for tundra 5.7",
+        "best budget 5ghz router"
+      ],
+      "expansions": {
+        "ltx 2.5": [
+          "ltx 2.5",
+          "ltx live"
+        ],
+        "ltx 2.5 a": [
+          "ltx live"
+        ],
+        "ltx 2.5 b": [
+          "ltx collection",
+          "ltx infinity"
+        ],
+        "ltx 2.5 c": [],
+        "ltx 2.5 d": [
+          "ltx collection"
+        ],
+        "ltx 2.5 e": [
+          "ltx live"
+        ],
+        "ltx 2.5 f": [
+          "ltx force"
+        ],
+        "ltx 2.5 g": [
+          "ltx collection"
+        ],
+        "ltx 2.5 h": [
+          "ltx english"
+        ],
+        "ltx 2.5 i": [
+          "ltx academy"
+        ],
+        "ltx 2.5 j": [],
+        "ltx 2.5 k": [
+          "ltx collection",
+          "ltx expo"
+        ],
+        "ltx 2.5 l": [
+          "ltx live"
+        ],
+        "ltx 2.5 m": [
+          "ltx collection"
+        ],
+        "ltx 2.5 n": [
+          "ltx collection"
+        ],
+        "ltx 2.5 o": [
+          "lhg lte18",
+          "4g+ cat6 ac1200 wireless dual band gigabit router"
+        ],
+        "ltx 2.5 p": [
+          "ltx live"
+        ],
+        "ltx 2.5 q": [],
+        "ltx 2.5 r": [],
+        "ltx 2.5 s": [
+          "ltx live"
+        ],
+        "ltx 2.5 t": [],
+        "ltx 2.5 u": [],
+        "ltx 2.5 v": [
+          "ltx expo",
+          "ltx live"
+        ],
+        "ltx 2.5 w": [
+          "ltx force",
+          "ltx expo"
+        ],
+        "ltx 2.5 x": [],
+        "ltx 2.5 y": [
+          "ltx academy",
+          "ltx experience"
+        ],
+        "ltx 2.5 z": [],
+        "how to ltx 2.5": [],
+        "ltx 2.5 2026": [],
+        "ltx 2.5 vs": [
+          "ltx force"
+        ],
+        "ltx 2.5 review": [
+          "ltx collection"
+        ],
+        "best ltx 2.5": [
+          "best battery powered router",
+          "best battery for tundra 5.7",
+          "best budget 5ghz router"
+        ]
+      },
+      "depth_score": 14,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:05:06Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.2567,
+    "competition_score": 0.0,
+    "opportunity": 56.1,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.2567,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 2
+  },
+  {
+    "title": "TensorRT-LLM eats your Qwen3 LoRA silently",
+    "angle": "v1.3.0rc26 ignores LoRA adapters on Qwen3-MoE routed experts and returns base-model output; how to catch it",
+    "lane": "myth-bust",
+    "keyword": "tensorrt-llm",
+    "products": "TensorRT-LLM, Qwen3",
+    "why_now": "Known issue in v1.3.0rc26 released 1 h before the sweep",
+    "radar_ids": "tensorrt-llm-v1.3.0rc26",
+    "value_tags": "TEACHES,EQUIPS",
+    "autocomplete": {
+      "seed": "tensorrt-llm",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "tensorrt-llm",
+        "tensorrt-llm for windows",
+        "tensorrt llm tutorial",
+        "tensorrt llm triton",
+        "tensorrt onnx",
+        "tensorrt",
+        "tensorflow llm",
+        "tensorrt pytorch",
+        "tensorrt tutorial python",
+        "tensorrt python",
+        "tensorflow francais",
+        "tensorflow fine tuning",
+        "llm inference optimization",
+        "nvidia tensorrt llm"
+      ],
+      "expansions": {
+        "tensorrt-llm": [
+          "tensorrt-llm",
+          "tensorrt-llm for windows",
+          "tensorrt llm tutorial",
+          "tensorrt llm triton",
+          "tensorrt onnx",
+          "tensorrt"
+        ],
+        "tensorrt-llm a": [
+          "tensorflow llm",
+          "tensorrt pytorch",
+          "tensorrt"
+        ],
+        "tensorrt-llm b": [
+          "tensorrt pytorch",
+          "tensorrt tutorial python",
+          "tensorflow llm",
+          "tensorrt python",
+          "tensorrt onnx"
+        ],
+        "tensorrt-llm c": [
+          "tensorflow llm",
+          "tensorflow francais"
+        ],
+        "tensorrt-llm d": [
+          "tensorflow llm"
+        ],
+        "tensorrt-llm e": [],
+        "tensorrt-llm f": [
+          "tensorrt-llm for windows",
+          "tensorflow llm",
+          "tensorflow fine tuning",
+          "llm inference optimization"
+        ],
+        "tensorrt-llm g": [],
+        "tensorrt-llm h": [
+          "tensorrt onnx",
+          "tensorrt"
+        ],
+        "tensorrt-llm i": [
+          "tensorflow llm",
+          "tensorrt pytorch"
+        ],
+        "tensorrt-llm j": [
+          "tensorflow llm"
+        ],
+        "tensorrt-llm k": [
+          "tensorflow llm"
+        ],
+        "tensorrt-llm l": [
+          "tensorflow llm",
+          "tensorrt",
+          "tensorrt onnx"
+        ],
+        "tensorrt-llm m": [
+          "tensorflow llm",
+          "tensorrt onnx"
+        ],
+        "tensorrt-llm n": [
+          "nvidia tensorrt llm",
+          "tensorrt",
+          "tensorrt onnx"
+        ],
+        "tensorrt-llm o": [],
+        "tensorrt-llm p": [
+          "tensorflow llm",
+          "tensorflow fine tuning"
+        ],
+        "tensorrt-llm q": [
+          "tensorflow llm",
+          "tensorrt"
+        ],
+        "tensorrt-llm r": [
+          "tensorflow llm",
+          "tensorrt",
+          "tensorrt pytorch"
+        ],
+        "tensorrt-llm s": [
+          "tensorflow llm",
+          "tensorrt",
+          "llm inference optimization"
+        ],
+        "tensorrt-llm t": [
+          "tensorrt llm tutorial",
+          "tensorrt llm triton",
+          "tensorrt",
+          "tensorflow francais"
+        ],
+        "tensorrt-llm u": [
+          "tensorflow llm",
+          "tensorrt onnx",
+          "tensorrt pytorch",
+          "tensorrt"
+        ],
+        "tensorrt-llm v": [
+          "tensorflow llm",
+          "tensorflow francais"
+        ],
+        "tensorrt-llm w": [
+          "tensorrt-llm for windows"
+        ],
+        "tensorrt-llm x": [
+          "tensorrt onnx",
+          "tensorrt pytorch",
+          "tensorrt"
+        ],
+        "tensorrt-llm y": [
+          "tensorrt",
+          "tensorflow llm"
+        ],
+        "tensorrt-llm z": [
+          "tensorrt",
+          "tensorrt onnx",
+          "tensorrt pytorch",
+          "tensorflow llm"
+        ],
+        "how to tensorrt-llm": [],
+        "tensorrt-llm 2026": [],
+        "tensorrt-llm vs": [
+          "tensorflow llm",
+          "tensorflow francais"
+        ],
+        "tensorrt-llm review": [
+          "tensorrt",
+          "tensorflow llm"
+        ],
+        "best tensorrt-llm": []
+      },
+      "depth_score": 14,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:06:11Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.2567,
+    "competition_score": 0.0,
+    "opportunity": 56.1,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.2567,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 3
+  },
+  {
+    "title": "MiniCPM5-2B: 7.8k downloads in four days",
+    "angle": "A 2B GGUF that people actually run; what fits and what it beats",
+    "lane": "explainer",
+    "keyword": "minicpm",
+    "products": "MiniCPM5-2B, GGUF",
+    "why_now": "openbmb/MiniCPM5-2B-GGUF: 127 likes, 7.8k downloads, trending 122",
+    "radar_ids": "minicpm5-2b-gguf",
+    "value_tags": "TEACHES,REFRAMES",
+    "autocomplete": {
+      "seed": "minicpm",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "minicpm5-2b",
+        "minicpm-v",
+        "minicpm",
+        "minicpm-v 4.5",
+        "minicpm-o 2.6",
+        "minicpm-v 2.6",
+        "minicpm-o",
+        "minicpm 4.5",
+        "minicpm-v-4_5",
+        "minicpm4",
+        "minicpm ocr",
+        "pom mini cpm",
+        "minicpm v 4.5"
+      ],
+      "expansions": {
+        "minicpm": [
+          "minicpm5-2b",
+          "minicpm-v",
+          "minicpm",
+          "minicpm-v 4.5",
+          "minicpm-o 2.6",
+          "minicpm-v 2.6",
+          "minicpm-o",
+          "minicpm 4.5",
+          "minicpm-v-4_5",
+          "minicpm4"
+        ],
+        "minicpm a": [],
+        "minicpm b": [],
+        "minicpm c": [],
+        "minicpm d": [],
+        "minicpm e": [],
+        "minicpm f": [],
+        "minicpm g": [],
+        "minicpm h": [],
+        "minicpm i": [],
+        "minicpm j": [],
+        "minicpm k": [],
+        "minicpm l": [],
+        "minicpm m": [],
+        "minicpm n": [],
+        "minicpm o": [
+          "minicpm ocr",
+          "minicpm-o 2.6"
+        ],
+        "minicpm p": [
+          "pom mini cpm"
+        ],
+        "minicpm q": [],
+        "minicpm r": [],
+        "minicpm s": [],
+        "minicpm t": [],
+        "minicpm u": [],
+        "minicpm v": [
+          "minicpm v 4.5",
+          "minicpm-v",
+          "minicpm-v 2.6",
+          "minicpm-v-4_5"
+        ],
+        "minicpm w": [],
+        "minicpm x": [],
+        "minicpm y": [],
+        "minicpm z": [],
+        "how to minicpm": [],
+        "minicpm 2026": [],
+        "minicpm vs": [],
+        "minicpm review": [],
+        "best minicpm": []
+      },
+      "depth_score": 13,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:06:27Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.2723,
+    "competition_score": 0.0,
+    "opportunity": 55.9,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.2723,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 4
+  },
+  {
+    "title": "DGX Spark Windows: firmware says October",
+    "angle": "This week's Spark firmware trusts a Windows UEFI CA and NVIDIA dates RTX Spark Windows PCs for October",
+    "lane": "news-react",
+    "keyword": "dgx spark windows",
+    "products": "DGX Spark, NVIDIA",
+    "why_now": "StorageReview spotted the UEFI CA in this week's firmware; NVIDIA's IFA post dates October",
+    "radar_ids": "dgx-spark-windows-clue, sparks-fly-ifa",
+    "value_tags": "TEACHES,EQUIPS",
+    "autocomplete": {
+      "seed": "dgx spark windows",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "dgx spark windows",
+        "dgx spark windows 11",
+        "nvidia dgx spark windows",
+        "nvidia dgx spark windows 11",
+        "dse scada suite configuration tool",
+        "flutter virtual device setup",
+        "windows on dgx spark",
+        "windows sdk install",
+        "spark certification databricks",
+        "spark windows"
+      ],
+      "expansions": {
+        "dgx spark windows": [
+          "dgx spark windows",
+          "dgx spark windows 11",
+          "nvidia dgx spark windows",
+          "nvidia dgx spark windows 11"
+        ],
+        "dgx spark windows a": [],
+        "dgx spark windows b": [],
+        "dgx spark windows c": [],
+        "dgx spark windows d": [],
+        "dgx spark windows e": [
+          "dse scada suite configuration tool"
+        ],
+        "dgx spark windows f": [],
+        "dgx spark windows g": [],
+        "dgx spark windows h": [
+          "dse scada suite configuration tool"
+        ],
+        "dgx spark windows i": [],
+        "dgx spark windows j": [],
+        "dgx spark windows k": [],
+        "dgx spark windows l": [],
+        "dgx spark windows m": [
+          "flutter virtual device setup"
+        ],
+        "dgx spark windows n": [
+          "nvidia dgx spark windows",
+          "nvidia dgx spark windows 11"
+        ],
+        "dgx spark windows o": [
+          "windows on dgx spark"
+        ],
+        "dgx spark windows p": [],
+        "dgx spark windows q": [],
+        "dgx spark windows r": [],
+        "dgx spark windows s": [
+          "dse scada suite configuration tool"
+        ],
+        "dgx spark windows t": [],
+        "dgx spark windows u": [],
+        "dgx spark windows v": [],
+        "dgx spark windows w": [],
+        "dgx spark windows x": [
+          "dse scada suite configuration tool"
+        ],
+        "dgx spark windows y": [
+          "dgx spark windows",
+          "dgx spark windows 11",
+          "nvidia dgx spark windows",
+          "nvidia dgx spark windows 11"
+        ],
+        "dgx spark windows z": [
+          "windows sdk install"
+        ],
+        "how to dgx spark windows": [],
+        "dgx spark windows 2026": [],
+        "dgx spark windows vs": [],
+        "dgx spark windows review": [
+          "spark certification databricks"
+        ],
+        "best dgx spark windows": [
+          "spark windows"
+        ]
+      },
+      "depth_score": 10,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:04:49Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.319,
+    "competition_score": 0.0,
+    "opportunity": 55.2,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.319,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 5
+  },
+  {
+    "title": "Mac Studio vs DGX Spark: Qwen settles it",
+    "angle": "Competitor video measures Qwen 3.5 on both; we read the numbers and name the decision rule",
+    "lane": "comparison",
+    "keyword": "mac studio vs dgx spark",
+    "products": "Mac Studio, DGX Spark, Qwen",
+    "why_now": "4-day-old head-to-head video is circulating; comparison search demand follows",
+    "radar_ids": "mac-studio-vs-dgx-spark, pi3g-gb10-vs-gb300",
+    "value_tags": "TEACHES,REFRAMES",
+    "autocomplete": {
+      "seed": "mac studio vs dgx spark",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "mac studio vs dgx spark",
+        "mac studio m3 ultra vs dgx spark",
+        "dgx spark vs mac studio ultra",
+        "mac studio buyers guide",
+        "mac studio for audio production",
+        "mac studio full setup",
+        "mac studio m1 ultra music production",
+        "best mac studio accessories",
+        "best mac studio setup"
+      ],
+      "expansions": {
+        "mac studio vs dgx spark": [
+          "mac studio vs dgx spark",
+          "mac studio m3 ultra vs dgx spark",
+          "dgx spark vs mac studio ultra"
+        ],
+        "mac studio vs dgx spark a": [],
+        "mac studio vs dgx spark b": [],
+        "mac studio vs dgx spark c": [],
+        "mac studio vs dgx spark d": [
+          "mac studio buyers guide"
+        ],
+        "mac studio vs dgx spark e": [],
+        "mac studio vs dgx spark f": [],
+        "mac studio vs dgx spark g": [
+          "mac studio for audio production",
+          "mac studio full setup"
+        ],
+        "mac studio vs dgx spark h": [],
+        "mac studio vs dgx spark i": [],
+        "mac studio vs dgx spark j": [],
+        "mac studio vs dgx spark k": [],
+        "mac studio vs dgx spark l": [],
+        "mac studio vs dgx spark m": [
+          "mac studio m3 ultra vs dgx spark",
+          "mac studio for audio production"
+        ],
+        "mac studio vs dgx spark n": [
+          "mac studio buyers guide"
+        ],
+        "mac studio vs dgx spark o": [],
+        "mac studio vs dgx spark p": [],
+        "mac studio vs dgx spark q": [],
+        "mac studio vs dgx spark r": [],
+        "mac studio vs dgx spark s": [],
+        "mac studio vs dgx spark t": [],
+        "mac studio vs dgx spark u": [
+          "mac studio m3 ultra vs dgx spark",
+          "dgx spark vs mac studio ultra"
+        ],
+        "mac studio vs dgx spark v": [],
+        "mac studio vs dgx spark w": [],
+        "mac studio vs dgx spark x": [],
+        "mac studio vs dgx spark y": [],
+        "mac studio vs dgx spark z": [
+          "mac studio m1 ultra music production"
+        ],
+        "how to mac studio vs dgx spark": [
+          "mac studio vs dgx spark"
+        ],
+        "mac studio vs dgx spark 2026": [],
+        "mac studio vs dgx spark vs": [],
+        "mac studio vs dgx spark review": [
+          "mac studio buyers guide"
+        ],
+        "best mac studio vs dgx spark": [
+          "best mac studio accessories",
+          "best mac studio setup"
+        ]
+      },
+      "depth_score": 9,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:05:23Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.3345,
+    "competition_score": 0.0,
+    "opportunity": 55.0,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3345,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 6
+  },
+  {
+    "title": "Ollama 0.34 rc3: what changed under the hood",
+    "angle": "The rc that shipped 3 days ago; worth updating or wait?",
+    "lane": "news-react",
+    "keyword": "ollama update",
+    "products": "Ollama",
+    "why_now": "v0.34.0-rc3 released 3 d ago (pre-release)",
+    "radar_ids": "ollama-v0.34.0-rc3",
+    "value_tags": "TEACHES,EQUIPS",
+    "autocomplete": {
+      "seed": "ollama update",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "ollama update",
+        "ollama new update",
+        "oromia coc center",
+        "olu 32",
+        "olombr",
+        "how to update ollama",
+        "how to upgrade ollama",
+        "oic quick review"
+      ],
+      "expansions": {
+        "ollama update": [
+          "ollama update",
+          "ollama new update"
+        ],
+        "ollama update a": [],
+        "ollama update b": [],
+        "ollama update c": [
+          "oromia coc center"
+        ],
+        "ollama update d": [],
+        "ollama update e": [],
+        "ollama update f": [],
+        "ollama update g": [],
+        "ollama update h": [],
+        "ollama update i": [],
+        "ollama update j": [],
+        "ollama update k": [],
+        "ollama update l": [],
+        "ollama update m": [],
+        "ollama update n": [
+          "ollama new update"
+        ],
+        "ollama update o": [],
+        "ollama update p": [],
+        "ollama update q": [],
+        "ollama update r": [
+          "olu 32"
+        ],
+        "ollama update s": [],
+        "ollama update t": [],
+        "ollama update u": [],
+        "ollama update v": [
+          "olombr"
+        ],
+        "ollama update w": [],
+        "ollama update x": [],
+        "ollama update y": [],
+        "ollama update z": [],
+        "how to ollama update": [
+          "how to update ollama",
+          "how to upgrade ollama"
+        ],
+        "ollama update 2026": [],
+        "ollama update vs": [
+          "oic quick review"
+        ],
+        "ollama update review": [],
+        "best ollama update": []
+      },
+      "depth_score": 8,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:06:42Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.3501,
+    "competition_score": 0.0,
+    "opportunity": 54.7,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3501,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 7
+  },
+  {
+    "title": "Qwen3.8-Flash-Next: 64 tok/s on one Spark",
+    "angle": "NVIDIA's official NVFP4 quant measured on 1/2/4 DGX Sparks: 64 tok/s peak single stream",
+    "lane": "comparison",
+    "keyword": "qwen dgx spark",
+    "products": "Qwen3.8-Flash-Next, DGX Spark, NVFP4",
+    "why_now": "NVIDIA developer forums thread measured 1-2-4 Spark scaling this week",
+    "radar_ids": "qwen38-flash-next-spark",
+    "value_tags": "TEACHES,PROVES",
+    "autocomplete": {
+      "seed": "qwen dgx spark",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "dgx spark qwen",
+        "dgx spark qwen image",
+        "gwen spark the fire",
+        "yamaha dgx 230 demo",
+        "yamaha dgx 205 demo",
+        "nvidia dgx spark qwen"
+      ],
+      "expansions": {
+        "qwen dgx spark": [
+          "dgx spark qwen",
+          "dgx spark qwen image"
+        ],
+        "qwen dgx spark a": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark b": [],
+        "qwen dgx spark c": [],
+        "qwen dgx spark d": [],
+        "qwen dgx spark e": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark f": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark g": [],
+        "qwen dgx spark h": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark i": [
+          "dgx spark qwen image",
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark j": [
+          "yamaha dgx 230 demo",
+          "yamaha dgx 205 demo"
+        ],
+        "qwen dgx spark k": [],
+        "qwen dgx spark l": [],
+        "qwen dgx spark m": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark n": [
+          "nvidia dgx spark qwen"
+        ],
+        "qwen dgx spark o": [],
+        "qwen dgx spark p": [],
+        "qwen dgx spark q": [],
+        "qwen dgx spark r": [],
+        "qwen dgx spark s": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark t": [
+          "gwen spark the fire"
+        ],
+        "qwen dgx spark u": [],
+        "qwen dgx spark v": [],
+        "qwen dgx spark w": [],
+        "qwen dgx spark x": [],
+        "qwen dgx spark y": [],
+        "qwen dgx spark z": [],
+        "how to qwen dgx spark": [],
+        "qwen dgx spark 2026": [],
+        "qwen dgx spark vs": [],
+        "qwen dgx spark review": [],
+        "best qwen dgx spark": []
+      },
+      "depth_score": 6,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:05:56Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.3812,
+    "competition_score": 0.0,
+    "opportunity": 54.3,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3812,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 8
+  },
+  {
+    "title": "DGX Spark vs DGX Station GB300: the price table",
+    "angle": "pi3g's spec-and-price table: what $4k buys vs $-six-figures for local AI",
+    "lane": "comparison",
+    "keyword": "dgx station gb300",
+    "products": "DGX Spark, DGX Station GB300",
+    "why_now": "pi3g published the comparison table this week",
+    "radar_ids": "pi3g-gb10-vs-gb300",
+    "value_tags": "TEACHES,REFRAMES",
+    "autocomplete": {
+      "seed": "dgx station gb300",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "dgx station gb300",
+        "dgx station gb300 blackwell ultra",
+        "nvidia dgx station gb300",
+        "dgx station",
+        "nvidia dgx station h100"
+      ],
+      "expansions": {
+        "dgx station gb300": [
+          "dgx station gb300",
+          "dgx station gb300 blackwell ultra",
+          "nvidia dgx station gb300",
+          "dgx station"
+        ],
+        "dgx station gb300 a": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 b": [
+          "dgx station gb300 blackwell ultra"
+        ],
+        "dgx station gb300 c": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 d": [],
+        "dgx station gb300 e": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 f": [],
+        "dgx station gb300 g": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 h": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 i": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 j": [],
+        "dgx station gb300 k": [],
+        "dgx station gb300 l": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 m": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 n": [
+          "nvidia dgx station gb300"
+        ],
+        "dgx station gb300 o": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 p": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 q": [],
+        "dgx station gb300 r": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 s": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 t": [
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 u": [
+          "dgx station gb300 blackwell ultra",
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 v": [],
+        "dgx station gb300 w": [],
+        "dgx station gb300 x": [],
+        "dgx station gb300 y": [],
+        "dgx station gb300 z": [
+          "nvidia dgx station h100",
+          "dgx station"
+        ],
+        "how to dgx station gb300": [],
+        "dgx station gb300 2026": [],
+        "dgx station gb300 vs": [
+          "dgx station",
+          "nvidia dgx station h100"
+        ],
+        "dgx station gb300 review": [
+          "dgx station",
+          "nvidia dgx station h100"
+        ],
+        "best dgx station gb300": [
+          "nvidia dgx station h100"
+        ]
+      },
+      "depth_score": 5,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:05:39Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.3968,
+    "competition_score": 0.0,
+    "opportunity": 54.0,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3968,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 9
+  },
+  {
+    "title": "Unsloth's Vulkan switch gives AMD 20% free",
+    "angle": "v0.1.807-beta defaults AMD to Vulkan over ROCM for a 20% prefill/decode boost; one env flip",
+    "lane": "how-to",
+    "keyword": "unsloth amd",
+    "products": "Unsloth, AMD",
+    "why_now": "unsloth v0.1.807-beta released 21 h ago with the Vulkan default",
+    "radar_ids": "unsloth-v0.1.807-beta",
+    "value_tags": "EQUIPS,PROVES",
+    "autocomplete": {
+      "seed": "unsloth amd",
+      "hl": "en",
+      "gl": "US",
+      "suggestions": [
+        "unsloth amd",
+        "unsloth multi gpu",
+        "unsloth mac"
+      ],
+      "expansions": {
+        "unsloth amd": [
+          "unsloth amd"
+        ],
+        "unsloth amd a": [],
+        "unsloth amd b": [],
+        "unsloth amd c": [],
+        "unsloth amd d": [],
+        "unsloth amd e": [],
+        "unsloth amd f": [],
+        "unsloth amd g": [],
+        "unsloth amd h": [],
+        "unsloth amd i": [],
+        "unsloth amd j": [],
+        "unsloth amd k": [],
+        "unsloth amd l": [],
+        "unsloth amd m": [
+          "unsloth multi gpu",
+          "unsloth mac"
+        ],
+        "unsloth amd n": [],
+        "unsloth amd o": [],
+        "unsloth amd p": [],
+        "unsloth amd q": [],
+        "unsloth amd r": [],
+        "unsloth amd s": [],
+        "unsloth amd t": [],
+        "unsloth amd u": [],
+        "unsloth amd v": [],
+        "unsloth amd w": [],
+        "unsloth amd x": [],
+        "unsloth amd y": [],
+        "unsloth amd z": [],
+        "how to unsloth amd": [],
+        "unsloth amd 2026": [],
+        "unsloth amd vs": [],
+        "unsloth amd review": [],
+        "best unsloth amd": []
+      },
+      "depth_score": 3,
+      "calls": 32,
+      "failed": 0,
+      "fetched_at": "2026-09-09T11:04:37Z"
+    },
+    "competition": null,
+    "competition_reason": "YT_API_KEY not set; competition.py skipped",
+    "vidiq": null,
+    "vidiq_reason": "vidIQ MCP connector not attached to this routine",
+    "trend_slope": null,
+    "named_product": true,
+    "demand": -0.4279,
+    "competition_score": 0.0,
+    "opportunity": 53.6,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.4279,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 10
+  }
+]
