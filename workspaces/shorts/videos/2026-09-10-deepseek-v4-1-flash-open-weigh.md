@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-10T13:36:40Z 06-voice ok 57s
 - 2026-09-10T13:49:30Z 07-render ok 37.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 48
 - 2026-09-10T13:49:30Z 07-render ok 767s
+- 2026-09-10T13:49:32Z build done, status review
