@@ -2,14 +2,14 @@
 slug: 2026-09-10-deepseek-v4-1-flash-open-weigh
 workspace: shorts
 title: DeepSeek V4.1 Flash cuts KV cache 437x
-status: review
+status: approved
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-10
-updated: "2026-09-10T13:49:27Z"
+updated: "2026-09-10T19:52:00Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-10T13:49:30Z 07-render ok 37.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 48
 - 2026-09-10T13:49:30Z 07-render ok 767s
 - 2026-09-10T13:49:32Z build done, status review
+- 2026-09-10T19:52:00Z telegram approve (approved_at 2026-09-10T19:52:00Z)
