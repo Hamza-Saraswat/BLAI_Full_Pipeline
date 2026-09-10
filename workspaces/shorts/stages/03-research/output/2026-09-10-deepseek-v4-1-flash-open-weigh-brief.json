@@ -1,0 +1,190 @@
+{
+  "slug": "2026-09-10-deepseek-v4-1-flash-open-weigh",
+  "topic": "DeepSeek V4.1 Flash open weights landed; the KV cache compression in the tech report is the real story for local hardware",
+  "generated_at": "2026-09-10T11:41:55Z",
+  "depth": "standard",
+  "thesis": "The open weights are the news, but the KV cache compression behind them -- 890 bytes per token, roughly 437 times smaller than V1 -- is what changes what one machine can hold at a million tokens of context.",
+  "explanation_path": "Open with the dated event: on the morning of September 10, 2026, DeepSeek put the V4.1-Flash weights on Hugging Face under an MIT license, and Reuters covered the launch the same day. Before any compression talk can land, the viewer needs what a KV cache is: the running notes a model keeps so it does not have to re-read the whole conversation for every word it writes, and the thing that actually grows until it fills your memory on long contexts -- the weights do not grow, the notes do. Once that is in place, give the mechanism at the level a beginner keeps: most layers stop keeping their own copy of the notes and share one (Compressed Sparse Attention 2), the notes get written in half-size shorthand (FP4), and the copy parked on disk shrinks too (SWA Bounded Replay, roughly 1/8). Then the numbers in sequence: 890 bytes per token, roughly 1/4 of the previous Flash, approximately 437-fold less than V1, and decode compute that stays nearly flat as context grows -- that last part is why people who run agents care. Then translate to the desk: about 0.9 GB of cache for a full million-token context by our arithmetic, against a 552B-parameter checkpoint in 48 shards that no 24 GB gaming GPU can hold and even a 128 GB unified-memory box cannot load at the shipped FP8/FP4 precision; the same-day community quants are only starting to appear. Close on the skeptical frame: these are the vendor's numbers on the vendor's harness; the independently checkable facts today are the MIT license, the API price, and the September 14 retirement routing of V4-Pro.",
+  "claims": [
+    {
+      "claim": "DeepSeek officially released DeepSeek-V4.1-Flash on September 10, 2026, and describes it as the smallest model in its new architecture family.",
+      "source_url": "https://api-docs.deepseek.com/updates",
+      "source_title": "Change Log | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "DeepSeek-V4.1-Flash is a multimodal Mixture-of-Experts model with 552B backbone parameters and support for contexts of up to one million tokens.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "Its Causal Encoder-Decoder architecture activates 8B parameters per token during prefill and 16B during decode.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "CSA2 cross-layer KV reuse plus FP4 main KV caching cut the global KV cache footprint to 890 bytes per token, roughly 1/4 of DeepSeek-V4-Flash and down from 389,120 bytes per token on DeepSeek-V1, approximately a 437-fold reduction.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/resolve/main/DeepSeek_V41_Tech_Report.pdf",
+      "source_title": "DeepSeek-V4.1-Flash Technical Report",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "SWA Bounded Replay reduces the persistent KV cache footprint, the copy kept on SSD or in host memory, to roughly 1/8 of DeepSeek-V4-Flash.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "The repository and the model weights are MIT licensed, so the weights can be downloaded, run and redistributed freely.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "Extending the context 256-fold, from 4K to 1M tokens, increases the model's single-token Decode FLOPs by only 1/4.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/resolve/main/DeepSeek_V41_Tech_Report.pdf",
+      "source_title": "DeepSeek-V4.1-Flash Technical Report",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "On DeepSeek's own harness (reasoning_effort=100, Minimal mode of DeepSeek Harness, 1M-token context window, temperature=1.0, top_p=0.95), V4.1-Flash scores DeepSWE v1.1 (Resolved) 74.2 against DeepSeek-V4-Pro's 62.7, and Terminal-Bench 2.1 (Pass@1) 90.6 against V4-Pro's 87.9.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "The API undercuts V4-Pro at $0.15 per million input tokens (cache miss, off-peak) and $0.6 per million output tokens (off-peak) against V4-Pro's $0.66 and $1.98, and from 12:00 Beijing Time on September 14, 2026 all deepseek-v4-pro requests route to V4.1-Flash at Flash pricing.",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "source_title": "Models & Pricing | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-10"
+    },
+    {
+      "claim": "Community quantized builds appeared on Hugging Face the same morning: the model's quantization listing showed 3 entries at fetch time, including a GGUF repo and two NVFP4 builds.",
+      "source_url": "https://huggingface.co/models?other=base_model:quantized:deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "Quantized Models for deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-09-10"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "global KV cache per token, V4.1-Flash",
+      "value": "890 bytes per token",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/resolve/main/DeepSeek_V41_Tech_Report.pdf"
+    },
+    {
+      "label": "global KV cache per token, DeepSeek-V1",
+      "value": "389,120",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/resolve/main/DeepSeek_V41_Tech_Report.pdf"
+    },
+    {
+      "label": "persistent KV cache vs DeepSeek-V4-Flash",
+      "value": "roughly 1/8",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "activated parameters",
+      "value": "8B per token during prefill and 16B during decode",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "API price, cache-miss input",
+      "value": "$0.15 per 1M input tokens (off-peak)",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A kitchen's shared clipboard",
+      "mapping": "The KV cache is the running prep notes a cook keeps so each new plate does not mean re-chopping every onion from scratch; the notes grow with the order, not the recipe book. CSA2 is the sous chefs agreeing to share one clipboard instead of each keeping a copy, and FP4 is writing the shorthand smaller.",
+      "limit": "A photocopy loses nothing, but FP4 really does write the notes with less precision, and sharing only works because the model was trained to share -- you cannot hand this clipboard trick to a normal model."
+    },
+    {
+      "vehicle": "The streaming-service rewatch",
+      "mapping": "Persistent KV on SSD is keeping every tape of every episode so a returning viewer skips nothing; SWA Bounded Replay is re-watching just the last minute to catch up, at 1/8 the shelf space.",
+      "limit": "The rewatch is not free -- it spends compute re-prefilling the recent tokens, so the trade is shelf space for a little replay work, not storage for nothing."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "890 bytes per token means the download shrank 437 times.",
+      "reality": "The compression applies to the per-conversation memory the context uses at run time; the model itself is a 552B-backbone-parameter MoE that must still be loaded whole."
+    },
+    {
+      "myth": "It beat DeepSeek-V4-Pro, so it beats everything.",
+      "reality": "DeepSeek's own table shows Opus-5.0 ahead of V4.1-Flash on Terminal-Bench 3.0 (43.3 vs 30.0) and HLE (56.3 vs 36.8); the surpassed claim is DeepSeek's, about its own V4-Pro, on its own harness."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "KV cache",
+      "definition": "The notes a model keeps about everything it has read so far, so it does not have to recompute them for every new word it writes."
+    },
+    {
+      "term": "Mixture of Experts (MoE)",
+      "definition": "A model design where only a small subset of specialist sub-networks is activated for each token, so total stored parameters far exceed active ones."
+    },
+    {
+      "term": "open weights",
+      "definition": "The trained model files are published for anyone to download, run and inspect locally, under a license (here MIT) that permits it."
+    },
+    {
+      "term": "quantization",
+      "definition": "Storing model numbers in fewer bits than they were trained with, shrinking memory and download size at some cost in fidelity."
+    },
+    {
+      "term": "prefill",
+      "definition": "The phase where the model reads your input and builds its notes."
+    },
+    {
+      "term": "decode",
+      "definition": "The phase where the model writes the answer one token at a time."
+    },
+    {
+      "term": "FP4",
+      "definition": "A 4-bit number format; KV notes stored in FP4 take half the space of 8-bit notes."
+    },
+    {
+      "term": "HBM",
+      "definition": "High-bandwidth memory, the fast memory on AI accelerators and top-end GPUs that the runtime KV cache lives in."
+    },
+    {
+      "term": "token",
+      "definition": "The smallest chunk of text a model reads or writes, roughly a word or part of one."
+    }
+  ],
+  "unverified": [
+    "By our own arithmetic from the tech report's numbers, 890 bytes per token works out to about 0.9 GB of KV cache for a full one-million-token context; DeepSeek does not state the per-context total anywhere we fetched.",
+    "The same-day community GGUF repo describes the official checkpoint as about 475 GiB across 48 shards; the 48-shard count is confirmed by the Hugging Face file tree, but the size figure is community-reported and no official page states it.",
+    "The most-watched same-day GGUF repo had not uploaded any weights at fetch time, so no complete community quantization is confirmed to exist yet.",
+    "No llama.cpp, vLLM, Ollama, LM Studio or SGLang release supporting V4.1-Flash could be verified at fetch time; the model card's inference folder is the only official local path we could ground.",
+    "Community posters on Hacker News and the NVIDIA DGX Spark forum expect quantized builds to run on 192 GB-class machines, but no tier 1-3 page we fetched confirms any actual local run of V4.1-Flash.",
+    "Tokens per second, load time and memory use on our own DGX Spark and consumer GPUs must be measured by us before the channel states any performance figure."
+  ],
+  "suggested_outline": "Hook on the dated event and the buried number: free MIT-licensed weights for a 552B-parameter, million-token-context model landed on Hugging Face this morning, and the tech report's own table says a token of context now costs 890 bytes of cache, down from 389,120 on V1.\nDefine the KV cache as the model's running notes, then walk the two compression tricks through one analogy (layers share one clipboard; notes written in half-size shorthand; the disk copy shrinks to roughly 1/8), keeping the 24 GB gaming GPU versus 128 GB unified-memory frame at the center.\nHonest catch and payoff: a full million-token context costs under a gigabyte of cache by our arithmetic, but the weights still do not fit a 24 GB card and every benchmark is DeepSeek's own harness; the checkable facts are the MIT license, the $0.15 per million input tokens off-peak price and the September 14 V4-Pro retirement, so end on what to watch next -- the first quant that actually fits the viewer's machine.",
+  "notes": "Conflict: DeepSeek's model card table scores NL2Repo-Bench (Score) at 64.0 for V4.1-Flash while DeepSeek's own API changelog lists NL2Repo-Bench: 65.4; both pages were fetched, both are tier 1, and the brief avoids the number entirely. All benchmark figures are vendor-run (DeepSeek Harness, reasoning_effort=100); no independent harness page (Artificial Analysis, LMArena) for V4.1-Flash could be fetched at this hour, so nothing here is third-party verified. The HLE and Terminal-Bench 3.0/4.0 gaps behind Opus-5.0 are the strongest engineer-credible counterweight to the beats-everything reading. Reuters confirms the launch date and adds IPO-preparation context (STAR Market), background color only. The strongest keyword-gap beat is the KV-per-token generational table (389,120 to 890): no Shorts-form summary of it existed at fetch time.",
+  "viewer_situation": "You've got a gaming PC with a 24 GB GPU or a 128 GB Mac, you saw this morning that DeepSeek dropped free model weights again, and you want to know whether this one finally fits your machine.",
+  "has_process": false,
+  "objection": "Every number here is DeepSeek's own, measured on DeepSeek's own harness, and 890 bytes per token shrinks the conversation's memory, not the 552-billion-parameter weight download that still is not coming close to fitting on your card."
+}
