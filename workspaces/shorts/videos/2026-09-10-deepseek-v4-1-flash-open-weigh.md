@@ -2,19 +2,19 @@
 slug: 2026-09-10-deepseek-v4-1-flash-open-weigh
 workspace: shorts
 title: DeepSeek V4.1 Flash cuts KV cache 437x
-status: ready-to-build
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-10
-updated: "2026-09-10T12:36:25Z"
+updated: "2026-09-10T13:35:39Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - 2026-09-10T11:57:03Z 03-research ok: 12 sources, 10 claims (all primary), validator exit 0
 - 2026-09-10T12:30:49Z 04-script ok: A(news-react-so-what) beat B(number-first) 19-17; validate+eval clean on winner
 - 2026-09-10T12:36:25Z 05-package ok: searchable title picked, seo 100, check_outputs clean
+- 2026-09-10T13:35:39Z build start on gn100-83c4
