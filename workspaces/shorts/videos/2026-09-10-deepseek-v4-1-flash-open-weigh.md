@@ -2,14 +2,14 @@
 slug: 2026-09-10-deepseek-v4-1-flash-open-weigh
 workspace: shorts
 title: DeepSeek V4.1 Flash cuts KV cache 437x
-status: building
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-10
-updated: "2026-09-10T13:35:39Z"
+updated: "2026-09-10T13:49:27Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-10-deepseek-v4-1-flash-open-weigh-script|Script]]
 - Package: [[stages/05-package/output/2026-09-10-deepseek-v4-1-flash-open-weigh-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-10-deepseek-v4-1-flash-open-weigh-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-10-deepseek-v4-1-flash-open-weigh-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 2026-09-10T12:36:25Z 05-package ok: searchable title picked, seo 100, check_outputs clean
 - 2026-09-10T13:35:39Z build start on gn100-83c4
 - 2026-09-10T13:36:40Z 06-voice ok 57s
+- 2026-09-10T13:49:30Z 07-render ok 37.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 48
+- 2026-09-10T13:49:30Z 07-render ok 767s
