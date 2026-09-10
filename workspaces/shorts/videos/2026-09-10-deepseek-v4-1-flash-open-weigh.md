@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-10-deepseek-v4-1-flash-open-weigh
 workspace: shorts
-title: "DeepSeek V4.1 Flash: open weights just landed"
-status: scripted
+title: DeepSeek V4.1 Flash cuts KV cache 437x
+status: ready-to-build
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-10
-updated: "2026-09-10T12:30:49Z"
+updated: "2026-09-10T12:36:25Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-09-10-ideas]]
 - Research: [[stages/03-research/output/2026-09-10-deepseek-v4-1-flash-open-weigh-brief|Brief]]
 - Script: [[stages/04-script/output/2026-09-10-deepseek-v4-1-flash-open-weigh-script|Script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-09-10-deepseek-v4-1-flash-open-weigh-package|Package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -38,3 +38,4 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-10T11:57:03Z 03-research ok: 12 sources, 10 claims (all primary), validator exit 0
 - 2026-09-10T12:30:49Z 04-script ok: A(news-react-so-what) beat B(number-first) 19-17; validate+eval clean on winner
+- 2026-09-10T12:36:25Z 05-package ok: searchable title picked, seo 100, check_outputs clean
