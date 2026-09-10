@@ -1,0 +1,516 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-10T12:18:11+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "2026-09-10-deepseek-v4-1-flash-open-weigh-storyboard-A.json",
+    "research_path": "../../03-research/output/2026-09-10-deepseek-v4-1-flash-open-weigh-brief.json",
+    "project_record": null,
+    "ledger_path": "script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 10
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 5,
+    "entities_total": 21,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "deepseek.com",
+      "huggingface.co"
+    ],
+    "domain_diversity": 2,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 3,
+      "distinct": 2,
+      "score": 0.6,
+      "detail": [
+        {
+          "label": "global KV cache per token, V4.1-Flash",
+          "value": "890 bytes per token",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "890",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "global KV cache per token, DeepSeek-V1",
+          "value": "389,120",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "persistent KV cache vs DeepSeek-V4-Flash",
+          "value": "roughly 1/8",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "activated parameters",
+          "value": "8B per token during prefill and 16B during decode",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "API price, cache-miss input",
+          "value": "$0.15 per 1M input tokens (off-peak)",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one",
+          "scene_ids": [
+            "s04"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 21,
+      "found_count": 2,
+      "score": 0.095,
+      "found": [
+        "DeepSeek",
+        "Flash"
+      ],
+      "missing": [
+        "V4.1-Flash",
+        "V4-Pro",
+        "DeepSeek-V4-Pro",
+        "DeepSeek-V4-Flash",
+        "DeepSeek-V4.1-Flash",
+        "Terminal",
+        "SWA Bounded Replay",
+        "DeepSeek Harness",
+        "Beijing Time",
+        "Hugging Face",
+        "CSA2",
+        "DeepSeek-V1",
+        "MIT",
+        "DeepSWE",
+        "GGUF",
+        "Minimal",
+        "Opus-5.0",
+        "HLE",
+        "Opus"
+      ],
+      "top2": [
+        "DeepSeek",
+        "Flash"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Flash",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "V4.1-Flash",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4-Pro",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4-Pro",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4-Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Terminal",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SWA Bounded Replay",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek Harness",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Beijing Time",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CSA2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSWE",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GGUF",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Minimal",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Opus-5.0",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HLE",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Opus",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 14,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DeepSeek",
+        "entity:Flash"
+      ],
+      "hook_text": "Flash beat Pro. Your card can't.",
+      "first_sentence": "DeepSeek's new Flash beat its own Pro."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek",
+            "entity:Flash"
+          ],
+          "narration": "DeepSeek's new Flash beat its own Pro. Your card is the catch. Free weights dropped this morning."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "num:890 bytes per token"
+          ],
+          "narration": "One token of context now costs eight hundred ninety bytes of KV cache, a model's running notes."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "DeepSeek's layers share one set of notes, written in half-size shorthand. Sous chefs, one clipboard; the model trained to share."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8,
+          "specific": true,
+          "hits": [
+            "num:roughly 1/8",
+            "num:$0.15 per 1M input tokens (off-peak)"
+          ],
+          "narration": "By our arithmetic, a million-token context needs under one gigabyte of cache. The weights: five hundred fifty-two billion parameters. They won't fit your card."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "That beat-its-Pro score is DeepSeek's own harness. And a finished local build? We couldn't find one yet."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 5,
+          "specific": false,
+          "hits": [],
+          "narration": "Your twenty-four gigabyte card is the gate. Watch for the first quant that fits."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 3.7,
+      "words": 115,
+      "sentences": 14,
+      "est_speech_s": 39.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "DeepSeek's new Flash beat its own Pro. Your card is the catch. Free weights dropped this morning. One token of context now costs eight hundred ninety bytes of KV cache, a model's running notes. DeepSeek's layers share one set of notes, written in half-size shorthand. Sous chefs, one clipboard; the model trained to share. By our arithmetic, a million-token context needs under one gigabyte of cache. The weights: five hundred fifty-two billion parameters. They won't fit your card. That beat-its-Pro score is DeepSeek's own harness. And a finished local build? We couldn't find one yet. Your twenty-four gigabyte card is the gate. Watch for the first quant that fits.",
+    "on_screen": "Flash beat Pro. Your card can't. | Flash beat Pro. Your card can't. | 890 bytes per token | One shared clipboard, half-size notes | 0.9 GB cache vs 552B parameters | Vendor harness. No finished quant yet. | Your card is the gate"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "2026-09-10-deepseek-v4-1-flash-open-weigh-storyboard-A.json",
+        "scenes": 6,
+        "fk_grade": 3.7,
+        "words": 115,
+        "est_speech_s": 39.7,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 45 chars \u2014 mobile truncates ~40",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s02: 'KV' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "../../03-research/output/2026-09-10-deepseek-v4-1-flash-open-weigh-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 2,
+        "total": 5,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.095,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "Flash"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DeepSeek",
+          "entity:Flash"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "2026-09-10-deepseek-v4-1-flash-open-weigh",
+  "topic": "DeepSeek V4.1 Flash open weights and the KV cache compression story",
+  "title": "DeepSeek V4.1 Flash: open weights just landed",
+  "description": "working value, package stage overwrites",
+  "hashtags": [
+    "#deepseek",
+    "#localai",
+    "#llm"
+  ],
+  "hook_text": "Flash beat Pro. Your card can't.",
+  "hook_candidates": [
+    "Eight hundred ninety bytes. That is what one token costs now.",
+    "DeepSeek V4.1 Flash just dropped its weights, free.",
+    "This model's notes shrank four hundred thirty-seven times.",
+    "You've got twenty-four gigabytes. A million-token context just got cheap.",
+    "Your GPU isn't the problem. Your notes are.",
+    "DeepSeek just shrank the cost of context memory 437 times.",
+    "Your chat history is about to stop filling your RAM.",
+    "DeepSeek's new Flash beat its own Pro. Your card is the catch. *",
+    "One token used to cost 389,120 bytes. Now 890. *",
+    "Twenty-four gigabytes won't hold the weights. The notes will fit."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": [
+    "TEACHES",
+    "EQUIPS"
+  ],
+  "analogy": {
+    "vehicle": "a kitchen where most cooks share one clipboard of running prep notes",
+    "mapping": "the clipboard is the KV cache; sharing it across layers is CSA2 cross-layer reuse; half-size shorthand is FP4",
+    "limit": "FP4 really does lose precision and sharing only works because the model was trained to share"
+  },
+  "music_mood": "curious-tech",
+  "tags": [
+    "deepseek v4.1 flash",
+    "deepseek",
+    "kv cache",
+    "local ai",
+    "run local llm",
+    "open weights",
+    "quantization",
+    "gguf",
+    "mixture of experts",
+    "huggingface",
+    "local llm",
+    "ai news",
+    "free ai model",
+    "llm memory",
+    "mac studio llm",
+    "dgx spark"
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "DeepSeek's new Flash beat its own Pro. Your card is the catch. Free weights dropped this morning.",
+      "on_screen_text": "Flash beat Pro. Your card can't.",
+      "visual_brief": "Frame 1 composition: finished amber-on-dark kinetic headline \"Flash beat Pro. Your card can't.\" fully legible, GPU-card silhouette below. Motion onset within 0.5 s of frame 1: a slow pulse on \"can't\" starting at 0.4 s. On 'Free weights dropped this morning' a small HF-style download tag rises in place under the headline.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "One token of context now costs eight hundred ninety bytes of KV cache, a model's running notes.",
+      "on_screen_text": "890 bytes per token",
+      "visual_brief": "On 'One token of context' a single token chip fades in at center. On 'eight hundred ninety bytes' the giant amber 890 scales in with 'bytes per token' beneath. On 'a model's running notes' two thin note-lines fade in stacked beside the number.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "DeepSeek's layers share one set of notes, written in half-size shorthand. Sous chefs, one clipboard; the model trained to share.",
+      "on_screen_text": "One shared clipboard, half-size notes",
+      "visual_brief": "On 'share one set of notes' three layer boxes fade in left, each holding a note-card; the three cards fade out as one shared card scales in at center. On 'half-size shorthand' the shared card scales to half size. On 'the model trained to share' a tiny dumbbell glyph fades in beside it.",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "By our arithmetic, a million-token context needs under one gigabyte of cache. The weights: five hundred fifty-two billion parameters. They won't fit your card.",
+      "on_screen_text": "0.9 GB cache vs 552B parameters",
+      "visual_brief": "Split screen, cache left, weights right. On 'under one gigabyte of cache' a small amber bar labeled 0.9 GB scales in left, tagged 'our math'. On 'five hundred fifty-two billion parameters' a massive dark block labeled 552B rises right, dwarfing the bar. On \"won't fit your card\" the GPU silhouette from frame 1 fades in under the block with an amber X scaling onto it.",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "That beat-its-Pro score is DeepSeek's own harness. And a finished local build? We couldn't find one yet.",
+      "on_screen_text": "Vendor harness. No finished quant yet.",
+      "visual_brief": "On 'That beat-its-Pro score' a small vendor-harness tag fades in top corner over a faint benchmark row. On \"We couldn't find one yet\" three empty quant-listing slots appear along a thin timeline, each flashing empty; no fill animation.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Your twenty-four gigabyte card is the gate. Watch for the first quant that fits.",
+      "on_screen_text": "Your card is the gate",
+      "visual_brief": "Frame rhymes with frame 1: same amber-on-dark centered geometry. On 'Your card is the gate' the line fades in alone, mirroring the frame-1 headline. On 'the first quant that fits' one slot from the timeline fills amber once, then the wordmark settle.",
+      "est_duration_s": 5,
+      "render_notes": "wordmark settle; last frame rhymes with frame 1"
+    }
+  ],
+  "narration_full": "DeepSeek's new Flash beat its own Pro. Your card is the catch. Free weights dropped this morning. One token of context now costs eight hundred ninety bytes of KV cache, a model's running notes. DeepSeek's layers share one set of notes, written in half-size shorthand. Sous chefs, one clipboard; the model trained to share. By our arithmetic, a million-token context needs under one gigabyte of cache. The weights: five hundred fifty-two billion parameters. They won't fit your card. That beat-its-Pro score is DeepSeek's own harness. And a finished local build? We couldn't find one yet. Your twenty-four gigabyte card is the gate. Watch for the first quant that fits.",
+  "target_duration_s": 38,
+  "notes_for_review": "Rounded nothing; 0.9 GB is our arithmetic per the brief and is hedged on screen. The benchmark scores are DeepSeek own-harness, said out loud. Analogy limit stated in the catch scene."
+}
