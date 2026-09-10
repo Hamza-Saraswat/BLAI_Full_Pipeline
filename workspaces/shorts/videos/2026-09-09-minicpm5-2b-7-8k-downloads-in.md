@@ -2,14 +2,14 @@
 slug: 2026-09-09-minicpm5-2b-7-8k-downloads-in
 workspace: shorts
 title: "MiniCPM5-2B: 7.8k downloads in four days"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-09
-updated: "2026-09-09T11:07:36Z"
+updated: "2026-09-10T13:35:35Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,3 +36,4 @@ blotato_post_id: ""
 - Skipped TensorRT-LLM LoRA issue (rank 3): myth-bust repeats yesterday lane; skipped LTX 2.5 (rank 2): shares pick 1 how-to lane.
 
 ## Build journal
+- 2026-09-10T13:35:35Z 2026-09-10T13:35:35Z expired: not from today's picks (2026-09-10); the factory carries no backlog
