@@ -3,11 +3,10 @@ slug: 2026-09-11-ollama-coding-agent-qwen-3-8-2
 stage: 03-research
 topic: "Ollama coding agent: Qwen 3.8 27B mxfp8 on one laptop"
 depth: standard
-generated_at: 2026-09-11T11:41:00Z
+generated_at: "2026-09-11T11:41:00Z"
 sources: 9
 hub: "[[videos/2026-09-11-ollama-coding-agent-qwen-3-8-2]]"
 ---
-
 # Research brief: Ollama coding agent: Qwen 3.8 27B mxfp8 on one laptop
 
 ## Summary
@@ -144,3 +143,6 @@ A 27B model at 64K context on a laptop will be too slow to be a productive agent
 
 ## Notes
 Nine pages fetched and cited, within the 8-12 standard band. The thinnest load-bearing fact is the blog walkthrough itself: it is a personal blog (tier 4) and is the sole source for the 64K context cap being the difference between usable and locked-up on a 48GB Mac, though Ollama's own docs independently recommend at least 64000 tokens for coding agents, which corroborates the direction. The walkthrough's blog typo 'dose not' is preserved verbatim inside the claim quote. HN thread gives the objection beat ('Friends don't let friends use Ollama') and the author's stability answer as honest-catch color. Conflict recorded: Ollama's docs default a 48GB+ machine to 256k context while the walkthrough manually caps at 64K; both stated, the tension is the teaching moment, not an error to average away. The 'Mining Qwen 3.8 reasoning trace' lead resolved to a distillation-controversy thread (reasoning prefill from GPT-5.5 Pro), off-angle for a how-to, so it stays under unverified.
+
+## Decisions
+- 2026-09-11T11:52:24Z - 2026-09-11 Research checkpoint (unattended): angle and slug confirmed as picked; 9 sources fetched, 10 claims, 8 key numbers; conflict recorded (Ollama 256k default vs walkthrough 64K cap) and kept as the teaching beat.
