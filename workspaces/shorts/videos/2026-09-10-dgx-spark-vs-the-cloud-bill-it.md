@@ -2,14 +2,14 @@
 slug: 2026-09-10-dgx-spark-vs-the-cloud-bill-it
 workspace: shorts
 title: DGX Spark vs the cloud bill it replaces
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-09-10
-updated: "2026-09-10T11:09:44Z"
+updated: "2026-09-11T13:35:08Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Skipped unsloth (66.9, rank 2): how-to lane repeats yesterday's vLLM pick and a >60 non-repeating candidate existed.
 
 ## Build journal
-
+- 2026-09-11T13:35:08Z 2026-09-11T13:35:08Z expired: not from today's picks (2026-09-11); the factory carries no backlog
