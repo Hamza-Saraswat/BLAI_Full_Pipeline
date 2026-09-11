@@ -2,14 +2,14 @@
 slug: 2026-09-11-ollama-coding-agent-qwen-3-8-2
 workspace: shorts
 title: "Ollama coding agent: Qwen 3.8 27B mxfp8 on one laptop"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-11
-updated: "2026-09-11T11:10:14Z"
+updated: "2026-09-11T11:51:43Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format smooth-explainer: the viewer follows a state changing three or more times (install, pull, cap context, sandbox); bands differ from pick 2.
 
 ## Build journal
-
+- 2026-09-11T11:51:43Z 03-research ok: brief 10 claims / 8 key numbers / 9 sources, validator exit 0
