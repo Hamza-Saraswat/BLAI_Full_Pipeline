@@ -1,0 +1,176 @@
+{
+  "slug": "2026-09-11-ollama-coding-agent-qwen-3-8-2",
+  "topic": "Ollama coding agent: Qwen 3.8 27B mxfp8, OpenCode harness, sbx sandbox, context capped at 64K, on one laptop",
+  "title": "Thirty-two gigabytes: the whole coding model on one laptop",
+  "description": "working value, package stage overwrites",
+  "hashtags": [
+    "#ollama",
+    "#localai",
+    "#llm"
+  ],
+  "hook_text": "32GB. The whole model.",
+  "hook_candidates": [
+    "Thirty-two gigabytes. That's the whole model, on your laptop.",
+    "You've tried local models. Tonight one writes your code.",
+    "You've got one laptop. It can be your coding agent.",
+    "Three installs and your Mac runs a coding agent tonight.",
+    "A coding agent with no cloud, no key, no subscription.",
+    "Sixty-four thousand tokens. That's the cap that saves your laptop.",
+    "Your laptop isn't too small. The context window was uncapped.",
+    "Qwen 3.8 runs your agent. Ollama serves it. sbx cages it.",
+    "No API key. Your forty-eight-gigabyte Mac is the datacenter.",
+    "One developer front-paged the whole setup. Here's the stack."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "number-first",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 148,
+  "narration_full": "Thirty-two gigabytes of model, on your laptop. You've watched cloud coding agents work, but never pointed one at your own code. It's one download from Ollama, a free tool that serves local models. The model is Qwen's coding model, built for agent work. The trick is M X F P eight, a quantization. Weights are stored as eight-bit numbers, each block with its own scaling factor. A little accuracy buys a file one laptop holds. A model this size sounds like it belongs in a datacenter. Instead Ollama hands you qwen three point eight like a game download. Which means the model is the easy part of tonight. The setup around it is the real story. A coding agent is a harness: the model reads your files, runs commands, edits code. So you need a server, an agent, and a sandbox. Oh-lah-mah is already serving the model. OpenCode is the agent, open source, living in your terminal. And S B X is Docker's sandbox. Installing is boring, which is the point. Brew gives you the sandbox and the agent. The oh-lah-mah app comes from their site. Then one pull command downloads the model, all thirty-two gigabytes of it. Here's where your memory goes. The walkthrough's MacBook holds forty-eight gigabytes of memory, and everything shares it. The model parks in thirty-two of them. Context is the model's working memory, growing with every file opened. Picture a food truck: it rents its spot, and every order sits on the counter. A full counter never hurt a truck; it locks this laptop up. So the walkthrough caps context at sixty-five thousand five hundred thirty-six tokens. Left alone, oh-lah-mah hands out more context than your memory can pay for. The cap is the difference between a slow agent and a locked laptop. Also set reasoning effort, the model's hidden-thinking dial, to low for agent turns. The sandbox is the safety piece. S B X runs OpenCode in an isolated micro V M: own filesystem, own network. A hallucinated command wrecks the sandbox. Your files stay untouched. Keep a few gigabytes of memory aside for it, then S B X run starts the agent. The honest catch: it's slower than a cloud frontier model. Community speed reports swing wildly by chip, so treat any number as folklore. Some developers say skip Ollama for llama dot cpp. Nobody has shipped the benchmark that settles it. So that's tonight: three installs and a small config. One laptop becomes the whole datacenter: model, agent, and sandbox, no A P I key required.",
+  "analogy": {
+    "vehicle": "A food truck with a fixed parking spot: the model is the truck, memory the spot, context the counter space",
+    "mapping": "the 32GB model rents its spot up front; every order (token of context) sits on the counter",
+    "limit": "a food truck does not get slower as the counter fills, but memory pressure does lock the machine, which is why the 64K cap exists"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "narration": "Thirty-two gigabytes of model, on your laptop. You've watched cloud coding agents work, but never pointed one at your own code.",
+      "on_screen_text": "32GB. The whole model.",
+      "visual_brief": "Frame 1: giant digits already on screen; at \"Thirty-two gigabytes\" (onset 0.4s) \"32GB\" scales up once; on \"on your laptop\" a thin laptop outline rises in place beneath it. One text block animating, two elements max.",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "narration": "It's one download from Ollama, a free tool that serves local models. The model is Qwen's coding model, built for agent work.",
+      "on_screen_text": "qwen3.8:27b-mxfp8 | one pull",
+      "visual_brief": "On 'one download' the model tag fades in at the top of the stack; on 'agent work' a small terminal glyph with a blinking cursor rises in place beneath it.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "narration": "The trick is M X F P eight, a quantization. Weights are stored as eight-bit numbers, each block with its own scaling factor. A little accuracy buys a file one laptop holds.",
+      "on_screen_text": "mxfp8 = 8-bit weights | block scaling factors",
+      "visual_brief": "On 'eight-bit numbers' a grid of weight cells scales in; on 'scaling factor' one cell cluster brightens (fade only); on 'one laptop holds' the grid shrinks into a laptop outline. Text blocks animate one at a time.",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "est_duration_s": 11
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "narration": "A model this size sounds like it belongs in a datacenter. Instead Ollama hands you qwen three point eight like a game download. Which means the model is the easy part of tonight. The setup around it is the real story.",
+      "on_screen_text": "datacenter hardware? | arrives like a game download",
+      "visual_brief": "On \"belongs in a datacenter\" a server-rack card fades into the left half; on \"game download\" a laptop card with a filling progress bar scales into the right half. Sequential entrances, never simultaneous.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 14
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "narration": "A coding agent is a harness: the model reads your files, runs commands, edits code. So you need a server, an agent, and a sandbox. Oh-lah-mah is already serving the model. OpenCode is the agent, open source, living in your terminal. And S B X is Docker's sandbox.",
+      "on_screen_text": "a harness: reads, runs, edits | Ollama serves the model | OpenCode = the agent | sbx = the sandbox",
+      "visual_brief": "On \"a server, an agent, and a sandbox\" three labeled boxes rise in place one at a time; on \"reads your files, runs commands, edits code\" thin arrows fade in between the OpenCode box and file and terminal glyphs. One label animates at a time.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 17
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "narration": "Installing is boring, which is the point. Brew gives you the sandbox and the agent. The oh-lah-mah app comes from their site. Then one pull command downloads the model, all thirty-two gigabytes of it.",
+      "on_screen_text": "brew install docker/tap/sbx | brew install anomalyco/tap/opencode | ollama pull qwen3.8:27b-mxfp8 | 32GB, one pull",
+      "visual_brief": "On \"the sandbox and the agent\" the two brew chips fade in along a horizontal line; on \"one pull command\" the pull chip fades in; on \"all thirty-two gigabytes of it\" a download bar scales full beneath the third chip. Chips appear one at a time.",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "est_duration_s": 12
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "narration": "Here's where your memory goes. The walkthrough's MacBook holds forty-eight gigabytes of memory, and everything shares it. The model parks in thirty-two of them. Context is the model's working memory, growing with every file opened.",
+      "on_screen_text": "48GB memory | model: 32GB | context grows",
+      "visual_brief": "On 'forty-eight gigabytes' a giant 48GB scales in center; on 'parks in thirty-two' a 32GB block settles beneath it; on 'growing with every file opened' a thin context strip extends beside the block.",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 12
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "narration": "Picture a food truck: it rents its spot, and every order sits on the counter. A full counter never hurt a truck; it locks this laptop up.",
+      "on_screen_text": "the food truck | full counter = locked laptop",
+      "visual_brief": "On 'food truck' a small truck glyph fades in beside the memory grid; on 'every order sits on the counter' counter tiles fill one row at a time; at 'locks this laptop up' the last tile pulses red once.",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "est_duration_s": 9
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "narration": "So the walkthrough caps context at sixty-five thousand five hundred thirty-six tokens. Left alone, oh-lah-mah hands out more context than your memory can pay for. The cap is the difference between a slow agent and a locked laptop. Also set reasoning effort, the model's hidden-thinking dial, to low for agent turns.",
+      "on_screen_text": "context: 65536 tokens | slow, not stuck | reasoning effort: low",
+      "visual_brief": "On \"caps context\" a config card fades in centered; on \"sixty-five thousand five hundred thirty-six tokens\" the line \"context: 65536\" scales up once; on \"reasoning effort\" a dial glyph fades in with its pointer resting at \"low\". One text block animating at a time.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 18
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "narration": "The sandbox is the safety piece. S B X runs OpenCode in an isolated micro V M: own filesystem, own network. A hallucinated command wrecks the sandbox. Your files stay untouched. Keep a few gigabytes of memory aside for it, then S B X run starts the agent.",
+      "on_screen_text": "sbx: own filesystem, own network | sandbox breaks, files don't | sbx run opencode --kit ./sbx-kit/",
+      "visual_brief": "On \"isolated micro V M\" a boundary box fades in around the agent glyph; on \"A hallucinated command\" a red command chip scales once and fades out inside the boundary; on \"S B X run starts the agent\" the launch command fades in below the box.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 17
+    },
+    {
+      "id": "s11",
+      "role": "explain",
+      "narration": "The honest catch: it's slower than a cloud frontier model. Community speed reports swing wildly by chip, so treat any number as folklore. Some developers say skip Ollama for llama dot cpp. Nobody has shipped the benchmark that settles it.",
+      "on_screen_text": "slower than cloud frontier | speed numbers: folklore | llama.cpp? unsettled",
+      "visual_brief": "On \"cloud frontier model\" a cloud card fades into the left half; on \"slower\" a laptop card with a low needle gauge scales into the right; on \"llama dot C P P\" a small card labeled \"llama.cpp\" fades in under the cloud card with an \"unsettled\" tag. Sequential entrances only.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 14
+    },
+    {
+      "id": "s12",
+      "role": "payoff_close",
+      "narration": "So that's tonight: three installs and a small config. One laptop becomes the whole datacenter: model, agent, and sandbox, no A P I key required.",
+      "on_screen_text": "1 laptop. The whole stack.",
+      "visual_brief": "On \"One laptop\" the giant \"1\" scales in center frame, same composition as frame 1; \"The whole stack.\" fades in beneath on \"the whole datacenter\"; after the last word the wordmark settles in with a quiet fade. Visual only, no extra narration.",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 9
+    }
+  ],
+  "notes_for_review": "Number-first: 32GB spoken in sentence one, on screen at frame 1. The food-truck analogy carries the memory beat and states its limit in-scene. Speed reports are folklore per Unverified, hedged in-scene. Reasoning-effort and llama.cpp beats are extra equip material beyond the three key numbers.",
+  "tags": [
+    "ollama coding agent",
+    "ollama",
+    "opencode",
+    "local coding agent",
+    "qwen 3.8",
+    "local llm",
+    "run llm locally",
+    "ai coding agent local",
+    "ollama qwen",
+    "local ai",
+    "llm locally",
+    "coding agent offline",
+    "ollama setup",
+    "qwen local model",
+    "no api key ai"
+  ]
+}

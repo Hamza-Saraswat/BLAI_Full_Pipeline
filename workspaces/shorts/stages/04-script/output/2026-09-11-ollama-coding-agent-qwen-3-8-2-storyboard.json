@@ -1,0 +1,172 @@
+{
+  "slug": "2026-09-11-ollama-coding-agent-qwen-3-8-2",
+  "topic": "Ollama coding agent: Qwen 3.8 27B mxfp8, OpenCode harness, sbx sandbox, context capped at 64K, on one laptop",
+  "title": "Three installs and your Mac runs a coding agent tonight",
+  "description": "working value, package stage overwrites",
+  "hashtags": [
+    "#ollama",
+    "#localai",
+    "#llm"
+  ],
+  "hook_text": "Three installs. Coding agent tonight.",
+  "hook_candidates": [
+    "Thirty-two gigabytes. That's the whole model, on your laptop.",
+    "You've tried local models. Tonight one writes your code.",
+    "You've got one laptop. It can be your coding agent.",
+    "Three installs and your Mac runs a coding agent tonight.",
+    "A coding agent with no cloud, no key, no subscription.",
+    "Sixty-four thousand tokens. That's the cap that saves your laptop.",
+    "Your laptop isn't too small. The context window was uncapped.",
+    "Qwen 3.8 runs your agent. Ollama serves it. sbx cages it.",
+    "No API key. Your forty-eight-gigabyte Mac is the datacenter.",
+    "One developer front-paged the whole setup. Here's the stack."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 128,
+  "narration_full": "Three installs and your Mac runs a coding agent tonight. A coding agent reads your files, runs commands and edits code. You've watched cloud agents, never your own project. Move one: install the three tools. Ollama, a free server that runs models behind one command. OpenCode, the open source agent that lives in your terminal. S B X, Docker's sandbox, a small virtual machine the agent is locked inside. This recipe comes from a walkthrough written on a MacBook Pro with forty-eight gigabytes of memory. That laptop is the whole datacenter. Move two: pull the model. One command pulls the twenty-seven-billion-parameter Qwen, a coding model built for agent work, thirty-two gigabytes on disk. The download takes a while. It only happens once. The model fits because of M X F P eight, a quantization storing each weight as an eight-bit number. Each small block of weights gets its own scaling factor. You lose a little accuracy. For coding help, you will not feel it. Memory has a second tenant: the context window, the model's working memory, measured in tokens, chunks of text. Every file the agent reads sits inside it, and it grows with every word. On a machine this size, Ollama's default context is generous. Unchecked, it eats the headroom and locks the laptop. Move three: cap the context, then cage the agent. In OpenCode's config, set the model to sixty-five thousand tokens of context. Also drop reasoning effort, the hidden thinking, to low. The cap is the difference between a slow agent and a locked laptop. Ollama's own docs back the number. Now the cage: one folder, an S B X kit pointing the agent at your local Ollama. Run it, and OpenCode works inside its own filesystem and network. A hallucinated command dies in the sandbox, not on your machine. The honest catch. It runs slower than a paid cloud model, and the community argues about Ollama itself. We have not timed this exact stack. The trade: no A P I key, and your code never leaves the laptop. Then it is running. OpenCode edits your project while the Qwen thinks on your own hardware, caged and capped. Three installs, and tonight your Mac is the agent's whole datacenter.",
+  "analogy": {},
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "narration": "Three installs and your Mac runs a coding agent tonight. A coding agent reads your files, runs commands and edits code. You've watched cloud agents, never your own project.",
+      "on_screen_text": "Three installs. Coding agent tonight.",
+      "visual_brief": "Frame 1: title 'Three installs. Coding agent tonight.' fully legible on a dark terminal; motion onset at 0.4s as the title's caret blinks and the first prompt line rises in place. At 'reads your files' three empty prompt lines rise in place behind it, one at a time. Last frame's wordmark matches this style.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "narration": "Move one: install the three tools. Ollama, a free server that runs models behind one command. OpenCode, the open source agent that lives in your terminal. S B X, Docker's sandbox, a small virtual machine the agent is locked inside.",
+      "on_screen_text": "sbx · OpenCode · Ollama",
+      "visual_brief": "Three cards in a left-to-right flow. At \"Ollama\" card one fades in with \"ollama.com\"; at \"OpenCode\" card two with \"brew install anomalyco/tap/opencode\"; at \"S B X\" card three with \"brew install docker/tap/sbx\". One card animates at a time.",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 14
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "narration": "This recipe comes from a walkthrough written on a MacBook Pro with forty-eight gigabytes of memory. That laptop is the whole datacenter.",
+      "on_screen_text": "48GB MacBook Pro",
+      "visual_brief": "Caption \"MacBook Pro\" fades in at \"MacBook Pro\"; the giant \"48GB\" scales up at \"forty-eight gigabytes of memory\".",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "narration": "Move two: pull the model. One command pulls the twenty-seven-billion-parameter Qwen, a coding model built for agent work, thirty-two gigabytes on disk. The download takes a while. It only happens once.",
+      "on_screen_text": "ollama pull qwen3.8:27b-mxfp8 | 32GB",
+      "visual_brief": "Terminal panel. The command fades in at \"pull the model\"; the \"32GB\" badge scales in at \"thirty-two gigabytes on disk\"; a progress bar creeps from \"The download takes a while\".",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 11
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "narration": "The model fits because of M X F P eight, a quantization storing each weight as an eight-bit number. Each small block of weights gets its own scaling factor. You lose a little accuracy. For coding help, you will not feel it.",
+      "on_screen_text": "mxfp8 = 8-bit weights",
+      "visual_brief": "Split view. Left: a row of long precise numbers, fades in early. Right: the same row as short 8-bit blocks, fading in at \"eight-bit number\". One small scale tag per block; a single tag pulses at \"scaling factor\".",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 14
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "narration": "Memory has a second tenant: the context window, the model's working memory, measured in tokens, chunks of text. Every file the agent reads sits inside it, and it grows with every word.",
+      "on_screen_text": "context: the model's working memory | grows with every file",
+      "visual_brief": "Horizontal memory bar on a chat timeline. The model block sits pre-filled at 'second tenant'. At 'grows with every word' a context segment extends with each chat tick toward a ceiling line marked memory.",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "est_duration_s": 11
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "narration": "On a machine this size, Ollama's default context is generous. Unchecked, it eats the headroom and locks the laptop.",
+      "on_screen_text": "default: generous | headroom: gone",
+      "visual_brief": "Continuation of the memory bar. At 'eats the headroom' the context segment fills the remaining bar; at 'locks the laptop' it touches the ceiling line and the line pulses red once.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "narration": "Move three: cap the context, then cage the agent. In OpenCode's config, set the model to sixty-five thousand tokens of context.",
+      "on_screen_text": "context: 65536",
+      "visual_brief": "A config file card centered. The line 'context: 65536' scales gently at 'sixty-five thousand tokens of context'. One text line animating at a time.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "narration": "Also drop reasoning effort, the hidden thinking, to low. The cap is the difference between a slow agent and a locked laptop. Ollama's own docs back the number.",
+      "on_screen_text": "effort: low | docs: at least 64000 tokens",
+      "visual_brief": "Split card. Left: a dial glyph with its pointer resting at 'low' fades in at 'the hidden thinking'. Right: at 'Ollama's own docs' a docs chip fades in reading 'at least 64000 tokens'.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "narration": "Now the cage: one folder, an S B X kit pointing the agent at your local Ollama. Run it, and OpenCode works inside its own filesystem and network. A hallucinated command dies in the sandbox, not on your machine.",
+      "on_screen_text": "sbx run opencode --kit ./sbx-kit/",
+      "visual_brief": "An agent box inside a walled sandbox, host machine outside. The launch command fades in at \"Run it\". At \"hallucinated command\" an arrow rises from the agent and stops at the wall on \"dies in the sandbox\".",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 13
+    },
+    {
+      "id": "s11",
+      "role": "explain",
+      "narration": "The honest catch. It runs slower than a paid cloud model, and the community argues about Ollama itself. We have not timed this exact stack. The trade: no A P I key, and your code never leaves the laptop.",
+      "on_screen_text": "Slower than cloud. No API key.",
+      "visual_brief": "Split view. Left: a cloud card with quick tick marks. Right: a laptop card with slower ticks. At \"no A P I key\" a small lock fades in over the laptop card.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 13
+    },
+    {
+      "id": "s12",
+      "role": "payoff_close",
+      "narration": "Then it is running. OpenCode edits your project while the Qwen thinks on your own hardware, caged and capped. Three installs, and tonight your Mac is the agent's whole datacenter.",
+      "on_screen_text": "Three installs. Coding agent tonight.",
+      "visual_brief": "Terminal shows diff lines fading in one by one at \"OpenCode edits your project\". On the payoff sentence the wordmark fades in centered, same style as frame 1, and the video ends.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 10
+    }
+  ],
+  "notes_for_review": "The hook sentence is the assigned Tonight hook; the hook scene's later sentences name the viewer situation per the brief. Move one/two/three labels are legal for how-to-three-moves (process the viewer performs, three ascending, each names an action). The 65536 cap is rounded to 'sixty-five thousand tokens' in speech; the exact 65536 sits on screen. Speed claims stay attributed ('we have not timed this exact stack') per Unverified.",
+  "tags": [
+    "ollama coding agent",
+    "ollama",
+    "opencode",
+    "local coding agent",
+    "qwen 3.8",
+    "local llm",
+    "run llm locally",
+    "ai coding agent local",
+    "ollama qwen",
+    "local ai",
+    "llm locally",
+    "coding agent offline",
+    "ollama setup",
+    "qwen local model",
+    "no api key ai"
+  ]
+}

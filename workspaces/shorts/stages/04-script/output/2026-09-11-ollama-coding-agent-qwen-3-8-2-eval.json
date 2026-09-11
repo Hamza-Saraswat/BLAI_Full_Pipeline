@@ -1,0 +1,583 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-11T12:56:38+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "community": 3,
+      "docs": 4,
+      "primary": 3
+    },
+    "pct_primary_docs": 0.7,
+    "key_numbers_total": 8,
+    "entities_total": 15,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "docker.com",
+      "huggingface.co",
+      "nvidia.com",
+      "ollama.com",
+      "opencode.ai",
+      "tensorsandtokens.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "model download size on Ollama (mxfp8 tag)",
+          "value": "32GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "thirty-two gigabytes",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "laptop used in the walkthrough",
+          "value": "Apple MacBook Pro m5 48GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "forty-eight gigabytes",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "context cap the walkthrough sets in OpenCode config",
+          "value": "65536",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "65536",
+          "scene_ids": [
+            "s08"
+          ]
+        },
+        {
+          "label": "memory the walkthrough budgets for the sandbox",
+          "value": "3GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "native context length of Qwen3.8-27B per the model card",
+          "value": "262,144 natively and extensible up to 1,000,000 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "agentic coding benchmark, Claude Code harness (Qwen model card)",
+          "value": "SWE-bench Pro 61.7",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama context default below 24 GiB VRAM",
+          "value": "4k context",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama minimum recommended context for agents and coding tools",
+          "value": "at least 64000 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 15,
+      "found_count": 6,
+      "score": 0.4,
+      "found": [
+        "Ollama",
+        "OpenCode",
+        "qwen3.8",
+        "mxfp8",
+        "Docker",
+        "Apple MacBook Pro"
+      ],
+      "missing": [
+        "SWE-bench Pro 61.7",
+        "Qwen3.8-27B",
+        "CLI",
+        "GiB",
+        "GiB VRAM",
+        "microVM",
+        "IDE",
+        "fsSL",
+        "E8M0"
+      ],
+      "top2": [
+        "Ollama",
+        "OpenCode"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "OpenCode",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "qwen3.8",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "mxfp8",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "SWE-bench Pro 61.7",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Docker",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "CLI",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB VRAM",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "microVM",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IDE",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "fsSL",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "E8M0",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apple MacBook Pro",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 36,
+      "hits": 1,
+      "density": 0.028,
+      "offenders": [
+        "Then it is running."
+      ]
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "Three installs. Coding agent tonight.",
+      "first_sentence": "Three installs and your Mac runs a coding agent tonight."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "how-to-three-moves",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 12,
+      "specific_count": 12,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 10,
+          "specific": true,
+          "hits": [
+            "glossary:coding agent"
+          ],
+          "narration": "Three installs and your Mac runs a coding agent tonight. A coding agent reads your files, runs commands and edits code. You've watched cloud agents, never your own project."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 14,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:OpenCode",
+            "entity:Docker"
+          ],
+          "narration": "Move one: install the three tools. Ollama, a free server that runs models behind one command. OpenCode, the open source agent that lives in your terminal. S B X, Docker's sandbox, a small virtual machine the agent is locked inside."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 8,
+          "specific": true,
+          "hits": [
+            "num:Apple MacBook Pro m5 48GB"
+          ],
+          "narration": "This recipe comes from a walkthrough written on a MacBook Pro with forty-eight gigabytes of memory. That laptop is the whole datacenter."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 11,
+          "specific": true,
+          "hits": [
+            "num:32GB",
+            "entity:Ollama",
+            "entity:qwen3.8",
+            "entity:mxfp8"
+          ],
+          "narration": "Move two: pull the model. One command pulls the twenty-seven-billion-parameter Qwen, a coding model built for agent work, thirty-two gigabytes on disk. The download takes a while. It only happens once."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 14,
+          "specific": true,
+          "hits": [
+            "entity:mxfp8"
+          ],
+          "narration": "The model fits because of M X F P eight, a quantization storing each weight as an eight-bit number. Each small block of weights gets its own scaling factor. You lose a little accuracy. For coding help, you will not feel it."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 11,
+          "specific": true,
+          "hits": [
+            "glossary:context window"
+          ],
+          "narration": "Memory has a second tenant: the context window, the model's working memory, measured in tokens, chunks of text. Every file the agent reads sits inside it, and it grows with every word."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "On a machine this size, Ollama's default context is generous. Unchecked, it eats the headroom and locks the laptop."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:65536",
+            "entity:OpenCode"
+          ],
+          "narration": "Move three: cap the context, then cage the agent. In OpenCode's config, set the model to sixty-five thousand tokens of context."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 10,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Also drop reasoning effort, the hidden thinking, to low. The cap is the difference between a slow agent and a locked laptop. Ollama's own docs back the number."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 13,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:OpenCode"
+          ],
+          "narration": "Now the cage: one folder, an S B X kit pointing the agent at your local Ollama. Run it, and OpenCode works inside its own filesystem and network. A hallucinated command dies in the sandbox, not on your machine."
+        },
+        {
+          "id": "s11",
+          "role": "explain",
+          "est_duration_s": 13,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "The honest catch. It runs slower than a paid cloud model, and the community argues about Ollama itself. We have not timed this exact stack. The trade: no A P I key, and your code never leaves the laptop."
+        },
+        {
+          "id": "s12",
+          "role": "payoff_close",
+          "est_duration_s": 10,
+          "specific": true,
+          "hits": [
+            "entity:OpenCode"
+          ],
+          "narration": "Then it is running. OpenCode edits your project while the Qwen thinks on your own hardware, caged and capped. Three installs, and tonight your Mac is the agent's whole datacenter."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.3,
+      "words": 379,
+      "sentences": 36,
+      "est_speech_s": 130.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three installs and your Mac runs a coding agent tonight. A coding agent reads your files, runs commands and edits code. You've watched cloud agents, never your own project. Move one: install the three tools. Ollama, a free server that runs models behind one command. OpenCode, the open source agent that lives in your terminal. S B X, Docker's sandbox, a small virtual machine the agent is locked inside. This recipe comes from a walkthrough written on a MacBook Pro with forty-eight gigabytes of memory. That laptop is the whole datacenter. Move two: pull the model. One command pulls the twenty-seven-billion-parameter Qwen, a coding model built for agent work, thirty-two gigabytes on disk. The download takes a while. It only happens once. The model fits because of M X F P eight, a quantization storing each weight as an eight-bit number. Each small block of weights gets its own scaling factor. You lose a little accuracy. For coding help, you will not feel it. Memory has a second tenant: the context window, the model's working memory, measured in tokens, chunks of text. Every file the agent reads sits inside it, and it grows with every word. On a machine this size, Ollama's default context is generous. Unchecked, it eats the headroom and locks the laptop. Move three: cap the context, then cage the agent. In OpenCode's config, set the model to sixty-five thousand tokens of context. Also drop reasoning effort, the hidden thinking, to low. The cap is the difference between a slow agent and a locked laptop. Ollama's own docs back the number. Now the cage: one folder, an S B X kit pointing the agent at your local Ollama. Run it, and OpenCode works inside its own filesystem and network. A hallucinated command dies in the sandbox, not on your machine. The honest catch. It runs slower than a paid cloud model, and the community argues about Ollama itself. We have not timed this exact stack. The trade: no A P I key, and your code never leaves the laptop. Then it is running. OpenCode edits your project while the Qwen thinks on your own hardware, caged and capped. Three installs, and tonight your Mac is the agent's whole datacenter.",
+    "on_screen": "Three installs. Coding agent tonight. | Three installs. Coding agent tonight. | sbx \u00b7 OpenCode \u00b7 Ollama | 48GB MacBook Pro | ollama pull qwen3.8:27b-mxfp8 | 32GB | mxfp8 = 8-bit weights | context: the model's working memory | grows with every file | default: generous | headroom: gone | context: 65536 | effort: low | docs: at least 64000 tokens | sbx run opencode --kit ./sbx-kit/ | Slower than cloud. No API key. | Three installs. Coding agent tonight."
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-storyboard.json",
+        "scenes": 12,
+        "fk_grade": 6.3,
+        "words": 379,
+        "est_speech_s": 130.7,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 55 chars \u2014 mobile truncates ~40",
+          "FK grade 6.3 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 10s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
+          "s02: 14s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s03: 8s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s04: 11s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s05: 14s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s06: 11s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
+          "s07: 7s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s08: 7s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
+          "s09: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s10: 13s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s11: 13s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s12: 10s scene with ~1 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.4,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Ollama",
+          "OpenCode"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": [],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 12,
+        "need": 10,
+        "total": 12
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.028,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
