@@ -2,19 +2,19 @@
 slug: 2026-09-11-ollama-coding-agent-qwen-3-8-2
 workspace: shorts
 title: "Ollama coding agent: Qwen 3.8 27B"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-11
-updated: "2026-09-11T12:59:04Z"
+updated: "2026-09-11T13:35:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-11T11:51:43Z 03-research ok: brief 10 claims / 8 key numbers / 9 sources, validator exit 0
 - 2026-09-11T12:57:25Z 04-script ok: 2 blind kimi-k3 writers (22.4k/26.4k completion tokens) + judge 12.8k; draft B scene_specificity fixed round 1; winner 12 scenes 128 s.
 - 2026-09-11T12:59:04Z 05-package ok: seo 100, check_outputs 0 failures, manifest written. Cloud half done; ready for build/build.py.
+- 2026-09-11T13:35:10Z build start on gn100-83c4
