@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-brief|brief]]
 - Script: [[stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-script|script]] · [[stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-drafts|drafts]]
 - Package: [[stages/05-package/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-package|package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-11T12:57:25Z 04-script ok: 2 blind kimi-k3 writers (22.4k/26.4k completion tokens) + judge 12.8k; draft B scene_specificity fixed round 1; winner 12 scenes 128 s.
 - 2026-09-11T12:59:04Z 05-package ok: seo 100, check_outputs 0 failures, manifest written. Cloud half done; ready for build/build.py.
 - 2026-09-11T13:35:10Z build start on gn100-83c4
+- 2026-09-11T13:40:28Z 06-voice ok 315s
