@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-11-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-11-ideas]]
 - Research: [[stages/03-research/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-brief|brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-script|script]] · [[stages/04-script/output/2026-09-11-ollama-coding-agent-qwen-3-8-2-drafts|drafts]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
