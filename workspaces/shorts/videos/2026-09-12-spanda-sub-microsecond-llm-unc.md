@@ -2,19 +2,19 @@
 slug: 2026-09-12-spanda-sub-microsecond-llm-unc
 workspace: shorts
 title: "LLM uncertainty: 652 ns, no GPU"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-12
-updated: "2026-09-12T12:20:35Z"
+updated: "2026-09-12T13:35:08Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - 05 package: title "LLM uncertainty: 652 ns, no GPU" (searchable, keyword first, 28 visible chars) chosen over two intriguing variants; seo-rubric 92/100; slot hint 18:00 CT (pick 2 holds 11:00); unreplicated-benchmark hedge carried into description.
 
 ## Build journal
-
+- 2026-09-12T13:35:08Z build start on gn100-83c4
