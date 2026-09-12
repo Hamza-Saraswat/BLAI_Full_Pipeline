@@ -2,14 +2,14 @@
 slug: 2026-09-11-ollama-coding-agent-qwen-3-8-2
 workspace: shorts
 title: "Ollama coding agent: Qwen 3.8 27B"
-status: building
+status: expired
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-11
-updated: "2026-09-11T13:35:10Z"
+updated: "2026-09-12T13:35:05Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-09-11T12:59:04Z 05-package ok: seo 100, check_outputs 0 failures, manifest written. Cloud half done; ready for build/build.py.
 - 2026-09-11T13:35:10Z build start on gn100-83c4
 - 2026-09-11T13:40:28Z 06-voice ok 315s
+- 2026-09-12T13:35:05Z 2026-09-12T13:35:05Z expired: not from today's picks (2026-09-12); the factory carries no backlog

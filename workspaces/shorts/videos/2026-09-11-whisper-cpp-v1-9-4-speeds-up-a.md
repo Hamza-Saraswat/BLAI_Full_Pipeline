@@ -2,14 +2,14 @@
 slug: 2026-09-11-whisper-cpp-v1-9-4-speeds-up-a
 workspace: shorts
 title: whisper.cpp v1.9.4 speeds up Apple Silicon transcription
-status: idea
+status: expired
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-11
-updated: "2026-09-11T11:10:14Z"
+updated: "2026-09-12T13:35:05Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format classic: one release, one consequence; higher-scoring opencode ollama (76.7) was folded into pick 1 to avoid splitting the same radar item.
 
 ## Build journal
-
+- 2026-09-12T13:35:05Z 2026-09-12T13:35:05Z expired: not from today's picks (2026-09-12); the factory carries no backlog
