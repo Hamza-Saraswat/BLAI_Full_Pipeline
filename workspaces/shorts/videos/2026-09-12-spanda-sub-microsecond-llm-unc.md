@@ -2,18 +2,19 @@
 slug: 2026-09-12-spanda-sub-microsecond-llm-unc
 workspace: shorts
 title: "LLM uncertainty: 652 ns, no GPU"
-status: building
+status: blocked
 pillar: explainer
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-12
-updated: "2026-09-12T13:35:08Z"
+updated: "2026-09-12T13:53:35Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
-blocked_reason: ""
+blocked_reason: "\"07-render: 07-render: assemble.py exited 1: anda-sub-microsecond-llm-unc/render/qa"
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-09-12-spanda-sub-microsecond-llm-unc/render/qa/safe-\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -39,3 +40,8 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-12T13:35:08Z build start on gn100-83c4
 - 2026-09-12T13:36:19Z 06-voice ok 68s
+- 2026-09-12T13:52:50Z 07-render fail 989s (07-render: assemble.py exited 1: anda-sub-microsecond-llm-unc/render/qa
+assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/loop)
+- 2026-09-12T13:53:35Z 07-render fail 44s (07-render: assemble.py exited 1: anda-sub-microsecond-llm-unc/render/qa
+assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/loop)
+- 2026-09-12T13:53:35Z blocked at 07-render
