@@ -1,0 +1,93 @@
+{
+  "slug": "2026-09-12-spanda-sub-microsecond-llm-unc",
+  "topic": "Spanda: sub-microsecond LLM uncertainty explained",
+  "title": "652 Nanoseconds to Catch Your Local Model Guessing",
+  "description": "Ask your local model the same question three times and compare the answers: agreement means trust, scatter means guessing. Spanda turns that comparison into a 652.1-nanosecond CPU computation, a gateway beside Ollama that stamps every reply. All benchmark numbers are the author's own and unreplicated.",
+  "hashtags": [
+    "#LocalLLM",
+    "#Ollama",
+    "#Spanda",
+    "#Rust",
+    "#AISafety"
+  ],
+  "hook_text": "Six hundred fifty-two nanoseconds. Spanda just ratted your local model out.",
+  "hook_candidates": [
+    "Six hundred fifty-two nanoseconds. Spanda just ratted your local model out.",
+    "Under a microsecond, your model confesses it's guessing.",
+    "A millionth of a second to catch a guessing model.",
+    "Your Ollama isn't lying. Its memory of facts is.",
+    "Ninety thousand times faster, and the GPU is optional.",
+    "Spanda: a Rust gateway that stamps every guess your model makes.",
+    "Zero GPU. One CPU core. Every reply stamped.",
+    "Your local model has a tell. It's free to check.",
+    "Semantic entropy caught hallucinations. It needed a second brain.",
+    "Three answers, one question: that's the whole lie detector."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 38,
+  "narration_full": "Six hundred fifty-two nanoseconds. Spanda just ratted your local model out. You run Ollama on your PC; every answer sounds equally sure. That calm hides epistemic uncertainty, the model's own lack of knowledge. Ask the same question three times, like three friends asked separately. Agreement means trust; scatter means guessing. Semantic entropy, the established detector, compares meanings with a second neural network. Its judge burns ninety-two thousand four hundred microseconds per query. Spanda, a small gateway, matches exact text, no GPU. It sits beside Ollama at two point nine eight megabytes, stamping every reply. One pip install tonight; the stamp stays on. The catch: your model still writes all three answers first. And a tuned giant repeats one wrong answer every time, Confident Mode Collapse. Agreement is evidence, not truth.",
+  "analogy": {
+    "vehicle": "asking three friends the same question separately",
+    "mapping": "the three sampled answers are three separate askings of one model; identical answers mean trust, scattered answers mean it was guessing, and the comparison itself is nearly free",
+    "limit": "the three friends share one brain, so a heavily tuned model can repeat the same wrong answer every time"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Six hundred fifty-two nanoseconds. Spanda just ratted your local model out.",
+      "on_screen_text": "652 ns\nno GPU",
+      "visual_brief": "Frame 1: '652 ns' fills the safe area with 'no GPU' beneath, fully legible. On the phrase 'ratted itself out', a small stamp scales onto a chat reply card in the lower-center safe zone. Motion onset at t=0.30s: the digits scale-settle into place (no edge travel).",
+      "est_duration_s": 3.4,
+      "render_notes": "Motion onset at 0.30s, scale entrance only; at most the stamp and one underline animate."
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You run Ollama on your PC; every answer sounds equally sure. That calm hides epistemic uncertainty, the model's own lack of knowledge. Ask the same question three times, like three friends asked separately. Agreement means trust; scatter means guessing.",
+      "on_screen_text": "3 asks\nagree = trust\nscatter = guess",
+      "visual_brief": "On 'Ask the same question three times', three reply cards rise in place side by side. On 'Agreement means trust' the three cards snap to identical text with a check; on 'scatter means guessing' the card texts diverge.",
+      "est_duration_s": 12.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Semantic entropy, the established detector, compares meanings with a second neural network. Its judge burns ninety-two thousand four hundred microseconds per query. Spanda, a small gateway, matches exact text, no GPU.",
+      "on_screen_text": "92,400 \u00b5s \u00b7 GPU judge\nexact match \u00b7 no GPU",
+      "visual_brief": "On 'a second neural network' a heavy judge icon fades in beside a long bar labeled '92,400 \u00b5s'. On 'matches exact text, no GPU' the bar collapses to a thin unlabeled sliver and a small CPU chip icon rises in place.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "It sits beside Ollama at two point nine eight megabytes, stamping every reply. One pip install tonight; the stamp stays on.",
+      "on_screen_text": "pip install spnda\n2.98 MB \u00b7 every reply stamped",
+      "visual_brief": "On 'sits beside Ollama' a small gateway box fades in between an app icon and the model. On 'stamping every reply' each passing reply card gets a header stamp. On 'pip install tonight' the command appears in a terminal card.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The catch: your model still writes all three answers first. And a tuned giant repeats one wrong answer every time, Confident Mode Collapse. Agreement is evidence, not truth.",
+      "on_screen_text": "same wrong answer \u00d73\nagreement = evidence, not truth",
+      "visual_brief": "On 'writes all three answers first' three generation cards replay in sequence. On 'one wrong answer every time' the three cards collapse into identical wrong cards. On the payoff line, 'agreement = evidence, not truth' scales in and settles; the last frame echoes frame 1 with a faint '652 ns' ghost.",
+      "est_duration_s": 8.8,
+      "render_notes": "Final 0.5s is a static wordmark settle; no text or motion follows the payoff line."
+    }
+  ],
+  "notes_for_review": "Every latency and memory figure here is the author's own unreplicated benchmark; the hook states 652.1 nanoseconds flatly, so consider an 'as published' caption if the channel wants the hedge on screen. Confirm 'a tuned giant' in s05 reads as the specific 120B Confident Mode Collapse case from the preprint, not as a claim about all large models. Check that the s05 apposition 'Confident Mode Collapse' lands as a name for the behavior just described."
+}
