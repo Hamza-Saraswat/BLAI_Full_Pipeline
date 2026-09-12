@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-09-12-spanda-sub-microsecond-llm-unc-brief]]
 - Script: [[stages/04-script/output/2026-09-12-spanda-sub-microsecond-llm-unc-script]]
 - Package: [[stages/05-package/output/2026-09-12-spanda-sub-microsecond-llm-unc-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-09-12-spanda-sub-microsecond-llm-unc-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -38,3 +38,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-09-12T13:35:08Z build start on gn100-83c4
+- 2026-09-12T13:36:19Z 06-voice ok 68s
