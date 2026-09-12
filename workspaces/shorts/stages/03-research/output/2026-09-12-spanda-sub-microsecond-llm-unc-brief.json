@@ -1,0 +1,224 @@
+{
+  "slug": "2026-09-12-spanda-sub-microsecond-llm-unc",
+  "topic": "Spanda: sub-microsecond LLM uncertainty explained",
+  "generated_at": "2026-09-12T11:45:00Z",
+  "depth": "standard",
+  "thesis": "A local model's guessing can be exposed by asking it the same question a few times and comparing answers, and Spanda turns that comparison into a 652.1-nanosecond CPU computation -- cheap enough to stamp every reply your machine generates.",
+  "explanation_path": "Start inside the viewer's existing experience: a local model answers in the same confident tone whether it knows the fact or is inventing it, and nothing on screen distinguishes the two. Give that invisible thing a name before any tool appears: epistemic uncertainty is the model's own not-knowing, the kind that more data would fix -- distinct from genuine randomness in the question itself. Make it physical next: ask the same question three times and look at the answers; when they scatter, the model was guessing. That observation is the whole trick, and it is the same intuition behind self-consistency decoding. Then bring in the establishment: Nature-published semantic entropy does this properly by clustering the sampled answers by meaning with a second neural network (a DeBERTa NLI judge), and that judge is why nobody runs it on every reply -- the README measures it at 92,400 microseconds (92.4 ms) of GPU work per query. Spanda's move is to cluster by exact text match instead of by meaning, which needs no second model at all: the scoring collapses to 652.1 nanoseconds on a CPU core, 2.98 MB of resident memory, and 0.076 ms of proxy overhead in front of Ollama. Explain what the speed buys: a check this cheap is always on, per reply, on hardware the viewer already owns. Close on the boundary as the honest catch, in two parts: the nanoseconds score the samples, they do not generate them (the model still runs K times); and at 120B scale the signal inverts (AUROC 0.091) because a heavily tuned model repeats one wrong answer unanimously -- agreement is evidence, not truth.",
+  "claims": [
+    {
+      "claim": "Spanda's Rust gateway scores epistemic uncertainty in 652.1 nanoseconds (0.65 microseconds) on a single CPU core, with no GPU required.",
+      "source_url": "https://github.com/Adarshent/Spnda",
+      "source_title": "GitHub - Adarshent/Spnda: Zero-cost epistemic uncertainty quantification & hallucination detection for LLMs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "Semantic entropy, the method Spanda replaces, was published at ICLR 2023 by Kuhn, Gal and Farquhar and measures uncertainty at the level of meaning, because different sentences can mean the same thing.",
+      "source_url": "https://arxiv.org/abs/2302.09664",
+      "source_title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "A Nature (2024) paper showed semantic entropy detects confabulations -- a subset of hallucinations that are arbitrary and incorrect generations -- without task-specific data.",
+      "source_url": "https://www.nature.com/articles/s41586-024-07421-0",
+      "source_title": "Detecting hallucinations in large language models using semantic entropy | Nature",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "The README benchmarks neural semantic entropy's DeBERTa-based clustering at 92,400 microseconds (92.4 ms) per query versus under 1 microsecond for its own kernel, and calls the gap 90,000x.",
+      "source_url": "https://github.com/Adarshent/Spnda",
+      "source_title": "GitHub - Adarshent/Spnda",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "Spanda clusters K sampled answers by exact match instead of using a neural judge; on GSM8K its AUROC rises with model size -- 0.577 at 1.5B, 0.706 at 7B, 0.889 at 27B -- and the README claims the same discriminative power as DeBERTa cross-encoders from 7B+ on structured reasoning.",
+      "source_url": "https://github.com/Adarshent/Spnda",
+      "source_title": "GitHub - Adarshent/Spnda",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "Epistemic uncertainty -- the quantity being scored -- is the model's own uncertainty, the kind that can be explained away given enough data (Kendall and Gal, NIPS 2017).",
+      "source_url": "https://arxiv.org/abs/1703.04977",
+      "source_title": "What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "At 120B frontier scale on TriviaQA the signal inverts to an AUROC of 0.091: the model hallucinates the exact same incorrect answer across all sampled paths, which the paper names Confident Mode Collapse.",
+      "source_url": "https://zenodo.org/records/22233648",
+      "source_title": "Spanda: Zero-Cost Lexical Entropy Matches Neural Semantic Uncertainty--Until Frontier Models Break It | Zenodo",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "Trusting agreement across sampled answers is the same intuition as self-consistency decoding, which improved GSM8K by +17.9% when it was published (Wang et al., ICLR 2023).",
+      "source_url": "https://arxiv.org/abs/2203.11171",
+      "source_title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "The Python SDK ships on PyPI as package spnda at version 0.3.0, described as sub-microsecond epistemic uncertainty quantification and a high-throughput LLM gateway, installable with pip install spnda.",
+      "source_url": "https://pypi.org/project/spnda/",
+      "source_title": "spnda 0.3.0 - PyPI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    },
+    {
+      "claim": "Spanda arrived on Hacker News this week: the Show HN post sat at 13 points with 2 comments about 13 hours after posting.",
+      "source_url": "https://news.ycombinator.com/item?id=49665875",
+      "source_title": "Show HN: Spanda -- Sub-microsecond LLM epistemic uncertainty in Rust | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-09-12"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Spanda Rust kernel latency",
+      "value": "652.1 nanoseconds (0.65 microseconds)",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Neural semantic entropy latency (DeBERTa judge)",
+      "value": "92,400 microseconds (92.4 ms)",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Claimed speedup over semantic entropy",
+      "value": "90,000x",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Kernel throughput, single core",
+      "value": "1,533,500 evals/sec",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Gateway idle memory (RSS)",
+      "value": "2.98 MB",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Proxy net latency overhead per request",
+      "value": "0.076 ms (76.3 microseconds)",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Spanda AUROC on GSM8K at 27B",
+      "value": "0.889",
+      "source_url": "https://github.com/Adarshent/Spnda"
+    },
+    {
+      "label": "Spanda AUROC on TriviaQA at 120B (inverted)",
+      "value": "0.091",
+      "source_url": "https://zenodo.org/records/22233648"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Ask three friends the same question separately",
+      "mapping": "The K sampled answers are three independent askings of the same model; identical answers mean trust it, scattered answers mean it was guessing, and the comparison itself is nearly free.",
+      "limit": "The three friends share one brain: a heavily tuned 120B model gives the same wrong answer every time (Confident Mode Collapse), so unanimity stops being evidence of truth."
+    },
+    {
+      "vehicle": "The spell-check underline",
+      "mapping": "The red squiggle flags a suspect word on every keystroke without slowing your typing; Spanda stamps every reply with an uncertainty flag for 0.076 ms of overhead.",
+      "limit": "A spellchecker compares your word against a fixed dictionary; here there is no dictionary, only the model compared against itself."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "A confident-sounding answer means the model knows.",
+      "reality": "Tone carries no signal; agreement across repeated samples is the measurable tell, and even that fails when a 120B model collapses onto one wrong answer (AUROC 0.091)."
+    },
+    {
+      "myth": "Detecting hallucinations needs a second neural network on a GPU.",
+      "reality": "Clustering sampled answers by exact match runs in 652.1 nanoseconds on CPU and the README claims neural-SE-level discrimination on structured reasoning from 7B+."
+    },
+    {
+      "myth": "Sub-microsecond means the whole check is free.",
+      "reality": "Only the scoring arithmetic is sub-microsecond; the pipeline still generates K sampled answers through the model first, so end-to-end cost is bounded by sampling."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "epistemic uncertainty",
+      "definition": "The model's own lack of knowledge, the kind that more or better data would fix."
+    },
+    {
+      "term": "aleatoric uncertainty",
+      "definition": "Randomness built into the question or data itself, which no amount of training removes."
+    },
+    {
+      "term": "confabulation",
+      "definition": "A made-up answer delivered as fact; the subset of hallucinations uncertainty scores can catch."
+    },
+    {
+      "term": "semantic entropy",
+      "definition": "The ICLR 2023 / Nature 2024 method that measures uncertainty over meanings by clustering sampled answers with a second neural network."
+    },
+    {
+      "term": "K sampled paths",
+      "definition": "Asking the same prompt K times (Spanda's wrapper defaults to K=3) and keeping each answer."
+    },
+    {
+      "term": "exact-match clustering",
+      "definition": "Grouping those sampled answers by identical text instead of by meaning; the move that removes the second neural network."
+    },
+    {
+      "term": "NLI judge (DeBERTa)",
+      "definition": "A second neural network that decides whether two sentences mean the same thing; DeBERTa-v3-base has 86M backbone parameters."
+    },
+    {
+      "term": "AUROC",
+      "definition": "A 0-to-1 score for how well a signal separates right answers from wrong ones; 0.5 is a coin flip, 1.0 is perfect, below 0.5 is worse than chance."
+    },
+    {
+      "term": "R_sc",
+      "definition": "Spanda's 0-to-1 risk score; near 0 means sampled answers agree, toward 1 means they diverge."
+    },
+    {
+      "term": "Rust",
+      "definition": "A compiled systems programming language; here, the engine that does the scoring on CPU."
+    },
+    {
+      "term": "gateway (proxy)",
+      "definition": "A small server that sits between your app and the model, stamping every reply as it passes through."
+    }
+  ],
+  "unverified": [
+    "Every latency, memory, throughput and AUROC number in this brief is the author's own benchmark; no third party has replicated any of them, and the Zenodo preprint shows 0 citations.",
+    "Per-token uncertainty scoring is not demonstrated in the repo; the documented modes score K sampled completions per query, so the video should say per reply, not per token.",
+    "Whether the claimed neural-SE parity holds for the quantized 7B-8B models viewers actually run at home; the README's own table shows neural SE ahead on TriviaQA at 7B (0.755 vs 0.698).",
+    "Any tokens-per-second, memory or load-time figure on our own hardware; a first-party measurement on the Spark is pending.",
+    "The name of the 120B frontier model tested is not given on the README's benchmark table, so 120B cannot be attached to a specific downloadable model.",
+    "Community traction is a snapshot: 13 points and 2 comments on a Show HN thread hours old, 17 stars on the repo."
+  ],
+  "suggested_outline": "Cold open inside the viewer's pain: your local model uses the same confident tone whether it knows or is inventing; this week a Show HN Rust tool scores the inventing in 652.1 nanoseconds on CPU, no second GPU model.\nMake epistemic uncertainty physical: ask the same question three times and compare; scatter means guessing; the Nature-2024 detector needs a DeBERTa judge at 92,400 microseconds (92.4 ms) per query, exact-match clustering does the comparable job in 652.1 nanoseconds where answers converge (AUROC 0.889 at 27B on GSM8K).\nWhat it buys locally tonight and where it breaks: a 2.98 MB gateway beside Ollama stamping every reply (X-Spanda-Rsc, 0.076 ms overhead); the honest catch -- only the scoring is sub-microsecond, sampling K=3 still costs full model runs, and at 120B unanimity inverts (AUROC 0.091), so agreement is evidence, not truth.",
+  "notes": "Tools: FIRECRAWL_API_KEY was set but the FireCrawl API returned HTTP 402 (insufficient credits) on scrape and search; per rules/firecrawl-usage.md the run fell back to plain fetch (agent web_extract) for all 11 pages and 1 web search, all successful. Number variance to keep honest: three kernel figures appear in first-party text -- 652.1 ns (system table), 760 ns (HN text post), 767.9 ns (README bench output); treat under 1 microsecond / 652.1 ns as published as the robust form. Conflict: the README's parity claim (At 7B+ parameters, Spanda achieves the exact same discriminative power) is about structured reasoning; its own Mistral-7B TriviaQA row has neural SE ahead 0.755 vs 0.698 -- the channel can defend matches on converging, structured answers, not on trivia recall. Naming quirk for the writer: repo Spnda, PyPI package spnda, Python import spanda. DeBERTa-v3-base is 86M backbone parameters (HF model card) -- a concrete second-brain size contrast against the 2.98 MB gateway. Ollama fetched for the local payoff (Nothing you run locally ever leaves your machine; Local models are always free) -- supports the viewer-situation framing, no claim needed. Repo shows 21 commits, latest dated Sep 11, 2026, 17 stars; Zenodo preprint v1 published September 1, 2026.",
+  "viewer_situation": "You've got Ollama (or another local model) on your gaming PC or Mac, and no way to tell which confident-sounding answers are made up.",
+  "has_process": true,
+  "process_steps": [
+    "Install the SDK with pip install spnda (Python 3.8+, zero third-party dependencies).",
+    "Wrap your existing OpenAI-compatible client with client = spanda.wrap(OpenAI(), k=3, threshold=0.35, block=False).",
+    "Ask your question through the wrapped client and read response.spanda.rsc: near 0 means the sampled answers agreed, toward 1 means the model is guessing.",
+    "Or run the Rust gateway beside your local server: spnda serve --upstream http://localhost:11434/v1 --port 8080 --block --k 3, then point your app at http://localhost:8080/v1.",
+    "Watch the X-Spanda-Rsc header on every reply (0.0000 = unanimous consensus)."
+  ],
+  "objection": "The 652.1 nanoseconds is only the scoring arithmetic -- you still generate K=3 sampled answers through the whole model first, and at 120B scale a heavily tuned model repeats the same wrong answer on every sample (AUROC 0.091), so cheap agreement is not truth."
+}

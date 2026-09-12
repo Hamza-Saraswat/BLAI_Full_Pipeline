@@ -2,14 +2,14 @@
 slug: 2026-09-12-spanda-sub-microsecond-llm-unc
 workspace: shorts
 title: "Spanda: sub-microsecond LLM uncertainty explained"
-status: idea
+status: researched
 pillar: explainer
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-12
-updated: "2026-09-12T11:07:05Z"
+updated: "2026-09-12T11:45:44Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-12-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-12-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-12-spanda-sub-microsecond-llm-unc-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03 research: angle confirmed unattended per ideas row; 11 sources plain-fetch (FireCrawl 402 no credits); validator exit 0.
 
 ## Build journal
 
