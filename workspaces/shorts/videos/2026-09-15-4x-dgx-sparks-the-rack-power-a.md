@@ -2,19 +2,19 @@
 slug: 2026-09-15-4x-dgx-sparks-the-rack-power-a
 workspace: shorts
 title: "DGX Spark cluster: the multi-node math"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-15
-updated: "2026-09-15T18:31:08Z"
+updated: "2026-09-15T18:35:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-15T17:52:48Z 03-research ok: 12 sources, validator exit 0, status researched
 - 2026-09-15T18:29:21Z 04-script ok: writerA kimi-k3 17.1k tok, writerB kimi-k3 18.9k tok (2 rounds), judge kimi-k3 5.3k tok; A (worked-example) beat B (myth-bust) 19-16, 1 graft; validator 0 blockers 0 advisories; eval gate1_ready true; variety check ok; normalizer 4 scenes changed
 - 2026-09-15T18:31:08Z 05-package ok: searchable title (38 chars, keyword at 0), seo 100/100, check_outputs 0 failures, status ready-to-build
+- 2026-09-15T18:35:46Z build start on gn100-83c4
