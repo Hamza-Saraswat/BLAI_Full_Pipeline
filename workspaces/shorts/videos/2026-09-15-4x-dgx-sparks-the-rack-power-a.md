@@ -2,14 +2,14 @@
 slug: 2026-09-15-4x-dgx-sparks-the-rack-power-a
 workspace: shorts
 title: "DGX Spark cluster: the multi-node math"
-status: review
+status: approved
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-15
-updated: "2026-09-15T19:06:12Z"
+updated: "2026-09-15T19:16:18Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-09-15T19:06:16Z 07-render ok 102.17s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 66
 - 2026-09-15T19:06:16Z 07-render ok 1685s
 - 2026-09-15T19:06:18Z build done, status review
+- 2026-09-15T19:16:18Z telegram approve (approved_at 2026-09-15T19:16:18Z)
