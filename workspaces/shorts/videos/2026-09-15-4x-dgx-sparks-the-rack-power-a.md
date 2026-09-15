@@ -2,22 +2,22 @@
 slug: 2026-09-15-4x-dgx-sparks-the-rack-power-a
 workspace: shorts
 title: "DGX Spark cluster: the multi-node math"
-status: approved
+status: scheduled
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-15
-updated: "2026-09-15T19:16:18Z"
-publish_slot: ""
+updated: "2026-09-15T19:17:50Z"
+publish_slot: "2026-09-15T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: c7842333-59bd-4fa1-9296-8451e2d872cd
 ---
 # 4x DGX Sparks: the rack, power and multi-node math
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-package]]
 - Voice: [[stages/06-voice/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-narration]] (normalized narration; voice render itself is stage 06 on the Spark)
 - Render: [[stages/07-render/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-publish]]
 
 ## Decisions
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-09-15T19:06:16Z 07-render ok 1685s
 - 2026-09-15T19:06:18Z build done, status review
 - 2026-09-15T19:16:18Z telegram approve (approved_at 2026-09-15T19:16:18Z)
+- 2026-09-15T19:17:51Z 08-publish ok 4s
