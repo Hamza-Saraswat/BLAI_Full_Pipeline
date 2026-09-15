@@ -2,14 +2,14 @@
 slug: 2026-09-12-local-llm-vs-claude-what-the-t
 workspace: shorts
 title: "Local LLM vs Claude: what the task has to be"
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,EQUIPS"
 created: 2026-09-12
-updated: "2026-09-12T11:07:05Z"
+updated: "2026-09-15T17:28:59Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-15T17:28:59Z 2026-09-15T17:28:59Z expired: not from today's picks (2026-09-15); the factory carries no backlog
