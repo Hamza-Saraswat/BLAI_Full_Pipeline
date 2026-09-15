@@ -2,21 +2,21 @@
 slug: 2026-09-15-4x-dgx-sparks-the-rack-power-a
 workspace: shorts
 title: "DGX Spark cluster: the multi-node math"
-status: scheduled
+status: published
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-15
-updated: "2026-09-15T19:17:50Z"
+updated: "2026-09-15T23:05:46Z"
 publish_slot: "2026-09-15T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=q4T-g-opwUg"
 blotato_post_id: c7842333-59bd-4fa1-9296-8451e2d872cd
 ---
 # 4x DGX Sparks: the rack, power and multi-node math
@@ -50,3 +50,4 @@ blotato_post_id: c7842333-59bd-4fa1-9296-8451e2d872cd
 - 2026-09-15T19:06:18Z build done, status review
 - 2026-09-15T19:16:18Z telegram approve (approved_at 2026-09-15T19:16:18Z)
 - 2026-09-15T19:17:51Z 08-publish ok 4s
+- 2026-09-15T23:05:46Z published https://www.youtube.com/watch?v=q4T-g-opwUg
