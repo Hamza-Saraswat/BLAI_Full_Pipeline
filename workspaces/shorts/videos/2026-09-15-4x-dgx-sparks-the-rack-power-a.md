@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-15T18:29:21Z 04-script ok: writerA kimi-k3 17.1k tok, writerB kimi-k3 18.9k tok (2 rounds), judge kimi-k3 5.3k tok; A (worked-example) beat B (myth-bust) 19-16, 1 graft; validator 0 blockers 0 advisories; eval gate1_ready true; variety check ok; normalizer 4 scenes changed
 - 2026-09-15T18:31:08Z 05-package ok: searchable title (38 chars, keyword at 0), seo 100/100, check_outputs 0 failures, status ready-to-build
 - 2026-09-15T18:35:46Z build start on gn100-83c4
+- 2026-09-15T18:38:08Z 06-voice ok 140s
