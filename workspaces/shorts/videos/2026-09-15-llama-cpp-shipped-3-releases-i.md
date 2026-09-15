@@ -33,5 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
-## Build journal
+- Picked (unattended 2026-09-15): rank 2 at opportunity 70.0; one news-react per day satisfied, band classic (one fact and one act: pin a tag).
+- Skipped rank 3 Qwen3-TTS (63.4): would be the second news-react of the day.
 
+## Build journal

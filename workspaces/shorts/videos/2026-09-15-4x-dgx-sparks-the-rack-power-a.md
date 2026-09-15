@@ -33,5 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
-## Build journal
+- Picked (unattended 2026-09-15): rank 1 at opportunity 100.0, deepest keyword in the pool (dgx spark, depth 224); explainer lane free of yesterday's picks.
+- Format smooth-explainer: the rack/power/payoff math needs a worked example carried the whole way.
 
+## Build journal
