@@ -2,14 +2,14 @@
 slug: 2026-09-15-4x-dgx-sparks-the-rack-power-a
 workspace: shorts
 title: "DGX Spark cluster: the multi-node math"
-status: building
+status: review
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-15
-updated: "2026-09-15T18:35:46Z"
+updated: "2026-09-15T19:06:12Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-script]]
 - Package: [[stages/05-package/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-package]]
 - Voice: [[stages/06-voice/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-narration]] (normalized narration; voice render itself is stage 06 on the Spark)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-15-4x-dgx-sparks-the-rack-power-a-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - 2026-09-15T18:31:08Z 05-package ok: searchable title (38 chars, keyword at 0), seo 100/100, check_outputs 0 failures, status ready-to-build
 - 2026-09-15T18:35:46Z build start on gn100-83c4
 - 2026-09-15T18:38:08Z 06-voice ok 140s
+- 2026-09-15T19:06:16Z 07-render ok 102.17s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 66
+- 2026-09-15T19:06:16Z 07-render ok 1685s
