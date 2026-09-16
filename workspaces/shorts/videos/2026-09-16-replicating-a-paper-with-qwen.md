@@ -2,14 +2,14 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T17:08:56Z"
+updated: "2026-09-16T17:14:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -53,3 +53,4 @@ blotato_post_id: ""
 - 2026-09-16T17:08:46Z 08-publish fail 0s (publish exited 1: [publish] not an ISO-8601 timestamp: 11:00 CT)
 - 2026-09-16T17:08:46Z blocked at 08-publish
 - 2026-09-16T17:08:56Z telegram retry
+- 2026-09-16T17:14:46Z build start on gn100-83c4
