@@ -2,14 +2,14 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: building
+status: review
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T12:59:32Z"
+updated: "2026-09-16T13:45:17Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-script|Script]] ([[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-storyboard|storyboard]], [[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-drafts|drafts]])
 - Package: [[stages/05-package/output/2026-09-16-replicating-a-paper-with-qwen-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-16-replicating-a-paper-with-qwen-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-16-replicating-a-paper-with-qwen-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -44,3 +44,6 @@ blotato_post_id: ""
 - 2026-09-16T12:57:38Z 05-package ok: searchable title picked (search surface, autocomplete 72), rubric 100, check_outputs 0 failures
 - 2026-09-16T12:59:32Z build start on gn100-83c4
 - 2026-09-16T13:04:31Z 06-voice ok 296s
+- 2026-09-16T13:36:45Z 07-render fail 1931s (07-render: scene s9 did not pass HyperFrames inspect after 5 rounds: t=2.76-10.39s (56 samples) text_occluded span.green inside #strike ">" — Text is hidden ben)
+- 2026-09-16T13:45:20Z 07-render ok 126.77s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 71
+- 2026-09-16T13:45:20Z 07-render ok 515s

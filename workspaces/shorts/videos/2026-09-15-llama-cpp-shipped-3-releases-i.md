@@ -2,14 +2,14 @@
 slug: 2026-09-15-llama-cpp-shipped-3-releases-i
 workspace: shorts
 title: "llama.cpp shipped 3 releases in 4 hours: pin your tags"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-15
-updated: "2026-09-15T17:36:18Z"
+updated: "2026-09-16T13:35:29Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,3 +37,4 @@ blotato_post_id: ""
 - Skipped rank 3 Qwen3-TTS (63.4): would be the second news-react of the day.
 
 ## Build journal
+- 2026-09-16T13:35:29Z 2026-09-16T13:35:29Z expired: not from today's picks (2026-09-16); the factory carries no backlog
