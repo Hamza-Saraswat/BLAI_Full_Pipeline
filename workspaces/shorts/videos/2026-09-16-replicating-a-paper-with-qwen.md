@@ -2,21 +2,21 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: scheduled
+status: published
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T17:26:50Z"
+updated: "2026-09-16T23:00:44Z"
 publish_slot: "2026-09-16T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=SCHdcJKUYQE"
 blotato_post_id: d6cb3bd9-c15d-4646-afea-bc5caa82a39a
 ---
 # Replicating a paper with Qwen-2.5 at home
@@ -64,3 +64,4 @@ blotato_post_id: d6cb3bd9-c15d-4646-afea-bc5caa82a39a
 - 2026-09-16T17:20:46Z blocked at 08-publish
 - 2026-09-16T17:23:06Z operator unblocked after the slot-hint fix (publish.py tolerant, hint blanked); the 2026-09-16T17:16:57Z approval stands, status approved
 - 2026-09-16T17:26:51Z 08-publish ok 4s
+- 2026-09-16T23:00:44Z published https://www.youtube.com/watch?v=SCHdcJKUYQE

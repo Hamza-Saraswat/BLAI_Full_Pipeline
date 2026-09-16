@@ -2,8 +2,9 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 title: "Qwen-2.5 replicates Jev's trick at home"
 published_slot: "2026-09-16T18:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=SCHdcJKUYQE"
 blotato_post_id: d6cb3bd9-c15d-4646-afea-bc5caa82a39a
+updated: "2026-09-16T23:00:44Z"
 ---
 # Qwen-2.5 replicates Jev's trick at home
 
