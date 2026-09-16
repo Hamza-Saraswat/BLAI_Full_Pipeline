@@ -1,6 +1,6 @@
 # Voice: 2026-09-16-replicating-a-paper-with-qwen
 
-Stage 06-voice on gn100-83c4 at 2026-09-16T13:04:31Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-16-replicating-a-paper-with-qwen/voice/` (binaries are never committed).
+Stage 06-voice on gn100-83c4 at 2026-09-16T17:15:05Z. Audio lives in `$BLAI_BUILD_DIR/2026-09-16-replicating-a-paper-with-qwen/voice/` (binaries are never committed).
 
 | Field | Value |
 |-------|-------|

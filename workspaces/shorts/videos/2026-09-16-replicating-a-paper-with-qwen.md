@@ -54,3 +54,4 @@ blotato_post_id: ""
 - 2026-09-16T17:08:46Z blocked at 08-publish
 - 2026-09-16T17:08:56Z telegram retry
 - 2026-09-16T17:14:46Z build start on gn100-83c4
+- 2026-09-16T17:15:05Z 06-voice ok 16s
