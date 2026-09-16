@@ -9,7 +9,7 @@ loop_ssim: 0.786075
 
 # Render: 2026-09-16-replicating-a-paper-with-qwen
 
-Scripted render (`scene_worker.py` per scene, `assemble.py`, `render_note.py`) at 2026-09-16T13:45:20Z.
+Scripted render (`scene_worker.py` per scene, `assemble.py`, `render_note.py`) at 2026-09-16T17:16:51Z.
 
 ## Gates
 - lint_video --final: pass (duration 126.77 s)
@@ -43,4 +43,4 @@ Scripted render (`scene_worker.py` per scene, `assemble.py`, `render_note.py`) a
 - scripted render: no checkpoint reached a human; every gate above is machine-decided
 
 ## Card
-- gate card sent: message_id 71
+- gate card sent: message_id 75
