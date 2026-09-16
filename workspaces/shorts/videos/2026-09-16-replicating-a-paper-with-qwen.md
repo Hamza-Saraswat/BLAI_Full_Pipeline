@@ -2,14 +2,14 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: review
+status: approved
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T17:16:47Z"
+updated: "2026-09-16T17:16:57Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -58,3 +58,4 @@ blotato_post_id: ""
 - 2026-09-16T17:16:51Z 07-render ok 126.77s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 75
 - 2026-09-16T17:16:51Z 07-render ok 103s
 - 2026-09-16T17:16:53Z build done, status review
+- 2026-09-16T17:16:57Z telegram approve (approved_at 2026-09-16T17:16:57Z)
