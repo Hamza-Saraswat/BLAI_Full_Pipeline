@@ -2,19 +2,19 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T12:57:38Z"
+updated: "2026-09-16T12:59:32Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,3 +42,4 @@ blotato_post_id: ""
 - 2026-09-16T11:59:57Z 03-research ok: 11 sources, 10 claims, validator exit 0
 - 2026-09-16T12:53:00Z 04-script ok: myth-bust won 24-12 over how-to-three-moves; validator 0/0, eval 9/9, variety ok
 - 2026-09-16T12:57:38Z 05-package ok: searchable title picked (search surface, autocomplete 72), rubric 100, check_outputs 0 failures
+- 2026-09-16T12:59:32Z build start on gn100-83c4
