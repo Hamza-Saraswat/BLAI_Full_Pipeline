@@ -2,18 +2,18 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: blocked
+status: approved
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T17:20:46Z"
+updated: "2026-09-16T17:23:06Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "08-publish: publish exited 1: [publish] not an ISO-8601 timestamp: 11:00 CT"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -62,3 +62,4 @@ blotato_post_id: ""
 - 2026-09-16T17:20:46Z 08-publish fail 0s (publish exited 1: [publish] not an ISO-8601 timestamp: 11:00 CT)
 - 2026-09-16T17:20:46Z 08-publish fail 0s (publish exited 1: [publish] not an ISO-8601 timestamp: 11:00 CT)
 - 2026-09-16T17:20:46Z blocked at 08-publish
+- 2026-09-16T17:23:06Z operator unblocked after the slot-hint fix (publish.py tolerant, hint blanked); the 2026-09-16T17:16:57Z approval stands, status approved

@@ -65,7 +65,7 @@ More local AI: https://youtube.com/@BuildLocalAI
   "made_for_kids": false,
   "contains_synthetic_media": false,
   "playlist_ids": [],
-  "publish_slot_hint": "11:00 CT",
+  "publish_slot_hint": "",
   "related_long_form_url": "",
   "original_insight": "This Short splits Jev's launch into two claims -- decoding speed, which stock Qwen-2.5 weights already deliver on a home Mac, and answer correctness, which no decoding trick fixes -- a boundary the vendor page leaves to the FAQ.",
   "seo_score": 100
