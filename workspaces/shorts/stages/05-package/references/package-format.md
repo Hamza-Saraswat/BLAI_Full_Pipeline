@@ -55,4 +55,4 @@ seo_score: 86
 ```
 ```
 
-The manifest is what `skills/blotato-publish/scripts/publish.py` reads; its schema is `shared/schemas/publish-manifest.schema.json`. The description string in the manifest is the source of truth; the "Description" section above is for reading in Obsidian and must match it.
+The manifest is what `skills/blotato-publish/scripts/publish.py` reads; its schema is `shared/schemas/publish-manifest.schema.json`. `publish_slot_hint` is either `""` or a full ISO-8601 timestamp with a UTC offset, for example `"2026-09-16T18:00:00-05:00"`; never prose such as `"11:00 CT"` (that broke the 2026-09-16 publish). Leave it empty unless the slot must differ from the 11:00/18:00 CT rotation; `publish.py` ignores any hint it cannot parse and picks the next free slot. The description string in the manifest is the source of truth; the "Description" section above is for reading in Obsidian and must match it.

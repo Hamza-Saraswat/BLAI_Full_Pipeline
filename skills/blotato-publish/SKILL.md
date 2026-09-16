@@ -26,7 +26,7 @@ Not for: uploading drafts for review (the gate card links the R2 preview directl
 
 1. `scripts/publish.py --package FILE-package.md --video final.mp4 [--slot auto|ISO] [--privacy ...]` parses the manifest and validates it (schema checks, title <= 100 chars, <= 3 hashtags, description <= 5,000 bytes after hashtags); any error exits 1 before an upload.
 2. The video goes to R2 with `scripts/r2.py` under `previews/<slug>/`; the public URL becomes `mediaUrls[0]`.
-3. The slot is `--slot ISO`, else a still-future `publish_slot_hint`, else `scripts/slots.py` (11:00/18:00 CT, 30 minutes minimum lead, slots already in hub notes skipped).
+3. The slot is `--slot ISO`, else a still-future ISO-8601 `publish_slot_hint` (an unparsable hint such as `11:00 CT` is logged and ignored, never fatal), else `scripts/slots.py` (11:00/18:00 CT, 30 minutes minimum lead, slots already in hub notes skipped). `tests/test_pick_slot.py` covers the three cases.
 4. The body is built exactly as `rules/manifest-mapping.md` describes and sent to `POST https://backend.blotato.com/v2/posts` with the `blotato-api-key` header; 429 and 5xx retry with exponential backoff (5 attempts).
 5. stdout gets `{post_submission_id, scheduled_time, media_url, thumbnail_url}`; `--dry-run` prints the same plus the exact `body` without touching the network.
 6. `publish.py --status ID` prints `{post_submission_id, status, youtube_url, error, raw}`; `publish.py --accounts` prints `[{id, platform, name}]`.

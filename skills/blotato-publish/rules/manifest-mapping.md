@@ -20,7 +20,7 @@
 | `made_for_kids` (always false) | `post.target.isMadeForKids: false` | `status.selfDeclaredMadeForKids` |
 | `contains_synthetic_media` | `post.target.containsSyntheticMedia` | `status.containsSyntheticMedia` |
 | `playlist_ids` | `post.target.playlistIds` | `playlistItems.insert` per id |
-| `publish_slot_hint` | `scheduledTime` when it is still more than 30 minutes away; otherwise the next free slot | `status.publishAt` with `privacyStatus: private` |
+| `publish_slot_hint` | `scheduledTime` when it is an ISO-8601 timestamp still more than 30 minutes away; otherwise (past, empty or unparsable, logged) the next free slot | `status.publishAt` with `privacyStatus: private` |
 | `original_insight`, `seo_score`, `reviewer_notes` | not sent; they are the compliance record in the package note | not sent |
 
 ## Fixed values

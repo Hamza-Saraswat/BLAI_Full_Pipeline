@@ -286,10 +286,17 @@ def pick_slot(args, manifest: dict, now: dt.datetime) -> str:
         return slots.parse_iso(args.slot).isoformat()
     hint = manifest.get("publish_slot_hint")
     if hint:
-        t = slots.parse_iso(hint)
-        if t > now + dt.timedelta(minutes=slots.DEFAULT_LEAD_MIN):
+        # A hint is advisory: an unreadable one (the package agent wrote "11:00 CT" on 2026-09-16)
+        # must never abort the publish. Log it and fall through to the next free slot.
+        try:
+            t = slots.parse_iso(hint)
+        except SystemExit:
+            log("publish_slot_hint %r is not an ISO-8601 timestamp; picking the next free slot" % hint)
+            t = None
+        if t is not None and t > now + dt.timedelta(minutes=slots.DEFAULT_LEAD_MIN):
             return t.isoformat()
-        log("publish_slot_hint %s is in the past; picking the next free slot" % hint)
+        if t is not None:
+            log("publish_slot_hint %s is in the past; picking the next free slot" % hint)
     fmt = manifest.get("format", "short")
     return slots.next_slot(fmt, now, taken=taken_slots(manifest.get("slug", ""))).isoformat()
 
