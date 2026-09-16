@@ -2,22 +2,22 @@
 slug: 2026-09-16-replicating-a-paper-with-qwen
 workspace: shorts
 title: "Qwen-2.5 replicates Jev's trick at home"
-status: approved
+status: scheduled
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-16
-updated: "2026-09-16T17:23:06Z"
-publish_slot: ""
+updated: "2026-09-16T17:26:50Z"
+publish_slot: "2026-09-16T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: d6cb3bd9-c15d-4646-afea-bc5caa82a39a
 ---
 # Replicating a paper with Qwen-2.5 at home
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-16-replicating-a-paper-with-qwen-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-16-replicating-a-paper-with-qwen-voice]]
 - Render: [[stages/07-render/output/2026-09-16-replicating-a-paper-with-qwen-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-16-replicating-a-paper-with-qwen-publish]]
 
 ## Decisions
 
@@ -63,3 +63,4 @@ blotato_post_id: ""
 - 2026-09-16T17:20:46Z 08-publish fail 0s (publish exited 1: [publish] not an ISO-8601 timestamp: 11:00 CT)
 - 2026-09-16T17:20:46Z blocked at 08-publish
 - 2026-09-16T17:23:06Z operator unblocked after the slot-hint fix (publish.py tolerant, hint blanked); the 2026-09-16T17:16:57Z approval stands, status approved
+- 2026-09-16T17:26:51Z 08-publish ok 4s
