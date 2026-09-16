@@ -1,0 +1,249 @@
+{
+  "slug": "2026-09-16-replicating-a-paper-with-qwen",
+  "topic": "Replicating a paper with Qwen-2.5 at home",
+  "generated_at": "2026-09-16T11:45:50Z",
+  "depth": "standard",
+  "thesis": "The trick behind the new Jev decision model is not exotic weights: a stock Qwen-2.5-1.5B on a MacBook reproduces the 312-passes-to-1 speedup in an afternoon, because the win comes from how you decode, not what you trained.",
+  "explanation_path": "Start from the moment a program needs a decision rather than a paragraph, because that reframing is what makes the whole trick sensible. Establish that a normal model answers a JSON schema by writing it out token by token, one forward pass per token, so a 28-field form costs hundreds of passes before the content is even correct. Introduce the published result being copied: Jev, a model that refuses to write and instead returns a probability for every allowed answer in a single parallel shot. Then reveal the replication's insight, which the author states plainly: the ability already sits inside any stock model. Read the document once into the KV cache, mask the vocabulary down to each field's legal choices, and read off probabilities for all fields at once; the JSON is assembled by code, never written by the model. Land the numbers on hardware the viewer owns or can afford, then close on the boundary: guaranteed shape is not guaranteed truth, and the jobs that belong on this path (routing, triage, guardrail checks) are the ones where a wrong-but-valid answer is cheap to catch.",
+  "claims": [
+    {
+      "claim": "TypeSafe AI released Jev on 2026-09-15 as the first System One Model: it gives up text generation and returns type-safe structured values with calibrated probabilities, priced at $0.042 / MTok for input tokens with output tokens free.",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "TypeSafe publishes Jev's end-to-end response time as 70ms-500ms, which it says can range from 40x-200x faster than frontier LLMs for System One shaped queries.",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "An independent hands-on test by Every's head of evals had Jev read 37 documents and answer 21 questions on each, returning 777 judgments in less than 0.7 seconds for an estimated quarter of a cent.",
+      "source_url": "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds",
+      "source_title": "Mini-Vibe Check: TypeSafe's Jev Judged Everything I've Written in 0.7 Seconds",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "The replication is published on Hugging Face as harshatheg/Qwen-2.5-1B-RLCD under Apache 2.0, and its engine is configured for a stock checkpoint: mlx-community/Qwen2.5-1.5B-Instruct-4bit run through MLX.",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "source_title": "harshatheg/Qwen-2.5-1B-RLCD model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "The base model is a 1.54B-parameter instruction-tuned LLM with a 32,768-token context, squarely laptop-class.",
+      "source_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+      "source_title": "Qwen/Qwen2.5-1.5B-Instruct model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "On an Apple Silicon M4 Max the replication delivers 5.6x to 7.0x latency reductions versus standard autoregressive decoding, with 100% schema validity and calibrated field-level confidence scores.",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "source_title": "harshatheg/Qwen-2.5-1B-RLCD model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "On the 28-field Enterprise Support Triage preset, latency falls from 1,900 ms (130 tok/s autoregressive) to 270 ms, and the card's benchmark output shows sequential forward passes dropping from 312 to 1.",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "source_title": "harshatheg/Qwen-2.5-1B-RLCD model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "The mechanism is pure decoding: the context is prefilled once into an MLX KV cache, that cache is broadcast across all schema fields, each field evaluates only its candidate token IDs with the rest of the vocabulary masked, and the output JSON is assembled programmatically instead of generated.",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "source_title": "harshatheg/Qwen-2.5-1B-RLCD model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "Each schema field is a boolean or an enum supporting up to 255 choices, so one field can pick among 255 tariff codes in a single pass.",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "source_title": "harshatheg/Qwen-2.5-1B-RLCD model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    },
+    {
+      "claim": "TypeSafe itself discloses that its workflow evals use the average of GPT-6 Astra and Fable 5.1 as reference answers, and that its headline 193.6x faster and 444.6x cheaper claims are expected to be on the higher end of real world gains.",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-16"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Latency reduction vs autoregressive on Apple Silicon M4 Max",
+      "value": "5.6x to 7.0x",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Enterprise Support Triage (28 fields), autoregressive baseline",
+      "value": "1,900 ms (130 tok/s)",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Enterprise Support Triage (28 fields), parallel constrained",
+      "value": "270 ms",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Sequential forward passes on the 28-field preset, autoregressive vs parallel",
+      "value": "312 vs 1",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Schema validity of parallel constrained output",
+      "value": "100% guaranteed",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Choices supported per enum field",
+      "value": "up to 255 choices",
+      "source_url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD"
+    },
+    {
+      "label": "Jev input token price, output tokens free (vendor pricing)",
+      "value": "$0.042 / MTok ($42 per billion tokens)",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+      "label": "Jev end-to-end response time (vendor-published)",
+      "value": "70ms-500ms",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Numbered menu at a counter",
+      "mapping": "Autoregressive generation is spelling your order out letter by letter; parallel constrained decoding is the cashier holding up a menu you wrote and you pointing once, with a confidence attached to every item at the same instant.",
+      "limit": "Menu items are independent but JSON fields can depend on each other (a reason field that must match the decision above it), and a thread commenter flagged exactly that dependent-field case as where independent sampling may not hold."
+    },
+    {
+      "vehicle": "Scantron answer sheet",
+      "mapping": "Writing an essay versus bubbling one option per question; the engine reads the whole exam once and bubbles every answer in the same instant, so a stray mark outside the bubbles is impossible.",
+      "limit": "A scantron picks exactly one bubble with no graded doubt, while the engine returns a full probability distribution over every option."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Jev's speed comes from exotic new weights a home machine could never serve.",
+      "reality": "The open replication hits 5.6x to 7.0x on a MacBook using the stock mlx-community/Qwen2.5-1.5B-Instruct-4bit checkpoint, no training at all (claims 4 and 6)."
+    },
+    {
+      "myth": "Structured output means prompting a model to please answer in JSON.",
+      "reality": "The speedup exists because the model never writes the JSON; one prefill, per-field logit slicing with the vocabulary masked, and code assembles the output, which is why validity is 100% by construction (claim 8)."
+    },
+    {
+      "myth": "100% schema validity means the answers are right.",
+      "reality": "Validity is guaranteed because the JSON is assembled, not generated, but correctness is untouched: a 1.5B base model can flip a boolean between runs, and even TypeSafe's own eval grades against other models' answers rather than ground truth (claims 8 and 10)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Qwen-2.5",
+      "definition": "A family of open-weight models from Alibaba's Qwen team, downloadable from Hugging Face in sizes from 0.5B to 72B parameters."
+    },
+    {
+      "term": "open weights",
+      "definition": "The downloadable numbers that make up a trained model, so you can run it on your own machine instead of renting it through an API."
+    },
+    {
+      "term": "parameters (1.5B)",
+      "definition": "The learned numbers inside a model; 1.5B means about 1.5 billion of them."
+    },
+    {
+      "term": "Jev",
+      "definition": "TypeSafe's first commercial System One model, which returns typed decisions and probabilities instead of writing text (named after economist William Stanley Jevons)."
+    },
+    {
+      "term": "System One model",
+      "definition": "TypeSafe's name for models built for fast, structured judgments that software calls directly, rather than chat replies."
+    },
+    {
+      "term": "structured output",
+      "definition": "An answer that arrives in a fixed shape, like JSON fields, instead of a paragraph."
+    },
+    {
+      "term": "autoregressive decoding",
+      "definition": "How normal LLMs write: one token at a time, each depending on the last."
+    },
+    {
+      "term": "parallel constrained decoding",
+      "definition": "The replication's trick: read the document once, then score every field's allowed choices at the same time instead of writing them out."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The model's memory of what it just read, kept so it does not have to re-read the document for every field."
+    },
+    {
+      "term": "logit",
+      "definition": "The raw score a model assigns to each possible next token before those scores become probabilities."
+    },
+    {
+      "term": "forward pass",
+      "definition": "One trip of the input through the model's layers that produces the scores."
+    },
+    {
+      "term": "token",
+      "definition": "A chunk of text, roughly a word or a piece of one, that models read and write in."
+    },
+    {
+      "term": "tokens per second (tok/s)",
+      "definition": "How fast a model generates text; the measure of normal decoding speed."
+    },
+    {
+      "term": "quantization (4-bit)",
+      "definition": "Storing each model weight in 4 bits instead of 16 so the model fits in roughly a quarter of the memory."
+    },
+    {
+      "term": "MLX",
+      "definition": "Apple's machine-learning framework for running models efficiently on Apple Silicon (M-series chips)."
+    },
+    {
+      "term": "schema",
+      "definition": "The written contract of fields and allowed answers you define before asking the model anything."
+    },
+    {
+      "term": "calibrated probability",
+      "definition": "A probability that matches reality, meaning when the model says 90% it is right about 90% of the time."
+    }
+  ],
+  "unverified": [
+    "The author's building in stealth for 2 hours effort claim and the tweet's 5x faster headline are self-reported with no published method.",
+    "The author replied order of mag better than this on GPUs when asked about GPUs, but published no GPU numbers.",
+    "No live GitHub repository was found this session; the model card's clone URL reads github.com/your-org/parallel-constrained-decoding, which is a placeholder.",
+    "Real throughput on our own hardware (DGX Spark, Macs) is unmeasured; every latency number in the brief is the author's M4 Max run.",
+    "Whether Jev's calibration holds in production is untested; the one independent hands-on (Every) was a self-described vibe check, not a calibration audit."
+  ],
+  "suggested_outline": "Open on the arrest: a 28-field support ticket that takes a normal model 1,900 ms of token-by-token typing comes back in 270 ms on a MacBook, because the replicated trick makes 1 forward pass instead of 312.\nExplain the mechanism with the menu: stop asking the model to write JSON, read the document once into the KV cache, and score every field's legal choices in parallel, which is why the output is always valid and always carries a probability.\nEquip for tonight: pull the stock Qwen-2.5-1.5B-Instruct-4bit checkpoint in MLX, define fields as booleans or enums up to 255 choices, run the benchmark, and route low-confidence fields to a human or a bigger model -- then the honest catch that a valid answer is not a correct one.",
+  "notes": "The replicated artifact is a product launch with published evals, not a peer-reviewed paper; the script should say replicating the launch result, not replicating a paper. Conflict, speedup: the announcement tweet says 5x, the model card table says 5.6x to 7.0x, and the same card's CLI sample prints 7.1x for the same 28-field preset; trust the card's benchmark table, as all three are the author's own numbers and the table is the labeled benchmark. The radar lead (hn-4dfe90f8a8) resolves to the nitter mirror of the author's announcement tweet, which links the Hugging Face model card; the card is the primary source used throughout. Jev's own documented cardinality ceiling is also 255 options (TypeSafe blog FAQ), matching the replication's per-enum limit. The HF Space linked from the model card was paused at access; only the model card's numbers were used. The Qwen blog confirms the series context: sizes 0.5B through 72B, Apache 2.0 for all except the 3B and 72B variants, pretrained on up to 18 trillion tokens. A thread commenter (community tier) asked whether independent per-key sampling holds when one JSON field only makes sense given another; the author answered that large enough models probably handle it; treat dependent fields as an open limit, which the scantron and menu analogies both flag. The Kingy review (community tier, no live API access) independently reached the same accuracy caveat this brief grounds in TypeSafe's own blog; it is listed for the reviewer, not cited for numbers.",
+  "viewer_situation": "You already run a small open model like Qwen-2.5 in Ollama or LM Studio for chat on your own machine, and you have watched it type out JSON one word at a time when an app just needed a yes/no and a category.",
+  "has_process": true,
+  "process_steps": [
+    "Install the prerequisites on an Apple Silicon Mac: macOS 14.0 or later and Python 3.10+.",
+    "Clone the parallel-constrained-decoding repository and install its requirements.txt into a fresh virtual environment.",
+    "Load the stock mlx-community/Qwen2.5-1.5B-Instruct-4bit checkpoint through MLX.",
+    "Define your decision schema: each field a boolean or an enum of up to 255 choices, with a plain-English description.",
+    "Call run_parallel_generation on your context document and read the parsed JSON with a probability for every field.",
+    "Run python3 -m core.benchmark to reproduce the autoregressive-versus-parallel comparison on your own machine.",
+    "Set a confidence threshold in your code and route any field below it to a human or a larger model."
+  ],
+  "objection": "A 1.5B model picking from a menu you wrote is not frontier intelligence, it is a classifier with extra steps, and even TypeSafe's own eval grades against other models' answers instead of ground truth."
+}
