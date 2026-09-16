@@ -1,0 +1,540 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-16T12:52:38+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-16-replicating-a-paper-with-qwen-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 12,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "every.to",
+      "huggingface.co",
+      "typesafe.ai"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "Latency reduction vs autoregressive on Apple Silicon M4 Max",
+          "value": "5.6x to 7.0x",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Enterprise Support Triage (28 fields), autoregressive baseline",
+          "value": "1,900 ms (130 tok/s)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Enterprise Support Triage (28 fields), parallel constrained",
+          "value": "270 ms",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "270 ms",
+          "scene_ids": [
+            "s8"
+          ]
+        },
+        {
+          "label": "Sequential forward passes on the 28-field preset, autoregressive vs parallel",
+          "value": "312 vs 1",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "312",
+          "scene_ids": [
+            "s1",
+            "s7",
+            "s8"
+          ]
+        },
+        {
+          "label": "Schema validity of parallel constrained output",
+          "value": "100% guaranteed",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Choices supported per enum field",
+          "value": "up to 255 choices",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Jev input token price, output tokens free (vendor pricing)",
+          "value": "$0.042 / MTok ($42 per billion tokens)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Jev end-to-end response time (vendor-published)",
+          "value": "70ms-500ms",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventy milliseconds",
+          "scene_ids": [
+            "s8"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 12,
+      "found_count": 7,
+      "score": 0.583,
+      "found": [
+        "Jev",
+        "TypeSafe",
+        "LLMs for System One",
+        "Hugging Face",
+        "Apple Silicon M4 Max",
+        "Apache",
+        "MacBook"
+      ],
+      "missing": [
+        "TypeSafe AI",
+        "Support Triage",
+        "GPT-6 Astra and Fable 5.1",
+        "Fable",
+        "passes-to-1"
+      ],
+      "top2": [
+        "Jev",
+        "TypeSafe"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Jev",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "TypeSafe",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "TypeSafe AI",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LLMs for System One",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Apple Silicon M4 Max",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Support Triage",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT-6 Astra and Fable 5.1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Fable",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MacBook",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "passes-to-1",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 38,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Jev"
+      ],
+      "hook_text": "Not the weights. The decoding.",
+      "first_sentence": "Jev's speed isn't in the weights."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 11,
+      "specific_count": 9,
+      "ratio": 0.818,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:312 vs 1",
+            "entity:Jev"
+          ],
+          "narration": "Jev's speed isn't in the weights. Your Qwen already has it. Three hundred twelve forward passes become one."
+        },
+        {
+          "id": "s2",
+          "role": "foreshadow",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "glossary:Qwen-2.5"
+          ],
+          "narration": "You run a small open model like Qwen two point five in Ollama or LM Studio. You've watched it type JSON one word at a time. The myth says that speed lives in exotic weights no home machine could serve."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "entity:Jev",
+            "entity:TypeSafe"
+          ],
+          "narration": "Yesterday TypeSafe released Jev, the first System One Model. It gives up writing text and returns structured values with calibrated probabilities, honest scores of how sure it is."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 14.8,
+          "specific": true,
+          "hits": [
+            "entity:Hugging Face",
+            "entity:Apache",
+            "entity:MacBook"
+          ],
+          "narration": "Yet an open replication on Hugging Face hits those numbers. It's free under the Apache license, and it runs the stock Qwen checkpoint you can already download. No new training. One MacBook. The win is in how you decode, not what you train."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 12.1,
+          "specific": true,
+          "hits": [
+            "glossary:schema"
+          ],
+          "narration": "You write a schema beforehand: the list of fields and their allowed answers. The test form has twenty-eight fields. Each is a boolean, a yes or no, or an enum, a fixed menu of choices."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "glossary:token"
+          ],
+          "narration": "The old way writes an essay, one token, a chunk of a word, at a time. The new way is a scantron sheet. Every bubble at the same instant. The limit: a scantron chooses with no doubt, the engine returns a probability for every option."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "num:312 vs 1"
+          ],
+          "narration": "It's called parallel constrained decoding, every field answered in one pass. The prompt is prefilled once into a KV cache, the model's short-term memory, and shared across all fields. Each field scores only its own candidate tokens. The rest of the vocabulary is masked off."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "num:270 ms",
+            "num:312 vs 1",
+            "num:70ms-500ms",
+            "entity:MacBook"
+          ],
+          "narration": "On the replication author's M four Max MacBook, this form took nineteen hundred milliseconds the old way. The new decoding took two hundred seventy milliseconds. Sequential forward passes, full trips through the model, fell from three hundred twelve to one."
+        },
+        {
+          "id": "s9",
+          "role": "explain",
+          "est_duration_s": 11.7,
+          "specific": true,
+          "hits": [
+            "glossary:structured output"
+          ],
+          "narration": "Another belief to drop: structured output isn't asking the model to please answer in JSON. The model never writes the JSON. Code assembles it. So the shape is valid every single time, by construction."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 13.4,
+          "specific": false,
+          "hits": [],
+          "narration": "But guaranteed shape is not guaranteed truth. A valid answer can still be a wrong answer. A one point five billion parameter model can flip a boolean between runs. Route low-confidence fields to a human or a bigger model."
+        },
+        {
+          "id": "s11",
+          "role": "payoff_close",
+          "est_duration_s": 12.8,
+          "specific": false,
+          "hits": [],
+          "narration": "The myth survives in one place: weights decide what a model knows, so judgment needs a stronger model. For typed answers, the speed was never in the weights. It was in refusing to let the model write."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.0,
+      "words": 407,
+      "sentences": 38,
+      "est_speech_s": 140.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Jev's speed isn't in the weights. Your Qwen already has it. Three hundred twelve forward passes become one. You run a small open model like Qwen two point five in Ollama or LM Studio. You've watched it type JSON one word at a time. The myth says that speed lives in exotic weights no home machine could serve. Yesterday TypeSafe released Jev, the first System One Model. It gives up writing text and returns structured values with calibrated probabilities, honest scores of how sure it is. Yet an open replication on Hugging Face hits those numbers. It's free under the Apache license, and it runs the stock Qwen checkpoint you can already download. No new training. One MacBook. The win is in how you decode, not what you train. You write a schema beforehand: the list of fields and their allowed answers. The test form has twenty-eight fields. Each is a boolean, a yes or no, or an enum, a fixed menu of choices. The old way writes an essay, one token, a chunk of a word, at a time. The new way is a scantron sheet. Every bubble at the same instant. The limit: a scantron chooses with no doubt, the engine returns a probability for every option. It's called parallel constrained decoding, every field answered in one pass. The prompt is prefilled once into a KV cache, the model's short-term memory, and shared across all fields. Each field scores only its own candidate tokens. The rest of the vocabulary is masked off. On the replication author's M four Max MacBook, this form took nineteen hundred milliseconds the old way. The new decoding took two hundred seventy milliseconds. Sequential forward passes, full trips through the model, fell from three hundred twelve to one. Another belief to drop: structured output isn't asking the model to please answer in JSON. The model never writes the JSON. Code assembles it. So the shape is valid every single time, by construction. But guaranteed shape is not guaranteed truth. A valid answer can still be a wrong answer. A one point five billion parameter model can flip a boolean between runs. Route low-confidence fields to a human or a bigger model. The myth survives in one place: weights decide what a model knows, so judgment needs a stronger model. For typed answers, the speed was never in the weights. It was in refusing to let the model write.",
+    "on_screen": "Not the weights. The decoding. | Not the weights. The decoding. | 312 \u2192 1 forward passes | you: Qwen-2.5 in Ollama | JSON typed 1 word at a time | myth: exotic weights required | TypeSafe launches Jev | first System One Model | text out? no: typed values | open replication on Hugging Face | Apache license | stock checkpoint | zero new training | schema = fields + allowed answers | 28 fields | boolean: yes/no | enum: fixed menu | essay: 1 token at a time | scantron: all bubbles at once | masking = no stray marks | prefill once into KV cache | broadcast to all fields | mask the vocabulary | code assembles JSON | author's M4 Max run | 270 ms new way | 312 \u2192 1 passes | not: please answer in JSON | model never writes JSON | code assembles it | valid by construction | valid \u2260 correct | 1.5B params can flip a boolean | route low-confidence fields | weights = what it knows | judgment \u2192 bigger model | speed was never in the weights"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-storyboard.json",
+        "scenes": 11,
+        "fk_grade": 6.0,
+        "words": 407,
+        "est_speech_s": 140.3,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 48 chars \u2014 mobile truncates ~40",
+          "FK grade 6.0 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s2: 'LM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s2: 'JSON' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s7: 'KV' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s9: 'JSON' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s9: 'JSON' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-16-replicating-a-paper-with-qwen-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.583,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Jev",
+          "TypeSafe"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Jev"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 9,
+        "need": 9,
+        "total": 11
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
