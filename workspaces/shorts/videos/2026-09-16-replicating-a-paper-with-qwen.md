@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-09-16-replicating-a-paper-with-qwen-brief|Brief]]
 - Script: [[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-script|Script]] ([[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-storyboard|storyboard]], [[stages/04-script/output/2026-09-16-replicating-a-paper-with-qwen-drafts|drafts]])
 - Package: [[stages/05-package/output/2026-09-16-replicating-a-paper-with-qwen-package|Package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-09-16-replicating-a-paper-with-qwen-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-16T12:53:00Z 04-script ok: myth-bust won 24-12 over how-to-three-moves; validator 0/0, eval 9/9, variety ok
 - 2026-09-16T12:57:38Z 05-package ok: searchable title picked (search surface, autocomplete 72), rubric 100, check_outputs 0 failures
 - 2026-09-16T12:59:32Z build start on gn100-83c4
+- 2026-09-16T13:04:31Z 06-voice ok 296s
