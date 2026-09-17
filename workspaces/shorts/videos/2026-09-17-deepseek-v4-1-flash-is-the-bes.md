@@ -2,14 +2,14 @@
 slug: 2026-09-17-deepseek-v4-1-flash-is-the-bes
 workspace: shorts
 title: "DeepSeek V4.1 Flash: read the receipt"
-status: building
+status: review
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T14:09:46Z"
+updated: "2026-09-17T14:48:26Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-script]]
 - Package: [[stages/05-package/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-package]]
 - Voice: narration normalized at stage 04: [[stages/06-voice/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-narration|narration.txt]] (stage 06 proper starts on the Spark)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-17T14:09:46Z build start on gn100-83c4
 - 2026-09-17T14:12:02Z 06-voice ok 132s
+- 2026-09-17T14:27:17Z 07-render fail 912s (07-render: scene s4 did not pass safe_zone_check after 5 rounds)
+- 2026-09-17T14:48:30Z 07-render ok 103.30s: 12 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 81
+- 2026-09-17T14:48:30Z 07-render ok 1273s
