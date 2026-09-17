@@ -2,14 +2,14 @@
 slug: 2026-09-17-deepseek-v4-1-flash-is-the-bes
 workspace: shorts
 title: DeepSeek v4.1 Flash is the best hacking model you can run locally
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T11:07:52Z"
+updated: "2026-09-17T11:45:49Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-17-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-17-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,3 +37,5 @@ blotato_post_id: ""
 
 ## Build journal
 
+
+- Research: 9 sources fetched (3 primary, 1 docs, 3 benchmark, 2 community); validator exit 0; 10 claims, 8 key numbers. Checkpoint (angle+slug) passed unattended: angle unchanged from the ideas note; the ideas-stage "165 points" lead appears on no fetched page, so the brief binds the writer to the fetched figures (11 of 11 verified runs, $4.65, 266.2M cached tokens).

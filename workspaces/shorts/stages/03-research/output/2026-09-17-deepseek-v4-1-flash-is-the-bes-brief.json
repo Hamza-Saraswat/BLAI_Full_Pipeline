@@ -1,0 +1,201 @@
+{
+  "slug": "2026-09-17-deepseek-v4-1-flash-is-the-bes",
+  "topic": "DeepSeek v4.1 Flash is the best hacking model you can run locally",
+  "generated_at": "2026-09-17T11:39:03Z",
+  "depth": "standard",
+  "thesis": "The best-hacking-model crown was earned by a cloud serving stack as much as by the open weights: your GPU can hold the same 552B-parameter brain under an MIT license, but the $4.65 eval receipt rode 266.2 million cache-hit tokens that local hardware pays for in memory instead of money.",
+  "explanation_path": "Start from the scoreboard, because the viewer's skepticism lives there: Enclave's benchmark gives an agent source code, a low-privilege account, one Bash tool, and a thirty-minute cap per run, and a run only counts when the target executes a command and submits a fresh run-specific proof. DeepSeek V4.1 Flash swept it. Before pronouncing the model a genius, read the receipt: almost the entire token bill was cache hits, the same source code re-sent to a provider that had already processed it and billed it cheaper the second time. That is a statement about a serving system, and it sets up the real mechanism. Mixture of experts means the model is a library of specialists in which each token consults a handful of shelves, so a 552B-parameter backbone does the work of a small model while occupying the memory of a giant one; the KV cache, compressed to 890 bytes per token, is what lets an agent re-read a codebase for hours without the memory bill exploding. Both facts explain why the cloud run was cheap, and both are equally the terms of the local question. The weights are MIT-licensed and downloadable tonight, so the brain is genuinely the same; what does not transfer is the infrastructure -- the public local benchmark is a four-unit DGX Spark cluster in MXFP4 with the model's 196B-parameter Engram tables parked on disk, and a single consumer GPU cannot shelve the thing at all. The honest close: the eval measured a model plus its serving stack, and your copy only comes with the model.",
+  "claims": [
+    {
+      "claim": "DeepSeek-V4.1-Flash is a multimodal Mixture-of-Experts model with 552B backbone parameters that activates only 8B parameters per token during prefill and 16B during decode.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash · Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "CSA2 attention plus FP4 main KV caching cut the global KV cache footprint to 890 bytes per token, and the persistent KV cache to roughly 1/8 of DeepSeek-V4-Flash.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash · Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "The model ships Engram conditional memory of 196B parameters, sparsely accessed via token-based lookup, on top of the 552B backbone.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash · Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "The weights are released under the MIT license, which is permissive for commercial use, though running them still requires compute you control or a paid API.",
+      "source_url": "https://www.mindstudio.ai/blog/deepseek-v4-1-flash-local",
+      "source_title": "How to Run DeepSeek V4.1 Flash Locally: Hardware and Setup | MindStudio",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "In Enclave's AI Hacking Race benchmark, DeepSeek V4.1 Flash gained code execution on all 11 vulnerable targets while all four patched controls stayed secure, and the accepted runs cost only $4.65; the three Grafana runs finished in 52, 64, and 90 seconds.",
+      "source_url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model",
+      "source_title": "Enclave: DeepSeek V4.1 Flash is Now Our Best Hacking Model",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "The model does not run on a single consumer GPU out of the box, because the full weight set must be stored even though only a fraction activates, and official consumer quantizations were not broadly available at launch.",
+      "source_url": "https://www.mindstudio.ai/blog/deepseek-v4-1-flash-local",
+      "source_title": "How to Run DeepSeek V4.1 Flash Locally: Hardware and Setup | MindStudio",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "Of the 268.3 million input tokens the provider reported across the benchmark, 266.2 million were cached, and the provider charged a lower price for this reused input.",
+      "source_url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model",
+      "source_title": "Enclave: DeepSeek V4.1 Flash is Now Our Best Hacking Model",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "On the same leaderboard GPT 5.6 Sol verified 9 / 11 runs at an estimated total cost of $149.21, and the page itself warns the small test is not a general model ranking.",
+      "source_url": "https://enclave.ai/hackingrace",
+      "source_title": "Enclave: AI Hacking Race | Benchmark Leaderboard",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "A reviewer's deployment runs the 552B model in MXFP4 across 4x DGX Spark in tensor parallelism, reporting 77.2 tok/s peak single-stream with 203 GB of Engram tables kept on disk so the backbone fits in 4x 128 GB unified memory.",
+      "source_url": "https://forums.developer.nvidia.com/t/deepseek-v4-1-flash-552b-moe-on-4x-dgx-spark-tp4-77-2-tok-s-c1-on-peak-52-code-72-tok-s-on-a-warm-code-run-47-math-39-reasoning-23-prose/382897",
+      "source_title": "DeepSeek-V4.1-Flash 552B MoE on 4x DGX Spark TP4 - NVIDIA Developer Forums",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-17"
+    },
+    {
+      "claim": "DeepSeek's own announcement frames serious self-deployment as 2,000 GPUs + a storage cluster.",
+      "source_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "source_title": "Introducing DeepSeek-V4.1-Flash: smarter, faster, more efficient.",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-17"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "total backbone parameters",
+      "value": "552B",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "active parameters per token (prefill / decode)",
+      "value": "8B during prefill, 16B during decode",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "global KV cache footprint per token",
+      "value": "890 bytes per token",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "verified hacking runs out of vulnerable targets",
+      "value": "11 of 11",
+      "source_url": "https://enclave.ai/hackingrace"
+    },
+    {
+      "label": "accepted-run cost of the hacking sweep",
+      "value": "$4.65",
+      "source_url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model"
+    },
+    {
+      "label": "cached input tokens, of 268.3 million total reported",
+      "value": "266.2 million",
+      "source_url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model"
+    },
+    {
+      "label": "peak single-stream decode on 4x DGX Spark TP4 at MXFP4",
+      "value": "77.2 tok/s",
+      "source_url": "https://forums.developer.nvidia.com/t/deepseek-v4-1-flash-552b-moe-on-4x-dgx-spark-tp4-77-2-tok-s-c1-on-peak-52-code-72-tok-s-on-a-warm-code-run-47-math-39-reasoning-23-prose/382897"
+    },
+    {
+      "label": "Engram conditional memory parameters",
+      "value": "196B",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a private library where every question consults a few shelves",
+      "mapping": "the 552B backbone is the whole library that must be shelved in your house; each token pulls only 8B to 16B of it, so reading feels small while storage stays enormous",
+      "limit": "the shelves are not identical copies -- routing picks different experts per token, and the cost that matters locally is shelving, not reading"
+    },
+    {
+      "vehicle": "a group-rate kitchen that preps the same ingredients once",
+      "mapping": "the eval's $4.65 is the buffet price after the provider's kitchen had already processed 266.2 million of the tokens and re-billed them cheaper; your local run pays the full prep cost every time, in VRAM and seconds",
+      "limit": "local runs do not pay per token at all -- electricity and wall-clock time are the only currencies, so the cheapness mechanism changes kind, not just size"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "\"Best hacking model\" means it beat every other model at hacking.",
+      "reality": "It leads one four-target benchmark whose own page says \"This small test is not a general model ranking,\" and GPT 5.6 Sol verified 9 / 11 runs at an estimated $149.21 while solving fewer targets (claim 8)."
+    },
+    {
+      "myth": "8B active parameters means it runs like an 8B model on your GPU.",
+      "reality": "The full 552B backbone plus 196B of Engram tables must be held even though a fraction computes, and DeepSeek's own deployment pitch for big setups is \"2,000 GPUs + a storage cluster\" (claims 1, 3, 10)."
+    },
+    {
+      "myth": "The $4.65 sweep shows what the model costs to unleash.",
+      "reality": "That price leaned on provider caching -- 266.2 million of 268.3 million input tokens were cache hits billed at a lower rate -- an economics a local copy replaces with memory and tokens per second (claim 7)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model that stores many specialist sub-networks and routes each token through only a few of them."
+    },
+    {
+      "term": "active parameters",
+      "definition": "The slice of a model's weights that actually computes on a given token, as opposed to everything memory must hold."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The stored key-value states that let a model reuse its reading of earlier tokens instead of recomputing them each step."
+    },
+    {
+      "term": "cache hit",
+      "definition": "Input the provider already processed once and re-bills at a lower price when the same context is sent again."
+    },
+    {
+      "term": "verified run",
+      "definition": "An attack that ends with the target executing a command and submitting a fresh, run-specific proof, not just a written finding."
+    },
+    {
+      "term": "MXFP4",
+      "definition": "A 4-bit floating-point weight format that shrinks a model to roughly a quarter of its full-precision size."
+    },
+    {
+      "term": "tensor parallelism",
+      "definition": "Splitting one model's layers across several GPUs that compute the same tokens together."
+    }
+  ],
+  "unverified": [
+    "zartbot's architecture deep dive reports the model reaching \"nearly 420 Tokens/s\" in his serving setup; that is a personal-blog figure no tier 1-3 page corroborates.",
+    "An HN commenter reports that on a personal Nintendo 3DS-kernel audit, \"DS only found one vuln for $2 in 40min\" while GLM 5.3 found almost all of them; a single anecdote, not a benchmark.",
+    "No fetched page carries the ideas-stage lead's \"165 points\" score; the eval's actual metric is 11 of 11 verified runs, and the fetched HN item showed 71 points and 12 comments, not 66.",
+    "Tokens per second for these weights on a single DGX Spark, the channel's own hardware, has not been measured publicly; the 77.2 tok/s figure is a four-unit cluster.",
+    "Whether llama.cpp or GGUF quantizations of V4.1 Flash specifically exist, and how far they degrade a hacking result, is unresolved; the Unsloth page found in search covers the older V4-Flash and was not fetched."
+  ],
+  "suggested_outline": "Open on the scoreboard: 11 of 11 vulnerable targets hacked, all four patched controls untouched, $4.65 accepted-run cost, and a Grafana target that fell in 52 seconds.\nRead the receipt: 266.2 million of 268.3 million input tokens were cache hits the provider billed cheaper, then unpack the machinery -- a 552B backbone that activates 8B per token on input and 16B on output, and a KV cache squeezed to 890 bytes per token.\nLand on the desk: the weights are MIT-licensed and a 4x DGX Spark cluster at MXFP4 posts 77.2 tok/s peak with 196B of Engram tables parked on disk, so the brain transfers to your GPU but the benchmark's cloud conditions do not.",
+  "notes": "The ideas-stage lead described the eval as a 165-point score with 66 HN comments; neither number appears on any fetched page (the leaderboard scores verified runs out of 11, and the fetched HN item showed 71 points and 12 comments), so the writer must use the fetched figures. The NVIDIA forum post totals the model at 769B including Engram, while the model card states 196B Engram over a 552B backbone (748B by addition); trust the model card. The forum throughput is one reviewer's deployment, with commands and hardware shown, and is the closest public proxy for local speed on hardware the channel owns. Enclave itself warns the leaderboard is not a general model ranking, and HN pushback in the fetched thread argues the \"best hacking model\" headline overreaches -- usable as the honest-catch beat. The zartbot deep dive and the DeepSeek API docs page were fetched for architecture and release corroboration; zartbot's numbers are community tier and stay out of Claims.",
+  "viewer_situation": "You've got a gaming PC or a Mac, you've seen the headlines crowning an open-weights model as the best hacking model, and you're wondering whether the file you could download tonight is the thing that actually won.",
+  "has_process": false,
+  "process_steps": [],
+  "objection": "The eval never ran a local quantized copy, so \"best hacking model you can run locally\" extrapolates from cloud-served weights to a quantization no benchmark has scored."
+}
