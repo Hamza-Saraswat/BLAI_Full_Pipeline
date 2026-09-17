@@ -34,8 +34,7 @@ blotato_post_id: ""
 ## Decisions
 - Picked: top-scoring candidate (opportunity 78.4, autocomplete depth 39), radar items from two sources (enclave.ai eval + zartbot KV-cache architecture deep dive); the one news-react slot of the day.
 - Format: smooth-explainer -- the story is a mechanism (what cloud-run "best hacking model" evals mean once the weights are open) needing a carried example, and classic is barred (ran 09-15 and 09-16).
+- Research: 9 sources fetched (3 primary, 1 docs, 3 benchmark, 2 community); validator exit 0; 10 claims, 8 key numbers. Checkpoint (angle+slug) passed unattended: angle unchanged from the ideas note; the ideas-stage "165 points" lead appears on no fetched page, so the brief binds the writer to the fetched figures (11 of 11 verified runs, $4.65, 266.2M cached tokens).
 
 ## Build journal
 
-
-- Research: 9 sources fetched (3 primary, 1 docs, 3 benchmark, 2 community); validator exit 0; 10 claims, 8 key numbers. Checkpoint (angle+slug) passed unattended: angle unchanged from the ideas note; the ideas-stage "165 points" lead appears on no fetched page, so the brief binds the writer to the fetched figures (11 of 11 verified runs, $4.65, 266.2M cached tokens).
