@@ -2,22 +2,22 @@
 slug: 2026-09-17-deepseek-v4-1-flash-is-the-bes
 workspace: shorts
 title: "DeepSeek V4.1 Flash: read the receipt"
-status: approved
+status: scheduled
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T15:36:56Z"
-publish_slot: ""
+updated: "2026-09-17T15:40:48Z"
+publish_slot: "2026-09-17T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: f27e9651-7181-432d-8ed1-c662d58f4201
 ---
 # DeepSeek v4.1 Flash is the best hacking model you can run locally
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-package]]
 - Voice: narration normalized at stage 04: [[stages/06-voice/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-narration|narration.txt]] (stage 06 proper starts on the Spark)
 - Render: [[stages/07-render/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-publish]]
 
 ## Decisions
 - Picked: top-scoring candidate (opportunity 78.4, autocomplete depth 39), radar items from two sources (enclave.ai eval + zartbot KV-cache architecture deep dive); the one news-react slot of the day.
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-09-17T14:48:30Z 07-render ok 1273s
 - 2026-09-17T14:48:32Z build done, status review
 - 2026-09-17T15:36:56Z telegram approve (approved_at 2026-09-17T15:36:56Z)
+- 2026-09-17T15:40:49Z 08-publish ok 3s
