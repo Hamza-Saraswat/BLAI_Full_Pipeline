@@ -1,0 +1,128 @@
+{
+  "slug": "2026-09-17-deepseek-v4-1-flash-is-the-bes",
+  "topic": "DeepSeek V4.1 Flash: what the best-hacking-model eval actually measured, and what transfers to your hardware",
+  "title": "DeepSeek V4.1 Flash: the Hacking Crown Your Download Doesn't Get",
+  "description": "DeepSeek V4.1 Flash, AI Hacking Race benchmark, DGX Spark local inference.\nThe headlines crowned DeepSeek V4.1 Flash the best hacking model after it verified code execution on every vulnerable target for $4.65. The receipt tells a narrower story: 266.2 million of 268.3 million input tokens were provider cache hits billed cheaper, and the closest public local run is a 4x DGX Spark cluster at 77.2 tok/s peak, not one GPU. The weights are MIT-licensed and genuinely the same brain; the serving stack that made the score cheap is not in the download.\nYou'll learn what the benchmark actually measured, why mixture-of-experts speed still costs giant-model memory, and what transfers to your hardware tonight.\n(Narration is AI-generated.)",
+  "hashtags": [
+    "#deepseek",
+    "#dgxspark",
+    "#localai"
+  ],
+  "hook_text": "You crowned the wrong winner",
+  "hook_candidates": [
+    "Eleven targets, eleven falls, $4.65.",
+    "It hacked eleven targets for four dollars.",
+    "Four sixty-five bought eleven hacks.",
+    "Four dollars and sixty-five cents bought eleven hacks.",
+    "The crown is real. The copy is not.",
+    "The brain fits. The bill of health doesn't.",
+    "You saw the headline. You missed the receipt.",
+    "You're crowning the wrong winner.",
+    "Everyone read the score. Nobody read the receipt.",
+    "Same model, same weights, minus the caching."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "smooth-explainer",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 107,
+  "narration_full": "You're crowning the wrong winner. You've got a gaming PC, and you saw the headline. An open-weights model swept a hacking benchmark. The win is real. The benchmark hands an agent a low-privilege account and one shell. A run only counts when the target executes a command and returns fresh proof. DeepSeek's V four point one Flash hacked every vulnerable target. Every patched one held. The whole sweep cost four dollars and sixty-five cents. The leaderboard itself warns it is not a general model ranking. Now read the receipt. Two hundred sixty-six million of the two hundred sixty-eight million input tokens were cache hits. A cache hit is input the provider already processed once, re-billed cheaper. That discount is a serving-stack trick. The weights play no part in it. The model is a mixture of experts, a company of specialists with a receptionist who wakes only the few each word needs. Speed comes from the few that wake. Memory comes from the whole company, because any specialist could be next. The receptionist re-picks for every word, so picture hundreds of small wake-ups per sentence. The closest public local run is four DGX Spark boxes wired as one, the model split across them. Peak speed: seventy-seven point two tokens per second. One consumer GPU cannot shelve the full weight set at all. The extra memory tables sit on disk, exiled, just to make room. Locally the currencies are memory and tokens per second. The weights are yours under an M I T license, free to download tonight, free to use commercially. The brain in that benchmark is the same brain you would get. The building around it stays behind: the caching, the serving stack, the discount. The honest claim is smaller than the headline. The benchmark crowned a model plus its serving stack. Your download is the same brain, minus the caching.",
+  "analogy": {
+    "vehicle": "A company of specialists with a receptionist at the front desk who wakes only the few each word needs.",
+    "mapping": "The specialists are the experts inside the mixture-of-experts model and the receptionist is the router: per-word speed comes from the few that wake, while the memory bill comes from the whole company, because any specialist could be called next.",
+    "limit": "The receptionist re-picks for every single word, so it is hundreds of small wake-ups per sentence, not one hand-off per question."
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You're crowning the wrong winner. You've got a gaming PC, and you saw the headline. An open-weights model swept a hacking benchmark.",
+      "on_screen_text": "You crowned the wrong winner",
+      "visual_brief": "Opens on a finished blueprint composition: dark drafting sheet, faint grid, an annotated podium schematic with two boxes, left tagged HEADLINE, right tagged SERVING STACK, amber #FFB347 measurement callouts. Hook text 'You crowned the wrong winner' sits top center at 64px plus, fading in at 0.3s. On 'crowning the wrong winner' a drafted crown above the left box rises in place and re-settles over the right box, amber outline blinking once. On 'gaming PC' a small rig schematic fades in lower left. One text block only.",
+      "est_duration_s": 7.9,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The win is real. The benchmark hands an agent a low-privilege account and one shell. A run only counts when the target executes a command and returns fresh proof. DeepSeek's V four point one Flash hacked every vulnerable target. Every patched one held. The whole sweep cost four dollars and sixty-five cents. The leaderboard itself warns it is not a general model ranking.",
+      "on_screen_text": "DeepSeek V4.1 Flash | every target hacked | $4.65 total",
+      "visual_brief": "Split-compare blueprint, dark sheet, amber accent only. Left column header VULNERABLE over a column of drafted machine icons; right column PATCHED over matching icons. On 'hacked every vulnerable target', amber check-seals stamp the left icons in sequence; on 'Every patched one held', shield outlines stamp the right. On 'four dollars and sixty-five cents', a ruled receipt tape rises in place at bottom center reading $4.65 total. On 'warns it is not a general model ranking', a small caution tag fades in beside the receipt. Text strip hard-cuts through its three beats as spoken.",
+      "est_duration_s": 21.7
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Now read the receipt. Two hundred sixty-six million of the two hundred sixty-eight million input tokens were cache hits. A cache hit is input the provider already processed once, re-billed cheaper. That discount is a serving-stack trick. The weights play no part in it.",
+      "on_screen_text": "266.2M of 268.3M tokens cached | re-billed cheaper",
+      "visual_brief": "Giant-number ledger sheet on a dark drafting background. A ruled ledger of faint token ticks fills the page. On 'two hundred sixty-six million', the amber figure 266.2M rises in place center at 64px plus, with 'of 268.3M tokens' as a smaller drafting label beneath; on 'cache hits' a CACHED rubber-stamp outline scales in across the ledger. On 'serving-stack trick', the ledger fades and a small server-rack schematic fades in behind the number. Hard-cut text beat 're-billed cheaper' lands when spoken. Amber #FFB347 only, one text block animating at a time.",
+      "est_duration_s": 15.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "The model is a mixture of experts, a company of specialists with a receptionist who wakes only the few each word needs. Speed comes from the few that wake. Memory comes from the whole company, because any specialist could be next. The receptionist re-picks for every word, so picture hundreds of small wake-ups per sentence.",
+      "on_screen_text": "many experts on staff | a few wake per word",
+      "visual_brief": "Manim-animated blueprint floor plan: many small office rooms (the specialists) arranged around a front desk (the receptionist), thin drafting lines on dark. On 'wakes only the few each word needs', a token dot reaches the desk and two or three rooms glow amber, then dim as the next dot arrives and different rooms glow; the routing loop repeats under 're-picks for every word'. On 'Memory comes from the whole company', every room outlines in faint amber at once. Entrances are rise-in-place or fade only, at most two elements animating, amber the sole accent, one text strip at a time.",
+      "est_duration_s": 19.3,
+      "render_notes": "Manim: loop the token-routing pulse about three times; keep concurrent glow animations to two rooms plus the dot."
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The closest public local run is four DGX Spark boxes wired as one, the model split across them. Peak speed: seventy-seven point two tokens per second. One consumer GPU cannot shelve the full weight set at all. The extra memory tables sit on disk, exiled, just to make room. Locally the currencies are memory and tokens per second.",
+      "on_screen_text": "4x DGX Spark, wired as one | 1 GPU cannot shelve it",
+      "visual_brief": "Blueprint rack diagram on dark. On 'four DGX Spark boxes wired as one', four drafted mini-PC boxes rise in place in a two-by-two grid, linked by amber tensor-parallel lines. On 'seventy-seven point two tokens per second', a drafted gauge needle climbs with no digits anywhere on screen. On 'One consumer GPU', the grid fades to a lone GPU card schematic while the model blueprint outline overflows its border, marked by an amber too-big measurement arrow. On 'exiled', a drawn stack of memory tables fades onto a disk platter icon at the sheet's edge. Text strip hard-cuts between its two beats.",
+      "est_duration_s": 20.0
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The weights are yours under an M I T license, free to download tonight, free to use commercially. The brain in that benchmark is the same brain you would get. The building around it stays behind: the caching, the serving stack, the discount.",
+      "on_screen_text": "MIT license, same brain | the stack stays home",
+      "visual_brief": "Split-compare sheet, dark with amber accent. Left: a drafted download box holding the model's brain schematic. On 'M I T license', a license tag marked MIT fades onto the box. On 'same brain you would get', the identical brain schematic stamps onto the right side beside a drafted server rack, a cache stamp, and a receipt. On 'stays behind', the right-side rack, stamp, and receipt fade to faint drafting ghosts while the left download box stays solid amber. Text strip hard-cuts between its two beats; one text block animating at a time.",
+      "est_duration_s": 14.8
+    },
+    {
+      "id": "s7",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The honest claim is smaller than the headline. The benchmark crowned a model plus its serving stack. Your download is the same brain, minus the caching.",
+      "on_screen_text": "model + serving stack | your download: the model",
+      "visual_brief": "Closing sheet rhymes with frame one: the podium schematic returns, now a single combined box drafted MODEL + SERVING STACK. On 'The benchmark crowned a model plus its serving stack', the crown settles onto it, amber outline holding steady. On 'Your download comes with the model', a small download box rises in place below containing only the brain schematic. Payoff text sets at 64px plus, then the channel wordmark settles center for the final half second. All motion fade or rise-in-place, amber #FFB347 only, nothing else moves at the end.",
+      "est_duration_s": 7.9,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Three-number cap spent on: $4.65 (spoken + on screen in s2), 266.2M of 268.3M cache hits (spoken + on screen in s3), and 77.2 tok/s (spoken only in s5, appears in no on_screen_text). Deliberately dropped per the cap: 11 of 11, 552B, 196B, 8B/16B, 890 bytes per token; they surface only qualitatively ('every vulnerable target', 'the full weight set', 'the extra memory tables'). Hedging: the 4x DGX Spark / 77.2 tok/s figure is one reviewer's forum deployment (medium confidence), so narration calls it 'the closest public local run', per the brief's Notes; Enclave's own 'not a general model ranking' warning is included as the honest catch. Analogy (receptionist) states its limit in s4. Check TTS rendering of 'M I T' (spelled for letter-by-letter reading) and 'V four point one'. Single wry beat is 'exiled' in s5, on the mechanism, not in hook or payoff. No 'Not X, but Y' construction used; the antithesis lives in the payoff's plain contrast instead."
+}
