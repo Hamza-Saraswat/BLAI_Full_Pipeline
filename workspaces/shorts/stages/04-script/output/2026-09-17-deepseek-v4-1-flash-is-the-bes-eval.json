@@ -1,7 +1,7 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-09-17T12:56:33+00:00",
-  "slug": "prod-0917D",
+  "generated_at": "2026-09-17T13:40:42+00:00",
+  "slug": "prod-0917-final",
   "inputs": {
     "storyboard_path": "stages/04-script/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-storyboard.json",
     "research_path": "stages/03-research/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-brief.json",
@@ -57,10 +57,12 @@
         {
           "label": "global KV cache footprint per token",
           "value": "890 bytes per token",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "eight hundred ninety",
+          "scene_ids": [
+            "s8"
+          ]
         },
         {
           "label": "verified hacking runs out of vulnerable targets",
@@ -77,7 +79,7 @@
           "matched_in": "on_screen",
           "matched_token": "$4.65",
           "scene_ids": [
-            "s4"
+            "s1"
           ]
         },
         {
@@ -85,20 +87,18 @@
           "value": "266.2 million",
           "spent": true,
           "matched_in": "narration",
-          "matched_token": "Two hundred sixty-six million",
+          "matched_token": "two hundred sixty-six point two million",
           "scene_ids": [
-            "s5"
+            "s4"
           ]
         },
         {
           "label": "peak single-stream decode on 4x DGX Spark TP4 at MXFP4",
           "value": "77.2 tok/s",
-          "spent": true,
-          "matched_in": "narration",
-          "matched_token": "seventy-seven point two",
-          "scene_ids": [
-            "s9"
-          ]
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
         },
         {
           "label": "Engram conditional memory parameters",
@@ -112,21 +112,21 @@
     },
     "entity_spend": {
       "total": 12,
-      "found_count": 5,
-      "score": 0.417,
+      "found_count": 3,
+      "score": 0.25,
       "found": [
         "DeepSeek",
-        "Engram",
         "MIT",
-        "DeepSeek V4.1 Flash",
         "DGX Spark"
       ],
       "missing": [
+        "Engram",
         "DeepSeek-V4-Flash",
         "DeepSeek-V4.1-Flash",
         "CSA2",
         "GPT 5.6",
         "Sol",
+        "DeepSeek V4.1 Flash",
         "GB of Engram",
         "Grafana"
       ],
@@ -134,7 +134,7 @@
         "DeepSeek",
         "Engram"
       ],
-      "top2_present": true,
+      "top2_present": false,
       "entities": [
         {
           "name": "DeepSeek",
@@ -142,18 +142,15 @@
           "claim_count": 4,
           "found": true,
           "matched_in": [
-            "narration",
-            "on_screen"
+            "narration"
           ]
         },
         {
           "name": "Engram",
           "tier": 0,
           "claim_count": 2,
-          "found": true,
-          "matched_in": [
-            "narration"
-          ]
+          "found": false,
+          "matched_in": []
         },
         {
           "name": "DeepSeek-V4-Flash",
@@ -203,10 +200,8 @@
           "name": "DeepSeek V4.1 Flash",
           "tier": 2,
           "claim_count": 1,
-          "found": true,
-          "matched_in": [
-            "on_screen"
-          ]
+          "found": false,
+          "matched_in": []
         },
         {
           "name": "DGX Spark",
@@ -214,7 +209,6 @@
           "claim_count": 1,
           "found": true,
           "matched_in": [
-            "narration",
             "on_screen"
           ]
         },
@@ -235,174 +229,161 @@
       ]
     },
     "skeleton": {
-      "sentences": 31,
+      "sentences": 30,
       "hits": 0,
       "density": 0.0,
       "offenders": []
     },
     "hook": {
-      "concrete": false,
-      "via": [],
-      "hook_text": "You crowned the wrong winner",
-      "first_sentence": "You're crowning the wrong winner."
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:$4.65"
+      ],
+      "hook_text": "$4.65 bought 11 hacks",
+      "first_sentence": "Four dollars and sixty-five cents bought eleven hacks."
     },
     "positional_labels": {
       "count": 0,
-      "structure": "contrarian-take",
+      "structure": "myth-bust",
       "labels": []
     },
     "scene_specificity": {
-      "total": 12,
-      "specific_count": 10,
-      "ratio": 0.833,
+      "total": 11,
+      "specific_count": 7,
+      "ratio": 0.636,
       "scenes": [
         {
           "id": "s1",
           "role": "hook",
-          "est_duration_s": 7.2,
-          "specific": true,
-          "hits": [
-            "entity:DeepSeek"
-          ],
-          "narration": "You're crowning the wrong winner. You've got a gaming PC, and you saw the headline. Open-weights DeepSeek swept a hacking benchmark."
-        },
-        {
-          "id": "s2",
-          "role": "explain",
           "est_duration_s": 10.0,
-          "specific": true,
-          "hits": [
-            "entity:DeepSeek"
-          ],
-          "narration": "DeepSeek's win is real. Enclave's benchmark hands an agent a low-privilege account and one shell. A run only counts when the target executes a command and returns fresh proof."
-        },
-        {
-          "id": "s3",
-          "role": "explain",
-          "est_duration_s": 5.9,
-          "specific": true,
-          "hits": [
-            "entity:DeepSeek",
-            "entity:DeepSeek V4.1 Flash"
-          ],
-          "narration": "No partial credit. DeepSeek's V four point one Flash hacked every vulnerable target. Every patched one held."
-        },
-        {
-          "id": "s4",
-          "role": "explain",
-          "est_duration_s": 6.9,
           "specific": true,
           "hits": [
             "num:$4.65"
           ],
-          "narration": "The whole sweep cost four dollars and sixty-five cents. The leaderboard itself warns it is not a general model ranking."
+          "narration": "Four dollars and sixty-five cents bought eleven hacks. It rode on cache the provider billed cheaper. You've got a gaming PC or a Mac, and you're eyeing tonight's download."
         },
         {
-          "id": "s5",
-          "role": "explain",
-          "est_duration_s": 6.6,
-          "specific": true,
-          "hits": [
-            "num:266.2 million"
-          ],
-          "narration": "Now read the receipt. Two hundred sixty-six million of the two hundred sixty-eight million input tokens were cache hits."
-        },
-        {
-          "id": "s6",
-          "role": "explain",
-          "est_duration_s": 8.6,
-          "specific": true,
-          "hits": [
-            "glossary:cache hit"
-          ],
-          "narration": "A cache hit is input the provider already processed once, re-billed cheaper. That discount is a serving-stack trick. The weights play no part in it."
-        },
-        {
-          "id": "s7",
-          "role": "explain",
-          "est_duration_s": 14.1,
-          "specific": false,
-          "hits": [],
-          "narration": "The model is a mixture of experts, a company of specialists with a receptionist who wakes only the few each word needs. Speed comes from the few that wake. Memory comes from the whole company, because any specialist could be next."
-        },
-        {
-          "id": "s8",
-          "role": "explain",
-          "est_duration_s": 4.8,
+          "id": "s2",
+          "role": "foreshadow",
+          "est_duration_s": 11.0,
           "specific": true,
           "hits": [
             "entity:DeepSeek"
           ],
-          "narration": "DeepSeek's receptionist re-picks for every word, so picture hundreds of small wake-ups per sentence."
+          "narration": "Here's the belief the headlines planted: the eval crowned the model, so your download is the winner. The contest was real. DeepSeek's agent got source code, a low-privilege account, and one shell."
         },
         {
-          "id": "s9",
+          "id": "s3",
+          "role": "foreshadow",
+          "est_duration_s": 8.6,
+          "specific": false,
+          "hits": [],
+          "narration": "A run only counted when the target executed a command and submitted fresh proof. The leaderboard itself warns it is not a general model ranking."
+        },
+        {
+          "id": "s4",
           "role": "explain",
           "est_duration_s": 9.0,
           "specific": true,
           "hits": [
-            "num:77.2 tok/s",
-            "entity:DGX Spark"
+            "num:266.2 million"
           ],
-          "narration": "The closest public local run is four DGX Spark boxes wired as one, the model split across them. Peak speed: seventy-seven point two tokens per second."
+          "narration": "Now read the receipt. Of the two hundred sixty-eight point three million input tokens the provider counted, two hundred sixty-six point two million were cache hits."
         },
         {
-          "id": "s10",
+          "id": "s5",
           "role": "explain",
-          "est_duration_s": 11.0,
+          "est_duration_s": 7.6,
           "specific": true,
           "hits": [
-            "entity:Engram"
+            "glossary:cache hit"
           ],
-          "narration": "One consumer GPU cannot shelve the full weight set at all. Its Engram memory tables sit on disk, exiled, just to make room. Locally the currencies are memory and tokens per second."
+          "narration": "A cache hit is input the provider already processed once, billed cheaper the second time. Nearly the whole sweep ran on re-reads."
         },
         {
-          "id": "s11",
+          "id": "s6",
           "role": "explain",
-          "est_duration_s": 14.8,
+          "est_duration_s": 12.4,
+          "specific": false,
+          "hits": [],
+          "narration": "That cheapness is a property of the serving stack, the provider's machines remembering the prompt so repeats cost less. Locally you pay in a different currency: memory to hold the weights, seconds to write each word."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 15.2,
           "specific": true,
           "hits": [
             "entity:MIT"
           ],
-          "narration": "The weights are yours under an M I T license, free to download tonight, free to use commercially. The brain in that benchmark is the same brain you would get. The building around it stays behind: the caching, the serving stack, the discount."
+          "narration": "What does transfer is the brain. The weights ship under an M I T license, free to use, even commercially. It's a mixture of experts, a model that wakes only a slice of itself for each word. Reading feels small. Shelving it does not."
         },
         {
-          "id": "s12",
-          "role": "payoff_close",
-          "est_duration_s": 9.3,
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:890 bytes per token"
+          ],
+          "narration": "The K V cache is the model's running notes, letting it re-read earlier words without recomputing them. Here those notes cost eight hundred ninety bytes per token. This sentence takes more room."
+        },
+        {
+          "id": "s9",
+          "role": "explain",
+          "est_duration_s": 3.1,
           "specific": false,
           "hits": [],
-          "narration": "The honest claim is smaller than the headline. The Enclave run crowned a model plus its serving stack. Your download is the same brain, minus the caching."
+          "narration": "At home, the same bill lands on your memory."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 15.9,
+          "specific": true,
+          "hits": [
+            "entity:DGX Spark"
+          ],
+          "narration": "The honest local rig is not one card. The public proof of life is four D G X Spark boxes wired together, lookup memory parked on disk. The whole weight set must sit somewhere, even the parts that sleep. Your single gaming card cannot shelve it."
+        },
+        {
+          "id": "s11",
+          "role": "payoff_close",
+          "est_duration_s": 13.4,
+          "specific": false,
+          "hits": [],
+          "narration": "Here's where the myth still holds: the open weights really are the same weights, nothing about the brain is hidden. What the eval measured was a model plus its serving stack. Your download tonight comes with only the model."
         }
       ]
     },
     "language": {
-      "fk_grade": 5.8,
-      "words": 324,
-      "sentences": 31,
-      "est_speech_s": 111.7,
+      "fk_grade": 6.0,
+      "words": 346,
+      "sentences": 30,
+      "est_speech_s": 119.3,
       "vo_band_ok": true
     },
-    "narration_full": "You're crowning the wrong winner. You've got a gaming PC, and you saw the headline. Open-weights DeepSeek swept a hacking benchmark. DeepSeek's win is real. Enclave's benchmark hands an agent a low-privilege account and one shell. A run only counts when the target executes a command and returns fresh proof. No partial credit. DeepSeek's V four point one Flash hacked every vulnerable target. Every patched one held. The whole sweep cost four dollars and sixty-five cents. The leaderboard itself warns it is not a general model ranking. Now read the receipt. Two hundred sixty-six million of the two hundred sixty-eight million input tokens were cache hits. A cache hit is input the provider already processed once, re-billed cheaper. That discount is a serving-stack trick. The weights play no part in it. The model is a mixture of experts, a company of specialists with a receptionist who wakes only the few each word needs. Speed comes from the few that wake. Memory comes from the whole company, because any specialist could be next. DeepSeek's receptionist re-picks for every word, so picture hundreds of small wake-ups per sentence. The closest public local run is four DGX Spark boxes wired as one, the model split across them. Peak speed: seventy-seven point two tokens per second. One consumer GPU cannot shelve the full weight set at all. Its Engram memory tables sit on disk, exiled, just to make room. Locally the currencies are memory and tokens per second. The weights are yours under an M I T license, free to download tonight, free to use commercially. The brain in that benchmark is the same brain you would get. The building around it stays behind: the caching, the serving stack, the discount. The honest claim is smaller than the headline. The Enclave run crowned a model plus its serving stack. Your download is the same brain, minus the caching.",
-    "on_screen": "You crowned the wrong winner | You crowned the wrong winner | a shell, a low-privilege account, fresh proof | DeepSeek V4.1 Flash | every target hacked | $4.65 total | not a general ranking | 266.2M of 268.3M tokens cached | re-billed cheaper | weights: no part | many experts on staff | a few wake per word | hundreds of wake-ups per sentence | 4x DGX Spark, wired as one | 1 GPU cannot shelve it | MIT license, same brain | the stack stays home | model + serving stack | your download: the model"
+    "narration_full": "Four dollars and sixty-five cents bought eleven hacks. It rode on cache the provider billed cheaper. You've got a gaming PC or a Mac, and you're eyeing tonight's download. Here's the belief the headlines planted: the eval crowned the model, so your download is the winner. The contest was real. DeepSeek's agent got source code, a low-privilege account, and one shell. A run only counted when the target executed a command and submitted fresh proof. The leaderboard itself warns it is not a general model ranking. Now read the receipt. Of the two hundred sixty-eight point three million input tokens the provider counted, two hundred sixty-six point two million were cache hits. A cache hit is input the provider already processed once, billed cheaper the second time. Nearly the whole sweep ran on re-reads. That cheapness is a property of the serving stack, the provider's machines remembering the prompt so repeats cost less. Locally you pay in a different currency: memory to hold the weights, seconds to write each word. What does transfer is the brain. The weights ship under an M I T license, free to use, even commercially. It's a mixture of experts, a model that wakes only a slice of itself for each word. Reading feels small. Shelving it does not. The K V cache is the model's running notes, letting it re-read earlier words without recomputing them. Here those notes cost eight hundred ninety bytes per token. This sentence takes more room. At home, the same bill lands on your memory. The honest local rig is not one card. The public proof of life is four D G X Spark boxes wired together, lookup memory parked on disk. The whole weight set must sit somewhere, even the parts that sleep. Your single gaming card cannot shelve it. Here's where the myth still holds: the open weights really are the same weights, nothing about the brain is hidden. What the eval measured was a model plus its serving stack. Your download tonight comes with only the model.",
+    "on_screen": "$4.65 bought 11 hacks | $4.65 bought 11 hacks | the myth: your download is the winner | every run needed proof | the receipt | cache hit: processed once, billed cheaper | cloud pays money | you pay memory + seconds | MIT weights, free to use | a slice wakes per word | KV cache: the running notes | tiny per token | your memory pays the bill | 4x DGX Spark + disk | one card can't shelve it | same weights, still true | the crown was model + stack | you get the model"
   },
   "validators": {
     "storyboard": {
       "exit_code": 0,
       "output": {
         "file": "stages/04-script/output/2026-09-17-deepseek-v4-1-flash-is-the-bes-storyboard.json",
-        "scenes": 12,
-        "fk_grade": 5.8,
-        "words": 324,
-        "est_speech_s": 111.7,
+        "scenes": 11,
+        "fk_grade": 6.0,
+        "words": 346,
+        "est_speech_s": 119.3,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
-          "title 64 chars \u2014 mobile truncates ~40",
-          "FK grade 5.8 \u2014 target <=5",
+          "title 52 chars \u2014 mobile truncates ~40",
+          "FK grade 6.0 \u2014 target <=5",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence",
-          "s9: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json"
+          "s7: 15s scene with ~4 visual beats in brief \u2014 need a change every ~3s"
         ]
       }
     },
@@ -456,10 +437,14 @@
     }
   },
   "overall": {
-    "gate1_ready": true,
-    "failures": [],
+    "gate1_ready": false,
+    "failures": [
+      "scene_specificity",
+      "sameness"
+    ],
     "advisories": [
-      "entity_spend"
+      "entity_spend",
+      "top2"
     ],
     "detail": {
       "number_spend": {
@@ -472,7 +457,7 @@
         "mode": "cap"
       },
       "entity_spend": {
-        "score": 0.417,
+        "score": 0.25,
         "need": 0.5,
         "advisory": true
       },
@@ -481,18 +466,21 @@
           "DeepSeek",
           "Engram"
         ],
-        "present": true,
+        "present": false,
         "advisory": true
       },
       "hook_concrete": {
-        "concrete": false,
-        "via": [],
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:$4.65"
+        ],
         "waived": true
       },
       "scene_specificity": {
-        "specific": 10,
-        "need": 10,
-        "total": 12
+        "specific": 7,
+        "need": 9,
+        "total": 11
       },
       "not_x_but_y": {
         "count": 0,
@@ -505,7 +493,7 @@
       },
       "positional_labels": {
         "count": 0,
-        "structure": "contrarian-take",
+        "structure": "myth-bust",
         "allowed_structures": [
           "how-to-three-moves",
           "worked-example"
@@ -518,12 +506,20 @@
       },
       "sameness": {
         "checked": true,
-        "ok": true,
+        "ok": false,
         "ledger": "stages/04-script/output/script-ledger.json",
         "comparisons": 5,
-        "violations": [],
+        "violations": [
+          {
+            "rule": "structure",
+            "detail": "structure 'myth-bust' repeats 2026-09-16-replicating-a-paper-with-qwen",
+            "against": [
+              "2026-09-16-replicating-a-paper-with-qwen"
+            ]
+          }
+        ],
         "advisories": [],
-        "reason": null
+        "reason": "structure 'myth-bust' repeats 2026-09-16-replicating-a-paper-with-qwen"
       },
       "validator": {
         "blockers": 0
