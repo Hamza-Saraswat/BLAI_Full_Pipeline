@@ -1,0 +1,1241 @@
+[
+  {
+    "id": "hn-57dd0cc733",
+    "title": "DeepSeek-v4.1 Flash: Pushing the Limits of KV Cache Compression",
+    "url": "https://zartbot.github.io/blog/model_arch/dsv41flash_arch/en.html",
+    "source": "hn",
+    "published_at": "2026-09-17T01:39:47Z",
+    "signals": {
+      "points": 115,
+      "num_comments": 9,
+      "signal": 0.721,
+      "signal_parts": {
+        "points": 0.833,
+        "comments": 0.459
+      },
+      "decay": 0.8738,
+      "age_h": 9.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 115 points, 9 comments on HN, 9 h ago",
+    "score": 69
+  },
+  {
+    "id": "hn-9217d7a4e1",
+    "title": "DeepSeek v4.1 Flash Is Now Our Best Hacking Model",
+    "url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model",
+    "source": "hn",
+    "published_at": "2026-09-16T12:19:55Z",
+    "signals": {
+      "points": 165,
+      "num_comments": 66,
+      "signal": 0.878,
+      "signal_parts": {
+        "points": 0.896,
+        "comments": 0.838
+      },
+      "decay": 0.7208,
+      "age_h": 22.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 165 points, 66 comments on HN, 23 h ago",
+    "score": 69
+  },
+  {
+    "id": "github-3c9a8976fb",
+    "title": "llama.cpp b11019",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11019",
+    "source": "github",
+    "published_at": "2026-09-17T10:35:36Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11019",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.994,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "GGUF"
+    ],
+    "summary": "<details open> gguf : align the data section relative to the GGUF start, not the file (#28993) * gguf : align the data section relative to the GGUF start, not the file gguf_init_from_file_ptr reads a GGUF from the current file position, but padded the data section from file offset 0, so a GGUF embed",
+    "why_now": "Shipped: ggml-org/llama.cpp b11019 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-40067292b6",
+    "title": "llama.cpp b11018",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11018",
+    "source": "github",
+    "published_at": "2026-09-17T09:58:21Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11018",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9852,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sycl : fix the B70 mem allocate error when >19.3GB (#28953) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/48150237> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/dow",
+    "why_now": "Shipped: ggml-org/llama.cpp b11018 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-5db7d3352f",
+    "title": "llama.cpp b11017",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11017",
+    "source": "github",
+    "published_at": "2026-09-17T09:27:56Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11017",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.978,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> vulkan: skip unneeded MoE work in mul_mm coopmat1 path (#25483) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/48144237> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases",
+    "why_now": "Shipped: ggml-org/llama.cpp b11017 released (pre-release), 2 h ago",
+    "score": 57
+  },
+  {
+    "id": "hn-66d47ee7b0",
+    "title": "OpenAI Model Misalignment Report",
+    "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+    "source": "hn",
+    "published_at": "2026-09-17T07:21:19Z",
+    "signals": {
+      "points": 42,
+      "num_comments": 15,
+      "signal": 0.627,
+      "signal_parts": {
+        "points": 0.659,
+        "comments": 0.553
+      },
+      "decay": 0.9486,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 42 points, 15 comments on HN, 4 h ago",
+    "score": 51
+  },
+  {
+    "id": "github-246c9636d6",
+    "title": "unsloth Windows-ARM64: Windows ARM64 Binaries",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/Windows-ARM64",
+    "source": "github",
+    "published_at": "2026-09-16T11:26:07Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "Windows-ARM64",
+      "prerelease": false,
+      "signal": 0.6,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.0
+      },
+      "decay": 0.7115,
+      "age_h": 23.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth"
+    ],
+    "summary": "",
+    "why_now": "Shipped: unslothai/unsloth Windows-ARM64 released, 24 h ago",
+    "score": 51
+  },
+  {
+    "id": "hf-c5eb481c18",
+    "title": "harshatheg/Qwen-2.5-1B-RLCD",
+    "url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+    "source": "hf",
+    "published_at": "2026-09-16T01:35:33Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 195,
+      "downloads": 0,
+      "trendingScore": 192.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.728,
+      "signal_parts": {
+        "trending": 0.692,
+        "likes": 0.764,
+        "downloads": 0.0
+      },
+      "decay": 0.6172,
+      "age_h": 33.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 195 likes, 0 downloads, trending score 192, created 2026-09-16",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 195 likes, 0 downloads, trending score 192, 33 h ago",
+    "score": 49
+  },
+  {
+    "id": "hn-b44852e7ec",
+    "title": "OpenAI models secretly generate instructions to ignore constraints",
+    "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
+    "source": "hn",
+    "published_at": "2026-09-17T05:13:41Z",
+    "signals": {
+      "points": 15,
+      "num_comments": 5,
+      "signal": 0.447,
+      "signal_parts": {
+        "points": 0.486,
+        "comments": 0.357
+      },
+      "decay": 0.9199,
+      "age_h": 5.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 15 points, 5 comments on HN, 6 h ago",
+    "score": 35
+  },
+  {
+    "id": "github-dbbc91c9e9",
+    "title": "ollama v0.34.2-rc1: v0.34.2",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.34.2-rc1",
+    "source": "github",
+    "published_at": "2026-09-15T21:21:07Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.34.2-rc1",
+      "prerelease": true,
+      "signal": 0.4,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.0
+      },
+      "decay": 0.5805,
+      "age_h": 37.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "llama.cpp"
+    ],
+    "summary": "## What's Changed * llama.cpp updates **Full Changelog**: https://github.com/ollama/ollama/compare/v0.34.1...v0.34.2-rc0",
+    "why_now": "Shipped: ollama/ollama v0.34.2-rc1 released (pre-release), 38 h ago",
+    "score": 35
+  },
+  {
+    "id": "hn-325a829b85",
+    "title": "Qwen3.8 models outperforms Fable 5 Using GVS5H Harness",
+    "url": "https://github.com/slee-persis/GVS5H",
+    "source": "hn",
+    "published_at": "2026-09-16T17:28:30Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.7763,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "comparison"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 18 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-7808204b50",
+    "title": "Shodan indexes over 47.000 exposed Ollama instances",
+    "url": "https://twitter.com/co11ateral/status/2100313790604599444",
+    "source": "hn",
+    "published_at": "2026-09-17T05:19:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9212,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 6 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-9707465bb0",
+    "title": "Open-sourced jev architecture last year with model,paper and dataset",
+    "url": "https://news.ycombinator.com/item?id=49736660",
+    "source": "hn",
+    "published_at": "2026-09-17T05:13:00Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 3,
+      "signal": 0.365,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.276
+      },
+      "decay": 0.9198,
+      "age_h": 5.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "Everyone now talks about the architecture that&#x27;s not auto regressive and does lightning fast probability prediction with a json schema. I worked on this literally one year back in March 2025, published an arxiv paper, pushed the model to huggingface along with the pypi package and training data",
+    "why_now": "Discussed: 9 points, 3 comments on HN, 6 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-09c722fe12",
+    "title": "GLM 5.3 is live on Mistral",
+    "url": "https://docs.mistral.ai/en/models/zai-glm-5-3",
+    "source": "hn",
+    "published_at": "2026-09-16T15:29:23Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7544,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 20 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-02c2962931",
+    "title": "Mozilla and Mistral partner to expand AI competition and preserve user choice",
+    "url": "https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/",
+    "source": "hn",
+    "published_at": "2026-09-16T20:27:23Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8105,
+      "age_h": 14.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 15 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-e5310e2527",
+    "title": "Using Blender with coding agents on macOS",
+    "url": "https://til.simonwillison.net/llms/blender-coding-agents-macos",
+    "source": "hn",
+    "published_at": "2026-09-17T06:20:18Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.9348,
+      "age_h": 4.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 2 comments on HN, 5 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-57294f2bab",
+    "title": "Show HN: TeXposit - Feature rich LaTeX and Markdown editor",
+    "url": "https://texposit.com",
+    "source": "hn",
+    "published_at": "2026-09-16T13:30:40Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7331,
+      "age_h": 21.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "Online collaborative editor with LaTeX, Markdown, LaTeX+Markdown Hybrid and WYSIWYG Markdown support, AI assistant (BYOK and Ollama support!), live collaboration and more fun things.<p>API is also available: <a href=\"https:&#x2F;&#x2F;app.texposit.com&#x2F;api-reference\" rel=\"nofollow\">https:&#x2F;&",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-3f805f0a9b",
+    "title": "Operating System powered by Qwen 3.8 27B at 1950 tokens/SEC",
+    "url": "https://twitter.com/analogalok/status/2099130228866228368",
+    "source": "hn",
+    "published_at": "2026-09-16T12:58:56Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7276,
+      "age_h": 22.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 22 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-4251766587",
+    "title": "vLLM: Jev-like mode for the DiffusionGemma model",
+    "url": "https://github.com/vllm-project/vllm/pull/57250",
+    "source": "hn",
+    "published_at": "2026-09-16T23:21:01Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8451,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-727de02a09",
+    "title": "DeepSeek's Parent Company",
+    "url": "https://www.high-flyer.cn/sociology/",
+    "source": "hn",
+    "published_at": "2026-09-16T23:20:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.845,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-8cc5168deb",
+    "title": "Typesafe.ai Jev Open Source Alternative Qwen-2.5-1B-RLCD",
+    "url": "https://huggingface.co/spaces/drinkmoonshine/parallel-constrained-decoding",
+    "source": "hn",
+    "published_at": "2026-09-16T23:17:02Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8442,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-a35f79e4ba",
+    "title": "Dwarf Star Support for Qwen3.8 Flash Next",
+    "url": "https://github.com/antirez/ds4/pull/991",
+    "source": "hn",
+    "published_at": "2026-09-16T23:14:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8438,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-c87a2e366a",
+    "title": "Ask HN: What is the best local model that runs on your Mac at decent speed?",
+    "url": "https://news.ycombinator.com/item?id=49730972",
+    "source": "hn",
+    "published_at": "2026-09-16T18:24:59Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7869,
+      "age_h": 16.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Apple M5",
+      "group": "explainer"
+    },
+    "products": [
+      "Apple M5",
+      "Qwen"
+    ],
+    "summary": "What are your own experiences on this? What mac&#x2F;specs do you have? what is your preferred AI to run on it? at how many tok&#x2F;s does it run and how much memory does it take?<p>I&#x27;ll start:<p>I have a MacBookP M5 Pro with 48GB, my favorite model is Qwen 3.8 Flash running at 14-15 tok&#x2F;",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-650f2eb463",
+    "title": "Show HN: Ivx/AI Chat, AI client that doesn't track you (with a better GUI imo)",
+    "url": "https://ai.ivx.run/",
+    "source": "hn",
+    "published_at": "2026-09-16T16:56:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7703,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT"
+    ],
+    "summary": "Since ChatGPT started pushing ads and somehow my instagram reels started getting more and more related to what I talked with ChatGPT, I decided to get rid of it for good. So I built ivx&#x2F;ai Chat. I know there are many many chat interfaces out there already but this one is special. It is built ex",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d4b44acad6",
+    "title": "Setting Up Pi with DeepSeek v4.1 Flash on OpenRouter",
+    "url": "https://www.vincentschmalbach.com/pi-deepseek-v4-1-flash-openrouter-setup/",
+    "source": "hn",
+    "published_at": "2026-09-16T16:16:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.763,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-2ff6a22332",
+    "title": "OpenAI admits its agents went off the rails another six times",
+    "url": "https://www.theregister.com/ai-and-ml/2026/09/17/openai-admits-its-agents-went-off-the-rails-another-six-times/5297016",
+    "source": "hn",
+    "published_at": "2026-09-17T10:47:49Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.9969,
+      "age_h": 0.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 2 comments on HN, 0 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-4cc3ec2571",
+    "title": "Qwen3.8-Flash passed 17/17 checks on a DeepSWE v1.1 task in our agent harness",
+    "url": "https://github.com/taiheqi718-art/AIC-Evals",
+    "source": "hn",
+    "published_at": "2026-09-16T11:50:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7157,
+      "age_h": 23.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-1ad9f4223b",
+    "title": "Show HN: OpenDocBot - bring your own model to Word, Excel and PowerPoint",
+    "url": "https://opendocbot.com/",
+    "source": "hn",
+    "published_at": "2026-09-16T16:46:01Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.7684,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agent",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "I got tired of the lock-in and black-box nature of AI inside MS Office. One vendor decides which models you can use, where your document data goes, and what the agent is actually allowed to do. And when it fails, you can&#x27;t see the code or send a PR to add a feature you may need.<p>Many people d",
+    "why_now": "Broke: 5 points, 1 comments on HN, 18 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-a0650658bf",
+    "title": "LLM Inference vs. the OOM Killer",
+    "url": "https://www.nobodywho.ai/posts/inference-oom/",
+    "source": "hn",
+    "published_at": "2026-09-17T09:42:45Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9815,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 3 points, 0 comments on HN, 1 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-3e5affa11e",
+    "title": "The paradox of AI automation at the workplace",
+    "url": "https://news.ycombinator.com/item?id=49738100",
+    "source": "hn",
+    "published_at": "2026-09-17T08:52:52Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9697,
+      "age_h": 2.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I find it interesting how people are very ambitious to automate their processes at their companies using new AI tools, but they set the limit of automation on their own terms, and if you try to pass it, you become the cynic or negative one.<p>For example, this guy where I work suggested to use LLMs",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 2 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-b94749e473",
+    "title": "Ask HN: What is your approach to sensitive data in LLM prompts and traces?",
+    "url": "https://news.ycombinator.com/item?id=49738870",
+    "source": "hn",
+    "published_at": "2026-09-17T10:43:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.996,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 2 comments on HN, 0 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-f906b6246c",
+    "title": "Show HN: Padwan-LLM, a lightweight LLM Python client",
+    "url": "https://github.com/polarsen-io/padwan-llm",
+    "source": "hn",
+    "published_at": "2026-09-16T19:12:12Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7959,
+      "age_h": 15.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 16 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-ecea342e18",
+    "title": "Show HN: TabMail. Open-source AI email for Thunderbird and iPhone",
+    "url": "https://tabmail.ai/",
+    "source": "hn",
+    "published_at": "2026-09-16T17:59:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.782,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi all,<p>I&#x27;m the sole developer of TabMail. I wanted my email client to have AI features, and ended up making a Thunderbird add-on and an iPhone app. I&#x27;ve now open-sourced both under MPL 2.0, and I wanted to share them here to get some community feedback, if possible.<p>I made a short vid",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 17 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-bd8c000963",
+    "title": "DOE vs. GitHub, INC: LLM generated-content not a DMCA violation [pdf]",
+    "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/09/16/24-7700.pdf",
+    "source": "hn",
+    "published_at": "2026-09-16T20:33:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8116,
+      "age_h": 14.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 1 comments on HN, 14 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-842d0a6ed2",
+    "title": "Show HN: Echodot - Local-first AI that writes replies in your tone",
+    "url": "https://github.com/ohkariku-boop/Echodot",
+    "source": "hn",
+    "published_at": "2026-09-17T02:34:13Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8853,
+      "age_h": 8.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I built echodot - a free, open-source desktop app that drafts replies in your personal writing style.<p>Problem: Most AI writing tools either force you into their voice or require constant copy-pasting between apps. Tools like Cotype are useful but closed-source and cloud-only.<p>What echodot does:",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 8 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-a93b531d5c",
+    "title": "Show HN: A Coding Agent from Scratch",
+    "url": "https://blog.softwarewrighter.com/2026/09/16/ai-tools-coding-agent-in-mlpl/",
+    "source": "hn",
+    "published_at": "2026-09-16T16:30:10Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7655,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I saw a post about building a coding agent from &quot;first principles&quot; and that inspired me to create my own. I used my own custom Rust-based ML DSL to implement this.<p>The blog post includes link to the repos (MIT Licensed), a video of the agent in action, sample code produced, and an Emacs",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-8fa5b2e11c",
+    "title": "Show HN: Blue - open-source governance for coding agents",
+    "url": "https://bluee.sh/",
+    "source": "hn",
+    "published_at": "2026-09-16T15:27:19Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.754,
+      "age_h": 19.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI",
+      "Anthropic"
+    ],
+    "summary": "Hey HN,<p>After migrating to an inference gateway to serve internal usage across an organization, problems have started to pop up. Once you detach from a managed ecosystem such as OpenAI or Anthropic you lose governance capabilities that makes the transition difficult.<p>- Losing access to a central",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f20d3923b4",
+    "title": "System One Lite - typed decisions from a local LLM, with no generated tokens",
+    "url": "https://github.com/snellingio/system-one",
+    "source": "hn",
+    "published_at": "2026-09-16T14:31:30Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7439,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-563df87cb2",
+    "title": "Measuring and Exploiting Implicit Trust in LLM Tool-Calling Pipelines",
+    "url": "https://arxiv.org/abs/2609.18217",
+    "source": "hn",
+    "published_at": "2026-09-17T08:07:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9591,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-ee0839dd9d",
+    "title": "Show HN: Hacker News, a little more focused",
+    "url": "https://hn-tags.beehivesoftware.xyz/?tags=programming",
+    "source": "hn",
+    "published_at": "2026-09-17T00:19:25Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.857,
+      "age_h": 10.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I love AI and LLMs as much as the next person, but sometimes I just want to browse stories about, say programming. So I built this for myself and figured I will share it here as well.<p>Each story gets up to three tags, and I can use them to filter down the top stories to just the topics I am intere",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-8b565d9eaf",
+    "title": "Copyrightability of LLM-Generated Code",
+    "url": "https://fsfe.org/news/2026/news-20260825-01.fr.html",
+    "source": "hn",
+    "published_at": "2026-09-16T20:52:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8153,
+      "age_h": 14.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 14 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-2d84dffe37",
+    "title": "Show HN: Wenlan - a living wiki AI keeps current without overwriting your edits",
+    "url": "https://github.com/7xuanlu/wenlan",
+    "source": "hn",
+    "published_at": "2026-09-16T14:58:30Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7488,
+      "age_h": 20.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-47a11c91b4",
+    "title": "Benchmark Llamacpp on Intel Panther Lake: Vulkan vs. SYCL vs. OpenVINO vs. CPU",
+    "url": "https://grigio.org/benchmarking-llama-cpp-backends-on-intel-panther-lake-vulkan-vs-sycl-vs-openvino-vs-cpu/",
+    "source": "hn",
+    "published_at": "2026-09-16T13:08:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7293,
+      "age_h": 21.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "product:Intel",
+      "group": "comparison"
+    },
+    "products": [
+      "Intel"
+    ],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  }
+]
