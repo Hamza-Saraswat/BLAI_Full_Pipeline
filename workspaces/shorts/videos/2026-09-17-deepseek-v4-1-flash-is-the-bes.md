@@ -2,14 +2,14 @@
 slug: 2026-09-17-deepseek-v4-1-flash-is-the-bes
 workspace: shorts
 title: "DeepSeek V4.1 Flash: read the receipt"
-status: review
+status: approved
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T14:48:26Z"
+updated: "2026-09-17T15:36:56Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-17T14:48:30Z 07-render ok 103.30s: 12 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 81
 - 2026-09-17T14:48:30Z 07-render ok 1273s
 - 2026-09-17T14:48:32Z build done, status review
+- 2026-09-17T15:36:56Z telegram approve (approved_at 2026-09-17T15:36:56Z)
