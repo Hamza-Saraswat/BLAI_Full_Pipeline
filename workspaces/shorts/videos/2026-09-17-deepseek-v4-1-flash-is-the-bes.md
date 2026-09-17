@@ -2,19 +2,19 @@
 slug: 2026-09-17-deepseek-v4-1-flash-is-the-bes
 workspace: shorts
 title: "DeepSeek V4.1 Flash: read the receipt"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T14:04:31Z"
+updated: "2026-09-17T14:09:46Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 - Package: titles 1 searchable + 2 intriguing, chose the searchable one (search-heavy surface, autocomplete depth 39); seo_score 95 (>= 80 gate); description 634 bytes, keyword first, closest related video 2026-09-10 DeepSeek V4.1 Flash KV-cache Short linked; 3 hashtags, 15 tags; contains_synthetic_media false; publish_slot_hint empty (default 11:00/18:00 CT rotation). Checkpoint 3 passed unattended.
 
 ## Build journal
-
+- 2026-09-17T14:09:46Z build start on gn100-83c4
