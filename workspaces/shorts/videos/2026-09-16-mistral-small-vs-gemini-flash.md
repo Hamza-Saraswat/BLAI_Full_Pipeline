@@ -2,14 +2,14 @@
 slug: 2026-09-16-mistral-small-vs-gemini-flash
 workspace: shorts
 title: "Mistral Small vs Gemini Flash-Lite: event validation"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-09-16
-updated: "2026-09-16T11:08:45Z"
+updated: "2026-09-17T13:35:05Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - 2026-09-16: Picked as rank 3 (opportunity 55.2); comparison lane, measured benchmark from radar item hn-0f11b38d14. Took the second slot over Mistral x Mozilla (rank 2, 58.2) because news-react is barred by lane rotation (no non-pick candidate scores above 60). Chosen unattended per the stage 02 checkpoint.
 
 ## Build journal
-
+- 2026-09-17T13:35:05Z 2026-09-17T13:35:05Z expired: not from today's picks (2026-09-17); the factory carries no backlog
