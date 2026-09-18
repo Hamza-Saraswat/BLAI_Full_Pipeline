@@ -1,20 +1,20 @@
 ---
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
-title: "Why Claude Code skills never trigger"
-status: ready-to-build
+title: Why Claude Code skills never trigger
+status: building
 pillar: myth-bust
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-18
-updated: "2026-09-18T11:06:46Z"
+updated: "2026-09-18T12:51:46Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - 05 checkpoint (title): chose the searchable "Why Claude Code skills never trigger" over two intriguing variants; keyword depth 116 makes this a search surface and the rubric's frame-1 complement rule bars restating the hook. Rubric 90/100 (Description half credit: promise-first, channel line second). No duplicate against the eight published titles.
 
 ## Build journal
-
+- 2026-09-18T12:51:46Z build start on gn100-83c4
