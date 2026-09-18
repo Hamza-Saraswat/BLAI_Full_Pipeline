@@ -2,22 +2,22 @@
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
 title: Why Claude Code skills never trigger
-status: approved
+status: scheduled
 pillar: myth-bust
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-18
-updated: "2026-09-18T13:11:26Z"
-publish_slot: ""
+updated: "2026-09-18T13:13:47Z"
+publish_slot: "2026-09-18T11:00:00-05:00"
 seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: a2bba7c6-c826-4e4d-a735-a53f2735c1d7
 ---
 # 69% of public Claude skills never trigger
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-18-69-of-public-claude-skills-nev-package]]
 - Voice: narration normalized at stage 04: [[stages/06-voice/output/2026-09-18-69-of-public-claude-skills-nev-narration|narration.txt]] (stage 06 proper starts on the Spark)
 - Render: [[stages/07-render/output/2026-09-18-69-of-public-claude-skills-nev-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-18-69-of-public-claude-skills-nev-publish]]
 
 ## Decisions
 - 03 checkpoint (angle): confirmed "a lint of 216 public Claude Code skills found 69% cannot reliably trigger, and the fixes are mechanical"; slug 2026-09-18-69-of-public-claude-skills-nev kept.
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-09-18T13:08:08Z 07-render ok 919s
 - 2026-09-18T13:08:11Z build done, status review
 - 2026-09-18T13:11:26Z telegram approve (approved_at 2026-09-18T13:11:26Z)
+- 2026-09-18T13:13:48Z 08-publish ok 2s
