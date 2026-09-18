@@ -2,21 +2,21 @@
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
 title: Why Claude Code skills never trigger
-status: scheduled
+status: published
 pillar: myth-bust
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-18
-updated: "2026-09-18T13:13:47Z"
+updated: "2026-09-18T16:01:46Z"
 publish_slot: "2026-09-18T11:00:00-05:00"
 seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=aKeWxKsVU60"
 blotato_post_id: a2bba7c6-c826-4e4d-a735-a53f2735c1d7
 ---
 # 69% of public Claude skills never trigger
@@ -49,3 +49,4 @@ blotato_post_id: a2bba7c6-c826-4e4d-a735-a53f2735c1d7
 - 2026-09-18T13:08:11Z build done, status review
 - 2026-09-18T13:11:26Z telegram approve (approved_at 2026-09-18T13:11:26Z)
 - 2026-09-18T13:13:48Z 08-publish ok 2s
+- 2026-09-18T16:01:46Z published https://www.youtube.com/watch?v=aKeWxKsVU60
