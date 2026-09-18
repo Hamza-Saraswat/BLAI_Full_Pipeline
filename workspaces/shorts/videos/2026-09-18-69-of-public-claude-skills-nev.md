@@ -2,7 +2,7 @@
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
 title: "69% of public Claude skills never trigger"
-status: idea
+status: researched
 pillar: myth-bust
 structure: ""
 format: classic
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-18-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-18-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-18-69-of-public-claude-skills-nev-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
