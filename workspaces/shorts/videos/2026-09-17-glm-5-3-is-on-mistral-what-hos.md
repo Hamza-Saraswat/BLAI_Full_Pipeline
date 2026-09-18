@@ -2,14 +2,14 @@
 slug: 2026-09-17-glm-5-3-is-on-mistral-what-hos
 workspace: shorts
 title: "GLM 5.3 is on Mistral: what hosted weights mean for local runners"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-17
-updated: "2026-09-17T11:07:52Z"
+updated: "2026-09-18T13:35:40Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format: smooth-explainer -- a hosted listing read as a price signal needs the hosted-vs-local trade carried the whole way; classic barred by the 3-day rule (ran 09-15 and 09-16).
 
 ## Build journal
-
+- 2026-09-18T13:35:40Z 2026-09-18T13:35:40Z expired: not from today's picks (2026-09-18); the factory carries no backlog
