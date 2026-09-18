@@ -2,14 +2,14 @@
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
 title: Why Claude Code skills never trigger
-status: building
+status: review
 pillar: myth-bust
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-18
-updated: "2026-09-18T12:51:46Z"
+updated: "2026-09-18T13:08:05Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-18-69-of-public-claude-skills-nev-script]]
 - Package: [[stages/05-package/output/2026-09-18-69-of-public-claude-skills-nev-package]]
 - Voice: narration normalized at stage 04: [[stages/06-voice/output/2026-09-18-69-of-public-claude-skills-nev-narration|narration.txt]] (stage 06 proper starts on the Spark)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-18-69-of-public-claude-skills-nev-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -44,3 +44,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-18T12:51:46Z build start on gn100-83c4
 - 2026-09-18T12:52:46Z 06-voice ok 58s
+- 2026-09-18T13:08:08Z 07-render ok 40.47s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 86
+- 2026-09-18T13:08:08Z 07-render ok 919s
