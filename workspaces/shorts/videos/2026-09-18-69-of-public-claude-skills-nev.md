@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03 checkpoint (angle): confirmed "a lint of 216 public Claude Code skills found 69% cannot reliably trigger, and the fixes are mechanical"; slug 2026-09-18-69-of-public-claude-skills-nev kept.
+- Why: matches the ideas row (myth-bust, classic, TEACHES+REFRAMES) and the keyword gap (claude code skills, depth 116); no swap in picks, no redirect signal.
 
 ## Build journal
 
