@@ -1,0 +1,43 @@
+{
+  "full": "Sixty-nine percent of skills never fire. Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them. At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches. Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness. Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say. One line in skill dot M D decides if your skill runs. Rewrite it, and it fires.",
+  "words": 129,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Sixty-nine percent of skills never fire.",
+      "words": 6,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them.",
+      "words": 22,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches.",
+      "words": 33,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say.",
+      "words": 26,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "One line in skill dot M D decides if your skill runs. Rewrite it, and it fires.",
+      "words": 17,
+      "changed": true
+    }
+  ],
+  "source": "normalize_narration.py"
+}
