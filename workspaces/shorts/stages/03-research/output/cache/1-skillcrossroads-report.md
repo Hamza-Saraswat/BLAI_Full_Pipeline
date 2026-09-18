@@ -1,18 +1,18 @@
 # The State of Claude Code Skills
 
-_An evidence-based audit of 216 public Claude Code skills across 18 repositories, graded by **Skill Crossroads** (rubric v1.2) — the signpost for Claude Code artifacts. Includes the LLM-assisted checks (full edition). Every figure is traceable to the pinned git trees in the methodology. Generated 2026-09-10._
+_An evidence-based audit of 216 public Claude Code skills across 18 repositories, graded by **Skill Crossroads** (rubric v1.2) -- the signpost for Claude Code artifacts. Includes the LLM-assisted checks (full edition). Every figure is traceable to the pinned git trees in the methodology. Generated 2026-09-10._
 
-> **Edition & pinning.** Generated **2026-09-10** under **rubric v1.2, LLM (full) edition**. This report is a pinned snapshot: its figures are exact for the git trees and rubric named in the methodology, and are regenerated — never hand-edited — when the rubric moves.
+> **Edition & pinning.** Generated **2026-09-10** under **rubric v1.2, LLM (full) edition**. This report is a pinned snapshot: its figures are exact for the git trees and rubric named in the methodology, and are regenerated -- never hand-edited -- when the rubric moves.
 
-> **Edition note — what changed since the v1.0 edition (2026-07-09).** Rubric v1.2 added deterministic checks that v1.0 did not run — TRIGGER-02 (description long enough to anchor), TRIGGER-03 (invocation cues), TRIGGER-05 (invocation-flag consistency), VERIFY-01 (evals present), and VERIFY-03 (maintenance hygiene) — plus the informational TOKEN-04 cost estimate and the LLM-assisted CLARITY-02 contradiction check. Keyless scans now score all six categories, so grade distributions shift accordingly and are **not comparable one-to-one** with the v1.0 edition. Each edition pins its own rubric, git trees, and reproduction command; this one replaces the v1.0 edition as the live report.
+> **Edition note -- what changed since the v1.0 edition (2026-07-09).** Rubric v1.2 added deterministic checks that v1.0 did not run -- TRIGGER-02 (description long enough to anchor), TRIGGER-03 (invocation cues), TRIGGER-05 (invocation-flag consistency), VERIFY-01 (evals present), and VERIFY-03 (maintenance hygiene) -- plus the informational TOKEN-04 cost estimate and the LLM-assisted CLARITY-02 contradiction check. Keyless scans now score all six categories, so grade distributions shift accordingly and are **not comparable one-to-one** with the v1.0 edition. Each edition pins its own rubric, git trees, and reproduction command; this one replaces the v1.0 edition as the live report.
 
-> **Scope.** A deliberately mixed sample: Anthropic's well-maintained `anthropics/skills` catalog alongside a spread of community-authored repos (up to 12 skills each). This is a read on skills people actually publish — not a curated best-of.
+> **Scope.** A deliberately mixed sample: Anthropic's well-maintained `anthropics/skills` catalog alongside a spread of community-authored repos (up to 12 skills each). This is a read on skills people actually publish -- not a curated best-of.
 
 ## The headline
 
-**Among skills Skill Crossroads could score, 69% have a description that won't reliably trigger** — 87 (40%) outright unlikely to fire, 61 (28%) borderline. "My skill never fires" is the #1 real-world skill failure, and it hides in the frontmatter `description`.
+**Among skills Skill Crossroads could score, 69% have a description that won't reliably trigger** -- 87 (40%) outright unlikely to fire, 61 (28%) borderline. "My skill never fires" is the #1 real-world skill failure, and it hides in the frontmatter `description`.
 
-Skill Crossroads scored **215 of 216** skills for triggering — 1 could not be reached (model/network errors) and are excluded from the triggering figures.
+Skill Crossroads scored **215 of 216** skills for triggering -- 1 could not be reached (model/network errors) and are excluded from the triggering figures.
 
 The average Skill Crossroads score across all 216 skills is **82.1/100**.
 
@@ -26,7 +26,7 @@ borderline    (warn)    ██████░░░░░░░░░░░░�
 won't fire    (fail)    ████████░░░░░░░░░░░░  40%  (87)
 ```
 
-A description fails when it reads like a title, buries the use case, omits the natural-language phrases a user would actually say, or is so broad it never anchors. All of it is fixable **before** you publish — that's the point of the check.
+A description fails when it reads like a title, buries the use case, omits the natural-language phrases a user would actually say, or is so broad it never anchors. All of it is fixable **before** you publish -- that's the point of the check.
 
 ## Grade distribution
 
@@ -38,7 +38,7 @@ A description fails when it reads like a title, buries the use case, omits the n
 | D | 2 | 1% |
 | F | 6 | 3% |
 
-**Read the letter grades honestly.** Most public skills clear the deterministic floor — structure, budgets, and safety are table stakes, and letter grades cluster high because of it. The discriminating findings live in the LLM-assisted checks: whether the description will actually trigger (TRIGGER-01), whether constraints and failure modes are stated (CLARITY-05), whether the instructions contradict themselves (CLARITY-02), and whether anything verifies the work (VERIFY-04). A high letter grade means "won't visibly break"; the LLM rows in the chart below are where "actually good" is decided — and they are where most of the sample falls down.
+**Read the letter grades honestly.** Most public skills clear the deterministic floor -- structure, budgets, and safety are table stakes, and letter grades cluster high because of it. The discriminating findings live in the LLM-assisted checks: whether the description will actually trigger (TRIGGER-01), whether constraints and failure modes are stated (CLARITY-05), whether the instructions contradict themselves (CLARITY-02), and whether anything verifies the work (VERIFY-04). A high letter grade means "won't visibly break"; the LLM rows in the chart below are where "actually good" is decided -- and they are where most of the sample falls down.
 
 ## How skills do on each check
 
@@ -68,7 +68,7 @@ CLARITY-05 constraints & failure modes stated  ░░░░░░░░░░░
 VERIFY-04 verification step present            █░░░░░░░░░░░░░░░░░░░   3%   n=214 (6 warn, 202 fail)
 ```
 
-\_LLM checks (TRIGGER-01, CLARITY-02, CLARITY-05, VERIFY-04) show a smaller `n` than the deterministic checks when calls were dropped on transient model/network errors — each percentage is over the skills that check actually scored.\_
+\_LLM checks (TRIGGER-01, CLARITY-02, CLARITY-05, VERIFY-04) show a smaller `n` than the deterministic checks when calls were dropped on transient model/network errors -- each percentage is over the skills that check actually scored.\_
 
 ## What this means
 
@@ -87,7 +87,7 @@ The most common defects across the sample:
 - description long enough to anchor (TRIGGER-02): 22 of 215
 - under the line/token budget (TOKEN-01): 20 of 215
 
-Each is catchable **before** publishing, with `npx skillcrossroads ./your-skill` — and each is exactly the kind of thing that makes a good skill look broken in someone else's session.
+Each is catchable **before** publishing, with `npx skillcrossroads ./your-skill` -- and each is exactly the kind of thing that makes a good skill look broken in someone else's session.
 
 ## Methodology & reproducibility
 
@@ -114,4 +114,4 @@ Skill Crossroads' deterministic checks (rubric v1.2, no LLM) plus the LLM-assist
 | [Sandeeprdy1729/skill\_galaxy](https://skillcrossroads.com/s/Sandeeprdy1729/skill_galaxy) ( [source](https://github.com/Sandeeprdy1729/skill_galaxy)) | main | [`991d5af7a87f`](https://github.com/Sandeeprdy1729/skill_galaxy/tree/991d5af7a87f49d2c27748ba143c8c6490ad2514) | 12 | 0 |
 | [excatt/superclaude-plusplus](https://skillcrossroads.com/s/excatt/superclaude-plusplus) ( [source](https://github.com/excatt/superclaude-plusplus)) | main | [`a4beaf578860`](https://github.com/excatt/superclaude-plusplus/tree/a4beaf578860b63637213444854964a3106c9bbe) | 12 | 0 |
 
-Reproduce: `npm run build && BEACON_LLM=1 ANTHROPIC_API_KEY=… node scripts/state-of-skills.mjs` (default repo set) — or pass `owner/repo …` to scan your own.
+Reproduce: `npm run build && BEACON_LLM=1 ANTHROPIC_API_KEY=… node scripts/state-of-skills.mjs` (default repo set) -- or pass `owner/repo …` to scan your own.

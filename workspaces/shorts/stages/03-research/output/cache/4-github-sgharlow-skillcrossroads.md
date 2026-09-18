@@ -79,7 +79,7 @@ Open commit details
 
 [Permalink: Skill Crossroads](https://github.com/sgharlow/skillcrossroads#skill-crossroads)
 
-[![Workshown](https://camo.githubusercontent.com/b2938d9769efa0b8c65fc5f293a2427fdd0737d04a3a5f0f752fbb3501489399/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f576f726b73686f776e2d6d656d6265722d306237323835)](https://sgharlow.github.io/ai-control-framework/)**Part of [Workshown](https://sgharlow.github.io/ai-control-framework/) — show your work.** [ai-control-framework](https://github.com/sgharlow/ai-control-framework) (the how) ·
+[![Workshown](https://camo.githubusercontent.com/b2938d9769efa0b8c65fc5f293a2427fdd0737d04a3a5f0f752fbb3501489399/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f576f726b73686f776e2d6d656d6265722d306237323835)](https://sgharlow.github.io/ai-control-framework/)**Part of [Workshown](https://sgharlow.github.io/ai-control-framework/) -- show your work.** [ai-control-framework](https://github.com/sgharlow/ai-control-framework) (the how) ·
 [orchestra-lite](https://github.com/sgharlow/orchestra-lite) (the scale) ·
 [ai-pr-bot](https://github.com/sgharlow/ai-pr-bot) (the enforcement) ·
 [skillcrossroads](https://github.com/sgharlow/skillcrossroads) (the grade) ·
@@ -88,21 +88,21 @@ Open commit details
 
 [![Skill Crossroads](https://camo.githubusercontent.com/1c7bf90d1e992e5bb4625b9a8c53131f58a5c11757b98ee22b48e5e577b9690c/68747470733a2f2f736b696c6c63726f7373726f6164732e636f6d2f6170692f62616467652f73676861726c6f772f736b696c6c63726f7373726f6164732e737667)](https://skillcrossroads.com/s/sgharlow/skillcrossroads)
 
-Claude Code artifacts graded by [Skill Crossroads](https://skillcrossroads.com/) — click the badge for the evidence-cited scorecard.
+Claude Code artifacts graded by [Skill Crossroads](https://skillcrossroads.com/) -- click the badge for the evidence-cited scorecard.
 
 **Know before you ship.** The signpost for Claude Code skills, agents, slash commands, MCP
-configs, and plugins — live at [skillcrossroads.com](https://skillcrossroads.com/).
+configs, and plugins -- live at [skillcrossroads.com](https://skillcrossroads.com/).
 
-[![Skill Crossroads — live scorecard](https://camo.githubusercontent.com/0f212eeb088ca23a85e852a8e6d9448c390857a56f275de28376b26c3a1dc321/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f736b696c6c25323063726f7373726f6164732d6c69766525323073636f7265636172642d326561303433)](https://skillcrossroads.com/s/anthropics/skills)![rubric v1.2](https://camo.githubusercontent.com/2178c9ca36330d1e448cb86f4a0632c2c0415a3bcff82d28f1d60a2eaea5c73d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7275627269632d76312e322d353535)
+[![Skill Crossroads -- live scorecard](https://camo.githubusercontent.com/0f212eeb088ca23a85e852a8e6d9448c390857a56f275de28376b26c3a1dc321/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f736b696c6c25323063726f7373726f6164732d6c69766525323073636f7265636172642d326561303433)](https://skillcrossroads.com/s/anthropics/skills)![rubric v1.2](https://camo.githubusercontent.com/2178c9ca36330d1e448cb86f4a0632c2c0415a3bcff82d28f1d60a2eaea5c73d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7275627269632d76312e322d353535)
 
-Every skill hits a crossroads before you ship it. Skill Crossroads reads a Claude Code artifact — a
-**Skill**, subagent, slash command, `.mcp.json` config, or plugin — against an evidence-based
-rubric and points you one of three ways: **ship, fix, or rethink**. You get a letter grade, an embeddable badge, and a fix list —
+Every skill hits a crossroads before you ship it. Skill Crossroads reads a Claude Code artifact -- a
+**Skill**, subagent, slash command, `.mcp.json` config, or plugin -- against an evidence-based
+rubric and points you one of three ways: **ship, fix, or rethink**. You get a letter grade, an embeddable badge, and a fix list --
 every finding cited to a file and line.
 
-- **Ship** — grade A/B. It is ready. Here is your badge.
-- **Fix** — grade C/D. Specific, evidence-cited problems to correct first.
-- **Rethink** — grade F. Fundamental issues (will not trigger, unsafe, untested).
+- **Ship** -- grade A/B. It is ready. Here is your badge.
+- **Fix** -- grade C/D. Specific, evidence-cited problems to correct first.
+- **Rethink** -- grade F. Fundamental issues (will not trigger, unsafe, untested).
 
 > Anthropic's `skill-creator` measures _effectiveness_ (does the skill lift task success?).
 > Skill Crossroads grades _craftsmanship and safety_ (is it well-built, discoverable, and safe to ship?).
@@ -110,7 +110,7 @@ every finding cited to a file and line.
 
 > **Note:** the CLI is published on npm as `skillcrossroads` (`npx skillcrossroads ./my-skill`).
 > Internal workspace package names (`@beacon/core`) and `BEACON_*` env vars keep the original
-> codename by design — only the published CLI and the product brand are "Skill Crossroads".
+> codename by design -- only the published CLI and the product brand are "Skill Crossroads".
 
 ## Why
 
@@ -118,7 +118,7 @@ every finding cited to a file and line.
 
 The #1 real-world skill failure is _"my skill never fires."_ The #2 is _"it works on my_
 _machine but ships with a hardcoded key / an over-broad tool grant / no tests."_ Skill Crossroads catches
-those **before you publish**, with file-and-line receipts — not vibes.
+those **before you publish**, with file-and-line receipts -- not vibes.
 
 ## Install & use
 
@@ -142,7 +142,7 @@ npx skillcrossroads ./path-to-a-skill
 [Permalink: Subagents and slash commands too](https://github.com/sgharlow/skillcrossroads#subagents-and-slash-commands-too)
 
 The same rubric grades **subagents** (`.claude/agents/*.md`) and **slash commands**
-(`.claude/commands/*.md`) — auto-detected from the path, or forced with `--kind`:
+(`.claude/commands/*.md`) -- auto-detected from the path, or forced with `--kind`:
 
 ```
 skillcrossroads .claude/agents/code-reviewer.md    # one agent
@@ -161,18 +161,18 @@ Hosted scans (`/s/owner/repo` and badges) include agents and commands too.
 
 [Permalink: MCP configs (.mcp.json)](https://github.com/sgharlow/skillcrossroads#mcp-configs-mcpjson)
 
-Phase A of MCP support grades your **MCP configuration** — deterministic, evidence-cited:
+Phase A of MCP support grades your **MCP configuration** -- deterministic, evidence-cited:
 
 ```
 skillcrossroads .mcp.json          # auto-detected (or --kind=mcp)
 ```
 
-Checks: valid config shape (MCP-01), **version-pinned `npx` server packages** — an unpinned
+Checks: valid config shape (MCP-01), **version-pinned `npx` server packages** -- an unpinned
 server ships whatever is latest straight into your session (MCP-02), **TLS on remote**
-**transports** (MCP-03), and the standard secret scan on inline `env` values (SAFETY-01) —
+**transports** (MCP-03), and the standard secret scan on inline `env` values (SAFETY-01) --
 including JSON-style `"DB_PASSWORD": "…"` assignments.
 
-**Phase B — grade the servers themselves** (explicit opt-in, local only):
+**Phase B -- grade the servers themselves** (explicit opt-in, local only):
 
 ```
 skillcrossroads .mcp.json --mcp-live
@@ -180,22 +180,22 @@ skillcrossroads .mcp.json --mcp-live
 
 `--mcp-live` spawns each **stdio** server from _your own config_, performs the MCP handshake,
 and grades what comes back: servers answer `tools/list` (MCPT-01), **tool descriptions anchor**
-**invocation** — the "will the model ever pick this tool?" floor (MCPT-02), and input parameters
+**invocation** -- the "will the model ever pick this tool?" floor (MCPT-02), and input parameters
 are documented (MCPT-03). URL transports are skipped; the hosted site never spawns servers.
 
 ### Plugins (`.claude-plugin/plugin.json`)
 
 [Permalink: Plugins (.claude-plugin/plugin.json)](https://github.com/sgharlow/skillcrossroads#plugins-claude-pluginpluginjson)
 
-A **plugin** scan grades the manifest itself _plus_ every artifact it contains — one batch,
+A **plugin** scan grades the manifest itself _plus_ every artifact it contains -- one batch,
 one roll-up:
 
 ```
 skillcrossroads ./my-plugin          # auto-detected via .claude-plugin/plugin.json
 ```
 
-Checks: manifest validity — `name` present and kebab-case, known fields correctly typed; a
-string `keywords` is a load error (PLUGIN-01); **declared component paths resolve** — `../`
+Checks: manifest validity -- `name` present and kebab-case, known fields correctly typed; a
+string `keywords` is a load error (PLUGIN-01); **declared component paths resolve** -- `../`
 traversal is dead after the install-cache copy (PLUGIN-02); a substantive marketplace
 `description` (PLUGIN-03); and the **hooks safety sweep** (HOOK-01): hook commands run
 automatically on every installer's machine, so `rm -rf`, `sudo`, `curl | sh`, force-pushes, and
@@ -206,7 +206,7 @@ agents, commands, and `.mcp.json` are graded as their own rows. Hosted scans inc
 
 [Permalink: Scan a whole GitHub repo (no clone)](https://github.com/sgharlow/skillcrossroads#scan-a-whole-github-repo-no-clone)
 
-Point Skill Crossroads at a public repo and it grades every skill it finds — fetched via the GitHub API,
+Point Skill Crossroads at a public repo and it grades every skill it finds -- fetched via the GitHub API,
 nothing cloned on your side:
 
 ```
@@ -227,7 +227,7 @@ skillcrossroads ./my-skill --html --badge
 #   wrote SVG  → my-skill.beacon.svg      ← drop it in your README
 ```
 
-Then embed the badge in your skill's README — the local file, or (recommended) the hosted
+Then embed the badge in your skill's README -- the local file, or (recommended) the hosted
 **always-fresh** badge wrapped in a link to your public scorecard, so every visitor who sees it
 can click through and scan their own skill:
 
@@ -239,7 +239,7 @@ can click through and scan their own skill:
 [![Skill Crossroads](https://skillcrossroads.com/api/badge/OWNER/REPO.svg)](https://skillcrossroads.com/s/OWNER/REPO)
 ```
 
-Or skip the copy-paste entirely — `init` puts the hosted badge in for you:
+Or skip the copy-paste entirely -- `init` puts the hosted badge in for you:
 
 ```
 skillcrossroads init            # in your repo: adds the badge under your README's H1
@@ -247,14 +247,14 @@ skillcrossroads init --dry-run  # preview the change first
 ```
 
 It reads your repo's `owner/repo` from the git remote (override with `--repo owner/name`),
-confirms there are gradeable artifacts, and inserts the always-fresh linked badge — creating a
+confirms there are gradeable artifacts, and inserts the always-fresh linked badge -- creating a
 minimal README if you don't have one. It never commits; review the diff and commit yourself.
 
 ### LLM-assisted triggering check (BYOK)
 
 [Permalink: LLM-assisted triggering check (BYOK)](https://github.com/sgharlow/skillcrossroads#llm-assisted-triggering-check-byok)
 
-The highest-value check — _"will this skill actually fire?"_ — uses a model. Bring your own
+The highest-value check -- _"will this skill actually fire?"_ -- uses a model. Bring your own
 Anthropic key; deterministic checks always run without one.
 
 ```
@@ -265,12 +265,12 @@ BEACON_MODEL=claude-haiku-4-5 skillcrossroads ./my-skill   # cheaper model
 
 Verdicts are cached by content hash in a per-user OS cache directory (shared across every repo
 you scan; a legacy `./.beacon-cache` is used if one already exists), so re-scanning an unchanged
-skill is free. Without a key, Skill Crossroads runs deterministic-only — **skill scans still score all six**
+skill is free. Without a key, Skill Crossroads runs deterministic-only -- **skill scans still score all six**
 **categories** (rubric v1.1+; Triggering uses the deterministic heuristics, and a key upgrades it
 to the LLM verdict). Keyless agent scans leave Verifiability unscored; keyless command scans
 leave Verifiability unscored too (Triggering is n/a for commands either way).
 
-A key also switches the token estimate to an **exact `count_tokens`** figure — the same tokenizer
+A key also switches the token estimate to an **exact `count_tokens`** figure -- the same tokenizer
 Claude Code's `/context` uses, so it's the same number a skill actually costs. Offline, Skill Crossroads shows
 a clearly-labeled rough estimate (skill markdown tokenizes denser than prose, so it can be ~10–25% off).
 
@@ -287,7 +287,7 @@ skillcrossroads ./my-skill --suggest          # proposals for the top 3 findings
 skillcrossroads ./my-skill --suggest=5 --html # top 5, embedded in the HTML scorecard too
 ```
 
-Suggestions are **proposals only — Skill Crossroads never edits your files**. You review, edit,
+Suggestions are **proposals only -- Skill Crossroads never edits your files**. You review, edit,
 and apply them yourself. Like the other LLM checks, results are cached by content hash, so
 re-running on an unchanged skill is free. On the hosted site, Pro single-artifact scans can
 request the same thing with `?suggest=1`.
@@ -312,7 +312,7 @@ request the same thing with `?suggest=1`.
 TOP FIXES (ranked by score impact)
 
 ✗ STRUCT-05  Supporting-file reference does not resolve.
-   Evidence: SKILL.md:14 links `./references/converter.md` — file not
+   Evidence: SKILL.md:14 links `./references/converter.md` -- file not
    found in the skill directory. Fix: add the file or remove the link.
 
 ⚠ SAFETY-01  Possible hardcoded secret.
@@ -326,16 +326,16 @@ The voice is the product: **evidence-cited, "claimed vs. verified," no false con
 
 [Permalink: The scoring rubric (v1.2)](https://github.com/sgharlow/skillcrossroads#the-scoring-rubric-v12)
 
-> **v1.2 (2026-07):** adds TRIGGER-05 (invocation-flag consistency — flags must be real YAML
+> **v1.2 (2026-07):** adds TRIGGER-05 (invocation-flag consistency -- flags must be real YAML
 > booleans, and an artifact nobody can invoke fails; skills + subagents), TOKEN-04 (recurring
 > per-invocation cost estimate at a named reference rate), CLARITY-02 (internal contradictions,
-> LLM-assisted), and VERIFY-03 (maintenance hygiene: version/changelog/readme; informational —
+> LLM-assisted), and VERIFY-03 (maintenance hygiene: version/changelog/readme; informational --
 > always passes, since a per-skill scan can't see repo-root hygiene). Commands keep Triggering
 > "n/a for this kind": an explicitly-invoked command must not score the rubric's largest
 > category from mere flag-absence.
 >
 > **v1.1 (2026-07):** deterministic Triggering (TRIGGER-02/03 description heuristics) and
-> Verifiability (VERIFY-01 evals-present) checks — **keyless skill scans now score all six**
+> Verifiability (VERIFY-01 evals-present) checks -- **keyless skill scans now score all six**
 > **categories** (no more partial asterisk for skills). A key still upgrades Triggering to the
 > LLM verdict and adds VERIFY-04/CLARITY-05.
 
@@ -345,21 +345,21 @@ plus evidence. Category scores roll up to an overall 0–100 and a letter grade.
 | Category | Weight | Checks (rubric v1.2) |
 | --- | --- | --- |
 | Correctness & Structure | 20% | valid frontmatter, recommended fields, references resolve; valid agent `model:` (AGENT-01); valid MCP config (MCP-01); plugin manifest validity + component resolution (PLUGIN-01/02) |
-| Triggering & Discoverability | 22% | description length + invocation cues (TRIGGER-02/03, deterministic); invocation-flag consistency (TRIGGER-05, deterministic; skills + subagents — commands are explicitly invoked, so Triggering is n/a for them); plugin marketplace description (PLUGIN-03); triggers reliably _(LLM-assisted, BYOK)_ |
+| Triggering & Discoverability | 22% | description length + invocation cues (TRIGGER-02/03, deterministic); invocation-flag consistency (TRIGGER-05, deterministic; skills + subagents -- commands are explicitly invoked, so Triggering is n/a for them); plugin marketplace description (PLUGIN-03); triggers reliably _(LLM-assisted, BYOK)_ |
 | Clarity & Instruction Quality | 18% | no ASCII-art/persona filler; `argument-hint` agreement (CMD-01); no internal contradictions _(LLM, CLARITY-02)_; constraints & failure modes stated _(LLM)_ |
 | Token & Context Cost | 15% | body budget, progressive disclosure, description footprint, recurring per-invocation cost estimate (TOKEN-04) (exact `count_tokens` with a key) |
 | Safety & Security | 15% | no hardcoded secrets (incl. JSON env values), `allowed-tools`/`tools` least-privilege, no destructive auto-invocation, no `!`-block shell injection, pinned MCP servers + TLS transports (MCP-02/03), hooks destructive-command sweep (HOOK-01) |
-| Verifiability & Maintainability | 10% | evals/tests present (VERIFY-01, deterministic); version/changelog/readme hygiene (VERIFY-03, deterministic + informational — always passes; repo-root hygiene isn't visible to a per-skill scan); verification step quality _(LLM-assisted, BYOK)_ |
+| Verifiability & Maintainability | 10% | evals/tests present (VERIFY-01, deterministic); version/changelog/readme hygiene (VERIFY-03, deterministic + informational -- always passes; repo-root hygiene isn't visible to a per-skill scan); verification step quality _(LLM-assisted, BYOK)_ |
 
 The rubric is **versioned** (`RUBRIC_VERSION` in `@beacon/core`); the implemented check catalog
 is [`packages/core/src/checks/index.ts`](https://github.com/sgharlow/skillcrossroads/blob/main/packages/core/src/checks/index.ts), with more checks
-on the roadmap. **Every check has a reference page** — what it looks for, why it matters, and
-how to fix it, with examples — at
+on the roadmap. **Every check has a reference page** -- what it looks for, why it matters, and
+how to fix it, with examples -- at
 [skillcrossroads.com/docs/checks](https://skillcrossroads.com/docs/checks); findings on every
 surface (scorecard, PR comment, annotations, terminal) link to their check's page.
 
 **Partial grades are kind-aware:** a grade is marked partial (`*` on the badge) only when a
-category that _could_ score for that artifact kind went unscored — e.g. keyless LLM checks, or
+category that _could_ score for that artifact kind went unscored -- e.g. keyless LLM checks, or
 a `.mcp.json` scanned without `--mcp-live`. Categories that structurally don't apply to a kind
 (Token cost for a `.mcp.json` config, Triggering for a slash command) show as "n/a" and never
 mark the grade partial, so a fully-keyed command scan is a full grade.
@@ -369,7 +369,7 @@ mark the grade partial, so a fully-keyed command scan is a full grade.
 [Permalink: Configuration (.skillcrossroads.json)](https://github.com/sgharlow/skillcrossroads#configuration-skillcrossroadsjson)
 
 Place a `.skillcrossroads.json` in the scanned directory (or the directory you run from) to
-tune CI/local scans — **every suppression requires a reason, is always disclosed on the**
+tune CI/local scans -- **every suppression requires a reason, is always disclosed on the**
 **scorecard, and `SAFETY-*` checks can never be suppressed**:
 
 ```
@@ -380,28 +380,28 @@ tune CI/local scans — **every suppression requires a reason, is always disclos
 ```
 
 `minGrade` sets the default CI gate when `--min-grade` isn't passed. Hosted scans on
-skillcrossroads.com never apply a repo's config — a public grade always reflects the full rubric.
+skillcrossroads.com never apply a repo's config -- a public grade always reflects the full rubric.
 
-Full-rubric SKILL scorecards also show an ecosystem percentile — _"scores higher than ≈N% of_
+Full-rubric SKILL scorecards also show an ecosystem percentile -- _"scores higher than ≈N% of_
 _208 public skills (deterministic rubric v1.2 sample, 2026-09)"_. The comparison sample is
 regenerated under the **current rubric** (deterministic edition, `scripts/percentile-sample.mjs`)
-on every rubric bump, so live scores are always ranked against like-for-like grades — a test
+on every rubric bump, so live scores are always ranked against like-for-like grades -- a test
 pins the sample rubric to the engine's, and the label names the sample so drift stays visible.
 It is an interpolated estimate, hence the ≈. (The published
-[State of Skills](https://skillcrossroads.com/report) report is a separate pinned artifact —
-v1.0 LLM edition — and is deliberately _not_ this sample.)
+[State of Skills](https://skillcrossroads.com/report) report is a separate pinned artifact --
+v1.0 LLM edition -- and is deliberately _not_ this sample.)
 
 ## Use it from inside Claude Code
 
 [Permalink: Use it from inside Claude Code](https://github.com/sgharlow/skillcrossroads#use-it-from-inside-claude-code)
 
 This repo ships an [`audit-skill`](https://github.com/sgharlow/skillcrossroads/blob/main/plugin/skills/audit-skill/SKILL.md) Skill: install the plugin, then invoke it
-explicitly — `/skillcrossroads:audit-skill` (verify the exact invocation name against
+explicitly -- `/skillcrossroads:audit-skill` (verify the exact invocation name against
 [`.claude-plugin/plugin.json`](https://github.com/sgharlow/skillcrossroads/blob/main/.claude-plugin/plugin.json) and the skill's `name:` field for
 your installed version). It's explicit-invocation only, by design: the skill applies fixes
-directly to your files, so it never auto-fires on a passing mention — you invoke it
+directly to your files, so it never auto-fires on a passing mention -- you invoke it
 deliberately, and it runs the CLI, walks the ranked fix list, applies fixes, and re-grades until
-the score stops improving. (Skill Crossroads takes its own SAFETY-03 medicine here — a skill
+the score stops improving. (Skill Crossroads takes its own SAFETY-03 medicine here -- a skill
 that edits files doesn't get to auto-invoke itself.) It grades A+ on its own rubric (run
 `node packages/cli/dist/cli.js ./skill` to reproduce), and CI enforces a minimum grade on every PR.
 
@@ -409,7 +409,7 @@ that edits files doesn't get to auto-invoke itself.) It grades A+ on its own rub
 
 [Permalink: Continuous integration (GitHub Action)](https://github.com/sgharlow/skillcrossroads#continuous-integration-github-action)
 
-Gate skill quality on every PR in three lines — the Action grades your skills, **comments a**
+Gate skill quality on every PR in three lines -- the Action grades your skills, **comments a**
 **scorecard**, and **fails the build** below a grade you pick (full docs: [`apps/action`](https://github.com/sgharlow/skillcrossroads/blob/main/apps/action)):
 
 ```
@@ -423,39 +423,39 @@ The CLI is CI-native on its own, too:
 ```
 skillcrossroads ./skills --markdown          # a Markdown report (job summary / PR comment)
 skillcrossroads ./skills --min-grade B       # exit non-zero if any skill is below B (the gate)
-skillcrossroads ./skills --annotations=ann.txt   # ::warning/::error lines, file:line-anchored —
+skillcrossroads ./skills --annotations=ann.txt   # ::warning/::error lines, file:line-anchored --
                                                  # cat the file in a CI step for inline PR annotations
 skillcrossroads ./skills --json              # scorecard as JSON to stdout (--json=out.json for a
                                              # sidecar file alongside the normal report)
 skillcrossroads ./skills --no-llm            # force deterministic-only, even if a key is set
 ```
 
-A local path may be a single skill or a **folder of skills** — every `SKILL.md` under it is scanned.
+A local path may be a single skill or a **folder of skills** -- every `SKILL.md` under it is scanned.
 
 ## Hosted web app (`@beacon/web`)
 
 [Permalink: Hosted web app (@beacon/web)](https://github.com/sgharlow/skillcrossroads#hosted-web-app-beaconweb)
 
-A Next.js app (in `apps/web`) serves the shareable side of Skill Crossroads — it reuses `@beacon/core`:
+A Next.js app (in `apps/web`) serves the shareable side of Skill Crossroads -- it reuses `@beacon/core`:
 
-- **Public scorecard pages** — `/s/owner/repo/path/to/skill` renders the scorecard HTML
+- **Public scorecard pages** -- `/s/owner/repo/path/to/skill` renders the scorecard HTML
 scorecard (a repo URL renders a summary of every skill). Mobile-responsive, self-contained.
-- **Always-fresh badge endpoint** — `/api/badge/owner/repo/path.svg` returns the SVG grade badge,
+- **Always-fresh badge endpoint** -- `/api/badge/owner/repo/path.svg` returns the SVG grade badge,
 scanned live with a short CDN TTL so it updates on re-scan.
-- **JSON API** — `/api/scan?repo=owner/repo`.
-- **GitHub OAuth** — `/api/auth/github` (build-ready; set `GITHUB_CLIENT_ID`/`SECRET` to enable).
-- **Pro tier (open-core)** — `/pricing` (Free / Pro $19 / Team $99). Stripe subscription checkout
+- **JSON API** -- `/api/scan?repo=owner/repo`.
+- **GitHub OAuth** -- `/api/auth/github` (build-ready; set `GITHUB_CLIENT_ID`/`SECRET` to enable).
+- **Pro tier (open-core)** -- `/pricing` (Free / Pro $19 / Team $99). Stripe subscription checkout
 (`/api/checkout` \+ `/api/stripe/webhook`), Pro entitlements, and Pro-only **private-repo scanning**
   - **managed LLM** (no user key needed). All gated on `STRIPE_*` / `BEACON_MANAGED_ANTHROPIC_KEY`
-    env vars — the **free tier is unaffected** when they're unset.
-- **Account self-service** — `/account` shows your GitHub identity, plan (Free/Pro), and your recent
+    env vars -- the **free tier is unaffected** when they're unset.
+- **Account self-service** -- `/account` shows your GitHub identity, plan (Free/Pro), and your recent
 scans. **Manage / cancel** your subscription via the Stripe Customer Portal (`/api/billing/portal`
-— no card data touches the app), and **sign out** (`/api/auth/logout`). The `init` CLI command
+-- no card data touches the app), and **sign out** (`/api/auth/logout`). The `init` CLI command
 (`skillcrossroads init`) drops the always-fresh badge into your README.
-- **Public gallery** — `/gallery`, a leaderboard of opted-in scored skills (opt in via
+- **Public gallery** -- `/gallery`, a leaderboard of opted-in scored skills (opt in via
 `/api/gallery/opt-in`), server-rendered and SEO-indexed (`sitemap.xml` \+ `robots.txt`), with
 sort (score / recent / name) and filter (min-grade / search).
-- **Score history & trends** — every scan is recorded; `/trends/owner/repo/path` shows a
+- **Score history & trends** -- every scan is recorded; `/trends/owner/repo/path` shows a
 self-contained SVG trend chart of a skill's grade over time, and `/dashboard` is a metrics view
 (total scans, skills tracked, grade distribution, recent activity).
 
@@ -465,13 +465,13 @@ Run locally: `cd apps/web && npm run dev`. Set `GITHUB_TOKEN` for higher GitHub 
 
 [Permalink: Status](https://github.com/sgharlow/skillcrossroads#status)
 
-**Live in production** — the hosted app (public scorecards, always-fresh badges, gallery, trends,
+**Live in production** -- the hosted app (public scorecards, always-fresh badges, gallery, trends,
 and the published [State of Claude Code Skills report](https://skillcrossroads.com/report)) is
 `live-proven` at [skillcrossroads.com](https://skillcrossroads.com/), and the CLI is published on
 npm as [`skillcrossroads`](https://www.npmjs.com/package/skillcrossroads). **Twenty-six**
 **deterministic checks** across skills, subagents, slash commands, `.mcp.json` configs, and
-plugins — plus three live MCP server checks behind `--mcp-live` and four LLM-assisted checks
-(BYOK) — **TRIGGER-01** (triggering; verdicts matched a hand-labeled 14-skill set at **92.9%**
+plugins -- plus three live MCP server checks behind `--mcp-live` and four LLM-assisted checks
+(BYOK) -- **TRIGGER-01** (triggering; verdicts matched a hand-labeled 14-skill set at **92.9%**
 against the live API, run `npm run eval:triggering`), **VERIFY-04** (verification quality),
 **CLARITY-05** (constraints & failure modes), and **CLARITY-02** (internal contradictions).
 Keyless **skill** scans score all six rubric
@@ -487,7 +487,7 @@ the roadmap.
 
 [Permalink: License](https://github.com/sgharlow/skillcrossroads#license)
 
-MIT — see [`LICENSE`](https://github.com/sgharlow/skillcrossroads/blob/main/LICENSE).
+MIT -- see [`LICENSE`](https://github.com/sgharlow/skillcrossroads/blob/main/LICENSE).
 
 ## About
 
