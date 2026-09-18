@@ -2,14 +2,14 @@
 slug: 2026-09-18-69-of-public-claude-skills-nev
 workspace: shorts
 title: Why Claude Code skills never trigger
-status: review
+status: approved
 pillar: myth-bust
 structure: number-first
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-18
-updated: "2026-09-18T13:08:05Z"
+updated: "2026-09-18T13:11:26Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-09-18T13:08:08Z 07-render ok 40.47s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 86
 - 2026-09-18T13:08:08Z 07-render ok 919s
 - 2026-09-18T13:08:11Z build done, status review
+- 2026-09-18T13:11:26Z telegram approve (approved_at 2026-09-18T13:11:26Z)
