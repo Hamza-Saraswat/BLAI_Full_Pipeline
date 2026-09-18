@@ -1,0 +1,425 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-18T12:45:15+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-18-69-of-public-claude-skills-nev-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-18-69-of-public-claude-skills-nev-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 8,
+    "claims_by_quality": {
+      "benchmark": 3,
+      "primary": 4,
+      "community": 1
+    },
+    "pct_primary_docs": 0.5,
+    "key_numbers_total": 7,
+    "entities_total": 7,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.385,
+    "source_domains": [
+      "anthropic.com",
+      "claude.com",
+      "scottspence.com",
+      "skillcrossroads.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.429,
+      "detail": [
+        {
+          "label": "scored skills whose description will not reliably trigger (share of 215 scored)",
+          "value": "69%",
+          "spent": true,
+          "matched_in": "both",
+          "matched_token": "Sixty-nine",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "skills outright unlikely to fire",
+          "value": "87 (40%)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "skills borderline for triggering",
+          "value": "61 (28%)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "share of skills passing the invocation-cues check (TRIGGER-03)",
+          "value": "52%",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "fifty-two",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "skills passing every check cleanly",
+          "value": "1 of 216",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "216",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "average Skill Crossroads score across all 216 skills",
+          "value": "82.1/100",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "character cap on combined description and when_to_use text in the Claude Code skill listing",
+          "value": "1,536 characters",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 7,
+      "found_count": 1,
+      "score": 0.143,
+      "found": [
+        "Skills"
+      ],
+      "missing": [
+        "YAML",
+        "Skill Crossroads",
+        "v1.2",
+        "TRIGGER-03",
+        "Scott Spence",
+        "GitHub"
+      ],
+      "top2": [
+        "Skills",
+        "YAML"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Skills",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "YAML",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Skill Crossroads",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v1.2",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "TRIGGER-03",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Scott Spence",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GitHub",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 13,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:69%",
+        "entity:Skills"
+      ],
+      "hook_text": "Sixty-nine percent of skills never fire.",
+      "first_sentence": "Sixty-nine percent of skills never fire."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "number-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 2.1,
+          "specific": true,
+          "hits": [
+            "num:69%",
+            "entity:Skills"
+          ],
+          "narration": "Sixty-nine percent of skills never fire."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "num:1 of 216",
+            "entity:Skills"
+          ],
+          "narration": "Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "glossary:Claude Code"
+          ],
+          "narration": "At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": false,
+          "hits": [],
+          "narration": "Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "num:52%",
+            "entity:Skills"
+          ],
+          "narration": "Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 4.8,
+          "specific": true,
+          "hits": [
+            "glossary:SKILL.md"
+          ],
+          "narration": "One line in SKILL.md decides if your skill runs. Rewrite it, and it fires."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.4,
+      "words": 130,
+      "sentences": 13,
+      "est_speech_s": 44.8,
+      "vo_band_ok": true
+    },
+    "narration_full": "Sixty-nine percent of skills never fire. Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them. At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches. Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness. Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say. One line in SKILL.md decides if your skill runs. Rewrite it, and it fires.",
+    "on_screen": "Sixty-nine percent of skills never fire. | 69%. Skills that never fire. | 216 public skills judged | description = entire selection surface | vague description = silent failure | 52% include invocation cues | rewrite the line"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-18-69-of-public-claude-skills-nev-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 4.4,
+        "words": 130,
+        "est_speech_s": 44.8,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "target 44s outside the 32-38s evidence band",
+          "title 41 chars \u2014 mobile truncates ~40",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s06: 'SKILL' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-18-69-of-public-claude-skills-nev-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.143,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Skills",
+          "YAML"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:69%",
+          "entity:Skills"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "number-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

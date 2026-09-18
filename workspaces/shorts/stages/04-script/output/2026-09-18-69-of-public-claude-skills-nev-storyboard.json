@@ -1,0 +1,111 @@
+{
+  "slug": "2026-09-18-69-of-public-claude-skills-nev",
+  "topic": "Most public Claude Code skills never fire because their one-line description is written like a title instead of a trigger",
+  "title": "69% of public Claude skills never trigger",
+  "description": "A lint of 216 public Claude Code skills found 69% cannot reliably trigger. The fix is one line.",
+  "hashtags": [
+    "#claudecode",
+    "#aiagents"
+  ],
+  "tags": [
+    "claude code skills",
+    "claude code",
+    "ai agents",
+    "agent skills",
+    "claude skills not triggering",
+    "skill md",
+    "anthropic claude",
+    "coding agent",
+    "ai coding tools",
+    "claude code tutorial",
+    "custom skills",
+    "claude automation",
+    "ai tools 2026",
+    "local ai",
+    "build local ai"
+  ],
+  "hook_text": "Sixty-nine percent of skills never fire.",
+  "hook_candidates": [
+    "Sixty-nine percent of skills never fire.",
+    "Sixty-nine percent of public Claude skills never trigger.",
+    "Two hundred sixteen skills checked. One passed clean.",
+    "Your Claude skills are installed, listed, and asleep.",
+    "A lint just graded two hundred sixteen Claude skills.",
+    "Three moves and your Claude skills fire tonight.",
+    "Claude reads one line of your skill. Most blow it.",
+    "Only fifty-two percent of skills say when to fire.",
+    "Your skills folder is a crew nobody calls in.",
+    "One line of text decides if your skill ever runs."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,REFRAMES",
+  "hook_pattern": "number-shock",
+  "target_duration_s": 44,
+  "narration_full": "Sixty-nine percent of skills never fire. Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them. At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches. Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness. Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say. One line in SKILL.md decides if your skill runs. Rewrite it, and it fires.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Sixty-nine percent of skills never fire.",
+      "on_screen_text": "69%. Skills that never fire.",
+      "visual_brief": "Giant \"69%\" and subline fully legible at frame 1 on dark background; the number begins a subtle scale settle within half a second, single amber accent, nothing else moves.",
+      "est_duration_s": 2.1
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your skills show up when listed, yet Claude works without them. A lint, a static checker, judged two hundred sixteen of them.",
+      "on_screen_text": "216 public skills judged",
+      "visual_brief": "On \"show up when listed\" a left column of skill names fades in; on \"works without them\" a right column rises showing the task done alone; on \"two hundred sixteen\" the count fades in below, amber accent on the count only.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "At startup, Claude Code loads only names and descriptions. That one line, what the skill does and when to use it, is the entire selection surface. The body loads after your request matches.",
+      "on_screen_text": "description = entire selection surface",
+      "visual_brief": "On \"loads only names and descriptions\" rows of one-line descriptions fade in as a list; on \"entire selection surface\" one description line scales up with amber highlight; on \"after your request matches\" a thick instruction block rises beneath it, connected by a thin line.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Most score fine elsewhere; the failure hides in that line. If it just says 'Helps with documents,' that's the failure. It's mechanical, not model flakiness.",
+      "on_screen_text": "vague description = silent failure",
+      "visual_brief": "On \"score fine elsewhere\" a short checklist of green checkmarks fades in; on \"Helps with documents\" a vague description line appears and dims everything else, amber highlight on it through \"that's the failure\"; on \"not model flakiness\" the screen text fades in beneath.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Only fifty-two percent of skills include invocation cues, the phrases that say when to fire. Lead yours with the use case and the words you'd say.",
+      "on_screen_text": "52% include invocation cues",
+      "visual_brief": "On \"fifty-two percent\" a horizontal bar fills to the 52% mark with counter; on \"invocation cues\" a vague line reading \"Helps with documents\" fades in at left; on \"lead yours with the use case\" a rewritten line rises at right with the trigger phrase in amber.",
+      "est_duration_s": 9.0
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "One line in SKILL.md decides if your skill runs. Rewrite it, and it fires.",
+      "on_screen_text": "rewrite the line",
+      "visual_brief": "On \"one line in SKILL.md\" a single description line centers and scales up alone; on \"rewrite it, and it fires\" the line retypes into its fixed form and the skill name rises beneath it in amber; wordmark settle.",
+      "est_duration_s": 4.8
+    }
+  ],
+  "notes_for_review": "The sixty-nine percent is one linter's LLM judgement on 215 of 216 skills, not a production failure measurement; narration says judged, never proved. The graft line 'Helps with documents' is Anthropic's own anti-example from the best-practices page. No analogy used: the mechanism is shown concretely; the crew-board analogy was available and left out to keep the runtime tight."
+}
