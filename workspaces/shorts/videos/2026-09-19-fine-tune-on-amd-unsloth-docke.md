@@ -2,19 +2,19 @@
 slug: 2026-09-19-fine-tune-on-amd-unsloth-docke
 workspace: shorts
 title: "Fine-tune on AMD: the ROCm Docker image"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-19
-updated: "2026-09-19T12:36:04Z"
+updated: "2026-09-19T12:36:31Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-09-19T12:34:01Z 04-script ok: draft B myth-bust wins 19-18, gates clean, ledger entry 16
 - 2026-09-19T12:36:05Z 05-package ok: rubric 95, check_outputs clean, ready-to-build
 - 2026-09-19T12:36:12Z 05-package ok: rubric 95, check_outputs clean, ready-to-build
+- 2026-09-19T12:36:31Z build start on gn100-83c4
