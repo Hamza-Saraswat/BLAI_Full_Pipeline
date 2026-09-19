@@ -1,0 +1,197 @@
+{
+  "slug": "2026-09-19-fine-tune-on-amd-unsloth-docke",
+  "topic": "Fine-tune on AMD: Unsloth Docker in three moves.",
+  "title": "Fine-tune on AMD: the ROCm Docker image",
+  "description": "Fine-tune LLMs on an AMD Radeon with Unsloth's unsloth-rocm Docker image, no NVIDIA card and no hand-pinned ROCm stack required. Unsloth publishes AMD floors: Qwen3.5 fine-tunes in 3GB of VRAM and Gemma 4 in 8GB, with PyTorch built for ROCm, bitsandbytes, triton-rocm, TRL, PEFT and diffusers pre-installed. You'll learn the docker run command with /dev/kfd and /dev/dri, the built-in smoke test, and the honest limits: RDNA1 is inference-only, multi-GPU is Linux-only, and this is a training image for now. (Narration is AI-generated.)",
+  "hashtags": [
+    "#Unsloth",
+    "#AMD",
+    "#Docker"
+  ],
+  "hook_text": "AMD boxes don't need CUDA anymore.",
+  "hook_candidates": [
+    "Your Radeon fine-tunes tonight, straight out of Docker.",
+    "Three moves and your AMD card trains a model.",
+    "Skip the ROCm weekend. Pull the box instead.",
+    "AMD boxes don't need a CUDA card anymore.",
+    "That old Radeon is a fine-tuning rig now.",
+    "The ROCm stack you dreaded is now one pull away.",
+    "Fine-tune Qwen3.5 in three gigabytes of VRAM.",
+    "No NVIDIA card? Fine-tune anyway.",
+    "Your last ROCm install died here. This one doesn't.",
+    "Docker just ate the hardest part of AMD fine-tuning."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": [
+    "EQUIPS",
+    "TEACHES"
+  ],
+  "hook_pattern": "named-contradiction",
+  "target_duration_s": 90,
+  "narration_full": "AMD boxes don't need a CUDA card anymore. Every tutorial said it: fine-tuning needs a big NVIDIA card, and your Radeon is for games. Unsloth's floor says Qwen three point five fine-tunes in three gigabytes of VRAM, the memory on your card. What is true now: Unsloth ships a Docker image, a ready-to-run package holding an app plus every dependency. The unsloth-rocm image carries the whole training stack. Gemma four fine-tunes in eight gigabytes of VRAM, a floor an aging Radeon clears. The image is the meal kit, the matched stack in one box. The manual route was grocery shopping. You hunted a PyTorch wheel that matched your ROCm version, AMD's open GPU compute platform. Then a pre-release bitsandbytes wheel for the four-bit fix. One pull replaces the trip. The run command passes AMD's kernel device nodes instead of NVIDIA's GPU flag. Your card reaches Docker through the kernel driver, not a container toolkit. A built-in smoke test runs a real training pass and fails loudly if the GPU is unusable. The method is QLoRA: load the model quantized, compressed to use less memory, and train small adapter weights on top. That is what cuts VRAM to the floor. Unsloth claims seventy percent less memory use with no accuracy loss. The honest catch: their own measured gain lands short of the headline claim. It trains RDNA two, the Radeon architecture of recent generations, and newer. Older RDNA one cards get Vulkan inference only, and the Steam Deck's chip is refused. Multi-GPU training stays Linux-only. The myth still wins here: this is a training image. The web UI, JupyterLab, and the prebuilt inference servers stay CUDA-only for now, so some shopping remains. Your AMD box is a fine-tuning rig tonight. You install Docker, you pull unsloth-rocm, you train.",
+  "music_mood": "warm-optimist",
+  "analogy": {
+    "vehicle": "Frozen meal kit vs grocery shopping",
+    "mapping": "The unsloth-rocm Docker image is the pre-portioned kit, the whole matched training stack in one box, while the manual route is shopping for each ingredient, matching a PyTorch wheel to a ROCm version and hunting a pre-release bitsandbytes wheel, hoping the versions combine into dinner.",
+    "limit": "The kit does not carry the web UI or the inference extras, so some shopping remains."
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "AMD boxes don't need a CUDA card anymore.",
+      "on_screen_text": "AMD boxes don't need a CUDA card anymore.",
+      "visual_brief": "Frame 1: matte-black terminal window with sharp corners centered in the safe area, amber prompt, and the full hook line in large monospace, already legible. At 0.3s a block cursor blinks at line end; on 'CUDA card' a thin amber rule rises in place under those two words. Background and window chrome stay static; nothing else moves.",
+      "est_duration_s": 2.8,
+      "render_notes": "Hook text min 96 px height, fully inside safe area at frame 1, amber accent only.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Every tutorial said it: fine-tuning needs a big NVIDIA card, and your Radeon is for games. Unsloth's floor says Qwen three point five fine-tunes in three gigabytes of VRAM, the memory on your card.",
+      "on_screen_text": "MYTH: big NVIDIA card required | Qwen3.5 fine-tunes in 3GB VRAM",
+      "visual_brief": "Hard cut from hook to split screen. Upper panel: 'MYTH: big NVIDIA card required' types out on 'Every tutorial said it', then a strikethrough draws across it on 'Unsloth's floor says'. Lower panel: 'Qwen3.5 fine-tunes in' appears, and on the spoken 'three gigabytes of VRAM' the amber '3GB VRAM' scales in sharp, no fade. One text block animates at a time, panels static otherwise.",
+      "est_duration_s": 11.7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "What is true now: Unsloth ships a Docker image, a ready-to-run package holding an app plus every dependency. The unsloth-rocm image carries the whole training stack. Gemma four fine-tunes in eight gigabytes of VRAM, a floor an aging Radeon clears.",
+      "on_screen_text": "docker pull unsloth/unsloth-rocm | Gemma 4: aging Radeons qualify",
+      "visual_brief": "Single terminal window, hard cut in. On 'Docker image' the command 'docker pull unsloth/unsloth-rocm' types out with a blinking cursor. On 'whole training stack' a hard cut swaps the view to sharp-cornered layer bars filling top to bottom. On 'Gemma four' a small sharp badge 'Gemma 4' rises in place beside the top bar. The eight-gigabyte floor is never shown as text. Amber accents only.",
+      "est_duration_s": 13.8
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The image is the meal kit, the matched stack in one box. The manual route was grocery shopping.",
+      "on_screen_text": "IMAGE: matched stack in a box | MANUAL: grocery shopping",
+      "visual_brief": "Diagram-flow, hard cut in. Left: a sharp box labeled IMAGE holding stacked layer bars, appearing on 'meal kit'. Right on 'grocery shopping': an empty shopping-list outline types in with three dimmed rows. One element animating at a time, amber accent only, hard cut out.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You hunted a PyTorch wheel that matched your ROCm version, AMD's open GPU compute platform. Then a pre-release bitsandbytes wheel for the four-bit fix. One pull replaces the trip.",
+      "on_screen_text": "PyTorch wheel + ROCm version | bitsandbytes wheel: pre-release",
+      "visual_brief": "Split terminal, hard cut. Left pane on 'PyTorch wheel': 'match wheel to ROCm version' types at the prompt with the version tag rocm7.2 shown dimmed. Right pane on 'bitsandbytes wheel': 'pre-release, four-bit fix' rises in place. On 'One pull replaces the trip' both panes hard-cut to a single amber line 'docker pull unsloth/unsloth-rocm'. One text block animating at a time.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The run command passes AMD's kernel device nodes instead of NVIDIA's GPU flag. Your card reaches Docker through the kernel driver, not a container toolkit. A built-in smoke test runs a real training pass and fails loudly if the GPU is unusable.",
+      "on_screen_text": "docker run --device /dev/kfd --device /dev/dri | python /workspace/smoke_test_rocm.py | PASS, or it fails loudly",
+      "visual_brief": "Terminal window, hard cut. On 'run command' the line 'docker run --device /dev/kfd --device /dev/dri' types out with a backslash continuation. On 'smoke test' a hard cut swaps to 'python /workspace/smoke_test_rocm.py'. On 'fails loudly' an amber status stamp 'PASS, or it fails loudly' snaps in at line end, no fade. Window chrome static throughout, one text block animating at a time.",
+      "est_duration_s": 14.5,
+      "render_notes": "Monospace throughout, sharp corners, amber is the only accent color.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The method is QLoRA: load the model quantized, compressed to use less memory, and train small adapter weights on top. That is what cuts VRAM to the floor.",
+      "on_screen_text": "QLoRA: frozen quantized base | adapters: trained",
+      "visual_brief": "Diagram-flow, hard cut in. On 'QLoRA' a wide sharp box labeled 'quantized base, frozen' fades in center. On 'small adapter weights' three small amber boxes rise in place on top of it, labeled 'adapters: trained'. On 'cuts VRAM to the floor' the base box's border thickens once. One element animating at a time, amber accent only, hard cut out.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Unsloth claims seventy percent less memory use with no accuracy loss. The honest catch: their own measured gain lands short of the headline claim.",
+      "on_screen_text": "vendor claim: no accuracy loss | measured gain: short of headline",
+      "visual_brief": "Split terminal, hard cut. Left pane on 'Unsloth claims': the line 'vendor claim, no accuracy loss' types at the amber prompt. Right pane on 'The honest catch': the line 'measured gain: short of headline' rises in place, with a thin amber underline flickering once beneath 'short'. No digits shown anywhere; the percentages stay spoken only. One text block animating at a time, hard cut out.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s9",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "It trains RDNA two, the Radeon architecture of recent generations, and newer. Older RDNA one cards get Vulkan inference only, and the Steam Deck's chip is refused. Multi-GPU training stays Linux-only.",
+      "on_screen_text": "TRAINS: RDNA2 and newer | RDNA1: Vulkan inference only | Steam Deck chip: refused | multi-GPU: Linux only",
+      "visual_brief": "Grid of four sharp-cornered cells, hard cut in. Cell one lights amber on 'It trains RDNA two': 'TRAINS: RDNA2 and newer'. Cell two on 'Older RDNA one cards': 'RDNA1: Vulkan inference only'. Cell three on 'Steam Deck': 'Steam Deck chip: refused'. Cell four on 'Multi-GPU': 'multi-GPU: Linux only'. Cells swap by hard cuts, one at a time, grid frame static.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The myth still wins here: this is a training image. The web UI, JupyterLab, and the prebuilt inference servers stay CUDA-only for now, so some shopping remains.",
+      "on_screen_text": "TRAINING IMAGE ONLY | Studio UI + JupyterLab: CUDA for now | llama.cpp + vLLM: CUDA for now",
+      "visual_brief": "Centered stack, hard cut. Header 'TRAINING IMAGE ONLY' types in on 'this is a training image'. On 'web UI, JupyterLab' a dimmed row appears: 'Studio UI + JupyterLab: CUDA for now'. On 'inference servers' a second dimmed row: 'llama.cpp + vLLM: CUDA for now'. On 'some shopping remains' a small amber asterisk blinks once beside the header. One text block animating at a time.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Your AMD box is a fine-tuning rig tonight. You install Docker, you pull unsloth-rocm, you train.",
+      "on_screen_text": "install Docker → pull unsloth-rocm → train | BUILD LOCAL AI",
+      "visual_brief": "Timeline of three sharp nodes joined by an amber line. 'install Docker' lights on its spoken phrase, then 'pull unsloth-rocm', then 'train', each node brightening in sequence. Final 0.5s: nodes settle and the wordmark BUILD LOCAL AI fades to center inside the same terminal chrome as frame 1, so the last frame rhymes with the first.",
+      "est_duration_s": 5.5,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Graft from draft A (judge row 1 allowed, reason logged in drafts.md): the number-free honest-catch sentence after Unsloth's seventy-percent claim. Numbers: three-gigabyte floor spoken and shown with Qwen three point five; eight-gigabyte floor spoken only; seventy-percent claim spoken with attribution, never on screen. Analogy: meal kit, limit stated ('the kit does not carry the web UI... some shopping remains'). Steam Deck chip refusal kept; RDNA1 Vulkan-only kept.",
+  "tags": [
+    "unsloth docker",
+    "unsloth amd",
+    "fine-tune amd gpu",
+    "rocm docker",
+    "unsloth-rocm",
+    "finetune local llm",
+    "amd radeon fine-tuning",
+    "qlora tutorial",
+    "docker llm training",
+    "local ai fine-tuning",
+    "rocm install",
+    "llama fine-tuning",
+    "qwen fine-tune",
+    "gemma fine-tune",
+    "build local ai",
+    "amd machine learning"
+  ]
+}

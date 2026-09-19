@@ -1,5 +1,5 @@
 {
-  "_doc": "Say-this-not-that table for the TTS normalizer (skills/script-gates/scripts/normalize_narration.py; v2 port of pipeline/tts_lexicon.json, also read by validate_storyboard.py). Producer-editable. After editing run: python3 skills/script-gates/scripts/normalize_narration.py --self-test",
+  "_doc": "Producer-edited spoken forms. AMD/RDNA/TRL/PEFT/UI/SFT added 2026-09-19 for the unsloth-rocm Docker Short after validator acronym advisories; values contain no digits and no un-kept ALL-CAPS runs.",
   "_rules": [
     "say: exact token -> spoken form. Applied FIRST, longest key first, case-sensitive, on word boundaries. Multi-word keys are allowed ('RTX 4090').",
     "Values must contain NO digits and no 2+ letter ALL-CAPS runs, or later passes will re-process them.",
@@ -92,7 +92,17 @@
     "NULL": "null",
     "JSON": "jason",
     "LM": "L M",
-    "LM Studio": "L M studio"
+    "LM Studio": "L M studio",
+    "AMD": "A M D",
+    "RDNA": "R D N A",
+    "RDNA2": "R D N A two",
+    "RDNA1": "R D N A one",
+    "RDNA3": "R D N A three",
+    "RDNA4": "R D N A four",
+    "TRL": "T R L",
+    "PEFT": "P E F T",
+    "UI": "U I",
+    "SFT": "S F T"
   },
   "units": {
     "GB/s": "gigabytes a second",

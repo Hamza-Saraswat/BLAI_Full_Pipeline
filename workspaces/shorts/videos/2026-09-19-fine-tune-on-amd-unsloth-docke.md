@@ -2,14 +2,14 @@
 slug: 2026-09-19-fine-tune-on-amd-unsloth-docke
 workspace: shorts
 title: "Fine-tune on AMD: Unsloth Docker in three moves"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: myth-bust
 format: smooth-explainer
-style_pack: ""
+style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-19
-updated: "2026-09-19T11:49:53Z"
+updated: "2026-09-19T12:34:01Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-19-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-19-ideas]]
 - Research: [[stages/03-research/output/2026-09-19-fine-tune-on-amd-unsloth-docke-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-09-19-fine-tune-on-amd-unsloth-docke-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,6 +38,10 @@ blotato_post_id: ""
 - Why: has_process true makes how-to-three-moves the natural A; B must be a different shape, not a cousin, and misconception 4 plus the measured floors give myth-bust a real number to break the belief with.
 - Checkpoint (stage 04, step 2): ten hooks scored 5-7; picks A 'Your Radeon fine-tunes tonight, straight out of Docker.' (tonight pattern) and B 'AMD boxes don't need a CUDA card anymore.' (named-contradiction). Both 7/7: payoff word inside five words, named product, situation named, frame-1 legible, true per brief. Number-shock openers (the three-gigabytes and eight-gigabytes hooks) scored equal but are rotation-vetoed: hook_pattern number-shock is 2026-09-18's, wrong-diagnosis is 2026-09-17's, and the classifier fires number-shock on any number word.
 - Why: two different patterns forced (finding 12); neither hook contains a digit or number word, so the classifier cannot land on a banned pattern; the numbers stay for the payoff scenes inside the number cap.
+- 2026-09-19T12:34:01Z - Stage 04 gates (winner, draft B myth-bust): validator exit 0, zero blockers, zero advisories; eval_short exit 0 (number_spend 3/3 cap, hook_concrete via entity AMD, scene_specificity 9/9+2 allowance, skeleton and positional_labels clean); variety_check ok vs 15-entry ledger, then recorded (16 entries). Soft advisory entity_spend 0.312 vs 0.5 and top2 partial: kept, the extractor's missing entities are unspent on purpose (MI300X benchmark rows capped out; QLoRA/VRAM are glossary terms, not product names). Lexicon gained AMD/RDNA/TRL/PEFT/UI/SFT spoken forms; normalizer self-test 150/150.
+- Why proceed on the soft failures: the number cap is the calibrated rule and the three spent numbers are the floors the video is about; padding narration with benchmark step-times to lift the entity ratio would break the cap and the one-number-at-a-time constraint.
+- Judge: B beat A 19-18 (rows 2, 4, 8 for B; 5, 6, 7 for A); one graft taken (number-free honest-catch sentence), logged in drafts.md.
 
 ## Build journal
 - 2026-09-19T11:50:56Z 03-research ok: 8 sources, 9 claims, validator exit 0
+- 2026-09-19T12:34:01Z 04-script ok: draft B myth-bust wins 19-18, gates clean, ledger entry 16

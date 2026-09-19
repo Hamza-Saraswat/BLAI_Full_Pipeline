@@ -1,0 +1,73 @@
+{
+  "full": "A M D boxes don't need a CUDA card anymore. Every tutorial said it: fine-tuning needs a big NVIDIA card, and your Radeon is for games. un-sloth's floor says chwen three point five fine-tunes in three gigabytes of V RAM, the memory on your card. What is true now: un-sloth ships a Docker image, a ready-to-run package holding an app plus every dependency. The unsloth-rocm image carries the whole training stack. Gemma four fine-tunes in eight gigabytes of V RAM, a floor an aging Radeon clears. The image is the meal kit, the matched stack in one box. The manual route was grocery shopping. You hunted a PyTorch wheel that matched your ROCm version, A M D's open GPU compute platform. Then a pre-release bitsandbytes wheel for the four-bit fix. One pull replaces the trip. The run command passes A M D's kernel device nodes instead of NVIDIA's GPU flag. Your card reaches Docker through the kernel driver, not a container toolkit. A built-in smoke test runs a real training pass and fails loudly if the GPU is unusable. The method is QLoRA: load the model quantized, compressed to use less memory, and train small adapter weights on top. That is what cuts V RAM to the floor. un-sloth claims seventy percent less memory use with no accuracy loss. The honest catch: their own measured gain lands short of the headline claim. It trains R D N A two, the Radeon architecture of recent generations, and newer. Older R D N A one cards get Vulkan inference only, and the Steam Deck's chip is refused. Multi-GPU training stays Linux-only. The myth still wins here: this is a training image. The web U I, JupyterLab, and the prebuilt inference servers stay CUDA-only for now, so some shopping remains. Your A M D box is a fine-tuning rig tonight. You install Docker, you pull unsloth-rocm, you train.",
+  "words": 315,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "A M D boxes don't need a CUDA card anymore.",
+      "words": 10,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "Every tutorial said it: fine-tuning needs a big NVIDIA card, and your Radeon is for games. un-sloth's floor says chwen three point five fine-tunes in three gigabytes of V RAM, the memory on your card.",
+      "words": 35,
+      "changed": true
+    },
+    {
+      "id": "s3",
+      "text": "What is true now: un-sloth ships a Docker image, a ready-to-run package holding an app plus every dependency. The unsloth-rocm image carries the whole training stack. Gemma four fine-tunes in eight gigabytes of V RAM, a floor an aging Radeon clears.",
+      "words": 41,
+      "changed": true
+    },
+    {
+      "id": "s4",
+      "text": "The image is the meal kit, the matched stack in one box. The manual route was grocery shopping.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "You hunted a PyTorch wheel that matched your ROCm version, A M D's open GPU compute platform. Then a pre-release bitsandbytes wheel for the four-bit fix. One pull replaces the trip.",
+      "words": 31,
+      "changed": true
+    },
+    {
+      "id": "s6",
+      "text": "The run command passes A M D's kernel device nodes instead of NVIDIA's GPU flag. Your card reaches Docker through the kernel driver, not a container toolkit. A built-in smoke test runs a real training pass and fails loudly if the GPU is unusable.",
+      "words": 44,
+      "changed": true
+    },
+    {
+      "id": "s7",
+      "text": "The method is QLoRA: load the model quantized, compressed to use less memory, and train small adapter weights on top. That is what cuts V RAM to the floor.",
+      "words": 29,
+      "changed": true
+    },
+    {
+      "id": "s8",
+      "text": "un-sloth claims seventy percent less memory use with no accuracy loss. The honest catch: their own measured gain lands short of the headline claim.",
+      "words": 24,
+      "changed": true
+    },
+    {
+      "id": "s9",
+      "text": "It trains R D N A two, the Radeon architecture of recent generations, and newer. Older R D N A one cards get Vulkan inference only, and the Steam Deck's chip is refused. Multi-GPU training stays Linux-only.",
+      "words": 37,
+      "changed": true
+    },
+    {
+      "id": "s10",
+      "text": "The myth still wins here: this is a training image. The web U I, JupyterLab, and the prebuilt inference servers stay CUDA-only for now, so some shopping remains.",
+      "words": 28,
+      "changed": true
+    },
+    {
+      "id": "s11",
+      "text": "Your A M D box is a fine-tuning rig tonight. You install Docker, you pull unsloth-rocm, you train.",
+      "words": 18,
+      "changed": true
+    }
+  ],
+  "source": "normalize_narration.py"
+}
