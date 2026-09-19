@@ -2,14 +2,14 @@
 slug: 2026-09-18-ternary-bonsai-2-27b-27b-at-te
 workspace: shorts
 title: "Ternary-Bonsai-2-27B: 27B at ternary weights"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "PROVES,TEACHES"
 created: 2026-09-18
-updated: "2026-09-18T11:06:46Z"
+updated: "2026-09-19T13:35:33Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-19T13:35:33Z 2026-09-19T13:35:33Z expired: not from today's picks (2026-09-19); the factory carries no backlog
