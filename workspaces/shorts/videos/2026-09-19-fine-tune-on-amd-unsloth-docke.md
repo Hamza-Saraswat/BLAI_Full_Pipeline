@@ -2,18 +2,18 @@
 slug: 2026-09-19-fine-tune-on-amd-unsloth-docke
 workspace: shorts
 title: "Fine-tune on AMD: the ROCm Docker image"
-status: building
+status: blocked
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-19
-updated: "2026-09-19T12:36:31Z"
+updated: "2026-09-19T12:46:23Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.097, 12 mismatch(es): expected 'point five finetunes' heard 'five fine tunes'; expected 'unslothrocm image' heard 'unsloth rock mimage'; expected 'an' heard 'and'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -51,3 +51,6 @@ blotato_post_id: ""
 - 2026-09-19T12:36:05Z 05-package ok: rubric 95, check_outputs clean, ready-to-build
 - 2026-09-19T12:36:12Z 05-package ok: rubric 95, check_outputs clean, ready-to-build
 - 2026-09-19T12:36:31Z build start on gn100-83c4
+- 2026-09-19T12:42:15Z 06-voice fail 341s (voice QA failed: WER 0.067, 10 mismatch(es): expected 'point five finetunes in' heard 'five fine tunes and'; expected 'unslothrocm' heard 'unsloth rockum'; expe)
+- 2026-09-19T12:46:23Z 06-voice fail 248s (voice QA failed: WER 0.097, 12 mismatch(es): expected 'point five finetunes' heard 'five fine tunes'; expected 'unslothrocm image' heard 'unsloth rock mimage'; )
+- 2026-09-19T12:46:23Z blocked at 06-voice
