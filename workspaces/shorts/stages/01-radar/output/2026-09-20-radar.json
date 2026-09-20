@@ -1,0 +1,694 @@
+[
+  {
+    "id": "hn-1c712cad4f",
+    "title": "Show HN: CUA-S1 - A System One Model for Computer Use",
+    "url": "https://github.com/trycua/cua",
+    "source": "hn",
+    "published_at": "2026-09-19T15:52:51Z",
+    "signals": {
+      "points": 79,
+      "num_comments": 8,
+      "signal": 0.669,
+      "signal_parts": {
+        "points": 0.768,
+        "comments": 0.438
+      },
+      "decay": 0.7586,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "myth-bust"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hello HN! We&#x27;re Dillon and Francesco from Cua.<p>We were wondering how many computer use tasks actually need a full general purpose LLM (e.g. gpt-6-astra, claude-opus-5 etc.) to think through all their decisions and steps. Some tasks require thinking about a plan, exploring different paths, rec",
+    "why_now": "Shipped: 79 points, 8 comments on HN, 19 h ago",
+    "score": 58
+  },
+  {
+    "id": "github-f005a6371f",
+    "title": "llama.cpp b11062",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11062",
+    "source": "github",
+    "published_at": "2026-09-20T09:46:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11062",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9824,
+      "age_h": 1.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Qwen",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> CUDA: enable sparse fa for qwen4 (#28770) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/48739244> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11062/llama",
+    "why_now": "Shipped: ggml-org/llama.cpp b11062 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-9db9767666",
+    "title": "llama.cpp b11060",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11060",
+    "source": "github",
+    "published_at": "2026-09-20T06:07:14Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11060",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9318,
+      "age_h": 4.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "ChatGPT",
+      "Llama"
+    ],
+    "summary": "<details open> fix(mamba) : make time-step projection input contiguous (#28832) * mamba : make time-step projection input contiguous Assisted-by: ChatGPT * mamba : skip contiguous copy after normalization Assisted-by: ChatGPT </details> **Website:** - <https://llama.app> **Attestations:** - <https:/",
+    "why_now": "Shipped: ggml-org/llama.cpp b11060 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-911d61433e",
+    "title": "llama.cpp b11059",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11059",
+    "source": "github",
+    "published_at": "2026-09-20T05:39:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11059",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9257,
+      "age_h": 5.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> metal: add F16 input to the FWHT (#29094) * metal: add F16 input to the FWHT The Metal FWHT kernel accepts F32 input only. This change makes the source type a template parameter, so the kernel reads an F16 source directly instead of requiring a converted copy. The F32 instantiations a",
+    "why_now": "Shipped: ggml-org/llama.cpp b11059 released (pre-release), 5 h ago",
+    "score": 54
+  },
+  {
+    "id": "hn-2e3bdb14fd",
+    "title": "Show HN: I created an open source locally usable full fledged AI platform",
+    "url": "https://github.com/theguysudo/ENZO",
+    "source": "hn",
+    "published_at": "2026-09-19T23:47:35Z",
+    "signals": {
+      "points": 16,
+      "num_comments": 12,
+      "signal": 0.501,
+      "signal_parts": {
+        "points": 0.496,
+        "comments": 0.511
+      },
+      "decay": 0.8504,
+      "age_h": 11.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "hi to all the readers this post is for my recent opensource project called ENZO<p>now answering what is enzo so enzo is an opensource platform where i clubbed all the free available api for anyone use under one hood with more than 2000 models available to use for chatting coding researching and much",
+    "why_now": "Shipped: 16 points, 12 comments on HN, 11 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-873d657cea",
+    "title": "Open Weights Are Good. Open Source Is Better",
+    "url": "https://opensource.org/blog/open-weights-are-good-open-source-is-better",
+    "source": "hn",
+    "published_at": "2026-09-19T18:50:40Z",
+    "signals": {
+      "points": 36,
+      "num_comments": 1,
+      "signal": 0.484,
+      "signal_parts": {
+        "points": 0.633,
+        "comments": 0.138
+      },
+      "decay": 0.7918,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 36 points, 1 comments on HN, 16 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-11d5c0d9cc",
+    "title": "Ask HN: Anyone using DeepSeek Harness (dsh) as part of a customer-facing agent?",
+    "url": "https://news.ycombinator.com/item?id=49770744",
+    "source": "hn",
+    "published_at": "2026-09-19T22:46:43Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.838,
+      "age_h": 12.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Is there anyone shipping dsh where your own customers&#x2F;users are the ones interacting with it as part of the product (they do something, dsh runs, they get the result back).",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 12 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-5ba4fabdcf",
+    "title": "Testing 8 VLMs on a single 3090 GPU",
+    "url": "https://www.reddit.com/r/LocalLLaMA/s/uSxsTw5Wno",
+    "source": "hn",
+    "published_at": "2026-09-20T04:46:04Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9137,
+      "age_h": 6.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:RTX 3090",
+      "group": "news-react"
+    },
+    "products": [
+      "RTX 3090"
+    ],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 6 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-30963f59d4",
+    "title": "Mac Mini Alternatives for Local LLMs: M6, M5 and Strix Halo",
+    "url": "https://terminalbytes.com/mac-mini-alternatives-local-llm-2026/",
+    "source": "hn",
+    "published_at": "2026-09-19T17:09:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7726,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mac mini",
+      "group": "news-react"
+    },
+    "products": [
+      "Mac mini",
+      "Apple M5",
+      "Strix Halo"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 18 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-7f309519de",
+    "title": "kev: Jev-like model built on Qwen2.5-0.5B",
+    "url": "https://github.com/jaredpalmer/kev",
+    "source": "hn",
+    "published_at": "2026-09-19T13:08:21Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7291,
+      "age_h": 21.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 22 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-69ac1ffb81",
+    "title": "Same Intel X7 358H with Qwen3.5-9B: Xiaomi Book Pro 14 vs. MSI Prestige 14",
+    "url": "https://grigio.org/panther-lake-qwen3-5-9b-on-the-same-core-ultra-x7-358h-xiaomi-book-pro-14-cachyos-versus-msi-prestige-14-flip/",
+    "source": "hn",
+    "published_at": "2026-09-19T15:39:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7561,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Intel",
+      "group": "comparison"
+    },
+    "products": [
+      "Intel",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 19 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-1b8ab5d0ce",
+    "title": "Splash Engine - The Fastest Local Qwen3.8 on Apple Silicon",
+    "url": "https://lmstudio.ai/blog/splash-engine",
+    "source": "hn",
+    "published_at": "2026-09-19T11:54:19Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7163,
+      "age_h": 23.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Apple"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 23 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-930afdf16a",
+    "title": "How to handle manager adding AI bs to our codebase/designs etc.",
+    "url": "https://news.ycombinator.com/item?id=49771657",
+    "source": "hn",
+    "published_at": "2026-09-20T01:18:04Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 3,
+      "signal": 0.303,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.276
+      },
+      "decay": 0.8691,
+      "age_h": 9.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:ai",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "Joined the company out of college with like 5-6 years coding hobby projects etc. &amp; started a year ago. I&#x27;m basically the highest performer in my team, get more stories &amp; points&#x2F;higher complexity tasks &amp; have my work done way quicker with virtually no defects etc.etc. In compari",
+    "why_now": "Changed: 5 points, 3 comments on HN, 10 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-cd6e1ef64f",
+    "title": "ROCmFix and InferBench - AMD Local-LLM Setup and Vulkan vs. Hip Benchmarking",
+    "url": "https://github.com/xanpavle/rocmfix",
+    "source": "hn",
+    "published_at": "2026-09-19T20:57:23Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 1,
+      "signal": 0.311,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.138
+      },
+      "decay": 0.8163,
+      "age_h": 14.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "product:AMD",
+      "group": "how-to"
+    },
+    "products": [
+      "AMD"
+    ],
+    "summary": "",
+    "why_now": "Measured: 8 points, 1 comments on HN, 14 h ago",
+    "score": 22
+  },
+  {
+    "id": "hf-19819179eb",
+    "title": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+    "source": "hf",
+    "published_at": "2026-09-10T02:17:58Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 3370,
+      "downloads": 496684,
+      "trendingScore": 952.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.951,
+      "signal_parts": {
+        "trending": 0.902,
+        "likes": 1.0,
+        "downloads": 0.949
+      },
+      "decay": 0.05,
+      "age_h": 248.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 3.4k likes, 496.7k downloads, trending score 952, created 2026-09-10",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 3.4k likes, 496.7k downloads, trending score 952, 10 d ago",
+    "score": 19
+  },
+  {
+    "id": "hn-bbf4c8c1ff",
+    "title": "Drop-in Django app to serve a decent LLM-ready documentation site",
+    "url": "https://mdjango.chesselink.com/",
+    "source": "hn",
+    "published_at": "2026-09-20T09:18:44Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9757,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 2 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-9cef1d4893",
+    "title": "We found defects in 37 of DeepSWE's 113 tasks",
+    "url": "https://www.scrimdata.com/blog/deep-swe-benchmark-defects-ambiguities",
+    "source": "hn",
+    "published_at": "2026-09-19T12:56:19Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 0,
+      "signal": 0.282,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.0
+      },
+      "decay": 0.727,
+      "age_h": 22.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:benchmark",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 9 points, 0 comments on HN, 22 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-2a8fcccd6b",
+    "title": "Show HN: The Smallest LLM",
+    "url": "https://gist.github.com/skorotkiewicz/dedc3b5a857be7d0f2b378334721713c",
+    "source": "hn",
+    "published_at": "2026-09-20T04:05:05Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9048,
+      "age_h": 6.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 7 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-baa8f21629",
+    "title": "Show HN: Text-me: a personal agent that learns your pace",
+    "url": "https://aiworthusing.com/agent-index/text-me",
+    "source": "hn",
+    "published_at": "2026-09-19T23:58:50Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.8527,
+      "age_h": 11.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "Hey, I built text-me because every productivity app I tried gave me one more place to be and maintain.<p>Meanwhile my life actually happens over email, messages, calendar, college, Kindle, reading, and Substack. And I always have to be somewhere else.<p>So now I send everything to one place, like te",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 11 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-18ef6c5e66",
+    "title": "In 2024 I fine-tuned an LLM. Jev could have removed the side quests",
+    "url": "https://kasra.blog/blog/classification-and-jev/",
+    "source": "hn",
+    "published_at": "2026-09-19T16:39:23Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.7671,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 18 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-175844e07c",
+    "title": "Show HN: OpenWand - A mission to remove chat interface from working with AI",
+    "url": "https://github.com/SunnyLich/OpenWand",
+    "source": "hn",
+    "published_at": "2026-09-19T20:11:35Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8073,
+      "age_h": 14.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi everyone,<p>I&#x27;m working on OpenWand, an &quot;LLM chat interface&quot; that is optimized for AI co-work.<p>Its function is to truly integrate AI into your workflow, so no more switching windows, no more copying context, less prompt typing. You can focus on working, not prompting.<p>You can t",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 15 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-26edea79a9",
+    "title": "How I see software dev in AI era",
+    "url": "https://dhilst.github.io/2026/09/19/sweng-as-opt-prob/",
+    "source": "hn",
+    "published_at": "2026-09-19T19:44:56Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8022,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 15 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-52cf257e35",
+    "title": "SafeSeal: Certifiable Watermarking for LLM Deployments",
+    "url": "https://suny.technologypublisher.com/tech?title=SafeSeal%3a_Certifiable_Watermarking_for_LLM_Deployments",
+    "source": "hn",
+    "published_at": "2026-09-19T13:02:40Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7281,
+      "age_h": 22.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 22 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-1f96d08685",
+    "title": "Next-Token Predictor Is an AI's Job, Not Its Species",
+    "url": "https://www.astralcodexten.com/p/next-token-predictor-is-an-ais-job",
+    "source": "hn",
+    "published_at": "2026-09-19T11:54:35Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7163,
+      "age_h": 23.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 23 h ago",
+    "score": 8
+  }
+]
