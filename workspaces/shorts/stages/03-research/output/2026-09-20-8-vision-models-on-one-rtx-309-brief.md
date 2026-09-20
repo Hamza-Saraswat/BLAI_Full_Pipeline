@@ -4,7 +4,7 @@ stage: 03-research
 topic: "8 vision models benchmarked on one RTX 3090 (24 GB)"
 depth: standard
 generated_at: 2026-09-20T11:48:26Z
-sources: 10
+sources: 9
 hub: "[[videos/2026-09-20-8-vision-models-on-one-rtx-309]]"
 ---
 
