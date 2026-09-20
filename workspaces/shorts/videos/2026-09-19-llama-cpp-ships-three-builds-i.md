@@ -2,14 +2,14 @@
 slug: 2026-09-19-llama-cpp-ships-three-builds-i
 workspace: shorts
 title: llama.cpp ships three builds in two hours
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-19
-updated: "2026-09-19T11:06:51Z"
+updated: "2026-09-20T13:35:30Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-20T13:35:30Z 2026-09-20T13:35:30Z expired: not from today's picks (2026-09-20); the factory carries no backlog
