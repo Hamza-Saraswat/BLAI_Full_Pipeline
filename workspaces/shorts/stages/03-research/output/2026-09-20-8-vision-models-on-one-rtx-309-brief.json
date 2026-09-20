@@ -1,0 +1,193 @@
+{
+  "slug": "2026-09-20-8-vision-models-on-one-rtx-309",
+  "topic": "8 vision models benchmarked on one RTX 3090 (24 GB)",
+  "generated_at": "2026-09-20T11:48:26Z",
+  "depth": "standard",
+  "thesis": "A five-year-old RTX 3090 with 24 GB still runs every vision model in this eight-model test, some at 139.3 tok/s, so the upgrade question for vision work is speed and patience, not capability.",
+  "explanation_path": "Start with what a vision-language model actually is: a language model with eyes, where a vision encoder turns frames into tokens and the language model reads them, so what fits in memory decides what runs at all before speed ever enters. Establish the card's two numbers from its vendor and from reporting: 24 GB of G6X memory and 936GB/s of memory bandwidth, the figure inference leans on hardest. Then bring the receipt: one tester, one RTX 3090, eight video VLMs spanning 2B to a 30.8B-A3B mixture-of-experts, every one loaded and answering, decode spanning 13.8 to 139.3 tok/s. Explain the twist before the limit: the biggest model by total parameters was the fastest decoder, because a mixture-of-experts wakes only a slice of its weights per token, so total parameters set what fits while active parameters set the pace. Close on the honest ceiling so the myth-bust stays credible: the wait for a first answer stretches to 5.73 s, 70B-class models do not fit even quantized to four or eight bit, and long video contexts eat the KV cache. Land on the decision the viewer came for: if the workload is vision, the old card is not the blocker, and a used one still costs real money that a new midrange card with less memory does not displace.",
+  "claims": [
+    {
+      "claim": "NVIDIA's own spec page lists the RTX 3090 with 24 GB of G6X memory, 10,496 CUDA cores, and a 1.70 GHz boost clock.",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090/",
+      "source_title": "3090 & 3090 Ti Graphics Cards | NVIDIA GeForce",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "The Register reports the RTX 3090 offers 936GB/s of memory bandwidth and 142 teraFLOPS of dense FP16, calling bandwidth the key decider for LLM inference.",
+      "source_url": "https://www.theregister.com/on-prem/2024/08/23/old-rtx-3090-enough-to-serve-thousands-of-llm-users/1366649",
+      "source_title": "Benchmarks show even an old Nvidia RTX 3090 is enough to serve LLMs to thousands",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "A tester posting to r/LocalLLaMA on 2026-09-20 ran eight video VLMs of different parameter sizes and architectures on a single RTX 3090, at concurrency 1, as part of a NIST/TREC visual question-answering submission.",
+      "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wkmzwi/how_fast_do_video_vlms_actually_run_on_a_3090_i/",
+      "source_title": "How fast do video VLMs actually run on a 3090? I measured 8 VLMs of different parameter sizes and architecture",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "Across the eight models the tester reported prefill throughput of 745-4,737 tok/s and decode throughput of 13.8-139.3 tok/s.",
+      "source_url": "https://www.reddit.com/r/LocalLLM/comments/1wkmfq8/prefilldecode_throughput_for_8_video_vlms_on_one/",
+      "source_title": "Prefill/decode throughput for 8 video VLMs on one 3090: 745-4,737 tok/s prefill, 13.8-139.3 decode",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "In the test's tables the fastest decoder was InternVL3.5-30B-A3B at 139.3 tok/s (Task 2) and the slowest was Qwen3.8-27B INT4 at 13.8 tok/s, with time-to-first-token spanning 1.80 s (VideoLLaMA3-7B) to 5.73 s (Muse Glimmer 30B).",
+      "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wkmzwi/how_fast_do_video_vlms_actually_run_on_a_3090_i/",
+      "source_title": "How fast do video VLMs actually run on a 3090? I measured 8 VLMs of different parameter sizes and architecture",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "The InternVL3.5-30B-A3B model card lists 0.3B vision parameters plus 30.5B language parameters, for 30.8B-A3B total.",
+      "source_url": "https://huggingface.co/OpenGVLab/InternVL3_5-30B-A3B",
+      "source_title": "OpenGVLab/InternVL3_5-30B-A3B",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "The Qwen3-VL-8B-Instruct model card lists the model at 9B params in BF16 and advertises native 256K context, expandable to 1M.",
+      "source_url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+      "source_title": "Qwen/Qwen3-VL-8B-Instruct",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "The Register notes the card's honest ceiling: 24GB of GDDR6x rules out 70B-class models even quantized to four or eight bit.",
+      "source_url": "https://www.theregister.com/on-prem/2024/08/23/old-rtx-3090-enough-to-serve-thousands-of-llm-users/1366649",
+      "source_title": "Benchmarks show even an old Nvidia RTX 3090 is enough to serve LLMs to thousands",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-20"
+    },
+    {
+      "claim": "ModelFit pegs the used RTX 3090 at $800-1000 (about $900 street, September 2026), says its 24 GB handles up to 32B-parameter models at Q4 (about 0.6 GB of VRAM per billion parameters), and estimates an RTX 4090 is only 20% faster (104 vs 87 tok/s on 8B) at about $3,494.",
+      "source_url": "https://modelfit.io/gpu/rtx-3090/",
+      "source_title": "RTX 3090 24GB for Local LLMs: Runs 32B Q4, Used ~$900",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-20"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "RTX 3090 memory (NVIDIA spec page)",
+      "value": "24 GB of G6X memory",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090/"
+    },
+    {
+      "label": "RTX 3090 memory bandwidth",
+      "value": "936GB/s",
+      "source_url": "https://www.theregister.com/on-prem/2024/08/23/old-rtx-3090-enough-to-serve-thousands-of-llm-users/1366649"
+    },
+    {
+      "label": "decode throughput span, 8 video VLMs on one 3090, concurrency 1",
+      "value": "13.8-139.3 tok/s",
+      "source_url": "https://www.reddit.com/r/LocalLLM/comments/1wkmfq8/prefilldecode_throughput_for_8_video_vlms_on_one/"
+    },
+    {
+      "label": "fastest decode, InternVL3.5-30B-A3B, Task 2",
+      "value": "139.3 tok/s",
+      "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wkmzwi/how_fast_do_video_vlms_actually_run_on_a_3090_i/"
+    },
+    {
+      "label": "InternVL3.5-30B-A3B total parameters",
+      "value": "30.8B-A3B",
+      "source_url": "https://huggingface.co/OpenGVLab/InternVL3_5-30B-A3B"
+    },
+    {
+      "label": "used RTX 3090 street price (US, September 2026)",
+      "value": "~$900",
+      "source_url": "https://modelfit.io/gpu/rtx-3090/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A five-year-old pickup with the big bed vs a new sports car with a small trunk",
+      "mapping": "vision models are bulky cargo; the old card's 24 GB carries them even though the newer vehicle is quicker per trip",
+      "limit": "the job is many small fast trips (high-concurrency serving or chasing peak tok/s), where the newer card's bandwidth and headroom win"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "A five-year-old consumer GPU cannot handle today's vision models; local VLM work needs a current-gen card.",
+      "reality": "All eight video VLMs in the 2026-09-20 test, from Cosmos-Reason2-2B to a 30.8B-A3B mixture-of-experts, loaded and answered on one RTX 3090 (claims 3, 4, 6)."
+    },
+    {
+      "myth": "The biggest model will be the slowest on old hardware.",
+      "reality": "The largest by total parameters, InternVL3.5-30B-A3B at 30.8B-A3B, was the fastest decoder at 139.3 tok/s, because a mixture-of-experts activates only a slice of its weights per token (claims 5, 6)."
+    },
+    {
+      "myth": "24 GB means the card has no ceiling.",
+      "reality": "70B-class models do not fit even quantized to four or eight bit, and long-context KV caches eat what is left (claims 7, 8)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "VLM (vision-language model)",
+      "definition": "A language model that also reads images or video by turning them into tokens it can process."
+    },
+    {
+      "term": "video VLM",
+      "definition": "A VLM tuned to answer questions about video clips, not just single images."
+    },
+    {
+      "term": "prefill",
+      "definition": "The phase where the model reads your prompt (and the visual tokens) before it writes anything."
+    },
+    {
+      "term": "decode",
+      "definition": "The phase where the model generates its answer, one token at a time."
+    },
+    {
+      "term": "tok/s (tokens per second)",
+      "definition": "How many text chunks per second the model generates; faster feels snappier."
+    },
+    {
+      "term": "TTFT (time to first token)",
+      "definition": "How long you wait after sending a prompt before the first word appears."
+    },
+    {
+      "term": "mixture-of-experts (MoE)",
+      "definition": "A model that stores many specialist sub-networks but activates only a few per token, so total size and speed decouple; 30.8B-A3B means 30.8B total parameters with about 3B active."
+    },
+    {
+      "term": "quantization (INT4, Q4)",
+      "definition": "Shrinking model weights to fewer bits so they fit in less memory, trading some accuracy for capacity."
+    },
+    {
+      "term": "VRAM",
+      "definition": "The memory on the GPU itself; models must fit here to run fast."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The memory the model fills as a conversation or video gets longer; long context eats it."
+    },
+    {
+      "term": "concurrency 1",
+      "definition": "One request at a time, no batching; the tester's stated setting."
+    }
+  ],
+  "unverified": [
+    "Per-model VRAM at rest or peak was not stated in the test post, so the brief carries no fetched number for it.",
+    "Which two of the eight models produced output rejected in the final NIST/TREC submission is not named in the post text.",
+    "Whether the 3090 was stock or power-tuned, and which inference runtime served each model, is not stated in the post.",
+    "Used RTX 3090 prices outside the US market (ModelFit lists US references only).",
+    "No fetched benchmark compares the 3090 against newer cards on vision workloads specifically; ModelFit's 104 vs 87 tok/s is a text-model estimate, not a VLM measurement."
+  ],
+  "suggested_outline": "Eight vision models, one five-year-old RTX 3090, nothing failed: the biggest one decoded at 139.3 tok/s.\nThe receipt: name the eight (Cosmos-Reason2-2B through InternVL3.5-30B-A3B at 30.8B-A3B), the decode spread of 13.8-139.3 tok/s at concurrency 1, and why the biggest model was the fastest (mixture-of-experts activates a slice per token).\nThe honest catch and the decision: first tokens wait up to 5.73 s, 70B-class weights and giant contexts still do not fit, but for vision the card stays, and a used one runs about $900.",
+  "notes": "Reddit blocks direct fetches (403), so the post and crosspost were read through the pullpush.io mirror, and the result tables are preview.redd.it images the agent downloaded and OCR'd; per-model numbers carry medium confidence for that reason, and the author's own crosspost title (plain text, no OCR) independently confirms the 745-4,737 prefill and 13.8-139.3 decode spans. The Task 1 table's top prefill OCRs as 4,745 tok/s while the author's title ceiling is 4,737 tok/s (the Task 2 figure); the brief quotes the author's title. The author's hedge (\"This is not a benchmark in any real sense, but can be seen as an anecdotal reference\") is the conflict the script must own in the honest-catch beat; keep the numbers attributed to the tester, not stated as lab results. TechPowerUp returned a bot-check page (no content), so GPU specs come from NVIDIA's own page plus The Register. The post's method is shown (hardware, tasks, concurrency, TTFT definition), which is why it is tiered benchmark rather than community, but it is one tester's single card: the writer should say \"one tester measured\", never \"benchmarks prove\".",
+  "viewer_situation": "You've got a five-year-old RTX 3090 with 24 gigs of VRAM sitting in a gaming PC you already own, and every upgrade video keeps telling you it's obsolete for AI.",
+  "has_process": false,
+  "objection": "One concurrency-1 anecdote whose author calls it \"not a benchmark in any real sense\" does not prove the card, and a 3090 still cannot hold 70B-class weights or long video contexts, so \"runs vision\" is not \"runs everything\"."
+}
