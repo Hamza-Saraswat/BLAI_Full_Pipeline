@@ -1,0 +1,499 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-20T12:23:42+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-20-8-vision-models-on-one-rtx-309-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-20-8-vision-models-on-one-rtx-309-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 3,
+      "docs": 2,
+      "benchmark": 4
+    },
+    "pct_primary_docs": 0.556,
+    "key_numbers_total": 6,
+    "entities_total": 18,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.357,
+    "source_domains": [
+      "huggingface.co",
+      "modelfit.io",
+      "nvidia.com",
+      "reddit.com",
+      "theregister.com"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "RTX 3090 memory (NVIDIA spec page)",
+          "value": "24 GB of G6X memory",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "24",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "RTX 3090 memory bandwidth",
+          "value": "936GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "decode throughput span, 8 video VLMs on one 3090, concurrency 1",
+          "value": "13.8-139.3 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "139.3 tok/s",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "fastest decode, InternVL3.5-30B-A3B, Task 2",
+          "value": "139.3 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "139.3",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "InternVL3.5-30B-A3B total parameters",
+          "value": "30.8B-A3B",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "used RTX 3090 street price (US, September 2026)",
+          "value": "~$900",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 18,
+      "found_count": 1,
+      "score": 0.056,
+      "found": [
+        "RTX"
+      ],
+      "missing": [
+        "InternVL3.5-30B-A3B",
+        "GB of G6X",
+        "G6X",
+        "CUDA",
+        "BF16",
+        "teraFLOPS",
+        "FP16",
+        "GDDR6x",
+        "Qwen3.8-27B INT4",
+        "LocalLLaMA",
+        "NIST",
+        "TREC",
+        "VideoLLaMA3-7B",
+        "ModelFit",
+        "Cosmos-Reason2-2B",
+        "Cosmos",
+        "Muse Glimmer 30"
+      ],
+      "top2": [
+        "RTX",
+        "InternVL3.5-30B-A3B"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "RTX",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "InternVL3.5-30B-A3B",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of G6X",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "G6X",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "teraFLOPS",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP16",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GDDR6x",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B INT4",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LocalLLaMA",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NIST",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "TREC",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "VideoLLaMA3-7B",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ModelFit",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Cosmos-Reason2-2B",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Cosmos",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Muse Glimmer 30",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:RTX"
+      ],
+      "hook_text": "Everyone misread this GPU's retirement",
+      "first_sentence": "Everyone misread your RTX thirty ninety's retirement."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "contrarian-take",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "entity:RTX"
+          ],
+          "narration": "Everyone misread your RTX thirty ninety's retirement. One tester ran eight vision models on the card everyone calls obsolete."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:24 GB of G6X memory",
+            "num:13.8-139.3 tok/s",
+            "num:139.3 tok/s"
+          ],
+          "narration": "All eight ran on twenty-four gigabytes of memory. The biggest was fastest: one hundred thirty-nine point three tokens a second."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 12.4,
+          "specific": true,
+          "hits": [
+            "glossary:decode"
+          ],
+          "narration": "It's a mixture of experts, a model waking a slice of itself per word. A receptionist wakes the specialists. Memory from all of them, speed from the few. She re-picks every word, setting the decode pace."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "glossary:KV cache"
+          ],
+          "narration": "He calls it an anecdote, not a benchmark. Worst first-word wait: five point seven three seconds. Seventy-billion-parameter models won't fit; long videos eat the KV cache, its running notes."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 4.1,
+          "specific": false,
+          "hits": [],
+          "narration": "For vision work, your card's limit is speed and patience, not capability."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.7,
+      "words": 122,
+      "sentences": 12,
+      "est_speech_s": 42.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "Everyone misread your RTX thirty ninety's retirement. One tester ran eight vision models on the card everyone calls obsolete. All eight ran on twenty-four gigabytes of memory. The biggest was fastest: one hundred thirty-nine point three tokens a second. It's a mixture of experts, a model waking a slice of itself per word. A receptionist wakes the specialists. Memory from all of them, speed from the few. She re-picks every word, setting the decode pace. He calls it an anecdote, not a benchmark. Worst first-word wait: five point seven three seconds. Seventy-billion-parameter models won't fit; long videos eat the KV cache, its running notes. For vision work, your card's limit is speed and patience, not capability.",
+    "on_screen": "Everyone misread this GPU's retirement | Everyone misread this GPU's retirement | 8 vision models, 1 tester | 8 of 8 ran | 24 GB of memory | biggest = fastest: 139.3 tok/s | mixture of experts | receptionist wakes a few | re-picked every word | anecdote, not a benchmark | 5.73 s to first word | 70B won't fit | KV cache fills | vision workloads: speed + patience | not capability"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-20-8-vision-models-on-one-rtx-309-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 6.7,
+        "words": 122,
+        "est_speech_s": 42.1,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s03: est 12s \u2014 long single-render scene; consider splitting the beat"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s03: est 12s \u2014 long single-render scene; consider splitting the beat"
+        ],
+        "warnings": [
+          "target 40s outside the 32-38s evidence band",
+          "FK grade 6.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 'RTX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'KV' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-20-8-vision-models-on-one-rtx-309-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 6,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.056,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "RTX",
+          "InternVL3.5-30B-A3B"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:RTX"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "contrarian-take",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

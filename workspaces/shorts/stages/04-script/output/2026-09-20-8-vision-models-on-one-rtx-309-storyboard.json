@@ -1,0 +1,89 @@
+{
+  "slug": "2026-09-20-8-vision-models-on-one-rtx-309",
+  "topic": "8 vision models benchmarked on one RTX 3090 (24 GB)",
+  "title": "RTX 3090 still runs 8 vision models",
+  "description": "One tester loaded 8 video vision models on a single RTX 3090 with 24 GB. The receipt says the oldest card is not the blocker for vision work. You'll learn what actually fits, what the wait costs, and when to keep the card. (Narration is AI-generated.)",
+  "hashtags": [
+    "#RTX3090",
+    "#LocalLLM",
+    "#VLM"
+  ],
+  "hook_text": "Everyone misread this GPU's retirement",
+  "hook_candidates": [
+    "Everyone misread this GPU's retirement *",
+    "Your hand-me-down GPU has receipts *",
+    "The oldest card in the tower beat the receipt",
+    "Eight vision models. One thirty ninety.",
+    "Your thirty ninety isn't obsolete. Its job changed.",
+    "One tester, one old card, eight models",
+    "The card upgrade videos buried just ran eight models",
+    "Keep the thirty ninety. The receipt says so.",
+    "Five years old and still the fastest decoder here",
+    "Obsolete for gaming was never obsolete for vision"
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "contrarian-take",
+  "value_types": "PROVES,TEACHES",
+  "target_duration_s": 40,
+  "narration_full": "Everyone misread your RTX thirty ninety's retirement. One tester ran eight vision models on the card everyone calls obsolete. All eight ran on twenty-four gigabytes of memory. The biggest was fastest: one hundred thirty-nine point three tokens a second. It's a mixture of experts, a model waking a slice of itself per word. A receptionist wakes the specialists. Memory from all of them, speed from the few. She re-picks every word, setting the decode pace. He calls it an anecdote, not a benchmark. Worst first-word wait: five point seven three seconds. Seventy-billion-parameter models won't fit; long videos eat the KV cache, its running notes. For vision work, your card's limit is speed and patience, not capability.",
+  "analogy": {
+    "vehicle": "a company of specialists with a receptionist who wakes only the few you need",
+    "mapping": "a mixture of experts: memory comes from all the specialists, speed from the few that wake",
+    "limit": "the router re-picks for every word, not once per question"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Everyone misread your RTX thirty ninety's retirement. One tester ran eight vision models on the card everyone calls obsolete.",
+      "on_screen_text": "Everyone misread this GPU's retirement | 8 vision models, 1 tester",
+      "visual_brief": "Frame 1: near-black background, the exact line \"Everyone misread this GPU's retirement\" centered in large white type, a faint RTX 3090 card silhouette dim behind it. Motion onset at t=0.35 s the word \"misread\" scales up a touch while a thin underline fades in beneath it (two elements only). On the narration phrase \"eight vision models\" the second beat \"8 vision models, 1 tester\" rises-in-place below the headline. No edge slides, everything fade or scale.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "All eight ran on twenty-four gigabytes of memory. The biggest was fastest: one hundred thirty-nine point three tokens a second.",
+      "on_screen_text": "8 of 8 ran | 24 GB of memory | biggest = fastest: 139.3 tok/s",
+      "visual_brief": "A grid of eight unlabeled tiles of varying sizes on a dark field. On \"All eight ran\" a green check fades onto each tile in sequence. On \"twenty-four gigabytes of memory\" a \"24 GB\" chip badge fades in at the corner. On \"The biggest was fastest\" the largest tile scales up, glows, and \"139.3 tok/s\" fades in beside it while the other tiles dim. Nothing enters from an edge; checks and glow are fades and scales only.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "It's a mixture of experts, a model waking a slice of itself per word. A receptionist wakes the specialists. Memory from all of them, speed from the few. She re-picks every word, setting the decode pace.",
+      "on_screen_text": "mixture of experts | receptionist wakes a few | re-picked every word",
+      "visual_brief": "A wide row of many small dots (the specialists) behind a single front node (the receptionist). On \"waking only a slice of itself per word\" three dots light up while the rest stay dim. On \"re-picked per word, not per question\" the routing line from the receptionist redraws to a different trio of dots in three quick pulses, showing the pick changes every word, not once per question. Text beats fade in beneath the diagram as they are spoken.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "He calls it an anecdote, not a benchmark. Worst first-word wait: five point seven three seconds. Seventy-billion-parameter models won't fit; long videos eat the KV cache, its running notes.",
+      "on_screen_text": "anecdote, not a benchmark | 5.73 s to first word | 70B won't fit | KV cache fills",
+      "visual_brief": "On \"anecdote, not a benchmark\" that phrase fades in top-left as a quiet label. On \"five point seven three seconds\" a horizontal timeline bar stretches rightward to a \"5.73 s\" marker. Below, on \"Seventy-billion-parameter models won't fit\" a \"70B\" block bumps against a full memory bar and turns red. On \"long videos eat the KV cache\" a segment labeled \"KV cache\" grows along the bar, squeezing what is left. All motion is grow-in-place or fade.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "For vision work, your card's limit is speed and patience, not capability.",
+      "on_screen_text": "vision workloads: speed + patience | not capability",
+      "visual_brief": "Clean dark frame, single centered stack. On \"speed and patience\" the first line \"vision workloads: speed + patience\" rises-in-place and holds. On \"not capability\" the second line fades in beneath it, slightly larger, and everything else stays still until the clip ends. No flourish, no logo sting; the narrowed claim just sits there.",
+      "est_duration_s": 4.1
+    }
+  ],
+  "notes_for_review": "Contrarian-take: consensus (card is retired), receipt (eight vision models ran, biggest decoded fastest), honest catch owned verbatim-adjacent (tester calls it an anecdote, plus the five point seven three second wait, the seventy-billion ceiling, KV cache), then the narrower claim (speed and patience, not capability). Spent three of the four budgeted numbers (24 GB, 139.3 tok/s, 5.73 s), kept the receptionist analogy to one clause with its limit stated, and used zero hype or em dashes."
+}
