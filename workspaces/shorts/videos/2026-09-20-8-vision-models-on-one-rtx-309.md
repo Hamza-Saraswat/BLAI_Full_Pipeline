@@ -2,18 +2,18 @@
 slug: 2026-09-20-8-vision-models-on-one-rtx-309
 workspace: shorts
 title: RTX 3090 still runs 8 vision models
-status: building
+status: blocked
 pillar: myth-bust
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "PROVES,TEACHES"
 created: 2026-09-20
-updated: "2026-09-20T12:29:46Z"
+updated: "2026-09-20T12:33:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -41,3 +41,6 @@ blotato_post_id: ""
 - 2026-09-20T12:25:06Z - stage 04 complete: 2 blind kimi-k3 writers + judge; final board 116 words, 5 scenes, target 40 s; ledger and style history recorded.
 - 2026-09-20T12:27:08Z - stage 05 complete: check_outputs 0 failures after hub artifact links filled; hub ready-to-build. Stages 06-08 left to the Spark build agent per blai-run.
 - 2026-09-20T12:29:46Z build start on gn100-83c4
+- 2026-09-20T12:32:13Z 06-voice fail 144s (voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy')
+- 2026-09-20T12:33:48Z 06-voice fail 94s (voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy')
+- 2026-09-20T12:33:48Z blocked at 06-voice
