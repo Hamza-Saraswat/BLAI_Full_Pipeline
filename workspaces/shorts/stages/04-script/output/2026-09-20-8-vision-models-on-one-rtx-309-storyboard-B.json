@@ -1,0 +1,99 @@
+{
+  "slug": "2026-09-20-8-vision-models-on-one-rtx-309",
+  "topic": "8 vision models benchmarked on one RTX 3090 (24 GB)",
+  "title": "RTX 3090 still runs 8 vision models",
+  "description": "One tester loaded 8 video vision models on a single RTX 3090 with 24 GB. The receipt says the oldest card is not the blocker for vision work. You'll learn what actually fits, what the wait costs, and when to keep the card. (Narration is AI-generated.)",
+  "hashtags": [
+    "#RTX3090",
+    "#LocalLLM",
+    "#VLM"
+  ],
+  "hook_text": "Your hand-me-down GPU has receipts",
+  "hook_candidates": [
+    "Everyone misread this GPU's retirement *",
+    "Your hand-me-down GPU has receipts *",
+    "The oldest card in the tower beat the receipt",
+    "Eight vision models. One thirty ninety.",
+    "Your thirty ninety isn't obsolete. Its job changed.",
+    "One tester, one old card, eight models",
+    "The card upgrade videos buried just ran eight models",
+    "Keep the thirty ninety. The receipt says so.",
+    "Five years old and still the fastest decoder here",
+    "Obsolete for gaming was never obsolete for vision"
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "story-first",
+  "value_types": "PROVES,TEACHES",
+  "target_duration_s": 44,
+  "narration_full": "Your old RTX thirty ninety has receipts. The one upgrade videos call obsolete. One tester loaded eight video vision models, language models with eyes, onto one card. All eight ran. The biggest held thirty point eight billion parameters and wrote fastest: one hundred thirty-nine point three tokens per second. A mixture of experts: specialists behind a receptionist who wakes only the few each word needs. Memory from all of them, speed from the few. She re-picks every word. His own hedge: not a benchmark, an anecdotal reference. Worst wait: five point seven three seconds. Giant models don't fit. Long videos eat the KV cache, the running notes. So keep the card for vision work. A used one still costs nine hundred dollars, and it is not the blocker.",
+  "analogy": {
+    "vehicle": "a company of specialists with a receptionist who wakes only the few you need",
+    "mapping": "a mixture of experts: memory comes from all the specialists, speed from the few that wake",
+    "limit": "the router re-picks for every word, not once per question"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Your old RTX thirty ninety has receipts. The one upgrade videos call obsolete.",
+      "on_screen_text": "Your hand-me-down GPU has receipts",
+      "visual_brief": "Frame 1: centered text 'Your hand-me-down GPU has receipts' over a dim, dusty graphics card inside an open PC tower. Motion onset at t=0.30 s the card's edges fade up slightly brighter; at t=0.45 s the word 'receipts' scales up a touch. Two motions max, fade and scale only, nothing slides in.",
+      "est_duration_s": 4.5
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "One tester loaded eight video vision models, language models with eyes, onto one card.",
+      "on_screen_text": "8 video VLMs | 1 card",
+      "visual_brief": "On 'eight video vision models', eight small labeled chips rise in place along a horizontal line, sizes growing left to right. On 'twenty-four gigabytes of memory', a single GPU outline fades in beneath the line and glows softly, captioned '24 GB'. All entrances are rise-in-place or fade.",
+      "est_duration_s": 4.8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "All eight ran. The biggest held thirty point eight billion parameters and wrote fastest: one hundred thirty-nine point three tokens per second.",
+      "on_screen_text": "30.8B params | 139.3 tok/s decode",
+      "visual_brief": "On 'one hundred thirty-nine point three tokens per second', giant digits '139.3' scale up to fill frame center with 'tok/s decode' beneath. On 'thirty point eight billion', a caption '30.8B total, the biggest of the eight' fades in at top.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "A mixture of experts: specialists behind a receptionist who wakes only the few each word needs. Memory from all of them, speed from the few. She re-picks every word.",
+      "on_screen_text": "MoE = all in memory | few wake per word",
+      "visual_brief": "On 'company of specialists', a grid of twelve office doors fades in. On 'receptionist waking only the few', a front-desk figure lights two doors per word tick while the rest stay dark. On 're-picks every word', the lit pair switches each tick. Side labels fade in: 'memory: all twelve' and 'speed: the lit two'.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "His own hedge: not a benchmark, an anecdotal reference. Worst wait: five point seven three seconds. Giant models don't fit. Long videos eat the KV cache, the running notes.",
+      "on_screen_text": "\"not a benchmark in any real sense\" | worst TTFT 5.73 s",
+      "visual_brief": "Split frame. Left: a quote card fades in on 'His own hedge', reading 'not a benchmark in any real sense'. Right: a stopwatch settles at '5.73 s' on 'five point seven three seconds'. On 'long videos eat', a bottom bar labeled 'KV cache' fills as a filmstrip grows beside it.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So keep the card for vision work. A used one still costs nine hundred dollars, and it is not the blocker.",
+      "on_screen_text": "$900 used | NOT THE BLOCKER",
+      "visual_brief": "On 'keep the card', the dusty tower from the hook rises in place, now lit and clean. On 'nine hundred dollars', a small price tag '$900 used' fades in at the corner. On 'It is not the blocker', centered text 'NOT THE BLOCKER' fades in beneath the tower. Fade and rise only.",
+      "est_duration_s": 7.2
+    }
+  ],
+  "notes_for_review": "Story-first arc: tester, test, twist number, MoE receptionist analogy with its re-picks-per-word limit stated, the author's own hedge owned verbatim, and the keep-the-card decision with the used-price reality. Five spoken numbers total (eight models, 24 GB, 30.8B, 139.3 tok/s, 5.73 s, $900), each isolated to its own sentence and mirrored on screen in the same scene; tester never named by handle."
+}
