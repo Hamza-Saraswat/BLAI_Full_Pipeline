@@ -1,0 +1,220 @@
+{
+  "slug": "2026-09-21-stop-paying-for-an-llm-judge",
+  "topic": "Stop paying for an LLM judge",
+  "generated_at": "2026-09-21T11:37:21Z",
+  "depth": "standard",
+  "thesis": "The judge in your eval loop does not need to be a frontier API: distill the verdict into a tiny local decision model and the per-token bill becomes a one-time download.",
+  "explanation_path": "Start with the bill the viewer already pays: every LLM-as-judge call sends a trace and a rubric to a frontier API, which generates its verdict token by token and charges per million tokens on the way in and the way out. Make concrete what that judge actually returns: a paragraph of reasoning and a JSON blob, of which the software keeps only a label, plus the failure modes that ride along with generation, verdicts that swing across identical runs and flip when option order swaps. Introduce the decision model as a different shape of thing rather than a smaller version of the same thing: state plus typed questions in, calibrated probabilities out, computed in a single forward pass with nothing generated. Land Kev as the open-weights instance of that shape: a LoRA adapter and a pointer head on a small Qwen3.5 base, downloadable, Apache-2.0, serving from a machine the viewer owns, fine-tunable on a few hundred of their own labeled examples. Bring in jevals to show the shift arriving in tooling, where judging every trace inside the agent loop becomes affordable and sampling a sliver nightly stops being the default. Finish on the boundary the honest viewer needs: date arithmetic, broad knowledge, and multi-step critique still belong to the big model, so the win is replacing the judge on verdicts that are really classifications, not abolishing the API.",
+  "claims": [
+    {
+      "claim": "Kev is a family of small open-weight decision models built on Qwen3.5 bases, whose API matches TypeSafe's System One so existing SDKs point at a local server, and anyone can train their own.",
+      "source_url": "https://github.com/jaredpalmer/kev",
+      "source_title": "GitHub - jaredpalmer/kev: tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "Kev-4B is a LoRA adapter with r=16 and 33.8M trainable parameters plus a pointer head on Qwen/Qwen3.5-4B-Base, and it needs ~9 GB of GPU memory for serving in bf16, with training having taken 56 min on one H100 (peak 24.6 GB).",
+      "source_url": "https://raw.githubusercontent.com/jaredpalmer/kev/main/docs/model-cards/kev-4b.md",
+      "source_title": "Kev-4B model card (jaredpalmer/kev docs)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "Kev runs on the viewer's own hardware with no API key and no per-token bill: the 4B and 9B models fit a 32 GB Mac using bf16, and the server binds to 127.0.0.1 with no authentication.",
+      "source_url": "https://github.com/jaredpalmer/kev",
+      "source_title": "GitHub - jaredpalmer/kev: tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "On the frozen out-of-domain suite, Kev-9B reached 0.837 and Kev-4B reached 0.832 accuracy on the locked test after the move to Qwen3.5 bases, up from 0.780 and 0.806, with lower Brier scores.",
+      "source_url": "https://github.com/jaredpalmer/kev/releases",
+      "source_title": "Releases · jaredpalmer/kev",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "The LLM-judge status quo is measurable: running the four Ragas-equivalent metrics on gpt-4.1-mini costs 6.0 requests per sample and $2.60 per 1k samples, while the same metrics through a Jev decision model cost $0.03 per 1k samples in one request per sample (jevals bench, measured 2026-09-20).",
+      "source_url": "https://github.com/openlayer-ai/jevals",
+      "source_title": "GitHub - openlayer-ai/jevals: Agent evals and guardrails in one request. Built on Jev, Kev and Laya.",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "Jev, the hosted decision model, is priced at $0.042 per million input tokens with output tokens free, which TypeSafe itself frames against LLM input prices of $0.20 to $10 per million tokens.",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev - TypeSafe AI Blog",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "Named OpenAI judge models bill per million tokens at standard tier: gpt-5.6-luna lists $0.20 input and $1.20 output, and gpt-5.6-terra lists $2.00 input and $12.00 output, short context (OpenAI API pricing page, seen 2026-09-21).",
+      "source_url": "https://platform.openai.com/docs/pricing",
+      "source_title": "Pricing | OpenAI API",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "On identical replayed traces, GPT and Claude judges showed 92x to 913x the score variance of Jev; Jev matched a human oracle on all 500 repeated pass/fail decisions against 80.0% for Claude Sonnet 4.6, and averaged $0.00035/call, $0.34 total versus $28.17 for Claude (LangChain experiment, 100 repetitions per judge).",
+      "source_url": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+      "source_title": "Jev-as-a-Judge for Agent Evals (LangChain blog, 2026-09-20)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "LLM judges carry position bias: a quality ranking can be hacked just by altering the order responses appear in, letting Vicuna-13B beat ChatGPT on 66 over 80 tested queries with ChatGPT as the evaluator.",
+      "source_url": "https://arxiv.org/abs/2305.17926",
+      "source_title": "[2305.17926] Large Language Models are not Fair Evaluators",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    },
+    {
+      "claim": "The tiny local judge has named gaps on the same frozen items: Kev-4B scores 0.55 on date arithmetic against Jev's 0.93, 0.70 on MMLU against 0.90, and 0.500 on MMLU-Pro 10-way against Jev's 0.840, and its out-of-domain probabilities are usable but not calibrated (raw ECE 0.130 dev, 0.102 test).",
+      "source_url": "https://raw.githubusercontent.com/jaredpalmer/kev/main/docs/model-cards/kev-4b.md",
+      "source_title": "Kev-4B model card (jaredpalmer/kev docs)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Jev input price per million tokens (output tokens free)",
+      "value": "$0.042 / MTok",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+      "label": "Four Ragas metrics on gpt-4.1-mini, per 1k samples (jevals bench, 2026-09-20)",
+      "value": "$2.60",
+      "source_url": "https://github.com/openlayer-ai/jevals"
+    },
+    {
+      "label": "Same four metrics through Jev, per 1k samples",
+      "value": "$0.03",
+      "source_url": "https://github.com/openlayer-ai/jevals"
+    },
+    {
+      "label": "GPT and Claude judge score variance relative to Jev (100 repetitions)",
+      "value": "92x to 913x",
+      "source_url": "https://www.langchain.com/blog/jev-agent-evals-langsmith"
+    },
+    {
+      "label": "Total cost of 500 repeated quality judgments, Jev versus Claude Sonnet 4.6",
+      "value": "$0.34 total vs. $28.17 for Claude",
+      "source_url": "https://www.langchain.com/blog/jev-agent-evals-langsmith"
+    },
+    {
+      "label": "Kev-9B accuracy on the locked out-of-domain test (frozen suite)",
+      "value": "0.837",
+      "source_url": "https://github.com/jaredpalmer/kev/releases"
+    },
+    {
+      "label": "Kev-4B bf16 GPU memory needed for serving",
+      "value": "~9 GB of GPU memory",
+      "source_url": "https://raw.githubusercontent.com/jaredpalmer/kev/main/docs/model-cards/kev-4b.md"
+    },
+    {
+      "label": "Position-bias hack: queries where Vicuna-13B beat ChatGPT by order swap alone (ChatGPT as evaluator)",
+      "value": "66 over 80 tested queries",
+      "source_url": "https://arxiv.org/abs/2305.17926"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Hiring a courtroom lawyer to sort mail",
+      "mapping": "the LLM judge bills by the word for a written opinion on every envelope, while the decision model is a trained sorter that circles a routing slip in one glance.",
+      "limit": "the sorter cannot write an opinion at all; anything needing reasoned critique or multi-step argument goes back to the lawyer."
+    },
+    {
+      "vehicle": "A toll bridge versus a bike you own",
+      "mapping": "per-token judge pricing is a toll paid on every judgment, and local weights are the upfront purchase that makes each extra judgment free.",
+      "limit": "the bike rides fixed routes, meaning rubric-shaped short-context verdicts, not long-document grading or open-ended critique."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Judging an agent trace needs a frontier model that writes out its reasoning.",
+      "reality": "most judge questions are a yes/no, a choice, or a rubric score, and a small decision model returns them as probabilities in one forward pass (claims 1, 5)."
+    },
+    {
+      "myth": "The API bill is the whole cost of an LLM judge.",
+      "reality": "generation also makes judges unstable, 92x to 913x the score variance of a decision model on identical traces, with verdicts that flip when option order swaps (claims 8, 9)."
+    },
+    {
+      "myth": "A local 4B judge is a drop-in replacement for the big judge.",
+      "reality": "Kev-4B scores 0.55 on date arithmetic where hosted Jev scores 0.93, and 0.500 on MMLU-Pro where Jev scores 0.840 (claim 10)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "LLM-as-judge",
+      "definition": "using a chat model to read another model's output and write the verdict, generated token by token and billed per token."
+    },
+    {
+      "term": "decision model",
+      "definition": "a model that reads a state and returns typed answers with calibrated probabilities in a single forward pass, generating no text."
+    },
+    {
+      "term": "System One model",
+      "definition": "TypeSafe's name for the model class that trades away text generation for fast, structured, probability-valued decisions."
+    },
+    {
+      "term": "LoRA adapter",
+      "definition": "a small set of extra trainable weights attached to a frozen base model, so a big model can be specialized cheaply."
+    },
+    {
+      "term": "forward pass",
+      "definition": "one trip of the input through the network to its outputs, with no token-by-token generation afterwards."
+    },
+    {
+      "term": "calibrated probability",
+      "definition": "a probability that matches how often the model is actually right, so software can act on it."
+    },
+    {
+      "term": "per million tokens",
+      "definition": "the unit API models bill by, charged separately for text sent in and text generated out."
+    },
+    {
+      "term": "Ragas",
+      "definition": "a popular open-source eval library whose faithfulness and relevancy metrics are built on LLM judge calls."
+    },
+    {
+      "term": "position bias",
+      "definition": "a judge flaw where swapping the order of the options changes the verdict."
+    },
+    {
+      "term": "variance",
+      "definition": "how much a judge's score moves when it re-scores the identical trace."
+    },
+    {
+      "term": "out-of-domain",
+      "definition": "test questions from dataset families the model never trained on."
+    }
+  ],
+  "unverified": [
+    "The jevals bench rows for Kev-4B ($0 per 1k samples, ~6s wall time) and Laya (~1s) are labeled estimates by the jevals authors and have not been run by them.",
+    "No first-party measurement exists of Kev's tokens-per-second or latency on our own hardware, including the DGX Spark; the README's numbers are an M5 Mac and one H100.",
+    "Whether TypeSafe's $0.042 per million input token price is sustainable is unknowable from outside; TypeSafe itself says it \"can't prove it isn't subsidized\".",
+    "Whether position bias and judge variance actually bite in any specific viewer pipeline depends on their harness and prompt, not on the papers alone."
+  ],
+  "suggested_outline": "The judge bill is real and named: frontier judge models charge per million tokens for verdicts written token by token, while the same job done by a decision model costs a fraction of a cent per trace.\nWhat a decision model is and what Kev puts on your machine: typed questions in, calibrated probabilities out, one forward pass, small open Qwen weights running local with no per-token bill.\nThe honest boundary: tiny judges lose at date arithmetic, world knowledge, and multi-step critique, so keep the big model for those and run the local judge on every trace.",
+  "notes": "FireCrawl returned 402 (credits out) for this run, so every page was fetched with the hermes web_extract tool; Reddit was skipped (JSON 403) and YT_API_KEY is empty. Conflict: the jevals README cites JevBench putting Jev at \"83 to 87% on Banking77 and CLINC150\", while JevBench's own archived run reports 80.3% accuracy on Banking77 (3,080 cases); trust the run page, which publishes its protocol and failure cases. Scope caveat: LangChain's variance and cost numbers measured hosted Jev, not Kev, and Kev's accuracy numbers come from Jared Palmer's frozen suites (self-reported, with locked-test reads recorded once). Naming drift: the release badge says Kev-0.6B/Qwen3 while the current family is 0.8B/4B/9B on Qwen3.5; the release notes table is newer. The Qwen3.5 Kev models are slow on Apple Silicon (no fast DeltaNet kernels on MPS, 779 ms for a five-question request on the 4B on an M5); the Qwen3 checkpoints are the low-latency Mac option until an MLX backend ships.",
+  "viewer_situation": "You score your agent's traces with a frontier API judge and wince at the token bill every time the eval suite runs.",
+  "has_process": true,
+  "process_steps": [
+    "Clone the Kev repository and run uv sync --extra serve to install the server.",
+    "Start the judge locally with KEV_DTYPE=bf16 uv run --extra serve python -m kev.serve --run jaredpalmer/kev-4b --port 8009.",
+    "Send your trace as state plus typed questions to localhost:8009/v1/systemone and read back a probability per question."
+  ],
+  "objection": "A 4B judge that scores 0.55 on date arithmetic where the hosted model scores 0.93 is a classifier dressed up as a judge, and its uncalibrated confidence can quietly automate the wrong decisions."
+}
