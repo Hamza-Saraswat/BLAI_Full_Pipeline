@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-21-stop-paying-for-an-llm-judge
 workspace: shorts
-title: Stop paying for an LLM judge
-status: scripted
+title: "Stop Paying an LLM Judge: Kev Runs Local"
+status: ready-to-build
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T12:31:50Z"
+updated: "2026-09-21T12:33:53Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-09-21-ideas]]
 - Research: [[stages/03-research/output/2026-09-21-stop-paying-for-an-llm-judge-brief]]
 - Script: [[stages/04-script/output/2026-09-21-stop-paying-for-an-llm-judge-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-09-21-stop-paying-for-an-llm-judge-package]]
+- Voice: [[stages/06-voice/output/2026-09-21-stop-paying-for-an-llm-judge-narration|Narration sidecars]] (written by the stage-04 normalizer; build.py runs 06-07)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -36,5 +36,6 @@ blotato_post_id: ""
 - smooth-explainer over the release default: the belief needs dismantling across beats; rotation holds (yesterday was comparison, the day before news-react).
 
 - Script stage: rotation banned myth-bust and contrarian-take (last two shapes); drafts ran worked-example vs number-first. Writer A won twenty-one to twenty with two grafts from B (calibration definition, nightly-sample line). Gates: validator and eval clean on both; winner recorded in ledger, pack signal.
+- Package checkpoint (unattended): searchable title chosen over two intriguing variants (search depth 45 topic); rubric 100 with every row scored; synthetic media false per compliance; description links the 09-16 Jev short as closest related. Stage 06-08 are the Spark build job's; this session stops at ready-to-build.
 ## Build journal
 
