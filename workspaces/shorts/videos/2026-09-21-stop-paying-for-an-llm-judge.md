@@ -2,21 +2,21 @@
 slug: 2026-09-21-stop-paying-for-an-llm-judge
 workspace: shorts
 title: "Stop Paying an LLM Judge: Kev Runs Local"
-status: scheduled
+status: published
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T18:13:48Z"
+updated: "2026-09-21T23:00:30Z"
 publish_slot: "2026-09-21T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=8lnw6yiQOJA"
 blotato_post_id: 2cafbbe6-7cd1-45e3-9e7a-9e00a6e53c2b
 ---
 # Stop paying for an LLM judge
@@ -45,3 +45,4 @@ blotato_post_id: 2cafbbe6-7cd1-45e3-9e7a-9e00a6e53c2b
 - 2026-09-21T13:14:04Z build done, status review
 - 2026-09-21T18:12:11Z telegram approve (approved_at 2026-09-21T18:12:11Z)
 - 2026-09-21T18:13:49Z 08-publish ok 3s
+- 2026-09-21T23:00:30Z published https://www.youtube.com/watch?v=8lnw6yiQOJA
