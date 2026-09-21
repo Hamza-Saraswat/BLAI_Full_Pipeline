@@ -2,14 +2,14 @@
 slug: 2026-09-21-stop-paying-for-an-llm-judge
 workspace: shorts
 title: "Stop Paying an LLM Judge: Kev Runs Local"
-status: review
+status: approved
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T13:13:58Z"
+updated: "2026-09-21T18:12:11Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-21T13:14:02Z 07-render ok 119.53s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 103
 - 2026-09-21T13:14:02Z 07-render ok 1899s
 - 2026-09-21T13:14:04Z build done, status review
+- 2026-09-21T18:12:11Z telegram approve (approved_at 2026-09-21T18:12:11Z)
