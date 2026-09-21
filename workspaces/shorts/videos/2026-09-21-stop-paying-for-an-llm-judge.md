@@ -2,19 +2,19 @@
 slug: 2026-09-21-stop-paying-for-an-llm-judge
 workspace: shorts
 title: "Stop Paying an LLM Judge: Kev Runs Local"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T12:33:53Z"
+updated: "2026-09-21T12:39:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -38,4 +38,4 @@ blotato_post_id: ""
 - Script stage: rotation banned myth-bust and contrarian-take (last two shapes); drafts ran worked-example vs number-first. Writer A won twenty-one to twenty with two grafts from B (calibration definition, nightly-sample line). Gates: validator and eval clean on both; winner recorded in ledger, pack signal.
 - Package checkpoint (unattended): searchable title chosen over two intriguing variants (search depth 45 topic); rubric 100 with every row scored; synthetic media false per compliance; description links the 09-16 Jev short as closest related. Stage 06-08 are the Spark build job's; this session stops at ready-to-build.
 ## Build journal
-
+- 2026-09-21T12:39:46Z build start on gn100-83c4
