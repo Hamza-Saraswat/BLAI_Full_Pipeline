@@ -1,0 +1,194 @@
+{
+  "slug": "2026-09-21-stop-paying-for-an-llm-judge",
+  "topic": "Stop paying for an LLM judge",
+  "title": "Stop Paying an LLM Judge: Kev-4B Local",
+  "description": "Your eval suite's judge writes every verdict token by token and bills per token, so the same repeated judgments can cost thirty-four cents or twenty-eight dollars depending on who judges. This is the swap: Kev-4B, a small local decision model serving verdicts as probabilities from about nine gigabytes of GPU memory, plus the honest boundary where the big model still wins.",
+  "hashtags": [
+    "#localai",
+    "#agentevals",
+    "#opensource"
+  ],
+  "hook_text": "500 verdicts: 34 cents or $28.17",
+  "hook_candidates": [
+    "Thirty-four cents or twenty-eight dollars, for the same 500 judgments",
+    "Kev-4B judges your agent, from 9 GB of your GPU",
+    "Stop renting a lawyer to sort your eval mail",
+    "Your eval bill is 92x too noisy, and too high",
+    "You pay per word for a verdict that is one bit",
+    "The judge does not need to write an essay",
+    "Same 500 verdicts: 34 cents or 28 dollars",
+    "Cut your judge bill by 98.8 percent tonight",
+    "The judge flips when you swap two answers",
+    "Five hundred verdicts, thirty-four cents, local"
+  ],
+  "hook_pattern": "price",
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "worked-example",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 132,
+  "narration_full": "You score your agent's traces with a frontier API judge. Every verdict bills per token. Five hundred verdicts: thirty-four cents, or twenty-eight dollars for Claude. Look at what that bill buys. The judge, a GPT or Claude model, returns a paragraph of reasoning. Plus a JSON blob, a block of structured fields. Your software keeps a single label. The rest is generated and billed anyway. Generation brings friends. Re-score the identical trace and the verdict can drift. Swap the order of the answers and the winner can flip. That flaw is position bias. A decision model is a different shape of thing. State and typed questions go in. Probabilities come out in a single forward pass, a straight trip through the network. Calibrated means the score matches how often it is actually right. Nothing gets written. Your API judge is a courtroom lawyer, billing by the word for an opinion on every envelope. The decision model is the mail sorter, circling the routing slip at a glance. Kev four B is that sorter with open weights and an Apache license. A LoRA adapter, a small set of trainable weights on a frozen Qwen base. It serves from about nine gigabytes of GPU memory. On your own card, no API key, no meter running. Step one: clone the repository and install the server. Step two: start the judge locally with the serve command. Step three: send each trace as state plus typed questions, then read back a probability per question. Out of domain means question families it never trained on. On that locked suite, Kev four B scores zero point eight three two. Tooling is catching up, so judging every trace inside the agent loop stops being a luxury. The nightly sample retires. Here is the honest catch. You could call Kev a classifier dressed up as a judge. Date arithmetic and broad knowledge still go to the big model. It trails by a wide margin there. Date arithmetic still trips it, where its hosted sibling Jev scores higher. The sorter cannot write an opinion at all, so reasoned critique goes back to the lawyer. So tonight the same suite runs again. Every verdict comes back from Kev, on your own GPU, identical on every rerun. The judge stopped being a bill and became a download.",
+  "analogy": {
+    "vehicle": "hiring a courtroom lawyer to sort mail",
+    "mapping": "The LLM judge bills by the word for a written opinion on every envelope; the decision model is a trained sorter that circles the routing slip at a glance.",
+    "limit": "The sorter cannot write an opinion at all; anything needing reasoned critique or multi-step argument goes back to the lawyer."
+  },
+  "music_mood": "curious-tech",
+  "notes_for_review": "I anchored accuracy on Kev-4B's 0.832 instead of Kev-9B's 0.837 so the example stays on one model; confirm that reads as the intended third number phrase. The 92x-913x variance figures, the position-bias counts, and the jevals zero-dollar Kev row (an author-labeled estimate per the brief) were all dropped or rendered qualitatively to respect the three-number budget. The analogy limit is spoken verbatim in s8, and the on-screen serve commands omit the port digits for the same budget reason.",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You score your agent's traces with a frontier API judge. Every verdict bills per token. Five hundred verdicts: thirty-four cents, or twenty-eight dollars for Claude.",
+      "on_screen_text": "Same 500 verdicts: 34 cents or 28 dollars",
+      "visual_brief": "Frame 1 composition: dark slate backdrop, the full hook line 'Same 500 verdicts: 34 cents or 28 dollars' centered in the safe area, '34 cents' in amber, everything else off-white. Motion onset at t=0.30s: the amber '34 cents' scales up a touch. On 'writes each verdict token by token' a thin invoice underline fades in. On 'twenty-eight dollars for Claude' the right-hand figure rises in place. Fade and scale only, two elements animating at most.",
+      "est_duration_s": 8.6,
+      "render_notes": "Hook text fully legible at frame 1 inside the 900x1160 safe area; keep clear of the caption band.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Look at what that bill buys. The judge, a GPT or Claude model, returns a paragraph of reasoning. Plus a JSON blob, a block of structured fields. Your software keeps a single label. The rest is generated and billed anyway.",
+      "on_screen_text": "GPT judge: paragraph + JSON | your code keeps: a label",
+      "visual_brief": "On 'paragraph of reasoning' a gray text card fades in center, stacked with dummy prose lines. On 'JSON blob' a second card rises beneath it with amber braces and field rows. On 'keeps a single label' both cards dim except one amber label chip, which scales up. On 'generated and billed anyway' the dimmed blocks fade out, leaving only the chip centered. One text block at a time; entrances are fade and rise-in-place.",
+      "est_duration_s": 13.8,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Generation brings friends. Re-score the identical trace and the verdict can drift. Swap the order of the answers and the winner can flip. That flaw is position bias.",
+      "on_screen_text": "same trace, new score | swap order, flip winner | position bias",
+      "visual_brief": "Two verdict cards fade in side by side on 'Re-score the identical trace'. On 'the verdict can drift' the right card's badge ticks from PASS to a wobbling near-miss shade. On 'Swap the order of the answers' the two answer rows trade places by rising and settling, never sliding from an edge. On 'the winner can flip' the amber check mark hops rows. On 'position bias' a small caption fades in below.",
+      "est_duration_s": 9.3,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "A decision model is a different shape of thing. State and typed questions go in. Probabilities come out in a single forward pass, a straight trip through the network. Calibrated means the score matches how often it is actually right. Nothing gets written.",
+      "on_screen_text": "state + questions in | probabilities out, single pass | calibrated: score matches reality",
+      "visual_brief": "Diagram draws on 'state and typed questions go in': an input node on the left with two labeled arrows entering. On 'probabilities come out', three probability bars scale upward on the right. On 'nothing gets written', the output side shows one node and no text stream. Amber accent on the output bars only; motion starts at frame nine.",
+      "est_duration_s": 14.8
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your API judge is a courtroom lawyer, billing by the word for an opinion on every envelope. The decision model is the mail sorter, circling the routing slip at a glance.",
+      "on_screen_text": "lawyer bills by the word | sorter circles the slip",
+      "visual_brief": "Split screen on 'courtroom lawyer, billing by the word': left panel a formal opinion document with a ticking word counter, right panel a plain routing slip. On 'circling the routing slip', an amber circle draws around one label on the slip. Hard cut between panels; counter ticks on 'every envelope'.",
+      "est_duration_s": 10.7
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Kev four B is that sorter with open weights and an Apache license. A LoRA adapter, a small set of trainable weights on a frozen Qwen base. It serves from about nine gigabytes of GPU memory. On your own card, no API key, no meter running.",
+      "on_screen_text": "Kev-4B = LoRA adapter on Qwen base | open weights, Apache license | ~9 GB GPU memory",
+      "visual_brief": "On 'Kev four B' the product wordmark fades in center. On 'LoRA adapter' a thin amber adapter ring scales in around a frozen gray base block labeled Qwen. On 'about nine gigabytes of GPU memory' a vertical memory meter fills to a notch labeled '~9 GB'. On 'no API key, no meter running' a key icon and a coin meter fade out together. Stacked, centered, fade and scale entrances only.",
+      "est_duration_s": 15.9
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Step one: clone the repository and install the server. Step two: start the judge locally with the serve command. Step three: send each trace as state plus typed questions, then read back a probability per question.",
+      "on_screen_text": "uv sync --extra serve | python -m kev.serve | state + questions -> probability",
+      "visual_brief": "A vertical timeline of three nodes fades in, each node lighting amber as its step is spoken. On 'clone the repository' a terminal card shows 'uv sync --extra serve'; on 'start the judge locally' the card text swaps to 'python -m kev.serve'; on 'state plus typed questions' a chip reading 'state + questions' fades in beside an arrow ending at 'probability'. Only one card's text changes at a time; all entrances are fades.",
+      "est_duration_s": 12.8,
+      "render_notes": "Commands shortened to keep port digits off screen for the number budget; full commands go in the pinned comment."
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Out of domain means question families it never trained on. On that locked suite, Kev four B scores zero point eight three two. Tooling is catching up, so judging every trace inside the agent loop stops being a luxury. The nightly sample retires.",
+      "on_screen_text": "locked out-of-domain suite | Kev-4B: 0.832 | the nightly sample retires",
+      "visual_brief": "On 'locked suite' a padlocked test-suite card fades in behind the frame. On 'zero point eight three two' the giant amber figure '0.832' scales in center under a small 'Kev-4B' label. On 'Tooling is catching up' a small request chip rises at the bottom; on 'inside the agent loop' a thin loop arrow draws itself around the chip. Two animations maximum at once, no slides.",
+      "est_duration_s": 14.8,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Here is the honest catch. You could call Kev a classifier dressed up as a judge. Date arithmetic and broad knowledge still go to the big model.",
+      "on_screen_text": "the fair objection | dates + knowledge go big",
+      "visual_brief": "On 'honest catch' the screen splits: left panel 'stays local', right panel 'big model keeps'. On 'classifier dressed up as a judge', a small card rises on the left. On 'date arithmetic and broad knowledge', two chips rise into the right panel with amber outlines.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "It trails by a wide margin there. Date arithmetic still trips it, where its hosted sibling Jev scores higher. The sorter cannot write an opinion at all, so reasoned critique goes back to the lawyer.",
+      "on_screen_text": "not calibrated off home turf | critique goes to the lawyer",
+      "visual_brief": "A two by two grid fades in on 'wide margin': cells for dates, knowledge, confidence, critique. On 'not calibrated', the confidence cell's meter needle wavers. On 'goes back to the lawyer', the critique cell dims and a gavel icon rises in place. Amber on the wavering meter only.",
+      "est_duration_s": 12.1
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So tonight the same suite runs again. Every verdict comes back from Kev, on your own GPU, identical on every rerun. The judge stopped being a bill and became a download.",
+      "on_screen_text": "same suite tonight | no per-token bill",
+      "visual_brief": "On 'the same suite runs again' the frame-1 invoice card fades back in, same layout as the hook, but the total line stays blank. On 'from your own GPU' a small GPU chip icon pulses amber. On 'identical on every rerun' two matching check marks rise in place. On 'became a download' the card folds into a download-arrow badge. Final half second: channel wordmark settles center, visual only. Last frame rhymes with frame 1.",
+      "est_duration_s": 10.7,
+      "render_notes": "Wordmark settle is visual only; nothing spoken after the payoff sentence."
+    }
+  ],
+  "tags": [
+    "llm as judge",
+    "llm judge",
+    "jev model",
+    "kev model",
+    "local ai",
+    "ai evaluation",
+    "llm evaluation",
+    "agent evals",
+    "decision model",
+    "qwen 3.5",
+    "run llm locally",
+    "local llm",
+    "typesafe jev",
+    "llm judge cost",
+    "eval loop"
+  ]
+}
