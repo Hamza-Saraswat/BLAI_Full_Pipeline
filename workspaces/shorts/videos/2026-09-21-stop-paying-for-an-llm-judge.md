@@ -2,22 +2,22 @@
 slug: 2026-09-21-stop-paying-for-an-llm-judge
 workspace: shorts
 title: "Stop Paying an LLM Judge: Kev Runs Local"
-status: approved
+status: scheduled
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T18:12:11Z"
-publish_slot: ""
+updated: "2026-09-21T18:13:48Z"
+publish_slot: "2026-09-21T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 2cafbbe6-7cd1-45e3-9e7a-9e00a6e53c2b
 ---
 # Stop paying for an LLM judge
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-21-stop-paying-for-an-llm-judge-package]]
 - Voice: [[stages/06-voice/output/2026-09-21-stop-paying-for-an-llm-judge-narration|Narration sidecars]] (written by the stage-04 normalizer; build.py runs 06-07)
 - Render: [[stages/07-render/output/2026-09-21-stop-paying-for-an-llm-judge-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-21-stop-paying-for-an-llm-judge-publish]]
 
 - Research checkpoint: angle confirmed as the cost swap (judge verdict from a priced API to local decision weights), slug unchanged; no picks.md swap requested.
 - Picked from ideas note rank 1 (opportunity 97.6, deepest autocomplete in the set, two radar sources): Kev + jevals, "LLM-as-judge token spend is the myth, tiny local decision weights are the fix".
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-21T13:14:02Z 07-render ok 1899s
 - 2026-09-21T13:14:04Z build done, status review
 - 2026-09-21T18:12:11Z telegram approve (approved_at 2026-09-21T18:12:11Z)
+- 2026-09-21T18:13:49Z 08-publish ok 3s
