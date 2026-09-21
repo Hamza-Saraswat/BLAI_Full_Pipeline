@@ -2,18 +2,18 @@
 slug: 2026-09-20-8-vision-models-on-one-rtx-309
 workspace: shorts
 title: RTX 3090 still runs 8 vision models
-status: blocked
+status: expired
 pillar: myth-bust
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "PROVES,TEACHES"
 created: 2026-09-20
-updated: "2026-09-20T12:33:48Z"
+updated: "2026-09-21T13:35:15Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-20T12:32:13Z 06-voice fail 144s (voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy')
 - 2026-09-20T12:33:48Z 06-voice fail 94s (voice QA failed: WER 0.050, 4 mismatch(es): expected 'thirty' heard 'three thousand'; expected 'point' heard ''; expected 'point seven' heard 'seventy')
 - 2026-09-20T12:33:48Z blocked at 06-voice
+- 2026-09-21T13:35:15Z 2026-09-21T13:35:15Z expired: not from today's picks (2026-09-21); the factory carries no backlog

@@ -2,14 +2,14 @@
 slug: 2026-09-20-mac-mini-m6-vs-strix-halo-doll
 workspace: shorts
 title: "Mac mini M6 vs Strix Halo: dollars per GB"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-20
-updated: "2026-09-20T11:06:08Z"
+updated: "2026-09-21T13:35:15Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-21T13:35:15Z 2026-09-21T13:35:15Z expired: not from today's picks (2026-09-21); the factory carries no backlog
