@@ -1,0 +1,37 @@
+{
+  "full": "Open WebUI's download just shrank eighty-nine percent. You run it in Docker next to oh-lah-mah, wincing at every pull. Slim drops the bundled machine-learning stack: torch, the neural-network library, speech models, and ffmpeg, a media converter. Installed just in case. Eighty-nine percent is against the last slim, a one point four four gigabyte pull. The standard image is still a one point five four gigabyte download. Slim refuses MySQL or S three storage at boot; voice and PDF reading move outside. Chat through oh-lah-mah and nothing changes. Tonight, swap your compose file to the slim tag; your volume keeps every chat. Your next pull is about one hundred seventy-five megabytes of download.",
+  "words": 112,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Open WebUI's download just shrank eighty-nine percent. You run it in Docker next to oh-lah-mah, wincing at every pull.",
+      "words": 19,
+      "changed": true
+    },
+    {
+      "id": "s02",
+      "text": "Slim drops the bundled machine-learning stack: torch, the neural-network library, speech models, and ffmpeg, a media converter. Installed just in case.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Eighty-nine percent is against the last slim, a one point four four gigabyte pull. The standard image is still a one point five four gigabyte download.",
+      "words": 26,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Slim refuses MySQL or S three storage at boot; voice and PDF reading move outside. Chat through oh-lah-mah and nothing changes.",
+      "words": 21,
+      "changed": true
+    },
+    {
+      "id": "s05",
+      "text": "Tonight, swap your compose file to the slim tag; your volume keeps every chat. Your next pull is about one hundred seventy-five megabytes of download.",
+      "words": 25,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

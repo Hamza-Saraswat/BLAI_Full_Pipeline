@@ -1,0 +1,117 @@
+{
+  "slug": "2026-09-22-open-webui-s-new-slim-image-is",
+  "topic": "Open WebUI v0.11.4 ships a slim Docker image at about 175 MB",
+  "title": "Open WebUI Slim: An Honest 89 Percent Shrink",
+  "description": "Open WebUI v0.11.4's slim Docker image drops the bundled machine-learning stack and pulls at about 175 MB; here is what it drops, what the 89 percent really compares, and the tag swap to switch tonight.",
+  "hashtags": [
+    "#openwebui",
+    "#localai"
+  ],
+  "hook_text": "Open WebUI's download just shrank eighty-nine percent.",
+  "hook_candidates": [
+    "Open WebUI just shipped itself without the ML stack. (named-contradiction) *DRAFT A",
+    "Open WebUI's download just shrank eighty-nine percent. (number-shock) *DRAFT B",
+    "Eighty-nine percent smaller, and the registry agrees: 168.31 MB. (number-shock)",
+    "Your chat front end just lost a gigabyte and a half of baggage. (number-shock)",
+    "Open WebUI v0.11.4 cuts its image to about 175 MB. (number-shock)",
+    "You pull Open WebUI in Docker. The pull is the problem. (situation)",
+    "The slim image is 168 megabytes. The old slim was 1.44 gigabytes. (number-shock)",
+    "Open WebUI doesn't need torch on your disk anymore. (named-contradiction)",
+    "Slim Open WebUI, honest catch: no MySQL, no S3, no local voice. (named-contradiction)",
+    "One tag suffix tonight and your next pull is seconds, not minutes. (tonight)"
+  ],
+  "hook_pattern": "number-shock",
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 38.6,
+  "narration_full": "Open WebUI's download just shrank eighty-nine percent. You run it in Docker next to Ollama, wincing at every pull. Slim drops the bundled machine-learning stack: torch, the neural-network library, speech models, and ffmpeg, a media converter. Installed just in case. Eighty-nine percent is against the last slim, a one point four four gigabyte pull. The standard image is still a one point five four gigabyte download. Slim refuses MySQL or S three storage at boot; voice and PDF reading move outside. Chat through Ollama and nothing changes. Tonight, swap your compose file to the slim tag; your volume keeps every chat. Your next pull is about one hundred seventy-five megabytes of download.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Open WebUI's download just shrank eighty-nine percent. You run it in Docker next to Ollama, wincing at every pull.",
+      "on_screen_text": "Open WebUI\n89%\nsmaller download",
+      "visual_brief": "Dark terminal canvas, sharp corners. At frame 1 a giant hard-edged '89%' is already on screen, centered and static, with 'Open WebUI' above it. On the phrase 'just shrank', the caption 'smaller download' types in under the digits. On 'eighty-nine percent' the digits do one scale pulse, onset after 0.30s. On 'wincing at every pull' a tiny monospace compose-file snippet fades in lower-left, above the 450px safe line. Two elements animating at most.",
+      "est_duration_s": 6.6,
+      "render_notes": "Monospace typewriter reveal for captions, no soft fades on text. Keep all elements clear of the bottom 450px and right 120px.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Slim drops the bundled machine-learning stack: torch, the neural-network library, speech models, and ffmpeg, a media converter. Installed just in case.",
+      "on_screen_text": "torch\nspeech models\nffmpeg",
+      "visual_brief": "Three sharp-cornered monospace rows type in one per beat: 'torch' lands on 'torch, the neural-network library', 'speech models' on 'speech models', 'ffmpeg' on 'ffmpeg, a media converter'. On 'Installed just in case' all three rows strike through in a single hard cut and dim to gray. Stack centered, nothing below the 450px safe line.",
+      "est_duration_s": 7.2,
+      "render_notes": "Terminal pack: typewriter entrances, strike-through is an instant cut, not an animation. Short lines only.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Eighty-nine percent is against the last slim, a one point four four gigabyte pull. The standard image is still a one point five four gigabyte download.",
+      "on_screen_text": "last slim\n1.44 GB\nstandard image",
+      "visual_brief": "Two hard-cornered vertical bars, bottom-aligned above the safe zone. On 'one point four four gigabyte pull' the left bar rises-in-place and its label '1.44 GB' pops in over it. On 'The standard image stays' a slightly taller bar rises to its right labeled only 'standard image' with no digits, so the spoken one point five four never appears on screen. Labels type in, motion onset after 0.30s.",
+      "est_duration_s": 9.0,
+      "render_notes": "Bar heights proportional to 1.44 versus 1.54 so the comparison stays honest. Only the 1.44 GB label carries digits.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Slim refuses MySQL or S three storage at boot; voice and PDF reading move outside. Chat through Ollama and nothing changes.",
+      "on_screen_text": "ollama chat: same",
+      "visual_brief": "Boot-log terminal, one hard cut per beat. On 'Slim refuses MySQL' the line 'db: mysql refused' types in. On 'or S3 storage' a second line 'storage: s3 refused' appears below it. On 'voice and PDF reading move outside' both lines hard-cut to 'voice+pdf: external'. On 'Chat through Ollama and nothing changes' the screen cuts to a single calm line, 'ollama chat: same', which holds. Never more than two short lines visible at once.",
+      "est_duration_s": 7.2,
+      "render_notes": "Each replacement is a hard cut, no fades. All lines under about 19 characters, clear of the right 120px."
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Tonight, swap your compose file to the slim tag; your volume keeps every chat. Your next pull is about one hundred seventy-five megabytes of download.",
+      "on_screen_text": "open-webui:slim\n175 MB\n89%",
+      "visual_brief": "Compose-file terminal. On 'swap your compose file to the slim tag' the line types in wrapped as 'image: openwebui/' then 'open-webui:slim'. On 'your volume keeps every chat' a volume line fades in beneath, onset after 0.30s. On 'one hundred seventy-five megabytes' the terminal hard-cuts to a giant '175 MB' settling center-frame, and the frame-1 '89%' returns as a small caption under it. The video ends held on that frame, nothing after the payoff line.",
+      "est_duration_s": 8.6,
+      "render_notes": "Last frame rhymes with frame 1: the 89 percent digit returns small beneath the settled 175 MB. Sharp corners, monospace, all text above the bottom 450px safe zone.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        },
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Draft B: number-first. Reviewer: hook spends 89% in sentence one; 1.54 GB spoken-only in the catch; swap closes as the payoff."
+}
