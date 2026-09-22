@@ -1,0 +1,228 @@
+{
+  "slug": "2026-09-22-open-webui-s-new-slim-image-is",
+  "topic": "Open WebUI v0.11.4 ships a slim Docker image at about 175 MB, an 89% cut, so the standard local AI front end stops being a heavyweight pull",
+  "generated_at": "2026-09-22T11:42:32Z",
+  "depth": "standard",
+  "thesis": "Open WebUI's new slim image proves the standard local AI front end never needed to be a multi-gigabyte download: strip the bundled models and their libraries and the whole interface pulls in about 175 MB, with the work you actually use delegated to services you point it at.",
+  "explanation_path": "Start from what the viewer already does: they run Open WebUI in Docker next to Ollama or an API key, and the image they pull is the heavyweight one. Establish what was actually inside that image: not just the chat interface but an entire local machine-learning stack -- the PyTorch library, pre-downloaded speech and embedding models, converters like ffmpeg and pandoc -- installed just in case, even though most users' model inference happens elsewhere. Then the v0.11.4 change: the maintainers asked which of that a front end really needs, cut it, and published the result as the slim variant. Bring in the registry numbers so the size claim is concrete and checkable, and be honest that the 89% headline compares slim to the previous slim, not to the standard image. From sizes, move to the trade: slim refuses to start under configurations that need the removed stack (MySQL database, S3 file storage), and features like voice, PDF upload and local embeddings now require pointing at an external service -- which is no change at all for a default install chatting through Ollama or a hosted API. Land on the switch itself: the viewer's docker pull or compose file changes by one tag suffix, their volume keeps their chats, and the payoff is a pull measured in seconds of download instead of a coffee break.",
+  "claims": [
+    {
+      "claim": "Open WebUI's own release notes for v0.11.4 state the slim build comes down at around 175 MB, near enough 89% smaller than the last release.",
+      "source_url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4",
+      "source_title": "Release v0.11.4 · open-webui/open-webui · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "Docker Hub's tag page lists the current slim image (tag 0.11.4-slim) at a compressed size of 168.31 MB for linux/amd64.",
+      "source_url": "https://hub.docker.com/r/openwebui/open-webui/tags",
+      "source_title": "openwebui/open-webui - Docker Image",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "The same Docker Hub page lists the previous v0.11.3-slim tag at 1.44 GB (linux/amd64) and the current standard 0.11.4 tag at 1.54 GB (linux/amd64).",
+      "source_url": "https://hub.docker.com/r/openwebui/open-webui/tags",
+      "source_title": "openwebui/open-webui - Docker Image",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "The shrink came from removing the local machine-learning stack: the official docs list no torch, no sentence-transformers, no transformers, no faster-whisper, no unstructured, and no ffmpeg, pandoc or build toolchain.",
+      "source_url": "https://docs.openwebui.com/getting-started/quick-start/",
+      "source_title": "Quick Start / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "Slim is published under the tag :main-slim on ghcr.io with the bare :slim alias on Docker Hub, and slim is a variant of its own with no cuda or ollama combination.",
+      "source_url": "https://docs.openwebui.com/getting-started/quick-start/",
+      "source_title": "Quick Start / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "Slim refuses to start rather than failing later when the application database is not SQLite or PostgreSQL, or file storage is not local.",
+      "source_url": "https://docs.openwebui.com/getting-started/quick-start/",
+      "source_title": "Quick Start / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "The official docs state nothing extra is required to run slim and chatting works exactly as on the standard image.",
+      "source_url": "https://docs.openwebui.com/getting-started/quick-start/",
+      "source_title": "Quick Start / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "The code interpreter on slim fetches its Python packages from cdn.jsdelivr.net in the browser instead of from the instance.",
+      "source_url": "https://docs.openwebui.com/getting-started/quick-start/",
+      "source_title": "Quick Start / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "The v0.11.4 release notes also state the standard image lost about 170 MB by dropping a second copy of Python, duplicate fonts and unused packages.",
+      "source_url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4",
+      "source_title": "Release v0.11.4 · open-webui/open-webui · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    },
+    {
+      "claim": "User data lives in a Docker volume that survives the image swap, so switching to slim keeps chats, users and settings.",
+      "source_url": "https://docs.openwebui.com/getting-started/updating/",
+      "source_title": "Updating Open WebUI / Open WebUI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "slim image size (release notes)",
+      "value": "around 175 MB",
+      "source_url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4"
+    },
+    {
+      "label": "slim image size (Docker Hub, linux/amd64, compressed)",
+      "value": "168.31 MB",
+      "source_url": "https://hub.docker.com/r/openwebui/open-webui/tags"
+    },
+    {
+      "label": "reduction vs last release (release notes)",
+      "value": "89% smaller",
+      "source_url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4"
+    },
+    {
+      "label": "previous slim (v0.11.3-slim, linux/amd64, compressed)",
+      "value": "1.44 GB",
+      "source_url": "https://hub.docker.com/r/openwebui/open-webui/tags"
+    },
+    {
+      "label": "standard image (v0.11.4, linux/amd64, compressed)",
+      "value": "1.54 GB",
+      "source_url": "https://hub.docker.com/r/openwebui/open-webui/tags"
+    },
+    {
+      "label": "standard-image reduction (release notes)",
+      "value": "about 170 MB",
+      "source_url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A phone that shipped with a professional kitchen installed, just in case you wanted to cook",
+      "mapping": "The old image carried PyTorch, speech models and converters for work most users delegate to Ollama or an API anyway; slim ships just the phone.",
+      "limit": "The viewer actually uses those features locally, because a phone cannot grow a kitchen back, while slim can be swapped for the standard tag."
+    },
+    {
+      "vehicle": "A moving truck versus a hatchback for the commute",
+      "mapping": "Standard image is the truck: capable of hauling everything (local voice, embeddings, any database); slim is the hatchback that carries the actual daily load, chatting, and parks easier.",
+      "limit": "The viewer's deployment needs the truck bed (MySQL, S3 storage), which slim refuses at boot."
+    },
+    {
+      "vehicle": "A hotel room mini-bar",
+      "mapping": "Every item in the mini-bar looks convenient and costs the room space and weight; slim is the same room with the mini-bar removed because you were ordering delivery (external services) all along.",
+      "limit": "The hotel guest is offline, since slim's code interpreter needs the CDN and air-gapped users should stay standard."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Slim is a smaller compressed download but the same multi-GB thing once unpacked on disk.",
+      "reality": "Docker Hub's compressed size is the download, and it lists 168.31 MB for linux/amd64 (claim 2)."
+    },
+    {
+      "myth": "The 89% claim is slim versus the standard image.",
+      "reality": "The release notes say 89% smaller than the last release, and the last release's slim tag was 1.44 GB, matching the ratio; the standard image is a separate 1.54 GB (claims 1 and 3)."
+    },
+    {
+      "myth": "Slim means features are missing or removed from the interface.",
+      "reality": "The docs state nothing extra is required to run it and chatting works exactly as on :main; what changes is where the work happens (claim 7)."
+    },
+    {
+      "myth": "Slim is only for Kubernetes or enterprise deployments.",
+      "reality": "The docs frame it as the smaller image for anyone using Open WebUI as a chat front end for hosted models (claims 7 and 5)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "slim image",
+      "definition": "A Docker image variant of Open WebUI with the local machine-learning stack removed so it downloads at a fraction of the size."
+    },
+    {
+      "term": "Docker image",
+      "definition": "The pre-packaged template Docker downloads and runs a program from; bigger images mean longer pulls."
+    },
+    {
+      "term": "tag",
+      "definition": "The label suffix on a Docker image name (like :main-slim or :0.11.4) that picks a specific build or variant."
+    },
+    {
+      "term": "compressed size",
+      "definition": "The size of a Docker image as stored in the registry, which is the amount you actually download."
+    },
+    {
+      "term": "bundled model",
+      "definition": "A speech or embedding model pre-downloaded into the standard image whether or not you use it."
+    },
+    {
+      "term": "embedding model",
+      "definition": "The model that turns documents into numeric vectors so knowledge search can find relevant passages."
+    },
+    {
+      "term": "torch (PyTorch)",
+      "definition": "The Python library for running neural networks, and one of the largest single packages in the standard image."
+    },
+    {
+      "term": "ffmpeg",
+      "definition": "A universal audio and video converter that was carried in the standard image for media handling."
+    },
+    {
+      "term": "RAG (retrieval augmented generation)",
+      "definition": "Feeding a model relevant chunks from your own documents at answer time."
+    },
+    {
+      "term": "vector store",
+      "definition": "The database that holds document embeddings for knowledge search; slim supports only pgvector."
+    },
+    {
+      "term": "pgvector",
+      "definition": "A PostgreSQL extension that stores and searches vectors, the only vector store client slim carries."
+    },
+    {
+      "term": "code interpreter",
+      "definition": "The feature that runs the model's Python code in your browser; on slim it loads its packages from a public CDN."
+    },
+    {
+      "term": "volume",
+      "definition": "The Docker-managed storage folder that holds your chats and settings separately from the container, so it survives image swaps."
+    }
+  ],
+  "unverified": [
+    "How long the slim image takes to download or start on the viewer's own hardware, since no first-party measurement exists yet.",
+    "Whether the around 175 MB in the release notes and the 168.31 MB on Docker Hub refer to exactly the same measurement basis beyond both being described as the slim build's size.",
+    "Community reaction beyond one Reddit thread title and the GitHub discussion history, since Reddit blocked fetching and no HN thread on v0.11.4 exists yet.",
+    "That the old image at one point reached 11 GB as one GitHub commenter claimed in 2025, since that is a community figure from a discussion, not a registry page."
+  ],
+  "suggested_outline": "Hook: the front end you pull every update just shrank from gigabytes to about 175 MB, and the registry itself says 168.31 MB.\nWhat was actually inside the old image: an entire local ML stack shipped just in case you never configured Ollama or an API.\nThe honest catch: slim trades local voice, PDF reading and any-database support for the size, and the 89% is slim versus last slim, not versus standard.",
+  "notes": "Two size figures coexist: the release notes' around 175 MB (unqualified basis) and Docker Hub's 168.31 MB (compressed, linux/amd64; arm64 is 167.72 MB). Name the basis when quoting. The 89% figure is the project's own and checks out arithmetically against the previous slim tag (1.44 GB to 168.31 MB is about 88.3% on amd64, near enough 89%), but it compares slim to slim, not slim to the 1.54 GB standard image. Thin spot: community reaction could not be fetched this run (Reddit 403 to all clients, no HN thread yet at 16 h post-release), so misconceptions are drawn from what the primary docs explicitly preempt rather than from observed community posts. GitHub discussion #12801 (2024-2025) supplies the history: users complained the image hit 11 GB and that the then-existing :latest-slim was somehow larger than :latest (5.2 GB vs 2.4 GB, community figures), which explains why a real rebuild was needed.",
+  "viewer_situation": "You run Open WebUI in Docker today with the standard image tag, chatting through Ollama or a hosted API key, and you wince at the multi-gigabyte pull on every update.",
+  "has_process": true,
+  "process_steps": [
+    "Check your setup uses SQLite and local file storage (the defaults) rather than MySQL or an S3 bucket.",
+    "Change the image in your docker run command or compose file from the standard tag to the slim tag (ghcr.io/open-webui/open-webui:main-slim, or openwebui/open-webui:slim on Docker Hub).",
+    "Pull and recreate the container as with any update; keep the same volume so chats and settings carry over.",
+    "Point any feature you use that needs a model -- voice, PDF extraction, embeddings -- at an external service in the admin settings."
+  ],
+  "objection": "A skeptical engineer says the size cut is honest but overstated as a win: the standard image is 1.54 GB, not 10 GB, most of it is downloaded once and cached, and if you ever want local voice or document embeddings you are back on the fat image or wiring up external services anyway."
+}

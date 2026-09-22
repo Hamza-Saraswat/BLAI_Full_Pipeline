@@ -2,14 +2,14 @@
 slug: 2026-09-22-open-webui-s-new-slim-image-is
 workspace: shorts
 title: "Open WebUI's new slim image is 89% smaller"
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-22
-updated: "2026-09-22T11:07:44Z"
+updated: "2026-09-22T11:46:45Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-22-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-22-open-webui-s-new-slim-image-is-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Research checkpoint: angle confirmed as picked (slim image ~175 MB, 89% vs last slim); no redirect, no swap file for today.
+- Brief: 10 sources all fetched this run, 10 claims / 6 key numbers, validator exit 0; 89% is slim-vs-last-slim (1.44 GB), standard is 1.54 GB, basis named in the brief.
 - Picked: top opportunity (90.1) on autocomplete depth 208; news-react/classic, lane free yesterday.
 - Skipped runner-up context: fact-checker candidate excluded (myth-bust lane repeats 2026-09-21); sources thin (no YT/Reddit/FireCrawl).
 
