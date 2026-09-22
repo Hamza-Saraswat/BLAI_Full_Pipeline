@@ -2,19 +2,19 @@
 slug: 2026-09-22-open-webui-s-new-slim-image-is
 workspace: shorts
 title: "Open WebUI slim image: the 175 MB pull"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-22
-updated: "2026-09-22T12:14:00Z"
+updated: "2026-09-22T12:16:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -40,4 +40,4 @@ blotato_post_id: ""
 ## Build journal
 - 05-package: title "Open WebUI slim image: the 175 MB pull" (searchable, keyword char 1); rubric 100; check_outputs clean after link fixes.
 - 04-script: A news-react (19) vs B number-first (20); B won, 0 grafts. Validator 0 blockers; eval gates all pass (soft: entity_spend/top2, reason in script note); variety ok; normalizer 2 scenes adjusted. 112 words, 38.6 s, pack terminal.
-
+- 2026-09-22T12:16:46Z build start on gn100-83c4
