@@ -2,14 +2,14 @@
 slug: 2026-09-21-hemmingway-1-nobody-can-run-it
 workspace: shorts
 title: "Hemmingway-1: nobody can run it yet"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-21
-updated: "2026-09-21T11:08:50Z"
+updated: "2026-09-22T13:35:49Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - classic band: one fact and one consequence; rotation holds (differs from pick 1's lane and from yesterday's lanes).
 
 ## Build journal
-
+- 2026-09-22T13:35:49Z 2026-09-22T13:35:49Z expired: not from today's picks (2026-09-22); the factory carries no backlog
