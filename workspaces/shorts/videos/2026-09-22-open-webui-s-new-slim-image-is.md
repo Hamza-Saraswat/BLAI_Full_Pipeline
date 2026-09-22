@@ -2,14 +2,14 @@
 slug: 2026-09-22-open-webui-s-new-slim-image-is
 workspace: shorts
 title: "Open WebUI's new slim image is 89% smaller"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: number-first
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-22
-updated: "2026-09-22T11:46:45Z"
+updated: "2026-09-22T12:10:49Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-22-ideas]]
 - Research: [[stages/03-research/output/2026-09-22-open-webui-s-new-slim-image-is-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-09-22-open-webui-s-new-slim-image-is-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,4 +38,5 @@ blotato_post_id: ""
 - Skipped runner-up context: fact-checker candidate excluded (myth-bust lane repeats 2026-09-21); sources thin (no YT/Reddit/FireCrawl).
 
 ## Build journal
+- 04-script: A news-react (19) vs B number-first (20); B won, 0 grafts. Validator 0 blockers; eval gates all pass (soft: entity_spend/top2, reason in script note); variety ok; normalizer 2 scenes adjusted. 112 words, 38.6 s, pack terminal.
 
