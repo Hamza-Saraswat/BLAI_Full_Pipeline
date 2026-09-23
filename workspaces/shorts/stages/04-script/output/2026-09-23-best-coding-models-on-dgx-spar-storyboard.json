@@ -1,0 +1,192 @@
+{
+  "slug": "2026-09-23-best-coding-models-on-dgx-spar",
+  "topic": "Best coding models on DGX Spark: September 2026",
+  "title": "The Two-Model Spark: Fast Coder vs Smart Coder",
+  "description": "On an NVIDIA DGX Spark, the best local coding setup is two open models, not one giant one: Qwen3-Coder-Next for speed, Qwen3.8-27B for hard code. Speed, benchmark scores, what fits, and the honest platform catch.",
+  "hashtags": [
+    "#dgxspark",
+    "#qwen3",
+    "#codingagents",
+    "#localai"
+  ],
+  "hook_text": "Speed or smarts: pick your coder",
+  "hook_candidates": [
+    "Qwen3-Coder-Next hits 85 tok/s on a Spark",
+    "Speed or smarts: pick your coder",
+    "Your Spark deserves a smarter coder",
+    "You want the biggest coder that fits",
+    "The fastest coder here scores worst",
+    "85 tok/s of code, one catch",
+    "One box, two coders, no waiting",
+    "Stop paying the API tab for agents",
+    "GLM Flash eats the whole box",
+    "DeepSeek doesn't fit. What does?"
+  ],
+  "style_pack": "silicon",
+  "script_format": "smooth-explainer",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 86,
+  "narration_full": "You run coding agents against a chat API every day. Two open coders now fit the DGX Spark you have been eyeing. They pull in opposite directions. Here's the axis: what your agent's day actually feels like. Every follow-up resends a twenty-three-thousand-token prompt, tokens being the word-pieces models read. So the whole day taxes both speed and smarts. On speed, Qwen's Coder Next writes at eighty-five tokens a second on this one box. It's a mixture-of-experts coder, a big staff where each token asks only a few specialists. That's autocomplete speed for your agent's tight loops. But your day also has hard code. On the coding benchmark both model cards report, Coder Next scores forty-four point three. Qwen's twenty-seven billion thinker scores sixty-one point seven on that same benchmark. It thinks through the tickets that make the fast one guess. Same tests, harder tickets closed. What fits settles the rest. GLM's Flash runs only as a heavily shrunk copy that eats most of the box. DeepSeek's Flash is twice the box even shrunk, so it stays a science project. The honest catch is the platform. Street prices climbed past NVIDIA's own list. The certified driver you want is still an unanswered forum thread. The newer Ubuntu path is a hand-rolled recipe, not a vendor upgrade. Back on the box, configuration decides your day. Give the thinker a prefix cache, the engine's memory of what it already read. Without it, follow-ups took twenty-two seconds. With it, point-three. Same box, same model, nothing changed but configuration. Send the loops to Coder Next, and send the hard code to the thinker.",
+  "analogy": {
+    "vehicle": "a firm with a big staff where each question goes to only a few specialists",
+    "mapping": "the mixture-of-experts coder keeps every specialist resident in memory but consults only a few per token, which is why it stays fast on one shared pool",
+    "limit": "a real firm can call in freelancers, but the box cannot stream specialists in from disk without crawling"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You run coding agents against a chat API every day. Two open coders now fit the DGX Spark you have been eyeing. They pull in opposite directions.",
+      "on_screen_text": "Speed or smarts: pick your coder",
+      "visual_brief": "Frame 1: matte-black board, two empty chip footprints side by side, hook line in Chakra Petch centered above them. At 0.35s a copper trace lights from each footprint, pulling left and right in opposite directions on 'pull in opposite directions'. On 'DGX Spark' a small desk-box outline drops onto the board between the footprints. One amber accent marks the box. Designators in IBM Plex Mono label the footprints CODER A and CODER B. Motion onset: the first copper trace begins routing at 0.30 s (frame 9), a signal pulse follows it within 0.5 s.",
+      "est_duration_s": 8.4,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ],
+      "render_notes": "Two chip footprints, one desk-box silhouette, amber accent on the box only."
+    },
+    {
+      "id": "s2",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Here's the axis: what your agent's day actually feels like. Every follow-up resends a twenty-three-thousand-token prompt, tokens being the word-pieces models read. So the whole day taxes both speed and smarts.",
+      "on_screen_text": "23,000-token prompt | resent every follow-up",
+      "visual_brief": "A loop diagram routed at 45 and 90 degrees: an AGENT block and a MODEL block joined by two copper traces. On 'every follow-up resends' a thick packet of light travels the request trace into the MODEL, labeled 23,000-token prompt in mono. On 'taxes both speed and smarts' the packet splits into two thinner pulses that run to a SPEED pin and a SMARTS pin on the model footprint. Loop repeats once, light only along routed copper.",
+      "est_duration_s": 9.7,
+      "render_notes": "Looping request/response diagram; packet thickness implies prompt size."
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "On speed, Qwen's Coder Next writes at eighty-five tokens a second on this one box. It's a mixture-of-experts coder, a big staff where each token asks only a few specialists. That's autocomplete speed for your agent's tight loops.",
+      "on_screen_text": "Qwen3-Coder-Next | 85 tok/s decode",
+      "visual_brief": "The CODER A chip from s1 drops onto its footprint with a pick-and-place settle on 'Qwen's Coder Next'. On 'eighty-five tokens a second' the giant digits 85 tok/s stamp in copper at center, and a fast pulse train streams out of the chip along a trace. On 'each token asks only a few specialists' the chip face shows a grid of dark cells while a handful light per pulse. On 'can't call in freelancers' a pulse tries to leave the board edge and stops. Amber accent rides the fast pulse train.",
+      "est_duration_s": 14.7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "render_notes": "Giant 85 tok/s; MoE grid motif with sparse lit cells per pulse."
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "But your day also has hard code. On the coding benchmark both model cards report, Coder Next scores forty-four point three.",
+      "on_screen_text": "SWE-bench Pro | Qwen3-Coder-Next: 44.3",
+      "visual_brief": "Board splits left and right along a routed copper divider. Left panel header reads SWE-bench Pro in mono. On 'hard code' a tangled trace maze appears on the right, harder routing than anything before. On 'forty-four point three' the digits 44.3 set into the left panel beside the Coder Next designator, with a copper bar filling partway under it. The right maze stays unsolved, light stalled halfway through.",
+      "est_duration_s": 6.6,
+      "render_notes": "Split panel: benchmark label left, trace maze right; partial copper bar."
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Qwen's twenty-seven billion thinker scores sixty-one point seven on that same benchmark. It thinks through the tickets that make the fast one guess. Same tests, harder tickets closed.",
+      "on_screen_text": "SWE-bench Pro | Qwen3.8-27B: 61.7",
+      "visual_brief": "The CODER B chip drops onto its footprint on 'twenty-seven billion thinker'. On 'sixty-one point seven' the giant digits 61.7 stamp at center, and the copper bar under it runs visibly longer than the s4 bar. On 'thinks through the tickets' the stalled maze trace from s4 reroutes and lights end to end, solving the path at 45 and 90 degrees only. Amber accent travels the solved route once.",
+      "est_duration_s": 9.1,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "render_notes": "Giant 61.7; the s4 maze completes to show the quality gap."
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "What fits settles the rest. GLM's Flash runs only as a heavily shrunk copy that eats most of the box. DeepSeek's Flash is twice the box even shrunk, so it stays a science project.",
+      "on_screen_text": "GLM-5.3-Flash: shrunk, most of box | DeepSeek V4.1 Flash: no fit",
+      "visual_brief": "A grid of memory cells represents the box's shared pool. On 'heavily shrunk copy' a GLM-5.3-Flash chip compresses with a squash animation and lands, flooding most of the grid copper. On 'twice the box' a DeepSeek V4.1 Flash chip, double the footprint, hovers over the board and never seats; its outline overhangs both edges. On 'science project' the oversized chip lifts away into a dim corner shelf, unpowered, no light on its traces.",
+      "est_duration_s": 10.3,
+      "render_notes": "Memory grid flood for GLM; oversized unseated chip for DeepSeek."
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "The honest catch is the platform. Street prices climbed past NVIDIA's own list. The certified driver you want is still an unanswered forum thread. The newer Ubuntu path is a hand-rolled recipe, not a vendor upgrade.",
+      "on_screen_text": "the catch | price above list | driver: open thread | Ubuntu: recipe",
+      "visual_brief": "A horizontal copper timeline routes across the board with three flagged vias. On 'street prices climbed' the first via raises a price tag above a crossed-out list tag, no digits, just the higher position. On 'unanswered forum thread' the second via spools a thread line that ends in an open question mark pad, no return trace. On 'hand-rolled recipe' the third via shows a soldered-by-hand joint, slightly offset from the machine-placed pads around it. All flags in mono, one amber pulse visiting each in turn.",
+      "est_duration_s": 11.6,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ],
+      "render_notes": "Three timeline flags: raised tag, open thread, hand-soldered joint. No numerals."
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Back on the box, configuration decides your day. Give the thinker a prefix cache, the engine's memory of what it already read. Without it, follow-ups took twenty-two seconds. With it, point-three. Same box, same model, nothing changed but configuration.",
+      "on_screen_text": "prefix cache on | follow-up: 22 s → 0.3 s",
+      "visual_brief": "The s2 loop returns, now with a CACHE block tapped off the MODEL's input trace. On 'a prefix cache, the engine's memory' the CACHE block lights and stores a copy of the incoming prompt packet. On 'twenty-two seconds' a slow pulse crawls the long way around, bypassing the cache, with a mono 22 s designator. On 'point-three' the next pulse short-circuits through the CACHE block and arrives almost instantly, designator 0.3 s. Amber accent marks the cached path.",
+      "est_duration_s": 12.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ],
+      "render_notes": "Same loop as s2 plus cache tap; slow crawl vs instant hop contrast."
+    },
+    {
+      "id": "s9",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Send the loops to Coder Next, and send the hard code to the thinker.",
+      "on_screen_text": "loops → Coder Next | hard code → the thinker",
+      "visual_brief": "Both chips now seated on their footprints. On 'send the loops to Coder Next' a fast pulse train routes left into the Coder Next chip. On 'send the hard code to the thinker' a single dense packet routes right into the thinker chip and the solved maze lights once more. The decision rule sets in Chakra Petch centered between the chips, lit by one amber pulse that then holds steady. Board fades with both chips powered.",
+      "est_duration_s": 4.4,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ],
+      "render_notes": "Two-chip final composition; rule line centered; nothing after the rule."
+    }
+  ],
+  "notes_for_review": "Every speed figure traces to one survey author and one forum author on nightly builds with no first-party tok/s confirmation, so the September 2026 date-stamp matters. The two benchmark scores are vendor-reported on the model cards, not independently reproduced. Confirm the catch beat stays numeral-free: street price, driver thread, and Ubuntu recipe are all prose-only per the numbers law.",
+  "tags": [
+    "dgx spark",
+    "best coding model",
+    "local llm",
+    "llm coding agent",
+    "qwen3 coder next",
+    "qwen 27b",
+    "glm 5.3 flash",
+    "dgx spark coding",
+    "local ai coding",
+    "run llm locally",
+    "dgx spark models",
+    "coding model comparison",
+    "on device llm",
+    "ai coding local",
+    "dgxspark"
+  ]
+}

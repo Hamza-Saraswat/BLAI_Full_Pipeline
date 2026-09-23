@@ -1,0 +1,712 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-23T12:43:07+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-23-best-coding-models-on-dgx-spar-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-23-best-coding-models-on-dgx-spar-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "benchmark": 4,
+      "primary": 4,
+      "docs": 1,
+      "community": 2
+    },
+    "pct_primary_docs": 0.455,
+    "key_numbers_total": 8,
+    "entities_total": 36,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.312,
+    "source_domains": [
+      "huggingface.co",
+      "medium.com",
+      "nvidia.com",
+      "videocardz.com",
+      "z.ai"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "fastest decode measured on a Spark (Qwen3-Coder-Next, vLLM + EAGLE3, code)",
+          "value": "85 tokens per second",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "85",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "SWE-bench Pro, Qwen3.8-27B (vendor, Claude Code harness)",
+          "value": "61.7",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "61.7",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "SWE-bench Pro, Qwen3-Coder-Next (vendor)",
+          "value": "44.3",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "44.3",
+          "scene_ids": [
+            "s4"
+          ]
+        },
+        {
+          "label": "DGX Spark memory bandwidth",
+          "value": "273 GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark system memory",
+          "value": "128 GB LPDDR5x unified system memory",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "cheapest DGX Spark actually available (Amazon listing sold by Micro Center, seen 2026-09-20)",
+          "value": "$4,999.99",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark original launch MSRP",
+          "value": "$3,999",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DeepSeek V4.1 Flash official checkpoint size",
+          "value": "510 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 36,
+      "found_count": 9,
+      "score": 0.25,
+      "found": [
+        "Spark",
+        "NVIDIA",
+        "Qwen3-Coder-Next",
+        "GLM-5.3-Flash",
+        "SWE-bench Pro",
+        "Qwen3.8-27B",
+        "DGX Spark",
+        "DeepSeek V4.1 Flash",
+        "Ubuntu"
+      ],
+      "missing": [
+        "GB of LPDDR5x",
+        "Apache-2.0",
+        "LPDDR5x",
+        "PFLOP",
+        "FP4",
+        "Apache",
+        "Micro Center",
+        "Sep",
+        "Amazon",
+        "GiB",
+        "CUDA",
+        "GB10",
+        "vLLM",
+        "NVFP4",
+        "September 2026",
+        "GB10-calibrated NVFP4",
+        "GB EAGLE3",
+        "GB Q2 GGUF",
+        "GiB of CUDA",
+        "ds4",
+        "Q2_K",
+        "DGX Spark GB10",
+        "Linux-aarch64",
+        "CUDA 13.2",
+        "ARM",
+        "cuda-toolkit-13-3",
+        "Linux"
+      ],
+      "top2": [
+        "Spark",
+        "NVIDIA"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Qwen3-Coder-Next",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GLM-5.3-Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "SWE-bench Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GB of LPDDR5x",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Apache-2.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5x",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "PFLOP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Micro Center",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sep",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Amazon",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB10",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVFP4",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "September 2026",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1 Flash",
+          "tier": 2,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GB10-calibrated NVFP4",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB EAGLE3",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB Q2 GGUF",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB of CUDA",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ds4",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q2_K",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ubuntu",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark GB10",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux-aarch64",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA 13.2",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ARM",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "cuda-toolkit-13-3",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 27,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "Speed or smarts: pick your coder",
+      "first_sentence": "You run coding agents against a chat API every day."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "comparison-ladder",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 9,
+      "specific_count": 7,
+      "ratio": 0.778,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 8.4,
+          "specific": true,
+          "hits": [
+            "entity:Spark",
+            "entity:DGX Spark"
+          ],
+          "narration": "You run coding agents against a chat API every day. Two open coders now fit the DGX Spark you have been eyeing. They pull in opposite directions."
+        },
+        {
+          "id": "s2",
+          "role": "foreshadow",
+          "est_duration_s": 9.7,
+          "specific": false,
+          "hits": [],
+          "narration": "Here's the axis: what your agent's day actually feels like. Every follow-up resends a twenty-three-thousand-token prompt, tokens being the word-pieces models read. So the whole day taxes both speed and smarts."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 14.7,
+          "specific": true,
+          "hits": [
+            "num:85 tokens per second",
+            "entity:Qwen3-Coder-Next"
+          ],
+          "narration": "On speed, Qwen's Coder Next writes at eighty-five tokens a second on this one box. It's a mixture-of-experts coder, a big staff where each token asks only a few specialists. That's autocomplete speed for your agent's tight loops."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:44.3",
+            "entity:Qwen3-Coder-Next",
+            "entity:SWE-bench Pro"
+          ],
+          "narration": "But your day also has hard code. On the coding benchmark both model cards report, Coder Next scores forty-four point three."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 9.1,
+          "specific": true,
+          "hits": [
+            "num:61.7",
+            "entity:SWE-bench Pro",
+            "entity:Qwen3.8-27B"
+          ],
+          "narration": "Qwen's twenty-seven billion thinker scores sixty-one point seven on that same benchmark. It thinks through the tickets that make the fast one guess. Same tests, harder tickets closed."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "entity:GLM-5.3-Flash",
+            "entity:DeepSeek V4.1 Flash"
+          ],
+          "narration": "What fits settles the rest. GLM's Flash runs only as a heavily shrunk copy that eats most of the box. DeepSeek's Flash is twice the box even shrunk, so it stays a science project."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 11.6,
+          "specific": true,
+          "hits": [
+            "entity:NVIDIA",
+            "entity:Ubuntu"
+          ],
+          "narration": "The honest catch is the platform. Street prices climbed past NVIDIA's own list. The certified driver you want is still an unanswered forum thread. The newer Ubuntu path is a hand-rolled recipe, not a vendor upgrade."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 12.2,
+          "specific": true,
+          "hits": [
+            "glossary:prefix cache"
+          ],
+          "narration": "Back on the box, configuration decides your day. Give the thinker a prefix cache, the engine's memory of what it already read. Without it, follow-ups took twenty-two seconds. With it, point-three. Same box, same model, nothing changed but configuration."
+        },
+        {
+          "id": "s9",
+          "role": "payoff_close",
+          "est_duration_s": 4.4,
+          "specific": false,
+          "hits": [],
+          "narration": "Send the loops to Coder Next, and send the hard code to the thinker."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.3,
+      "words": 283,
+      "sentences": 27,
+      "est_speech_s": 97.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "You run coding agents against a chat API every day. Two open coders now fit the DGX Spark you have been eyeing. They pull in opposite directions. Here's the axis: what your agent's day actually feels like. Every follow-up resends a twenty-three-thousand-token prompt, tokens being the word-pieces models read. So the whole day taxes both speed and smarts. On speed, Qwen's Coder Next writes at eighty-five tokens a second on this one box. It's a mixture-of-experts coder, a big staff where each token asks only a few specialists. That's autocomplete speed for your agent's tight loops. But your day also has hard code. On the coding benchmark both model cards report, Coder Next scores forty-four point three. Qwen's twenty-seven billion thinker scores sixty-one point seven on that same benchmark. It thinks through the tickets that make the fast one guess. Same tests, harder tickets closed. What fits settles the rest. GLM's Flash runs only as a heavily shrunk copy that eats most of the box. DeepSeek's Flash is twice the box even shrunk, so it stays a science project. The honest catch is the platform. Street prices climbed past NVIDIA's own list. The certified driver you want is still an unanswered forum thread. The newer Ubuntu path is a hand-rolled recipe, not a vendor upgrade. Back on the box, configuration decides your day. Give the thinker a prefix cache, the engine's memory of what it already read. Without it, follow-ups took twenty-two seconds. With it, point-three. Same box, same model, nothing changed but configuration. Send the loops to Coder Next, and send the hard code to the thinker.",
+    "on_screen": "Speed or smarts: pick your coder | Speed or smarts: pick your coder | 23,000-token prompt | resent every follow-up | Qwen3-Coder-Next | 85 tok/s decode | SWE-bench Pro | Qwen3-Coder-Next: 44.3 | SWE-bench Pro | Qwen3.8-27B: 61.7 | GLM-5.3-Flash: shrunk, most of box | DeepSeek V4.1 Flash: no fit | the catch | price above list | driver: open thread | Ubuntu: recipe | prefix cache on | follow-up: 22 s \u2192 0.3 s | loops \u2192 Coder Next | hard code \u2192 the thinker"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-23-best-coding-models-on-dgx-spar-storyboard.json",
+        "scenes": 9,
+        "fk_grade": 5.3,
+        "words": 283,
+        "est_speech_s": 97.6,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 46 chars \u2014 mobile truncates ~40",
+          "FK grade 5.3 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually']",
+          "s1: 'API' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s1: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s6: 'GLM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-23-best-coding-models-on-dgx-spar-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.25,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Spark",
+          "NVIDIA"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": [],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 7,
+        "total": 9
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "comparison-ladder",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
