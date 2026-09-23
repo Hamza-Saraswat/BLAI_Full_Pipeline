@@ -2,18 +2,18 @@
 slug: 2026-09-22-open-webui-s-new-slim-image-is
 workspace: shorts
 title: "Open WebUI slim image: the 175 MB pull"
-status: blocked
+status: expired
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-22
-updated: "2026-09-22T12:20:49Z"
+updated: "2026-09-23T13:35:05Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.052, 4 mismatch(es): expected 'ollama' heard 'olahma'; expected 'point four' heard 'forty'; expected 'point five' heard 'fifty'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-22T12:19:14Z 06-voice fail 146s (voice QA failed: WER 0.061, 5 mismatch(es): expected 'ollama' heard 'olahma'; expected 'point four' heard 'forty'; expected 'point five' heard 'fifty')
 - 2026-09-22T12:20:49Z 06-voice fail 94s (voice QA failed: WER 0.052, 4 mismatch(es): expected 'ollama' heard 'olahma'; expected 'point four' heard 'forty'; expected 'point five' heard 'fifty')
 - 2026-09-22T12:20:49Z blocked at 06-voice
+- 2026-09-23T13:35:05Z 2026-09-23T13:35:05Z expired: not from today's picks (2026-09-23); the factory carries no backlog

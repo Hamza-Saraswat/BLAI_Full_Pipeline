@@ -2,14 +2,14 @@
 slug: 2026-09-22-qwen-image-2-1-gguf-image-gen
 workspace: shorts
 title: "Qwen Image 2.1 GGUF: image gen is now just a model pull"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-22
-updated: "2026-09-22T11:07:44Z"
+updated: "2026-09-23T13:35:05Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Skipped runner-up context: same as pick 1 note; vLLM 0.30 candidate held for a slower day (depth 6).
 
 ## Build journal
-
+- 2026-09-23T13:35:05Z 2026-09-23T13:35:05Z expired: not from today's picks (2026-09-23); the factory carries no backlog
