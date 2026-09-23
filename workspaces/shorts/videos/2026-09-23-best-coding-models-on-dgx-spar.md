@@ -2,19 +2,19 @@
 slug: 2026-09-23-best-coding-models-on-dgx-spar
 workspace: shorts
 title: Best coding models on DGX Spark 2026
-status: ready-to-build
+status: building
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-23
-updated: "2026-09-23T12:44:48Z"
+updated: "2026-09-23T12:49:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - Format smooth-explainer (not classic): the ranked list needs a worked example carried the whole way, and the two picks must not share a band.
 
 ## Build journal
-
+- 2026-09-23T12:49:46Z build start on gn100-83c4
