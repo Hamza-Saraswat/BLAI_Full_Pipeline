@@ -2,14 +2,14 @@
 slug: 2026-09-23-best-coding-models-on-dgx-spar
 workspace: shorts
 title: "Best coding models on DGX Spark: September 2026"
-status: idea
+status: researched
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-23
-updated: "2026-09-23T11:11:09Z"
+updated: "2026-09-23T11:55:32Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-23-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-23-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-23-best-coding-models-on-dgx-spar-brief|Brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
