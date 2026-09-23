@@ -33,6 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
+- 2026-09-23 research checkpoint: angle confirmed as the model-by-model ranked coding list for GB10, platform-risk receipts (driver, Ubuntu date, price) carried as one beat; slug unchanged. Unattended proceed: sources start now.
 - 2026-09-23 ideas stage: picked at opportunity 86.2 (tie with the "abandoning DGX Spark?" news-react; comparison lane won on rotation -- yesterday ran news-react + how-to). Platform-risk receipts (driver 580, no Ubuntu 26.04 date, $4,999 street price) folded into this brief as a beat.
 - Format smooth-explainer (not classic): the ranked list needs a worked example carried the whole way, and the two picks must not share a band.
 
