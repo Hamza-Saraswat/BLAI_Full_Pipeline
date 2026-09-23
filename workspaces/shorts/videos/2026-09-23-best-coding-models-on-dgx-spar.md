@@ -2,14 +2,14 @@
 slug: 2026-09-23-best-coding-models-on-dgx-spar
 workspace: shorts
 title: Best coding models on DGX Spark 2026
-status: building
+status: review
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-23
-updated: "2026-09-23T12:49:46Z"
+updated: "2026-09-23T13:26:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-23-best-coding-models-on-dgx-spar-script|Script]] · [[stages/04-script/output/2026-09-23-best-coding-models-on-dgx-spar-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-09-23-best-coding-models-on-dgx-spar-package|Package]]
 - Voice: narration sidecars [[stages/06-voice/output/2026-09-23-best-coding-models-on-dgx-spar-narration|txt]] · [[stages/06-voice/output/2026-09-23-best-coding-models-on-dgx-spar-narration.norm|norm.json]] (stage 06 proper still pending)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-23-best-coding-models-on-dgx-spar-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -44,3 +44,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-23T12:49:46Z build start on gn100-83c4
 - 2026-09-23T12:51:45Z 06-voice ok 117s
+- 2026-09-23T13:13:41Z 07-render fail 1314s (07-render: scene s7 failed: llm_call: unknown provider 'opencode-free' (not built in, not in /home/buildlocalai/.hermes/config.yaml))
+- 2026-09-23T13:26:51Z 07-render ok 95.60s: 9 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 115
+- 2026-09-23T13:26:51Z 07-render ok 789s
