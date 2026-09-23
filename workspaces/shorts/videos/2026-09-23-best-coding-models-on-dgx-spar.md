@@ -2,14 +2,14 @@
 slug: 2026-09-23-best-coding-models-on-dgx-spar
 workspace: shorts
 title: Best coding models on DGX Spark 2026
-status: review
+status: approved
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-23
-updated: "2026-09-23T13:26:48Z"
+updated: "2026-09-23T14:25:38Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-09-23T13:26:51Z 07-render ok 95.60s: 9 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 115
 - 2026-09-23T13:26:51Z 07-render ok 789s
 - 2026-09-23T13:26:53Z build done, status review
+- 2026-09-23T14:25:38Z telegram approve (approved_at 2026-09-23T14:25:38Z)
