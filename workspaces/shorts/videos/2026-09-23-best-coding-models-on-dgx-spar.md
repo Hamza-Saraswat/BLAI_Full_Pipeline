@@ -2,22 +2,22 @@
 slug: 2026-09-23-best-coding-models-on-dgx-spar
 workspace: shorts
 title: Best coding models on DGX Spark 2026
-status: approved
+status: scheduled
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-23
-updated: "2026-09-23T14:25:38Z"
-publish_slot: ""
+updated: "2026-09-23T14:26:48Z"
+publish_slot: "2026-09-23T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: dfab47f4-f939-4c22-a49f-4dc75d2e3731
 ---
 # Best coding models on DGX Spark: September 2026
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-23-best-coding-models-on-dgx-spar-package|Package]]
 - Voice: narration sidecars [[stages/06-voice/output/2026-09-23-best-coding-models-on-dgx-spar-narration|txt]] · [[stages/06-voice/output/2026-09-23-best-coding-models-on-dgx-spar-narration.norm|norm.json]] (stage 06 proper still pending)
 - Render: [[stages/07-render/output/2026-09-23-best-coding-models-on-dgx-spar-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-23-best-coding-models-on-dgx-spar-publish]]
 
 ## Decisions
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-09-23T13:26:51Z 07-render ok 789s
 - 2026-09-23T13:26:53Z build done, status review
 - 2026-09-23T14:25:38Z telegram approve (approved_at 2026-09-23T14:25:38Z)
+- 2026-09-23T14:26:49Z 08-publish ok 3s
