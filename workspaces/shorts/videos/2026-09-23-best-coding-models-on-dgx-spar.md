@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-09-23T13:13:41Z 07-render fail 1314s (07-render: scene s7 failed: llm_call: unknown provider 'opencode-free' (not built in, not in /home/buildlocalai/.hermes/config.yaml))
 - 2026-09-23T13:26:51Z 07-render ok 95.60s: 9 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 115
 - 2026-09-23T13:26:51Z 07-render ok 789s
+- 2026-09-23T13:26:53Z build done, status review
