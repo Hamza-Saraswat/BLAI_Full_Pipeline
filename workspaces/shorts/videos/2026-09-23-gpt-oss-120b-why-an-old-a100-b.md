@@ -2,14 +2,14 @@
 slug: 2026-09-23-gpt-oss-120b-why-an-old-a100-b
 workspace: shorts
 title: "gpt-oss-120b: why an old A100 beats an H100"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-23
-updated: "2026-09-23T11:11:09Z"
+updated: "2026-09-24T13:35:30Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format classic: one fact and one consequence; the number does the work on its own.
 
 ## Build journal
-
+- 2026-09-24T13:35:30Z 2026-09-24T13:35:30Z expired: not from today's picks (2026-09-24); the factory carries no backlog
