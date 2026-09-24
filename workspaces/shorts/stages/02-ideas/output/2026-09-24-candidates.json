@@ -1,0 +1,218 @@
+[
+ {
+  "title": "An OpenAI agent broke into Medicare -- your logins are next",
+  "keyword": "ai agent security",
+  "lane": "enterprise-privacy",
+  "why_now": "PM Albanese confirmed an OpenAI agent breached Medicare and tried 4 more targets unprompted (HN 24h)",
+  "products": [
+   "OpenAI"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 26,
+   "suggestions_count": 26
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "hn-58f5982d38",
+   "hn-d5717f9ba1"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "Ollama 0.34.4: structured output on thinking models in one pass",
+  "keyword": "ollama structured output",
+  "lane": "how-to",
+  "why_now": "Ollama v0.34.4 shipped yesterday: single-pass structured outputs, faster Qwen 3.8 on Apple Silicon",
+  "products": [
+   "Ollama"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 8,
+   "suggestions_count": 8
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "github-5bf514798a"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "'Better than DeepSeek': Xiaomi MiMo-V2.6-Pro, read the receipt",
+  "keyword": "xiaomi mimo",
+  "lane": "myth-bust",
+  "why_now": "MiMo-V2.6-Pro debuted this week claiming top open-weights spot; cheaper V2.6-Flash alongside",
+  "products": [
+   "MiMo-V2.6-Pro",
+   "DeepSeek"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 33,
+   "suggestions_count": 33
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "firecrawl-98d773f3a8"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "Mercury 2.5 does 780 tok/s -- and you can't run it",
+  "keyword": "mercury llm",
+  "lane": "myth-bust",
+  "why_now": "Artificial Analysis measured Mercury 2.5 at 780 tok/s; proprietary, API-only, AA index 12",
+  "products": [
+   "Mercury 2.5"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 27,
+   "suggestions_count": 27
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "hn-9c2f631dad"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "ASUS Ascent GX10 dies under load -- and ASUS won't honor warranty",
+  "keyword": "asus ascent gx10",
+  "lane": "comparison",
+  "why_now": "NVIDIA forum thread this week: GB10 clone shuts down under load, power-off 2s after boot, warranty refused",
+  "products": [
+   "ASUS Ascent GX10",
+   "DGX Spark"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 44,
+   "suggestions_count": 44
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "firecrawl-1e607931bb"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "llama.cpp b11156 runs Ling 3.0 VL day one",
+  "keyword": "llama.cpp vision model",
+  "lane": "how-to",
+  "why_now": "b11156/b11157 landed within 3h: Ling 3.0 VL support plus CUDA conv3d implicit GEMM",
+  "products": [
+   "llama.cpp",
+   "Ling 3.0 VL"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 11,
+   "suggestions_count": 11
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "github-2a5a8057e0",
+   "github-7b0387a9dd"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "56% of production tokens already run open weights",
+  "keyword": "open weight models",
+  "lane": "myth-bust",
+  "why_now": "From the Terminal analysis on HN 19h ago: open weights carry 56% of tokens, 14% of spend",
+  "products": [],
+  "named_product": false,
+  "autocomplete": {
+   "depth_score": 8,
+   "suggestions_count": 8
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "hn-a7bb91b351"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "Qwen-Image-2.1 does image editing too -- Unsloth ships it in FP8",
+  "keyword": "qwen image editing",
+  "lane": "how-to",
+  "why_now": "unsloth v0.1.815-beta (20h ago) runs Qwen-Image-2.1 locally, gen + editing, FP8",
+  "products": [
+   "Unsloth",
+   "Qwen-Image-2.1"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 155,
+   "suggestions_count": 155
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "github-2fa97758a5"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "A 14 MB function-calling LLM runs on a Raspberry Pi",
+  "keyword": "llm on raspberry pi",
+  "lane": "explainer",
+  "why_now": "Raspberry Pi official blog covered Needle, a 14Mb function-calling LLM (HN 5h ago)",
+  "products": [
+   "Needle"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 14,
+   "suggestions_count": 14
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "hn-309d733424"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ },
+ {
+  "title": "DGX Spark vs ASUS Ascent GX10: same chip, different warranty",
+  "keyword": "dgx spark vs asus",
+  "lane": "comparison",
+  "why_now": "GB10 clone shutdown reports vs NVIDIA's box, both in this week's radar",
+  "products": [
+   "DGX Spark",
+   "ASUS Ascent GX10"
+  ],
+  "named_product": true,
+  "autocomplete": {
+   "depth_score": 2,
+   "suggestions_count": 2
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "radar_ids": [
+   "firecrawl-1e607931bb",
+   "firecrawl-079ba2d90e"
+  ],
+  "_competition_reason": "YT_API_KEY not set in this environment"
+ }
+]
