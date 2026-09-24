@@ -1,0 +1,172 @@
+{
+  "slug": "2026-09-24-qwen-image-2-1-edits-pictures",
+  "topic": "Qwen-Image-2.1's editing mode and Unsloth's FP8/INT8 shipping: what it is, what it runs on, and how you use it tonight",
+  "title": "Qwen-Image-2.1 photo edits on your GPU",
+  "description": "Qwen-Image-2.1 both generates and edits images in one model, and Unsloth's fresh INT8 and FP8 quants bring that editing mode to ordinary gaming cards. This walkthrough is three moves: install Unsloth Desktop, pick Qwen-Image-2.1 with the INT8 precision in the Model hub, then open the Edit tab, load a photo, and type the edit ('remove the watch', 'change the background to a sunset beach'). The numbers that matter: the bf16 transformer alone is 14.23 GB, the INT8 quant file is 7.26 GB, and Unsloth says Dynamic FP8 can run on just 6GB of VRAM using offloading. Treat those memory figures as Unsloth's estimates, not tested minimums, and remember that 8-bit quants trade a little fidelity for the shrink. What photo would you fix first on your own GPU? (Narration is AI-generated.)",
+  "hashtags": [
+    "#QwenImage21",
+    "#Unsloth",
+    "#LocalAI"
+  ],
+  "hook_text": "Photo edits tonight: three moves",
+  "hook_candidates": [
+    "Three moves and Qwen-Image-2.1 edits your photos tonight.",
+    "Qwen-Image-2.1 doesn't just make pictures. It fixes yours, locally.",
+    "Six gigabytes of VRAM now edits your photos.",
+    "You've got a folder of photos to fix. Your GPU is the editor.",
+    "Unsloth put photo editing on consumer cards this week.",
+    "No credits, no uploads: Qwen-Image-2.1 edits photos locally.",
+    "Remove the ex from the vacation photo, on your own GPU.",
+    "Change the background to a sunset beach, on your own GPU.",
+    "Your eight-gigabyte card is now a photo editor.",
+    "The image model that fits your card learned retouching."
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 100,
+  "narration_full": "Three moves and Qwen Image two point one edits your photos tonight. The folder you keep meaning to fix stays on your own drive. Qwen Image two point one is a single model. It makes pictures, and it edits the ones you already have. You hand it a photo and an instruction, like change the background to a sunset beach. Everything outside the edit stays put. People still look like themselves. Here's the wall. The part that paints the image, the transformer, is fourteen point two three gigabytes at full precision. The text encoder, the part that reads your instruction, is even bigger. That does not fit a gaming card. Quantization is the shrink: each stored weight keeps fewer bits. Think of pi with its long tail rounded off. The number still works, and the file gets much smaller. You trade a little fidelity, and the loss is not even; exact math notices first. Unsloth ships the shrink as an int eight file, seven point two six gigabytes on disk. Unsloth says its F P eight build, another eight-bit format, runs in six gigabytes of video memory, using offloading. Offloading parks pieces of the model in system memory and swaps them in as needed. Treat those figures as Unsloth's estimates, not tested minimums. Slower, yes, but gentler than you would guess. Your patience does the heavy lifting. Step one: install Unsloth Desktop on your gaming PC. It is the app that runs these models locally. Let it update to the latest version. Step two: pick Qwen Image two point one in the Model hub and choose int eight. It is the safer pick for fidelity. The app downloads the quant and uses it automatically. Step three: open the Edit tab, load your photo, and type your edit: remove the watch. Hit generate, and lower the resolution if memory runs out. The watch is gone, and everything else is exactly where you left it.",
+  "analogy": {
+    "vehicle": "Pi with its long tail of digits rounded off.",
+    "mapping": "Quantization: each stored weight keeps fewer bits, the number still works, and the file gets much smaller.",
+    "limit": "The loss is not even; exact math notices first, so fidelity-critical work feels it soonest."
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Three moves and Qwen Image two point one edits your photos tonight. The folder you keep meaning to fix stays on your own drive.",
+      "on_screen_text": "Three moves: local photo edits",
+      "visual_brief": "Frame 1: centered amber hook text 'Three moves: local photo edits', fully legible, above a dim photo thumbnail. A soft scale pulse on the text begins almost immediately after the open. On 'edits your photos tonight', a second thumbnail rises in place beside the first, same photo with a swapped background, forming a before/after pair. On 'stays on your own drive', a small drive icon fades in beneath the pair. Hold the centered stack.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ],
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Qwen Image two point one is a single model. It makes pictures, and it edits the ones you already have. You hand it a photo and an instruction, like change the background to a sunset beach. Everything outside the edit stays put. People still look like themselves.",
+      "on_screen_text": "same model: makes and edits | everything else stays put",
+      "visual_brief": "Split-compare: left panel shows a portrait on a plain background, right panel mirrors it. On 'a single model', one chip icon fades in centered above the panels. On 'change the background to a sunset beach', the right panel's background fades to a sunset beach while the person stays identical. On 'stays put', a thin amber outline rises around the person in the right panel, marking the untouched region; it pulses once on 'look like themselves'.",
+      "est_duration_s": 15.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "centered-stack",
+      "narration": "Here's the wall. The part that paints the image, the transformer, is fourteen point two three gigabytes at full precision. The text encoder, the part that reads your instruction, is even bigger. That does not fit a gaming card.",
+      "on_screen_text": "14.23 GB for the transformer | text encoder: even bigger",
+      "visual_brief": "Centered stack. On 'fourteen point two three gigabytes', large digits '14.23 GB' scale in center frame above a transformer block icon. On 'even bigger', the lower caption hard-cuts to 'text encoder: even bigger', never a cross-dissolve. On 'does not fit', a GPU card outline below fills past its capacity line in amber. Only one text block animates per beat; the stack holds at the end.",
+      "render_notes": "14.23 GB is spoken in this scene; keep digits on this one beat only.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Quantization is the shrink: each stored weight keeps fewer bits. Think of pi with its long tail rounded off. The number still works, and the file gets much smaller. You trade a little fidelity, and the loss is not even; exact math notices first. Unsloth ships the shrink as an int eight file, seven point two six gigabytes on disk.",
+      "on_screen_text": "fewer bits per weight | smaller file, a little fidelity",
+      "visual_brief": "Diagram-flow, three nodes left to right: a stack of tall bars (a weight), a trim icon, a shorter stack. On 'keeps fewer bits', the bars shorten in place. On 'tail rounded off', they trim again. On 'file gets much smaller', a file icon at the last node scales down. On 'trade a little fidelity', one corner of a small output image softens slightly. On 'seven point two six gigabytes', the small file icon pulses once with no digits anywhere on screen.",
+      "render_notes": "No digits anywhere this scene; the 7.26 GB value stays spoken-only per the number budget.",
+      "est_duration_s": 20.0
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Unsloth says its F P eight build, another eight-bit format, runs in six gigabytes of video memory, using offloading. Offloading parks pieces of the model in system memory and swaps them in as needed. Treat those figures as Unsloth's estimates, not tested minimums. Slower, yes, but gentler than you would guess. Your patience does the heavy lifting.",
+      "on_screen_text": "6GB VRAM plus offloading | estimates, not tested minimums",
+      "visual_brief": "Split-compare: left panel a GPU block labeled '6GB VRAM', right panel a larger block labeled 'system RAM'. On 'parks pieces of the model in system memory', three small cubes rise in place inside the RAM block. On 'swaps them in', one cube on each side alternates glow, two elements at most. On 'estimates, not tested minimums', that caption fades in below the panels. On 'heavy lifting', the GPU cube holds its glow a beat longer.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ],
+      "est_duration_s": 18.6
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Step one: install Unsloth Desktop on your gaming PC. It is the app that runs these models locally. Let it update to the latest version.",
+      "on_screen_text": "Step one: install Unsloth Desktop",
+      "visual_brief": "Timeline: three hollow dots across the top of the safe area; the first fills amber on 'Step one'. Center: an installer window fades in with an empty progress bar. On 'install Unsloth Desktop', the bar fills left to right. On 'update to the latest version', a small tag reading 'latest' rises in place beside the window. Dots two and three stay hollow; the frame holds on the full bar.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Step two: pick Qwen Image two point one in the Model hub and choose int eight. It is the safer pick for fidelity. The app downloads the quant and uses it automatically.",
+      "on_screen_text": "Step two: model hub, choose INT8",
+      "visual_brief": "Grid of six model cards, a hub view. On 'pick Qwen-Image-2.1', one card scales up slightly and gains an amber border. On 'choose INT8', two chips fade in on that card, INT8 and FP8, and the INT8 chip fills amber. On 'safer pick for fidelity', a small check rises in place on the INT8 chip, and the second timeline dot fills amber. On 'downloads', a thin progress line fills along the card's bottom edge.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s08",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Step three: open the Edit tab, load your photo, and type your edit: remove the watch. Hit generate, and lower the resolution if memory runs out. The watch is gone, and everything else is exactly where you left it.",
+      "on_screen_text": "Step three: Edit tab, type edit | remove the watch",
+      "visual_brief": "Split-compare Edit tab. Left: a vacation photo with a watch on a wrist, circled. On 'type your edit', the prompt 'remove the watch' types into the prompt box, the only animating text. On 'Hit generate', the generate button pulses once. On 'The watch is gone', the right panel fades from empty to the edited photo, watch removed, everything else identical; the third timeline dot fills amber. On 'where you left it', the photo settles. Final half second: wordmark rises in place center frame, echoing frame 1's centered stack.",
+      "render_notes": "Last frame must rhyme with frame 1: centered composition, same amber tone, before/after energy.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        },
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 13.4
+    }
+  ],
+  "notes_for_review": "Confirm the 7.26 GB value never appears as digits anywhere (s04 is spoken-only by design) and that every on-screen number (14.23 GB, 6GB VRAM, model name) is spoken in its own scene. Check that only the three sanctioned Step labels carry positional numbering and that no Unverified claim (Nano Banana, Windows fixes, first-party speed) slipped in. Sum of scene estimates is about 105 s, inside the 0.8-1.25x band on the 100 s target.",
+  "tags": [
+    "qwen image 2.1",
+    "qwen image editing",
+    "qwen image 2.1 editing",
+    "edit images locally",
+    "local ai image editing",
+    "unsloth",
+    "unsloth desktop",
+    "int8 quantization",
+    "fp8 quantization",
+    "run image models locally",
+    "ai photo editing offline",
+    "open weight image model",
+    "qwen image",
+    "image editing gpu",
+    "no subscription ai editing",
+    "local llm tools",
+    "dgx spark",
+    "consumer gpu ai",
+    "privacy photo editing",
+    "ai image editor local"
+  ]
+}

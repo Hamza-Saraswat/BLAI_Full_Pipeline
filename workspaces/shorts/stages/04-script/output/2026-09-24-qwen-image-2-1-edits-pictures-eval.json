@@ -1,0 +1,532 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-24T12:06:06+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-24-qwen-image-2-1-edits-pictures-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-24-qwen-image-2-1-edits-pictures-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 12,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "github.com",
+      "huggingface.co",
+      "qwen.ai",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "VRAM floor for Dynamic FP8 with offloading",
+          "value": "6GB of VRAM",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "six gigabytes",
+          "scene_ids": [
+            "s04",
+            "s05"
+          ]
+        },
+        {
+          "label": "INT8 quant file size (replaces the 14.23 GB bf16 transformer)",
+          "value": "7.26 GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seven point two six",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "FP8 quant file size (replaces the 14.23 GB bf16 transformer)",
+          "value": "7.12 GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seven",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Offload slowdown",
+          "value": "<2x slower",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Same-seed fidelity INT8 (LPIPS vs bf16, lower is better)",
+          "value": "0.064 INT8",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Same-seed fidelity FP8 (LPIPS vs bf16, lower is better)",
+          "value": "0.112 FP8",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Reference images supported for editing",
+          "value": "up to 10 reference images",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "FP8 text encoder size (replaces the 17.5 GB bf16 text encoder)",
+          "value": "9.39 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 12,
+      "found_count": 2,
+      "score": 0.167,
+      "found": [
+        "Qwen",
+        "Unsloth Desktop"
+      ],
+      "missing": [
+        "Qwen-Image-2.1",
+        "bf16",
+        "Omni and SGLang",
+        "Day-0",
+        "ComfyUI",
+        "vLLM-Omni",
+        "Day",
+        "INT8 and FP8",
+        "Qwen3-VL",
+        "Unsloth Dynamic FP8"
+      ],
+      "top2": [
+        "Qwen",
+        "Qwen-Image-2.1"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Qwen",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Qwen-Image-2.1",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "bf16",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth Desktop",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Omni and SGLang",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Day-0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ComfyUI",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM-Omni",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Day",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "INT8 and FP8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3-VL",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth Dynamic FP8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 30,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Qwen"
+      ],
+      "hook_text": "Photo edits tonight: three moves",
+      "first_sentence": "Three moves and Qwen Image two point one edits your photos tonight."
+    },
+    "positional_labels": {
+      "count": 3,
+      "structure": "how-to-three-moves",
+      "labels": [
+        {
+          "sentence_index": 21,
+          "sentence": "Step one: install Unsloth Desktop on your gaming PC.",
+          "label": "step",
+          "ordinal": 1,
+          "words": 9,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 24,
+          "sentence": "Step two: pick Qwen Image two point one in the Model hub and choose int eight.",
+          "label": "step",
+          "ordinal": 2,
+          "words": 16,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 27,
+          "sentence": "Step three: open the Edit tab, load your photo, and type your edit: remove the watch.",
+          "label": "step",
+          "ordinal": 3,
+          "words": 16,
+          "has_action_verb": true
+        }
+      ]
+    },
+    "scene_specificity": {
+      "total": 8,
+      "specific_count": 7,
+      "ratio": 0.875,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "entity:Qwen"
+          ],
+          "narration": "Three moves and Qwen Image two point one edits your photos tonight. The folder you keep meaning to fix stays on your own drive."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 15.2,
+          "specific": true,
+          "hits": [
+            "entity:Qwen"
+          ],
+          "narration": "Qwen Image two point one is a single model. It makes pictures, and it edits the ones you already have. You hand it a photo and an instruction, like change the background to a sunset beach. Everything outside the edit stays put. People still look like themselves."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 13.4,
+          "specific": true,
+          "hits": [
+            "glossary:text encoder"
+          ],
+          "narration": "Here's the wall. The part that paints the image, the transformer, is fourteen point two three gigabytes at full precision. The text encoder, the part that reads your instruction, is even bigger. That does not fit a gaming card."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 20.0,
+          "specific": true,
+          "hits": [
+            "num:6GB of VRAM",
+            "num:7.26 GB",
+            "num:7.12 GB"
+          ],
+          "narration": "Quantization is the shrink: each stored weight keeps fewer bits. Think of pi with its long tail rounded off. The number still works, and the file gets much smaller. You trade a little fidelity, and the loss is not even; exact math notices first. Unsloth ships the shrink as an int eight file, seven point two six gigabytes on disk."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 18.6,
+          "specific": true,
+          "hits": [
+            "num:6GB of VRAM"
+          ],
+          "narration": "Unsloth says its F P eight build, another eight-bit format, runs in six gigabytes of video memory, using offloading. Offloading parks pieces of the model in system memory and swaps them in as needed. Treat those figures as Unsloth's estimates, not tested minimums. Slower, yes, but gentler than you would guess. Your patience does the heavy lifting."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:Unsloth Desktop"
+          ],
+          "narration": "Step one: install Unsloth Desktop on your gaming PC. It is the app that runs these models locally. Let it update to the latest version."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "entity:Qwen"
+          ],
+          "narration": "Step two: pick Qwen Image two point one in the Model hub and choose int eight. It is the safer pick for fidelity. The app downloads the quant and uses it automatically."
+        },
+        {
+          "id": "s08",
+          "role": "payoff_close",
+          "est_duration_s": 13.4,
+          "specific": false,
+          "hits": [],
+          "narration": "Step three: open the Edit tab, load your photo, and type your edit: remove the watch. Hit generate, and lower the resolution if memory runs out. The watch is gone, and everything else is exactly where you left it."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.7,
+      "words": 324,
+      "sentences": 30,
+      "est_speech_s": 111.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves and Qwen Image two point one edits your photos tonight. The folder you keep meaning to fix stays on your own drive. Qwen Image two point one is a single model. It makes pictures, and it edits the ones you already have. You hand it a photo and an instruction, like change the background to a sunset beach. Everything outside the edit stays put. People still look like themselves. Here's the wall. The part that paints the image, the transformer, is fourteen point two three gigabytes at full precision. The text encoder, the part that reads your instruction, is even bigger. That does not fit a gaming card. Quantization is the shrink: each stored weight keeps fewer bits. Think of pi with its long tail rounded off. The number still works, and the file gets much smaller. You trade a little fidelity, and the loss is not even; exact math notices first. Unsloth ships the shrink as an int eight file, seven point two six gigabytes on disk. Unsloth says its F P eight build, another eight-bit format, runs in six gigabytes of video memory, using offloading. Offloading parks pieces of the model in system memory and swaps them in as needed. Treat those figures as Unsloth's estimates, not tested minimums. Slower, yes, but gentler than you would guess. Your patience does the heavy lifting. Step one: install Unsloth Desktop on your gaming PC. It is the app that runs these models locally. Let it update to the latest version. Step two: pick Qwen Image two point one in the Model hub and choose int eight. It is the safer pick for fidelity. The app downloads the quant and uses it automatically. Step three: open the Edit tab, load your photo, and type your edit: remove the watch. Hit generate, and lower the resolution if memory runs out. The watch is gone, and everything else is exactly where you left it.",
+    "on_screen": "Photo edits tonight: three moves | Three moves: local photo edits | same model: makes and edits | everything else stays put | 14.23 GB for the transformer | text encoder: even bigger | fewer bits per weight | smaller file, a little fidelity | 6GB VRAM plus offloading | estimates, not tested minimums | Step one: install Unsloth Desktop | Step two: model hub, choose INT8 | Step three: Edit tab, type edit | remove the watch"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-24-qwen-image-2-1-edits-pictures-storyboard.json",
+        "scenes": 8,
+        "fk_grade": 5.7,
+        "words": 324,
+        "est_speech_s": 111.7,
+        "blockers": [],
+        "advisories": [
+          "s02: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s04: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s04: narration ~60 words (~21s on screen) \u2014 long single-render scene; split the beat",
+          "s05: est 19s \u2014 long single-render scene; consider splitting the beat",
+          "s05: narration ~58 words (~20s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "violations": [
+          "s02: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s04: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s04: narration ~60 words (~21s on screen) \u2014 long single-render scene; split the beat",
+          "s05: est 19s \u2014 long single-render scene; consider splitting the beat",
+          "s05: narration ~58 words (~20s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "warnings": [
+          "FK grade 5.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s03: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-24-qwen-image-2-1-edits-pictures-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.167,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen",
+          "Qwen-Image-2.1"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Qwen"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 6,
+        "total": 8
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 3,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [
+          "Step one: install Unsloth Desktop on your gaming PC.",
+          "Step two: pick Qwen Image two point one in the Model hub and choose int eight.",
+          "Step three: open the Edit tab, load your photo, and type your edit: remove the watch."
+        ],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
