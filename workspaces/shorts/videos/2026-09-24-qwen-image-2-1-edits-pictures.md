@@ -2,19 +2,19 @@
 slug: 2026-09-24-qwen-image-2-1-edits-pictures
 workspace: shorts
 title: Qwen-Image-2.1 edits your photos locally
-status: ready-to-build
+status: building
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-24
-updated: "2026-09-24T12:07:58Z"
+updated: "2026-09-24T12:12:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-24T11:40:23Z 03-research ok: 8 sources (6 primary), validator exit 0; Unverified: Nano Banana 2.0 comparison (Tom's Hardware paywalled)
 - 2026-09-24T12:06:22Z 04-script ok: A how-to-three-moves beat B news-react 21-19 (kimi-k3 blind judge); 0 blockers, eval 9/9; ledger + style recorded.
 - 2026-09-24T12:07:58Z 05-package ok: title "Qwen-Image-2.1 edits your photos locally", seo 100, check_outputs pass; ready-to-build.
+- 2026-09-24T12:12:46Z build start on gn100-83c4
