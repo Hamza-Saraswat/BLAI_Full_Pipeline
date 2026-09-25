@@ -2,14 +2,14 @@
 slug: 2026-09-25-spark-center-fixes-the-dgx-spa
 workspace: shorts
 title: "DGX Spark update control: Spark Center"
-status: building
+status: review
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-25
-updated: "2026-09-25T12:18:48Z"
+updated: "2026-09-25T12:39:02Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-25-spark-center-fixes-the-dgx-spa-script]]
 - Package: [[stages/05-package/output/2026-09-25-spark-center-fixes-the-dgx-spa-package]]
 - Voice: [[stages/06-voice/output/2026-09-25-spark-center-fixes-the-dgx-spa-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-25-spark-center-fixes-the-dgx-spa-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,5 @@ blotato_post_id: ""
 - 2026-09-25T12:18:36Z 05-package ok: seo rubric 100/100, check_outputs clean after hub links; title searchable
 - 2026-09-25T12:18:48Z build start on gn100-83c4
 - 2026-09-25T12:19:49Z 06-voice ok 58s
+- 2026-09-25T12:39:05Z 07-render ok 41.90s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 126
+- 2026-09-25T12:39:05Z 07-render ok 1154s
