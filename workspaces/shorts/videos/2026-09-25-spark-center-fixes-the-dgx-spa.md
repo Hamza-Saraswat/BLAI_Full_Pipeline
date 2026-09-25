@@ -2,19 +2,19 @@
 slug: 2026-09-25-spark-center-fixes-the-dgx-spa
 workspace: shorts
 title: "DGX Spark update control: Spark Center"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-25
-updated: "2026-09-25T12:18:36Z"
+updated: "2026-09-25T12:18:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-25T11:46:13Z 03-research ok: validator exit 0, 10 sources (7 primary / 3 community), 10 claims, 6 key numbers; angle confirmed unattended, no swap
 - 2026-09-25T12:15:56Z 04-script ok: winner draft B (worked-example) 23-22, no grafts; validator 0/0, eval 9/9, variety clean; silicon recorded
 - 2026-09-25T12:18:36Z 05-package ok: seo rubric 100/100, check_outputs clean after hub links; title searchable
+- 2026-09-25T12:18:48Z build start on gn100-83c4
