@@ -2,22 +2,22 @@
 slug: 2026-09-25-spark-center-fixes-the-dgx-spa
 workspace: shorts
 title: "DGX Spark update control: Spark Center"
-status: approved
+status: scheduled
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-25
-updated: "2026-09-25T17:28:00Z"
-publish_slot: ""
+updated: "2026-09-25T17:30:14Z"
+publish_slot: "2026-09-25T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 26cf53af-3a0e-418a-bd0e-90ecc1391f41
 ---
 # Spark Center fixes the DGX Spark update button
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-25-spark-center-fixes-the-dgx-spa-package]]
 - Voice: [[stages/06-voice/output/2026-09-25-spark-center-fixes-the-dgx-spa-narration]]
 - Render: [[stages/07-render/output/2026-09-25-spark-center-fixes-the-dgx-spa-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-25-spark-center-fixes-the-dgx-spa-publish]]
 
 ## Decisions
 - 2026-09-25 package: searchable title 'DGX Spark update control: Spark Center' (keyword chars 0-9, 39 visible); description names the 2026-09-06 firmware Short as closest related; rubric 100/100.
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-09-25T12:39:05Z 07-render ok 1154s
 - 2026-09-25T12:39:07Z build done, status review
 - 2026-09-25T17:28:00Z telegram approve (approved_at 2026-09-25T17:28:00Z)
+- 2026-09-25T17:30:15Z 08-publish ok 2s
