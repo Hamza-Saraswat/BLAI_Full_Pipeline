@@ -2,21 +2,21 @@
 slug: 2026-09-25-spark-center-fixes-the-dgx-spa
 workspace: shorts
 title: "DGX Spark update control: Spark Center"
-status: scheduled
+status: published
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-25
-updated: "2026-09-25T17:30:14Z"
+updated: "2026-09-25T23:00:34Z"
 publish_slot: "2026-09-25T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=YGwoN1TZjDU"
 blotato_post_id: 26cf53af-3a0e-418a-bd0e-90ecc1391f41
 ---
 # Spark Center fixes the DGX Spark update button
@@ -52,3 +52,4 @@ blotato_post_id: 26cf53af-3a0e-418a-bd0e-90ecc1391f41
 - 2026-09-25T12:39:07Z build done, status review
 - 2026-09-25T17:28:00Z telegram approve (approved_at 2026-09-25T17:28:00Z)
 - 2026-09-25T17:30:15Z 08-publish ok 2s
+- 2026-09-25T23:00:34Z published https://www.youtube.com/watch?v=YGwoN1TZjDU

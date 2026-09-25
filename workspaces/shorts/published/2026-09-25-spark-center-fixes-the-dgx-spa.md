@@ -2,8 +2,9 @@
 slug: 2026-09-25-spark-center-fixes-the-dgx-spa
 title: "DGX Spark update control: Spark Center"
 published_slot: "2026-09-25T18:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=YGwoN1TZjDU"
 blotato_post_id: 26cf53af-3a0e-418a-bd0e-90ecc1391f41
+updated: "2026-09-25T23:00:34Z"
 ---
 # DGX Spark update control: Spark Center
 
