@@ -2,14 +2,14 @@
 slug: 2026-09-24-xiaomi-mimo-v2-6-pro-vs-d
 workspace: shorts
 title: "'Better than DeepSeek': Xiaomi MiMo-V2.6-Pro, read the receipt"
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-24
-updated: "2026-09-24T11:08:56Z"
+updated: "2026-09-25T13:35:57Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Angle: read the receipt on the "better than DeepSeek" claim -- benchmark, VRAM, tok/s at home.
 
 ## Build journal
-
+- 2026-09-25T13:35:57Z 2026-09-25T13:35:57Z expired: not from today's picks (2026-09-25); the factory carries no backlog

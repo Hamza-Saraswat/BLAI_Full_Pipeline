@@ -2,19 +2,19 @@
 slug: 2026-09-24-qwen-image-2-1-edits-pictures
 workspace: shorts
 title: Qwen-Image-2.1 edits your photos locally
-status: blocked
+status: expired
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-24
-updated: "2026-09-24T12:37:07Z"
+updated: "2026-09-25T13:35:57Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "\"07-render: 07-render: assemble.py exited 1: 4-qwen-image-2-1-edits-pictures/render/qa"
-assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-09-24-qwen-image-2-1-edits-pictures/render/qa/safe\""
+blocked_reason: ""
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-09-24-qwen-image-2-1-edits-pictures/render/qa/safe\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -52,3 +52,4 @@ assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scri
 - 2026-09-24T12:37:07Z 07-render fail 78s (07-render: assemble.py exited 1: 4-qwen-image-2-1-edits-pictures/render/qa
 assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/l)
 - 2026-09-24T12:37:07Z blocked at 07-render
+- 2026-09-25T13:35:57Z 2026-09-25T13:35:57Z expired: not from today's picks (2026-09-25); the factory carries no backlog
