@@ -1,0 +1,122 @@
+{
+  "slug": "2026-09-25-spark-center-fixes-the-dgx-spa",
+  "topic": "Spark Center panel fixes the DGX Spark's stock updates",
+  "title": "DGX Spark updates fixed by Spark Center",
+  "description": "The DGX Spark's stock Dashboard updates every apt package it can find, then forces a reboot. Spark Center, an MIT-licensed open-source panel from one maintainer, lets you pick packages, simulates the dependency changes first, samples the GPU every two seconds, and flags firmware flashes that claim success without changing the version; its own README warns that ticking the kernel without NVIDIA's signed modules costs you the GPU driver. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DGXSpark",
+    "#SparkCenter",
+    "#NVIDIA"
+  ],
+  "hook_text": "You press Update.",
+  "hook_candidates": [
+    "One button updates everything on the DGX Spark.",
+    "You press Update. The Spark decides.",
+    "Your Spark just updated Chrome. By itself.",
+    "One button, no brakes, one forced reboot.",
+    "The Spark's update button has no brakes.",
+    "A 128 GB AI box, updating Chrome on its own.",
+    "Your Spark reboots mid-update. On purpose.",
+    "One maintainer just fixed NVIDIA's update button.",
+    "128 GB of memory, zero update choices.",
+    "The DGX Spark updates what it wants."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 35,
+  "narration_full": "You press Update, and the Spark decides. One hundred twenty-eight gigabytes of memory. It upgrades Chrome. That button drives apt, the package installer, across every repository. Then it reboots. Now the Spark gets brakes. Spark Center, one owner's open-source panel. You pick packages. A simulation shows what it will touch. It never reboots. The monitor samples the GPU every two seconds. It catches the chip stuck at six hundred eleven megahertz. A firmware flash can claim success and change nothing. Spark Center reads fwupd, the Linux firmware tool, and flags it. The catch: the kernel without NVIDIA's signed modules means no GPU driver. The DGX Dashboard decided everything. Now you decide.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You press Update, and the Spark decides. One hundred twenty-eight gigabytes of memory. It upgrades Chrome.",
+      "on_screen_text": "You press Update. | The Spark decides. | 128 GB of memory",
+      "visual_brief": "Frame 1: dark stage, the stock DGX Dashboard window centered, a blue 'Update Available' badge glowing, large text 'You press Update.' above it, small '128 GB of memory' below. No motion before t=0.30 s. At about t=0.4 s a cursor fades in and presses the button on 'You press Update.' On 'The Spark decides.' the badge scales up and holds. On 'It upgrades Chrome.' a Chrome icon rises into the update list beside the button. Motion onset explicitly at t=0.30 s (within 0.5 s): the word Update scales from 1.0 to 1.06 and settles; first and last 8 frames otherwise stable.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "That button drives apt, the package installer, across every repository. Then it reboots.",
+      "on_screen_text": "One button, every repo | apt: the package installer | Then it reboots",
+      "visual_brief": "One rounded 'Update' button node center-left on a dark grid. On 'drives apt, the package installer,' thin lines fade out from the button toward a stack of repository boxes labeled Ubuntu, Chrome and VS Code, the boxes rising in one by one on 'across every repository.' On 'Then it reboots.' the whole diagram fades to black and a small reboot spinner scales in at center.",
+      "est_duration_s": 4.5
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Now the Spark gets brakes. Spark Center, one owner's open-source panel. You pick packages. A simulation shows what it will touch.",
+      "on_screen_text": "Spark Center | Pick your packages | Simulation shows what it will touch",
+      "visual_brief": "Split screen. Left: the stock Dashboard's single grey Update button, dimmed. Right: the Spark Center Updates tab brightening in on 'the Spark gets brakes.' On 'You pick packages.' checkboxes fade in beside package rows and three tick themselves. On 'A simulation shows what it will touch.' a dependency panel rises below the list, package rows fading in one at a time, each indented under what pulled it in.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "It never reboots. The monitor samples the GPU every two seconds. It catches the chip stuck at six hundred eleven megahertz.",
+      "on_screen_text": "GPU sampled every 2 s | Stuck at 611 MHz",
+      "visual_brief": "A row of dark gauge dials. On 'It never reboots.' a small reboot icon fades in crossed out. On 'every two seconds' a '2 s' tick label pulses beside a sweeping gauge needle. On 'stuck at six hundred eleven megahertz' the clock-speed graph flatlines low, giant digits '611 MHz' scale in at center, and the pinned line glows red beneath them.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "A firmware flash can claim success and change nothing. Spark Center reads fwupd, the Linux firmware tool, and flags it.",
+      "on_screen_text": "fwupd: Linux firmware tool | Success reported, version unchanged | Flagged: mismatch",
+      "visual_brief": "A horizontal timeline on a dark field. A flash event node fades in with a green check on 'claim success.' On 'change nothing' two version strings fade in side by side, identical. On 'reads fwupd, the Linux firmware tool' a small 'fwupd' label rises below the pair. On 'flags it' a red 'MISMATCH' tag scales in over the matching versions and the green check dims.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The catch: the kernel without NVIDIA's signed modules means no GPU driver.",
+      "on_screen_text": "Kernel ticked, modules unsigned|No GPU driver",
+      "visual_brief": "Two small cards side by side: left card shows a kernel package checkbox ticked, right card shows a GPU chip icon going dark, joined by a broken trace line that draws on the phrase 'no GPU driver'. Amber warning tint on the right card only. Hard cut in, motion onset t=0.30 s, rise-in-place, no edge slides, visual change on both narration phrases.",
+      "est_duration_s": 4.1
+    },
+    {
+      "id": "s7",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The DGX Dashboard decided everything. Now you decide.",
+      "on_screen_text": "Now you decide.",
+      "visual_brief": "The single stock Update button from frame 1 sits center, dimmed; beside it a small checkbox list with one box ticking on the phrase 'Now you decide'. Wordmark settle in the last 0.5 s, final frame rhymes with frame 1. Motion onset t=0.30 s, fade and scale only, nothing enters from an edge.",
+      "est_duration_s": 2.8
+    }
+  ],
+  "notes_for_review": "Spent three key numbers: 128 GB memory, every 2 s sampling, 611 MHz stuck clock. Dropped the badge-bug beat (community, medium confidence) and the ASUS-variant caveat for word count; kept the kernel-without-signed-modules catch as the honest edge. Payoff 'Now you decide.' mirrors the hook's 'The Spark decides.'",
+  "tags": [
+    "dgx spark",
+    "nvidia dgx spark",
+    "dgx spark dashboard",
+    "spark center",
+    "dgx spark update",
+    "dgx spark tips",
+    "gb10",
+    "dgx spark linux",
+    "local ai hardware",
+    "home ai server",
+    "dgx spark setup",
+    "apt update linux",
+    "fwupd",
+    "nvidia dgx",
+    "run ai at home",
+    "build local ai"
+  ]
+}
