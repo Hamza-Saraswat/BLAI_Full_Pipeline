@@ -1,0 +1,202 @@
+{
+  "slug": "2026-09-25-spark-center-fixes-the-dgx-spa",
+  "topic": "Spark Center: an open-source control panel that fixes the DGX Spark's stock Dashboard updates",
+  "generated_at": "2026-09-25T11:38:17Z",
+  "depth": "standard",
+  "thesis": "Spark Center is a new MIT-licensed open-source panel that replaces the DGX Spark's one-button Dashboard with selective apt updates that never force a reboot, NVML live monitoring, and firmware results it actually verifies.",
+  "explanation_path": "Establish the machine and its one button before anything else can matter: the DGX Spark is NVIDIA's desk-side GB10 Grace Blackwell box with 128 GB of unified memory, and DGX OS ships a web Dashboard that NVIDIA's own guide calls the primary and recommended update path. Make the pain concrete before introducing any tool: the single Update button drives apt across every repository the machine knows, including third-party ones like Chrome or VS Code, shows no changelog, and ends in a forced reboot; forum threads trace the same complaints back to late 2025, including an \"Update Available\" badge that survives the very update it claims to offer. With that established, Spark Center appears as one owner's working answer: pick the packages, watch a dependency simulation of everything that will really be touched, keep the replaced .deb files so a bad update rolls back per package, and never reboot unless the user decides to. The panels the stock tool never had come into focus: a monitor that reads the GPU through NVML (clocks, temperature against the real slowdown threshold, power) sampled every 2 s, and a firmware tab that compares fwupd's history with the current device version so a silent failed flash cannot hide behind a success message. Trust must be understood before install: it runs as the user, asks for privilege per action through polkit rather than a permanent root helper, binds to 127.0.0.1 only, and installs with git clone plus ./install.sh, no root. Close on the honest edge: it does not touch NVIDIA's closed firmware OTA, rollback is per package rather than a system restore, the kernel-and-signed-modules trap is the one way hand-picking is more dangerous than the button it replaces, and the whole project is one maintainer who has only an ASUS variant on the bench.",
+  "claims": [
+    {
+      "claim": "Spark Center is an MIT-licensed, open-source local control panel for NVIDIA GB10 machines (DGX Spark plus the ASUS, Dell, HP, Gigabyte and Acer variants), announced on the NVIDIA DGX Spark forum on 2026-09-24.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "The stock DGX Dashboard exposes a single Update button that upgrades every apt package it can find, including third-party repos like Chrome or VS Code, then forces a reboot, and a silently failed firmware flash still reports success.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "NVIDIA's own user guide calls the DGX Dashboard the primary and recommended way to update the Spark, and documents a manual fallback of apt dist-upgrade plus fwupdmgr plus reboot.",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/os-and-component-update.html",
+      "source_title": "OS and Component Update Guide -- DGX Spark User Guide",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "The DGX Spark is built on the GB10 Grace Blackwell architecture with a 20-core Arm CPU and 128 GB LPDDR5x unified system memory on a 273 GB/s interface.",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html",
+      "source_title": "Hardware Overview -- DGX Spark User Guide",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "Spark Center's update path is selective: you pick packages, a dependency simulation shows everything that will really be touched first, it never reboots on its own (it only reads /var/run/reboot-required and tells you), and it keeps the replaced .deb files so a bad update can be rolled back per package.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "Its monitor samples DGX-style gauges every 2 s with the GPU read via NVML (clocks, temperature against the real NVML slowdown threshold, power), and it detects the \"GPU stuck at 611 MHz\" PD-controller failure.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "Its firmware panel reads fwupd directly, so a flash that reported success but did not change the device version shows up as a mismatch; fwupd is the standard Linux firmware daemon fed by the Linux Vendor Firmware Service.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "Its trust posture is deliberate: it runs as your user with apt through aptdaemon and polkit instead of a permanent root helper, binds to 127.0.0.1 only, uses no pip/npm/CDN, and installs with git clone plus ./install.sh with no root, serving on port 11001.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "Users have reported the web Dashboard's \"Update Available\" badge persisting after clicking Update Now and rebooting, as far back as November 2025.",
+      "source_url": "https://forums.developer.nvidia.com/t/352318",
+      "source_title": "DGX Dashboard (web) Update Available bug - NVIDIA Developer Forums",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-09-25"
+    },
+    {
+      "claim": "It does not replace NVIDIA's Spark OS firmware OTA (that path is closed), and rollback is per package, not a system restore: when dgx-release or linux-image-nvidia appear it directs you back to the stock Dashboard.",
+      "source_url": "https://github.com/tiong6/spark-center",
+      "source_title": "GitHub - tiong6/spark-center: Local dashboard for NVIDIA GB10 boxes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-25"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "DGX Spark unified system memory",
+      "value": "128 GB LPDDR5x unified system memory",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "DGX Spark memory bandwidth",
+      "value": "273 GB/s",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "Spark Center monitor sampling interval",
+      "value": "every 2 s",
+      "source_url": "https://github.com/tiong6/spark-center"
+    },
+    {
+      "label": "GPU clock in the PD-controller failure it detects",
+      "value": "611 MHz",
+      "source_url": "https://github.com/tiong6/spark-center"
+    },
+    {
+      "label": "Port Spark Center serves on (localhost only)",
+      "value": "11001",
+      "source_url": "https://github.com/tiong6/spark-center"
+    },
+    {
+      "label": "DGX Spark AI compute at FP4 with sparsity",
+      "value": "up to 1 PFLOP (petaFLOP) at FP4 precision with sparsity",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Dealership service vs. home mechanic",
+      "mapping": "the stock button is the dealership's \"service everything and leave it overnight\" package; Spark Center is the home mechanic who opens the checklist, unbolts only the part that needs replacing, and keeps the old part on the shelf to swap back",
+      "limit": "apt packages pull each other through dependency chains a parts catalog never has, so \"only this one part\" is never fully guaranteed by anything but the simulation"
+    },
+    {
+      "vehicle": "Forced phone OS update vs. a package manager",
+      "mapping": "the button behaves like the overnight phone update you cannot decline or inspect; Spark Center behaves like the desktop Linux package picker underneath it, which was there all along",
+      "limit": "the Spark is an open Linux box rather than a locked phone, so the manual apt path NVIDIA documents already existed; the panel's value is making it safe and visible, not making it possible"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The DGX Spark can only be updated through NVIDIA's one button.",
+      "reality": "NVIDIA's own guide documents a manual path (sudo apt dist-upgrade, fwupdmgr, reboot), and Spark Center adds package-level choice on top of the same apt system (claim 3)."
+    },
+    {
+      "myth": "A firmware flash that reports success updated the firmware.",
+      "reality": "Spark Center compares the fwupd history against the current device version and flags a mismatch when the version did not change (claim 7)."
+    },
+    {
+      "myth": "A page that can install packages needs a permanent root service.",
+      "reality": "Spark Center runs as your user, routes privileged actions through aptdaemon and polkit, and binds to 127.0.0.1 only (claim 8)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "DGX Spark",
+      "definition": "NVIDIA's compact desktop AI computer, built on the GB10 Grace Blackwell superchip with 128 GB of unified memory."
+    },
+    {
+      "term": "GB10",
+      "definition": "the Grace Blackwell superchip inside the DGX Spark, pairing a 20-core Arm CPU with a Blackwell GPU over coherent unified memory."
+    },
+    {
+      "term": "DGX Dashboard",
+      "definition": "the stock web interface NVIDIA ships on the Spark for monitoring, updates and settings, at localhost:11000."
+    },
+    {
+      "term": "apt",
+      "definition": "the Debian/Ubuntu package manager the Dashboard's Update button drives under the hood across every configured repository."
+    },
+    {
+      "term": "fwupd",
+      "definition": "the standard Linux firmware-update daemon, fed by the Linux Vendor Firmware Service, that Spark Center reads directly."
+    },
+    {
+      "term": "NVML",
+      "definition": "the NVIDIA Management Library, the C API behind nvidia-smi that reports GPU utilization, clocks, temperature and power."
+    },
+    {
+      "term": "polkit",
+      "definition": "the Linux privilege broker that asks for your password per action instead of letting a tool run as root permanently."
+    },
+    {
+      "term": "OTA",
+      "definition": "over-the-air update; on the Spark, NVIDIA's closed firmware update path that Spark Center deliberately leaves to the stock Dashboard."
+    }
+  ],
+  "unverified": [
+    "Whether the stock Dashboard's Update button pulls Chrome and VS Code from third-party repos on a Founders Edition, since the reports come from an ASUS Ascent GX10 owner.",
+    "The exact interval at which the Dashboard's web page re-reads its cached updates snapshot; the hourly figure is the author's diagnosis alone, with no NVIDIA source confirming it.",
+    "NVIDIA's response to the three-problems post; the thread had no replies at fetch time.",
+    "Any first-party measurement on our own DGX Spark, such as install time, or whether the 611 MHz PD-controller failure reproduces on this machine.",
+    "How Spark Center behaves on the Dell, HP, Gigabyte and Acer GB10 variants, which the author has not tested."
+  ],
+  "suggested_outline": "Cold open on the strongest concrete fact: a 128 GB desk-side AI box just upgraded Chrome from a third-party repo and force-rebooted itself, because its only update button does exactly that.\nWhat the one button is and why it has no brakes: apt across every repo, no changelog, forced reboot, and a badge bug forum threads have chased since late 2025; then Spark Center's answer on each front, ending on the monitor's every 2 s NVML sampling that catches the GPU stuck at 611 MHz and the fwupd firmware check that flags fake successes.\nThe honest catch and doing it tonight: one maintainer, one ASUS variant tested, no releases, and the kernel-without-signed-modules trap; install is git clone plus ./install.sh, with a read-only mode to try it before trusting it.",
+  "notes": "Conflict: NVIDIA's user guide states the Dashboard provides \"the most reliable and tested update path\", while the project README and forum threads back to late 2025 describe all-or-nothing upgrades across third-party repos, forced reboots, no changelog and the persistent badge bug; both positions are recorded, and the doc claim is official while the complaints are community-sourced. Scope caveat: NVIDIA's update guide says it applies to the DGX Spark Founders Edition only, and the author developed and tested on an ASUS Ascent GX10, so behaviours may differ across variants. Maturity signals from the fetched repo: 2 stars, 0 forks, no releases, 138 commits, one maintainer. The announcement thread (384218) and the three-problems thread (384257) are both by the same author (tungyu6) within a day of each other, so community enthusiasm is untested at one reply so far.",
+  "viewer_situation": "You run your DGX Spark with the stock DGX Dashboard, press its single Update button when the blue badge appears, and accept whatever it decides to install and the reboot that follows.",
+  "has_process": true,
+  "process_steps": [
+    "Clone the repository: git clone https://github.com/tiong6/spark-center.git",
+    "Run ./install.sh from the repo directory; it installs a systemd user unit and starts the service, no root required.",
+    "Open http://127.0.0.1:11001/ in a browser on the Spark, or launch Spark Center from the application menu.",
+    "Turn on read-only mode first if you are wary: systemctl --user edit spark-center, add Environment=SPARK_CENTER_READONLY=1, restart, and every changing action is refused with HTTP 403.",
+    "Pick the packages you want in the Updates tab and read the dependency simulation before installing.",
+    "Roll back a bad update per package from the same tab if something breaks."
+  ],
+  "objection": "This is a one-maintainer project with 2 stars and no releases, tested on a single ASUS variant, whose own README admits that hand-picking packages is the one thing it lets you do that is more dangerous than the official button, because ticking the kernel without NVIDIA's signed modules leaves you with no GPU driver."
+}
