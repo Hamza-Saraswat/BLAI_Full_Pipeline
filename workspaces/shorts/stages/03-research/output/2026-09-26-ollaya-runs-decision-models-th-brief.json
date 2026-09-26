@@ -1,0 +1,250 @@
+{
+  "slug": "2026-09-26-ollaya-runs-decision-models-th",
+  "topic": "Ollaya: run open Jev-style decision models locally through an Ollama-style CLI",
+  "generated_at": "2026-09-26T11:36:44Z",
+  "depth": "standard",
+  "thesis": "The small, repeated decisions inside your AI app do not need a chatbot: Ollaya runs open decision models on your own GPU that answer typed questions in single-digit milliseconds, entirely offline.",
+  "explanation_path": "Open with the distinction every viewer already half-knows: an LLM writes, and sometimes you do not need writing, you need a decision with a number attached. Establish decision models through the Jev moment: TypeSafe shipped Jev on September 15, 2026 as a System One Model that never generates text; it returns a typed answer (a choice, a score, or a noul, which is a yes/no probability) with calibrated probabilities, and TypeSafe claims two orders of magnitude speed over LLMs on decision-shaped work. Before any Ollaya screen appears the viewer must understand what a single forward pass buys: no token-by-token generation, so cost does not scale with answer length, and the probabilities are the product you threshold on. Then bring in the local turn: Jev is a closed, hosted API, and roughly two weeks later Ollaya arrived as the open local answer, billed as Ollama for decision models: one Apache-2.0 binary that pulls open weights (laya, decider, nli, gliclass, qwen3guard, kev, von) from their authors' Hugging Face repositories, pinned to a commit and sha256-checked. Show the drop-in compatibility trick as the payoff move: set TYPESAFE_BASE_URL=http://localhost:11435 and the official TypeSafe SDK works unchanged against the local server, the port sitting one digit off Ollama's 11434. Land the concrete demo early: a five-question request to laya in about 10 ms end to end, and decider catching a destructive force-push. Close on the honest limits: the encoder models are small (322m to 439m parameters), laya is near chance zero-shot on typed decisions (0.362 base versus 0.766 fine-tuned), choice questions with more than about 20 options degrade, and the raw checkpoints ship over-confident until temperatures are refit on your own labelled data.",
+  "claims": [
+    {
+      "claim": "Ollaya is an open-source (Apache-2.0) runtime that downloads and serves open decision models locally, with a desktop app, a CLI and Docker for macOS, Windows and Linux.",
+      "source_url": "https://ollaya.dev/",
+      "source_title": "Ollaya · Run decision models locally",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Ollaya claims a five-question request to laya takes 8–10ms end to end through the HTTP API on an RTX 4090, against 236–276ms for TypeSafe's hosted Jev, a comparison it itself frames as order-of-magnitude.",
+      "source_url": "https://ollaya.dev/",
+      "source_title": "Ollaya · Run decision models locally",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Ollaya's hero demo shows decider:2b judging a force-push request: destructive yes 0.90, action block 0.53, answered in 178 ms on an RTX 4090.",
+      "source_url": "https://ollaya.dev/",
+      "source_title": "Ollaya · Run decision models locally",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Ollaya serves /v1/systemone and /v1/models with TypeSafe's request and response shapes, and the official TypeSafe Python SDK 0.7.1 works unchanged against a local server.",
+      "source_url": "https://ollaya.dev/",
+      "source_title": "Ollaya · Run decision models locally",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "TypeSafe AI released Jev on September 15, 2026 as its first System One Model: it gives up string generation for typed probabilistic decisions and, in TypeSafe's words, can't hallucinate.",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev - TypeSafe AI Blog",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "TypeSafe's launch table puts Jev's end-to-end response time at 70ms-500ms and its price at $0.042 / MTok ($42 per billion tokens) input with output tokens FREE (too cheap to meter).",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_title": "Introducing System One Models & Jev - TypeSafe AI Blog",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Jev returns exactly three answer kinds: nouls (how true something is), scores (a graded rubric) and choices (multiple-choice).",
+      "source_url": "https://www.techtarget.com/it-infrastructure/news/366650696/Jev-decision-model-touted-as-quicker-cheaper-LLM-alternative",
+      "source_title": "Jev decision model touted as quicker, cheaper LLM alternative - TechTarget",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "laya is Convai Innovations' open Apache-2.0 decision-model family on encoder backbones: laya:en is ModernBERT-large at 421M parameters, laya:multilingual is mmBERT-base at 322M covering 100+ languages.",
+      "source_url": "https://ollaya.dev/library/laya",
+      "source_title": "laya · Ollaya",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "decider is Mapika's open decision-model family on Qwen3.5 bases; decider:2b (1.9B parameters) scores 0.591 on typed decisions and needs about 8 GB of memory at fp32.",
+      "source_url": "https://ollaya.dev/library/decider",
+      "source_title": "decider · Ollaya",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Ollaya never re-hosts weights: they come from the authors' Hugging Face repositories, pinned to a commit and checked against sha256.",
+      "source_url": "https://ollaya.dev/",
+      "source_title": "Ollaya · Run decision models locally",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "Ollaya's Show HN thread reached 426 points with 114 comments within about 13 hours of posting.",
+      "source_url": "https://news.ycombinator.com/item?id=49848269",
+      "source_title": "Ollaya – Ollama for open-source, Jev-style decision models | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    },
+    {
+      "claim": "The laya-typed-decisions checkpoint reaches 0.766 accuracy on the typed-decisions benchmark against 0.362 for the base English checkpoint, and laya falls to 0.425 on Banking77's 77 options against 0.870 for Jev.",
+      "source_url": "https://huggingface.co/convaiinnovations/laya",
+      "source_title": "convaiinnovations/laya · Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-26"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "laya five-question request, end to end, RTX 4090",
+      "value": "8–10ms",
+      "source_url": "https://ollaya.dev/"
+    },
+    {
+      "label": "hosted TypeSafe Jev median request (third-party benchmark)",
+      "value": "236–276ms",
+      "source_url": "https://ollaya.dev/"
+    },
+    {
+      "label": "decider:2b demo answer time, RTX 4090",
+      "value": "178 ms",
+      "source_url": "https://ollaya.dev/"
+    },
+    {
+      "label": "Jev input price",
+      "value": "$0.042 / MTok ($42 per billion tokens)",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+      "label": "Jev end-to-end response time",
+      "value": "70ms-500ms",
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+      "label": "laya:en parameters (ModernBERT-large)",
+      "value": "421M",
+      "source_url": "https://ollaya.dev/library/laya"
+    },
+    {
+      "label": "decider:2b typed-decisions accuracy",
+      "value": "0.591",
+      "source_url": "https://ollaya.dev/library/decider"
+    },
+    {
+      "label": "Show HN traction at about 13 hours",
+      "value": "426 points / 114 comments",
+      "source_url": "https://news.ycombinator.com/item?id=49848269"
+    },
+    {
+      "label": "laya-typed-decisions accuracy vs base English checkpoint",
+      "value": "0.766 vs 0.362",
+      "source_url": "https://huggingface.co/convaiinnovations/laya"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "The triage nurse and the specialist",
+      "mapping": "The decision model is the nurse at the front desk who takes one look and routes you; the LLM is the specialist who does the actual work afterward. Fast, structured, cheap, on every door.",
+      "limit": "The nurse cannot write you a letter or explain a diagnosis; a decision model has no answer type for anything open-ended. The analogy also hides that you define the desks (the option set) yourself."
+    },
+    {
+      "vehicle": "The smoke detector and the fire department",
+      "mapping": "laya is the smoke detector: one sensor, one yes/no, mounted locally, costs nothing per ping; the LLM is the fire department: expensive and slow but able to actually handle the fire.",
+      "limit": "A smoke detector asks one fixed question, while laya takes your questions and option sets and returns calibrated probabilities, not an alarm."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Decision models are a brand-new 2026 invention.",
+      "reality": "ML veterans in the HN thread call them repackaged classifiers (anyone with basic ML knowledge could've built this in a few hours); what is new is the product shape: typed API, calibrated probabilities, one-command local runtime."
+    },
+    {
+      "myth": "Jev or Ollaya replaces your LLM.",
+      "reality": "TypeSafe's own table keeps human-in-the-loop tasks (chatbots, copilots, coding agents) with LLMs, and TechTarget's analysts split the work: decisions and routing to the decision model, text generation to the LLM."
+    },
+    {
+      "myth": "Ollaya's milliseconds will hold on your hardware.",
+      "reality": "Every Ollaya latency figure is an RTX 4090 benchmark or hero demo, and Ollaya itself calls the Jev comparison an order-of-magnitude comparison; treat 8-10 ms as the vendor's number until measured locally."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "decision model",
+      "definition": "A model that reads a state plus typed questions and returns a typed answer with calibrated probabilities in one forward pass, never generating text."
+    },
+    {
+      "term": "System One Model",
+      "definition": "TypeSafe's class name for models built for fast, structured decisions software can use directly, borrowed from Kahneman's fast intuitive thinking."
+    },
+    {
+      "term": "Jev",
+      "definition": "TypeSafe AI's closed, hosted decision model released September 15, 2026, named after the economist William Stanley Jevons."
+    },
+    {
+      "term": "laya",
+      "definition": "Convai Innovations' open Apache-2.0 decision-model family on encoder backbones (322M-421M parameters), the fastest model Ollaya ships."
+    },
+    {
+      "term": "decider",
+      "definition": "Mapika's open decision-model family on Qwen3.5 bases that reads option-letter logits; Ollaya calls it the most accurate open decision model it ships."
+    },
+    {
+      "term": "choice",
+      "definition": "A question type whose answer is one option from a set you define, returned with a probability per option."
+    },
+    {
+      "term": "score",
+      "definition": "A question type whose answer is a level on an ordered rubric of 2 to 10 levels you define."
+    },
+    {
+      "term": "noul",
+      "definition": "A yes/no question type returning the probability that a statement holds; TypeSafe's coinage, kept by Ollaya."
+    },
+    {
+      "term": "calibrated probabilities",
+      "definition": "Probabilities that mean what they say, so a 0.90 is right about nine times in ten; refittable on your own labelled data."
+    },
+    {
+      "term": "forward pass",
+      "definition": "One run of an input through the network to its outputs; a decision model answers in a single pass instead of generating a token at a time."
+    },
+    {
+      "term": "ONNX Runtime",
+      "definition": "The cross-platform inference engine Ollaya uses to run the encoder models on CPU or NVIDIA GPU."
+    },
+    {
+      "term": "ECE (expected calibration error)",
+      "definition": "A score for how far a model's stated probabilities sit from its actual hit rate; lower is better."
+    }
+  ],
+  "unverified": [
+    "Any latency or throughput figure on the channel's own DGX Spark or consumer GPUs; Ollaya's published numbers are RTX 4090 benchmarks and must stay attributed until a first-party measurement exists.",
+    "That 8-10 ms holds at production batch sizes or on CPU-only machines; decider's page says both decider models are slow on the CPU, and laya CPU latency was not published on the pages fetched.",
+    "The laya-versus-Jev prior-art dispute linked in the HN thread; the linked rebuttal was not fetched and no side is taken.",
+    "Byte-perfect TypeSafe SDK compatibility across every endpoint; the compatibility guide page was not fetched.",
+    "Ollaya adoption beyond the Show HN thread and the GitHub repo's visible stars; no download counts were fetched.",
+    "Whether Ollama itself absorbs decision-model support, which the HN thread asks and nobody answers.",
+    "Which models ship in the default install versus separate pulls (winnow, kev tags)."
+  ],
+  "suggested_outline": "Hook: your app is burning LLM tokens on questions with known answers; this force-push was flagged destructive at 0.90 by a 1.9B-parameter model in 178 ms, offline.\nWhat a decision model is: a state plus typed questions in; a choice, a score or a noul with probabilities out; one forward pass; no generation, nothing to parse.\nThe Jev moment: TypeSafe shipped the closed hosted version on September 15, claiming 70ms-500ms and $0.042 per million input tokens with output free, and half of HN says it is just a classifier; the new part is the product shape, not the math.\nThe local turn: Ollaya is Ollama for decision models; one Apache-2.0 binary; pulls laya, decider, nli, gliclass, qwen3guard from the authors' Hugging Face repos, sha256-pinned; serves the TypeSafe-compatible /v1/systemone on port 11435.\nPayoff on screen: ollaya run laya, the triage preset answering five questions in about 10 ms, and the TYPESAFE_BASE_URL swap that points an existing TypeSafe app at localhost.\nHonest catch: the encoders are tiny; base laya is near chance on typed decisions (0.362) until you use the fine-tuned checkpoint (0.766) or decider (0.591); more than about 20 options degrades accuracy; refit calibration before trusting a threshold.\nClose: the decisions layer is becoming its own tier in the local stack; the move tonight is one binary and one command.",
+  "notes": "Conflicts: (1) Ollaya's latency chart compares its local GPU numbers against Jev's hosted API latency, which includes the network; Ollaya itself says read it as an order-of-magnitude comparison. Trust the shape, not the digits. (2) TypeSafe's 193.6x/444.6x claims are from the vendor's own workflows, and its own nuance section expects they are on the higher end of real world gains; the independent claim-audit row in the Jev tracker (hanxiao.io, fetched) reports independent tests at ~5x faster and 8.6x cheaper than Mistral Small 4. Keep the video on the conservative numbers. (3) The laya prior-art dispute in the HN thread is unresolved; take no side. TechTarget reports Vercel saw 13% of its paid AI Gateway users try Jev within 24 hours of launch; secondhand reporting of a Vercel blog not fetched, so it stays in notes rather than claims. FireCrawl tools were not attached to this session; the WebSearch/WebExtract fallback defined in rules/firecrawl-usage.md was used, one page fetched at a time, all nine pages read in-session.",
+  "viewer_situation": "You run Ollama on a gaming PC or a Mac, and more than once you have pasted a support ticket or a code diff into a cloud chat box just to get a one-word answer back.",
+  "has_process": true,
+  "process_steps": [
+    "Install the Ollaya binary for your platform (macOS, Windows, Linux or Docker).",
+    "Pull and run a decision model with one command: ollaya run laya.",
+    "Ask a typed question from the CLI using a preset, for example ollaya run decider --preset agent.",
+    "Point the official TypeSafe SDK at the local server with TYPESAFE_BASE_URL=http://localhost:11435 and TYPESAFE_API_KEY=local.",
+    "Refit calibration on your own labelled data with a Modelfile before trusting probability thresholds."
+  ],
+  "objection": "It is a zero-shot classifier with a REST wrapper; BERT did this years ago, the encoder is a few hundred million parameters, and the headline milliseconds are the vendor's own RTX 4090 benchmark compared against a hosted API's network-inclusive latency."
+}
