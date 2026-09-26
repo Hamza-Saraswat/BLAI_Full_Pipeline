@@ -17,6 +17,7 @@ drafts: 2026-09-26-ollaya-runs-decision-models-th-drafts.md
 - Hooks: 10 written and scored; picks were named-contradiction for A (ledger last two: tonight, situation) and number-shock for B. A's frame-1 text carries 421M so the hook is concrete; the spoken hook line is unchanged from the assigned pattern.
 - Graft: B's "Answers cost one forward pass, a single run through the network" moved into A s03 (judge's ruling; adds the mechanism A lacked, no new number).
 - Gates: winner validator 0 blockers 0 advisories; eval_short all nine gates pass (numbers spent 4 of max 5, hook concrete via digit, scene specificity 5/5 with allowance 1, positional labels 0, sameness clean). Warnings kept: target 42 s sits above the 32-38 sweet band (legal, hard max 60) because the graft added a beat; title is a working value, the package stage rewrites it.
+- Value lines: TEACHES lands on "Answers cost one forward pass, a single run through the network" (s03); EQUIPS lands on "Pull laya with one command and time it on your own GPU" (s06 payoff).
 
 ## Hook candidates
 1. Everyone says Ollaya is just a classifier. *
