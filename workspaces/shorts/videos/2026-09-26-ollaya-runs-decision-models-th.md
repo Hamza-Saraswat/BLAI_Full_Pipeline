@@ -2,19 +2,19 @@
 slug: 2026-09-26-ollaya-runs-decision-models-th
 workspace: shorts
 title: "Ollaya: run decision models locally, in milliseconds"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: contrarian-take
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-26
-updated: "2026-09-26T12:04:34Z"
+updated: "2026-09-26T12:06:02Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -41,3 +41,4 @@ blotato_post_id: ""
 - Picked: top opportunity 100.0 (autocomplete depth 48 on "ollaya"); lane how-to differs from yesterday (news-react, comparison) and from the day's second pick (enterprise-privacy).
 - Skipped rivals: DGX Spark setup manual (74.1, same lane as this pick); corrections candidate held at rank 5 pending verification.
 - 2026-09-26T11:40:06Z 03-research ok: 9 sources (7 primary, 1 docs, 1 community + benchmark tracker), 12 claims, 9 key numbers; validator exit 0
+- 2026-09-26T12:06:02Z build start on gn100-83c4
