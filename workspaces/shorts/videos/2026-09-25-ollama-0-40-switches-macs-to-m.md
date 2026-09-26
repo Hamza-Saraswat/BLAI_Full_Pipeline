@@ -2,14 +2,14 @@
 slug: 2026-09-25-ollama-0-40-switches-macs-to-m
 workspace: shorts
 title: Ollama 0.40 switches Macs to MLX by default
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-09-25
-updated: "2026-09-25T11:10:39Z"
+updated: "2026-09-26T13:35:27Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Format smooth-explainer: needs a worked MLX-vs-GGUF comparison carried the whole way.
 
 ## Build journal
-
+- 2026-09-26T13:35:27Z 2026-09-26T13:35:27Z expired: not from today's picks (2026-09-26); the factory carries no backlog
