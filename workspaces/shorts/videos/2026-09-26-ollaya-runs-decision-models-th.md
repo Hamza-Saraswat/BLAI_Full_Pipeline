@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-26-ollaya-runs-decision-models-th
 workspace: shorts
-title: Ollaya runs decision models through the Ollama CLI
-status: scripted
+title: "Ollaya: run decision models locally, in milliseconds"
+status: ready-to-build
 pillar: how-to
 structure: contrarian-take
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-26
-updated: "2026-09-26T12:02:52Z"
+updated: "2026-09-26T12:04:34Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -25,9 +25,8 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-26-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-26-ideas]]
 - Research: [[stages/03-research/output/2026-09-26-ollaya-runs-decision-models-th-brief]]
-- Script: (filled by stage 04)
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-09-26-ollaya-runs-decision-models-th-package]]
+- Voice: [[stages/06-voice/output/2026-09-26-ollaya-runs-decision-models-th-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 - 2026-09-26T12:02:59Z - Script: [[stages/04-script/output/2026-09-26-ollaya-runs-decision-models-th-script]]
@@ -36,6 +35,7 @@ blotato_post_id: ""
 - 2026-09-26T11:40:07Z - Research ran at standard depth via the WebSearch/WebExtract fallback (FireCrawl not attached); Ollaya primary pages carry the numbers, HN thread carries traction and the skeptic beat.
 - Angled the brief at the local-decisions tier (Jev closed/hosted vs Ollaya open/local); all latency figures stay attributed to RTX 4090 vendor benchmarks pending first-party measurement.
 - 2026-09-26T12:02:59Z - Stage 04: contrarian-take beat number-first 21-20 (judge on Kimi K3); forward-pass line grafted from B; winner passes validator (0 blockers, 0 advisories) and all nine eval gates; ledger + terminal style pack recorded.
+- 2026-09-26T12:04:34Z - Stage 05: searchable title (autocomplete depth 48 on the name); rubric 92/100; description carries the vendor-benchmark caveat and the two commands; closest related video is the Jev replication Short.
 
 ## Build journal
 - Picked: top opportunity 100.0 (autocomplete depth 48 on "ollaya"); lane how-to differs from yesterday (news-react, comparison) and from the day's second pick (enterprise-privacy).
