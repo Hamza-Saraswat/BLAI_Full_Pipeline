@@ -149,7 +149,7 @@ true
 | 6 | https://typesafe.ai/blog/introducing-system-one-models-and-jev | Introducing System One Models & Jev - TypeSafe AI Blog | primary | web_extract | 2026-09-26 |
 | 7 | https://www.techtarget.com/it-infrastructure/news/366650696/Jev-decision-model-touted-as-quicker-cheaper-LLM-alternative | Jev decision model touted as quicker, cheaper LLM alternative | docs | web_extract | 2026-09-26 |
 | 8 | https://news.ycombinator.com/item?id=49848269 | Ollaya – Ollama for open-source, Jev-style decision models \| Hacker News | community | web_extract | 2026-09-26 |
-| 9 | https://hanxiao.io/all-about-jev/ | All about Jev — replications, models, runtimes & benchmarks | benchmark | web_extract | 2026-09-26 |
+| 9 | https://hanxiao.io/all-about-jev/ | All about Jev -- replications, models, runtimes & benchmarks | benchmark | web_extract | 2026-09-26 |
 
 ## Notes
 - Conflicts: (1) Ollaya's latency chart compares its local GPU numbers against Jev's hosted API latency, "which includes the network"; Ollaya itself says "read it as an order-of-magnitude comparison". Trust the shape, not the digits. (2) TypeSafe's 193.6x/444.6x claims are from the vendor's own workflows, and its own nuance section expects they are "on the higher end of real world gains"; the independent claim-audit row in the Jev tracker (hanxiao.io, fetched) reports independent tests at ~5x faster and 8.6x cheaper than Mistral Small 4. Keep the video on the conservative numbers. (3) The laya prior-art dispute in the HN thread is unresolved; take no side.
