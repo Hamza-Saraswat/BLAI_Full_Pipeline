@@ -1,0 +1,116 @@
+{
+  "slug": "2026-09-26-ollaya-runs-decision-models-th",
+  "topic": "Ollaya runs open decision models locally through an Ollama-style CLI",
+  "title": "Ollaya decision models: old classifier math, new local product shape",
+  "description": "Everyone says Ollaya is just a classifier with a REST wrapper, and the math part is true. What's new is the product shape: typed answers with probabilities, one open binary, fully offline. The catch: base models sit near chance until you use the tuned checkpoint and calibrate on your own data.",
+  "hashtags": [
+    "#Ollaya",
+    "#LocalAI",
+    "#DecisionModels"
+  ],
+  "tags": [
+    "ollaya",
+    "decision model",
+    "ollama",
+    "local llm",
+    "ollaya decision model",
+    "run decision models locally",
+    "jev",
+    "typesafe jev",
+    "laya",
+    "local ai",
+    "ollaya cli",
+    "open source ai",
+    "ollaya tutorial",
+    "decision model local",
+    "ollaya ollama",
+    "local inference",
+    "ai decision making",
+    "self hosted ai",
+    "on device ai",
+    "ollaya install"
+  ],
+  "hook_text": "421M. Just a classifier?",
+  "hook_candidates": [
+    "Everyone says Ollaya is just a classifier.",
+    "Ten milliseconds, on your own GPU.",
+    "Ollaya answers in ten milliseconds, offline.",
+    "Your app burns tokens on yes-or-no questions.",
+    "A 1.9B model flagged that force-push in 178 ms.",
+    "Stop paying the LLM meter for decisions.",
+    "Ollaya runs decision models like Ollama runs LLMs.",
+    "Point nine zero: that push was destructive.",
+    "Three moves and decision models run tonight.",
+    "Decision models answer before your LLM finishes reading."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 42,
+  "narration_full": "Everyone says Ollaya is just a classifier. The model you'd pull packs four hundred twenty-one million parameters. The math part is true. Their chart says ten milliseconds for five typed questions. What's new is the shape: typed answers with probabilities attached, one open binary, fully offline. Answers cost one forward pass, a single run through the network. Ollaya's demo flags a force-push at point nine zero. That verdict took one hundred seventy-eight milliseconds on their card. The catch: base laya sits near chance on typed decisions. The tuned checkpoint reaches point seven six six on its model card. Calibrate before you trust it. Old math, new shape, your call. Pull laya with one command and time it on your own GPU.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Everyone says Ollaya is just a classifier. The model you'd pull packs four hundred twenty-one million parameters.",
+      "on_screen_text": "421M. Just a classifier?",
+      "visual_brief": "Frame 1 composition: a terminal window centered on a dark background, sharp corners, with the monospace line \"421M. Just a classifier?\" already fully typed and legible. Motion onset at 0.3 s: a second faded comment-thread line types in under it on \"just a classifier\". Hard cut in, nothing slides, at most two elements animate.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "The math part is true. Their chart says ten milliseconds for five typed questions.",
+      "on_screen_text": "10 ms, five questions",
+      "visual_brief": "Giant monospace \"10 ms\" scales up gently in place on \"ten milliseconds\", with the smaller line \"five typed questions\" rising slightly on \"five\". Dark terminal palette, no edges sliding, two elements animate max.",
+      "est_duration_s": 4.8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "What's new is the shape: typed answers with probabilities attached, one open binary, fully offline. Answers cost one forward pass, a single run through the network.",
+      "on_screen_text": "typed answers, one pass",
+      "visual_brief": "A terminal window shows the shape as a flow: a question line types in on \"typed answers\", then an answer box fades in with three thin probability bars on \"probabilities attached\", then a single dim status line \"one pass\" rises on \"one forward pass\". Everything fades or rises in place, motion starts after 0.30 s, two elements animate at once.",
+      "est_duration_s": 9.0
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "Ollaya's demo flags a force-push at point nine zero. That verdict took one hundred seventy-eight milliseconds on their card.",
+      "on_screen_text": "destructive: 0.90",
+      "visual_brief": "A horizontal timeline in monospace: on \"force-push\" the prompt \"git push --force?\" types in at the left mark; on \"point nine zero\" a verdict chip \"destructive: 0.90\" fades in at the center mark; on \"one hundred seventy-eight milliseconds\" a dim timer \"178 ms\" rises at the right mark. Hard cuts between marks, nothing slides, two elements animate at once.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "The catch: base laya sits near chance on typed decisions. The tuned checkpoint reaches point seven six six on its model card. Calibrate before you trust it.",
+      "on_screen_text": "tuned checkpoint: 0.766",
+      "visual_brief": "Two monospace horizontal bars side by side: left labeled \"base\" filled a short stub marked \"near chance\" on \"near chance\", right labeled \"tuned\" filling on \"point seven six six\" with the digits \"0.766\" fading in as spoken. On \"Calibrate before you trust it\" a dim footer line \"calibrate on your labelled data\" types in under the bars. Bars scale in place, two elements animate at once.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Old math, new shape, your call. Pull laya with one command and time it on your own GPU.",
+      "on_screen_text": "$ time ollaya run laya",
+      "visual_brief": "Centered terminal window: the command \"time ollaya run laya\" types in at the prompt on \"Pull laya with one command\", then the cursor blinks as the window scales a touch on \"your own GPU\". No digits beyond the command, hard cut to black after the last word.",
+      "est_duration_s": 6.2
+    }
+  ],
+  "notes_for_review": "Used 3 numbers: 421M (Ollaya library page), 0.90 (attributed on-screen and in voice to \"Ollaya's demo\", the vendor hero run), 0.766 (attributed to \"its model card\"). Softened the base 0.362 to \"near chance\" per the brief's own wording, avoiding a fourth number. Dropped all vendor millisecond claims since no first-party measurement exists; \"open binary\" stands in for Apache-2.0 to keep the license version out of the narration."
+}

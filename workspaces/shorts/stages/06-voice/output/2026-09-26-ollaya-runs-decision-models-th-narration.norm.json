@@ -1,0 +1,43 @@
+{
+  "full": "Everyone says Ollaya is just a classifier. The model you'd pull packs four hundred twenty-one million parameters. The math part is true. Their chart says ten milliseconds for five typed questions. What's new is the shape: typed answers with probabilities attached, one open binary, fully offline. Answers cost one forward pass, a single run through the network. Ollaya's demo flags a force-push at point nine zero. That verdict took one hundred seventy-eight milliseconds on their card. The catch: base laya sits near chance on typed decisions. The tuned checkpoint reaches point seven six six on its model card. Calibrate before you trust it. Old math, new shape, your call. Pull laya with one command and time it on your own GPU.",
+  "words": 121,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Everyone says Ollaya is just a classifier. The model you'd pull packs four hundred twenty-one million parameters.",
+      "words": 17,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "The math part is true. Their chart says ten milliseconds for five typed questions.",
+      "words": 14,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "What's new is the shape: typed answers with probabilities attached, one open binary, fully offline. Answers cost one forward pass, a single run through the network.",
+      "words": 26,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Ollaya's demo flags a force-push at point nine zero. That verdict took one hundred seventy-eight milliseconds on their card.",
+      "words": 19,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "The catch: base laya sits near chance on typed decisions. The tuned checkpoint reaches point seven six six on its model card. Calibrate before you trust it.",
+      "words": 27,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "Old math, new shape, your call. Pull laya with one command and time it on your own GPU.",
+      "words": 18,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

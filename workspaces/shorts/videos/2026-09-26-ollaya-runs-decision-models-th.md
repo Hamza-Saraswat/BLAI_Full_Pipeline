@@ -2,14 +2,14 @@
 slug: 2026-09-26-ollaya-runs-decision-models-th
 workspace: shorts
 title: Ollaya runs decision models through the Ollama CLI
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: contrarian-take
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-26
-updated: "2026-09-26T11:40:06Z"
+updated: "2026-09-26T12:02:52Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -30,10 +30,12 @@ blotato_post_id: ""
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
+- 2026-09-26T12:02:59Z - Script: [[stages/04-script/output/2026-09-26-ollaya-runs-decision-models-th-script]]
 
 ## Decisions
 - 2026-09-26T11:40:07Z - Research ran at standard depth via the WebSearch/WebExtract fallback (FireCrawl not attached); Ollaya primary pages carry the numbers, HN thread carries traction and the skeptic beat.
 - Angled the brief at the local-decisions tier (Jev closed/hosted vs Ollaya open/local); all latency figures stay attributed to RTX 4090 vendor benchmarks pending first-party measurement.
+- 2026-09-26T12:02:59Z - Stage 04: contrarian-take beat number-first 21-20 (judge on Kimi K3); forward-pass line grafted from B; winner passes validator (0 blockers, 0 advisories) and all nine eval gates; ledger + terminal style pack recorded.
 
 ## Build journal
 - Picked: top opportunity 100.0 (autocomplete depth 48 on "ollaya"); lane how-to differs from yesterday (news-react, comparison) and from the day's second pick (enterprise-privacy).
