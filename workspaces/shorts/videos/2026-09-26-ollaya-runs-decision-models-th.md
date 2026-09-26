@@ -2,18 +2,18 @@
 slug: 2026-09-26-ollaya-runs-decision-models-th
 workspace: shorts
 title: "Ollaya: run decision models locally, in milliseconds"
-status: building
+status: blocked
 pillar: how-to
 structure: contrarian-take
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-26
-updated: "2026-09-26T12:06:02Z"
+updated: "2026-09-26T12:11:06Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.130, 10 mismatch(es): expected 'ollaya' heard 'olaya'; expected \\"you'd\\" heard 'you'; expected 'typed' heard 'tight'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -42,3 +42,6 @@ blotato_post_id: ""
 - Skipped rivals: DGX Spark setup manual (74.1, same lane as this pick); corrections candidate held at rank 5 pending verification.
 - 2026-09-26T11:40:06Z 03-research ok: 9 sources (7 primary, 1 docs, 1 community + benchmark tracker), 12 claims, 9 key numbers; validator exit 0
 - 2026-09-26T12:06:02Z build start on gn100-83c4
+- 2026-09-26T12:09:02Z 06-voice fail 178s (voice QA failed: WER 0.106, 7 mismatch(es): expected 'ollaya' heard 'alia'; expected "ollaya's" heard "alia's"; expected 'forcepush at point nine zero' heard 'f)
+- 2026-09-26T12:11:06Z 06-voice fail 123s (voice QA failed: WER 0.130, 10 mismatch(es): expected 'ollaya' heard 'olaya'; expected "you'd" heard 'you'; expected 'typed' heard 'tight')
+- 2026-09-26T12:11:06Z blocked at 06-voice
