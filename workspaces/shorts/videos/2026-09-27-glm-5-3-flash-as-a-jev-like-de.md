@@ -2,14 +2,14 @@
 slug: 2026-09-27-glm-5-3-flash-as-a-jev-like-de
 workspace: shorts
 title: "GLM-5.3-Flash as a Jev-like decision model, at home"
-status: idea
+status: researched
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-09-27
-updated: "2026-09-27T11:08:15Z"
+updated: "2026-09-27T11:50:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-27-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-27-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-27T11:50:21Z --text research done: angle confirmed unattended; 9 sources, validator exit 0; hook number 0.7 pp parity (p=0.64); EUR 62 vs 16 conflict recorded; local speed and 3-bit accuracy under Unverified
