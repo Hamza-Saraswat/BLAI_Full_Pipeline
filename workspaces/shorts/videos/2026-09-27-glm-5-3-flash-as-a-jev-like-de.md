@@ -2,22 +2,22 @@
 slug: 2026-09-27-glm-5-3-flash-as-a-jev-like-de
 workspace: shorts
 title: GLM 5.3 Flash as a local decision model
-status: approved
+status: scheduled
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: axon
 value_types: "TEACHES,PROVES"
 created: 2026-09-27
-updated: "2026-09-27T23:07:23Z"
-publish_slot: ""
+updated: "2026-09-27T23:09:49Z"
+publish_slot: "2026-09-28T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 837cba83-c242-4e43-af99-d02ead94e92d
 ---
 # GLM-5.3-Flash as a Jev-like decision model, at home
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-package]]
 - Voice: [[stages/06-voice/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-narration]]
 - Render: [[stages/07-render/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-publish]]
 
 ## Decisions
 
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-27T13:23:11Z 07-render ok 2119s
 - 2026-09-27T13:23:13Z build done, status review
 - 2026-09-27T23:07:23Z telegram approve (approved_at 2026-09-27T23:07:23Z)
+- 2026-09-27T23:09:50Z 08-publish ok 4s
