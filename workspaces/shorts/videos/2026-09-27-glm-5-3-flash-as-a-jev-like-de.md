@@ -2,14 +2,14 @@
 slug: 2026-09-27-glm-5-3-flash-as-a-jev-like-de
 workspace: shorts
 title: GLM 5.3 Flash as a local decision model
-status: review
+status: approved
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: axon
 value_types: "TEACHES,PROVES"
 created: 2026-09-27
-updated: "2026-09-27T13:23:07Z"
+updated: "2026-09-27T23:07:23Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-09-27T13:23:11Z 07-render ok 103.17s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 138
 - 2026-09-27T13:23:11Z 07-render ok 2119s
 - 2026-09-27T13:23:13Z build done, status review
+- 2026-09-27T23:07:23Z telegram approve (approved_at 2026-09-27T23:07:23Z)
