@@ -38,3 +38,4 @@ blotato_post_id: ""
 - 2026-09-27T12:29:11Z --text script done: structures myth-bust vs comparison-ladder (rotation excluded worked-example and contrarian-take); judge tie 22-22, B won the repeatable-payoff tiebreak; graft of A's electricity line into B's payoff; gates clean (validator 0/0, eval failures none); hooks picked 2 (decision) and 1 (named contradiction) avoiding last-two patterns; style pack axon; ledger entry 24 recorded
 - 2026-09-27T12:30:50Z --text package done unattended: searchable title chosen (keyword depth 16, decision-model gap); rubric 100/100 (every row full); description leads keyword+promise, names Qwen-2.5 Jev video as closest; contains_synthetic_media false (typographic scenes, cloned voice); original_insight names the rent-vs-own rule and the on-screen price conflict
 - 2026-09-27T12:33:46Z build start on gn100-83c4
+- 2026-09-27T12:36:00Z 06-voice ok 132s
