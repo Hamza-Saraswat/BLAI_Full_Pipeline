@@ -1,0 +1,1347 @@
+[
+  {
+    "id": "hn-bba5181254",
+    "title": "CEO of Mistral: AI is software. It can be controlled",
+    "url": "https://www.lemonde.fr/en/economy/article/2026/09/24/arthur-mensch-ceo-of-french-start-up-mistral-ai-ai-is-software-it-can-be-controlled_6757890_19.html",
+    "source": "hn",
+    "published_at": "2026-09-26T12:52:04Z",
+    "signals": {
+      "points": 93,
+      "num_comments": 162,
+      "signal": 0.857,
+      "signal_parts": {
+        "points": 0.796,
+        "comments": 1.0
+      },
+      "decay": 0.7263,
+      "age_h": 22.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 93 points, 162 comments on HN, 22 h ago",
+    "score": 68
+  },
+  {
+    "id": "hn-a06eefcaab",
+    "title": "Turning GLM-5.3-Flash into a Jev-like decision model",
+    "url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+    "source": "hn",
+    "published_at": "2026-09-26T15:49:04Z",
+    "signals": {
+      "points": 97,
+      "num_comments": 39,
+      "signal": 0.783,
+      "signal_parts": {
+        "points": 0.803,
+        "comments": 0.735
+      },
+      "decay": 0.7579,
+      "age_h": 19.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM"
+    ],
+    "summary": "We found an approach to get Jev-like properties from standard LLMs like GLM-5.3-Flash.<p>The core idea is to craft the input prompt so that the first output token answers the question. This makes it possible to get a decision with a single forward pass.<p>In the blog post, we describe the approach i",
+    "why_now": "Discussed: 97 points, 39 comments on HN, 19 h ago",
+    "score": 65
+  },
+  {
+    "id": "github-a3cb89c3e2",
+    "title": "unsloth prebuilt-wheels-cu13: Flash-Attention2, Causal-Conv1D, Mamba_SSM Binaries",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/prebuilt-wheels-cu13",
+    "source": "github",
+    "published_at": "2026-09-27T03:16:14Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "prebuilt-wheels-cu13",
+      "prerelease": false,
+      "signal": 0.6,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.0
+      },
+      "decay": 0.8942,
+      "age_h": 7.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "CUDA"
+    ],
+    "summary": "Prebuilt Linux x86_64 CUDA 13 wheels for flash-attn 2.8.4, causal-conv1d 1.7.0 and mamba-ssm 2.3.2.post1, built for PyTorch 2.13 and 2.14 on Python 3.13.",
+    "why_now": "Shipped: unslothai/unsloth prebuilt-wheels-cu13 released, 8 h ago",
+    "score": 61
+  },
+  {
+    "id": "github-fc8dc16896",
+    "title": "llama.cpp b11211",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11211",
+    "source": "github",
+    "published_at": "2026-09-27T10:04:33Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11211",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9865,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Apple",
+      "Llama"
+    ],
+    "summary": "<details open> RPC: use RDMA completion channel to not spin (#29440) * RPC: use RDMA completion queue to not spin * add TODO for apple RDMA </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/50534798> **macOS/iOS:** - [macOS Apple Si",
+    "why_now": "Shipped: ggml-org/llama.cpp b11211 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-3e7cc64171",
+    "title": "llama.cpp b11209",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11209",
+    "source": "github",
+    "published_at": "2026-09-27T08:59:09Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11209",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9711,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Hugging Face",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> llama-bench : fix OOB access of hf_file (#29515) Signed-off-by: Adrien Gallouët <angt@huggingface.co> </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/50528155> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://",
+    "why_now": "Shipped: ggml-org/llama.cpp b11209 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-9c11789172",
+    "title": "llama.cpp b11208",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11208",
+    "source": "github",
+    "published_at": "2026-09-27T07:56:00Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11208",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9564,
+      "age_h": 3.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> hrm : fix layer placement of `z_l_init` weight (#29512) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/50522371> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downloa",
+    "why_now": "Shipped: ggml-org/llama.cpp b11208 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "hn-26436e3a4f",
+    "title": "OpenAI Codex agents go rogue and consumes USD 78,000 without authorization",
+    "url": "https://news.ycombinator.com/item?id=49861047",
+    "source": "hn",
+    "published_at": "2026-09-26T22:15:32Z",
+    "signals": {
+      "points": 69,
+      "num_comments": 29,
+      "signal": 0.724,
+      "signal_parts": {
+        "points": 0.744,
+        "comments": 0.678
+      },
+      "decay": 0.8317,
+      "age_h": 12.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "My OpenAI CODEX account went rogue and from a simple request took the autonomous decision to launch 826 parallel agents &#x2F; threads without any authorization on my side and without reporting any result of any sort but consuming nearly 2,146 trillions tokens, consuming a total of roughly USD 78,00",
+    "why_now": "Shipped: 69 points, 29 comments on HN, 13 h ago",
+    "score": 51
+  },
+  {
+    "id": "firecrawl-b2fc947e35",
+    "title": "Two NVIDIA DGX Sparks, Three Open Models, and the Benchmark that ...",
+    "url": "https://techstrong.ai/features/two-nvidia-dgx-sparks-three-open-models-and-the-benchmark-that-misled-us/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "# Two NVIDIA DGX Sparks, Three Open Models, and the Benchmark that Misled Us - Two NVIDIA DGX Spark systems can run large open models locally, giving development teams a practical alternative to sending source code and other sensitive data to cloud inference services. A DGX Spark is a desktop machin",
+    "why_now": "Measured: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-00a17a0079",
+    "title": "PNY NVIDIA DGX Spark | GB10 Grace Blackwell | 128GB | 4TB - AAAWave",
+    "url": "https://aaawave.com/products/pny-nvidia-dgx-spark-ai-supercomputer-gb10-grace-blackwell-128gb-4tb-nvme-wifi-7?srsltid=AU7gw4WreHBImgvytXzHBZ4AKPNOBJaxCcYFTO8uGI6FFCyyro0J11dS",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "GB10",
+      "Grace Blackwell",
+      "Blackwell"
+    ],
+    "summary": "In stock Rating 4.866 days ago · Powerful desktop AI supercomputer with NVIDIA Grace Blackwell GB10, 128GB LPDDR5x, and 4TB NVMe SSD. Ideal for AI development, LLMs, and data science.",
+    "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-3d714617ce",
+    "title": "What Cable Do I Need to Connect Two DGX Sparks?",
+    "url": "https://petronellatech.com/blog/what-cable-do-i-need-to-connect-two-dgx-sparks/?srsltid=AU7gw4XzC9lp2yE7hObvyAXrJxQzxjpi4ebC9PF8MC_0HHSl5mZ1g0D5",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DGX Spark",
+      "group": "news-react"
+    },
+    "products": [
+      "DGX Spark",
+      "GB10",
+      "NVIDIA"
+    ],
+    "summary": "# What Cable Do I Need to Connect Two DGX Sparks? ## Which GB10 boxes take the same cable - NVIDIA DGX Spark (Founders Edition): the [DGX Spark cluster cable](https://petronellatech.com/hardware/dgx-spark-cluster-cable/) hub page.",
+    "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-2b04572e90",
+    "title": "NVIDIA DGX Spark Setup Guide: Power, Thermal, and... - daily.dev",
+    "url": "https://daily.dev/posts/nvidia-dgx-spark-setup-guide-power-thermal-and-workspace-requirements-76wpqxjzy",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "GB10",
+      "Grace Blackwell",
+      "Blackwell"
+    ],
+    "summary": "# NVIDIA DGX Spark Setup Guide: Power, Thermal, and Workspace Requirements Before you buy an NVIDIA DGX Spark, the hardware question is settled: it is a 150 x 150 x 50.5 mm desktop workstation running the GB10 Grace Blackwell platform with 128GB unified memory.",
+    "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-e92aeb6a2b",
+    "title": "I stopped my local LLM agent from running out of context, and now it ...",
+    "url": "https://www.xda-developers.com/stopped-my-local-llm-agent-from-running-out-of-context/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "LM Studio"
+    ],
+    "summary": "1 hour ago · I stopped my local LLM agent from running out of context, and now it handles what Claude Code does. eigent and lm studio on desktop pc.",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-15e6a58682",
+    "title": "Complete Mac mini M6 Local LLM Stress Test -- 5 Models, 3 Inference ...",
+    "url": "https://www.youtube.com/watch?v=324FWG_5z4M",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mac mini",
+      "group": "news-react"
+    },
+    "products": [
+      "Mac mini"
+    ],
+    "summary": "21 hours ago · In this video, I put the Mac mini M6 through a complete Local LLM stress test using 5 different AI models across 3 inference engines.",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-57be848855",
+    "title": "Local LLM Blog -- Guides, Reviews & Comparisons for Mac AI - llmcheck",
+    "url": "https://llmcheck.net/blog/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Apple M5",
+      "group": "comparison"
+    },
+    "products": [
+      "Apple M5",
+      "Qwen"
+    ],
+    "summary": "### Not sure which model fits your Mac? [55 tok/s\\ \\ Hardware·September 23, 2026·8 min read\\ \\ **M5 Ultra and M6, Measured: How the LLMCheck Estimates Held Up** \\ \\ The first reviews measured Qwen3.8-27B at ~55 tok/s on an M5 Ultra -- within 4% of the index’s estimate. Where the formula held, where",
+    "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-dcb6a5a7dc",
+    "title": "Local LLM for Claude - MCP Market",
+    "url": "https://mcpmarket.com/server/local-llm-1",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "3 days ago · Local LLM offloads mechanical tasks like summarization, drafting, and classification to local models, freeing Claude for complex reasoning.",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-9a98d8a643",
+    "title": "NVIDIA Nemotron",
+    "url": "https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "open weights model release",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "Nemotron"
+    ],
+    "summary": "5 days ago · NVIDIA Nemotron models aren't just open, but truly open source. NVIDIA publishes the training datasets, techniques, and model weights so the open-source ...",
+    "why_now": "Discussed: in this week's web news for 'open weights model release', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-e942251b75",
+    "title": "How to run local AI agents for free (Ollama + Qwen + MCP) - YouTube",
+    "url": "https://www.youtube.com/watch?v=i4A8jN41NNs",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "run LLM locally",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Qwen"
+    ],
+    "summary": "# Run private AI agents on your laptop with zero token costs | AgentOps Unlocked In this video, learn how to serve an open-weight Qwen3 large language model (LLM) on your local machine using Ollama and ogx-server.",
+    "why_now": "Shipped: in this week's web news for 'run LLM locally', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "hn-38d2949b24",
+    "title": "42x faster prompt lookup drafting in llama.cpp",
+    "url": "https://jadidbourbaki.github.io/blog/prompt-lookup-llama-cpp/",
+    "source": "hn",
+    "published_at": "2026-09-26T19:57:24Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 2,
+      "signal": 0.335,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.219
+      },
+      "decay": 0.8045,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Measured: 8 points, 2 comments on HN, 15 h ago",
+    "score": 38
+  },
+  {
+    "id": "hn-71ac5a164a",
+    "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+    "url": "https://arxiv.org/abs/2609.25021",
+    "source": "hn",
+    "published_at": "2026-09-27T10:26:25Z",
+    "signals": {
+      "points": 18,
+      "num_comments": 2,
+      "signal": 0.427,
+      "signal_parts": {
+        "points": 0.516,
+        "comments": 0.219
+      },
+      "decay": 0.9917,
+      "age_h": 0.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 18 points, 2 comments on HN, 1 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-411670117a",
+    "title": "Show HN: Blender Copilot",
+    "url": "https://github.com/XEonAX/blender-copilot",
+    "source": "hn",
+    "published_at": "2026-09-26T18:06:59Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.7834,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Copilot",
+      "group": "how-to"
+    },
+    "products": [
+      "Copilot",
+      "DeepSeek"
+    ],
+    "summary": "Deepseek generated Blender harness in 7USD.<p>I wanted to remake my 6DoF spaceship flying prototype.<p>What I did not want to do was model the spaceship. Manually. In Blender.<p>So instead of spending a month learning to model, I built a Copilot inside Blender in a day. Which is the same thing, exce",
+    "why_now": "Shipped: 6 points, 0 comments on HN, 17 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-5489f71049",
+    "title": "ThinkingCap-Qwen3.8-27B: Less Thinking, Similar Accuracy",
+    "url": "https://kaitchup.substack.com/p/thinkingcap-qwen38-27b-less-thinking",
+    "source": "hn",
+    "published_at": "2026-09-26T14:36:17Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7447,
+      "age_h": 20.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 20 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-e9d3150485",
+    "title": "Llama.cpp banned him for accidentally tagging in a fork PR",
+    "url": "https://github.com/jadidbourbaki/llama.cpp/pull/2",
+    "source": "hn",
+    "published_at": "2026-09-27T06:30:25Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.9369,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 2 comments on HN, 5 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-9e639193df",
+    "title": "DeepSeek has 64% market share",
+    "url": "https://twitter.com/gherget/status/2104155774910083275",
+    "source": "hn",
+    "published_at": "2026-09-27T10:40:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.995,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 0 h ago",
+    "score": 26
+  },
+  {
+    "id": "firecrawl-890eb754cc",
+    "title": "Open-Source LLM Leaderboard 2026: 85 Models Ranked",
+    "url": "https://benchlm.ai/best/open-source",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "open weights model release",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Moonshot",
+      "group": "news-react"
+    },
+    "products": [
+      "Moonshot",
+      "OpenAI"
+    ],
+    "summary": "## Full Rankings (85 models) Ornith AI·Open Weight·262K Moonshot AI·Open Weight·256K Moonshot AI·Open Weight·256K Moonshot AI·Open Weight·256K InclusionAI·Open Weight·262K StepFun·Open Weight·256K StepFun·Open Weight·256K Xiaomi·Open Weight·256K OpenAI·Open Weight·128K Cohere·Open Weight·128K Mistra",
+    "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-071b3585bc",
+    "title": "Meta's Muse Glimmer, an Open‑Weight Model for Local Agents",
+    "url": "https://www.fullstack.com/labs/resources/blog/everything-you-need-to-know-about-metas-muse-glimmer",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "open weights model release",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Meta",
+      "group": "news-react"
+    },
+    "products": [
+      "Meta"
+    ],
+    "summary": "# Everything you need to know about Meta's Muse Glimmer Meta [released Muse Glimmer on August 10, 2026](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)--a 30‑billion‑parameter, Apache‑licensed model [built to power always‑on local agents](https://developer.meta.com/ai/mode",
+    "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-fa6918bfec",
+    "title": "Jev (AI model) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Jev_(AI_model)",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "open weights model release",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "## Design & architecture Outside observers have suggested the model may be built on an open-weight LLM.",
+    "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-c57e914941",
+    "title": "android-llm · GitHub Topics",
+    "url": "https://github.com/topics/android-llm",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "run LLM locally",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "2 days ago · No subscription. No limits. Run powerful language models directly on your Android device , fully offline, completely private. 1b llm local-llm local-ai mobile ...",
+    "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "hn-83c45aa4cd",
+    "title": "The LLM Job Paradox",
+    "url": "https://blog.nilesh.io/post/llms-and-jobs",
+    "source": "hn",
+    "published_at": "2026-09-27T07:42:19Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.9533,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 2 comments on HN, 3 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-874ba102ca",
+    "title": "OpenAI Freezes Development of Top Models After Rogue Agents Leak User Images",
+    "url": "https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-25-data-transmission",
+    "source": "hn",
+    "published_at": "2026-09-27T05:39:46Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.9256,
+      "age_h": 5.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI",
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 5 h ago",
+    "score": 19
+  },
+  {
+    "id": "hn-2b28733c1b",
+    "title": "Australia's Deputy PM Defends Data Security After OpenAI Hack",
+    "url": "https://www.bloomberg.com/news/articles/2026-09-27/australia-s-deputy-pm-defends-data-security-after-openai-hack",
+    "source": "hn",
+    "published_at": "2026-09-27T09:07:08Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.973,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Broke: 3 points, 1 comments on HN, 2 h ago",
+    "score": 17
+  },
+  {
+    "id": "hf-e25d1e7fe0",
+    "title": "orcarouter/OrcaSAQ-2-27B",
+    "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-27B",
+    "source": "hf",
+    "published_at": "2026-09-24T03:44:51Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 162,
+      "downloads": 1330,
+      "trendingScore": 161.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.703,
+      "signal_parts": {
+        "trending": 0.669,
+        "likes": 0.737,
+        "downloads": 0.521
+      },
+      "decay": 0.3183,
+      "age_h": 79.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 162 likes, 1.3k downloads, trending score 161, created 2026-09-24",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 162 likes, 1.3k downloads, trending score 161, 3 d ago",
+    "score": 17
+  },
+  {
+    "id": "hn-c30962a3ef",
+    "title": "LLM Agents Can Easily Tamper with Their Own Traces",
+    "url": "https://arxiv.org/abs/2609.30266",
+    "source": "hn",
+    "published_at": "2026-09-27T05:07:08Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9183,
+      "age_h": 5.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 6 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-1cc1002c5e",
+    "title": "Show HN: A StarCraft BW Arena where LLMs play by writing code",
+    "url": "https://starskirmish.com/bench/",
+    "source": "hn",
+    "published_at": "2026-09-26T16:49:18Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.7689,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;m launching StarSkirmish, an arena for LLMs to create StarCraft: Brood War bots<p>It draws on my previous work, LLM Skirmish, where LLMs were asked to write JavaScript strategies to compete in a Screeps like RTS.<p>In StarSkirmish, LLMs get 1 hour of wall clock time to write the strongest Sta",
+    "why_now": "Shipped: 4 points, 1 comments on HN, 18 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-117c34f549",
+    "title": "Speech-to-Text Accuracy in 2026: Open-Weight vs. Cloud",
+    "url": "https://verli.app/blog/speech-to-text-accuracy-benchmark",
+    "source": "hn",
+    "published_at": "2026-09-27T00:41:40Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.8615,
+      "age_h": 10.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 10 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-43cdc2c6d8",
+    "title": "The Perfect Crime: LLM Agents Can Easily Tamper with Their Own Traces",
+    "url": "https://perfect-crime.ai/",
+    "source": "hn",
+    "published_at": "2026-09-27T06:04:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.931,
+      "age_h": 5.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 5 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-1e4ee4578c",
+    "title": "Show HN: A local alternative to Jev - 94% on Banking77",
+    "url": "https://gist.github.com/nicobrenner/056a5aaff5d0119c0032ecdad5029557",
+    "source": "hn",
+    "published_at": "2026-09-26T17:41:51Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7787,
+      "age_h": 17.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:embedding",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I’ve been experimenting with a local approach to some of the classification tasks people are using Jev for. This approach uses text embeddings + logistic regression<p>On Banking77, which contains 77 categories of banking support questions, I get 94.25% using bge-large-en-v1.5 for embeddings, and 93.",
+    "why_now": "Broke: 3 points, 0 comments on HN, 17 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-8f6e4a3f3b",
+    "title": "Ask HN: Is answering GitHub issues with AI without declaring it a big deal?",
+    "url": "https://news.ycombinator.com/item?id=49864815",
+    "source": "hn",
+    "published_at": "2026-09-27T09:10:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9737,
+      "age_h": 1.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;m currently using the Mindwtr app to manage tasks, it&#x27;s great and cross platform and all.<p>However I wanted to propose a feature and I looked at the issues and got a bit weirded out by the tone, and it&#x27;s clear to me they are using an AI to write their responses, but even more intes",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 2 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-1946fa6b39",
+    "title": "LLM Policies: Progress at All Costs",
+    "url": "https://diegoe.be/2026/09/25/llm-policies-progress-at-all-costs/",
+    "source": "hn",
+    "published_at": "2026-09-27T00:55:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8643,
+      "age_h": 10.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 10 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-7c637a6220",
+    "title": "Ask HN: Any books, list of papers, or articles to understand LLM's",
+    "url": "https://news.ycombinator.com/item?id=49861324",
+    "source": "hn",
+    "published_at": "2026-09-26T22:49:34Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8386,
+      "age_h": 12.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I have some basic ml background from college. I know how neural nets, backprop, and attention work vaguely.<p>I want to study LLMs and keep up with the modern research and literature including thinking, model training techniques, etc. Do yall have any suggestions on where to start?",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-99cbd7fb6a",
+    "title": "Local LLM extraction plugin for Obsidian (100% offline)",
+    "url": "https://github.com/wessteq/revenue-auditor.",
+    "source": "hn",
+    "published_at": "2026-09-27T09:01:38Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9717,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-6767e6278f",
+    "title": "Self-replicating prompt injections exist",
+    "url": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/",
+    "source": "hn",
+    "published_at": "2026-09-27T06:03:12Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9308,
+      "age_h": 5.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 5 h ago",
+    "score": 7
+  },
+  {
+    "id": "hf-00f5fa4063",
+    "title": "SupraLabs/Supra2-IMG",
+    "url": "https://huggingface.co/SupraLabs/Supra2-IMG",
+    "source": "hf",
+    "published_at": "2026-09-21T14:05:35Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 134,
+      "downloads": 515,
+      "trendingScore": 131.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.676,
+      "signal_parts": {
+        "trending": 0.642,
+        "likes": 0.71,
+        "downloads": 0.452
+      },
+      "decay": 0.1307,
+      "age_h": 140.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 134 likes, 515 downloads, trending score 131, created 2026-09-21",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 134 likes, 515 downloads, trending score 131, 6 d ago",
+    "score": 7
+  },
+  {
+    "id": "hn-bef6e7938c",
+    "title": "Solus Linux Adopts Formal AI and LLM Contribution Policy",
+    "url": "https://linuxiac.com/solus-linux-adopts-formal-ai-and-llm-contribution-policy/",
+    "source": "hn",
+    "published_at": "2026-09-26T22:29:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8346,
+      "age_h": 12.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-98764d3331",
+    "title": "Show HN: Way to divide parameter space in LLM training",
+    "url": "https://zenodo.org/records/22976821",
+    "source": "hn",
+    "published_at": "2026-09-26T19:55:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8042,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I think True bottleneck of current LLM is harness. Because parameter space is not divided directly,appropriately. AND Some methods such as orthogonality, MOE is not options for this. This paper suggests methods.of dividing spaces in a way of algebra.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-ea1a5d1fcc",
+    "title": "We benchmarked our prompt-injection detector against OWASP's LLM Top",
+    "url": "https://www.cerbereag.site/blog/detecting-prompt-injection-in-production",
+    "source": "hn",
+    "published_at": "2026-09-26T16:51:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7694,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-903fd4861b",
+    "title": "Show HN: Prodigy - The Self-Updating Technical Digest",
+    "url": "https://www.prodigy.org.in/",
+    "source": "hn",
+    "published_at": "2026-09-26T14:45:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7464,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;ve seen newsletters where we have 15-20 people working on typing out the content and publish it. Obviously that gives you originality, but what if we don&#x27;t have that much time and resources?<p>I made Prodigy, a self-updating AI newsletter that fetches the best technical updates from sour",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-2b81218b05",
+    "title": "The Notice Had Nowhere to Land: The OpenAI Agent Breach in Australia",
+    "url": "https://www.asticouisland.com/governance/essays/the-notice-had-nowhere-to-land",
+    "source": "hn",
+    "published_at": "2026-09-26T14:42:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7459,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  }
+]
