@@ -2,14 +2,14 @@
 slug: 2026-09-27-glm-5-3-flash-as-a-jev-like-de
 workspace: shorts
 title: "GLM-5.3-Flash as a Jev-like decision model, at home"
-status: researched
+status: scripted
 pillar: comparison
-structure: ""
+structure: comparison-ladder
 format: smooth-explainer
-style_pack: ""
+style_pack: axon
 value_types: "TEACHES,PROVES"
 created: 2026-09-27
-updated: "2026-09-27T11:50:21Z"
+updated: "2026-09-27T12:29:11Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-09-27-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-27-ideas]]
 - Research: [[stages/03-research/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-09-27-glm-5-3-flash-as-a-jev-like-de-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -35,3 +35,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-09-27T11:50:21Z --text research done: angle confirmed unattended; 9 sources, validator exit 0; hook number 0.7 pp parity (p=0.64); EUR 62 vs 16 conflict recorded; local speed and 3-bit accuracy under Unverified
+- 2026-09-27T12:29:11Z --text script done: structures myth-bust vs comparison-ladder (rotation excluded worked-example and contrarian-take); judge tie 22-22, B won the repeatable-payoff tiebreak; graft of A's electricity line into B's payoff; gates clean (validator 0/0, eval failures none); hooks picked 2 (decision) and 1 (named contradiction) avoiding last-two patterns; style pack axon; ledger entry 24 recorded

@@ -1,0 +1,187 @@
+{
+  "slug": "2026-09-27-glm-5-3-flash-as-a-jev-like-de",
+  "topic": "GLM-5.3-Flash with the single-token trick versus the Jev decision API: a three-rung ladder for who should make your routing decisions",
+  "title": "GLM 5.3 Flash vs Jev: Who Decides?",
+  "description": "Jev is a purpose-built decision API, and GLM-5.3-Flash is an open model that decides in a single token. Across 28 text datasets they land within 0.7 points of each other, but hosted prices differ and only one of them reads scanned documents. Three rungs, one routing rule.",
+  "hashtags": [
+    "#GLM53Flash",
+    "#LocalAI",
+    "#DecisionModels"
+  ],
+  "hook_text": "Jev or a free model?",
+  "hook_candidates": [
+    "GLM Flash just matched a model built only for decisions.",
+    "Jev or a free model? Let the ladder decide.",
+    "A model that only picks beat the model that writes.",
+    "Stop letting your router write essays.",
+    "Your agent's router just got a local option.",
+    "Two deciders walked into twenty-eight datasets.",
+    "The best decision model might already be on your disk.",
+    "The API decides. So can the box under your desk.",
+    "Routing calls are rent. Own the decider.",
+    "One token, typed, with a probability attached."
+  ],
+  "style_pack": "axon",
+  "script_format": "smooth-explainer",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,PROVES",
+  "target_duration_s": 105,
+  "narration_full": "Jev or a free model? Let the ladder decide. Your agent pipeline is full of calls that just pick: route this ticket, choose that tool. The axis of this ladder: who makes your routing decisions, and where. Meet Jev, a hosted decision API that takes your state plus named options and returns a typed choice with probabilities. Meet GLM Flash, an open model built to write prose. The trick is refusing to let it answer in words. Think multiple-choice answer sheet, not essay, except this sheet still reads your full state first. Your software numbers the options and ends the prompt where the answer begins. It masks the vocabulary, narrowing the next token to those numbers. Then it reads one token's log probabilities, the raw scores, in a single forward pass, one model run. Every option gets a probability, no fine-tuning. Start with accuracy. Across twenty-eight text datasets, the median gap is zero point seven percentage points in Jev's favor. They split the wins, ten datasets each, and it is not statistically significant. Climb to cost. Per million decisions, hosted GLM Flash costs about sixty-two euros, Jev about sixteen. The hosted ladder favors Jev. Serve GLM Flash on your own machine and the bill drops to zero. Its smallest quant, a shrunken lower-precision copy, fits a big-memory box. One caveat: parity was measured on the hosted model, not on your quant. Now what each one cannot do. Jev reads text only: no images, no audio, no video. GLM Flash reads the scanned document, at seventy point two percent on sixteen hundred business documents. Jev cannot answer there at all. Your routing calls stop being a metered bill and become electricity. The rule: rent Jev for plain text at scale, decide at home for images, privacy, or a zero bill.",
+  "music_mood": "curious-tech",
+  "analogy": {
+    "vehicle": "multiple-choice answer sheet",
+    "mapping": "the software pre-writes the answer slot and the model bubbles in one option; the hover over each bubble becomes the probabilities",
+    "limit": "a real sheet has a few fixed options and no state to read, while the model still digests your full state first"
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Jev or a free model? Let the ladder decide. Your agent pipeline is full of calls that just pick: route this ticket, choose that tool.",
+      "on_screen_text": "Jev or a free model? | Let the ladder decide",
+      "visual_brief": "Frame 1: dark field, a cloud node labeled 'Jev' left and a dim home-box node right, hook text 'Jev or a free model?' centered. At 0.4s an amber trace fades in between the nodes (motion onset inside 0.5 s). On 'Let the ladder decide', the text hard-cuts to 'Let the ladder decide' while both nodes rise-in-place to equal height and a three-step ladder glyph fades in beneath. One accent, amber; at most two elements moving at once.",
+      "est_duration_s": 8.5,
+      "sfx": []
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The axis of this ladder: who makes your routing decisions, and where. Meet Jev, a hosted decision API that takes your state plus named options and returns a typed choice with probabilities.",
+      "on_screen_text": "who decides, and where",
+      "visual_brief": "On 'who makes your routing decisions', a node map fades in: a 'your pipeline' node emitting one lit amber trace up to a cloud node labeled 'Jev'. On 'state plus named options', three small option chips rise-in-place beside the Jev node. On 'typed choice with probabilities', one chip lights amber and a short probability bar fades in under it. Nodes and text enter by fade or rise only.",
+      "est_duration_s": 11.0,
+      "sfx": []
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Meet GLM Flash, an open model built to write prose. The trick is refusing to let it answer in words. Think multiple-choice answer sheet, not essay, except this sheet still reads your full state first.",
+      "on_screen_text": "essay | answer sheet",
+      "visual_brief": "Split frame on dark background. Left: a GLM-5.3-Flash node trailing a prose paragraph that fades out on 'refusing to let it answer in words', with the 'essay' label hard-cutting to 'answer sheet'. Right: an answer-sheet card rises-in-place on 'multiple-choice answer sheet' with three empty bubbles. On 'reads your full state first', a single amber trace carries small state chips from the left pane into the card.",
+      "est_duration_s": 12.0,
+      "sfx": []
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Your software numbers the options and ends the prompt where the answer begins. It masks the vocabulary, narrowing the next token to those numbers.",
+      "on_screen_text": "options numbered | prompt ends early",
+      "visual_brief": "Data-flow diagram, amber on dark. On 'numbers the options', three option chips rise-in-place. On 'ends the prompt', a prompt bar truncates with a fade right after an 'answer:' fragment. On 'masks the vocabulary', a dim token grid collapses to the three lit option tokens. Maximum two elements animating at once.",
+      "est_duration_s": 9.5,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Then it reads one token's log probabilities, the raw scores, in a single forward pass, one model run. Every option gets a probability, no fine-tuning.",
+      "on_screen_text": "one pass, every option scored",
+      "visual_brief": "Token grid, amber on dark. On 'single forward pass', one amber pulse crosses the model node and three probability bars fade in, heights summing visually to a whole. On 'every option gets a probability', each bar gains a small tick mark. One element animating at a time.",
+      "est_duration_s": 8.5,
+      "sfx": []
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Start with accuracy. Across twenty-eight text datasets, the median gap is zero point seven percentage points in Jev's favor. They split the wins, ten datasets each, and it is not statistically significant.",
+      "on_screen_text": "0.7 | median gap, Jev's favor",
+      "visual_brief": "Giant amber '0.7' scales in on 'zero point seven percentage points'. On 'twenty-eight text datasets', a row of twenty-eight small ticks fades in behind the number. On 'ten datasets each', ten ticks light amber on the left and ten on the right, the remaining eight staying dim. The caption 'median gap, Jev's favor' fades in last. Digit spoken in the same scene.",
+      "est_duration_s": 11.5,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Climb to cost. Per million decisions, hosted GLM Flash costs about sixty-two euros, Jev about sixteen. The hosted ladder favors Jev.",
+      "on_screen_text": "62 vs 16 | € per million decisions",
+      "visual_brief": "Split-compare on dark field: left a cloud node labeled 'Jev' with '16' beneath, right a GLM-5.3-Flash node with '62' beneath, both numbers scaling in as the pair is spoken. The shared caption '€ per million decisions' fades in after. On 'hosted ladder favors Jev', the Jev-side trace brightens amber. Digits spoken in the same scene; one text block animating at a time.",
+      "est_duration_s": 7.5,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Serve GLM Flash on your own machine and the bill drops to zero. Its smallest quant, a shrunken lower-precision copy, fits a big-memory box. One caveat: parity was measured on the hosted model, not on your quant.",
+      "on_screen_text": "zero euros, at home | parity: hosted only",
+      "visual_brief": "A home-box node rises-in-place center frame on 'your own machine', and a spelled-out tag 'zero euros' fades in on 'bill drops to zero'. On 'smallest quant', a large model shard scales down and settles into the box. On 'parity was measured on the hosted model', a small amber warning chip reading 'parity: hosted only' fades in below the box. All entrances are fade, scale, or rise.",
+      "est_duration_s": 13.0,
+      "sfx": []
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Now what each one cannot do. Jev reads text only: no images, no audio, no video. GLM Flash reads the scanned document, at seventy point two percent on sixteen hundred business documents. Jev cannot answer there at all.",
+      "on_screen_text": "Jev: text only | GLM-5.3-Flash: reads scans",
+      "visual_brief": "A two-by-two grid fades in: rows labeled 'Jev' and 'GLM-5.3-Flash', columns 'text' and 'scans'. On 'Jev reads text only', Jev's text cell lights amber while its scan cell fades to a crossed outline. On 'seventy point two percent', the GLM scan cell lights with a filling bar, no digits shown. On 'cannot answer there at all', Jev's scan cell dims to near black.",
+      "est_duration_s": 13.0,
+      "sfx": []
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Your routing calls stop being a metered bill and become electricity. The rule: rent Jev for plain text at scale, decide at home for images, privacy, or a zero bill.",
+      "on_screen_text": "text at scale → Jev | images, privacy, zero → home",
+      "visual_brief": "Diagram flow, dark. On 'metered bill' a small meter glyph with a rising tick fades in beside a cloud node. On 'become electricity' the meter crosses out and an amber pulse travels the trace into the home-box node, which brightens. On 'the rule' two compact lines draw beneath the nodes, Jev on one side, the home box on the other, and the home line settles last. One element animating at a time; wordmark settle on the final beat.",
+      "est_duration_s": 10.5,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "The mandated hook is nine words, so hook_text uses its first sentence ('Jev or a free model?') to respect the 7-word frame-1 cap; the full hook still opens the narration and the second sentence hard-cuts in within the hook scene. On-screen digits are exactly 0.7 and the 62 vs 16 pair, each spoken in its own scene; 128 GB, 70.2%, and 28 are spoken as words only. The hosted-only parity caveat is stated in s07 because local 3-bit decision accuracy is Unverified in the brief. GLM Flash is called 'an open model' without any license claim, per the Unverified license note. Rungs are navigated by content (accuracy, cost, capability), never by ordinal labels.",
+  "tags": [
+    "glm 5.3 flash",
+    "glm 5.3 flash local",
+    "jev decision model",
+    "decision model api",
+    "agent routing",
+    "local ai",
+    "build local ai",
+    "dgx spark",
+    "128gb local llm",
+    "vllm",
+    "open weights",
+    "glm flash routing",
+    "typesafe jev",
+    "system one model",
+    "local llm routing",
+    "glm 5.3 flash benchmark"
+  ]
+}
