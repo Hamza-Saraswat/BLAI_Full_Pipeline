@@ -2,14 +2,14 @@
 slug: 2026-09-26-tegakari-s-rtx-pro-6000-build
 workspace: shorts
 title: "TEGAKARI's RTX PRO 6000 build keeps a clinic's LLM on premises"
-status: idea
+status: expired
 pillar: enterprise-privacy
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-09-26
-updated: "2026-09-26T11:08:15Z"
+updated: "2026-09-27T13:35:25Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,3 +36,4 @@ blotato_post_id: ""
 ## Build journal
 - Picked: highest scorer outside the banned lanes (63.9, depth 19 on "local llm medical data"); enterprise-privacy has not run since 2026-09-15.
 - Skipped rivals: Mac Studio comparison (65.2, yesterday's lane); RTX PRO 6000 hardware frame (46.1, same product+angle, merged into this pick).
+- 2026-09-27T13:35:25Z 2026-09-27T13:35:25Z expired: not from today's picks (2026-09-27); the factory carries no backlog
