@@ -2,14 +2,14 @@
 slug: 2026-09-27-meta-muse-glimmer-open-weights
 workspace: shorts
 title: "Meta Muse Glimmer: open weights built for local agents"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-27
-updated: "2026-09-27T11:08:15Z"
+updated: "2026-09-28T13:35:17Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-28T13:35:17Z 2026-09-28T13:35:17Z expired: not from today's picks (2026-09-28); the factory carries no backlog
