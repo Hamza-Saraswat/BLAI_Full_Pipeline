@@ -2,14 +2,14 @@
 slug: 2026-09-28-dgx-spark-firmware-synthetic-b
 workspace: shorts
 title: "DGX Spark firmware: synthetic benchmarks lie 11%"
-status: idea
+status: researched
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-28
-updated: "2026-09-28T11:12:12Z"
+updated: "2026-09-28T12:08:56Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-09-28-radar]]
 - Ideas: [[stages/02-ideas/output/2026-09-28-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-09-28-dgx-spark-firmware-synthetic-b-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Format smooth-explainer: the burn-test-vs-serving worked example must be carried the whole way; also breaks the two-day classic run. Skipped rank 3 (Rene-1 vs GLM 5.3 Flash): same product and angle as yesterday's published pick.
 
 ## Build journal
-
+- 2026-09-28T12:08:56Z 03-research done: angle confirmed unattended (no redirect); 10 sources (Petronella primary, 5 NVIDIA docs, techstrong, note.com, forum); validator exit 0; hook number about 11% burn drop vs 4% to 8% serving gain; note.com +0.3% conflict recorded; mechanism stays Unverified (their hypothesis, no pre-update bandwidth reading)
