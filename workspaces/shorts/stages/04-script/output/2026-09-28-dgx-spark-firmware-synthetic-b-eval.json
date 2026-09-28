@@ -1,0 +1,531 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-28T12:48:05+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-28-dgx-spark-firmware-synthetic-b-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-28-dgx-spark-firmware-synthetic-b-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 2,
+      "community": 2
+    },
+    "pct_primary_docs": 0.8,
+    "key_numbers_total": 7,
+    "entities_total": 15,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.412,
+    "source_domains": [
+      "note.com",
+      "nvidia.com",
+      "petronellatech.com",
+      "techstrong.ai"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.286,
+      "detail": [
+        {
+          "label": "fp16 burn decline after firmware update",
+          "value": "about 11% lower on every unit",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "eleven",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "fp16 burn before vs after update",
+          "value": "88.6 to 91.4 TFLOPS before the update to 77.6 to 81.3 TFLOPS after",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3.8-27B decode, 1 user",
+          "value": "23.1 to 25.0 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3.8-27B decode, 32 users (aggregate)",
+          "value": "303.2 to 315.0 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Real serving gain across load levels",
+          "value": "4% to 8%",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "4%",
+          "scene_ids": [
+            "s4"
+          ]
+        },
+        {
+          "label": "GB10 unified memory bandwidth",
+          "value": "273 GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Clock-lock range that stopped power-offs",
+          "value": "300,2200 (MHz by nvidia-smi convention)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 15,
+      "found_count": 2,
+      "score": 0.133,
+      "found": [
+        "DGX Spark",
+        "Two-node DGX Spark"
+      ],
+      "missing": [
+        "Real LLM",
+        "NVIDIA DGX Spark Founders Edition",
+        "MSI EdgeXpert",
+        "Qwen3.8-27B",
+        "CPU and GPU 128",
+        "LPDDR5x",
+        "HP ZGX Nano G1n",
+        "vLLM",
+        "NVRM",
+        "README",
+        "Xid",
+        "DGX Spark 11",
+        "Known Issues"
+      ],
+      "top2": [
+        "DGX Spark",
+        "Real LLM"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Real LLM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA DGX Spark Founders Edition",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MSI EdgeXpert",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CPU and GPU 128",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Two-node DGX Spark",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "LPDDR5x",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HP ZGX Nano G1n",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVRM",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "README",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Xid",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Spark 11",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Known Issues",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 41,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "The burn test lied to you.",
+      "first_sentence": "The burn test lied to you."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 11,
+      "specific_count": 9,
+      "ratio": 0.818,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 4.0,
+          "specific": true,
+          "hits": [
+            "entity:DGX Spark"
+          ],
+          "narration": "The burn test lied to you. Your DGX Spark got faster."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "glossary:fp16 burn test"
+          ],
+          "narration": "You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 13.0,
+          "specific": true,
+          "hits": [
+            "num:about 11% lower on every unit"
+          ],
+          "narration": "Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 14.0,
+          "specific": true,
+          "hits": [
+            "num:4% to 8%"
+          ],
+          "narration": "But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 8.0,
+          "specific": true,
+          "hits": [
+            "glossary:fp16 burn test"
+          ],
+          "narration": "Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 13.0,
+          "specific": true,
+          "hits": [
+            "glossary:Unified memory"
+          ],
+          "narration": "Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "glossary:Decode"
+          ],
+          "narration": "To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 9.5,
+          "specific": true,
+          "hits": [
+            "glossary:Prefill"
+          ],
+          "narration": "Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn."
+        },
+        {
+          "id": "s9",
+          "role": "explain",
+          "est_duration_s": 7.5,
+          "specific": true,
+          "hits": [
+            "glossary:Prefill"
+          ],
+          "narration": "On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 10.5,
+          "specific": false,
+          "hits": [],
+          "narration": "So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number."
+        },
+        {
+          "id": "s11",
+          "role": "payoff_close",
+          "est_duration_s": 6.0,
+          "specific": false,
+          "hits": [],
+          "narration": "The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.2,
+      "words": 322,
+      "sentences": 41,
+      "est_speech_s": 111.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "The burn test lied to you. Your DGX Spark got faster. You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth. Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed. But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue. Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding. Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge. To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway. Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn. On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you. So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number. The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it.",
+    "on_screen": "The burn test lied to you. | The burn test lied to you. | Your DGX Spark got faster. | you updated; you benchmarked | fp16 burn test = matrix math | a drop reads as regression | fleet, one firmware | -11% on every unit | same watts, same clocks | same unit, container, settings | decode = answer, word by word | +8% solo, +4% queued | fp16 burn test fell | serving sped up | a hypothesis, not a finding | chef = compute | doorway = memory bus | ingredients = model weights | each word: read the weights | burn measures the chef | answers wait on the doorway | prefill reads your prompt first | one big block of math | flat to slightly slower | prompt-heavy? the drop is real | run your real workload | before + after, same settings | trust the pair | burn: slower | model: faster | benchmark what you run"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-28-dgx-spark-firmware-synthetic-b-storyboard.json",
+        "scenes": 11,
+        "fk_grade": 4.2,
+        "words": 322,
+        "est_speech_s": 111.0,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually']",
+          "s1: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s7: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s8: 10s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s10: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-28-dgx-spark-firmware-synthetic-b-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 7,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.133,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DGX Spark",
+          "Real LLM"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": [],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 9,
+        "need": 9,
+        "total": 11
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

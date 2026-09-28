@@ -1,0 +1,166 @@
+{
+  "slug": "2026-09-28-dgx-spark-firmware-synthetic-b",
+  "topic": "DGX Spark firmware update: synthetic burn test down about 11% while real LLM serving got 4% to 8% faster",
+  "title": "The Burn Test Lied to You",
+  "description": "Working description; the package stage overwrites this. What the DGX Spark firmware update actually did to benchmarks and to real model serving.",
+  "hashtags": [
+    "#DGXSpark",
+    "#LocalAI",
+    "#Benchmarks"
+  ],
+  "tags": [
+    "dgx spark firmware update",
+    "dgx spark benchmark slower",
+    "dgx spark slower after update",
+    "dgx spark tokens per second",
+    "gb10 firmware update",
+    "dgx spark burn test",
+    "dgx spark llm serving",
+    "local llm benchmark",
+    "synthetic benchmark vs real workload",
+    "dgx spark tips",
+    "nvidia dgx spark",
+    "dgx spark update performance",
+    "local ai benchmarks",
+    "llm inference speed",
+    "dgx spark vllm"
+  ],
+  "hook_text": "The burn test lied to you.",
+  "hook_candidates": [
+    "You updated your Spark. The benchmark lied.",
+    "Your benchmark says slower. Your models say faster.",
+    "DGX Spark update: burn test says slower, serving says faster",
+    "The burn test lied to you. Your DGX Spark got faster.",
+    "Synthetic benchmarks lie to your DGX Spark",
+    "You benchmarked the wrong thing tonight.",
+    "DGX Spark firmware: same watts, less math, faster models",
+    "Faster where it matters. Slower where it shows.",
+    "Trust the burn test and you will skip a faster Spark.",
+    "The benchmark every Spark owner runs is the wrong one."
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 111,
+  "narration_full": "The burn test lied to you. Your DGX Spark got faster. You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth. Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed. But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue. Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding. Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge. To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway. Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn. On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you. So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number. The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it.",
+  "analogy": {
+    "vehicle": "the doorway (kitchen with one narrow doorway)",
+    "mapping": "the chef is compute, the doorway is the memory bus, the ingredients are the model's weights; decode reads the weights through the doorway",
+    "limit": "prompt processing reads the whole prompt in one wide pass, so the kitchen picture breaks for prefill"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The burn test lied to you. Your DGX Spark got faster.",
+      "on_screen_text": "The burn test lied to you. | Your DGX Spark got faster.",
+      "visual_brief": "Frame 1: full-bleed near-black field, the words 'The burn test lied to you.' already composed and fully legible in the signal pack's kinetic headline style, amber underline under 'lied'. Motion onset at 0.4s: beat two 'Your DGX Spark got faster.' rises in place on 'faster' with the amber underline scaling under it. First and last 8 frames stable.",
+      "est_duration_s": 4.0
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth.",
+      "on_screen_text": "you updated; you benchmarked | fp16 burn test = matrix math | a drop reads as regression",
+      "visual_brief": "Update-prompt card fades in on \"Dashboard prompted\"; terminal card fades in on \"benchmark to check\"; amber tag \"the myth\" scales in on \"That's the myth\". One text block animating at a time.",
+      "est_duration_s": 15.5
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed.",
+      "on_screen_text": "fleet, one firmware | -11% on every unit | same watts, same clocks",
+      "visual_brief": "Machine-row silhouettes fade in on \"the whole fleet\"; giant amber \"-11%\" scales in on \"eleven percent\"; caption chip rises in place on \"Same watts\". At most two elements moving.",
+      "est_duration_s": 13.0
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue.",
+      "on_screen_text": "same unit, container, settings | decode = answer, word by word | +8% solo, +4% queued",
+      "visual_brief": "Baseline card fades in on \"Same unit\"; \"+8% solo\" digit scales in on \"eight percent\"; \"+4% full queue\" scales in on \"Four percent\". Digits appear sequentially, never together.",
+      "est_duration_s": 14.0
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding.",
+      "on_screen_text": "fp16 burn test fell | serving sped up | a hypothesis, not a finding",
+      "visual_brief": "On 'burn fell', a falling burn line and a rising serving line cross; on 'a hypothesis', the cross fades to a question-marked plate. Motion onset after 0.3s; stable close.",
+      "est_duration_s": 8.0
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge.",
+      "on_screen_text": "chef = compute | doorway = memory bus | ingredients = model weights",
+      "visual_brief": "Line-art kitchen rises in place on \"Picture a kitchen\"; chef label fades in on \"chef is compute\"; amber doorway glow scales in on \"memory bus\"; ingredient blocks fade in on \"model's weights\". Labels land one at a time.",
+      "est_duration_s": 13.0
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway.",
+      "on_screen_text": "each word: read the weights | burn measures the chef | answers wait on the doorway",
+      "visual_brief": "One loop group of weight blocks drifts through the doorway, onset on \"reads the active weights\" (after 0.3s); \"the burn measures the chef\" text fades in on that phrase. Loop settles for stable final frames.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn.",
+      "on_screen_text": "prefill reads your prompt first | one big block of math",
+      "visual_brief": "On 'one big block of math', a wide prompt bar scales in as a single block across the frame, amber edge. One beat; stable first and last 8 frames.",
+      "est_duration_s": 9.5
+    },
+    {
+      "id": "s9",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you.",
+      "on_screen_text": "flat to slightly slower | prompt-heavy? the drop is real",
+      "visual_brief": "Result line rises in place on 'flat to slightly slower', flat then dipping slightly; amber flag fades in on 'real for you'. Stable close.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number.",
+      "on_screen_text": "run your real workload | before + after, same settings | trust the pair",
+      "visual_brief": "Two-panel before/after checklist rises in place on \"before and after\"; amber check scales in on \"Trust that pair\". Only the check animates after panels settle.",
+      "est_duration_s": 10.5
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it.",
+      "on_screen_text": "burn: slower | model: faster | benchmark what you run",
+      "visual_brief": "\"slower\" card and \"faster\" card fade in on their spoken phrases; final line rises in place on \"Benchmark the workload you actually run\". Hold stable to the end.",
+      "est_duration_s": 6.0
+    }
+  ],
+  "notes_for_review": "Judge graft applied: 'Here the lab offers a hypothesis, not a finding.' (from draft B) keeps the kitchen mechanism at its true epistemic status. Numbers rounded once for the ear: the burn pair and serving range are the brief's verbatim figures; decode rates spoken as 'eight percent' and 'four percent' rather than the toks-per-second pair, holding one number per beat."
+}

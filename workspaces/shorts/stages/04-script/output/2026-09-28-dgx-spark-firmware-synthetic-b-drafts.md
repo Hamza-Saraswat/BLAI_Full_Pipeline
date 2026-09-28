@@ -61,4 +61,33 @@ Note: B's payoff_close narration was trimmed to "The burn said eleven percent sl
 
 ## Judge verdict
 
-(pending)
+## Scores
+| Row | Draft A | Draft B |
+|-----|---------|---------|
+| 1 Hook | 3 | 2 |
+| 2 Payoff timing | 3 | 1 |
+| 3 Specificity | 3 | 2 |
+| 4 Voice | 3 | 3 |
+| 5 Navigation | 3 | 1 |
+| 6 Difference | 3 | 3 |
+| 7 Repeat test | 3 | 2 |
+| 8 Teaching | 3 | 3 |
+| Total | 24 | 17 |
+
+- Row 1: A packs product and tension inside five words ("The burn test lied"); B names the Spark but parks "the benchmark lied" past the mark, then re-narrates the update.
+- Row 2: Per the fairness note, A's break is the hook itself, landing by second four as promised; B's first concrete number waits until scene five, roughly second fifty.
+- Row 3: A spends three numbers total, one per beat, none decorative; B's 23.1-to-25.0 crams two new numbers into one sentence and invents absolute rates the brief never gave.
+- Row 4: Both hold clean second person with one dry, unexplained beat that lands: A's "It isn't thinking. It's reading," B's "Not think. Read."
+- Row 5: A's transitions each name what changed and the order is load-bearing; B's "Step one/two/three" deletes with zero loss, so the mechanical-label cap holds at 1.
+- Row 6: Both differ from the ledger's contrarian-take and comparison-ladder in shape, opening rhythm and landing; near-identical durations noted, but the three difference criteria are met.
+- Row 7: A ends on the repeatable rule verbatim; B ends on "Only one of those is what you feel," which needs its antecedents and strands the actionable payoff upstream.
+- Row 8: Both show chef/doorway/weights once, concretely, arming viewers to predict unmentioned cases like fine-tuning or RAG from the prefill/decode split.
+
+## Winner
+Draft A, 24–17, margin of seven. It pays its hook inside four seconds, navigates without a single deletable label, and leaves the repeatable rule as the last sound in the room.
+
+## Grafts
+One graft: **"Here the lab offers a hypothesis, not a finding."** (B, s06) — inserted in A's s05 after "The burn fell while the model sped up." and before "Picture a kitchen." Reason: A presents the kitchen mechanism as settled explanation while the brief supplies only the numbers; B's hedge states the causal story's true epistemic status at zero cost to A's structure, person, or number budget. No hook graft: B's hook scored lower. No second graft: B's tok/s pair would inflate A's three-number budget and import unbriefed absolutes, and B's closer would displace A's repeatable final line.
+
+## Loser's path
+B's worked-example spent four scenes re-earning a break its own hook had already announced; winning required the 23.1→25.0 evidence inside the first two scenes. It also needed its step labels to carry content or be cut, and a close ending on the repeatable rule rather than an antecedent-dependent kicker.

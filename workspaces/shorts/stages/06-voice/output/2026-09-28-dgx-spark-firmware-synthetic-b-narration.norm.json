@@ -1,0 +1,73 @@
+{
+  "full": "The burn test lied to you. Your D G X Spark got faster. You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth. Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed. But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue. Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding. Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge. To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway. Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn. On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you. So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number. The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it.",
+  "words": 321,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "The burn test lied to you. Your D G X Spark got faster.",
+      "words": 13,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "You updated when the Dashboard prompted, then ran a benchmark to check. The burn test is a short synthetic workout, pure matrix math, that measures the chip's top speed. Everyone runs it after an update. A lower number reads as a regression. That's the myth.",
+      "words": 45,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "Here's what broke it. Petronella, a lab running machines built on the same chip as your Spark, updated the whole fleet. The burn dropped about eleven percent on every unit. Same watts. Same or higher clock speed.",
+      "words": 37,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "But serving the model, answering real requests, told the other story. Same unit, same container, same settings. Decode, the part that writes your answer word by word, gained eight percent when it's just you. Four percent at a full queue.",
+      "words": 40,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "Now the strange part. The sixteen-bit burn test fell while the model sped up. Here the lab offers a hypothesis, not a finding.",
+      "words": 23,
+      "changed": false
+    },
+    {
+      "id": "s6",
+      "text": "Picture a kitchen. The chef chops instantly. Every ingredient arrives through a single narrow doorway. The chef is compute. The doorway is the memory bus, your unified memory. The ingredients are the model's weights, its stored knowledge.",
+      "words": 37,
+      "changed": false
+    },
+    {
+      "id": "s7",
+      "text": "To write each word, decode reads the active weights in through that doorway. It isn't thinking. It's reading. The burn measures the chef. Your answers wait on the doorway.",
+      "words": 29,
+      "changed": false
+    },
+    {
+      "id": "s8",
+      "text": "Where the myth still holds: prefill, the part that reads your whole prompt before answering. Reading your prompt is one big block of math, compute-bound like the burn.",
+      "words": 28,
+      "changed": false
+    },
+    {
+      "id": "s9",
+      "text": "On very long prompts, prefill ran flat to slightly slower. If your work is prompt-heavy, the burn drop is real for you.",
+      "words": 22,
+      "changed": false
+    },
+    {
+      "id": "s10",
+      "text": "So here's the rule. Run the workload you actually run, before and after, same settings. Note its tokens per second, its answer speed. Trust that pair over any synthetic number.",
+      "words": 30,
+      "changed": false
+    },
+    {
+      "id": "s11",
+      "text": "The burn said slower. Your model said faster. Benchmark the workload you actually run, and trust it.",
+      "words": 17,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
