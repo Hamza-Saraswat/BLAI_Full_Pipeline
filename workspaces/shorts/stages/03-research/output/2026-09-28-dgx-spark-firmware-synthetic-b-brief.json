@@ -1,0 +1,223 @@
+{
+  "slug": "2026-09-28-dgx-spark-firmware-synthetic-b",
+  "topic": "DGX Spark firmware update: synthetic benchmarks vs real LLM serving",
+  "generated_at": "2026-09-28T12:05:00Z",
+  "depth": "standard",
+  "thesis": "After the DGX Spark firmware update, synthetic burn tests read about 11% lower while real LLM serving got 4% to 8% faster, so benchmark the workload you actually run, not the synthetic one.",
+  "explanation_path": "Start with what the machine actually does when it serves a model: prefill reads the whole prompt and is compute-bound, while decode generates tokens and is bound by how fast it can re-read the model's weights from memory. Establish that a synthetic burn test exercises only the compute path, the same path prefill uses. Then the field report lands as a paradox with a resolution: eight machines, one firmware update, the burn down about 11% on every unit while decode rose 4% to 8% at every load level, at equal or higher clocks and the same watts. The resolution is that the two tests wait on different bottlenecks, and only the serving one is what the viewer feels. Keep the honest catch visible: prefill, which is compute-bound like the burn, was flat to slightly slower, so the update trades a little peak compute for smoother serving rather than being a free win. Land the rule the viewer can repeat: benchmark the workload you actually run, before and after, same settings, and trust that pair over any synthetic number. Petronella's own explanation for the divergence stays labeled a hypothesis in the narration.",
+  "claims": [
+    {
+      "claim": "Petronella Technology updated the firmware on all eight GB10 systems in their lab (four NVIDIA DGX Spark Founders Edition, four MSI EdgeXpert) on September 25, 2026, after discovering the units had been running at least four different firmware combinations.",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "A synthetic 15-second fp16 matrix burn test read about 11% lower on every unit after the update: from 88.6 to 91.4 TFLOPS before to 77.6 to 81.3 TFLOPS after.",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "Real LLM serving on the same unit, same container and same settings got 4% to 8% faster: Qwen3.8-27B decode rose from 23.1 to 25.0 tokens per second at one user and from 303.2 to 315.0 tokens per second at 32 users.",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "The after-update burn ran at equal or higher clocks (2,236 to 2,340 MHz versus 2,164 to 2,268 MHz before) at the same 91 to 94 watts, so the drop is not a clock cap or a power cap.",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "Compute-bound prefill did not share the decode gain: it was flat at 8,192-token input (2,400 to 2,409 tokens per second) and slightly slower at the two longest inputs (1,302 to 1,217 tokens per second at 131,040 tokens).",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "Petronella's own conclusion: judged by a synthetic burn alone, you can talk yourself out of an update that makes your real workload faster; the burn said 11% slower, the serving benchmark said 4% to 8% faster, and only one of those is what users feel.",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/",
+      "source_title": "DGX Spark Firmware Update: What We Learned on 8 GB10 Units",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "The GB10 chip in a DGX Spark gives the CPU and GPU 128 GB of unified LPDDR5x memory at 273 GB/s, with a 140W SoC thermal design power fed by a 240W external power supply.",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html",
+      "source_title": "Hardware Overview - DGX Spark User Guide",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "An HP ZGX Nano G1n owner reports GB10 boxes hard-power-off under sustained vLLM vision-model serving with no Xid, NVRM or thermal errors in the logs, and locking clocks with sudo nvidia-smi -lgc 300,2200 stopped the shutdowns for over 96 hours.",
+      "source_url": "https://forums.developer.nvidia.com/t/gb10-abruptly-powers-off-under-heavy-gpu-load-nvidia-smi-lgc-300-2200-prevents-it/384492",
+      "source_title": "GB10 abruptly powers off under heavy GPU load -- nvidia-smi -lgc 300,2200 prevents it",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "A Japanese owner's DGX Spark stuck at 611 MHz decoded at 20.0 tok/s (versus the 44-47 tok/s the recipe's README lists) and recovered to 42.3 tok/s after a full power cut; on that recovered unit, a firmware update moved the burn by 97.6 to 97.9 TFLOP/s median (+0.3%), no degradation.",
+      "source_url": "https://note.com/fukuro_99/n/n26895f3edaad?hl=en",
+      "source_title": "Huh? My DGX Spark might be too slow",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-09-28"
+    },
+    {
+      "claim": "Two-node DGX Spark testing found single-stream throughput of 21.11 output tok/s against 12.36 on one node (1.71x, 85.4% efficiency), and real coding-agent workloads dominated by prompt processing rather than token generation.",
+      "source_url": "https://techstrong.ai/features/two-nvidia-dgx-sparks-three-open-models-and-the-benchmark-that-misled-us/",
+      "source_title": "Two NVIDIA DGX Sparks, Three Open Models, and the Benchmark that Misled Us",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-28"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "fp16 burn decline after firmware update",
+      "value": "about 11% lower on every unit",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/"
+    },
+    {
+      "label": "fp16 burn before vs after update",
+      "value": "88.6 to 91.4 TFLOPS before the update to 77.6 to 81.3 TFLOPS after",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/"
+    },
+    {
+      "label": "Qwen3.8-27B decode, 1 user",
+      "value": "23.1 to 25.0 tokens per second",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/"
+    },
+    {
+      "label": "Qwen3.8-27B decode, 32 users (aggregate)",
+      "value": "303.2 to 315.0 tokens per second",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/"
+    },
+    {
+      "label": "Real serving gain across load levels",
+      "value": "4% to 8%",
+      "source_url": "https://petronellatech.com/blog/dgx-spark-firmware-update-what-we-learned-on-8-gb10-units/"
+    },
+    {
+      "label": "GB10 unified memory bandwidth",
+      "value": "273 GB/s",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "Clock-lock range that stopped power-offs",
+      "value": "300,2200 (MHz by nvidia-smi convention)",
+      "source_url": "https://forums.developer.nvidia.com/t/gb10-abruptly-powers-off-under-heavy-gpu-load-nvidia-smi-lgc-300-2200-prevents-it/384492"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Drag-strip pass vs daily delivery route",
+      "mapping": "The 15-second fp16 burn is a drag-strip pass measuring peak engine output; LLM serving is the daily delivery route where fuel delivery (the 273 GB/s memory path) sets the pace, and the firmware update hurt the drag time while improving the route.",
+      "limit": "The GB10 did less arithmetic at equal or higher clocks and equal power, which has no clean mechanical analogue, and Petronella never measured memory bandwidth before the update, so the remap story is their unverified hypothesis."
+    },
+    {
+      "vehicle": "Dyno peak horsepower vs towing up a grade",
+      "mapping": "The burn test is dyno peak horsepower; serving is towing a load up a grade where torque delivery and gearing (memory bandwidth, not peak compute) govern speed.",
+      "limit": "Firmware is not a physical part swap, and the report itself concedes the mechanism is \"a hypothesis, not a finding\"."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The firmware update made the DGX Spark 11% slower.",
+      "reality": "Only the synthetic burn dropped; real serving got 4% to 8% faster at every load level, while compute-bound prefill was flat to slightly slower."
+    },
+    {
+      "myth": "A synthetic GPU benchmark predicts how fast your models will run.",
+      "reality": "Decode waits on the 273 GB/s memory path, not peak compute, and real coding-agent workloads are dominated by prefill anyway."
+    },
+    {
+      "myth": "The burn drop means the hardware regressed or the clocks were capped.",
+      "reality": "The after-update burn ran at equal or higher clocks at the same watts; the drop has no verified mechanism."
+    },
+    {
+      "myth": "The firmware update fixes the random GB10 power-offs.",
+      "reality": "Units powered off before and after the update; the only reported fix is a user's clock lock, and NVIDIA's docs document no such firmware fix (Known Issues names only non-supplied power adapters)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "GB10",
+      "definition": "The Grace Blackwell system-on-chip inside DGX Spark that pairs an Arm CPU with a Blackwell GPU over 128 GB of unified LPDDR5x memory."
+    },
+    {
+      "term": "fp16 burn test",
+      "definition": "A short synthetic matrix-multiply stress test (Petronella runs a 15-second one each session) measuring peak GPU compute in TFLOPS."
+    },
+    {
+      "term": "TFLOPS",
+      "definition": "Trillions of floating-point operations per second, the unit a compute burn test reports."
+    },
+    {
+      "term": "Decode",
+      "definition": "The token-generation part of LLM inference, measured in tokens per second and limited by memory bandwidth because every token requires re-reading the model's active weights."
+    },
+    {
+      "term": "Prefill",
+      "definition": "The part of LLM inference that processes the input prompt before generation begins; like a burn test it is compute-bound."
+    },
+    {
+      "term": "NVFP4",
+      "definition": "A 4-bit floating-point weight-quantization format in which Petronella served Qwen3.8-27B for the before/after firmware measurements."
+    },
+    {
+      "term": "vLLM",
+      "definition": "An open-source engine for serving LLMs to many simultaneous users."
+    },
+    {
+      "term": "fwupdmgr",
+      "definition": "The Linux Vendor Firmware Service client that delivered the firmware updates on all eight units, from the command line."
+    },
+    {
+      "term": "nvidia-smi -lgc",
+      "definition": "nvidia-smi's lock-GPU-clocks flag that pins the GPU core clock to a min,max range (300,2200 in the forum report)."
+    },
+    {
+      "term": "Embedded controller (EC)",
+      "definition": "A board-level microcontroller whose firmware manages power and thermal behavior."
+    },
+    {
+      "term": "Unified memory",
+      "definition": "A design where the GPU shares system DRAM with the CPU instead of having separate VRAM."
+    }
+  ],
+  "unverified": [
+    "Petronella's explanation that the new firmware hurt the compute path without hurting the memory path is, in their own words, \"a hypothesis, not a finding\"; they had no memory-bandwidth reading from before the update.",
+    "That the 300,2200 values passed to nvidia-smi -lgc are in MHz is nvidia-smi convention only; the forum thread does not state units.",
+    "That a GPU power spike causes the GB10 power-offs: the original poster explicitly declines to claim a root cause, and the thread holds no NVIDIA staff reply.",
+    "The companion Petronella post's finding that updated units split into 262 to 263 GB/s and 238 to 242 GB/s read-bandwidth tiers is referenced in the report but that page was not fetched this run.",
+    "The NVIDIA forum thread reporting a 50 to 60% system-wide slowdown after DGX OS 7.6.0, and the kho=off hotfix reply, are summarized inside the Petronella report; the thread itself was not fetched.",
+    "How Qwen3.8-27B relates to other Qwen releases was not verified from a fetched page; the name appears only in the Petronella report and its linked community content.",
+    "Whether the September 14, 2026 DGX OS 7.6.0 release changes power or clock behavior is unknown; the DGX Spark release notes contain no September 2026 entry."
+  ],
+  "suggested_outline": "Hook: the burn test said 11% slower; the serving test said 4% to 8% faster; same machines, same update.\nWhat a burn test measures: peak fp16 compute, in TFLOPS, for 15 seconds.\nWhat serving actually waits on: every generated token re-reads the model from the 273 GB/s unified memory, so decode is a memory test, not a compute test.\nThe field report: eight units, burn 88.6-91.4 down to 77.6-81.3 TFLOPS, decode up at every load level, at equal or higher clocks and the same watts.\nThe honest catch: prefill, compute-bound like the burn, was flat to slightly slower; this is a trade, not a free win.\nThe rule: benchmark the workload you actually run, before and after any firmware update, same model and settings.\nClose: if your Spark hard-powers-off under load, that is a different problem with a different fix (lock the clocks), not a benchmark story.",
+  "notes": "Conflict: note.com's before/after burn on a single just-recovered unit read 97.6 to 97.9 TFLOP/s (+0.3%, no degradation) versus Petronella's about 11% drop across eight units. The two start from different states (recovered from a 611 MHz stuck clock versus steady lab operation) and use different methods (a single 60-second benchmark versus the 15-second fp16 burn, three repetitions, variation 2.2% or less); we trust Petronella for the update effect on the unit count and repetition. NVIDIA's DGX Spark release notes carry no entry for the September firmware Petronella applied, and the Spark user guide's current-version table (DGX OS 7.5.0, driver 580.159.03) lags both the DGX OS 7 guide (7.6.0, September 14, 2026) and what the eight units ran (kernel 7.0.0-1019-nvidia, driver 580.178.04). A Medium piece on NVIDIA's January update was paywalled and is not cited. The burn-test tool is never named in the report.",
+  "viewer_situation": "You own or are eyeing a DGX Spark, you run the firmware update when the Dashboard prompts you, and you check the machine with a GPU benchmark to make sure nothing broke.",
+  "has_process": true,
+  "process_steps": [
+    "Run the workload you actually serve (your model, your engine, your settings) and write down its tokens per second before updating",
+    "Apply the firmware update through the DGX Dashboard or fwupdmgr",
+    "Re-run the exact same workload, three repetitions, same model, container and settings",
+    "Compare the two tokens-per-second numbers and trust that pair over any synthetic burn result"
+  ],
+  "objection": "Eight units in one lab, one model (Qwen3.8-27B), and a burn drop with no verified mechanism: that is not evidence the update helps my workload."
+}
