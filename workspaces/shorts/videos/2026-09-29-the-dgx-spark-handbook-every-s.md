@@ -2,22 +2,22 @@
 slug: 2026-09-29-the-dgx-spark-handbook-every-s
 workspace: shorts
 title: "DGX Spark Handbook: what it settles"
-status: approved
+status: scheduled
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-29
-updated: "2026-09-29T14:10:04Z"
-publish_slot: ""
+updated: "2026-09-29T14:15:47Z"
+publish_slot: "2026-09-29T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: fb919bc8-23e1-4d46-ba54-a9056cd592ab
 ---
 # The DGX Spark Handbook: every setup answer in one link
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-29-the-dgx-spark-handbook-every-s-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-29-the-dgx-spark-handbook-every-s-narration|Narration (normalized by stage 04)]]
 - Render: [[stages/07-render/output/2026-09-29-the-dgx-spark-handbook-every-s-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-29-the-dgx-spark-handbook-every-s-publish]]
 
 ## Decisions
 - 2026-09-29T11:45:42Z Angle confirmed as picked: ExoLabs handbook settles the recurring Spark setup questions; slug unchanged (unattended checkpoint, no redirect).
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-09-29T12:40:25Z 07-render ok 859s
 - 2026-09-29T12:40:27Z build done, status review
 - 2026-09-29T14:10:04Z telegram approve (approved_at 2026-09-29T14:10:04Z)
+- 2026-09-29T14:15:48Z 08-publish ok 2s
