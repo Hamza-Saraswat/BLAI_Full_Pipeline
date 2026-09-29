@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-09-28-ideas]]
 - Research: [[stages/03-research/output/2026-09-28-dgx-spark-firmware-synthetic-b-brief]]
 - Script: [[stages/04-script/output/2026-09-28-dgx-spark-firmware-synthetic-b-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [2026-09-28-dgx-spark-firmware-synthetic-b-package.md](../stages/05-package/output/2026-09-28-dgx-spark-firmware-synthetic-b-package.md)
+- Voice: [2026-09-28-dgx-spark-firmware-synthetic-b-narration.txt](../stages/06-voice/output/2026-09-28-dgx-spark-firmware-synthetic-b-narration.txt)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
