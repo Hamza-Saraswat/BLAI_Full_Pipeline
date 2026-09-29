@@ -2,19 +2,19 @@
 slug: 2026-09-29-the-dgx-spark-handbook-every-s
 workspace: shorts
 title: "DGX Spark Handbook: what it settles"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-29
-updated: "2026-09-29T12:19:39Z"
+updated: "2026-09-29T12:24:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -40,4 +40,4 @@ blotato_post_id: ""
 - 2026-09-29T12:19:39Z Stage 05 audit: title 35 chars with keyword at chars 1-9; description 613 bytes with related-video link; 3 hashtags; tags 196 chars; check_outputs clean after Package/Voice artifact links filled; no duplicate title in published/.
 
 ## Build journal
-
+- 2026-09-29T12:24:46Z build start on gn100-83c4
