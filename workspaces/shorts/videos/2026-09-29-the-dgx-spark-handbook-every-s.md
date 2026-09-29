@@ -2,14 +2,14 @@
 slug: 2026-09-29-the-dgx-spark-handbook-every-s
 workspace: shorts
 title: "DGX Spark Handbook: what it settles"
-status: building
+status: review
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-29
-updated: "2026-09-29T12:24:46Z"
+updated: "2026-09-29T12:40:22Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-29-the-dgx-spark-handbook-every-s-script|Script]] ([[stages/04-script/output/2026-09-29-the-dgx-spark-handbook-every-s-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-09-29-the-dgx-spark-handbook-every-s-package|Package]]
 - Voice: [[stages/06-voice/output/2026-09-29-the-dgx-spark-handbook-every-s-narration|Narration (normalized by stage 04)]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-29-the-dgx-spark-handbook-every-s-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -42,3 +42,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-29T12:24:46Z build start on gn100-83c4
 - 2026-09-29T12:26:03Z 06-voice ok 75s
+- 2026-09-29T12:40:25Z 07-render ok 39.17s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 144
+- 2026-09-29T12:40:25Z 07-render ok 859s
