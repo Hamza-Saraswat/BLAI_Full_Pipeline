@@ -2,21 +2,21 @@
 slug: 2026-09-29-the-dgx-spark-handbook-every-s
 workspace: shorts
 title: "DGX Spark Handbook: what it settles"
-status: scheduled
+status: published
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-29
-updated: "2026-09-29T14:15:47Z"
+updated: "2026-09-29T16:03:46Z"
 publish_slot: "2026-09-29T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=SelUwqDI27w"
 blotato_post_id: fb919bc8-23e1-4d46-ba54-a9056cd592ab
 ---
 # The DGX Spark Handbook: every setup answer in one link
@@ -47,3 +47,4 @@ blotato_post_id: fb919bc8-23e1-4d46-ba54-a9056cd592ab
 - 2026-09-29T12:40:27Z build done, status review
 - 2026-09-29T14:10:04Z telegram approve (approved_at 2026-09-29T14:10:04Z)
 - 2026-09-29T14:15:48Z 08-publish ok 2s
+- 2026-09-29T16:03:47Z published https://www.youtube.com/watch?v=SelUwqDI27w
