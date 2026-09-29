@@ -1,0 +1,559 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-09-29T12:16:45+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-09-29-the-dgx-spark-handbook-every-s-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-09-29-the-dgx-spark-handbook-every-s-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 5,
+      "docs": 3,
+      "benchmark": 2
+    },
+    "pct_primary_docs": 0.8,
+    "key_numbers_total": 8,
+    "entities_total": 23,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "dataiku.com",
+      "huggingface.co",
+      "nvidia.com"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "hiked MSRP (launch price was $3,999)",
+          "value": "$4,699",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "NVIDIA site asking price, seen 21 September",
+          "value": "$7,999",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$7,999",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "memory per Spark",
+          "value": "128 GB LPDDR5x unified system memory",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "128",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "memory bandwidth per Spark",
+          "value": "273 GB/s bandwidth",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "273 GB/s",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "inter-Spark link, per QSFP port",
+          "value": "up to 200 Gigabits per second (Gb/s)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "model ceiling, single vs dual Spark",
+          "value": "200 billion parameters (or 405B for dual-Spark configuration)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "model ceiling, four systems (product page)",
+          "value": "up to 700 billion parameters",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "firmware-bug link speed, before vs after full upgrade",
+          "value": "from 13 Gbps to 196 Gbps",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 23,
+      "found_count": 1,
+      "score": 0.043,
+      "found": [
+        "LM Studio"
+      ],
+      "missing": [
+        "vLLM",
+        "Hugging Face",
+        "DeepSeek-V4.1-Flash",
+        "Qwen3.6-35B",
+        "ServeTheHome",
+        "kWh",
+        "GLM-5.3-Flash",
+        "Docker",
+        "ConnectX-7",
+        "Cluster Assistant",
+        "Gigabits",
+        "Ethernet",
+        "Gbps",
+        "Two Sparks",
+        "Sparks",
+        "PyTorch",
+        "NCCL",
+        "RPC",
+        "RoCE",
+        "MSRP",
+        "iGPUs",
+        "NVIDIA Known Issues"
+      ],
+      "top2": [
+        "vLLM",
+        "Hugging Face"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.6-35B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ServeTheHome",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "kWh",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GLM-5.3-Flash",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Docker",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ConnectX-7",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Cluster Assistant",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Gigabits",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ethernet",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Gbps",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Two Sparks",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sparks",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "PyTorch",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NCCL",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RPC",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RoCE",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MSRP",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "iGPUs",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA Known Issues",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 15,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:$7,999"
+      ],
+      "hook_text": "$7,999. The Spark's new price.",
+      "first_sentence": "Seven thousand nine hundred ninety-nine dollars."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "number-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "num:$7,999"
+          ],
+          "narration": "Seven thousand nine hundred ninety-nine dollars. The Spark's new asking price. Desk or cart, you felt it."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "glossary:DGX Spark"
+          ],
+          "narration": "One free handbook pinned down the math. Launch was three thousand nine hundred ninety-nine dollars. It has nearly doubled since."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:LM Studio"
+          ],
+          "narration": "Day one: install LM Studio, follow NVIDIA's guide, download a model. You're chatting in about an hour."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:128 GB LPDDR5x unified system memory"
+          ],
+          "narration": "The Spark is a memory box. A hundred twenty-eight gigabytes of unified memory, one pool processor and graphics share."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s bandwidth"
+          ],
+          "narration": "Big tank, narrow pipe: two hundred seventy-three gigabytes per second. Long prompts break that picture. A second Spark buys capacity, not speed."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 6.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Buy the second Spark when a model won't fit one box. Two boxes, one cable, never one machine."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.0,
+      "words": 117,
+      "sentences": 15,
+      "est_speech_s": 40.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Seven thousand nine hundred ninety-nine dollars. The Spark's new asking price. Desk or cart, you felt it. One free handbook pinned down the math. Launch was three thousand nine hundred ninety-nine dollars. It has nearly doubled since. Day one: install LM Studio, follow NVIDIA's guide, download a model. You're chatting in about an hour. The Spark is a memory box. A hundred twenty-eight gigabytes of unified memory, one pool processor and graphics share. Big tank, narrow pipe: two hundred seventy-three gigabytes per second. Long prompts break that picture. A second Spark buys capacity, not speed. Buy the second Spark when a model won't fit one box. Two boxes, one cable, never one machine.",
+    "on_screen": "$7,999. The Spark's new price. | $7,999 | The Spark's new price. | DGX Spark Handbook | $3,999 at launch | nearly doubled since | LM Studio \u2192 guide \u2192 model | \u22481 hour to first chat | 128 GB unified memory | one shared pool | 273 GB/s narrow pipe | tank, not firehose | buy 2nd Spark | model won't fit 1 box"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-09-29-the-dgx-spark-handbook-every-s-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 5.0,
+        "words": 117,
+        "est_speech_s": 40.3,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "FK grade 5.0 \u2014 target <=5",
+          "s03: 'LM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-09-29-the-dgx-spark-handbook-every-s-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.043,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "vLLM",
+          "Hugging Face"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:$7,999"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "number-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

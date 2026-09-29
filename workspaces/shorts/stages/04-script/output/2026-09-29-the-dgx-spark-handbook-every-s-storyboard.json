@@ -1,0 +1,112 @@
+{
+  "slug": "2026-09-29-the-dgx-spark-handbook-every-s",
+  "topic": "The DGX Spark Handbook: real price, day-one path, and the second-Spark rule",
+  "title": "The $7,999 Spark Handbook Verdict",
+  "description": "NVIDIA's site now asks $7,999 for a DGX Spark that launched at $3,999. A free community handbook pins down the real price, the day-one setup path, and why a second box buys capacity rather than speed.",
+  "hashtags": [
+    "#DGXSpark",
+    "#LMStudio",
+    "#NVIDIA"
+  ],
+  "hook_text": "$7,999. The Spark's new price.",
+  "hook_candidates": [
+    "Seven thousand nine hundred ninety-nine dollars. That is the Spark's new asking price.",
+    "You've got a Spark on your desk. The second one just doubled in price.",
+    "NVIDIA's site wants eight grand for a desk-side AI box.",
+    "Four thousand dollars bought a DGX Spark last year. Try five, used.",
+    "This handbook settled every Spark setup question in one link.",
+    "Your Spark is a memory box. Its doorway is narrow.",
+    "Two Sparks, one cable, no merged machine.",
+    "A firmware bug chokes fresh Spark clusters to thirteen gigabits.",
+    "LM Studio to first model in about an hour.",
+    "The handbook's verdict: stop at two Sparks."
+  ],
+  "hook_pattern": "number-shock",
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 35,
+  "narration_full": "Seven thousand nine hundred ninety-nine dollars. The Spark's new asking price. Desk or cart, you felt it. One free handbook pinned down the math. Launch was three thousand nine hundred ninety-nine dollars. It has nearly doubled since. Day one: install LM Studio, follow NVIDIA's guide, download a model. You're chatting in about an hour. The Spark is a memory box. A hundred twenty-eight gigabytes of unified memory, one pool processor and graphics share. Big tank, narrow pipe: two hundred seventy-three gigabytes per second. Long prompts break that picture. A second Spark buys capacity, not speed. Buy the second Spark when a model won't fit one box. Two boxes, one cable, never one machine.",
+  "music_mood": "steady-build",
+  "analogy": "Water tank behind a narrow pipe: a big 128 GB tank draining through a 273 GB/s pipe. Limit: the picture breaks on long prompts, when compute waits less on the pipe.",
+  "notes_for_review": "Five numbers spent: $7,999, $3,999, one hour, 128 GB, 273 GB/s, one per sentence. Verdict attributed to the handbook. No firmware-bug number to stay inside budget.",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Seven thousand nine hundred ninety-nine dollars. The Spark's new asking price. Desk or cart, you felt it.",
+      "on_screen_text": "$7,999 | The Spark's new price.",
+      "visual_brief": "Frame 1: near-black silicon-die backdrop, giant amber '$7,999' centered, hook line 'The Spark's new price.' beneath, fully legible. Within 0.5 s the digits scale up a notch with a soft amber glow pulse. On 'new asking price' a faint circuit-trace shimmer fades in along the die edges. On 'Desk or cart' a small desk-tower icon and a cart icon rise-in-place below the price, then fade as 'you felt it' lands. Motion onset at 0.4 s: the giant dollar figure scales up from 0.96 to 1.0 while the caption rises in place.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        },
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "One free handbook pinned down the math. Launch was three thousand nine hundred ninety-nine dollars. It has nearly doubled since.",
+      "on_screen_text": "DGX Spark Handbook | $3,999 at launch | nearly doubled since",
+      "visual_brief": "Horizontal amber price timeline across a dark PCB trace texture. On 'handbook pinned down the math' a small article card labeled 'DGX Spark Handbook' fades in at upper left. On 'Launch was' a node marked '$3,999' rises-in-place at the timeline's left end. On 'nearly doubled' a second unlabeled node marked 'today' fades in at the right end while a dotted amber connector fades in between, the gap left deliberately long.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Day one: install LM Studio, follow NVIDIA's guide, download a model. You're chatting in about an hour.",
+      "on_screen_text": "LM Studio → guide → model | ≈1 hour to first chat",
+      "visual_brief": "Three rounded nodes on a single circuit-trace spine, dark background. On 'install LM Studio' the first node fades in amber. On 'follow NVIDIA's guide' the second node rises-in-place and a short trace fades in connecting them. On 'download a model' the third node fades in. On 'about an hour' an amber chip badge reading '≈1 hour' scales in above the flow, then the whole diagram settles.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The Spark is a memory box. A hundred twenty-eight gigabytes of unified memory, one pool processor and graphics share.",
+      "on_screen_text": "128 GB unified memory | one shared pool",
+      "visual_brief": "On \"memory box\" the silicon die outline fills amber. On \"a hundred twenty-eight gigabytes\" the die fills with a memory grid, digits 128 GB large at top. On \"one pool\" a single basin spans CPU and GPU blocks, labeled once. Change at each narration phrase.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "Big tank, narrow pipe: two hundred seventy-three gigabytes per second. Long prompts break that picture. A second Spark buys capacity, not speed.",
+      "on_screen_text": "273 GB/s narrow pipe | tank, not firehose",
+      "visual_brief": "A wide tank drains through a drawn narrow pipe on \"narrow pipe\", 273 GB/s as digits on the pipe. On \"long prompts\" the tank fills in one wide block pass. On \"capacity, not speed\" a second tank appears beside the first, same pipe width.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Buy the second Spark when a model won't fit one box. Two boxes, one cable, never one machine.",
+      "on_screen_text": "buy 2nd Spark | model won't fit 1 box",
+      "visual_brief": "Centered stack on a dark die backdrop: two small Spark boxes linked by one amber cable, fading in on 'Two boxes, one cable'. On 'never one machine' a dashed outline suggesting a merged box fades in around them, then fades out. On 'a model won't fit' the left box's memory bar rises-in-place to full amber while the right stays dim. On 'stop there' all motion halts, a small wordmark fades in, and the amber tone matches frame 1's price glow.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    }
+  ]
+}
