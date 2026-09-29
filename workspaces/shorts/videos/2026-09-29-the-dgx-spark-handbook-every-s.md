@@ -2,14 +2,14 @@
 slug: 2026-09-29-the-dgx-spark-handbook-every-s
 workspace: shorts
 title: "DGX Spark Handbook: what it settles"
-status: review
+status: approved
 pillar: how-to
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-09-29
-updated: "2026-09-29T12:40:22Z"
+updated: "2026-09-29T14:10:04Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-29T12:40:25Z 07-render ok 39.17s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 144
 - 2026-09-29T12:40:25Z 07-render ok 859s
 - 2026-09-29T12:40:27Z build done, status review
+- 2026-09-29T14:10:04Z telegram approve (approved_at 2026-09-29T14:10:04Z)
