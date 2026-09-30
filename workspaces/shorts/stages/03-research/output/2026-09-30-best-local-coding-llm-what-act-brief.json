@@ -1,0 +1,215 @@
+{
+  "slug": "2026-09-30-best-local-coding-llm-what-act",
+  "topic": "Best local coding LLM: what actually fits 128 GB",
+  "generated_at": "2026-09-30T12:05:00Z",
+  "depth": "standard",
+  "thesis": "On 128 GB of unified memory the right coding model is not the leaderboard's best open coder but the best one that fits and still flies: gpt-oss-120b, with GLM-4.5-Air as the quality-per-gigabyte pick.",
+  "explanation_path": "Start with the constraint itself: one shared 128 GB pool holds the model weights, the KV cache that grows with context, and the OS, so the file has to fit with room left over. Then the two numbers that decide everything and live in tension: total parameters set whether a model fits at all, active parameters set how fast it thinks, which is why a 117B-total MoE with 5.1B active can be quick while a dense model that fits can crawl. With that rule, the roundups' ordering dissolves: the SWE-bench leaders are full-size models whose local fit was never measured, while the models measured on this hardware are the mid-size MoEs. Then land the two picks that survive the rule (gpt-oss-120b for speed and one-command setup, GLM-4.5-Air at Q4_K_M for quality per gigabyte), admit the honest catch on the skill gap, and close with the single command that starts the download tonight.",
+  "claims": [
+    {
+      "claim": "gpt-oss-120b is a 117B-total, 5.1B-active MoE explicitly built to fit a single 80GB GPU, so it fits 128 GB unified memory with room for context.",
+      "source_url": "https://huggingface.co/openai/gpt-oss-120b",
+      "source_title": "openai/gpt-oss-120b",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "Ollama ships gpt-oss:120b in exactly one quantization, MXFP4 at 4.25 bits per parameter, as a single 65GB download.",
+      "source_url": "https://ollama.com/library/gpt-oss:120b",
+      "source_title": "gpt-oss:120b",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "The llama.cpp maintainer benchmarked gpt-oss-120b MXFP4 (59.02 GiB on disk, 116.83 B params) on a GB10 with llama-bench at 45.34 t/s single-stream decode (tg128), falling to 30.43 t/s at 48k context depth, with pp4096 prefill at 2046.65 t/s.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+      "source_title": "Performance of llama.cpp on NVIDIA DGX Spark #16578",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "GLM-4.5-Air at Q4_K_M is 73.50GB, the repo's recommended default quant, and can rise to Q6_K at 99.18GB and still fit; Q8_0 at 117.46GB fits on paper but leaves almost nothing for the KV cache.",
+      "source_url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF",
+      "source_title": "bartowski/zai-org_GLM-4.5-Air-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "MiniMax-M2 at its recommended Q4_K_M quant is 138.59GB and does not fit 128 GB unified memory; only 3-bit-class quants such as Q3_K_XL at 108.74GB fit.",
+      "source_url": "https://huggingface.co/bartowski/MiniMaxAI_MiniMax-M2-GGUF",
+      "source_title": "bartowski/MiniMaxAI_MiniMax-M2-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "Full-size GLM-4.5 overshoots 128 GB at every quant at or above 3-bit (Q3_K_M 164.95GB) and even its Q2_K_L file alone is 128.51GB, over budget before any KV cache.",
+      "source_url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-GGUF",
+      "source_title": "bartowski/zai-org_GLM-4.5-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "On the official SWE-bench Verified default board (bash-only, mini-SWE-agent, human-filtered 500-instance subset) the open-family leaders are MiniMax M2.5 (high) 75.80, GLM 5 (high) 72.80%, Kimi K2.5 (high) 70.80%, while gpt-oss-120b posts 26.00 via mini-SWE-agent.",
+      "source_url": "https://www.swebench.com/",
+      "source_title": "SWE-bench",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "DataCamp's September 2026 nine-model ranking lists cloud models first, names Kimi K3 (\"2.8 trillion parameters\") the best open weights you cannot run locally, and carries a 128 GB workstation pick whose 4-bit weights run \"roughly 60 to 70 GB\".",
+      "source_url": "https://www.datacamp.com/blog/best-llm-for-coding",
+      "source_title": "Best LLMs for Coding (DataCamp, September 2026 edition)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-09-30"
+    },
+    {
+      "claim": "The crowns flip with the harness: a Fireworks table of the AA Coding Index (updated 4.27.26) crowns DeepSeek V4-Pro (47.5) and Kimi K2.6 (47.1) the top open-source coders, not SWE-bench's leaders.",
+      "source_url": "https://fireworks.ai/blog/best-llms-for-coding",
+      "source_title": "Best LLMs for Coding (Fireworks)",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-09-30"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "MiniMax-M2 recommended Q4_K_M file size (does not fit)",
+      "value": "138.59GB",
+      "source_url": "https://huggingface.co/bartowski/MiniMaxAI_MiniMax-M2-GGUF"
+    },
+    {
+      "label": "gpt-oss-120b total parameters",
+      "value": "117B parameters",
+      "source_url": "https://huggingface.co/openai/gpt-oss-120b"
+    },
+    {
+      "label": "gpt-oss-120b active parameters",
+      "value": "5.1B active parameters",
+      "source_url": "https://huggingface.co/openai/gpt-oss-120b"
+    },
+    {
+      "label": "Ollama gpt-oss:120b single download size (MXFP4 only)",
+      "value": "65GB",
+      "source_url": "https://ollama.com/library/gpt-oss:120b"
+    },
+    {
+      "label": "gpt-oss-120b decode on GB10, single-stream (tg128)",
+      "value": "45.34 t/s",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/16578"
+    },
+    {
+      "label": "GLM-4.5-Air Q4_K_M file size (fits)",
+      "value": "73.50GB",
+      "source_url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF"
+    },
+    {
+      "label": "GLM-4.5 Q2_K_L file alone (over budget before KV cache)",
+      "value": "128.51GB",
+      "source_url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-GGUF"
+    },
+    {
+      "label": "Kimi K3 total parameters (best open weights you cannot run locally)",
+      "value": "2.8 trillion parameters",
+      "source_url": "https://www.datacamp.com/blog/best-llm-for-coding"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a big-block engine that fires only a few cylinders per revolution",
+      "mapping": "total parameters are the whole engine that must fit the garage (memory); active parameters are the cylinders actually fired each token, which set the speed",
+      "limit": "the analogy hides that the whole engine still has to be parked in the garage before any cylinder fires, and that a bigger engine costs nothing per revolution once parked"
+    },
+    {
+      "vehicle": "parking a car in a garage by removing seats",
+      "mapping": "quantization strips the model down (Q4_K_M is removing seats) so it fits the 128 GB garage",
+      "limit": "below roughly 3-bit you are cutting structural parts, which the quant tables themselves flag as very low quality"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "128 GB of unified memory can run any ~120B-scale open model.",
+      "reality": "MiniMax-M2 needs 138.59GB even at its recommended Q4_K_M quant, so it misses the budget; only 3-bit-class quants such as Q3_K_XL at 108.74GB fit."
+    },
+    {
+      "myth": "the best open coder on the leaderboard is therefore the best local coder.",
+      "reality": "the SWE-bench Verified open leaders (MiniMax M2.5 75.80, GLM 5 72.80%, Kimi K2.5 70.80%) are full-size models whose 128 GB fit and speed were measured on no page fetched this run, while gpt-oss-120b, measured at 45.34 t/s on this hardware, posts 26.00 on the same board."
+    },
+    {
+      "myth": "bigger total parameter count is always the smarter local pick.",
+      "reality": "total parameters only decide fit; active parameters decide speed, which is why the 117B-total/5.1B-active gpt-oss-120b decodes fluently while denser models that fit can crawl."
+    },
+    {
+      "myth": "open weights means you can run it on your box tonight.",
+      "reality": "DataCamp's own roundup names Kimi K3, at 2.8 trillion parameters, the best open weights you cannot run locally, and DeepSeek V4.1 Flash's checkpoint is about 510 GB."
+    },
+    {
+      "myth": "if it fits, it is fast.",
+      "reality": "decode is bandwidth-bound, not capacity-bound: the same thread measured gpt-oss-20b at 84.67 tokens/sec on a Spark versus 117.32 tokens/sec on a MacBook Pro M4 Max."
+    },
+    {
+      "myth": "one coding benchmark tells you which open model is best.",
+      "reality": "crowns flip with the harness: SWE-bench Verified crowns MiniMax M2.5 (75.80) while the AA Coding Index table crowns DeepSeek V4-Pro (47.5) and Kimi K2.6 (47.1)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "unified memory",
+      "definition": "a single pool of RAM shared by CPU and GPU (as on DGX Spark GB10), so one big model file needs no splitting between VRAM and system RAM."
+    },
+    {
+      "term": "quantization (quant)",
+      "definition": "storing model weights at fewer bits per weight (for example 4-bit Q4_K_M) to shrink the file and memory footprint at some quality cost."
+    },
+    {
+      "term": "total vs active parameters",
+      "definition": "total parameters are all stored weights and set memory size; active parameters are the weights computed per token and set generation speed."
+    },
+    {
+      "term": "MoE (Mixture of Experts)",
+      "definition": "an architecture that stores many expert weight blocks but routes each token through only a few, allowing huge total size with small per-token compute."
+    },
+    {
+      "term": "GGUF",
+      "definition": "the llama.cpp ecosystem's single-file model format in which each file is one specific quant of a model, with its size listed in GB on the repo page."
+    },
+    {
+      "term": "KV cache",
+      "definition": "per-conversation memory that grows with context length and must fit in memory alongside the model weights."
+    },
+    {
+      "term": "MXFP4",
+      "definition": "a 4.25-bit micro-scaling weight format used natively by the gpt-oss models; Ollama ships gpt-oss:120b in this one quant only."
+    },
+    {
+      "term": "SWE-bench Verified",
+      "definition": "a human-filtered 500-instance subset of real GitHub issues whose official leaderboard currently defaults to a bash-only mini-SWE-agent setting."
+    },
+    {
+      "term": "tokens per second (decode)",
+      "definition": "how fast a loaded model generates text; llama-bench reports it as tg (text generation) at a given context depth."
+    }
+  ],
+  "unverified": [
+    "GLM-4.5-Air is widely described as a 106B-total / 12B-active MoE with 128K context and MIT license, but those figures were not stated on any page fetched this session (only its GGUF quant sizes were).",
+    "Whether quantized variants of the SWE-bench open leaders (MiniMax M2.5, GLM 5, Kimi K2.5) fit and run acceptably in 128 GB was not measured on any fetched page.",
+    "Spark Arena values quoted inside the llama.cpp thread (gpt-oss-120b 58.82 tok/s single node) quote a leaderboard site that was not fetched this session.",
+    "A July 2026 roundup attributes 273 GB/s memory bandwidth to the GB10 and community decode speeds near 50 tok/s for gpt-oss-120b and 2.5 to 5 tok/s for dense 70B models, with no per-number method shown.",
+    "Qwen3-Coder-480B-A35B, DeepSeek-V3.x and Kimi K2 are commonly reported as far too large for 128 GB at usable quants, but no fetched page stated their quant file sizes.",
+    "GLM-4.6 exists as a newer GLM coding release, but no page fetched this session states its parameter count or quant sizes.",
+    "Usable memory on DGX Spark is often reported around 119-120 GB after system overhead, which would tighten the fits above; not verified on a fetched page this session."
+  ],
+  "suggested_outline": "Open on the fit failure: the leaderboard's top open coder family needs a 138.59GB file at its own recommended quant, and your whole machine is 128 GB.\nGive the rule the roundups bury: total parameters decide fit, active parameters decide speed, so the 117B-total / 5.1B-active gpt-oss-120b ships as one 65GB download and was measured at 45.34 tokens per second on this exact class of hardware, while GLM-4.5-Air at 73.50GB is the quality-per-gigabyte pick.\nHonest catch and payoff: the same leaderboard gives gpt-oss-120b 26.00 against the leaders' 75.80, so local means choosing fit and speed over the crown; tonight it is one Ollama command and a 65GB download.",
+  "notes": "Tool family: hermes web_search + web_extract (no FireCrawl MCP connector in this session); 3 parallel research subagents, roughly 8 searches and 13 page fetches spent. Crowns conflict by harness (SWE-bench Verified vs AA Coding Index); the brief reports both and the script should say which harness was asked. The sayob.com bandwidth figure (273 GB/s) is tier-4 and stays out of Key numbers. Reddit JSON returned 403 and was not fetched. The official llama.cpp dgx-spark.md results table was linked but not fetched; decode numbers come from replies inside discussion 16578.",
+  "viewer_situation": "You've got a 128 GB unified-memory machine (or you're eyeing one) and you want the best coding model that actually runs on it tonight, not another cloud-first top-ten list.",
+  "has_process": false,
+  "process_steps": [],
+  "objection": "You're telling me to run the model that scores 26.00 on SWE-bench because it's fast; the leaderboard's best open coder is 75.80, so the honest answer is that local still means second-rate at coding."
+}
