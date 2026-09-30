@@ -2,22 +2,22 @@
 slug: 2026-09-30-best-local-coding-llm-what-act
 workspace: shorts
 title: "Best local coding LLM: gpt-oss vs GLM"
-status: approved
+status: scheduled
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-30
-updated: "2026-09-30T14:38:55Z"
-publish_slot: ""
+updated: "2026-09-30T14:42:48Z"
+publish_slot: "2026-09-30T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: b5b0f10e-250f-413b-b7c1-fcdf69c61de5
 ---
 # Best local coding LLM: what actually fits 128 GB
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-09-30-best-local-coding-llm-what-act-package]]
 - Voice: [[stages/06-voice/output/2026-09-30-best-local-coding-llm-what-act-narration]] (normalized text; audio appended by the Spark)
 - Render: [[stages/07-render/output/2026-09-30-best-local-coding-llm-what-act-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-09-30-best-local-coding-llm-what-act-publish]]
 
 ## Decisions
 - 2026-09-30 research: angle confirmed unchanged (roundups rank cloud first; the honest local answer starts with what fits 128 GB unified memory); slug unchanged. Ran unattended per blai-run.
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-09-30T13:25:34Z 07-render ok 2403s
 - 2026-09-30T13:25:36Z build done, status review
 - 2026-09-30T14:38:55Z telegram approve (approved_at 2026-09-30T14:38:55Z)
+- 2026-09-30T14:42:49Z 08-publish ok 3s
