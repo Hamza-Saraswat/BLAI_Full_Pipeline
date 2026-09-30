@@ -2,14 +2,14 @@
 slug: 2026-09-30-best-local-coding-llm-what-act
 workspace: shorts
 title: "Best local coding LLM: gpt-oss vs GLM"
-status: review
+status: approved
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-30
-updated: "2026-09-30T13:25:30Z"
+updated: "2026-09-30T14:38:55Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-09-30T13:25:34Z 07-render ok 110.90s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 151
 - 2026-09-30T13:25:34Z 07-render ok 2403s
 - 2026-09-30T13:25:36Z build done, status review
+- 2026-09-30T14:38:55Z telegram approve (approved_at 2026-09-30T14:38:55Z)
