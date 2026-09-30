@@ -2,21 +2,21 @@
 slug: 2026-09-30-best-local-coding-llm-what-act
 workspace: shorts
 title: "Best local coding LLM: gpt-oss vs GLM"
-status: scheduled
+status: published
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-30
-updated: "2026-09-30T14:42:48Z"
+updated: "2026-09-30T16:06:46Z"
 publish_slot: "2026-09-30T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=3E_Erk4VNro"
 blotato_post_id: b5b0f10e-250f-413b-b7c1-fcdf69c61de5
 ---
 # Best local coding LLM: what actually fits 128 GB
@@ -46,3 +46,4 @@ blotato_post_id: b5b0f10e-250f-413b-b7c1-fcdf69c61de5
 - 2026-09-30T13:25:36Z build done, status review
 - 2026-09-30T14:38:55Z telegram approve (approved_at 2026-09-30T14:38:55Z)
 - 2026-09-30T14:42:49Z 08-publish ok 3s
+- 2026-09-30T16:06:46Z published https://www.youtube.com/watch?v=3E_Erk4VNro
