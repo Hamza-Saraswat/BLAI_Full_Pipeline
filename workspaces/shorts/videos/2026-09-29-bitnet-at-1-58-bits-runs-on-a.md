@@ -2,14 +2,14 @@
 slug: 2026-09-29-bitnet-at-1-58-bits-runs-on-a
 workspace: shorts
 title: BitNet at 1.58 bits runs on a cluster of ten-dollar boards
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-29
-updated: "2026-09-29T11:08:03Z"
+updated: "2026-09-30T13:35:16Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-09-30T13:35:16Z 2026-09-30T13:35:16Z expired: not from today's picks (2026-09-30); the factory carries no backlog
