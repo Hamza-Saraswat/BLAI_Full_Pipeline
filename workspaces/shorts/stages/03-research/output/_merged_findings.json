@@ -1,0 +1,428 @@
+[
+ {
+  "claim": "gpt-oss-120b (117B total, 5.1B active) was explicitly built to fit a single 80GB GPU, so it fits 128 GB unified memory with room for context",
+  "verbatim_quote": "`gpt-oss-120b` \u2014 for production, general purpose, high reasoning use cases that fit into a single 80GB GPU (like NVIDIA H100 or AMD MI300X) (117B parameters with 5.1B active parameters)",
+  "url": "https://huggingface.co/openai/gpt-oss-120b",
+  "title": "openai/gpt-oss-120b \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "gpt-oss models are natively MXFP4-quantized, which is why a 117B model needs only ~60-70 GB, and gpt-oss-20b runs in 16 GB",
+  "verbatim_quote": "MXFP4 quantization: The models were post-trained with MXFP4 quantization of the MoE weights, making `gpt-oss-120b` run on a single 80GB GPU (like NVIDIA H100 or AMD MI300X) and the `gpt-oss-20b` model run within 16GB of memory.",
+  "url": "https://huggingface.co/openai/gpt-oss-120b",
+  "title": "openai/gpt-oss-120b \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "gpt-oss-120b is Apache 2.0 licensed, so it is safe for commercial local deployment",
+  "verbatim_quote": "Permissive Apache 2.0 license: Build freely without copyleft restrictions or patent risk\u2014ideal for experimentation, customization, and commercial deployment.",
+  "url": "https://huggingface.co/openai/gpt-oss-120b",
+  "title": "openai/gpt-oss-120b \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "gpt-oss-20b (21B total, 3.6B active) is the low-latency local option that fits trivially in 128 GB",
+  "verbatim_quote": "`gpt-oss-20b` \u2014 for lower latency, and local or specialized use cases (21B parameters with 3.6B active parameters)",
+  "url": "https://huggingface.co/openai/gpt-oss-120b",
+  "title": "openai/gpt-oss-120b \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "GLM-4.5-Air at Q4_K_M is 73.50GB, the recommended default quant and a comfortable fit in 128 GB with KV-cache headroom",
+  "verbatim_quote": "GLM-4.5-Air-Q4_K_M.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-Air-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q4_K_M",
+  "size_gb": "73.50GB"
+ },
+ {
+  "claim": "GLM-4.5-Air can go as high as Q6_K at 99.18GB and still fit 128 GB unified memory",
+  "verbatim_quote": "GLM-4.5-Air-Q6_K.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-Air-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q6_K",
+  "size_gb": "99.18GB"
+ },
+ {
+  "claim": "GLM-4.5-Air's max Q8_0 quant is listed at 117.46GB \u2014 nominally under 128 GB but leaving almost nothing for KV cache and OS overhead",
+  "verbatim_quote": "GLM-4.5-Air-Q8_0.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-Air-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q8_0",
+  "size_gb": "117.46GB"
+ },
+ {
+  "claim": "GLM-4.5-Air can shrink to IQ4_XS at 60.81GB when context or a second model needs the memory",
+  "verbatim_quote": "GLM-4.5-Air-IQ4_XS.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-Air-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-Air-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "IQ4_XS",
+  "size_gb": "60.81GB"
+ },
+ {
+  "claim": "MiniMax-M2 at its recommended Q4_K_M quant is 138.59GB and does NOT fit 128 GB unified memory",
+  "verbatim_quote": "MiniMax-M2-Q4_K_M.gguf",
+  "url": "https://huggingface.co/bartowski/MiniMaxAI_MiniMax-M2-GGUF",
+  "title": "bartowski/MiniMaxAI_MiniMax-M2-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q4_K_M",
+  "size_gb": "138.59GB"
+ },
+ {
+  "claim": "MiniMax-M2 only fits 128 GB at 3-bit-class quants, e.g. Q3_K_XL at 108.74GB explicitly aimed at low-RAM machines",
+  "verbatim_quote": "MiniMax-M2-Q3_K_XL.gguf",
+  "url": "https://huggingface.co/bartowski/MiniMaxAI_MiniMax-M2-GGUF",
+  "title": "bartowski/MiniMaxAI_MiniMax-M2-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q3_K_XL",
+  "size_gb": "108.74GB"
+ },
+ {
+  "claim": "Full GLM-4.5 overshoots 128 GB at every quant at or above 3-bit: Q3_K_M is 164.95GB and even IQ3_XXS is 143.32GB",
+  "verbatim_quote": "GLM-4.5-Q3_K_M.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q3_K_M",
+  "size_gb": "164.95GB"
+ },
+ {
+  "claim": "GLM-4.5's Q2_K_L file alone is 128.51GB \u2014 already over the 128 GB budget before any KV cache \u2014 so only extreme 2-bit (IQ2_M 115.86GB) squeezes in",
+  "verbatim_quote": "GLM-4.5-Q2_K_L.gguf",
+  "url": "https://huggingface.co/bartowski/zai-org_GLM-4.5-GGUF",
+  "title": "bartowski/zai-org_GLM-4.5-GGUF \u00b7 Hugging Face",
+  "tier": "primary",
+  "confidence": "high",
+  "via": "hermes web_extract",
+  "accessed": "2026-09-30",
+  "quant": "Q2_K_L",
+  "size_gb": "128.51GB"
+ },
+ {
+  "claim": "The llama.cpp maintainer benchmarked exactly this candidate set on DGX Spark hardware, including Qwen3 Coder 30B A3B and GLM 4.5 Air",
+  "verbatim_quote": "Models: - `gpt-oss-20b` - `gpt-oss-120b` - `Qwen3 Coder 30B A3B` - `Qwen2.5 Coder 7B` - `Gemma 3 4B QAT` - `GLM 4.5 Air`",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "title": "Performance of llama.cpp on NVIDIA DGX Spark \u00b7 ggml-org/llama.cpp \u00b7 Discussion #16578 \u00b7 GitHub",
+  "tier": "benchmark",
+  "confidence": "high",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "gpt-oss-120b running locally on DGX Spark via llama.cpp scored 93.75% on AIME25 at high reasoning effort, showing local fit costs little capability",
+  "verbatim_quote": "8x AIME25, `gpt-oss-120b`, `high`: `93.75%`",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "title": "Performance of llama.cpp on NVIDIA DGX Spark \u00b7 ggml-org/llama.cpp \u00b7 Discussion #16578 \u00b7 GitHub",
+  "tier": "benchmark",
+  "confidence": "medium",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "A DGX Spark user runs gpt-oss-120b AND gpt-oss-20b simultaneously in 128 GB, with MXFP4 cutting the 120B from ~240 GB FP16 to ~70 GB in RAM",
+  "verbatim_quote": "The 120B model is reduced from approximately 240 GB (FP16) to approximately 70 GB in RAM.",
+  "url": "https://forums.developer.nvidia.com/t/dgx-spark-the-sovereign-ai-stack-dual-model-architecture-for-local-inference/352267",
+  "title": "DGX Spark: The Sovereign AI Stack \u2014 Dual-Model Architecture for Local Inference - NVIDIA Developer Forums",
+  "tier": "community",
+  "confidence": "medium",
+  "via": "fetched via hermes web_extract",
+  "accessed": "2026-09-30"
+ },
+ {
+  "claim": "Official SWE-bench Verified leaderboard now defaults to a bash-only setting run with mini-SWE-agent, on a human-filtered 500-instance subset \u2014 the harness and setting every Verified number below carries.",
+  "verbatim_quote": "_Verified_ is a human-filtered subset of 500 instances ( [details](https://openai.com/index/introducing-swe-bench-verified/)). Defaults to [_bash-only_](https://www.swebench.com/bash-only) setting (run with [mini-SWE-agent](https://github.com/SWE-agent/mini-swe-agent)).",
+  "url": "https://www.swebench.com/",
+  "page_title": "SWE-bench Leaderboards",
+  "tier": "benchmark (official harness)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "On the default (bash-only, mini-SWE-agent) SWE-bench Verified board, MiniMax M2.5 (high) posts the highest score among open-weight-family rows fetched: 75.80% at $0.07 per run, dated 2026-02-17 \u2014 the best open coding score found this session.",
+  "verbatim_quote": "|  | 3 | MiniMax M2.5high | mini-SWE-agent | 75.80 | $0.07 |  | ... | 2026-02-17 | [2.0.0](https://github.com/SWE-agent/mini-swe-agent/tree/v2.0.0) |",
+  "url": "https://www.swebench.com/",
+  "page_title": "SWE-bench Leaderboards",
+  "tier": "benchmark (official harness)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Runner-up open-family rows on the same board: GLM 5 (high) 72.80%, Kimi K2.5 (high) 70.80%, DeepSeek V3.2 (high) 70.00% \u2014 so the SWE-bench open crown margin is 3.00 points (75.80 vs 72.80).",
+  "verbatim_quote": "|  | 7 | GLM 5high | mini-SWE-agent | 72.80 | $0.53 | ... | 2026-02-17 | ... |  | 12 | Kimi K2.5high | mini-SWE-agent | 70.80 | $0.15 | ... | 2026-02-17 | ... |  | 14 | DeepSeek V3.2high | mini-SWE-agent | 70.00 | $0.45 | ... | 2026-02-17 |",
+  "url": "https://www.swebench.com/",
+  "page_title": "SWE-bench Leaderboards",
+  "tier": "benchmark (official harness)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "GLM-4.6's best Verified row on the official board is 68.20% with an Undisclosed agent (dated 2025-09-30, exactly one year before this brief); under mini-SWE-agent it drops to 55.40% at $0.10.",
+  "verbatim_quote": "|  | 51 | GLM-4.6 | Undisclosed | 68.20 |  | - | ... | 2025-09-30 | - | ... |  | 31 | GLM 4.6 | mini-SWE-agent | 55.40 | $0.10 | ... | 2025-12-01 |",
+  "url": "https://www.swebench.com/",
+  "page_title": "SWE-bench Leaderboards",
+  "tier": "benchmark (official harness)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Other named open coding models on Verified: Qwen3-Coder-480B-A35B-Instruct 69.60% with OpenHands (2025-08-05) / 55.40% with mini-SWE-agent; Kimi K2 71.20% with Lingxi v1.5; Kimi K2 Thinking 63.40%; Devstral Small (2512) 56.40%; gpt-oss-120b just 26.00% at $0.06.",
+  "verbatim_quote": "|  | 47 | Qwen3-Coder-480B-A35B-Instruct | OpenHands | 69.60 | ... | 2025-08-05 | ... |  | 35 | Kimi K2 | Lingxi v1.5 | 71.20 | ... | 2025-10-14 | ... |  | 23 | Kimi K2 Thinking | mini-SWE-agent | 63.40 | $0.44 | ... |  | 28 | Devstral Small (2512) | mini-SWE-agent | 56.40 | ... | 2025-12-09 | ... |  | 41 | gpt-oss-120b | mini-SWE-agent | 26.00 | $0.06 | ... | 2025-08-07 |",
+  "url": "https://www.swebench.com/",
+  "page_title": "SWE-bench Leaderboards",
+  "tier": "benchmark (official harness)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The AA Coding Index (composite of Terminal-Bench Hard and SciCode, per a Fireworks table last updated 4.27.26) crowns DeepSeek V4-Pro the best open coder by 0.4 points over Kimi K2.6 \u2014 a near-tie, with gpt-oss-120B far behind at 28.6.",
+  "verbatim_quote": "The top open-source spot on the AA Coding Index is now a near-tie between DeepSeek V4-Pro (47.5) and Kimi K2.6 (47.1), both live on Fireworks Serverless. V4-Pro edges the composite and leads on Terminal-Bench Hard (0.462 vs 0.439); Kimi K2.6 leads on AA Intelligence (53.9 vs 52) and SciCode (0.535 vs 0.500).",
+  "url": "https://fireworks.ai/blog/best-llms-for-coding",
+  "page_title": "Best LLMs for coding: 2026 roundup (Fireworks AI)",
+  "tier": "benchmark aggregator (vendor blog, dated table)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Same dated table's full open-model coding spread: DeepSeek V4-Pro 47.5, Kimi K2.6 47.1, GLM-5.1 43.4, Qwen3.6 Plus 42.9, DeepSeek V4-Flash 38.7, gpt-oss-120B (high) 28.6 (SWE-Bench Verified '~30%' community-reported); frontier reference Claude Opus 4.7 holds 87.6% Verified.",
+  "verbatim_quote": "| DeepSeek V4-Pro (Max Effort) | 80.6% (vendor) | 47.5 | 0.462 | 0.500 | 52 |\n| Kimi K2.6 | 80.2% | 47.1 | 0.439 | 0.535 | 53.9 |\n| GLM-5.1 (Reasoning) | \u2014 (Pro: 58.4) | 43.4 | 0.432 | 0.438 | 51.4 |\n| Qwen3.6 Plus | 78.8% | 42.9 | 0.439 | 0.407 | 50.0 |\n| DeepSeek V4-Flash (Max Effort) | 79.0% (vendor) | 38.7 | 0.356 | 0.449 | 47 |\n| gpt-oss-120B (high) | ~30% | 28.6 | 0.235 | 0.389 | 33.3 |",
+  "url": "https://fireworks.ai/blog/best-llms-for-coding",
+  "page_title": "Best LLMs for coding: 2026 roundup (Fireworks AI)",
+  "tier": "benchmark aggregator (vendor blog, dated table)",
+  "confidence": "medium",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "gpt-oss-120B's one strong coding number is LiveCodeBench 0.878 even though it lags agentic Terminal-Bench Hard at 0.235 \u2014 skill profile depends heavily on the harness.",
+  "verbatim_quote": "gpt-oss-120B scores lowest on the composite (28.6) because it lags on agentic Terminal-Bench Hard (0.235), but its LiveCodeBench score (0.878) remains competitive.",
+  "url": "https://fireworks.ai/blog/best-llms-for-coding",
+  "page_title": "Best LLMs for coding: 2026 roundup (Fireworks AI)",
+  "tier": "benchmark aggregator (vendor blog, dated table)",
+  "confidence": "medium",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Hosted-API speed contrast between the two open coders most relevant to 128 GB (Artificial Analysis, API throughput not local): GLM-4.6 (Reasoning) outputs 30 tokens/s vs gpt-oss-120b (low) 200 tokens/s \u2014 explained by active parameters 32B vs 5.1B (total 357B vs 117B); licenses MIT vs Apache 2.0.",
+  "verbatim_quote": "| Output Speed | 30 tokens/s | 200 tokens/s | ... | Total parameters | 357B | 117B | ... | Active parameters | 32B | 5.1B | ... | License | MIT | Apache 2.0 |",
+  "url": "https://artificialanalysis.ai/models/comparisons/glm-4-6-reasoning-vs-gpt-oss-120b-low",
+  "page_title": "GLM-4.6 (Reasoning) vs gpt-oss-120b (low): Model Comparison | Artificial Analysis",
+  "tier": "benchmark (independent evaluator)",
+  "confidence": "high (values marked *Estimated for Intelligence Index only)",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The llama.cpp maintainer's DGX Spark thread (Oct 14, 2025, updated through 2026 Feb 05, build b7946) is the primary community methodology for the GB10: prefill (pp) and generation (tg) at context depths and batch sizes 1-32, benchmarking gpt-oss-20b, gpt-oss-120b, Qwen3 Coder 30B A3B, Qwen2.5 Coder 7B, Gemma 3 4B QAT, GLM 4.5 Air.",
+  "verbatim_quote": "Benchmarks include:\n- Prefill (`pp`) and generation (`tg`) at various context depths (`d`)\n- Batch sizes of 1, 2, 4, 8, 16, 32 typical for local environments",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "page_title": "Performance of llama.cpp on NVIDIA DGX Spark #16578 (ggml-org/llama.cpp)",
+  "tier": "community (maintainer-run, method shown)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Measured on a GB10 (CUDA, 122570 MiB VRAM reported) with llama-bench: gpt-oss-120b MXFP4 (59.02 GiB on disk, 116.83 B params) decodes at 45.34 t/s single-stream (tg128), falling to 30.43 t/s at 48k context depth; prefill pp4096 = 2046.65 t/s.",
+  "verbatim_quote": "| gpt-oss 120B MXFP4 MoE |  59.02 GiB |   116.83 B | CUDA |  99 |    4096 |     4096 |  1 |    0 |          pp4096 |       2046.65 \u00b1 3.43 | ... | tg128 |         45.34 \u00b1 0.11 | ... | tg128 @ d20000 |         36.70 \u00b1 0.13 | ... |  tg128 @ d48000 |         30.43 \u00b1 0.02 |",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "page_title": "Performance of llama.cpp on NVIDIA DGX Spark #16578 (ggml-org/llama.cpp)",
+  "tier": "community (maintainer-run, method shown)",
+  "confidence": "high",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Spark Arena (community leaderboard launched Feb 11, 2026, quoted in the same thread on Feb 28, 2026) crowns gpt-oss-120b the fastest big-model decode on a single Spark: 58.82 tok/s (vLLM, MXFP4, single node), vs Qwen3-Coder-Next 60.51 tok/s only on 2 nodes and gpt-oss-120b 75.96 tok/s on 2 nodes.",
+  "verbatim_quote": "Top of the board right now (decode tokens/sec):\ngpt-oss-120b (vLLM, MXFP4, 2 nodes): 75.96 tok/s\nQwen3-Coder-Next (SGLang, FP8, 2 nodes): 60.51 tok/s\ngpt-oss-120b (vLLM, MXFP4, single node): 58.82 tok/s\nNVIDIA-Nemotron-3-Nano-30B-A3B (vLLM, NVFP4, single node): 56.11 tok/s",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "page_title": "Performance of llama.cpp on NVIDIA DGX Spark #16578 (ggml-org/llama.cpp)",
+  "tier": "community (quoting spark-arena.com)",
+  "confidence": "medium (secondhand quote of an unfetched leaderboard)",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The GB10's decode ceiling is bandwidth-bound vs Apple silicon: gpt-oss-20b measured 84.67 tokens/sec on Spark vs 117.32 tokens/sec on MacBook Pro M4 Max (same llama-server command), with the follow-up explanation that M4 Max has double the memory bandwidth while Spark wins prompt processing.",
+  "verbatim_quote": "The result 84.67 tokens/sec ... The result 117.32 tokens/sec ... Well, yes, M4 Max has double memory bandwidth compared to Spark, so inference will be faster. Prompt processing, however, is faster on Spark because of better GPU.",
+  "url": "https://github.com/ggml-org/llama.cpp/discussions/16578",
+  "page_title": "Performance of llama.cpp on NVIDIA DGX Spark #16578 (ggml-org/llama.cpp)",
+  "tier": "community (method shown)",
+  "confidence": "medium",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "A July 2026 DGX Spark roundup attributes 273 GB/s memory bandwidth and gives community-measured decode by model: gpt-oss-120b ~50 tok/s at ~60-65 GB FP4 (fluent), Qwen3 Coder 30B ~44 tok/s, gpt-oss-20b ~68 tok/s, dense 70B only 2.5-5 tok/s; prefill ~1,900 tok/s class; its coding pick is Qwen3 Coder 30B.",
+  "verbatim_quote": "Memory moves at 273 GB/s, and every generated token requires reading all _active_ weights. ... | gpt-oss-120b | MoE, 120B total | ~60\u201365 GB (FP4) | ~50 tok/s | Flagship-quality chat, genuinely fluent | ... | Qwen3 Coder 30B | MoE | ~18\u201320 GB | ~44 tok/s | Strong coding assistant speed | ... | Llama-class dense 70B | Dense | ~40 GB (Q4) / ~70 GB (FP8) | ~2.5\u20135 tok/s | Fits fine; too slow for interactive chat |",
+  "url": "https://sayob.com/blog/which-llms-run-on-dgx-spark/",
+  "page_title": "Which LLMs Actually Run on NVIDIA DGX Spark? Honest Benchmark Numbers (sayob.com)",
+  "tier": "community (vendor blog aggregating community measurements)",
+  "confidence": "medium (aggregated, per-number method not shown)",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Practical headroom and cluster ceiling from the same roundup: plan around ~110-115 GB usable of the 128 GB, and two Sparks pool 256 GB over ConnectX-7 200 Gbps for ~405B-parameter FP4 models.",
+  "verbatim_quote": "In practice, plan around ~110\u2013115 GB of usable headroom ... two Sparks linked over the ConnectX-7 200 Gbps NIC pool 256 GB and handle models up to roughly 405B parameters at FP4 \u2014 Llama 405B-class territory.",
+  "url": "https://sayob.com/blog/which-llms-run-on-dgx-spark/",
+  "page_title": "Which LLMs Actually Run on NVIDIA DGX Spark? Honest Benchmark Numbers (sayob.com)",
+  "tier": "community (vendor blog)",
+  "confidence": "medium",
+  "fetched_via": "web_extract (hermes_tools)",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The DataCamp 9-model coding ranking from the ideas note is real and current: it self-identifies as the September 2026 edition and reviews releases dated September 22, 2026, consistent with 'published this week'; it ranks cloud models first and states the ordering principle explicitly.",
+  "verbatim_quote": "The best cloud frontier models for coding in September 2026 are Claude Opus 5.5, Claude Fable 5.1, GPT-6 Astra, and Gemini 3.8 Flash, and all 4 ship a context window of roughly 1M tokens. ... I list them in the order I would recommend them to a team that can afford any of them.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The claim that the DataCamp roundup 'says nothing about local memory fit' is FALSE: it carries a dedicated 128 GB workstation pick with parameter and quant-size context. The real gap for a 128 GB viewer is different -- the roundup's top-scoring open models are explicitly un-runnable at home, and the memory guidance that exists is scattered across model blurbs rather than a fit guide.",
+  "verbatim_quote": "Best local model for a 128 GB workstation: Laguna S 2.1 (Poolside), 118B parameters with only 8B active, 1M context.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The roundup's strongest open-weight coder is flagged as impossible to run at home, and the cheapest top-tier open model has a checkpoint that dwarfs any 128 GB machine -- so a reader who stops at rank 5-6 buys hardware advice that does not apply to their box.",
+  "verbatim_quote": "Best open weights you cannot run at home: Kimi K3 (Moonshot AI), 2.8 trillion parameters, 88.3% Terminal-Bench 2.1. ... The checkpoint is also about 510 GB, so \"open weights\" here means a multi-GPU server.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The 128 GB memory math the roundups bury in a trade-off paragraph: a 118B MoE at 4-bit needs roughly 60-70 GB for weights alone BEFORE the KV cache -- that is the number that decides what fits on a DGX Spark tonight.",
+  "verbatim_quote": "118B parameters at 4-bit is roughly 60 to 70 GB of weights before you allocate a KV cache, so a 24 GB GPU is out.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "What 'tonight' actually looks like per the roundup's own run-locally recipe: 3 steps -- download a quantized GGUF, serve it with llama.cpp/LM Studio/Ollama, point a client at the OpenAI-compatible endpoint; the llama.cpp one-liner is verbatim on the page.",
+  "verbatim_quote": "Running an open-weight coding model locally takes 3 steps: download a quantized checkpoint, serve it behind an OpenAI-compatible endpoint, and point your client or coding assistant at that endpoint. ... llama-server -m Qwen3.8-27B-UD-Q4_K_M.gguf -c 32768 -ngl 99 --port 8080",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Runtime reality (Ollama docs, 100B+ class): gpt-oss:120b is a 117B-parameter MoE shipped in exactly ONE quantization -- MXFP4 -- as a single 65GB download; you do NOT pick Q4_K_M vs Q8 on this model in Ollama, and the stated guidance is it 'fits on a single 80GB GPU'.",
+  "verbatim_quote": "parameters117B \u00b7 quantizationMXFP4 \u00b7 65GB ... Ollama is supporting the MXFP4 format natively without additional quantizations or conversions. ... quantizing these to MXFP4 enables the smaller model to run on systems with as little as 16GB memory, and the larger model to fit on a single 80GB GPU.",
+  "url": "https://ollama.com/library/gpt-oss:120b",
+  "page_title": "gpt-oss:120b (Ollama library page)",
+  "tier": "docs (primary runtime doc)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The one-command tonight path in Ollama for a 100B+ model, with its download size and adoption stated on the page.",
+  "verbatim_quote": "ollama run gpt-oss:120b ... a951a23b46a1 \u00b7 65GB ... 13.3M Downloads",
+  "url": "https://ollama.com/library/gpt-oss:120b",
+  "page_title": "gpt-oss:120b (Ollama library page)",
+  "tier": "docs (primary runtime doc)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Community reality on the exact target machine (tier 4): a DGX Spark owner runs Qwen3-Next-80B-A3B on vLLM at about 45 tok/s with 115-120 GB of the 128 GB unified memory in use -- i.e., a real 128 GB coding stack consumes nearly all of it once KV cache and helper models are loaded.",
+  "verbatim_quote": "Right now I'm running Qwen3\u2011Next\u201180B\u2011A3B at around 45 tok/s, with 115\u2013120 GB of unified memory in use and roughly 95 % GPU utilization; Qwen3\u2011Embedding\u20110.6B and Qwen3\u2011Reranker\u20110.6B add under 1.5 GB VRAM overhead.",
+  "url": "https://forums.developer.nvidia.com/t/building-local-hybrid-llms-on-dgx-spark-that-outperform-top-cloud-models/359569",
+  "page_title": "Building Local + Hybrid LLMs on DGX Spark That Outperform Top Cloud Models - NVIDIA Developer Forums",
+  "tier": "community (tier 4)",
+  "confidence": "medium",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Community-sourced simpler alternative for coding on the Spark (tier 4): when the owner does not want the full RAG stack, the recommended pure fast chat/code stack is Ollama with a 32B-class model -- evidence that the practical Spark coding sweet spot is not always the biggest 100B+ weights.",
+  "verbatim_quote": "Pure fast chat / code | Ollama + DeepSeek\u2011R1 or Qwen2.5\u201132B | Lower latency, simpler, no reranker overhead.",
+  "url": "https://forums.developer.nvidia.com/t/building-local-hybrid-llms-on-dgx-spark-that-outperform-top-cloud-models/359569",
+  "page_title": "Building Local + Hybrid LLMs on DGX Spark That Outperform Top Cloud Models - NVIDIA Developer Forums",
+  "tier": "community (tier 4)",
+  "confidence": "medium",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "The honest capability gap the roundups do print, and the 128 GB buyer should hear: the best 24 GB-class local model is still ~18 Terminal-Bench points behind the cloud leader, which is the real trade for running locally tonight.",
+  "verbatim_quote": "73.0% versus 91.4% on Terminal-Bench 2.1 is still an 18-point gap, and it shows up as more retries on long agentic tasks.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ },
+ {
+  "claim": "Quant-choice and download-size reality per model class, from the roundup's own entries: the 27B dense pick is a 16.5 GB single GGUF at UD-Q4_K_M; the 80B MoE pick is about 48 GB at Q4_K_M -- both fit a 128 GB machine with room for context; the 118B pick needs 60-70 GB at Q4.",
+  "verbatim_quote": "The community UD-Q4_K_M GGUF from Unsloth is a single 16.5 GB file, which leaves room for a 32K context on a 24 GB card. ... The official Q4_K_M GGUF is about 48 GB, which suits a 64 GB Mac or a CPU-offload setup better than a single consumer GPU.",
+  "url": "https://www.datacamp.com/blog/best-llm-for-coding",
+  "page_title": "Best LLM for Coding in 2026: 9 Models Ranked | DataCamp",
+  "tier": "secondary (vendor-roundup press)",
+  "confidence": "high",
+  "fetched_via": "web_extract",
+  "date": "2026-09-30"
+ }
+]
