@@ -1,0 +1,204 @@
+[
+  {
+    "title": "Ollama 0.35.1 does web search for your local model",
+    "keyword": "ollama web search",
+    "lane": "news-react",
+    "why_now": "v0.35.1-rc0 ships ten web searches per response (15 h ago)",
+    "radar_sources": [
+      "github",
+      "firecrawl"
+    ],
+    "autocomplete": {
+      "depth_score": 22
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "llama.cpp b11279 runs GLM 5.3 Flash on your own box",
+    "keyword": "glm 5.3 flash llama.cpp",
+    "lane": "news-react",
+    "why_now": "b11279 merged GLM5-Next support with smaller compute buffers (0 h ago)",
+    "radar_sources": [
+      "github"
+    ],
+    "autocomplete": {
+      "depth_score": 2
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Manage a rack of DGX Sparks with Fleet",
+    "keyword": "dgx spark fleet",
+    "lane": "how-to",
+    "why_now": "Fleet shipped a DGX Spark manageability guide this week",
+    "radar_sources": [
+      "firecrawl"
+    ],
+    "autocomplete": {
+      "depth_score": 6
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Why a DGX Spark insta-powers-off under load",
+    "keyword": "dgx spark shuts off",
+    "lane": "explainer",
+    "why_now": "new forum thread pins prefill power spikes; driver cap proposed (12 h ago)",
+    "radar_sources": [
+      "firecrawl"
+    ],
+    "autocomplete": {
+      "depth_score": 0
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "DeepSeek and Huawei build their own AI chip tools",
+    "keyword": "deepseek huawei",
+    "lane": "news-react",
+    "why_now": "Reuters partnership announced today (4 h ago)",
+    "radar_sources": [
+      "hn"
+    ],
+    "autocomplete": {
+      "depth_score": 34
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Best local coding LLM: what actually fits 128 GB",
+    "keyword": "best local llm coding",
+    "lane": "comparison",
+    "why_now": "DataCamp ranked 9 models; the fit question is ours to answer",
+    "radar_sources": [
+      "firecrawl",
+      "github"
+    ],
+    "autocomplete": {
+      "depth_score": 10
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Ollama plus a self-hosted automation stack",
+    "keyword": "self hosted llm",
+    "lane": "how-to",
+    "why_now": "self-hosted platform roundup published this week",
+    "radar_sources": [
+      "firecrawl"
+    ],
+    "autocomplete": {
+      "depth_score": 14
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "A local LLM in every browser: the Web Models API",
+    "keyword": "local llm browser",
+    "lane": "explainer",
+    "why_now": "proposal for a native open-weights API surfaced on HN (21 h ago)",
+    "radar_sources": [
+      "hn"
+    ],
+    "autocomplete": {
+      "depth_score": 15
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Reflex Engine vs llama.cpp vs vLLM: cold start to first token",
+    "keyword": "llama.cpp vs vllm",
+    "lane": "comparison",
+    "why_now": "new engine claims it beats both on cold-start TTFT (10 h ago)",
+    "radar_sources": [
+      "hn"
+    ],
+    "autocomplete": {
+      "depth_score": 1
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  },
+  {
+    "title": "Qwen3.8-Flash-Next Coder in GGUF: quantized on day one",
+    "keyword": "qwen coder gguf",
+    "lane": "news-react",
+    "why_now": "ISTA-DASLab shipped GSQ-RCO-Coder GGUF builds (4 d ago, 33k downloads)",
+    "radar_sources": [
+      "hf"
+    ],
+    "autocomplete": {
+      "depth_score": 0
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": true,
+    "nulls": {
+      "competition": "YT_API_KEY not set; competition.py skipped per stage contract",
+      "vidiq": "no vidIQ MCP connector attached to this run"
+    }
+  }
+]
