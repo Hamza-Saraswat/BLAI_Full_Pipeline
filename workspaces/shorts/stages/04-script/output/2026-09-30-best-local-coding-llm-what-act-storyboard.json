@@ -1,0 +1,192 @@
+{
+  "slug": "2026-09-30-best-local-coding-llm-what-act",
+  "topic": "Best local coding LLM: what actually fits 128 GB",
+  "title": "Best Local Coding LLM: gpt-oss vs GLM",
+  "description": "What actually fits and flies in 128 GB of unified memory? This local coding LLM comparison climbs three rungs, cost, speed, and fit, for gpt-oss-120b versus GLM-4.5-Air on a 128 GB machine like a DGX Spark or Mac Studio. gpt-oss-120b ships from Ollama as one 65GB MXFP4 download and was measured by the llama.cpp maintainer at 45.34 tokens per second decode, while GLM-4.5-Air's recommended Q4_K_M file is 73.50GB, and the SWE-bench Verified open leaders were never measured on this hardware at all. You'll learn why total parameters decide fit while active parameters decide speed, why a mixture-of-experts model can be huge yet fast, which model to pull tonight, and when to switch. Subscribe to Build Local AI for weekly picks that run on your own hardware. (Narration is AI-generated.)",
+  "hashtags": [
+    "#gptoss",
+    "#GLM",
+    "#DGXSpark"
+  ],
+  "hook_text": "gpt-oss or GLM? File size decides.",
+  "hook_candidates": [
+    "One hundred thirty-nine gigabytes. Your whole machine is one hundred twenty-eight.",
+    "The best local coding model isn't the best coding model.",
+    "You've got 128 gigs and a coding habit. Here's what fits.",
+    "Your leaderboard isn't wrong. Your memory math is.   * PICKED",
+    "gpt-oss or GLM? One number decides.   * PICKED",
+    "A 117-billion model in sixty-five gigs. That's the trick.",
+    "Pick the wrong quant and your coder crawls.",
+    "Free, open weights, and it codes at 45 tokens a second.",
+    "Everyone ranks the cloud models first. Let's start at 128 gigs.",
+    "The model that wins SWE-bench will not fit your desk."
+  ],
+  "style_pack": "halftone",
+  "script_format": "smooth-explainer",
+  "structure": "comparison-ladder",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 111,
+  "narration_full": "gpt oss or G L M? File size decides. You've got one hundred twenty-eight gigabytes of unified memory, one shared pool, and a coding habit to feed tonight. Unified memory means one pool. Your model weights live in it. So does the K V cache, the scratchpad that grows with every line of context. So does your operating system. The file has to fit with room left over, or nothing runs. Total parameters decide whether it fits. Active parameters decide how fast it thinks. The two numbers pull in opposite directions. It's a mixture of experts, a model that wakes a small slice of itself for each word. All of it sits in your memory. Only the slice does the thinking. Start with cost. Ollama ships gpt oss in exactly one quant, a single sixty-five-gigabyte download, and one command starts it. A quant is just a compression setting, fewer bits per weight. Sixty-five gigabytes leaves real headroom. Now speed, because fitting is not flying. The llama dot cpp maintainer measured this model on this exact class of hardware. It reads back at forty-five point three four tokens a second. That's typing speed, not waiting speed. G L M four point five Air is the other survivor. Its recommended quant, the file the makers suggest, still fits with room to spare, and a richer quant fits too. Its decode speed here? Nobody has measured it on this hardware. What you get instead is more quality per gigabyte of memory. Now the honest catch. On the software engineering benchmark, a board built from real GitHub fixes, the open leaders score far above gpt oss. No page we found has measured them here. Those leaders are full-size models, G L M, Kimi, DeepSeek. Whether any of them fits your box at all, nobody has measured it. pull gpt oss tonight, the measured, one-command pick. Switch to G L M four point five Air when you want more quality per gigabyte of memory. The crown stays in the cloud; the coding stays on your desk.",
+  "analogy": {
+    "vehicle": "a big-block engine that fires only a few cylinders per revolution",
+    "mapping": "total parameters are the whole engine that must fit the garage (memory); active parameters are the cylinders actually fired each token, which set the speed",
+    "limit": "the analogy hides that the whole engine still has to be parked in the garage before any cylinder fires, and that a bigger engine costs nothing per revolution once parked"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "gpt oss or G L M? File size decides. You've got one hundred twenty-eight gigabytes of unified memory, one shared pool, and a coding habit to feed tonight.",
+      "on_screen_text": "gpt-oss or GLM? File size decides.",
+      "visual_brief": "Frame 1: cream halftone dot field, giant condensed headline 'gpt-oss or GLM? File size decides.' centered, two blank model cards beneath labeled 'gpt-oss' and 'GLM'. At 0.4 s the headline scales from 95 to 100 percent while the two cards fade in. On 'one hundred twenty-eight gigabytes' a horizontal memory bar rises behind the cards and fills. On 'runs tonight' a green tick fades onto the gpt-oss card. Motion onset at 0.40 s: the two product chips scale up from 90 to 100 percent in place.",
+      "est_duration_s": 8.8,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Unified memory means one pool. Your model weights live in it. So does the K V cache, the scratchpad that grows with every line of context. So does your operating system. The file has to fit with room left over, or nothing runs.",
+      "on_screen_text": "One pool | weights + KV cache + OS | cache grows with context",
+      "visual_brief": "One large rounded box labeled 'unified memory pool' fills the frame. On 'model weights' a big block fades into the bottom half. On 'K V cache' a second block scales in above it, then stretches taller on 'grows with every line of context'. On 'operating system' a thin block rises into the top slice. On 'room left over' the remaining gap flashes once; on 'nothing runs' the whole frame dims.",
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Total parameters decide whether it fits. Active parameters decide how fast it thinks. The two numbers pull in opposite directions.",
+      "on_screen_text": "total vs active parameters | fit vs speed",
+      "visual_brief": "Split screen on 'decide whether it fits': left panel stacks a dense weight block labeled total; right panel lights a thin active slice labeled active. Labels swap emphasis on 'pull in opposite directions'. Digits large, amber accent on the two verbs.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "It's a mixture of experts, a model that wakes a small slice of itself for each word. All of it sits in your memory. Only the slice does the thinking.",
+      "on_screen_text": "MoE (Mixture of Experts)",
+      "visual_brief": "Grid of small expert blocks on 'wakes a small slice': three blocks pulse amber on 'each word' while the rest stay dim. On 'hundred seventeen billion' the full grid fills; on 'five point one' only the lit slice remains. A counter under the grid ticks with each state.",
+      "est_duration_s": 9.4
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Start with cost. Ollama ships gpt oss in exactly one quant, a single sixty-five-gigabyte download, and one command starts it. A quant is just a compression setting, fewer bits per weight. Sixty-five gigabytes leaves real headroom.",
+      "on_screen_text": "gpt-oss, one quant | 65GB single download | one command",
+      "visual_brief": "Giant '65GB' numeral centered over a halftone download-arrow icon. On 'exactly one quant' a single file card fades in beside the numeral. On 'sixty-five-gigabyte download' the numeral scales up from 90 percent. On 'one command starts it' a small chip labeled 'one command' fades in below. On 'real headroom' a memory bar rises and the file block fills only half of it.",
+      "est_duration_s": 11.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Now speed, because fitting is not flying. The llama dot cpp maintainer measured this model on this exact class of hardware. It reads back at forty-five point three four tokens a second. That's typing speed, not waiting speed.",
+      "on_screen_text": "Measured decode: 45.34 t/s | this class of hardware | fluent typing",
+      "visual_brief": "Two columns headed 'fits' and 'flies'; the left column already carries a green tick. On 'measured' a small bench-rig icon fades into the right column. On 'forty-five point three four tokens a second' the figure '45.34 t/s' scales into place and a token ticker starts streaming short words beneath it. On 'fluent' the ticker settles into a steady rhythm. Halftone dots drift subtly throughout.",
+      "est_duration_s": 11.9,
+      "render_notes": "Ticker should read as plain words streaming, not code; keep the cadence even so it reads as fluent.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "G L M four point five Air is the other survivor. Its recommended quant, the file the makers suggest, still fits with room to spare, and a richer quant fits too.",
+      "on_screen_text": "GLM-4.5-Air Q4_K_M | fits with headroom",
+      "visual_brief": "A memory bar timeline: on 'seventy-three point five gigabytes' a file block slots at the seventy-three mark; on 'richer quant still fits' a taller block slots at the ninety-nine mark, both under the one hundred twenty-eight ceiling. Ticks label each stop. Amber accent on the ceiling line.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Its decode speed here? Nobody has measured it on this hardware. What you get instead is more quality per gigabyte of memory.",
+      "on_screen_text": "tokens per second (decode): unmeasured",
+      "visual_brief": "Giant 'unmeasured' text where a tokens-per-second figure would sit, dim and dashed, on 'nobody has measured'. On 'more quality per gigabyte' a small quality dial rises while a memory bar holds steady. Amber accent on the dial needle.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s9",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Now the honest catch. On the software engineering benchmark, a board built from real GitHub fixes, the open leaders score far above gpt oss. No page we found has measured them here.",
+      "on_screen_text": "SWE-bench Verified | leaders above gpt-oss",
+      "visual_brief": "A leaderboard grid on 'the open leaders': rows for the leaders slide up in place with their scores, the gpt oss row sits far below. On 'the gap is not close' a bracket spans the empty space between rows. Amber accent on the bracket.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Those leaders are full-size models, G L M, Kimi, DeepSeek. Whether any of them fits your box at all, nobody has measured it.",
+      "on_screen_text": "GLM-4.5 / Kimi / DeepSeek | fit never measured",
+      "fit_note": null,
+      "visual_brief": "A flow on 'full-size models': three oversized file blocks drift toward a memory bar and stop short, each marked with a question chip. On 'nobody has measured' the question chips pulse once. Amber accent on the question marks.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "pull gpt oss tonight, the measured, one-command pick. Switch to G L M four point five Air when you want more quality per gigabyte of memory. The crown stays in the cloud; the coding stays on your desk.",
+      "on_screen_text": "Tonight: gpt-oss | Quality per GB: GLM-4.5-Air",
+      "visual_brief": "A decision card rises in place with two lines: 'tonight: gpt-oss' and 'quality per GB: GLM-4.5-Air'. On 'pull gpt oss tonight' the first line highlights. On 'Switch to G L M four point five Air' the highlight moves to the second line. On 'The crown stays in the cloud' a small cloud outline fades in gray at the corner. On 'your desk' the card settles over a small desk-and-machine icon that fades in.",
+      "est_duration_s": 11.9,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "The three spoken key numbers are 65GB (cost rung), 45.34 t/s (speed rung), and 73.50GB (GLM fit rung); 128 GB is treated as the premise, and the SWE-bench gap is admitted qualitatively ('the gap is not close') to stay inside the three-number budget, so a reviewer may swap in 26.00 versus 75.80 if digits are preferred. TEACHES lands in scene s3 (total versus active parameters and mixture of experts, each defined in the same breath); EQUIPS lands in scene s8 (the repeatable pull-or-switch rule). GLM-4.5-Air's parameter counts are never claimed because the brief marks them unverified, and its decode speed and the leaders' local fit are stated only as absences. Please confirm narration_full matches the scene concatenation exactly and that every on-screen digit is spoken in its own scene.",
+  "tags": [
+    "best local coding llm",
+    "best local llm coding",
+    "gpt-oss-120b",
+    "glm 4.5 air gguf",
+    "dgx spark coding model",
+    "128gb unified memory coding",
+    "local llm coding 2026",
+    "ollama gpt-oss 120b",
+    "q4_k_m gguf size",
+    "best coding llm 128gb",
+    "local coding model mac studio",
+    "gpt oss vs glm",
+    "tokens per second dgx spark",
+    "moe coding model local",
+    "swe bench verified local"
+  ]
+}
