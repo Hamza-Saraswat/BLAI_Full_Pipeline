@@ -2,14 +2,14 @@
 slug: 2026-09-30-best-local-coding-llm-what-act
 workspace: shorts
 title: "Best local coding LLM: gpt-oss vs GLM"
-status: building
+status: review
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,TEACHES"
 created: 2026-09-30
-updated: "2026-09-30T12:38:46Z"
+updated: "2026-09-30T13:25:30Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-09-30-best-local-coding-llm-what-act-script]]
 - Package: [[stages/05-package/output/2026-09-30-best-local-coding-llm-what-act-package]]
 - Voice: [[stages/06-voice/output/2026-09-30-best-local-coding-llm-what-act-narration]] (normalized text; audio appended by the Spark)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-09-30-best-local-coding-llm-what-act-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-09-30T12:38:46Z build start on gn100-83c4
 - 2026-09-30T12:45:28Z 06-voice ok 398s
+- 2026-09-30T13:25:34Z 07-render ok 110.90s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 151
+- 2026-09-30T13:25:34Z 07-render ok 2403s
