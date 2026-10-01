@@ -2,14 +2,14 @@
 slug: 2026-09-30-deepseek-and-huawei-build-thei
 workspace: shorts
 title: DeepSeek and Huawei build their own AI chip tools
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-09-30
-updated: "2026-09-30T11:11:14Z"
+updated: "2026-10-01T13:35:51Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-01T13:35:51Z 2026-10-01T13:35:51Z expired: not from today's picks (2026-10-01); the factory carries no backlog
