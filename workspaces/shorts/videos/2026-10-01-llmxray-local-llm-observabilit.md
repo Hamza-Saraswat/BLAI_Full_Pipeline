@@ -2,19 +2,19 @@
 slug: 2026-10-01-llmxray-local-llm-observabilit
 workspace: shorts
 title: "Local LLM observability: llmxray reads Ollama's gauges"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-01
-updated: "2026-10-01T12:47:27Z"
+updated: "2026-10-01T12:52:46Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - 2026-10-01 stage 05: searchable title chosen (search-surface lane, keyword at char 0); description leads keyword+promise, names vLLM 0.29 KV-cache Short as closest watch; rubric 95/100 (only loss: 55-char title vs the 40 ideal, kept to carry both keyword and product in a fresh lane). contains_synthetic_media false (typographic scenes, creator's cloned voice). Ready for the Spark build.
 
 - 2026-10-01 stage 04: draft A (worked-example) beat draft B (myth-bust) 18-17; no grafts. Gates: eval gate1_ready true (number_spend 3/3, hook waived-by-format, scene_specificity ok, skeleton ok, positional_labels ok, sameness ok, validator 0 blockers); 4 advisories kept with reasons in the script note. Ledger recorded; style pack signal.
-
+- 2026-10-01T12:52:46Z build start on gn100-83c4
