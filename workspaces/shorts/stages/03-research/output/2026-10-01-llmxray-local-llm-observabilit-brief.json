@@ -1,0 +1,215 @@
+{
+  "slug": "2026-10-01-llmxray-local-llm-observabilit",
+  "topic": "llmxray: local LLM observability you can install tonight",
+  "generated_at": "2026-10-01T11:43:05Z",
+  "depth": "standard",
+  "thesis": "One command, npx llmxray, gives the Ollama model already on your PC an instrument panel: every token colored by speed, quiet failures badged, and what your prompt's layout costs each turn measured in milliseconds on your own hardware.",
+  "explanation_path": "Start inside the viewer's blind spot: they chat with a local model and see only finished words, so establish the token as the unit of watching -- a model writes one small chunk at a time, and how fast each chunk arrives is information a normal chat window throws away. Once the unit exists, Ollama stops being a mystery download and becomes an engine that already publishes gauges on localhost: token counts, timings, and cache-reuse numbers. LLMxRay is then simply the dashboard that reads those gauges: it starts with one command, it colors each token by how fast it arrived, and it raises a badge only when something is actually wrong (repetition, refusal, gibberish, empty, truncation). The scenario that carries the whole script is the timestamp: a single changing value near the top of a prompt forfeits all KV-cache reuse below it, and Cache Lab measures that cost against the viewer's own daemon -- 64.6 ms of prefill against 18.6 ms for identical words. Land the honesty the channel owes before the close: the confidence coloring is a timing approximation rather than real probabilities (real logprobs appear only in the benchmark path), and Ollama's 0.33.3 metric change means naive prefill math over-reports 38x, which is exactly why seeing the raw numbers beats assuming them.",
+  "claims": [
+    {
+      "claim": "LLMxRay installs and runs with one command, npx llmxray, then serves a local web UI at http://localhost:5174.",
+      "source_url": "https://github.com/LogneBudo/llmxray",
+      "source_title": "GitHub - LogneBudo/llmxray: LLMxRay -- Local LLM Observatory",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "The prerequisite is Ollama running locally with at least one model pulled, for example ollama pull llama3.2.",
+      "source_url": "https://github.com/LogneBudo/llmxray",
+      "source_title": "GitHub - LogneBudo/llmxray: LLMxRay -- Local LLM Observatory",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "In the chat view, tokens arrive one by one colored by generation speed, showing where the model hesitates.",
+      "source_url": "https://github.com/LogneBudo/llmxray",
+      "source_title": "GitHub - LogneBudo/llmxray: LLMxRay -- Local LLM Observatory",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "The chat confidence coloring is an approximation inferred from inter-token latency and labeled as such; real logprobs are used only by the benchmark, via the OpenAI-compatible endpoint.",
+      "source_url": "https://github.com/LogneBudo/llmxray",
+      "source_title": "GitHub - LogneBudo/llmxray: LLMxRay -- Local LLM Observatory",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "Cache Lab, new in 0.6.0, measures KV-cache reuse against your own daemon; on the maintainer's real 324-token prompt, a timestamp at the front left 4 tokens reused and 64.6 ms of prefill, while at the back 290 were reused and 18.6 ms, \"3.5x faster, same words.\"",
+      "source_url": "https://github.com/LogneBudo/llmxray",
+      "source_title": "GitHub - LogneBudo/llmxray: LLMxRay -- Local LLM Observatory",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "Ollama 0.33.3 redefined prompt_eval_duration to cover only uncached prompt tokens, so the standard prefill formula over-reports: the maintainer's own tooling showed 4375 tok/s where the honest figure was 115 tok/s, a 38x over-report.",
+      "source_url": "https://lognebudo.github.io/llmxray/docs/en/articles/ollama-prefill-metrics.html",
+      "source_title": "Ollama 0.33.3 changed what prompt_eval_duration measures | LLMxRay",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "The maintainer posted the project to Hacker News as \"Local LLM Observability\" about 22 hours before this fetch, where it sat at 1 point with no comments.",
+      "source_url": "https://news.ycombinator.com/item?id=49908457",
+      "source_title": "Local LLM Observability | Hacker News",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "The project is older than the fresh attention: the changelog dates the initial 0.1.0 release to 2026-03-14 and Cache Lab's 0.6.0 release to 2026-09-14.",
+      "source_url": "https://github.com/LogneBudo/llmxray/blob/master/CHANGELOG.md",
+      "source_title": "llmxray/CHANGELOG.md at master",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "The mainstream alternative for observing Ollama models, documented by Langfuse, sends traces to Langfuse Cloud or a self-hosted Langfuse server, while LLMxRay's pitch is no cloud, no API keys, everything on localhost.",
+      "source_url": "https://langfuse.com/integrations/model-providers/ollama",
+      "source_title": "Ollama Observability and Tracing for Local LLMs - Langfuse",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    },
+    {
+      "claim": "LLMxRay also ships as an 88.8 MB Docker image, djovaneli/llmxray, serving on port 5174 with OLLAMA_URL defaulting to http://host.docker.internal:11434.",
+      "source_url": "https://hub.docker.com/r/djovaneli/llmxray",
+      "source_title": "djovaneli/llmxray - Docker Image",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-01"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "prefill, timestamp at front of a 324-token prompt",
+      "value": "64.6 ms",
+      "source_url": "https://github.com/LogneBudo/llmxray"
+    },
+    {
+      "label": "prefill, same prompt with timestamp at the back",
+      "value": "18.6 ms",
+      "source_url": "https://github.com/LogneBudo/llmxray"
+    },
+    {
+      "label": "prompt tokens reused, timestamp at front",
+      "value": "4 tokens",
+      "source_url": "https://github.com/LogneBudo/llmxray"
+    },
+    {
+      "label": "prompt tokens reused, timestamp at back",
+      "value": "290 tokens",
+      "source_url": "https://github.com/LogneBudo/llmxray"
+    },
+    {
+      "label": "prefill speedup from moving one timestamp, identical words",
+      "value": "3.5x",
+      "source_url": "https://github.com/LogneBudo/llmxray"
+    },
+    {
+      "label": "prefill throughput by the old formula, warm cache (qwen2.5:7b, 37 of 38 tokens cached)",
+      "value": "4375 tok/s",
+      "source_url": "https://lognebudo.github.io/llmxray/docs/en/articles/ollama-prefill-metrics.html"
+    },
+    {
+      "label": "honest prefill throughput for that same request",
+      "value": "115 tok/s",
+      "source_url": "https://lognebudo.github.io/llmxray/docs/en/articles/ollama-prefill-metrics.html"
+    },
+    {
+      "label": "Ollama's stated developer scale",
+      "value": "8.9 million developers",
+      "source_url": "https://ollama.com/blog"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "the car dashboard and OBD-II scanner",
+      "mapping": "the engine (your Ollama model) already has sensors; the dashboard and a cheap scanner just make them readable. LLMxRay reads numbers Ollama already emits on localhost and turns them into gauges and warning lights.",
+      "limit": "a dashboard can only display what a sensor reports -- it cannot fix the engine, and its confidence gauge is inferred from timing rather than read from a real probability sensor."
+    },
+    {
+      "vehicle": "the X-ray in the project's own name",
+      "mapping": "an X-ray sees through the polished surface of an answer to the structure underneath: tokens, per-token timing, cache reuse.",
+      "limit": "an X-ray shows structure, not intent -- colored tokens show where generation slowed, never why the model chose a word, so the script must not claim it reads the model's mind."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The token colors show the model's real confidence, like a probability meter.",
+      "reality": "Chat coloring approximates confidence from how fast each token arrived, and the app labels it as an approximation; real logprobs appear only in the benchmark path (claim 4)."
+    },
+    {
+      "myth": "Prompt layout is cosmetic -- the model just reads whatever you send, fresh, every turn.",
+      "reality": "KV-cache reuse survives only while the prompt still matches from its very first token, so one changing timestamp near the top forfeits everything below it (claim 5)."
+    },
+    {
+      "myth": "Observing an LLM means piping traces to a cloud dashboard.",
+      "reality": "The documented mainstream path does exactly that (Langfuse Cloud or a self-hosted server), while LLMxRay claims no cloud, no API keys, no cost, all on localhost (claim 9)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "token",
+      "definition": "A chunk of text, usually part of a word, that a language model reads and writes one at a time."
+    },
+    {
+      "term": "tokens per second",
+      "definition": "How many of those chunks the model produces each second on your hardware -- the local speedometer."
+    },
+    {
+      "term": "Ollama",
+      "definition": "A free app that downloads and runs language models on your own machine and serves them on a local address, localhost:11434."
+    },
+    {
+      "term": "observability",
+      "definition": "Tooling that shows what a system is doing while it runs, not just what it finally outputs."
+    },
+    {
+      "term": "prefill",
+      "definition": "The work a model does reading your prompt before it writes the first token of its answer."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The model's saved memory of having read your prompt; it can be reused only while the prompt still matches from its very first token."
+    },
+    {
+      "term": "logprobs",
+      "definition": "The actual numeric probabilities a model assigns to each candidate token -- the honest version of a confidence score."
+    },
+    {
+      "term": "npx",
+      "definition": "A command bundled with Node.js that downloads and runs a package once, without a permanent install."
+    },
+    {
+      "term": "time to first token (TTFT)",
+      "definition": "How long you wait after sending a prompt before the first token appears."
+    }
+  ],
+  "unverified": [
+    "How many tokens per second the viewer's own GPU or Mac will actually show; nothing was measured on our hardware this run.",
+    "That npx llmxray really finishes in 30 seconds on a typical machine; that is the README's claim, not a timed install.",
+    "That the Docker image djovaneli/llmxray runs on Apple Silicon; the Docker Hub page fetched lists no CPU architectures.",
+    "Community reception of the tool beyond the author's own posts; Reddit threads would not load through the fetch tool, so no sentiment was read."
+  ],
+  "suggested_outline": "Hook on the hidden cost: the same 324-token prompt, one timestamp moved, 4 reused tokens become 290 and 64.6 ms of prefill becomes 18.6 ms -- 3.5x faster, same words, and no normal chat window ever shows you this.\nName the blind spot and the instrument: your Ollama model already reports what it is doing on localhost, and llmxray is the free panel that reads it -- one command, npx llmxray, tokens arriving colored by speed, badges only when something is wrong.\nHonest catch and payoff: the colors are a speed-based approximation, not real probabilities, and Ollama's own metric change quietly inflated naive prefill math to 4375 tok/s where the truth was 115 tok/s -- and still, the whole rig runs on your box, no cloud, no API keys, installed tonight.",
+  "notes": "Why-now conflict: the pick says llmxray was open-sourced about 22 h ago, but the changelog dates the first release to 2026-03-14 and npm shows 0.6.0 published 17 days before this fetch; what is about 22 h old is the author's HN post Local LLM Observability (2026-09-30 13:11 UTC per HN's search API). The script should say just posted to Hacker News, never released yesterday. HN traction at fetch time was 1 point and 0 comments, so being discussed on Hacker News is thin; an earlier Show HN for the same project exists from 2026-03-18, also at 1 point. Version conflict: the GitHub README says tested against Ollama 0.34.x (verified on 0.34.0, September 2026); the npm README snapshot still says 0.33.x (verified on 0.33.3). Trust the GitHub README as the newer statement; either way Cache Lab needs Ollama 0.33.3+. The 3.5x figure is the maintainer's own illustration: his Limits section says one model, one daemon, one prompt size, llama.cpp runner, and that the specific ratio is an illustration, not a benchmark; quote it only with that hedge. The maintainer states the whole prefill finding is reproducible without his tool: two curl calls and prompt_eval_cached_count reproduce every table here -- useful for the objection beat. The Reddit r/ollama thread How I handle LLM observability and evals with Ollama could not be fetched (scraper blocked), so it is a lead, not a source.",
+  "viewer_situation": "You already run Ollama with a small model like llama3.2 on your own gaming PC or Mac, you chat with it in a plain window, and you have never seen a single number about what it is doing underneath.",
+  "has_process": true,
+  "process_steps": [
+    "Install Ollama from ollama.com and pull a model with ollama pull llama3.2.",
+    "Check that Node.js 18 or newer is installed (needed for the npx route).",
+    "Run npx llmxray in a terminal (or docker run -p 5174:5174 djovaneli/llmxray).",
+    "Open http://localhost:5174 in a browser and confirm the header shows Connected.",
+    "Send a chat message and watch tokens arrive colored by generation speed.",
+    "Open Cache Lab, measure a prompt that has a changing value near the top, and read the reuse numbers on your own daemon."
+  ],
+  "objection": "Anyone can read these numbers straight from Ollama's API with two curl calls, and the token confidence is just latency re-labeled, so this is a convenience UI, not new instrumentation."
+}
