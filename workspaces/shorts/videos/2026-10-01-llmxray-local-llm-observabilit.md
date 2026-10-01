@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-01-llmxray-local-llm-observabilit-brief|Brief]]
 - Script: [[stages/04-script/output/2026-10-01-llmxray-local-llm-observabilit-script|Script]]
 - Package: [[stages/05-package/output/2026-10-01-llmxray-local-llm-observabilit-package|Package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-01-llmxray-local-llm-observabilit-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -43,3 +43,4 @@ blotato_post_id: ""
 
 - 2026-10-01 stage 04: draft A (worked-example) beat draft B (myth-bust) 18-17; no grafts. Gates: eval gate1_ready true (number_spend 3/3, hook waived-by-format, scene_specificity ok, skeleton ok, positional_labels ok, sameness ok, validator 0 blockers); 4 advisories kept with reasons in the script note. Ledger recorded; style pack signal.
 - 2026-10-01T12:52:46Z build start on gn100-83c4
+- 2026-10-01T12:55:18Z 06-voice ok 150s
