@@ -2,18 +2,19 @@
 slug: 2026-10-01-llmxray-local-llm-observabilit
 workspace: shorts
 title: "Local LLM observability: llmxray reads Ollama's gauges"
-status: building
+status: blocked
 pillar: how-to
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-01
-updated: "2026-10-01T12:52:46Z"
+updated: "2026-10-01T13:26:27Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
-blocked_reason: ""
+blocked_reason: "\"07-render: 07-render: assemble.py exited 1: xray-local-llm-observabilit/render/qa"
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-01-llmxray-local-llm-observabilit/render/qa/safe-z\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -44,3 +45,7 @@ blotato_post_id: ""
 - 2026-10-01 stage 04: draft A (worked-example) beat draft B (myth-bust) 18-17; no grafts. Gates: eval gate1_ready true (number_spend 3/3, hook waived-by-format, scene_specificity ok, skeleton ok, positional_labels ok, sameness ok, validator 0 blockers); 4 advisories kept with reasons in the script note. Ledger recorded; style pack signal.
 - 2026-10-01T12:52:46Z build start on gn100-83c4
 - 2026-10-01T12:55:18Z 06-voice ok 150s
+- 2026-10-01T13:20:28Z 07-render fail 1508s (07-render: scene s9 did not pass safe_zone_check after 5 rounds)
+- 2026-10-01T13:26:27Z 07-render fail 359s (07-render: assemble.py exited 1: xray-local-llm-observabilit/render/qa
+assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/loop_)
+- 2026-10-01T13:26:27Z blocked at 07-render
