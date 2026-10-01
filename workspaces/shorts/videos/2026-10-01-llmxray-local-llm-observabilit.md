@@ -2,19 +2,19 @@
 slug: 2026-10-01-llmxray-local-llm-observabilit
 workspace: shorts
 title: "Local LLM observability: llmxray reads Ollama's gauges"
-status: blocked
+status: ready-to-build
 pillar: how-to
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-01
-updated: "2026-10-01T13:26:27Z"
+updated: "2026-10-01T15:40:59Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
-blocked_reason: "\"07-render: 07-render: assemble.py exited 1: xray-local-llm-observabilit/render/qa"
-assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-01-llmxray-local-llm-observabilit/render/qa/safe-z\""
+blocked_reason: ""
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-01-llmxray-local-llm-observabilit/render/qa/safe-z\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-01T13:26:27Z 07-render fail 359s (07-render: assemble.py exited 1: xray-local-llm-observabilit/render/qa
 assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/loop_)
 - 2026-10-01T13:26:27Z blocked at 07-render
+- 2026-10-01T15:40:59Z telegram retry
