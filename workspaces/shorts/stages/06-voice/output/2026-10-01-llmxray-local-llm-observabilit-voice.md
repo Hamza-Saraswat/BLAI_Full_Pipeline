@@ -1,6 +1,6 @@
 # Voice: 2026-10-01-llmxray-local-llm-observabilit
 
-Stage 06-voice on gn100-83c4 at 2026-10-01T12:55:18Z. Audio lives in `$BLAI_BUILD_DIR/2026-10-01-llmxray-local-llm-observabilit/voice/` (binaries are never committed).
+Stage 06-voice on gn100-83c4 at 2026-10-01T15:44:03Z. Audio lives in `$BLAI_BUILD_DIR/2026-10-01-llmxray-local-llm-observabilit/voice/` (binaries are never committed).
 
 | Field | Value |
 |-------|-------|

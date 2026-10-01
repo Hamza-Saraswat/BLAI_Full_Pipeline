@@ -14,7 +14,7 @@ publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-01-llmxray-local-llm-observabilit/render/qa/safe-z\\\\\""
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-01-llmxray-local-llm-observabilit/render/qa/safe-z\\\\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -51,3 +51,4 @@ assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scri
 - 2026-10-01T13:26:27Z blocked at 07-render
 - 2026-10-01T15:40:59Z telegram retry
 - 2026-10-01T15:43:46Z build start on gn100-83c4
+- 2026-10-01T15:44:03Z 06-voice ok 15s
