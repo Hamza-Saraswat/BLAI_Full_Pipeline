@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Picked as rank 2 (classic, news-react, opportunity 95.8): day's top score; news-react repeats yesterday's lane under the exception's intent (all above-60 fresh-lane candidates share one lane).
+- PROVES withheld: listing shows no street price; the price is the thing to measure at research.
 
 ## Build journal
 

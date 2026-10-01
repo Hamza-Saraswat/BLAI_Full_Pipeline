@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Picked as rank 1 (smooth-explainer, how-to, opportunity 68.4): strongest fresh-lane candidate; token-level observability for local models is unclaimed search ground (depth 15).
+- Format smooth-explainer despite a two-day run: only two bands exist, fit wins per selection-rules.md; documented in the ideas note.
 
 ## Build journal
 
