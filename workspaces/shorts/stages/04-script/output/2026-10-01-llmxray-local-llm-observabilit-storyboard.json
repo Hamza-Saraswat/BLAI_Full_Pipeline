@@ -1,0 +1,164 @@
+{
+  "slug": "2026-10-01-llmxray-local-llm-observabilit",
+  "topic": "llmxray: local LLM observability you can install tonight",
+  "title": "Local LLM Observability: llmxray Reads the Gauges Ollama Publishes",
+  "description": "Local LLM observability for the Ollama model already running on your PC. One free command, npx llmxray, opens a localhost dashboard that colors every token by generation speed, badges quiet failures, and measures what your prompt layout costs your KV cache. You'll learn how one timestamp at the top of a prompt can drop cache reuse from 290 tokens to 4, why the maintainer's 3.5x faster prefill is an illustration rather than a benchmark, and how Cache Lab runs the same measurement against your own daemon tonight. (Narration is AI-generated.)",
+  "hashtags": [
+    "#llmxray",
+    "#Ollama",
+    "#LocalLLM",
+    "#LLM",
+    "#AIobservability",
+    "#KVcache",
+    "#promptengineering",
+    "#selfhosted",
+    "#llamacpp",
+    "#NodeJS"
+  ],
+  "hook_text": "Gauges you've never opened",
+  "hook_candidates": [
+    "You run Ollama every day. You've never seen one number about it.",
+    "Your Ollama model isn't slow. Your prompt layout is.",
+    "Three and a half times faster. Same words, one timestamp moved.",
+    "One command turns your local model's hidden numbers into gauges.",
+    "Free, no cloud, no keys: an instrument panel for your local model.",
+    "That timestamp at the top of your prompt is costing you every turn.",
+    "Four tokens reused, or two hundred ninety. Same prompt.",
+    "Your chat window throws away the most interesting number in the room.",
+    "Ollama already publishes gauges on localhost. You've never opened them.",
+    "Watch your model think, token by token, tonight."
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "worked-example",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 114,
+  "narration_full": "Ollama already publishes gauges on localhost. You've never opened them. You chat with your local model and see only finished words. Underneath, your model writes one token at a time. A token is a small chunk of text it reads and writes piece by piece. How fast each chunk arrives is information. A plain chat window throws all of it away. Now those gauges get a face. A free tool called llmxray, just posted to Hacker News, works like a dashboard for that engine. It needs Ollama running, plus Node.js eighteen or newer. One command, npx llmxray, then a page at localhost, port fifty-one seventy-four. Each token arrives colored by how fast it showed up. That color is a timing approximation, not real probability, and the app says so. A dashboard only displays what sensors report. Badges appear only when something is wrong: repetition, refusal, gibberish, a truncated reply. Now for the cost you never saw. Your chat app resends the same prompt every turn. The maintainer's test prompt was three hundred twenty-four tokens, with a live timestamp near the top. That timestamp changes every turn. That small change is expensive. Now the state flips. The model keeps a saved memory of having read your prompt, the KV cache. It can reuse that memory only while the prompt still matches. Cache Lab, the tool's measurement mode, counted what survived the moving timestamp: four tokens reused. Why so brutal? The cache holds only while the prompt matches from its very first token. One changed value near the top makes a stranger of everything below it. So each turn, the model re-reads nearly the whole prompt before writing. That reading work is called prefill. Now move the timestamp to the back of the same prompt. The words are identical, the order barely changed. But the top of the prompt finally matches turn after turn, so the cache holds. Cache Lab counted two hundred ninety tokens reused. The same words ran three point five times faster, just by moving one timestamp. That's the maintainer's own illustration on one prompt, not a benchmark. But Cache Lab runs against your own daemon, so you can measure your own prompts tonight.",
+  "analogy": {
+    "vehicle": "a car dashboard reading an engine's existing sensors",
+    "mapping": "Ollama is the engine, already emitting readings on localhost; llmxray is the dashboard that turns those existing readings into colored tokens, gauges, and warning badges",
+    "limit": "a dashboard can only display what its sensors report; it cannot fix the engine, and the token color is inferred from timing, not read from a real probability sensor"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Ollama already publishes gauges on localhost. You've never opened them. You chat with your local model and see only finished words.",
+      "on_screen_text": "Gauges you've never opened",
+      "visual_brief": "Frame 1: dark charcoal background, hook text \"Gauges you've never opened\" centered in large amber type, fully legible immediately; a faint circular gauge outline sits behind the text at low opacity. At 0.35 s the gauge outline scales up slightly and its needle ticks once. On \"You chat with your local model\" a plain chat bubble fades in below the text; on \"finished words\" two grey text lines rise-in-place inside the bubble while the gauge stays dark. At most two elements animating at once.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Underneath, your model writes one token at a time. A token is a small chunk of text it reads and writes piece by piece. How fast each chunk arrives is information. A plain chat window throws all of it away.",
+      "on_screen_text": "one token at a time | arrival speed is information",
+      "visual_brief": "On \"one token at a time\", rounded token chips fade in one by one along a centered horizontal line, each holding a short word fragment. On \"How fast each chunk arrives is information\", a thin amber timing bar fades in beneath each chip, lengths varying per chip. On \"throws all of it away\", the chips and bars fade out together, leaving one plain grey sentence inside a simple chat window mock. Entrances are fade only, at most two elements animating at once, dark background.",
+      "est_duration_s": 12.5,
+      "render_notes": "Manim: use lagged FadeIn for the chip row; no translations from off-screen."
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Now those gauges get a face. A free tool called llmxray, just posted to Hacker News, works like a dashboard for that engine. It needs Ollama running, plus Node.js eighteen or newer. One command, npx llmxray, then a page at localhost, port fifty-one seventy-four.",
+      "on_screen_text": "npx llmxray | localhost:5174 | needs Node.js 18+",
+      "visual_brief": "Split frame: left holds a dark engine block labeled Ollama with small glowing sensor dots; right starts empty. On \"works like a dashboard for that engine\", a dashboard card scales in on the right with two gauge arcs and a token strip. On \"npx llmxray\", a terminal panel fades in at lower left and the command types out character by character. On \"port fifty-one seventy-four\", a browser chrome bar fades in showing localhost:5174. Sensor dots stay static while the terminal types; entrances are fade or scale only.",
+      "est_duration_s": 13.8,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Each token arrives colored by how fast it showed up. That color is a timing approximation, not real probability, and the app says so. A dashboard only displays what sensors report. Badges appear only when something is wrong: repetition, refusal, gibberish, a truncated reply.",
+      "on_screen_text": "colored by arrival speed | labeled approximation | badges when wrong",
+      "visual_brief": "A grid of token chips fills the safe area on a dark background, chips tinted from green to amber. On \"colored by how fast it showed up\", the chip tints ripple in place with no position motion. On \"the app says so\", a small tag reading approximation fades in at the grid's top corner. On \"A dashboard only displays what sensors report\", the grid dims slightly while the tag brightens. On \"Badges appear\", four badge chips labeled repetition, refusal, gibberish, truncated rise-in-place along the bottom row, staggered. Amber is the only accent.",
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s5",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Now for the cost you never saw. Your chat app resends the same prompt every turn. The maintainer's test prompt was three hundred twenty-four tokens, with a live timestamp near the top. That timestamp changes every turn. That small change is expensive.",
+      "on_screen_text": "same prompt every turn | 324 tokens | timestamp changes every turn",
+      "visual_brief": "A horizontal timeline of repeated prompt stacks, each a small column of text blocks topped by a clock chip. On \"resends the same prompt every turn\", the stacks fade in one after another left to right. On \"three hundred twenty-four tokens\", a chip reading 324 tokens scales in beside the first stack. On \"timestamp changes every turn\", each clock chip flickers to a new time in place. On \"expensive\", every block below each clock chip tints amber across the whole row. Entrances are fade or scale, two motions maximum.",
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s6",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Now the state flips. The model keeps a saved memory of having read your prompt, the KV cache. It can reuse that memory only while the prompt still matches. Cache Lab, the tool's measurement mode, counted what survived the moving timestamp: four tokens reused.",
+      "on_screen_text": "KV cache: saved prompt memory | 4 tokens reused",
+      "visual_brief": "A wide slab labeled KV cache fades in center frame, filled with prompt-block segments. On \"only while the prompt still matches\", the slab dims until only a thin sliver near its top stays lit. On \"four tokens reused\", a giant amber numeral 4 scales in over the slab with the caption tokens reused rising-in-place beneath it; the dimmed slab stays visible behind at low opacity. Dark background, single amber accent, no edge slides.",
+      "est_duration_s": 13.8,
+      "render_notes": "Giant numeral at least 400 px tall; keep it inside the 900x1160 safe area.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Why so brutal? The cache holds only while the prompt matches from its very first token. One changed value near the top makes a stranger of everything below it. So each turn, the model re-reads nearly the whole prompt before writing. That reading work is called prefill.",
+      "on_screen_text": "match must start at the top | below the change: re-read | that re-reading is prefill",
+      "visual_brief": "A vertical stack of prompt blocks with a clock chip at the very top. On \"matches from its very first token\", a highlight line traces downward from the top block and stops at the clock chip. On \"makes a stranger of everything below it\", every block under the chip fades to grey. On \"re-reads nearly the whole prompt\", a curved arrow fades in, looping over the grey blocks. On \"called prefill\", the label prefill rises-in-place beside the arrow. Fade and rise entrances only, two elements animating at most.",
+      "est_duration_s": 14.4,
+      "render_notes": "Manim: reuse the same block geometry as s2's chips so the prompt reads as built of tokens."
+    },
+    {
+      "id": "s8",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Now move the timestamp to the back of the same prompt. The words are identical, the order barely changed. But the top of the prompt finally matches turn after turn, so the cache holds. Cache Lab counted two hundred ninety tokens reused.",
+      "on_screen_text": "timestamp moves to the back | 290 tokens reused",
+      "visual_brief": "The prompt stack from the previous scene holds on screen. On \"move the timestamp to the back\", the clock chip fades out at the top and fades in at the bottom of the stack, never sliding. On \"the cache holds\", every block brightens to a steady glow. On \"two hundred ninety tokens reused\", a giant amber 290 scales in with the caption tokens reused beneath it, while the glowing stack scales down slightly to the side. Two motions maximum at once, dark background.",
+      "est_duration_s": 13.1,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The same words ran three point five times faster, just by moving one timestamp. That's the maintainer's own illustration on one prompt, not a benchmark. But Cache Lab runs against your own daemon, so you can measure your own prompts tonight.",
+      "on_screen_text": "3.5x faster, same words | illustration, not benchmark | measured on your own daemon",
+      "visual_brief": "Centered payoff stack on a dark background. On \"three point five times faster\", the text 3.5x faster scales in large in amber with same words rising-in-place beneath it. On \"an illustration, not a benchmark\", that hedge fades in as a small sub-line. On \"measure your own prompts tonight\", a small Cache Lab card fades in near the bottom of the safe area. Final half second: the llmxray wordmark settles center with a gentle scale, rhyming with the centered amber text of frame 1.",
+      "est_duration_s": 12.8,
+      "render_notes": "Hold the last 8 frames static after the wordmark settles.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Check the voice read of \"port fifty-one seventy-four\" against the on-screen localhost:5174 so the spoken number and the shown URL agree. Confirm that speaking Node.js \"eighteen\" is acceptable next to the three assigned key numbers; it is a guardrail-mandated prerequisite, not a metric, but a strict number counter may flag it. Verify the 3.5x hedge lands exactly once and that no banned figures (64.6, 18.6, 4375, 115, 8.9 million) appear in narration or on-screen text."
+}

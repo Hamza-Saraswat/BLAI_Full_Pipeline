@@ -2,14 +2,14 @@
 slug: 2026-10-01-llmxray-local-llm-observabilit
 workspace: shorts
 title: "llmxray: local LLM observability you can install tonight"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: worked-example
 format: smooth-explainer
-style_pack: ""
+style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-01
-updated: "2026-10-01T11:51:47Z"
+updated: "2026-10-01T12:45:25Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-01-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-01-ideas]]
 - Research: [[stages/03-research/output/2026-10-01-llmxray-local-llm-observabilit-brief|Brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-01-llmxray-local-llm-observabilit-script|Script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,4 +38,6 @@ blotato_post_id: ""
 - Format smooth-explainer despite a two-day run: only two bands exist, fit wins per selection-rules.md; documented in the ideas note.
 
 ## Build journal
+
+- 2026-10-01 stage 04: draft A (worked-example) beat draft B (myth-bust) 18-17; no grafts. Gates: eval gate1_ready true (number_spend 3/3, hook waived-by-format, scene_specificity ok, skeleton ok, positional_labels ok, sameness ok, validator 0 blockers); 4 advisories kept with reasons in the script note. Ledger recorded; style pack signal.
 

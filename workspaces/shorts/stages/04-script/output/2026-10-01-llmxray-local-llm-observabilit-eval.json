@@ -1,0 +1,529 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-01T12:43:53+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-01-llmxray-local-llm-observabilit-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-01-llmxray-local-llm-observabilit-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "community": 1,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 12,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "docker.com",
+      "github.com",
+      "github.io",
+      "langfuse.com",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "prefill, timestamp at front of a 324-token prompt",
+          "value": "64.6 ms",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "prefill, same prompt with timestamp at the back",
+          "value": "18.6 ms",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "prompt tokens reused, timestamp at front",
+          "value": "4 tokens",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "4",
+          "scene_ids": [
+            "s5",
+            "s6"
+          ]
+        },
+        {
+          "label": "prompt tokens reused, timestamp at back",
+          "value": "290 tokens",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "290",
+          "scene_ids": [
+            "s8"
+          ]
+        },
+        {
+          "label": "prefill speedup from moving one timestamp, identical words",
+          "value": "3.5x",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three point five",
+          "scene_ids": [
+            "s6",
+            "s9"
+          ]
+        },
+        {
+          "label": "prefill throughput by the old formula, warm cache (qwen2.5:7b, 37 of 38 tokens cached)",
+          "value": "4375 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "honest prefill throughput for that same request",
+          "value": "115 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama's stated developer scale",
+          "value": "8.9 million developers",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 12,
+      "found_count": 5,
+      "score": 0.417,
+      "found": [
+        "LLMxRay",
+        "Ollama",
+        "Cache Lab",
+        "localhost:5174",
+        "Hacker News"
+      ],
+      "missing": [
+        "MB Docker",
+        "llama3.2",
+        "OpenAI-compatible",
+        "host.docker.internal:11434",
+        "Langfuse",
+        "Langfuse Cloud",
+        "Cache Lab 0.6"
+      ],
+      "top2": [
+        "LLMxRay",
+        "Ollama"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "LLMxRay",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Cache Lab",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "MB Docker",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "localhost:5174",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "llama3.2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "host.docker.internal:11434",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Langfuse",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Langfuse Cloud",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hacker News",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Cache Lab 0.6",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 36,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Ollama"
+      ],
+      "hook_text": "Gauges you've never opened",
+      "first_sentence": "Ollama already publishes gauges on localhost."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 9,
+      "specific_count": 9,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Ollama already publishes gauges on localhost. You've never opened them. You chat with your local model and see only finished words."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 12.5,
+          "specific": true,
+          "hits": [
+            "glossary:token"
+          ],
+          "narration": "Underneath, your model writes one token at a time. A token is a small chunk of text it reads and writes piece by piece. How fast each chunk arrives is information. A plain chat window throws all of it away."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "entity:LLMxRay",
+            "entity:Ollama",
+            "entity:localhost:5174",
+            "entity:Hacker News"
+          ],
+          "narration": "Now those gauges get a face. A free tool called llmxray, just posted to Hacker News, works like a dashboard for that engine. It needs Ollama running, plus Node.js eighteen or newer. One command, npx llmxray, then a page at localhost, port fifty-one seventy-four."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 13.4,
+          "specific": true,
+          "hits": [
+            "glossary:token"
+          ],
+          "narration": "Each token arrives colored by how fast it showed up. That color is a timing approximation, not real probability, and the app says so. A dashboard only displays what sensors report. Badges appear only when something is wrong: repetition, refusal, gibberish, a truncated reply."
+        },
+        {
+          "id": "s5",
+          "role": "foreshadow",
+          "est_duration_s": 13.4,
+          "specific": true,
+          "hits": [
+            "num:4 tokens"
+          ],
+          "narration": "Now for the cost you never saw. Your chat app resends the same prompt every turn. The maintainer's test prompt was three hundred twenty-four tokens, with a live timestamp near the top. That timestamp changes every turn. That small change is expensive."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "num:4 tokens",
+            "num:3.5x",
+            "entity:Cache Lab"
+          ],
+          "narration": "Now the state flips. The model keeps a saved memory of having read your prompt, the KV cache. It can reuse that memory only while the prompt still matches. Cache Lab, the tool's measurement mode, counted what survived the moving timestamp: four tokens reused."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 14.4,
+          "specific": true,
+          "hits": [
+            "glossary:token",
+            "glossary:prefill"
+          ],
+          "narration": "Why so brutal? The cache holds only while the prompt matches from its very first token. One changed value near the top makes a stranger of everything below it. So each turn, the model re-reads nearly the whole prompt before writing. That reading work is called prefill."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 13.1,
+          "specific": true,
+          "hits": [
+            "num:290 tokens",
+            "entity:Cache Lab"
+          ],
+          "narration": "Now move the timestamp to the back of the same prompt. The words are identical, the order barely changed. But the top of the prompt finally matches turn after turn, so the cache holds. Cache Lab counted two hundred ninety tokens reused."
+        },
+        {
+          "id": "s9",
+          "role": "payoff_close",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "num:3.5x",
+            "entity:Cache Lab"
+          ],
+          "narration": "The same words ran three point five times faster, just by moving one timestamp. That's the maintainer's own illustration on one prompt, not a benchmark. But Cache Lab runs against your own daemon, so you can measure your own prompts tonight."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.9,
+      "words": 370,
+      "sentences": 36,
+      "est_speech_s": 127.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "Ollama already publishes gauges on localhost. You've never opened them. You chat with your local model and see only finished words. Underneath, your model writes one token at a time. A token is a small chunk of text it reads and writes piece by piece. How fast each chunk arrives is information. A plain chat window throws all of it away. Now those gauges get a face. A free tool called llmxray, just posted to Hacker News, works like a dashboard for that engine. It needs Ollama running, plus Node.js eighteen or newer. One command, npx llmxray, then a page at localhost, port fifty-one seventy-four. Each token arrives colored by how fast it showed up. That color is a timing approximation, not real probability, and the app says so. A dashboard only displays what sensors report. Badges appear only when something is wrong: repetition, refusal, gibberish, a truncated reply. Now for the cost you never saw. Your chat app resends the same prompt every turn. The maintainer's test prompt was three hundred twenty-four tokens, with a live timestamp near the top. That timestamp changes every turn. That small change is expensive. Now the state flips. The model keeps a saved memory of having read your prompt, the KV cache. It can reuse that memory only while the prompt still matches. Cache Lab, the tool's measurement mode, counted what survived the moving timestamp: four tokens reused. Why so brutal? The cache holds only while the prompt matches from its very first token. One changed value near the top makes a stranger of everything below it. So each turn, the model re-reads nearly the whole prompt before writing. That reading work is called prefill. Now move the timestamp to the back of the same prompt. The words are identical, the order barely changed. But the top of the prompt finally matches turn after turn, so the cache holds. Cache Lab counted two hundred ninety tokens reused. The same words ran three point five times faster, just by moving one timestamp. That's the maintainer's own illustration on one prompt, not a benchmark. But Cache Lab runs against your own daemon, so you can measure your own prompts tonight.",
+    "on_screen": "Gauges you've never opened | Gauges you've never opened | one token at a time | arrival speed is information | npx llmxray | localhost:5174 | needs Node.js 18+ | colored by arrival speed | labeled approximation | badges when wrong | same prompt every turn | 324 tokens | timestamp changes every turn | KV cache: saved prompt memory | 4 tokens reused | match must start at the top | below the change: re-read | that re-reading is prefill | timestamp moves to the back | 290 tokens reused | 3.5x faster, same words | illustration, not benchmark | measured on your own daemon"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-01-llmxray-local-llm-observabilit-storyboard.json",
+        "scenes": 9,
+        "fk_grade": 5.9,
+        "words": 370,
+        "est_speech_s": 127.6,
+        "blockers": [],
+        "advisories": [
+          "10 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s3: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s7: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "violations": [
+          "10 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s3: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s7: narration ~48 words (~17s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "warnings": [
+          "title 66 chars \u2014 mobile truncates ~40",
+          "FK grade 5.9 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s6: 'KV' will be spoken via skills/script-gates/tts_lexicon.json",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-01-llmxray-local-llm-observabilit-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.417,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "LLMxRay",
+          "Ollama"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Ollama"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 9,
+        "need": 7,
+        "total": 9
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
