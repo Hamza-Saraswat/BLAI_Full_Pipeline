@@ -1,0 +1,121 @@
+{
+  "slug": "2026-10-02-llama-cpp-shipped-three-builds",
+  "topic": "llama.cpp's ten-build morning and why your pinned tag is the whole game",
+  "title": "llama.cpp moved ten builds today",
+  "description": "On 02 Oct 2026 llama.cpp pushed ten nightly builds in one morning, three of them inside four hours and twenty-five minutes. Why your old binary rejects new GGUFs, what a pinned tag actually pins, and what to run tonight.",
+  "hashtags": [
+    "#llamacpp",
+    "#localai",
+    "#localLLaMA"
+  ],
+  "hook_text": "Rebuild tonight: ten tagged builds this morning",
+  "hook_candidates": [
+    "Rebuild tonight: ten llama.cpp builds this morning.",
+    "Re-pin tonight: ten llama.cpp builds shipped this morning.",
+    "Ten builds by breakfast, and your checkout is stale.",
+    "Your GGUF errors are one rebuild from gone tonight.",
+    "One tag tonight makes your llama.cpp reproducible.",
+    "Ten builds this morning; yours is months old.",
+    "Ten llama.cpp builds before lunch. Re-pin tonight.",
+    "llama.cpp has no stable release. Just nightlies.",
+    "You cloned llama.cpp once. It's been quietly rotting.",
+    "A maintainer dated your recent build to January."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": [
+    "TEACHES",
+    "EQUIPS"
+  ],
+  "target_duration_s": 42,
+  "narration_full": "Rebuild tonight: ten tagged builds this morning. You built llama.cpp from source once and never updated. A release bot tagged ten builds before breakfast. Three landed within four hours and twenty-five minutes. Those b numbers are documented nightlies, automated development builds. The seven forty-two bus you board again tomorrow. Two builds can differ, not just schedules. Your old binary rejects new GGUF files, single-file model containers. The file is fine. The binary predates the architecture. The catch: a pinned commit pins code, not compiler or GPU flags. Builds target the hardware they see. Tonight, read the build line, fetch the tags, check out one exact nightly, rebuild. The GGUF that failed loads, and your setup is only as reproducible as the tag you write down.",
+  "analogy": {
+    "vehicle": "the named bus departure",
+    "mapping": "a b-tag is the 7:42 bus you can board again tomorrow",
+    "limit": "two builds can differ in behavior, not just schedule"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Rebuild tonight: ten tagged builds this morning.",
+      "on_screen_text": "rebuild tonight: 10 builds",
+      "visual_brief": "Frame 1 is a finished terminal composition: dark ground, sharp corners, a typed prompt with amber cursor; the cursor blinks within 0.5 s (motion onset t=0.30 s, frame 9). On 'ten tagged builds' the counter '10' stamps beside the prompt.",
+      "est_duration_s": 2.4
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "You built llama.cpp from source once and never updated. A release bot tagged ten builds before breakfast. Three landed within four hours and twenty-five minutes.",
+      "on_screen_text": "3 builds in 4 h 25 min",
+      "visual_brief": "A vertical timeline of release ticks types on, one per tagged build, as 'release bot' is spoken; the bracket '4 h 25 min' stamps on 'twenty-five minutes'. Hard cuts only.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Those b numbers are documented nightlies, automated development builds. The seven forty-two bus you board again tomorrow. Two builds can differ, not just schedules.",
+      "on_screen_text": "a tag is the 7:42 bus",
+      "visual_brief": "Split panes: left types 'nightly build' tags stacking, right draws a bus timetable line with the 7:42 slot highlighted amber on 'seven forty-two'. Minor side words seven characters or fewer.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Your old binary rejects new GGUF files, single-file model containers. The file is fine. The binary predates the architecture.",
+      "on_screen_text": "old binary rejects new GGUF",
+      "visual_brief": "On 'rejects', a flow from a GGUF file block into a binary block stops at a red-gated edge, then reroutes green on 'the file is fine'. Rises in place, no edge slides.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The catch: a pinned commit pins code, not compiler or GPU flags. Builds target the hardware they see.",
+      "on_screen_text": "a tag pins code, not hardware",
+      "visual_brief": "On 'pins code', a tag chip locks to a code block below it while compiler and GPU chips stay unlocked above; the stack scales in once on 'the catch'.",
+      "est_duration_s": 5.5
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Tonight, read the build line, fetch the tags, check out one exact nightly, rebuild. The GGUF that failed loads, and your setup is only as reproducible as the tag you write down.",
+      "on_screen_text": "the tag you write down",
+      "visual_brief": "A four-cell grid types on, one cell per move, on 'read the build line'; on 'loads' the error line from frame one resolves to a clean prompt; the wordmark settles as the last words land and the final frame rhymes with frame 1, same terminal now quiet.",
+      "est_duration_s": 11.4
+    }
+  ],
+  "notes_for_review": "Confirm the 7:42 bus reads as the stated analogy and not as a fourth key number, and that no scene or screen text shows a raw b-tag. Runtime lands near 43 seconds, above the classic sweet spot of 32-38 but inside the hard 28-60 band, so trim the s03 analogy first if tightening is needed.",
+  "hook_pattern": "tonight",
+  "tags": [
+    "llama.cpp",
+    "llamacpp",
+    "local llm",
+    "local ai",
+    "build from source",
+    "gguf",
+    "nightly build",
+    "pin commit",
+    "git checkout tag",
+    "cmake build",
+    "cuda",
+    "metal",
+    "apple silicon",
+    "re-pin",
+    "stale binary",
+    "open source ai"
+  ]
+}
