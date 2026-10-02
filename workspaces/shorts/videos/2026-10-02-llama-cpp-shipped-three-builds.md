@@ -2,21 +2,21 @@
 slug: 2026-10-02-llama-cpp-shipped-three-builds
 workspace: shorts
 title: "llama.cpp builds go stale: re-pin yours"
-status: scheduled
+status: published
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-02
-updated: "2026-10-02T20:00:32Z"
+updated: "2026-10-02T23:00:34Z"
 publish_slot: "2026-10-02T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=W-TwEHFx9E8"
 blotato_post_id: 51035198-fc70-4852-acac-bf8deee2323e
 ---
 # llama.cpp shipped three builds in seven hours
@@ -54,3 +54,4 @@ blotato_post_id: 51035198-fc70-4852-acac-bf8deee2323e
 - 2026-10-02T12:47:27Z build done, status review
 - 2026-10-02T19:57:51Z telegram approve (approved_at 2026-10-02T19:57:51Z)
 - 2026-10-02T20:00:33Z 08-publish ok 3s
+- 2026-10-02T23:00:34Z published https://www.youtube.com/watch?v=W-TwEHFx9E8
