@@ -2,19 +2,19 @@
 slug: 2026-10-02-llama-cpp-shipped-three-builds
 workspace: shorts
 title: "llama.cpp builds go stale: re-pin yours"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-02
-updated: "2026-10-02T12:27:49Z"
+updated: "2026-10-02T12:29:46Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 
 - 2026-10-02 stage 03: brief written (9 sources, 11 claims, 7 key numbers); validator exit 0. Angle corrected in brief: three-build window is 4 h 25 min, full morning 10 builds in 8 h 06 min; script stage must not say seven hours.
 - 2026-10-02 stage 05: package written (rubric 95), hub ready-to-build, check_outputs exit 0. Stages 06-08 left for the Spark build job per blai-run.
+- 2026-10-02T12:29:46Z build start on gn100-83c4
