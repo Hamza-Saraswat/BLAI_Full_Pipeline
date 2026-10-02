@@ -2,14 +2,14 @@
 slug: 2026-10-01-dgx-spark-is-in-stock-at-what
 workspace: shorts
 title: DGX Spark is in stock -- at what price?
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-01
-updated: "2026-10-01T11:10:20Z"
+updated: "2026-10-02T13:35:20Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - PROVES withheld: listing shows no street price; the price is the thing to measure at research.
 
 ## Build journal
-
+- 2026-10-02T13:35:20Z 2026-10-02T13:35:20Z expired: not from today's picks (2026-10-02); the factory carries no backlog
