@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Stage-03 checkpoint: angle confirmed as "the b-numbered builds are documented nightlies, and one morning of them (10 builds on 02 Oct) is the re-pin moment for a pinned checkout"; slug unchanged.
+- Research: fetched pages corrected the premise (4 h 25 min three-build window, 10 builds in 8 h 06 min); brief written at 9 sources, 11 claims, validator exit 0. Script stage must not say seven hours.
 
 ## Build journal
 
