@@ -2,14 +2,14 @@
 slug: 2026-10-02-llama-cpp-shipped-three-builds
 workspace: shorts
 title: "llama.cpp builds go stale: re-pin yours"
-status: review
+status: approved
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-02
-updated: "2026-10-02T12:47:22Z"
+updated: "2026-10-02T19:57:51Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-10-02T12:47:25Z 07-render ok 45.40s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 166
 - 2026-10-02T12:47:25Z 07-render ok 993s
 - 2026-10-02T12:47:27Z build done, status review
+- 2026-10-02T19:57:51Z telegram approve (approved_at 2026-10-02T19:57:51Z)
