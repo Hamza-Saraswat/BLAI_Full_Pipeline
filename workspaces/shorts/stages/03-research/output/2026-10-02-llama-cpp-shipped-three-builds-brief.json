@@ -1,0 +1,176 @@
+{
+  "slug": "2026-10-02-llama-cpp-shipped-three-builds",
+  "topic": "llama.cpp shipped three builds in seven hours",
+  "generated_at": "2026-10-02T11:38:44Z",
+  "depth": "standard",
+  "thesis": "The b-numbered llama.cpp builds are the project's documented nightlies, cut by a bot, and on 02 Oct 2026 ten of them landed in one morning, so the tag you pin is the only thing keeping your local setup reproducible.",
+  "explanation_path": "Start with what actually happened this morning: ten tagged builds, b11331 through b11344, published between 00:48 and 08:54, three of them inside a four-and-a-half-hour window, each one a single targeted fix, each pushed by the release bot. Before the viewer can feel why that matters they need the project's two-track versioning: official releases are semantic-version tags where the tag is the release artifact, while the GitHub releases page carries only nightly development builds, which is what the b numbers are. Once nightlies are understood as the default channel, the pain arrives on its own: an old binary rejects new-model GGUFs outright, maintainers' first diagnostic is the build line the binary prints at startup, and the usual culprit is a stale binary shadowing the fresh one from PATH or a venv. That reframes the morning burst as the re-pin moment: check out a newer tag, rebuild for the connected hardware, and know what to fall back to. Close on the honest catch: pinning the code pins the code, not the compiler or the GPU flags.",
+  "claims": [
+    {
+      "claim": "On 02 Oct 2026 llama.cpp published releases b11339, b11342 and b11344, and the b11339-to-b11344 span was 4 h 25 min (04:29 to 08:54), not the seven hours the idea's title claimed.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases",
+      "source_title": "Releases · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "Ten tagged releases (b11331 through b11344) shipped on 02 Oct between 00:48 and 08:54, a span of 8 h 06 min.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases",
+      "source_title": "Releases · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "b11344 is one targeted fix: \"CUDA: fix 2 broken Volta FA cases\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11344",
+      "source_title": "Release b11344 · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "b11342 fixes cache-directory creation through symlinks on a buggy libstdc++, authored by a Hugging Face engineer, with the root cause an upstream GCC bug.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11342",
+      "source_title": "Release b11342 · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "b11339 clamps a KV-cache pool bound that overshot when a batch fills the whole context, and its commit was AI-assisted, credited in the release note as \"Assisted-by: pi:llama.cpp/MiMo-V2.6-Flash-MOPD\".",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11339",
+      "source_title": "Release b11339 · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "The official release process uses semantic versioning and the git tag is the release artifact: \"No GitHub Release object is created, the tag is the release artifact.\"",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/docs/release.md",
+      "source_title": "Release process (docs/release.md, llama.cpp master)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "The b-numbered builds on the GitHub releases page are the project's own documented nightlies: \"Currently releases are not published to github releases, only nightly/development builds are available there.\"",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/docs/release.md",
+      "source_title": "Release process (docs/release.md, llama.cpp master)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "All three builds are marked Pre-release, published by the github-actions bot rather than a human, and each release page carries 37 binary assets covering Apple Silicon, CUDA 12/13, Vulkan and ROCm 10.0.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11339",
+      "source_title": "Release b11339 · ggml-org/llama.cpp · GitHub",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "Default source builds identify as development builds by appending a -dev suffix to the version string; a clean string requires passing -DLLAMA_BUILD_IS_DEV=OFF.",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/docs/release.md",
+      "source_title": "Release process (docs/release.md, llama.cpp master)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "Builds compile for the hardware present at build time by default: \"By default llama.cpp will be built for the hardware that is connected to the system at that time.\"",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/docs/build.md",
+      "source_title": "Build llama.cpp locally (docs/build.md, llama.cpp master)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    },
+    {
+      "claim": "Maintainers' first diagnostic for a broken setup is the build line printed at startup; in issue #13157 the reply was \"Your versions are very old: - build: 4591 (7919256) - this is from January ... Update to latest version.\"",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/13157",
+      "source_title": "Issue #13157: Architecture qwen3 not supported · ggml-org/llama.cpp",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-10-02"
+    }
+  ],
+  "key_numbers": [
+    { "label": "tagged releases on 02 Oct 2026 (b11331-b11344)", "value": "10", "source_url": "https://github.com/ggml-org/llama.cpp/releases" },
+    { "label": "span of the whole 02 Oct burst (00:48 to 08:54)", "value": "8 h 06 min", "source_url": "https://github.com/ggml-org/llama.cpp/releases" },
+    { "label": "span b11339 to b11344 (the three-build window)", "value": "4 h 25 min", "source_url": "https://github.com/ggml-org/llama.cpp/releases" },
+    { "label": "gap between b11339 and b11342", "value": "0 h 37 min", "source_url": "https://github.com/ggml-org/llama.cpp/releases" },
+    { "label": "binary assets per release page", "value": "Assets37 (37)", "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11344" },
+    { "label": "stale build a maintainer dated from January", "value": "build: 4591 (7919256)", "source_url": "https://github.com/ggml-org/llama.cpp/issues/13157" },
+    { "label": "CUDA cases fixed by b11344", "value": "2 broken Volta FA cases", "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11344" }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "the named bus departure vs whoever pulls up next",
+      "mapping": "a b-number is the 7:42 bus, a specific departure you can board again tomorrow; master or latest is whichever bus pulls up next; pinning is deciding you always take the 7:42",
+      "limit": "every bus on a route drives identically, but two b-builds can differ in speed, output or model support, so the schedule metaphor hides that the vehicle itself changes"
+    },
+    {
+      "vehicle": "the dyno-signed engine map",
+      "mapping": "a pinned build is the exact engine map your best dyno sheet was recorded on; ten builds in a morning is the factory shipping ten new maps before lunch; re-pinning is flashing back to the map your numbers came from",
+      "limit": "an ECU map is one file, while a build pins code plus compiler and hardware flags at once, so the flash is never the whole story"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The b-numbers are llama.cpp's real version numbers.",
+      "reality": "Official releases are semantic-version tags; the b-family is the project's own documented nightly/development channel (docs/release.md, claim 7)."
+    },
+    {
+      "myth": "I cloned llama.cpp recently, so I am running a recent build.",
+      "reality": "The executing binary can be months old; maintainers dated one recent setup to January from the startup build line (issue #13157, claim 11)."
+    },
+    {
+      "myth": "This GGUF is broken.",
+      "reality": "The model file is fine; the binary predates the architecture (unknown model architecture: qwen3) and updating fixes it (issue #13157)."
+    },
+    {
+      "myth": "New release builds are instantly available everywhere.",
+      "reality": "Even latest-prebuilt-binary users hit the unknown-architecture error because prebuilts lag master (issue #13157)."
+    },
+    {
+      "myth": "llama.cpp shipped three builds in seven hours.",
+      "reality": "The b11339-to-b11344 span is 4 h 25 min; the fuller story is ten builds in 8 h 06 min on 02 Oct (releases index, claims 1-2)."
+    }
+  ],
+  "glossary": [
+    { "term": "b-tag", "definition": "llama.cpp's numbered build tags (b11339, b11342, b11344), the nightly channel cut automatically from master." },
+    { "term": "pre-release", "definition": "GitHub's flag on every b-tagged build; the llama.cpp docs call these nightly/development builds." },
+    { "term": "pinned commit", "definition": "an exact git tag or SHA you git checkout after cloning, so every machine and every rerun compiles the same code." },
+    { "term": "build from source", "definition": "cloning the repo and compiling it yourself with CMake instead of downloading pre-built binaries." },
+    { "term": "nightly", "definition": "the b-numbered development builds the README badges separately from the semantic-version releases." },
+    { "term": "GGUF", "definition": "the single-file model container llama.cpp loads; new architectures require a binary new enough to know them." },
+    { "term": "stale binary", "definition": "an old compiled llama-cli or main left in PATH or a venv that keeps getting invoked after a rebuild." },
+    { "term": "CUDA", "definition": "NVIDIA's GPU-computing platform; llama.cpp's CUDA backend provides GPU acceleration using an NVIDIA GPU." },
+    { "term": "Metal", "definition": "Apple's GPU API, the default backend on macOS, where computation runs on the GPU." },
+    { "term": "KV cache pool", "definition": "pooled memory slots for the attention KV cache; b11339 clamps the pool bound so a full-context batch cannot overshoot reserved memory." },
+    { "term": "Flash Attention (FA)", "definition": "a fast attention kernel; b11344 fixes 2 broken cases on Volta (pre-Turing NVIDIA GPUs)." },
+    { "term": "re-pin", "definition": "deliberately moving your frozen checkout forward to a newer tag and rebuilding." }
+  ],
+  "unverified": [
+    "GitHub's release timestamps print as 02 Oct 08:54 with no timezone or year; they are consistent with UTC cross-checked against relative ages, but the page never states it.",
+    "Whether tags b11336, b11340, b11341 and b11343 exist without published releases cannot be confirmed from the fetched index.",
+    "A Reddit PSA recommends re-pinning via git reset --hard, git clean, git fetch --all --tags --prune and git checkout of a tag; snippet only, Reddit blocked all fetches.",
+    "r/LocalLLaMA jokes that five minutes after a git pull there were probably three new PRs; snippet only, community tier.",
+    "How often power users pin versus ride master has no fetched evidence either way.",
+    "Tokens-per-second or memory impact of these builds on the Spark should be measured first-party before quoting any performance expectation."
+  ],
+  "suggested_outline": "Open on the burst: ten tagged builds before 09:00 on 02 Oct, three of them inside four and a half hours, each a single fix, each pushed by the bot.\nName the channel: the b-numbers are the documented nightlies; official releases are the semantic-version tags, and the tag is the release artifact.\nShow the pain: an old binary rejects new GGUFs outright; maintainers read the startup build line first and keep finding January-old binaries that were just pulled.\nLand the thesis: with ten nightlies a morning, the pinned tag is the only thing making your numbers reproducible; re-pin deliberately, then verify the binary you run is the one you built.",
+  "notes": "Conflict: the idea's title says seven hours; the fetched releases index shows the b11339-to-b11344 span is 4 h 25 min and the fuller story is 10 builds in 8 h 06 min. The brief carries the corrected numbers; the script stage should not say seven hours. The docs site 404s; raw.githubusercontent.com doc files are the fetched equivalents. Reddit was unfetchable this run (403), so every Reddit-sourced belief sits under unverified.",
+  "viewer_situation": "You built llama.cpp from source once, it runs, and you have not touched the checkout since; new-model GGUFs are starting to fail with unknown-architecture errors.",
+  "has_process": true,
+  "process_steps": [
+    "Read the build and commit line your binary prints at startup to learn what you are actually running.",
+    "git fetch --tags in your llama.cpp checkout to see the new b-tags.",
+    "git checkout the build tag you want to pin (for example b11344).",
+    "Rebuild with cmake --build and install the fresh binary.",
+    "Check PATH and any venv for an older llama-cli or main still shadowing the new build.",
+    "Run a known model and compare against your last recorded numbers; if the new tag regresses, fall back to the previous known-good tag."
+  ],
+  "objection": "Pinning the tag pins the code, not the run: builds compile for the connected hardware by default and the version string stays a -dev build unless you pass -DLLAMA_BUILD_IS_DEV=OFF, so reproducibility still depends on the machine and the flags."
+}
