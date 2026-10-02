@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-02-llama-cpp-shipped-three-builds-brief|Brief]]
 - Script: [[stages/04-script/output/2026-10-02-llama-cpp-shipped-three-builds-script|Script]] + [[stages/04-script/output/2026-10-02-llama-cpp-shipped-three-builds-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-10-02-llama-cpp-shipped-three-builds-package|Package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-02-llama-cpp-shipped-three-builds-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-02 stage 03: brief written (9 sources, 11 claims, 7 key numbers); validator exit 0. Angle corrected in brief: three-build window is 4 h 25 min, full morning 10 builds in 8 h 06 min; script stage must not say seven hours.
 - 2026-10-02 stage 05: package written (rubric 95), hub ready-to-build, check_outputs exit 0. Stages 06-08 left for the Spark build job per blai-run.
 - 2026-10-02T12:29:46Z build start on gn100-83c4
+- 2026-10-02T12:30:49Z 06-voice ok 61s
