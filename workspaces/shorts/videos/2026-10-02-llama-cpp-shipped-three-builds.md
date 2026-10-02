@@ -2,22 +2,22 @@
 slug: 2026-10-02-llama-cpp-shipped-three-builds
 workspace: shorts
 title: "llama.cpp builds go stale: re-pin yours"
-status: approved
+status: scheduled
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-02
-updated: "2026-10-02T19:57:51Z"
-publish_slot: ""
+updated: "2026-10-02T20:00:32Z"
+publish_slot: "2026-10-02T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 51035198-fc70-4852-acac-bf8deee2323e
 ---
 # llama.cpp shipped three builds in seven hours
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-02-llama-cpp-shipped-three-builds-package|Package]]
 - Voice: [[stages/06-voice/output/2026-10-02-llama-cpp-shipped-three-builds-voice]]
 - Render: [[stages/07-render/output/2026-10-02-llama-cpp-shipped-three-builds-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-02-llama-cpp-shipped-three-builds-publish]]
 
 ## Decisions
 - Stage-03 checkpoint: angle confirmed as "the b-numbered builds are documented nightlies, and one morning of them (10 builds on 02 Oct) is the re-pin moment for a pinned checkout"; slug unchanged.
@@ -53,3 +53,4 @@ blotato_post_id: ""
 - 2026-10-02T12:47:25Z 07-render ok 993s
 - 2026-10-02T12:47:27Z build done, status review
 - 2026-10-02T19:57:51Z telegram approve (approved_at 2026-10-02T19:57:51Z)
+- 2026-10-02T20:00:33Z 08-publish ok 3s
