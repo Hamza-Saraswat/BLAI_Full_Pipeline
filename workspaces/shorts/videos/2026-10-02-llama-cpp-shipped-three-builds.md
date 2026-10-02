@@ -2,14 +2,14 @@
 slug: 2026-10-02-llama-cpp-shipped-three-builds
 workspace: shorts
 title: "llama.cpp builds go stale: re-pin yours"
-status: building
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-02
-updated: "2026-10-02T12:29:46Z"
+updated: "2026-10-02T12:47:22Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-02-llama-cpp-shipped-three-builds-script|Script]] + [[stages/04-script/output/2026-10-02-llama-cpp-shipped-three-builds-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-10-02-llama-cpp-shipped-three-builds-package|Package]]
 - Voice: [[stages/06-voice/output/2026-10-02-llama-cpp-shipped-three-builds-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-02-llama-cpp-shipped-three-builds-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -49,3 +49,5 @@ blotato_post_id: ""
 - 2026-10-02 stage 05: package written (rubric 95), hub ready-to-build, check_outputs exit 0. Stages 06-08 left for the Spark build job per blai-run.
 - 2026-10-02T12:29:46Z build start on gn100-83c4
 - 2026-10-02T12:30:49Z 06-voice ok 61s
+- 2026-10-02T12:47:25Z 07-render ok 45.40s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 166
+- 2026-10-02T12:47:25Z 07-render ok 993s
