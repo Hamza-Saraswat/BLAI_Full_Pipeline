@@ -2,14 +2,14 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
 title: "DGX Spark 64GB vs 128GB: what fits"
-status: review
+status: approved
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
-updated: "2026-10-05T16:39:33Z"
+updated: "2026-10-05T17:15:35Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-05T16:39:36Z 07-render ok 38.43s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 173
 - 2026-10-05T16:39:36Z 07-render ok 633s
 - 2026-10-05T16:39:39Z build done, status review
+- 2026-10-05T17:15:35Z telegram approve (approved_at 2026-10-05T17:15:35Z)
