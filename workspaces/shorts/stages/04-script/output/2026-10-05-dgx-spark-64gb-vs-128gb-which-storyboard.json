@@ -1,0 +1,141 @@
+{
+  "slug": "2026-10-05-dgx-spark-64gb-vs-128gb-which",
+  "topic": "DGX Spark 64GB vs 128GB: which one do you actually need",
+  "title": "DGX Spark 64GB or 128GB? Your Model Picks",
+  "description": "The 64GB DGX Spark at $4,999 and the 128GB at $6,950 share a chip and a memory speed, so the choice is pure fit math. Your biggest model's four-bit download size picks the box. Sources and fit math are in the pinned comment.",
+  "hashtags": [
+    "#DGXSpark",
+    "#LocalAI",
+    "#NVIDIA"
+  ],
+  "hook_text": "Which Spark? Your model decides.",
+  "hook_candidates": [
+    "Which DGX Spark should you buy? Your biggest model decides. *",
+    "NVIDIA promises one hundred billion parameters. The download says seventy-three gigabytes. *",
+    "Seventy-three gigabytes. That one number picks your Spark.",
+    "The cheap Spark and the pricey Spark share one brain.",
+    "Twice the memory, zero extra speed. Choose with your models.",
+    "The new DGX Spark costs more than last year's bigger one.",
+    "One download size decides your DGX Spark purchase.",
+    "Sixty-four gigs sounds small until you meet your models.",
+    "GLM four point five Air breaks NVIDIA's one hundred billion promise.",
+    "Buy the little Spark unless your models say otherwise."
+  ],
+  "style_pack": "signal",
+  "target_duration_s": 35,
+  "narration_full": "Which DGX Spark should you buy? The sixty-four gigabyte box starts at four thousand nine hundred ninety-nine dollars. You waited. The one hundred twenty-eight gigabyte box just hit six thousand nine hundred fifty dollars. Same chip, same speed. Neither is faster. NVIDIA claims one hundred billion parameters for the small box. That assumes quantization, storing weights in fewer bits. Meet GLM four point five Air. Four-bit, the quality floor, is a seventy-three gigabyte download. More than the whole pool. At three-bit it's fifty-seven point two gigabytes of memory. It fits, crumbs left for chat history. Name your biggest real model. Its four-bit download picks the box.",
+  "music_mood": "steady-build",
+  "script_format": "classic",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,EQUIPS",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Which DGX Spark should you buy? The sixty-four gigabyte box starts at four thousand nine hundred ninety-nine dollars.",
+      "on_screen_text": "Which Spark? Your model decides. | 64GB from $4,999",
+      "visual_brief": "Frame 1: hook text 'Which Spark? Your model decides.' fully legible, centered above a two-box lineup; motion onset at 0.3 s: the right-hand box label fades up. On 'four thousand nine hundred ninety-nine dollars' the price '$4,999' stamps under the left box with a scale-in; on 'sixty-four gigabyte' the '64GB' label pops beside it.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You waited. The one hundred twenty-eight gigabyte box just hit six thousand nine hundred fifty dollars. Same chip, same speed. Neither is faster.",
+      "on_screen_text": "64GB vs 128GB: $6,950 | same chip, same speed",
+      "visual_brief": "On \"You waited\", hard cut to a split screen: left card labeled \"64GB\" sits dim, right card \"128GB\" rises in place carrying \"$6,950\" in amber. On \"Same chip, same speed\", one shared bar fades in across both cards reading \"same chip, same speed\". On \"Neither is faster\" the bar pulses once, then everything holds. Never more than two elements moving.",
+      "est_duration_s": 7.9,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "NVIDIA claims one hundred billion parameters for the small box. That assumes quantization, storing weights in fewer bits.",
+      "on_screen_text": "100B, NVIDIA's ceiling | only if heavily quantized",
+      "visual_brief": "On \"NVIDIA claims\", cut to a centered stack: \"100B\" in giant amber numerals with the caption \"NVIDIA's ceiling\" beneath. On \"That assumes quantization\", a second line rises in place: \"only if heavily quantized\", while the 100B numerals dim a notch. One text block animates at a time; last beat is static.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Meet GLM four point five Air. Four-bit, the quality floor, is a seventy-three gigabyte download. More than the whole pool.",
+      "on_screen_text": "GLM-4.5-Air at Q4_K_M | 73 GB, over the pool",
+      "visual_brief": "On \"Meet GLM four point five Air\", cut to a model card header \"GLM-4.5-Air\" with a \"Q4_K_M\" tag. On \"seventy-three gigabyte download\", a giant amber \"73 GB\" scales in beside a thin vertical bar marked \"64 GB pool\"; the 73 GB block clearly overruns the bar top. On \"More than the whole pool\" the overrun flashes once, then holds.",
+      "est_duration_s": 6.9,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "centered-stack",
+      "narration": "At three-bit it's fifty-seven point two gigabytes of memory. It fits, crumbs left for chat history.",
+      "on_screen_text": "Q3_K_M: 57.2 GB | it fits, crumbs left",
+      "visual_brief": "On \"three-bit\", cut to a centered \"Q3_K_M\" tag above \"57.2 GB\" in amber, rising in place. On \"It fits\", the same 64 GB pool bar fades in with the 57.2 GB block now inside it and only a sliver of empty space above, captioned \"crumbs left\". Fade-ins only, one element at a time, static tail.",
+      "est_duration_s": 5.5,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Name your biggest real model. Its four-bit download picks the box.",
+      "on_screen_text": "used cards cost less per GB | your 4-bit download picks the box",
+      "visual_brief": "On \"Used cards\", a dim side note \"used cards cost less per GB\" fades in at lower left. On \"Name your biggest real model\", cut to a three-node flow: \"biggest model\" to \"4-bit size\" to \"your box\", connectors drawing in one at a time; the final node glows amber on \"picks the box\". In the last half second the nodes fade and the amber wordmark settles center, echoing the centered composition of frame 1.",
+      "est_duration_s": 3.8
+    }
+  ],
+  "notes_for_review": "GLM-4.5-Air is spoken as \"four point five\", matching hook candidate nine, and Q4_K_M / Q3_K_M on screen are treated as the exempt quant names for four-bit and three-bit. The 4-8 GB system-overhead beat was dropped for word budget, and it rests on an unverified inference for the 64GB pool anyway. \"Crumbs\" is the single wry beat and sits clear of hook and payoff. Estimated narration runs 40.6 seconds against the 35 second target (ratio 1.16, inside tolerance); tighten scene six first if the VO read runs long.",
+  "tags": [
+    "dgx spark 64gb",
+    "dgx spark 128gb",
+    "dgx spark",
+    "nvidia dgx spark",
+    "dgx spark price",
+    "glm 4.5 air gguf",
+    "gpt-oss-120b gguf",
+    "local llm memory",
+    "llm quantization q4",
+    "64gb vs 128gb llm",
+    "what model fits 64gb",
+    "dgx spark worth it",
+    "local ai supercomputer",
+    "nvidia gb10",
+    "memory pool llm",
+    "kv cache size",
+    "unified memory llm",
+    "q3 vs q4 quant",
+    "best local llm 2026",
+    "dgx spark vs gaming pc"
+  ],
+  "hook_pattern": "decision"
+}

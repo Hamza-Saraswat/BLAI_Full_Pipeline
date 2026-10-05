@@ -1,0 +1,477 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-05T16:18:04+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 5,
+      "docs": 5
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 12,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "huggingface.co",
+      "nvidia.com",
+      "servethehome.com",
+      "theregister.com",
+      "tokios.com"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 5,
+      "distinct": 5,
+      "score": 0.625,
+      "detail": [
+        {
+          "label": "64GB DGX Spark starting price",
+          "value": "$4,999",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$4,999",
+          "scene_ids": [
+            "s1"
+          ]
+        },
+        {
+          "label": "128GB DGX Spark price now",
+          "value": "$6950",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$6,950",
+          "scene_ids": [
+            "s2"
+          ]
+        },
+        {
+          "label": "128GB DGX Spark launch price (about a year ago)",
+          "value": "$3999",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GLM-4.5-Air Q4_K_M GGUF download",
+          "value": "73 GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventy-three",
+          "scene_ids": [
+            "s4"
+          ]
+        },
+        {
+          "label": "GLM-4.5-Air Q3_K_M GGUF download",
+          "value": "57.2 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "57.2 GB",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "gpt-oss-120b Q4_K_M GGUF download",
+          "value": "62.8 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "64GB configuration model ceiling per NVIDIA",
+          "value": "up to 100-billion-parameter models",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one hundred",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "memory bandwidth, both configs",
+          "value": "273 GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 12,
+      "found_count": 3,
+      "score": 0.25,
+      "found": [
+        "NVIDIA",
+        "DGX Spark",
+        "GLM-4.5-Air"
+      ],
+      "missing": [
+        "GB10",
+        "GB10 Superchip",
+        "H100 GPU",
+        "QSFP",
+        "BF16",
+        "gpt-oss-120b",
+        "MXFP4",
+        "ServeTheHome",
+        "NVIDIA Qwen 3.8"
+      ],
+      "top2": [
+        "NVIDIA",
+        "DGX Spark"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB10 Superchip",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "H100 GPU",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "QSFP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GLM-4.5-Air",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gpt-oss-120b",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MXFP4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ServeTheHome",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA Qwen 3.8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 15,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DGX Spark"
+      ],
+      "hook_text": "Which Spark? Your model decides.",
+      "first_sentence": "Which DGX Spark should you buy?"
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "comparison-ladder",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:$4,999",
+            "entity:DGX Spark"
+          ],
+          "narration": "Which DGX Spark should you buy? The sixty-four gigabyte box starts at four thousand nine hundred ninety-nine dollars."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "num:$6950"
+          ],
+          "narration": "You waited. The one hundred twenty-eight gigabyte box just hit six thousand nine hundred fifty dollars. Same chip, same speed. Neither is faster."
+        },
+        {
+          "id": "s3",
+          "role": "foreshadow",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:up to 100-billion-parameter models",
+            "entity:NVIDIA"
+          ],
+          "narration": "NVIDIA claims one hundred billion parameters for the small box. That assumes quantization, storing weights in fewer bits."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:73 GB",
+            "entity:GLM-4.5-Air"
+          ],
+          "narration": "Meet GLM four point five Air. Four-bit, the quality floor, is a seventy-three gigabyte download. More than the whole pool."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 5.5,
+          "specific": true,
+          "hits": [
+            "num:57.2 GB"
+          ],
+          "narration": "At three-bit it's fifty-seven point two gigabytes of memory. It fits, crumbs left for chat history."
+        },
+        {
+          "id": "s6",
+          "role": "payoff_close",
+          "est_duration_s": 3.8,
+          "specific": false,
+          "hits": [],
+          "narration": "Name your biggest real model. Its four-bit download picks the box."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.6,
+      "words": 114,
+      "sentences": 15,
+      "est_speech_s": 39.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Which DGX Spark should you buy? The sixty-four gigabyte box starts at four thousand nine hundred ninety-nine dollars. You waited. The one hundred twenty-eight gigabyte box just hit six thousand nine hundred fifty dollars. Same chip, same speed. Neither is faster. NVIDIA claims one hundred billion parameters for the small box. That assumes quantization, storing weights in fewer bits. Meet GLM four point five Air. Four-bit, the quality floor, is a seventy-three gigabyte download. More than the whole pool. At three-bit it's fifty-seven point two gigabytes of memory. It fits, crumbs left for chat history. Name your biggest real model. Its four-bit download picks the box.",
+    "on_screen": "Which Spark? Your model decides. | Which Spark? Your model decides. | 64GB from $4,999 | 64GB vs 128GB: $6,950 | same chip, same speed | 100B, NVIDIA's ceiling | only if heavily quantized | GLM-4.5-Air at Q4_K_M | 73 GB, over the pool | Q3_K_M: 57.2 GB | it fits, crumbs left | used cards cost less per GB | your 4-bit download picks the box"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 4.6,
+        "words": 114,
+        "est_speech_s": 39.3,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 41 chars \u2014 mobile truncates ~40",
+          "s1: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s4: 'GLM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 5,
+        "heard": 5,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.25,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "NVIDIA",
+          "DGX Spark"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DGX Spark"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "comparison-ladder",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
