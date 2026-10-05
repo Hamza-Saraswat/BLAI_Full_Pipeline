@@ -2,14 +2,14 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
 title: "DGX Spark 64GB vs 128GB: what fits"
-status: building
+status: review
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
-updated: "2026-10-05T16:21:10Z"
+updated: "2026-10-05T16:39:33Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-script]]
 - Package: [[stages/05-package/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-package]]
 - Voice: [[stages/06-voice/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-narration|narration.txt (normalized)]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-05T16:21:10Z build start on gn100-83c4
 - 2026-10-05T16:22:17Z 06-voice ok 65s
+- 2026-10-05T16:29:03Z 07-render fail 402s (07-render: scene s2 did not pass HyperFrames inspect after 5 rounds: t=0.1-0.55s (6 samples) text_box_overflow #price-num inside #card-128 overflowed bottom 18.)
+- 2026-10-05T16:39:36Z 07-render ok 38.43s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 173
+- 2026-10-05T16:39:36Z 07-render ok 633s
