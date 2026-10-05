@@ -1,0 +1,1513 @@
+[
+  {
+    "id": "github-20a57e552a",
+    "title": "vllm v0.31.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+    "source": "github",
+    "published_at": "2026-10-05T06:44:55Z",
+    "signals": {
+      "repo": "vllm-project/vllm",
+      "tag": "v0.31.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.8893,
+      "age_h": 8.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "DeepSeek",
+      "NVFP4"
+    ],
+    "summary": "# v0.31.0 ## Highlights This release features 717 commits from 307 contributors (96 new)! * **DeepSeek-V4.1-Flash performance**: FlashMLA mega attention with the V4.1 NVFP4 compressed KV cache is now the SM100 default (#56935); DeepGEMM sparse MQA logits for the indexer (#56254) and Mega-Gate fusing",
+    "why_now": "Shipped: vllm-project/vllm v0.31.0 released, 8 h ago",
+    "score": 68
+  },
+  {
+    "id": "github-7b4ef50cd0",
+    "title": "llama.cpp b11424",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11424",
+    "source": "github",
+    "published_at": "2026-10-05T14:46:16Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11424",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9985,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> vulkan: fix Flash Attention shmem write out of bounds (#29988) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/52864580> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/",
+    "why_now": "Shipped: ggml-org/llama.cpp b11424 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-bc1c3221fa",
+    "title": "llama.cpp b11418",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11418",
+    "source": "github",
+    "published_at": "2026-10-05T14:03:05Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11418",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9882,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> server: support vision input for Clef (#29969) * server: support vision input for Clef * move input_attn_causal to private * extend old server_batch::embd * server_batch::token::pos to multi dim * nits * fix abort * fix img tokens cap * fix yield_to_queue mutate data </details> **Webs",
+    "why_now": "Shipped: ggml-org/llama.cpp b11418 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-849d6992a6",
+    "title": "llama.cpp b11417",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11417",
+    "source": "github",
+    "published_at": "2026-10-05T13:20:03Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11417",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.978,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "NVFP4",
+      "Llama"
+    ],
+    "summary": "<details open> CUDA: Optimize accumulation in mmq for NVFP4 type (#29857) * ggml_cuda: optimize accumulation in mmq_vec_dot_fp4_fp4_mma for better performance * remove whitespace * fix: correct indentation in mma_block_scaled_fp4 loop </details> **Website:** - <https://llama.app> **Attestations:** -",
+    "why_now": "Shipped: ggml-org/llama.cpp b11417 released (pre-release), 2 h ago",
+    "score": 57
+  },
+  {
+    "id": "firecrawl-60e0deabb9",
+    "title": "Nvidia introduces 64GB DGX Spark to throw local AI fans a lifeline amid ...",
+    "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hn"
+      ],
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "GB10"
+    ],
+    "summary": "3 days ago · Nvidia introduces 64GB DGX Spark to throw local AI fans a lifeline amid the RAMpocalypse -- new GB10 config starts at $4999 for those who can work with less.",
+    "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 44
+  },
+  {
+    "id": "firecrawl-b141e79e7e",
+    "title": "NVIDIA DGX Spark 64GB Launched and Big 128GB GB10 Price Increases",
+    "url": "https://www.servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hn"
+      ],
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "GB10"
+    ],
+    "summary": "[Home](https://www.servethehome.com/)[AI](https://www.servethehome.com/category/ai-deep-learning/)NVIDIA DGX Spark 64GB Launched and Big 128GB GB10 Price Increases First, the NVIDIA DGX Spark 128GB family is increasing in price. ## NVIDIA DGX Spark 64GB Launched and Big 128GB GB10 Price Increases Fi",
+    "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 44
+  },
+  {
+    "id": "firecrawl-1f284fec3a",
+    "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and ...",
+    "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "Coming this month, [NVIDIA DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/) will be available with 64GB of unified memory from top manufacturer partners -- Acer, ASUS, Dell, Gigabyte, HP and MSI -- giving developers, researchers and AI enthusiasts a new configuration with DG",
+    "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-79f2df7f3f",
+    "title": "The DGX Spark 64GB is a Local AI Warning Sign - YouTube",
+    "url": "https://www.youtube.com/watch?v=7kWqGfnEhCM",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DGX Spark",
+      "group": "how-to"
+    },
+    "products": [
+      "DGX Spark",
+      "NVIDIA",
+      "LocalAI"
+    ],
+    "summary": "## The DGX Spark 64GB is a Local AI Warning Sign The DGX Spark is getting a new size andwe're going to look at what this means, Include playlist NVIDIA DGX Spark 64GB Variant Announced # The DGX Spark 64GB is a Local AI Warning Sign 43,824 views • Oct 2, 2026 • #LocalAI #DGXSpark #Nvidia The Popular",
+    "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-906343624e",
+    "title": "Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid ...",
+    "url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "# Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid memory crunch Meanwhile 128 GB version jumps to $6,950, nearly 75% above its launch price ### READ MORE In an effort to provide a more affordable AI system, Nvidia is introducing a [cut down version](https://blogs.nvidia.com/blog/l",
+    "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-d5ce790ba0",
+    "title": "NVIDIA's 64 GB DGX Spark \"AI Supercomputer\" Launches This ...",
+    "url": "https://wccftech.com/nvidia-64-gb-dgx-spark-this-month-for-4999-usd-128-gb-spark-jumps-past-6000/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "# NVIDIA’s 64 GB DGX Spark “AI Supercomputer” Launches This Month For $4999, While The 128 GB Spark Jumps Past $6000 [16Comments](https://wccftech.com/nvidia-64-gb-dgx-spark-this-month-for-4999-usd-128-gb-spark-jumps-past-6000/#comments) NVIDIA is launching a new version of its [DGX Spark AI Superco",
+    "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-e8e43602f9",
+    "title": "I replaced Grammarly with a local LLM, and none of my writing leaves my ...",
+    "url": "https://www.xda-developers.com/replaced-grammarly-with-a-local-llm/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "summary": "2 days ago · What bothers me is how writing itself is now treated like a tedious middle step that should be automated. Have an idea? Throw it into ChatGPT or Claude, ask it ...",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-ab09364c64",
+    "title": "Local LLMs | AgenticWire News",
+    "url": "https://www.agenticwire.news/category/local-llms",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Qwen"
+    ],
+    "summary": "# Local LLMs ### [llama-server: Flags, API, Web UI and Docker (Tested Guide)](https://www.agenticwire.news/article/llama-server) Oct 1, 2026 [![Ollama Qwen: Which Qwen Model to Run for Your Memory](https://www.agenticwire.news/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fug9zacfg%2Fproduct",
+    "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-cf8a3a2989",
+    "title": "I Fused 3 Tiny Local LLMs on My Laptop to See If They Could Match ...",
+    "url": "https://levelup.gitconnected.com/i-fused-3-tiny-local-llms-on-my-laptop-to-see-if-they-could-match-gpt-5-6-77c57b709477",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GPT-5",
+      "group": "how-to"
+    },
+    "products": [
+      "GPT-5",
+      "MLX",
+      "Qwen"
+    ],
+    "summary": "[Local Llm](https://medium.com/tag/local-llm?source=post_page---header_tags--77c57b709477-----------------------------------------) # I Fused 3 Tiny Local LLMs on My Laptop to See If They Could Match GPT-5.6 ## A hands-on experiment with MLX, three quantized Qwen models, and 24 scheduling problems -",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-e884604c45",
+    "title": "Tips & Tricks for DGX Spark newbie - NVIDIA Developer Forums",
+    "url": "https://forums.developer.nvidia.com/t/tips-tricks-for-dgx-spark-newbie/384878",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:DGX Spark",
+      "group": "how-to"
+    },
+    "products": [
+      "DGX Spark",
+      "NVIDIA"
+    ],
+    "summary": "# [Tips & Tricks for DGX Spark newbie](https://forums.developer.nvidia.com/t/tips-tricks-for-dgx-spark-newbie/384878) ## post by giles8 3 days ago When they arrive and you do the initial install, things may take a while while they reboot and update their factory firmwares.",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-0ea3c5b40c",
+    "title": "[PDF] NVIDIA DGX OS 7 User Guide",
+    "url": "https://docs.nvidia.com/dgx/dgx-os-7-user-guide/dgx-os-7-user-guide.pdf",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "## Important ##### Release Date: September 14, 2026 | Architecture | GPU Driver | |-|-| | ARM64 (DGX Spark) | 580.173.02 (Canonical signed driver) | ##### Product Updates in April 2026 | Architecture | GPU Driver | |-|-| | ARM64 (DGX Spark) | 580.142 (Canonical signed driver) | ##### Product Updates",
+    "why_now": "Shipped: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-73f3a65658",
+    "title": "NVIDIA DGX Spark drops to 64GB memory but costs more than the ...",
+    "url": "https://videocardz.com/newz/nvidia-dgx-spark-drops-to-64gb-memory-but-costs-more-than-the-original-128gb-version",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark",
+      "Radeon"
+    ],
+    "summary": "3 days ago · NVIDIA DGX Spark drops to 64GB memory but costs more than the original ... Sapphire releases security firmware update for Radeon RX 7000 graphics cards.",
+    "why_now": "Broke: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "hn-4705c7ca28",
+    "title": "Show HN: Abliterated LLM provider for cyber tasks",
+    "url": "https://refuseless.com",
+    "source": "hn",
+    "published_at": "2026-10-05T12:36:08Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.9678,
+      "age_h": 2.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Qwen"
+    ],
+    "summary": "Current lineup includes GLM 5.3 and its Flash variant. MiMo V2.6 and Qwen Flash Next will be added in the near future.",
+    "why_now": "Shipped: 4 points, 3 comments on HN, 2 h ago",
+    "score": 38
+  },
+  {
+    "id": "hn-45abbcdc12",
+    "title": "DeepSeek Tried to Paint-and Hit a Wall",
+    "url": "https://www.stork.ai/blog/deepseek-tried-to-paintand-hit-a-wall",
+    "source": "hn",
+    "published_at": "2026-10-05T09:10:18Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.921,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 6 h ago",
+    "score": 28
+  },
+  {
+    "id": "hf-bbff35beca",
+    "title": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+    "url": "https://huggingface.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+    "source": "hf",
+    "published_at": "2026-10-01T03:42:00Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 226,
+      "downloads": 1342,
+      "trendingScore": 195.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.74,
+      "signal_parts": {
+        "trending": 0.694,
+        "likes": 0.785,
+        "downloads": 0.521
+      },
+      "decay": 0.2128,
+      "age_h": 107.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 226 likes, 1.3k downloads, trending score 195, created 2026-10-01",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 226 likes, 1.3k downloads, trending score 195, 4 d ago",
+    "score": 27
+  },
+  {
+    "id": "hn-c3eaeddeae",
+    "title": "Show HN: I made Claude Code quiz me on my German mistakes while it works",
+    "url": "https://news.ycombinator.com/item?id=49963445",
+    "source": "hn",
+    "published_at": "2026-10-05T11:24:33Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9512,
+      "age_h": 3.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 3 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-e11005881c",
+    "title": "Full-fabric VHDL LLM inference engine. Runs Qwen3.5-class transformer inference",
+    "url": "https://github.com/Nero7991/llm.vhdl",
+    "source": "hn",
+    "published_at": "2026-10-04T20:48:43Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7704,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-cefedbc7d6",
+    "title": "The Qwen Saga Continues",
+    "url": "https://gabucino.hu/index.htm#2026-09-08-11:37:26",
+    "source": "hn",
+    "published_at": "2026-10-04T06:54:18Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.6303,
+      "age_h": 32.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 32 h ago",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-60dd8ebb83",
+    "title": "From the creator of Redis; run LLM locally with ds4 - Hacker News",
+    "url": "https://news.ycombinator.com/item?id=49936575",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "| | | [From the creator of Redis; run LLM locally with ds4](https://dwarfstar.sh/) ( [dwarfstar.sh](https://news.ycombinator.com/from?site=dwarfstar.sh)) | | | | | |-|-|-| | ![](https://news.ycombinator.com/s.gif) | | [LoganDark](https://news.ycombinator.com/user?id=LoganDark) [19 hours ago](https:/",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-817b959b11",
+    "title": "Best Local LLM in October 2026 (Updated Monthly Methodology)",
+    "url": "https://app.stationx.net/articles/best-local-llm",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "# Best Local LLM in October 2026 (Updated Monthly Methodology) October 202611 min readBy Nathan House If you've gone looking for the **best local LLM** and ended up reading three \"top 5 models for 2026\" articles that contradict each other, you're not alone. Open-weight models ship weekly, leaderboar",
+    "why_now": "Shipped: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-62a8706f5a",
+    "title": "I Tested GitHub SpecKit on a Local LLM (Is It Better?) - YouTube",
+    "url": "https://m.youtube.com/watch?v=UwRA7srUWmw",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "1 day ago · Can GitHub SpecKit replace raw vibe coding when building full applications with local LLMs? In this video, I test spec-driven AI development using GitHub ...",
+    "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-531760281d",
+    "title": "Managing OS and Software Updates -- NVIDIA DGX OS 7 User Guide",
+    "url": "https://docs.nvidia.com/dgx/dgx-os-7-user-guide/additional_software.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "# Managing OS and Software Updates [#](https://docs.nvidia.com/dgx/dgx-os-7-user-guide/additional_software.html#managing-os-and-software-updates) ## Changing Your GPU Driver Branch [#](https://docs.nvidia.com/dgx/dgx-os-7-user-guide/additional_software.html#changing-your-gpu-driver-branch) ### Upgra",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-16c1c50fea",
+    "title": "Known Issues -- NVIDIA DGX OS 7 User Guide",
+    "url": "https://docs.nvidia.com/dgx/dgx-os-7-user-guide/known_issues.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "# Known Issues [#](https://docs.nvidia.com/dgx/dgx-os-7-user-guide/known_issues.html#known-issues) ## nvidia_fs Kernel Module Fails to Load During Upgrade [#](https://docs.nvidia.com/dgx/dgx-os-7-user-guide/known_issues.html#nvidia-fs-kernel-module-fails-to-load-during-upgrade) ### Workaround [#](ht",
+    "why_now": "Broke: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "hn-c34ecd3578",
+    "title": "Show HN: Bearbits - AI copilot that helps during meetings instead of only after",
+    "url": "https://bearbits.io/",
+    "source": "hn",
+    "published_at": "2026-10-04T15:35:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7144,
+      "age_h": 23.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Copilot",
+      "group": "myth-bust"
+    },
+    "products": [
+      "Copilot"
+    ],
+    "summary": "I built this app mainly for myself and my wife. We both work in consulting and have tons of meetings every week. I had tried many of the existing meeting copilots but never found something that actually fulfilled what I wanted. Mainly, I wanted to be able to see in real time what&#x27;s being said,",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 23 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-1ef0ea707c",
+    "title": "Show HN: Agents Sleep Preventer - keep your Mac awake only while AI agents work",
+    "url": "https://github.com/CharlonTank/agents-sleep-preventer",
+    "source": "hn",
+    "published_at": "2026-10-04T15:01:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7086,
+      "age_h": 23.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I run several Claude Code and Codex sessions in parallel and kept coming back to either a sleeping Mac with half-finished work, or a Mac that stayed up all night because I&#x27;d left caffeinate on.<p>Agents Sleep Preventer hooks into the agents&#x27; own configs (Claude Code, Codex, Hermes), so it",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 24 h ago",
+    "score": 23
+  },
+  {
+    "id": "github-7f0abc699c",
+    "title": "ollama v0.35.1",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.35.1",
+    "source": "github",
+    "published_at": "2026-09-29T20:14:22Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.35.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.1351,
+      "age_h": 138.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "## Clef decision models Ollama now supports [Clef](https://ollama.com/library/clef) and [Clef Flash](https://ollama.com/library/clef), Cloudflare's new open-source decision models, through `/v1/systemone`. Clef (27B) and Clef Flash (9B) are multimodal: requests can now include images alongside the t",
+    "why_now": "Shipped: ollama/ollama v0.35.1 released, 6 d ago",
+    "score": 23
+  },
+  {
+    "id": "hn-473f912d71",
+    "title": "Show HN: Browsentic Open-source Claude for Chrome alternative for any agent CLI",
+    "url": "https://github.com/imshaikot/browsentic",
+    "source": "hn",
+    "published_at": "2026-10-05T13:08:05Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9752,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "A personal agent harness lives in your existing browser, connects to your claude-code (or any other major harness codex or cursor-cli...) NOT the SDK API, exposes web-optimized tools to the harness - that&#x27;s Browsentic.<p>A free, opensource (Apache 2.0) with rich capabilities alternative to Come",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-4b4a71eb65",
+    "title": "DeepSeek Builds for Huawei Ascend",
+    "url": "https://www.geopolitechs.org/p/deepseek-builds-for-huawei-ascend",
+    "source": "hn",
+    "published_at": "2026-10-05T02:57:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8419,
+      "age_h": 11.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-1d621196bf",
+    "title": "Claude Code Found My Pirc and King's Indian Mistakes",
+    "url": "https://quickchat.ai/post/claude-code-stockfish-chess-opening-mistakes",
+    "source": "hn",
+    "published_at": "2026-10-04T21:50:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7819,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-26cde210c9",
+    "title": "Show HN: Open-source implementation of DSec Paper by DeepSeek",
+    "url": "https://github.com/djinn/fireagent",
+    "source": "hn",
+    "published_at": "2026-10-03T18:50:01Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.5294,
+      "age_h": 44.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 44 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-2b2041c9e9",
+    "title": "Aleph-Alpha/Kolibri-1",
+    "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+    "source": "hf",
+    "published_at": "2026-10-02T05:54:02Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 554,
+      "downloads": 2453,
+      "trendingScore": 539.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.871,
+      "signal_parts": {
+        "trending": 0.828,
+        "likes": 0.915,
+        "downloads": 0.565
+      },
+      "decay": 0.3106,
+      "age_h": 81.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 554 likes, 2.5k downloads, trending score 539, created 2026-10-02",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 554 likes, 2.5k downloads, trending score 539, 3 d ago",
+    "score": 21
+  },
+  {
+    "id": "hn-4cc6690283",
+    "title": "Qwen3.8-Flash-Next 177B running at 11-15 tok/s on 1 RTX 5070 12GB and 32GB RAM",
+    "url": "https://github.com/MohammadHaishemKhawaja/hashyy",
+    "source": "hn",
+    "published_at": "2026-10-04T06:22:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.6255,
+      "age_h": 32.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "RTX 5070"
+    ],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 32 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-b474ccb4dd",
+    "title": "Viggle/Qwen-Image-2.1-viggle-turbo",
+    "url": "https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo",
+    "source": "hf",
+    "published_at": "2026-09-22T04:14:56Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 601,
+      "downloads": 286885,
+      "trendingScore": 200.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.812,
+      "signal_parts": {
+        "trending": 0.698,
+        "likes": 0.926,
+        "downloads": 0.91
+      },
+      "decay": 0.05,
+      "age_h": 322.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 601 likes, 286.9k downloads, trending score 200, created 2026-09-22",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 601 likes, 286.9k downloads, trending score 200, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-114a956955",
+    "title": "An OpenAI agent reached four Australian government systems. Nobody noticed",
+    "url": "https://trustboundarystudio.com/posts/openai-medicare-2026/",
+    "source": "hn",
+    "published_at": "2026-10-04T23:29:37Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8009,
+      "age_h": 15.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 15 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-15f383881f",
+    "title": "How we built a browser agent with Jev instead of an LLM",
+    "url": "https://ironbee.ai/blog/how-we-built-the-fastest-cheapest-browser-agent-with-jev",
+    "source": "hn",
+    "published_at": "2026-10-05T14:00:53Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9877,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 1 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-271f5e1bd3",
+    "title": "Show HN: Four LLMs play 20 questions for real money, live",
+    "url": "https://aquarium.money/twenty",
+    "source": "hn",
+    "published_at": "2026-10-03T20:29:18Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.5422,
+      "age_h": 42.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I wanted to explore how AI models behave when they have their own money. So I gave 4 frontier models their own USDC and had them compete in games of 20 questions. Anyone can watch live.<p>Each round, one model takes a turn picking the secret word, and the others interrogate it in a group chat",
+    "why_now": "Shipped: 4 points, 1 comments on HN, 42 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-3cea3b76b7",
+    "title": "Show HN: Agnochat ppure client-side LLM chat, no server, no account",
+    "url": "https://gmaterni.github.io/agnochat/",
+    "source": "hn",
+    "published_at": "2026-10-05T09:22:49Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9238,
+      "age_h": 5.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 5 h ago",
+    "score": 10
+  },
+  {
+    "id": "hf-99a91df48b",
+    "title": "autotrust/JEV-27B-VL",
+    "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+    "source": "hf",
+    "published_at": "2026-09-30T05:02:23Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 254,
+      "downloads": 1278569,
+      "trendingScore": 208.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.851,
+      "signal_parts": {
+        "trending": 0.703,
+        "likes": 0.802,
+        "downloads": 1.0
+      },
+      "decay": 0.1534,
+      "age_h": 129.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 254 likes, 1.3M downloads, trending score 208, created 2026-09-30",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 254 likes, 1.3M downloads, trending score 208, 5 d ago",
+    "score": 10
+  },
+  {
+    "id": "hn-bda701f85b",
+    "title": "Is Hugging Face Down?",
+    "url": "https://huggingface.co/models?other=base_model:quantized:ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+    "source": "hn",
+    "published_at": "2026-10-04T16:34:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7247,
+      "age_h": 22.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 22 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-c847e4f4f0",
+    "title": "Show HN: Google Trends for Hacker News Comments",
+    "url": "https://hntrends.hughparry.com/",
+    "source": "hn",
+    "published_at": "2026-10-04T15:50:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.717,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "I&#x27;ve seen a fair few posts recently that try to categorise HN posts, so I thought google trends for hacker news would be fun.<p>- chart the popularity of phrases up to 3 words long - includes all hn comments, apart from stuff like who&#x27;s hiring threads - quite fun for looking at trends you&",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 23 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-05b8af4d20",
+    "title": "Show HN: Seylo, project files and references your AI can use",
+    "url": "https://seylo.co",
+    "source": "hn",
+    "published_at": "2026-10-05T12:30:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9665,
+      "age_h": 2.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, I am building Seylo solo. It keeps your projects references, files, notes, hooks, video scripts in one place.<p>You can save stuff from browser extension, fe. pinterest inspirations; your phone (now only iPhone supported) fe. tiktok&#x2F;ig videos of your competitors; What&#x27;s more you ca",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-433815bede",
+    "title": "OntoPrune - Pruning 85% LLM context tokens and 6.7x TTFT on CPU",
+    "url": "https://github.com/vigmarcarlo/OntoPrune",
+    "source": "hn",
+    "published_at": "2026-10-05T12:15:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.963,
+      "age_h": 2.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-b533049b56",
+    "title": "Show HN: Recursant, the agent-aware model router built for hybrid workloads",
+    "url": "https://github.com/ajensenwaud/recursant/",
+    "source": "hn",
+    "published_at": "2026-10-05T04:01:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.855,
+      "age_h": 10.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:inference",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "Sharing Recursant, the agent-aware model router for private&#x2F;public workloads. Cut your AI agent bill by 30% and seamlessly operate agents across private and public inference infrastructure. Recursant is agent-aware, routes intelligently, built to be fast (C), and intended for privacy.<p>github.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-e48b12b7a5",
+    "title": "Show HN: SRA-RiskGate-4B - Local LLM for stablecoin risk gating and disputes",
+    "url": "https://huggingface.co/sriram1983007/SRA-RiskGate-4B",
+    "source": "hn",
+    "published_at": "2026-10-05T03:57:49Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8543,
+      "age_h": 10.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-c6c445a9b3",
+    "title": "Show HN: C++ LSP for the LeetCode editor and Vim keybindings",
+    "url": "https://twitter.com/emerald_d3v/status/2106885158360195426",
+    "source": "hn",
+    "published_at": "2026-10-04T23:18:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7987,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Pretty self-explanatory tbh. I kept hitting the same friction using LeetCode, the built-in editor has no real language support and none of the Vim muscle memory I rely on everywhere else. So I started building it in.<p>This is also where I love AI, I had started to work on it years ago, at first it",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-a61072516a",
+    "title": "Show HN: Shlexball, describe a file and a local 1.5B model finds it on your Mac",
+    "url": "https://shlexball.com/",
+    "source": "hn",
+    "published_at": "2026-10-04T23:05:21Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7962,
+      "age_h": 15.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "Basically, I didn&#x27;t want to waste my opus 5.5 or codex Astra credits just to find files in my machine, so I trained a local LLM which is only 1.5B to write bash to find files on your macos laptop (works on apple silicon, uses little ram).<p>Full privacy since it&#x27;s local so you can look for",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-0eebba796c",
+    "title": "Powerful open model is set to shake up AI race",
+    "url": "https://www.axios.com/2026/10/04/reflection-open-weight-ai",
+    "source": "hn",
+    "published_at": "2026-10-04T17:28:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7342,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-54e704ce32",
+    "title": "Jabhook - Boxing Training (Computer Vision, 3D Biomechanics, Local LLM)",
+    "url": "https://jabhook.ai/",
+    "source": "hn",
+    "published_at": "2026-10-03T15:10:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.5022,
+      "age_h": 47.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 48 h ago",
+    "score": 4
+  }
+]
