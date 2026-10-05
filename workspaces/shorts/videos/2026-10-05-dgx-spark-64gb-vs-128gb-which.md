@@ -2,19 +2,19 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
 title: "DGX Spark 64GB vs 128GB: what fits"
-status: ready-to-build
+status: building
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
-updated: "2026-10-05T15:00:44Z"
+updated: "2026-10-05T16:21:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,4 +43,4 @@ blotato_post_id: ""
 - 2026-10-05T16:21:00Z - package: searchable title chosen (autocomplete depth 26 target); rubric self-scored 100/100; description names the 2026-09-29 DGX Spark Handbook as closest related video.
 
 ## Build journal
-
+- 2026-10-05T16:21:10Z build start on gn100-83c4
