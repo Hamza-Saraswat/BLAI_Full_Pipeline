@@ -1,0 +1,223 @@
+{
+  "slug": "2026-10-05-dgx-spark-64gb-vs-128gb-which",
+  "topic": "DGX Spark 64GB vs 128GB: which one do you actually need",
+  "generated_at": "2026-10-05T15:14:04Z",
+  "depth": "standard",
+  "thesis": "The 64GB Spark is enough when your biggest model squeezes under the pool at 3 to 4-bit; the 128GB earns its price the moment a 100B-class model at honest 4-bit quality, or long context, or several agents at once, is the workload.",
+  "explanation_path": "Open on what did not change: same GB10 Grace Blackwell Superchip, same 273 GB/s memory bandwidth, same DGX OS stack, so a buyer comparing the $4,999 64GB box with the $6,950 128GB box is buying exactly one thing, memory capacity. With that frame, teach the budget equation before any model names: the pool holds the quantized weights plus a KV cache that grows with context length and concurrent requests plus 4-8 GB of system overhead, and everything competes for the same pool. Then run the equation on real downloads: GLM-4.5-Air, a 106B-total-parameter mixture of experts, is a 73 GB download at Q4_K_M (the entire 64GB pool cannot hold it) and 57.2 GB at Q3_K_M (it fits, with almost no room left for context); gpt-oss-120b ships its expert layers already 4-bit, so its GGUF sits near 62.8 GB no matter the quant, effectively a 128GB-class model. This is also the honest reading of NVIDIA's own claim that the 64GB box supports up to 100-billion-parameter models: it assumes the most aggressive quantization. Close on the escape hatch and the verdict rule: two 64GB units cluster to 128GB at around $8,000, which is more than the single 128GB box at $6,950, so the delta pays for 100B-class models at 4-bit quality, long context, or concurrency, and does not pay for a faster machine.",
+  "claims": [
+    {
+      "claim": "NVIDIA launched a 64GB DGX Spark configuration at $4,999, available October 23 from six OEM partners.",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+      "source_title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "NVIDIA says the 64GB configuration supports up to 100-billion-parameter models fully on device, with the same GB10 Superchip and software stack as the 128GB model.",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+      "source_title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "NVIDIA says two 64GB units cluster over one QSFP cable, pooling memory to 128GB, supporting up to 200 billion parameters, twice the memory bandwidth, and up to 1.7x the performance in NVIDIA's Qwen 3.8 27B test.",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+      "source_title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "The 128GB DGX Spark, which launched at $3,999 about a year ago, now sells for $6,950.",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases/",
+      "source_title": "NVIDIA DGX Spark 64GB Launched and Big 128GB GB10 Price Increases",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "The Register corroborates the jump to $6,950 as an increase of nearly 75 percent, blaming skyrocketing memory prices.",
+      "source_url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622",
+      "source_title": "Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid memory crunch",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "The only specification the 64GB model cuts is memory capacity: memory bandwidth remains unchanged at 273 GB/s.",
+      "source_url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622",
+      "source_title": "Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid memory crunch",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "ServeTheHome reports NVIDIA's own cluster pricing at around $8,000 for two 64GB units pooling to 128GB, and recommends a single 128GB node instead of two 64GB nodes.",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases/",
+      "source_title": "NVIDIA DGX Spark 64GB Launched and Big 128GB GB10 Price Increases",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "On the 128GB machine, system overhead of typically 4-8 GB leaves a practical usable budget of roughly 115-120 GB for weights and KV cache, and the KV cache grows as context length grows.",
+      "source_url": "https://docs.tokios.com/guides/dgx-spark-model-compatibility",
+      "source_title": "DGX Spark model compatibility -- what fits in 128GB",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "GLM-4.5-Air, a 106B-total / 12B-active-parameter model, downloads at 73 GB in standard Q4_K_M GGUF but 57.2 GB at Q3_K_M (BF16 is 221 GB).",
+      "source_url": "https://huggingface.co/unsloth/GLM-4.5-Air-GGUF",
+      "source_title": "unsloth/GLM-4.5-Air-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    },
+    {
+      "claim": "gpt-oss-120b (117B parameters with 5.1B active parameters) ships its MoE layers in native MXFP4 and runs on a single H100 GPU; its Q4_K_M GGUF is 62.8 GB, and every quant from 2-bit to 8-bit lands between 62.6 GB and 65.4 GB.",
+      "source_url": "https://huggingface.co/unsloth/gpt-oss-120b-GGUF",
+      "source_title": "unsloth/gpt-oss-120b-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-05"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "64GB DGX Spark starting price",
+      "value": "$4,999",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+    },
+    {
+      "label": "128GB DGX Spark price now",
+      "value": "$6950",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases/"
+    },
+    {
+      "label": "128GB DGX Spark launch price (about a year ago)",
+      "value": "$3999",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases/"
+    },
+    {
+      "label": "GLM-4.5-Air Q4_K_M GGUF download",
+      "value": "73 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-4.5-Air-GGUF"
+    },
+    {
+      "label": "GLM-4.5-Air Q3_K_M GGUF download",
+      "value": "57.2 GB",
+      "source_url": "https://huggingface.co/unsloth/GLM-4.5-Air-GGUF"
+    },
+    {
+      "label": "gpt-oss-120b Q4_K_M GGUF download",
+      "value": "62.8 GB",
+      "source_url": "https://huggingface.co/unsloth/gpt-oss-120b-GGUF"
+    },
+    {
+      "label": "64GB configuration model ceiling per NVIDIA",
+      "value": "up to 100-billion-parameter models",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+    },
+    {
+      "label": "memory bandwidth, both configs",
+      "value": "273 GB/s",
+      "source_url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Moving truck",
+      "mapping": "the memory pool is the cargo box, quantization is how tightly each piece is packed, and the KV cache is the clearing floor that grows the longer the trip (the context)",
+      "limit": "packing a truck tighter never damages the furniture, but every step down in quantization measurably degrades the model"
+    },
+    {
+      "vehicle": "Workshop bench",
+      "mapping": "the weights are tools that must all sit on the bench at once, the context is open workspace that grows with the document, and system overhead is the clerk's desk you can never reclaim",
+      "limit": "a bench is static per worker, while one Spark's pool is shared live by the OS, the CUDA runtime, and every simultaneous request"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "\"up to 100 billion parameters\" on the 64GB box means it runs 100B models the same way the 128GB box does.",
+      "reality": "That ceiling assumes the most aggressive quantization; a 106B model at standard Q4_K_M is already a 73 GB download, over the entire 64GB pool, so 64GB means 3-bit at 57.2 GB with almost nothing left for context (claims 2, 9)."
+    },
+    {
+      "myth": "Twice the memory makes the model twice as fast, so 128GB is the performance pick.",
+      "reality": "Both configurations keep the same GB10 chip and the same 273 GB/s memory bandwidth; the extra 64GB buys capacity for bigger models, longer context, or more simultaneous requests, not speed (claims 2, 6)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "unified memory",
+      "definition": "One pool of memory shared by the CPU and the GPU, so the model's weights and working data do not need to be copied between them."
+    },
+    {
+      "term": "quantization",
+      "definition": "Storing each model weight in fewer bits, shrinking the download and the memory it needs, at some cost in quality."
+    },
+    {
+      "term": "4-bit (Q4_K_M)",
+      "definition": "A common GGUF quantization level that uses roughly 4 bits per weight; widely treated as the quality floor most people accept."
+    },
+    {
+      "term": "3-bit (Q3_K_M)",
+      "definition": "A more aggressive GGUF quantization level, smaller than 4-bit, with a further quality cost."
+    },
+    {
+      "term": "GGUF",
+      "definition": "The single-file model format that local runtimes such as llama.cpp, Ollama, and LM Studio download and run."
+    },
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model architecture where only a fraction of the total parameters, the active parameters, are used for each token."
+    },
+    {
+      "term": "total vs active parameters",
+      "definition": "Total is how many parameters exist in memory; active is how many each token actually uses, which sets the speed."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The working memory a model builds while reading your conversation; it grows with context length and with the number of simultaneous requests."
+    },
+    {
+      "term": "context window",
+      "definition": "How much conversation and document text the model can hold in memory at once, measured in tokens."
+    },
+    {
+      "term": "system overhead",
+      "definition": "The several gigabytes of the memory pool consumed by the operating system, the CUDA runtime, and the serving stack before any model loads."
+    },
+    {
+      "term": "OEM",
+      "definition": "The hardware makers (Acer, ASUS, Dell, Gigabyte, HP, MSI) that build and sell the 64GB DGX Spark configurations."
+    },
+    {
+      "term": "cluster",
+      "definition": "Two or more DGX Sparks cabled together so their memory pools act as one larger pool for a bigger model."
+    }
+  ],
+  "unverified": [
+    "NVIDIA has not published a 64GB-specific table of which quantizations of which models run, so the 64GB fit math here is derived from public GGUF file sizes plus the 128GB overhead figure.",
+    "Applying the 4-8 GB system overhead measured on 128GB machines to the 64GB machine (leaving roughly 56-60 GB usable) is an inference, not a published NVIDIA number.",
+    "Tokens-per-second on the 64GB machine is unmeasured; NVIDIA's own cluster figure is up to 1.7x for two units, and no single-unit 64GB throughput number exists yet.",
+    "Whether the $4,999 OEM configurations ship with 1TB or 4TB of storage is not confirmed.",
+    "Community reports put multi-user concurrency on the 128GB box at roughly 5-10 simultaneous users before it becomes unresponsive; no tier 1-3 page confirms a 64GB equivalent."
+  ],
+  "suggested_outline": "Hook with the price inversion: the new 64GB box at $4,999 costs more than the 128GB box did at launch ($3,999), while the 128GB just jumped to $6,950, nearly 75 percent in a year.\nEstablish that nothing else changed (same chip, same 273 GB/s, same stack), so the choice is pure fit math: quantized weights plus KV cache plus 4-8 GB of overhead against the pool.\nLand the verdict with GLM-4.5-Air: 73 GB at 4-bit needs the 128GB box, 57.2 GB at 3-bit squeaks into 64GB with no room to think, clustering two 64GB units costs around $8,000, so 64GB pays only if your real model is 35B-class with modest context.",
+  "notes": "Conflict: wccftech reports the 128GB box \"already going for over $6000 US\" while ServeTheHome and The Register both name the specific new tier, $6,950; the brief carries $6,950 as the defensible figure on two independent reports, and treats \"past $6,000\" as street pricing across OEMs. Thin spot: NVIDIA's \"up to 100-billion-parameter models\" claim for 64GB has no published per-quant breakdown, so the 64GB side of the fit math rests on public GGUF file sizes (73 GB at Q4_K_M, 57.2 GB at Q3_K_M, 62.8 GB for gpt-oss-120b) rather than an NVIDIA 64GB documentation page. Useful contrast for the \"why not a consumer GPU\" beat: everything in the 40-60 GB band above fits 64GB unified memory and cannot fit a 24-32GB consumer graphics card, which is the actual capability the $4,999 buys. The NVIDIA product page and the Enverge quantization guide were fetched for corroboration (scale table: 64 GB up to 100B parameters, 128 GB up to 200B; 70B at FP16 about 140 GB shrinking to about 35 GB at NVFP4) and are cited here rather than under Claims to stay inside the claim band.",
+  "viewer_situation": "You have been waiting to buy a DGX Spark with a gaming PC or a Mac already on your desk, and this week the choice got weird: a new 64GB box at $4,999 next to a 128GB box that just jumped from $3,999 to $6,950.",
+  "has_process": true,
+  "process_steps": [
+    "Name the biggest model you would actually run week to week.",
+    "Look up its quantized download size at the quality level you accept, on the model's GGUF file table.",
+    "Add the KV cache your typical context window needs.",
+    "Subtract 4-8 GB of system overhead from the memory pool.",
+    "Choose 64GB if the total fits under it; choose 128GB if the 4-bit download alone already exceeds 64GB, or you need long context or several agents at once."
+  ],
+  "objection": "Both boxes share 273 GB/s of laptop-class memory bandwidth, so a 192GB AMD Halo machine or a pair of used 24GB cards buys memory cheaper per gigabyte, and the 128GB Spark only earns its price if CUDA and the cluster path are hard requirements rather than preferences."
+}
