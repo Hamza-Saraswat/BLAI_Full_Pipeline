@@ -2,8 +2,9 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 title: "DGX Spark 64GB vs 128GB: what fits"
 published_slot: "2026-10-05T18:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=hW1BJchnD7A"
 blotato_post_id: 4604534f-80ca-4768-a3fb-a2bbcbf34371
+updated: "2026-10-05T23:00:45Z"
 ---
 # DGX Spark 64GB vs 128GB: what fits
 

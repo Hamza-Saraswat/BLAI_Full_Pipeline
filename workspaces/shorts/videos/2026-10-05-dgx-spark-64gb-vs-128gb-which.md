@@ -2,21 +2,21 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
 title: "DGX Spark 64GB vs 128GB: what fits"
-status: scheduled
+status: published
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
-updated: "2026-10-05T17:21:13Z"
+updated: "2026-10-05T23:00:45Z"
 publish_slot: "2026-10-05T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=hW1BJchnD7A"
 blotato_post_id: 4604534f-80ca-4768-a3fb-a2bbcbf34371
 ---
 # DGX Spark 64GB vs 128GB: which one do you actually need
@@ -51,3 +51,4 @@ blotato_post_id: 4604534f-80ca-4768-a3fb-a2bbcbf34371
 - 2026-10-05T16:39:39Z build done, status review
 - 2026-10-05T17:15:35Z telegram approve (approved_at 2026-10-05T17:15:35Z)
 - 2026-10-05T17:21:13Z 08-publish ok 3s
+- 2026-10-05T23:00:45Z published https://www.youtube.com/watch?v=hW1BJchnD7A
