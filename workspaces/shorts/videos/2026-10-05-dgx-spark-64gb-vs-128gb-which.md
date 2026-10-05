@@ -2,22 +2,22 @@
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
 title: "DGX Spark 64GB vs 128GB: what fits"
-status: approved
+status: scheduled
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
-updated: "2026-10-05T17:15:35Z"
-publish_slot: ""
+updated: "2026-10-05T17:21:13Z"
+publish_slot: "2026-10-05T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 4604534f-80ca-4768-a3fb-a2bbcbf34371
 ---
 # DGX Spark 64GB vs 128GB: which one do you actually need
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-package]]
 - Voice: [[stages/06-voice/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-narration|narration.txt (normalized)]]
 - Render: [[stages/07-render/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-publish]]
 
 ## Decisions
 - 2026-10-05T15:23:24Z - research: angle confirmed as picked (quant-fit decision math); 9 sources (4 primary, 5 docs), validator exit 0; brief linked.
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-10-05T16:39:36Z 07-render ok 633s
 - 2026-10-05T16:39:39Z build done, status review
 - 2026-10-05T17:15:35Z telegram approve (approved_at 2026-10-05T17:15:35Z)
+- 2026-10-05T17:21:13Z 08-publish ok 3s
