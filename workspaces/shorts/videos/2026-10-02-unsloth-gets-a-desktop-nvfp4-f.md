@@ -2,14 +2,14 @@
 slug: 2026-10-02-unsloth-gets-a-desktop-nvfp4-f
 workspace: shorts
 title: "Unsloth gets a desktop: NVFP4 fine-tuning without the notebook"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-02
-updated: "2026-10-02T11:06:51Z"
+updated: "2026-10-05T14:51:28Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-05T14:51:28Z 2026-10-05T14:51:28Z expired: not from today's picks (2026-10-05); the factory carries no backlog
