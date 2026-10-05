@@ -136,3 +136,7 @@ Both boxes share 273 GB/s of laptop-class memory bandwidth, so a 192GB AMD Halo 
 
 ## Notes
 Conflict: wccftech reports the 128GB box "already going for over $6000 US" while ServeTheHome and The Register both name the specific new tier, $6,950; the brief carries $6,950 as the defensible figure on two independent reports, and treats "past $6,000" as street pricing across OEMs. Thin spot: NVIDIA's "up to 100-billion-parameter models" claim for 64GB has no published per-quant breakdown, so the 64GB side of the fit math rests on public GGUF file sizes (73 GB at Q4_K_M, 57.2 GB at Q3_K_M, 62.8 GB for gpt-oss-120b) rather than an NVIDIA 64GB documentation page. Useful contrast for the "why not a consumer GPU" beat: everything in the 40-60 GB band above fits 64GB unified memory and cannot fit a 24-32GB consumer graphics card, which is the actual capability the $4,999 buys. The NVIDIA product page and the Enverge quantization guide were fetched for corroboration (scale table: 64 GB up to 100B parameters, 128 GB up to 200B; 70B at FP16 about 140 GB shrinking to about 35 GB at NVFP4) and are cited here rather than under Claims to stay inside the claim band.
+
+## Decisions
+- Angle confirmed as picked: quant-fit decision math for the 64GB vs 128GB DGX Spark; keyword "dgx spark 64gb"; no redirect needed (unattended call).
+- Sources: 9 fetched (4 primary, 5 docs); has_process set true because the decision rule is five steps the viewer performs on a GGUF file table, not a mechanism.
