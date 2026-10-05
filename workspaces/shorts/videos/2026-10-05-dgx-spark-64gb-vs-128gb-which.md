@@ -1,8 +1,8 @@
 ---
 slug: 2026-10-05-dgx-spark-64gb-vs-128gb-which
 workspace: shorts
-title: "DGX Spark 64GB vs 128GB: which one do you actually need"
-status: scripted
+title: "DGX Spark 64GB vs 128GB: what fits"
+status: ready-to-build
 pillar: comparison
 structure: comparison-ladder
 format: classic
@@ -11,7 +11,7 @@ value_types: "TEACHES,EQUIPS"
 created: 2026-10-05
 updated: "2026-10-05T15:00:44Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-05-ideas]]
 - Research: [[stages/03-research/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-brief]]
 - Script: [[stages/04-script/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-package]]
+- Voice: [[stages/06-voice/output/2026-10-05-dgx-spark-64gb-vs-128gb-which-narration|narration.txt (normalized)]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -39,6 +39,8 @@ blotato_post_id: ""
 
 - 2026-10-05T16:18:31Z - script: structures comparison-ladder (A) vs myth-bust (B), both clear rotation; judge A 21-16, no grafts.
 - 2026-10-05T16:18:31Z - script: validator 0 blockers 0 advisories; eval 9/9 gates (number_spend 5/5); sameness clean vs last 5; normalizer scenes_changed 2.
+
+- 2026-10-05T16:21:00Z - package: searchable title chosen (autocomplete depth 26 target); rubric self-scored 100/100; description names the 2026-09-29 DGX Spark Handbook as closest related video.
 
 ## Build journal
 
