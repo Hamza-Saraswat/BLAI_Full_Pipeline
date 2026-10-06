@@ -1,0 +1,829 @@
+[
+  {
+    "id": "hn-7ded5c03ab",
+    "title": "Beam: Reflection's 501B open-weight model",
+    "url": "https://reflection.ai/blog/introducing-beam",
+    "source": "hn",
+    "published_at": "2026-10-05T19:16:35Z",
+    "signals": {
+      "points": 468,
+      "num_comments": 148,
+      "signal": 0.999,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.997
+      },
+      "decay": 0.7966,
+      "age_h": 15.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 468 points, 148 comments on HN, 16 h ago",
+    "score": 68
+  },
+  {
+    "id": "github-f8c8601bce",
+    "title": "llama.cpp b11438",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11438",
+    "source": "github",
+    "published_at": "2026-10-06T10:01:50Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11438",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9858,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> test-llama-archs : initialize backends before generating models (#30034) With GGML_BACKEND_DL=ON, backends must be loaded explicitly before creating models. Assisted-by: Codex </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/atte",
+    "why_now": "Shipped: ggml-org/llama.cpp b11438 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-961818bac3",
+    "title": "llama.cpp b11436",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11436",
+    "source": "github",
+    "published_at": "2026-10-06T09:41:06Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11436",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9809,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> ggml-openvino: fix CI tests; fix GPU regressions. (#30037) * ggml-openvino: skip unselected graph branches and support DUP Upstream #29622 adds a mixed token/embd branch to every input embedding graph through ggml_build_forward_select(). Its nodes are not flagged for compute, but the ",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b11436 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-93eaa5349d",
+    "title": "llama.cpp b11435",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11435",
+    "source": "github",
+    "published_at": "2026-10-06T06:16:04Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11435",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9336,
+      "age_h": 4.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> llama: fix k-pool scatter data race on shared sequences (#29994) * llama: re-pool each shared k-pool rep once With shared cells every pool is re-pooled, and since the pooled keys are always scattered, the pools a seq_cp shares between sequences wrote the same rep row from several scat",
+    "why_now": "Shipped: ggml-org/llama.cpp b11435 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-d2ecc8c118",
+    "title": "DeepSeek to Raise at Least $12B in Tencent-Backed Funding",
+    "url": "https://www.bloomberg.com/news/articles/2026-10-06/deepseek-to-raise-at-least-12-billion-in-tencent-backed-funding",
+    "source": "hn",
+    "published_at": "2026-10-06T06:19:05Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.9343,
+      "age_h": 4.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 1 comments on HN, 5 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-29936a98bd",
+    "title": "Show HN: I finetuned 1.5B Qwen to near GPT-4o level bash generation perf",
+    "url": "https://dirac.run/posts/easycommand",
+    "source": "hn",
+    "published_at": "2026-10-05T15:35:29Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.7553,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "Purely a hobby side project to see how far I can push a really small model, using (mostly) automated training pipelines<p>Original mention: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49869735\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49869735</a><p>There were a bunch of",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 19 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-bd526f5f23",
+    "title": "Show HN: Flash-Agents - DSH as MCP for Claude",
+    "url": "https://github.com/tomw1808/flash-agents",
+    "source": "hn",
+    "published_at": "2026-10-05T19:02:57Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.794,
+      "age_h": 16.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "DeepSeek"
+    ],
+    "summary": "I do a lot of work using claude and codex.<p>I use plenty of sub-agents. But nothing balances bang for the buck as good as deepseek v4.1 flash for me. So I thought, why not use the deepseek harness as MCP and drive it from claude as an orchestrator. I am probably not alone with this idea, but I have",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 16 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-406dd55cdd",
+    "title": "Show HN: Ototo: Offload code exploration to a smaller model from Claude et al.",
+    "url": "https://ototo.dev/",
+    "source": "hn",
+    "published_at": "2026-10-05T21:25:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8218,
+      "age_h": 13.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hey all - I made a thing with my clanker Kevin: Ototo (<a href=\"https:&#x2F;&#x2F;ototo.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;ototo.dev&#x2F;</a>) - <i>yes this is clanker driven dev</i>. The idea is to offload code exploration and other token&#x27;y heavy tasks to a smaller model to do the wo",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 14 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-53cbbeaeea",
+    "title": "Jeff-Code: a 0.8B model makes Qwen 3.8-27B coding 47% faster, same pass rate",
+    "url": "https://github.com/firelex/jeff-code",
+    "source": "hn",
+    "published_at": "2026-10-05T18:51:11Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7918,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 16 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-44ce0cefc7",
+    "title": "Local Quantization and Multi-Back End Deployment with AMD Quark on Strix Halo",
+    "url": "https://rocm.blogs.amd.com/artificial-intelligence/quark-strix-halo/README.html",
+    "source": "hn",
+    "published_at": "2026-10-06T07:50:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9552,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:AMD",
+      "group": "news-react"
+    },
+    "products": [
+      "AMD",
+      "Strix Halo"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-1e149475c0",
+    "title": "Running Qwen Flash Next Q4 on a Mac Mini",
+    "url": "https://freshworktree.com/run-qwen-flash-next-q4-on-a-mac-mini-360-tks-read-in-17-5-tks-decode/",
+    "source": "hn",
+    "published_at": "2026-10-06T05:09:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9189,
+      "age_h": 5.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Mac mini"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-f034daa01b",
+    "title": "Orcah Studio: A local-first video agent that can search your videos",
+    "url": "https://news.ycombinator.com/item?id=49970078",
+    "source": "hn",
+    "published_at": "2026-10-05T20:17:30Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 4,
+      "signal": 0.316,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.321
+      },
+      "decay": 0.8084,
+      "age_h": 14.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey,<p>I&#x27;m Ilias, the founder of Orcah Studio. I&#x27;m building a local-first desktop app (Mac OS available now) that can transcribe audio, recognize faces, detect objects, perform OCR, and describe video scenes.<p>Plus, a local-first video agent that understands your prompt and finds the exac",
+    "why_now": "Discussed: 5 points, 4 comments on HN, 15 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-2f3ba4720b",
+    "title": "Interfaze-1-lite: the first open-weight model for deterministic task",
+    "url": "https://huggingface.co/interfaze-ai/interfaze-1-lite",
+    "source": "hn",
+    "published_at": "2026-10-05T17:00:06Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 1,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.138
+      },
+      "decay": 0.7709,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 6 points, 1 comments on HN, 18 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-e0fecada58",
+    "title": "OpenAI admits response to Australian government hacks 'not good enough'",
+    "url": "https://www.bbc.co.uk/news/articles/cmx2qne2j88wo",
+    "source": "hn",
+    "published_at": "2026-10-06T07:49:53Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.955,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 3 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-7766be447b",
+    "title": "Show HN: Halo - A Personal AI with On-Device Harness, Memory and Browser Agent",
+    "url": "https://apps.apple.com/us/app/halo-personal-ai/id6783715054",
+    "source": "hn",
+    "published_at": "2026-10-05T20:11:08Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 4,
+      "signal": 0.231,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.321
+      },
+      "decay": 0.8071,
+      "age_h": 14.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "Halo is privacy focused personal assistant for iOS that uses a custom built agent harness with support to use you existing LLM subscriptions, Wiki based memory system backed by on-device RAG, a full-fledged local browser agent, chat with generative UI and more.<p>TLDR: It&#x27;s a better version of",
+    "why_now": "Shipped: 2 points, 4 comments on HN, 15 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-f5e92082e7",
+    "title": "KI-LLM Has Reached the Pareto Frontier of Recklessness",
+    "url": "https://killm.pixlw.com/",
+    "source": "hn",
+    "published_at": "2026-10-06T10:02:34Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.986,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 1 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-f32741614e",
+    "title": "Give your LLM more DSLs",
+    "url": "https://yasyf.com/writing/give-your-llm-more-dsls/",
+    "source": "hn",
+    "published_at": "2026-10-05T20:24:58Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8098,
+      "age_h": 14.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 15 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-ab9815c021",
+    "title": "Ask HN: What do you think about AI generated slides for conferences?",
+    "url": "https://news.ycombinator.com/item?id=49973382",
+    "source": "hn",
+    "published_at": "2026-10-06T02:16:24Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8813,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "As in many other areas (e.g. code, emails, PRs, blog posts), people have started using LLMs to generate slides for their conference talks (e.g., set of HTML pages as a talk).<p>On the one hand, the slides look tidy, neat, and precise, with infographics, plots, dashboards, and so on. Nothing to compl",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 9 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-d776c1fc82",
+    "title": "LLM SEO tools in 2026: what each one tracks",
+    "url": "https://picked.so/blog/llm-seo-tools",
+    "source": "hn",
+    "published_at": "2026-10-05T23:24:18Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8456,
+      "age_h": 11.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 12 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-a8a53b8a14",
+    "title": "Show HN: Made a xcom like game in a weekend with AI. 3D, textures, models, etc.",
+    "url": "https://playgama.ai/play/55p62bkfsc",
+    "source": "hn",
+    "published_at": "2026-10-05T16:41:21Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7674,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I published it to playgama, but first want to say how it helped me. One of my ideas was to make something like X-Com but provide an indirect control - you control the leader, and your squad members make the turns themselves, based on their intelligence stats! If they get alive over battles - they le",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-82221f05d6",
+    "title": "Show HN: Recast, an experimental Smalltalk app that repairs itself with an LLM",
+    "url": "https://github.com/rot13maxi/recast",
+    "source": "hn",
+    "published_at": "2026-10-05T15:08:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7504,
+      "age_h": 19.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-6f3526123c",
+    "title": "Sentry: Learning to Recover from LLM Agent Failures at Test Time",
+    "url": "https://github.com/nuglifeleoji/Sentry",
+    "source": "hn",
+    "published_at": "2026-10-06T06:26:05Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9359,
+      "age_h": 4.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 5 h ago",
+    "score": 7
+  },
+  {
+    "id": "hf-5b90f98056",
+    "title": "Cactus-Compute/whistle",
+    "url": "https://huggingface.co/Cactus-Compute/whistle",
+    "source": "hf",
+    "published_at": "2026-09-30T17:13:26Z",
+    "signals": {
+      "pipeline_tag": "automatic-speech-recognition",
+      "likes": 112,
+      "downloads": 1887,
+      "trendingScore": 110.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.652,
+      "signal_parts": {
+        "trending": 0.62,
+        "likes": 0.684,
+        "downloads": 0.546
+      },
+      "decay": 0.1367,
+      "age_h": 137.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "automatic-speech-recognition model on Hugging Face, 112 likes, 1.9k downloads, trending score 110, created 2026-09-30",
+    "why_now": "Shipped: new on Hugging Face (automatic-speech-recognition), 112 likes, 1.9k downloads, trending score 110, 6 d ago",
+    "score": 7
+  },
+  {
+    "id": "hn-23b5eebfe4",
+    "title": "Show HN: All local LLM(s) on all Apple Devices",
+    "url": "https://simulkit.com/en/mac-local-llm",
+    "source": "hn",
+    "published_at": "2026-10-05T20:55:29Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8158,
+      "age_h": 14.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "explainer"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "Various simulation running website with complete LLM indexation support.<p>I thought it would be interesting to explain everyone what kind of model can be run in each type of Apple Device.<p>If I give a shared simulation like <a href=\"https:&#x2F;&#x2F;simulkit.com&#x2F;en&#x2F;mac-local-llm&#x2F;6M",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 14 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-a2d30b422f",
+    "title": "Show HN: Spectra-FFT - Cutting AdamW VRAM Usage by 50% for LLMs",
+    "url": "https://www.spectralabs.si/",
+    "source": "hn",
+    "published_at": "2026-10-05T19:30:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7993,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:vram",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-370ccd4fd6",
+    "title": "Show HN: A simple script to stop all cold sales emails from reaching your inbox",
+    "url": "https://github.com/christianmat/cold-email-killer",
+    "source": "hn",
+    "published_at": "2026-10-05T19:28:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7989,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "how-to"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "Hey HN! Sharing this script I&#x27;ve been using professionally and personally to stop the crazy influx of cold emails that I get daily.<p>It works in the following way:<p>1. Copy + install the Google Apps script in your Gmail. The script runs every 10 minutes by default.<p>2. The script will automa",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-52e5e6bb94",
+    "title": "Evaluating Memory Structure in LLM Agents",
+    "url": "https://arxiv.org/abs/2602.11243",
+    "source": "hn",
+    "published_at": "2026-10-05T18:30:22Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7878,
+      "age_h": 16.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-2c9198df8b",
+    "title": "The-engineering-behind-LLM-inference",
+    "url": "https://blog.x504.dev/p/the-engineering-behind-llm-inference",
+    "source": "hn",
+    "published_at": "2026-10-05T18:04:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.783,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-edb5a8a730",
+    "title": "Show HN: Jiwo - Small decision models topping decision index leaderboard",
+    "url": "https://github.com/jiwidi/jiwo",
+    "source": "hn",
+    "published_at": "2026-10-05T17:02:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7713,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "Spent the weekend turning small LLMs into decision models, with some good results and a lot of learnings along the way. Topping the decision index leaderbard for their categories <a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;spaces&#x2F;multimodalart&#x2F;jev-decision-index\" rel=\"nofollow\">https:&#",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  }
+]
