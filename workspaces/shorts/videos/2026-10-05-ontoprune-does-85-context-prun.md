@@ -2,14 +2,14 @@
 slug: 2026-10-05-ontoprune-does-85-context-prun
 workspace: shorts
 title: "OntoPrune: does 85% context pruning really give 6.7x faster TTFT"
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-05
-updated: "2026-10-05T15:00:44Z"
+updated: "2026-10-06T13:35:01Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 
 
 ## Build journal
-
+- 2026-10-06T13:35:01Z 2026-10-06T13:35:01Z expired: not from today's picks (2026-10-06); the factory carries no backlog
