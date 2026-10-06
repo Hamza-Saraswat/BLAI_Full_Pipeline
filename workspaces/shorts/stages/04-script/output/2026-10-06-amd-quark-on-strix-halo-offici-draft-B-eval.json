@@ -1,0 +1,668 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-06T12:12:56+00:00",
+  "slug": "draft-B",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-06-amd-quark-on-strix-halo-offici-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 1
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 6,
+    "entities_total": 31,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "amd.com",
+      "frame.work",
+      "huggingface.co",
+      "servethehome.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "Qwen3.6-35B-A3B weights, BF16 to W4A16",
+          "value": "roughly 70 GB to about 21 GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventy",
+          "scene_ids": [
+            "s07"
+          ]
+        },
+        {
+          "label": "Peak GPU-visible unified memory (GTT) during on-device quantization, INT4-GS32 GGUF path",
+          "value": "95 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "95",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Status-quo generation speed, Qwen3.5 35B-A3B at Q4_K_M via Ollama, 100% GPU offload",
+          "value": "42.04 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Strix Halo LPDDR5X memory bandwidth",
+          "value": "256 GB/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two hundred fifty-six gigabytes per second",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Unified memory convertible to VRAM via AMD Variable Graphics Memory",
+          "value": "up to 96GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Wikitext-2 perplexity of the Quark Q4_0 GGUF (F16 baseline 6.61 \u00b10.23)",
+          "value": "6.79 \u00b10.24",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 31,
+      "found_count": 4,
+      "score": 0.129,
+      "found": [
+        "Strix Halo",
+        "vLLM",
+        "Ollama",
+        "GB Strix Halo"
+      ],
+      "missing": [
+        "Ryzen AI Max",
+        "INT4",
+        "INT4-GS32",
+        "BF16",
+        "RDNA 3.5",
+        "LPDDR5X",
+        "Q4_K_M",
+        "Framework",
+        "GB of GPU-visible",
+        "GPQA the BF16",
+        "AMD Variable Graphics Memory",
+        "Framework Desktop",
+        "DeepSeek V4 Flash 0731",
+        "Qwen3.6-35B-A3B",
+        "Q4_1",
+        "UInt4",
+        "GTT",
+        "F16",
+        "GPQA",
+        "GS128",
+        "Qwen3.5 35B",
+        "UD-IQ2_XXS",
+        "Zen",
+        "Radeon",
+        "AMD ROCm",
+        "Quark Q4",
+        "Intel Arc 140"
+      ],
+      "top2": [
+        "Strix Halo",
+        "Ryzen AI Max"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Strix Halo",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Ryzen AI Max",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "INT4",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "INT4-GS32",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RDNA 3.5",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5X",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q4_K_M",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Framework",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of GPU-visible",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA the BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AMD Variable Graphics Memory",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Framework Desktop",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4 Flash 0731",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.6-35B-A3B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q4_1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "UInt4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GTT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "F16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GS128",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.5 35B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "UD-IQ2_XXS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Zen",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Radeon",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB Strix Halo",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "AMD ROCm",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Quark Q4",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Intel Arc 140",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 33,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:95 GB"
+      ],
+      "hook_text": "Ninety-five gigabytes of unified memory",
+      "first_sentence": "Ninety-five gigabytes of unified memory."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 12,
+      "specific_count": 6,
+      "ratio": 0.5,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "num:95 GB"
+          ],
+          "narration": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 14.8,
+          "specific": true,
+          "hits": [
+            "entity:Strix Halo",
+            "entity:Ollama"
+          ],
+          "narration": "On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 14.5,
+          "specific": true,
+          "hits": [
+            "entity:Strix Halo"
+          ],
+          "narration": "How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 11.7,
+          "specific": true,
+          "hits": [
+            "num:256 GB/s"
+          ],
+          "narration": "And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": false,
+          "hits": [],
+          "narration": "Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": false,
+          "hits": [],
+          "narration": "And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "num:roughly 70 GB to about 21 GB",
+            "entity:Strix Halo"
+          ],
+          "narration": "Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": false,
+          "hits": [],
+          "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "entity:vLLM"
+          ],
+          "narration": "Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step."
+        },
+        {
+          "id": "s10",
+          "role": "foreshadow",
+          "est_duration_s": 9.3,
+          "specific": false,
+          "hits": [],
+          "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning."
+        },
+        {
+          "id": "s11",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": false,
+          "hits": [],
+          "narration": "And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere."
+        },
+        {
+          "id": "s12",
+          "role": "payoff_close",
+          "est_duration_s": 7.9,
+          "specific": false,
+          "hits": [],
+          "narration": "So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.8,
+      "words": 360,
+      "sentences": 33,
+      "est_speech_s": 124.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives. And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+    "on_screen": "Ninety-five gigabytes of unified memory | 95 GB / one laptop | GGUFs you download \u00b7 rule: data-center GPU | 128 GB | smaller file, faster tokens | rounding pi \u00b7 most accuracy survives | where the loss lands | 70 GB -> 21 GB / quantized on-device | pip install \u00b7 quantize | export \u00b7 no conversion step | smaller memory \u00b7 task-dependent quality | downloading beats export | runs your models \u00b7 makes your quants"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
+        "scenes": 12,
+        "fk_grade": 6.8,
+        "words": 360,
+        "est_speech_s": 124.1,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 6.8 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s02: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s02: 'LM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s03: 14s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s04: 12s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s08: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s10: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-06-amd-quark-on-strix-halo-offici-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "scene_specificity"
+    ],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 6,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.129,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Strix Halo",
+          "Ryzen AI Max"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:95 GB"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 10,
+        "total": 12
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

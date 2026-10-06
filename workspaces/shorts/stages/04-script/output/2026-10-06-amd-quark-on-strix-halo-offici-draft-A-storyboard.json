@@ -1,0 +1,182 @@
+{
+  "slug": "2026-10-06-amd-quark-on-strix-halo-offici",
+  "topic": "AMD Quark official local quantization on Strix Halo",
+  "title": "On-Device Quantization with AMD Quark on Strix Halo",
+  "description": "working description; the package stage overwrites",
+  "hashtags": [
+    "#localai",
+    "#amdryzen",
+    "#strixhalo"
+  ],
+  "hook_text": "You run other people's quants",
+  "hook_candidates": [
+    "You run other people's quants. Your Strix Halo box can make its own.",
+    "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory.",
+    "Seventy gigabytes in. Twenty-one gigabytes out. Same machine.",
+    "Your Strix Halo box just learned to quantize its own models.",
+    "Making a quant yourself used to need a data-center card. Not anymore.",
+    "AMD shipped an official recipe for quantizing on your Strix Halo machine.",
+    "Stop tweaking llama.cpp flags. AMD's official quantizer runs on the APU itself.",
+    "The box that runs your quants can now make them.",
+    "Quantize a thirty-five-billion-parameter model on the machine it runs on.",
+    "AMD Quark turns your Strix Halo box into its own quant factory."
+  ],
+  "tags": [
+    "amd quark",
+    "strix halo",
+    "ryzen ai max 395",
+    "amd quark strix halo",
+    "local quantization",
+    "quantization llama.cpp",
+    "gguf quantization",
+    "unified memory amd",
+    "local llm amd",
+    "ryzen ai max 395 llama.cpp",
+    "amd local ai",
+    "on device quantization",
+    "llama.cpp gguf",
+    "vllm quark",
+    "local ai workstation",
+    "framework desktop llm",
+    "gmktec evo x2",
+    "how to quantize llm",
+    "quantize qwen strix halo",
+    "amd rocm quark",
+    "w4a16 quantization",
+    "local llm mini pc"
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 99,
+  "narration_full": "You run other people's quants. Your Strix Halo box can make its own. AMD's Quark, an open-source quantization toolkit, runs the whole job on the machine itself. Quantization, squashing sixteen-bit weights down to four-bit ones, is the step you never see. Think rounding pi to fewer digits. The number stays itself for almost everything. Exact arithmetic notices first, casual chat never does. Your chip keeps everything in unified memory, one pool shared by processor and graphics. On your one hundred twenty-eight gigabyte machine, smaller weights stream faster. The pool feeds tokens at two hundred fifty-six gigabytes per second. Move one: install Quark into a Python environment with ROCm, AMD's GPU stack. Then load the sixteen-bit checkpoint with transformers, the model-loading library. Pick a thirty-five billion parameter Mixture-of-Experts, where only a slice of weights fires per token. Move two: pick symmetric four-bit with group size thirty-two, and run the quantizer. Group size is how many weights share one scale. Round-To-Nearest, no calibration data, the bluntest method on the shelf. The run takes a minute and a half. While it runs, memory use peaks at ninety-five gigabytes of the shared pool. That is the whole quantization, inside your machine, no data-center card. The model drops from roughly seventy gigabytes to about twenty-one gigabytes of quantized weights. AMD's own accuracy runs say the cost depends on the task. No four-bit recipe wins everywhere. Move three: export GGUF, the file format llama.cpp loads, with no conversion step. llama.cpp is the engine under Ollama and LM Studio. Or export safetensors, the checkpoint format the vLLM serving engine loads. Lemonade, the AMD-supported local chat app, serves your GGUF and the model answers. Other people's quants got you this far. This one is yours.",
+  "analogy": {
+    "vehicle": "rounding pi",
+    "mapping": "quantization stores each weight with fewer bits; most accuracy survives and the file shrinks dramatically",
+    "limit": "the loss is not uniform: exact math notices first, casual chat never does"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You run other people's quants. Your Strix Halo box can make its own. AMD's Quark, an open-source quantization toolkit, runs the whole job on the machine itself.",
+      "on_screen_text": "Your Strix Halo makes its own quants",
+      "visual_brief": "Frame 1: top line \"You run other people's quants\" fully legible on a dark field, amber underline beneath it; motion onset at 0.4 s as the second line \"makes its own\" rises in place. A small Quark badge fades in on \"Quark.\"",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Quantization, squashing sixteen-bit weights down to four-bit ones, is the step you never see. Think rounding pi to fewer digits. The number stays itself for almost everything. Exact arithmetic notices first, casual chat never does.",
+      "on_screen_text": "fewer digits same number",
+      "visual_brief": "A pi digit string draws on at \"rounding pi,\" then its trailing digits fade on \"fewer digits.\" The kept digits scale up slightly on \"stays itself.\"",
+      "est_duration_s": 12.1
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your chip keeps everything in unified memory, one pool shared by processor and graphics. On your one hundred twenty-eight gigabyte machine, smaller weights stream faster. The pool feeds tokens at two hundred fifty-six gigabytes per second.",
+      "on_screen_text": "one pool shared by everything",
+      "visual_brief": "Processor and graphics tiles fade in left and right, then one memory bar rises under both on \"one pool.\" A small arrow scales in on \"feeds tokens.\"",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s04",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Move one: install Quark into a Python environment with ROCm, AMD's GPU stack. Then load the sixteen-bit checkpoint with transformers, the model-loading library. Pick a thirty-five billion parameter Mixture-of-Experts, where only a slice of weights fires per token.",
+      "on_screen_text": "pip install amd-quark",
+      "visual_brief": "The command fades in on \"install Quark.\" A checkpoint card scales in on \"load the sixteen-bit checkpoint.\" The active-slice highlight draws on \"only a slice of weights fires.\"",
+      "est_duration_s": 13.1,
+      "sfx": [
+        {
+          "name": "type",
+          "at": "start"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Move two: pick symmetric four-bit with group size thirty-two, and run the quantizer. Group size is how many weights share one scale. Round-To-Nearest, no calibration data, the bluntest method on the shelf. The run takes a minute and a half.",
+      "on_screen_text": "group size thirty two then 1.5 min",
+      "visual_brief": "Two config cells fade in on \"symmetric four-bit.\" A shared-scale bar draws under the cells on \"share one scale.\" The timer scales in on \"a minute and a half.\"",
+      "est_duration_s": 13.8,
+      "sfx": [
+        {
+          "name": "ding",
+          "at": "number-reveal"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "While it runs, memory use peaks at ninety-five gigabytes of the shared pool. That is the whole quantization, inside your machine, no data-center card.",
+      "on_screen_text": "95 GB peak memory",
+      "visual_brief": "The giant figure scales in on \"ninety-five gigabytes\" and holds. The caption fades in below on \"no data-center card.\"",
+      "est_duration_s": 8.3,
+      "sfx": [
+        {
+          "name": "ding",
+          "at": "number-reveal"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The model drops from roughly seventy gigabytes to about twenty-one gigabytes of quantized weights. AMD's own accuracy runs say the cost depends on the task. No four-bit recipe wins everywhere.",
+      "on_screen_text": "70 GB -> 21 GB",
+      "visual_brief": "The left figure fades in on \"seventy gigabytes,\" then crossfades as the right figure rises on \"twenty-one gigabytes of quantized weights.\"",
+      "est_duration_s": 10.0,
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": "number-reveal"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Move three: export GGUF, the file format llama.cpp loads, with no conversion step. llama.cpp is the engine under Ollama and LM Studio. Or export safetensors, the checkpoint format the vLLM serving engine loads.",
+      "on_screen_text": "export GGUF no conversion step",
+      "visual_brief": "Three nodes rise along a line on \"export,\" \"loads,\" and \"serves.\" The active node highlights on \"no conversion step.\"",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s09",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Lemonade, the AMD-supported local chat app, serves your GGUF and the model answers. Other people's quants got you this far. This one is yours.",
+      "on_screen_text": "this one is yours",
+      "visual_brief": "A chat bubble rises on \"the model answers.\" The closing line fades in on \"This one is yours.\"",
+      "est_duration_s": 8.3,
+      "sfx": [
+        {
+          "name": "pop",
+          "at": "end"
+        }
+      ]
+    }
+  ]
+}

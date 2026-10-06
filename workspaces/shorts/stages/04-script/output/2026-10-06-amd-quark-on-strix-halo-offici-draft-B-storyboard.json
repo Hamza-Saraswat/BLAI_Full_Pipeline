@@ -1,0 +1,200 @@
+{
+  "slug": "2026-10-06-amd-quark-on-strix-halo-offici",
+  "topic": "AMD Quark official local quantization on Strix Halo",
+  "title": "Your Laptop Can Quantize Now",
+  "description": "working description; the package stage overwrites",
+  "hashtags": [
+    "#localai",
+    "#amdryzen",
+    "#strixhalo"
+  ],
+  "hook_text": "Ninety-five gigabytes of unified memory",
+  "hook_candidates": [
+    "You run other people's quants. Your Strix Halo box can make its own.",
+    "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory.",
+    "Seventy gigabytes in. Twenty-one gigabytes out. Same machine.",
+    "Your Strix Halo box just learned to quantize its own models.",
+    "Making a quant yourself used to need a data-center card. Not anymore.",
+    "AMD shipped an official recipe for quantizing on your Strix Halo machine.",
+    "Stop tweaking llama.cpp flags. AMD's official quantizer runs on the APU itself.",
+    "The box that runs your quants can now make them.",
+    "Quantize a thirty-five-billion-parameter model on the machine it runs on.",
+    "AMD Quark turns your Strix Halo box into its own quant factory."
+  ],
+  "tags": [
+    "amd quark",
+    "strix halo",
+    "ryzen ai max 395",
+    "amd quark strix halo",
+    "local quantization",
+    "quantization llama.cpp",
+    "gguf quantization",
+    "unified memory amd",
+    "local llm amd",
+    "ryzen ai max 395 llama.cpp",
+    "amd local ai",
+    "on device quantization",
+    "llama.cpp gguf",
+    "vllm quark",
+    "local ai workstation",
+    "framework desktop llm",
+    "gmktec evo x2",
+    "how to quantize llm",
+    "quantize qwen strix halo",
+    "amd rocm quark",
+    "w4a16 quantization",
+    "local llm mini pc"
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 119,
+  "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives. And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+  "analogy": {
+    "vehicle": "rounding pi",
+    "mapping": "quantization stores each weight with fewer bits; most accuracy survives and the file shrinks dramatically",
+    "limit": "the loss is not uniform: exact math notices first, casual chat never does"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory.",
+      "on_screen_text": "95 GB / one laptop",
+      "visual_brief": "Frame 1: giant amber \"95 GB\" fully legible on a dark field; motion onset at 0.4 s as the figure scales up and settles, caption \"one laptop\" fades in below on \"One laptop\".",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "name": "pop",
+          "at": "number-reveal"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card.",
+      "on_screen_text": "GGUFs you download · rule: data-center GPU",
+      "visual_brief": "Split screen on \"you run GGUFs\": left card \"GGUFs you download\" fades in (0.3s); on \"The rule everyone repeats\", right card \"rule: data-center GPU\" rises; thin divider fades between them.",
+      "est_duration_s": 14.8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs.",
+      "on_screen_text": "128 GB",
+      "visual_brief": "Animated diagram on \"one pool the processor and the graphics chip share\": rounded pool shape scales in (0.5s), arrows rise from it to CPU and GPU blocks; \"128 GB\" fades in inside the pool on \"one hundred twenty-eight gigabytes\".",
+      "est_duration_s": 14.5
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens.",
+      "on_screen_text": "smaller file, faster tokens",
+      "visual_brief": "Centered stack on \"size is speed\": headline scales in (0.4s); on \"streaming the weights\", a row of small weight blocks rises beneath the headline, one after another.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives.",
+      "on_screen_text": "rounding pi · most accuracy survives",
+      "visual_brief": "Split-compare on \"rounding pi\": left card \"rounding pi\" fades in (0.3s); right card \"most accuracy survives\" scales in on \"accuracy survives\".",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does.",
+      "on_screen_text": "where the loss lands",
+      "visual_brief": "Pi digit string redraws shorter on \"fewer digits\"; a tick marks \"exact math\" on \"notices first\"; a chat bubble fades in on \"casual chat never does\".",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model.",
+      "on_screen_text": "70 GB -> 21 GB / quantized on-device",
+      "visual_brief": "Giant number on \"seventy gigabytes\": \"70 GB\" scales in (0.4s); on \"twenty-one gigabytes\" it scales down as \"-> 21 GB\" scales in beside it; caption \"quantized on-device\" fades in on \"on a Strix Halo machine\".",
+      "est_duration_s": 13.8,
+      "sfx": [
+        {
+          "name": "ding",
+          "at": "number-reveal"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half.",
+      "on_screen_text": "pip install · quantize",
+      "visual_brief": "Horizontal timeline on \"installed with pip\": node \"pip install\" rises (0.3s); \"quantize\" rises on \"run it\"; the timer chip fades in on \"a minute and a half\".",
+      "est_duration_s": 10.0,
+      "sfx": [
+        {
+          "name": "type",
+          "at": "start"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step.",
+      "on_screen_text": "export · no conversion step",
+      "visual_brief": "Two-cell grid on \"Export writes GGUF\": cell \"GGUF for your apps\" fades in; cell \"safetensors for vLLM\" rises on \"vLLM serving engine loads\".",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s10",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning.",
+      "on_screen_text": "smaller memory · task-dependent quality",
+      "visual_brief": "Two-cell grid: cell \"smaller memory\" fades in on \"Where memory is smaller\"; cell \"task-dependent quality\" rises on \"Where quality matters\".",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s11",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere.",
+      "on_screen_text": "downloading beats export",
+      "visual_brief": "Split-compare: left card \"download it now\" fades in; right card \"export for twenty-two minutes\" rises on \"twenty-two minutes\".",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s12",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+      "on_screen_text": "runs your models · makes your quants",
+      "visual_brief": "Centered stack on \"runs your quants\": line \"runs your models\" fades in (0.4s); on \"can now make them\", line \"makes your quants\" scales in beneath; hold to end.",
+      "est_duration_s": 7.9
+    }
+  ]
+}
