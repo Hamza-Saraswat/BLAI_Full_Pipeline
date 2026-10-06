@@ -2,14 +2,14 @@
 slug: 2026-10-06-amd-quark-on-strix-halo-offici
 workspace: shorts
 title: Quantize with AMD Quark on Strix Halo
-status: review
+status: approved
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-06
-updated: "2026-10-06T13:18:21Z"
+updated: "2026-10-06T14:13:36Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-06T13:18:25Z 07-render ok 124.07s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 178
 - 2026-10-06T13:18:25Z 07-render ok 1956s
 - 2026-10-06T13:18:28Z build done, status review
+- 2026-10-06T14:13:36Z telegram approve (approved_at 2026-10-06T14:13:36Z)
