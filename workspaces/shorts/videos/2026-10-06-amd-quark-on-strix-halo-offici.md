@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-06-amd-quark-on-strix-halo-offici-brief]]
 - Script: [[stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-script]]
 - Package: [[stages/05-package/output/2026-10-06-amd-quark-on-strix-halo-offici-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-06-amd-quark-on-strix-halo-offici-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-06T12:36:46Z 04-script ok: winner 11 scenes 118 s; ledger entry 31; style terminal recorded.
 - 2026-10-06T12:37:45Z 05-package ok: check_outputs 0 failures; hub ready-to-build.
 - 2026-10-06T12:43:10Z build start on gn100-83c4
+- 2026-10-06T12:45:47Z 06-voice ok 154s
