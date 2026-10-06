@@ -1,9 +1,9 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-10-06T12:15:18+00:00",
-  "slug": "draft-B",
+  "generated_at": "2026-10-06T12:35:36+00:00",
+  "slug": "final",
   "inputs": {
-    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-storyboard.json",
     "research_path": "workspaces/shorts/stages/03-research/output/2026-10-06-amd-quark-on-strix-halo-offici-brief.json",
     "project_record": null,
     "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
@@ -371,7 +371,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 31,
+      "sentences": 32,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -464,7 +464,7 @@
           "hits": [
             "entity:AMD ROCm"
           ],
-          "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half."
+          "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm. You load the full-size model and run it. It runs Round-To-Nearest: no calibration data, the bluntest method on the shelf. The quant pass takes a minute and a half."
         },
         {
           "id": "s08",
@@ -509,23 +509,23 @@
     },
     "language": {
       "fk_grade": 6.8,
-      "words": 366,
-      "sentences": 31,
-      "est_speech_s": 126.2,
+      "words": 377,
+      "sentences": 32,
+      "est_speech_s": 130.0,
       "vo_band_ok": true
     },
-    "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+    "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm. You load the full-size model and run it. It runs Round-To-Nearest: no calibration data, the bluntest method on the shelf. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
     "on_screen": "Ninety-five gigabytes of unified memory | 95 GB / one laptop | GGUFs you download \u00b7 rule: data-center GPU | 128 GB | smaller file, faster tokens | rounding pi \u00b7 most accuracy survives | 70 GB -> 21 GB / quantized on-device | pip install \u00b7 quantize | export \u00b7 no conversion step | smaller memory \u00b7 task-dependent quality | downloading beats export | runs your models \u00b7 makes your quants"
   },
   "validators": {
     "storyboard": {
       "exit_code": 0,
       "output": {
-        "file": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-storyboard.json",
         "scenes": 11,
         "fk_grade": 6.8,
-        "words": 366,
-        "est_speech_s": 126.2,
+        "words": 377,
+        "est_speech_s": 130.0,
         "blockers": [],
         "advisories": [],
         "violations": [],
