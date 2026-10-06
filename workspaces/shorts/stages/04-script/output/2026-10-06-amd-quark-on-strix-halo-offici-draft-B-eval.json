@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-10-06T12:12:56+00:00",
+  "generated_at": "2026-10-06T12:15:18+00:00",
   "slug": "draft-B",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
@@ -43,7 +43,7 @@
           "matched_in": "narration",
           "matched_token": "seventy",
           "scene_ids": [
-            "s07"
+            "s06"
           ]
         },
         {
@@ -94,13 +94,16 @@
     },
     "entity_spend": {
       "total": 31,
-      "found_count": 4,
-      "score": 0.129,
+      "found_count": 7,
+      "score": 0.226,
       "found": [
         "Strix Halo",
         "vLLM",
+        "Framework",
+        "Framework Desktop",
         "Ollama",
-        "GB Strix Halo"
+        "GB Strix Halo",
+        "AMD ROCm"
       ],
       "missing": [
         "Ryzen AI Max",
@@ -110,11 +113,9 @@
         "RDNA 3.5",
         "LPDDR5X",
         "Q4_K_M",
-        "Framework",
         "GB of GPU-visible",
         "GPQA the BF16",
         "AMD Variable Graphics Memory",
-        "Framework Desktop",
         "DeepSeek V4 Flash 0731",
         "Qwen3.6-35B-A3B",
         "Q4_1",
@@ -127,7 +128,6 @@
         "UD-IQ2_XXS",
         "Zen",
         "Radeon",
-        "AMD ROCm",
         "Quark Q4",
         "Intel Arc 140"
       ],
@@ -208,8 +208,10 @@
           "name": "Framework",
           "tier": 0,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
         },
         {
           "name": "GB of GPU-visible",
@@ -236,8 +238,10 @@
           "name": "Framework Desktop",
           "tier": 0,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
         },
         {
           "name": "DeepSeek V4 Flash 0731",
@@ -345,8 +349,10 @@
           "name": "AMD ROCm",
           "tier": 4,
           "claim_count": 0,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
         },
         {
           "name": "Quark Q4",
@@ -365,7 +371,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 33,
+      "sentences": 31,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -384,9 +390,9 @@
       "labels": []
     },
     "scene_specificity": {
-      "total": 12,
-      "specific_count": 6,
-      "ratio": 0.5,
+      "total": 11,
+      "specific_count": 10,
+      "ratio": 0.909,
       "scenes": [
         {
           "id": "s01",
@@ -432,21 +438,15 @@
         {
           "id": "s05",
           "role": "explain",
-          "est_duration_s": 8.3,
-          "specific": false,
-          "hits": [],
-          "narration": "Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives."
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does."
         },
         {
           "id": "s06",
-          "role": "explain",
-          "est_duration_s": 8.6,
-          "specific": false,
-          "hits": [],
-          "narration": "And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does."
-        },
-        {
-          "id": "s07",
           "role": "explain",
           "est_duration_s": 13.8,
           "specific": true,
@@ -457,15 +457,17 @@
           "narration": "Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model."
         },
         {
-          "id": "s08",
+          "id": "s07",
           "role": "explain",
           "est_duration_s": 10.0,
-          "specific": false,
-          "hits": [],
-          "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half."
+          "specific": true,
+          "hits": [
+            "entity:AMD ROCm"
+          ],
+          "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half."
         },
         {
-          "id": "s09",
+          "id": "s08",
           "role": "explain",
           "est_duration_s": 7.2,
           "specific": true,
@@ -475,23 +477,28 @@
           "narration": "Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step."
         },
         {
-          "id": "s10",
+          "id": "s09",
           "role": "foreshadow",
           "est_duration_s": 9.3,
-          "specific": false,
-          "hits": [],
-          "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning."
+          "specific": true,
+          "hits": [
+            "entity:Framework",
+            "entity:Framework Desktop"
+          ],
+          "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning."
+        },
+        {
+          "id": "s10",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export."
         },
         {
           "id": "s11",
-          "role": "explain",
-          "est_duration_s": 8.3,
-          "specific": false,
-          "hits": [],
-          "narration": "And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere."
-        },
-        {
-          "id": "s12",
           "role": "payoff_close",
           "est_duration_s": 7.9,
           "specific": false,
@@ -502,23 +509,23 @@
     },
     "language": {
       "fk_grade": 6.8,
-      "words": 360,
-      "sentences": 33,
-      "est_speech_s": 124.1,
+      "words": 366,
+      "sentences": 31,
+      "est_speech_s": 126.2,
       "vo_band_ok": true
     },
-    "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives. And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
-    "on_screen": "Ninety-five gigabytes of unified memory | 95 GB / one laptop | GGUFs you download \u00b7 rule: data-center GPU | 128 GB | smaller file, faster tokens | rounding pi \u00b7 most accuracy survives | where the loss lands | 70 GB -> 21 GB / quantized on-device | pip install \u00b7 quantize | export \u00b7 no conversion step | smaller memory \u00b7 task-dependent quality | downloading beats export | runs your models \u00b7 makes your quants"
+    "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+    "on_screen": "Ninety-five gigabytes of unified memory | 95 GB / one laptop | GGUFs you download \u00b7 rule: data-center GPU | 128 GB | smaller file, faster tokens | rounding pi \u00b7 most accuracy survives | 70 GB -> 21 GB / quantized on-device | pip install \u00b7 quantize | export \u00b7 no conversion step | smaller memory \u00b7 task-dependent quality | downloading beats export | runs your models \u00b7 makes your quants"
   },
   "validators": {
     "storyboard": {
       "exit_code": 0,
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-draft-B-storyboard.json",
-        "scenes": 12,
+        "scenes": 11,
         "fk_grade": 6.8,
-        "words": 360,
-        "est_speech_s": 124.1,
+        "words": 366,
+        "est_speech_s": 126.2,
         "blockers": [],
         "advisories": [],
         "violations": [],
@@ -529,10 +536,11 @@
           "s02: 'LM' will be spoken via skills/script-gates/tts_lexicon.json",
           "s03: 14s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
           "s04: 12s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s06: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
-          "s08: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
-          "s09: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
-          "s10: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
+          "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s08: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
         ]
       }
     },
@@ -586,10 +594,8 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "scene_specificity"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
@@ -605,7 +611,7 @@
         "mode": "cap"
       },
       "entity_spend": {
-        "score": 0.129,
+        "score": 0.226,
         "need": 0.5,
         "advisory": true
       },
@@ -625,9 +631,9 @@
         "waived": true
       },
       "scene_specificity": {
-        "specific": 6,
-        "need": 10,
-        "total": 12
+        "specific": 10,
+        "need": 9,
+        "total": 11
       },
       "not_x_but_y": {
         "count": 0,

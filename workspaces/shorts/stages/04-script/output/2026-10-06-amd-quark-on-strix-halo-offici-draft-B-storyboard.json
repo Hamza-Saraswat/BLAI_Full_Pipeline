@@ -49,8 +49,8 @@
   "script_format": "smooth-explainer",
   "structure": "myth-bust",
   "value_types": "EQUIPS,TEACHES",
-  "target_duration_s": 119,
-  "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives. And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
+  "target_duration_s": 118,
+  "narration_full": "Ninety-five gigabytes of unified memory. One laptop quantized a model with that much memory. On a Strix Halo box, you run GGUF model files, the kind Ollama and LM Studio load. Someone else quantized them, compressed the numbers so the file shrinks. The rule everyone repeats: doing that yourself takes a data-center GPU, or a big discrete card. How does a laptop have room for that? Strix Halo uses unified memory, one pool the processor and the graphics chip share. The big configs give that pool one hundred twenty-eight gigabytes of memory. Enough for the model, plus the working space quantizing needs. And on this chip, size is speed. That one pool moves everything at two hundred fifty-six gigabytes per second. Generating tokens means streaming the weights through it, so a smaller file means faster tokens. Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does. Here's the measurement that breaks the rule. AMD's own walkthrough quantizes a Mixture-of-Experts model, one where only a slice fires per token. It happens entirely on a Strix Halo machine. The weights fall from seventy gigabytes to about twenty-one gigabytes of quantized model. The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half. Export writes GGUF for your apps, or safetensors, the format the vLLM serving engine loads, with no conversion step. Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning. And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export. So tonight, the hidden half of local AI moves onto your own desk. The box that runs your quants can now make them.",
   "analogy": {
     "vehicle": "rounding pi",
     "mapping": "quantization stores each weight with fewer bits; most accuracy survives and the file shrinks dramatically",
@@ -109,23 +109,13 @@
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "split-compare",
-      "narration": "Quantizing stores each weight as a four-bit integer instead of a sixteen-bit float. Think of rounding pi to a few digits. Most of the accuracy survives.",
+      "narration": "Quantizing stores each weight as a four-bit integer, not a sixteen-bit float. Rounding pi to a few digits keeps most of the number. That is how your Ollama library got small. The loss isn't uniform, though. Exact math notices first, casual chat never does.",
       "on_screen_text": "rounding pi · most accuracy survives",
-      "visual_brief": "Split-compare on \"rounding pi\": left card \"rounding pi\" fades in (0.3s); right card \"most accuracy survives\" scales in on \"accuracy survives\".",
-      "est_duration_s": 8.3
+      "visual_brief": "Split-compare on \"rounding pi\": left card \"rounding pi\" fades in (0.3s); right card \"most accuracy survives\" scales in on \"keeps most of the number\"; on \"exact math notices first\" the right card text fades to \"loss isn't uniform\".",
+      "est_duration_s": 15.5
     },
     {
       "id": "s06",
-      "role": "explain",
-      "tool": "manim",
-      "layout_archetype": "timeline",
-      "narration": "And the file gets dramatically smaller. The loss isn't uniform, though. Exact math notices first, casual chat never does.",
-      "on_screen_text": "where the loss lands",
-      "visual_brief": "Pi digit string redraws shorter on \"fewer digits\"; a tick marks \"exact math\" on \"notices first\"; a chat bubble fades in on \"casual chat never does\".",
-      "est_duration_s": 8.6
-    },
-    {
-      "id": "s07",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "giant-number",
@@ -141,11 +131,11 @@
       ]
     },
     {
-      "id": "s08",
+      "id": "s07",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "timeline",
-      "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip, Python's installer. You load the full-size model and run it. The quant pass takes a minute and a half.",
+      "narration": "The toolkit is Quark, AMD's open-source quantizer, installed with pip into AMD ROCm, their GPU stack. You load the full-size model and run it. The quant pass takes a minute and a half.",
       "on_screen_text": "pip install · quantize",
       "visual_brief": "Horizontal timeline on \"installed with pip\": node \"pip install\" rises (0.3s); \"quantize\" rises on \"run it\"; the timer chip fades in on \"a minute and a half\".",
       "est_duration_s": 10.0,
@@ -157,7 +147,7 @@
       ]
     },
     {
-      "id": "s09",
+      "id": "s08",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "split-compare",
@@ -167,27 +157,27 @@
       "est_duration_s": 7.2
     },
     {
-      "id": "s10",
+      "id": "s09",
       "role": "foreshadow",
       "tool": "hyperframes",
       "layout_archetype": "grid",
-      "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte machine can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning.",
+      "narration": "Where is the old rule still right? Where memory is smaller: a sixty-four-gigabyte Framework Desktop can't fit that peak. Where quality matters: AMD's own tests show four-bit slipping on hard reasoning.",
       "on_screen_text": "smaller memory · task-dependent quality",
       "visual_brief": "Two-cell grid: cell \"smaller memory\" fades in on \"Where memory is smaller\"; cell \"task-dependent quality\" rises on \"Where quality matters\".",
       "est_duration_s": 9.3
     },
     {
-      "id": "s11",
+      "id": "s10",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "split-compare",
-      "narration": "And where the quant you want already exists: downloading beats spending twenty-two minutes on export. No setting is best everywhere.",
+      "narration": "And where the quant you want already exists: when Ollama ships the four-bit file, downloading beats spending twenty-two minutes on export.",
       "on_screen_text": "downloading beats export",
       "visual_brief": "Split-compare: left card \"download it now\" fades in; right card \"export for twenty-two minutes\" rises on \"twenty-two minutes\".",
       "est_duration_s": 8.3
     },
     {
-      "id": "s12",
+      "id": "s11",
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
