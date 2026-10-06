@@ -2,14 +2,14 @@
 slug: 2026-10-06-amd-quark-on-strix-halo-offici
 workspace: shorts
 title: Quantize with AMD Quark on Strix Halo
-status: building
+status: review
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-06
-updated: "2026-10-06T12:43:10Z"
+updated: "2026-10-06T13:18:21Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-06-amd-quark-on-strix-halo-offici-script]]
 - Package: [[stages/05-package/output/2026-10-06-amd-quark-on-strix-halo-offici-package]]
 - Voice: [[stages/06-voice/output/2026-10-06-amd-quark-on-strix-halo-offici-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-06-amd-quark-on-strix-halo-offici-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - 2026-10-06T12:37:45Z 05-package ok: check_outputs 0 failures; hub ready-to-build.
 - 2026-10-06T12:43:10Z build start on gn100-83c4
 - 2026-10-06T12:45:47Z 06-voice ok 154s
+- 2026-10-06T13:18:25Z 07-render ok 124.07s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 178
+- 2026-10-06T13:18:25Z 07-render ok 1956s
