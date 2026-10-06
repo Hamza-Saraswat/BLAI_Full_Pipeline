@@ -2,19 +2,19 @@
 slug: 2026-10-06-amd-quark-on-strix-halo-offici
 workspace: shorts
 title: Quantize with AMD Quark on Strix Halo
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-06
-updated: "2026-10-06T12:37:45Z"
+updated: "2026-10-06T12:43:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-10-06T11:51:46Z 03-research ok: brief + json validated (0 blockers). Date wrinkle: blog byline Sep 25 2026, not hours-old.
 - 2026-10-06T12:36:46Z 04-script ok: winner 11 scenes 118 s; ledger entry 31; style terminal recorded.
 - 2026-10-06T12:37:45Z 05-package ok: check_outputs 0 failures; hub ready-to-build.
+- 2026-10-06T12:43:10Z build start on gn100-83c4
