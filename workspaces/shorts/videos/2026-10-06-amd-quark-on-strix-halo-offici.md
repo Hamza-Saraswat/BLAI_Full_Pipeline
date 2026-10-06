@@ -2,22 +2,22 @@
 slug: 2026-10-06-amd-quark-on-strix-halo-offici
 workspace: shorts
 title: Quantize with AMD Quark on Strix Halo
-status: approved
+status: scheduled
 pillar: how-to
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-06
-updated: "2026-10-06T14:13:36Z"
-publish_slot: ""
+updated: "2026-10-06T14:18:14Z"
+publish_slot: "2026-10-06T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 0a7eb44e-46a3-45e5-a784-76d89753961d
 ---
 # AMD Quark on Strix Halo: official local quantization
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-06-amd-quark-on-strix-halo-offici-package]]
 - Voice: [[stages/06-voice/output/2026-10-06-amd-quark-on-strix-halo-offici-voice]]
 - Render: [[stages/07-render/output/2026-10-06-amd-quark-on-strix-halo-offici-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-06-amd-quark-on-strix-halo-offici-publish]]
 
 ## Decisions
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-06T13:18:25Z 07-render ok 1956s
 - 2026-10-06T13:18:28Z build done, status review
 - 2026-10-06T14:13:36Z telegram approve (approved_at 2026-10-06T14:13:36Z)
+- 2026-10-06T14:18:15Z 08-publish ok 5s
