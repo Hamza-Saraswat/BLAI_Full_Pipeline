@@ -1,0 +1,379 @@
+[Sample Link content](https://frame.work/desktop#) Sample Button content
+
+close
+
+![A sleek Framework Desktop stands on a dark desk under moody, low-key lighting. In the blurred background, a pair of wooden-eared headphones rests on the left, and a monitor displaying lines of code is visible on the far right.](https://images.frame.work/frameworkmarketplace/plhNoGJcSLb3-msH_fwdesktop-family_hero_desktop.jpg?auto=format,compress)
+
+# Seize the means of computation
+
+Framework Desktop is a 4.5L workstation with up to 192GB of LPDDR5X memory and the AMD Ryzen™ AI Max+ PRO 495. Run large AI models on hardware you own.
+
+# Seize the means of computation
+
+Framework Desktop is a 4.5L workstation with up to 192GB of LPDDR5X memory and the AMD Ryzen™ AI Max+ PRO 495. Run large AI models on hardware you own.
+
+[Configure now\\
+\\
+Configure now](https://frame.work/products/desktop-diy-amd-aimax400/configuration/new)
+
+[Overview](https://frame.work/desktop?tab=overview)
+
+[Specs](https://frame.work/desktop?tab=specs)
+
+[Gaming](https://frame.work/desktop?tab=gaming)
+
+[Linux](https://frame.work/desktop?tab=linux)
+
+[Downloads and guides](https://frame.work/desktop?tab=downloads-and-guides)
+
+[Configure now](https://frame.work/products/desktop-diy-amd-aimax400/configuration/new)
+
+![Top third of a Framework Desktop, with a AMD tile among other black tiles.](https://images.frame.work/frameworkmarketplace/OLnhLgdpwiFlV_Yp_fwdesktop-family_overview_large-hero_1.jpg?auto=format,compress)
+
+#### Now with Ryzen™ AI Max+ PRO 495
+
+16 Zen 5 CPU cores, a giant 40-CU GPU, and a 256-bit memory bus means that this processor is ready for AI inference, gaming, and heavy-duty workstation workloads.
+
+#### Now with Ryzen™ AI Max+ PRO 495
+
+16 Zen 5 CPU cores, a giant 40-CU GPU, and a 256-bit memory bus means that this processor is ready for AI inference, gaming, and heavy-duty workstation workloads.
+
+![Middle third of a Framework Desktop, with three tiles with engravings 0,1 and 0 among other black tiles.](https://images.frame.work/frameworkmarketplace/7VXIRFKRk7plCyR6_fwdesktop-family_overview_large-hero_2.jpg?auto=format,compress)
+
+#### Grab the memory capacity you need
+
+Now with 32GB, 64GB, 128GB, and 192GB memory capacity options. Size your memory to the large models you need to run, or pick up the 32GB for a capable gaming and workstation rig.
+
+#### Grab the memory capacity you need
+
+Now with 32GB, 64GB, 128GB, and 192GB memory capacity options. Size your memory to the large models you need to run, or pick up the 32GB for a capable gaming and workstation rig.
+
+![Bottom third of a Framework Desktop, with a Framework and a Linux tile among other black tiles. ](https://images.frame.work/frameworkmarketplace/EkzK1gw6Vax7nHpd_fwdesktop-family_overview_large-hero_3.jpg?auto=format,compress)
+
+### Linux-ready out of the box
+
+Build DIY Edition and install your choice of Linux distro, or pick up a pre-built and get pre-installed Fedora ready to go out of the box.
+
+### Linux-ready out of the box
+
+Build DIY Edition and install your choice of Linux distro, or pick up a pre-built and get pre-installed Fedora ready to go out of the box.
+
+## Run DeepSeek V4.1 Flash in **one box**
+
+Framework Desktop can handle bigger models than ever with up to 192GB of LPDDR5X. Run 300B-class models at 4-bit quantization with headroom to spare for extra context length. Up to 16 high-performance Zen 5 CPU cores means your OpenClaw or Hermes Agent can power through application and tool-calling too.
+
+### Popular open models you can run
+
+A snapshot of popular open-weight models running on Framework Desktop, measured on our reference configuration. Full methodology, runtime versions, and reproducible configs are published on the Framework Blog \[ [1](https://frame.work/blog/choosing-a-framwork-desktop-for-local-ai)\]\[ [2](https://frame.work/blog/what-192gb-changes-for-local-ai-on-the-framework-desktop)\], [GitHub](https://github.com/kyuz0/amd-strix-halo-toolboxes), and [YouTube channel](https://youtu.be/Z26kN5VfyGA).
+
+|     |     |     |     |
+| --- | --- | --- | --- |
+| **Framework Desktop** | **Recommended model (as of Sept 2026)** | **Quantization** | **Memory Used** |
+| AMD Ryzen™ AI Max 385 - 32GB | Qwen3.8-27B | UD-Q4\_K\_XL | 17.6GB |
+| AMD Ryzen™ AI Max+ 395 - 64GB | Qwen3.5-122B-A10B | Q3\_K\_S | 52.5GB |
+| AMD Ryzen™ AI Max+ 395 - 128GB | DeepSeek V4 Flash 0731 | UD-IQ2\_XXS | 90.9GB |
+| AMD Ryzen™ AI Max+ PRO 495 - 192GB | DeepSeek V4.1 Flash Q2 | Q2 | 163GB |
+
+|     |     |
+| --- | --- |
+| **Framework Desktop** | **Recommended model (as of Sept 2026)** |
+| AMD Ryzen™ AI Max 385 - 32GB | Qwen3.8-27B |
+| AMD Ryzen™ AI Max+ 395 - 64GB | Qwen3.5-122B-A10B |
+| AMD Ryzen™ AI Max+ 395 - 128GB | DeepSeek V4 Flash 0731 |
+| AMD Ryzen™ AI Max+ PRO 495 - 192GB | DeepSeek V4.1 Flash Q2 |
+
+|     |     |
+| --- | --- |
+| **Framework Desktop** | **Quantization** |
+| AMD Ryzen™ AI Max 385 - 32GB | UD-Q4\_K\_XL |
+| AMD Ryzen™ AI Max+ 395 - 64GB | Q3\_K\_S |
+| AMD Ryzen™ AI Max+ 395 - 128GB | UD-IQ2\_XXS |
+| AMD Ryzen™ AI Max+ PRO 495 - 192GB | Q2 |
+
+|     |     |
+| --- | --- |
+| **Framework Desktop** | **Memory Used** |
+| AMD Ryzen™ AI Max 385 - 32GB | 17.6GB |
+| AMD Ryzen™ AI Max+ 395 - 64GB | 52.5GB |
+| AMD Ryzen™ AI Max+ 395 - 128GB | 90.9GB |
+| AMD Ryzen™ AI Max+ PRO 495 - 192GB | 163GB |
+
+\*Reference configuration: measured on Framework Desktop with the AMD Ryzen™ AI Max+ PRO 495 and 192GB LPDDR5X-8533. Generation tokens per second at 2048-token context, batch size 1. Your numbers will vary with quantization, context length, and runtime.
+
+## It's a **workstation** too!
+
+![A small form factor Framework Desktop sits on a dark wooden desk next to a monitor displaying a complex 3D Blender scene.](https://images.frame.work/frameworkmarketplace/ZS2Dp2S5YY1fZJMJ_fwdesktop-family_overview_workstation.jpg?auto=format,compress)
+
+Framework Desktop is a standard PC that just happens to use a one-of-a-kind, monstrous processor from AMD. Use it for software development, editing video in Premiere and Resolve, building scenes in Blender, gaming at 1440p on AAA titles, or as your overkill daily driver in Linux or Windows.
+
+## Full set of **I/O**
+
+![A side-by-side diagram showing the rear and front ports of a Framework Desktop with text callouts indicating the following specifications:  Rear Ports: 1x HDMI, 2x USB-C (USB4), 2x DisplayPort, 2x USB-A, 1x 5Gbit Ethernet, and 1x 3.5mm Audio Jack.  Front Expansion card system with two slots than can support: USB-C (3.2 Gen 2), USB-A (3.2 Gen 1), 3.5mm Audio Jack, MicroSD, SD, 2.5Gbit Ethernet, or 250 GB / 1 TB Storage expansions.](https://images.frame.work/frameworkmarketplace/flUPZUC_5tFf9SK1_fwdesktop-family_overview_io_desktop.svg)
+
+Two Framework Expansion Card slots on the front let you adjust your most commonly used ports. Choose between USB-C, USB-A, 3.5mm audio jack, microSD, SD, Storage, Ethernet. Around the back, a full set of rear I/O handles your displays, network, and peripherals.
+
+## PC parts, your pick
+
+![A top-down view of a person assembling the modular Framework desktop chassis They are installing a mainboardcontaining a large CPU heatsink into the black frame. Scattered around the workspace are various computer components, including a cooling fan, modular expansion cards, loose screws, a small screwdriver, and frame panels.](https://images.frame.work/frameworkmarketplace/FdwOqWgnkIYFETtR_fwdesktop-family_overview_pc-parts.jpg?auto=format,compress)
+
+Framework Desktop is built on a standard Mini-ITX Mainboard, FlexATX power supply, and 120mm CPU fan, so you can pull the Mainboard on its own and build a custom desktop around it. Dual M.2 2280 slots let you add and upgrade NVMe storage right off the shelf.
+
+## **Cluster** when you're ready
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Equals to symbol](https://images.frame.work/frameworkmarketplace/Yxs0lHRZKg1QSusn_fwdesktop-family_overview_memory-equals.svg)
+
+```
+768 GB
+```
+
+```
+
+```
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Equals to symbol](https://images.frame.work/frameworkmarketplace/Yxs0lHRZKg1QSusn_fwdesktop-family_overview_memory-equals.svg)
+
+```
+768 GB
+```
+
+```
+
+```
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Equals to symbol](https://images.frame.work/frameworkmarketplace/Yxs0lHRZKg1QSusn_fwdesktop-family_overview_memory-equals.svg)
+
+```
+768 GB
+```
+
+```
+
+```
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Equals to symbol](https://images.frame.work/frameworkmarketplace/Yxs0lHRZKg1QSusn_fwdesktop-family_overview_memory-equals.svg)
+
+```
+768 GB
+```
+
+```
+
+```
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Plus symbol](https://images.frame.work/frameworkmarketplace/D0L2bNysN7_zOCVK_fwdesktop-family_overview_memory-plus.svg)
+
+```
+192 GB
+```
+
+![Equals to symbol](https://images.frame.work/frameworkmarketplace/Yxs0lHRZKg1QSusn_fwdesktop-family_overview_memory-equals.svg)
+
+```
+768 GB
+```
+
+```
+
+```
+
+Framework Desktops have multiple paths for clustering to run even larger models. USB4 offers a simple and convenient path for enabling pipeline parallelism or multi-agent clusters. The PCIe x4 slot lets you connect high-speed, low-latency 50Gbps RoCE NICs like the Intel E810 to enable high-performance tensor parallelism. The Ryzen™ AI Max+ PRO 495 config has an open-ended version of the PCIe x4 slot, letting you plug in x8 and x16 cards directly without needing a riser adapter. Start with one node today, and add more whenever your models demand it.
+
+## **Fun-sized** form factor
+
+![On the left, a person carries a small Framework Desktop by an attached top handle, showcasing its portability. On the right, a line drawing blueprint details the exact dimensions and weight: 96.8mm in width, 205.5mm in depth, 226.1mm in height, and a weight of 3.1 kg.](https://images.frame.work/frameworkmarketplace/rGmqpaNOgnuU53bd_fwdesktop-family_overview_dimensions.svg)
+
+Framework Desktop is 96.8mm by 205.5mm by 226.1mm and weighs 3.1kg, small and light enough to pick up with one hand and carry by the optional handle. It fits on a shelf, a desk corner, or in a backpack, wherever a full desktop tower has never fit before.
+
+## **Community** projects
+
+The Framework Desktop was built to be yours. Check out how our community members made theirs their own, with projects ranging from front panel monitors and geometric tiles to under-desk mounts and rack builds. Open source is core to how we build, and you can find our hardware and software resources on our [GitHub](https://github.com/FrameworkComputer).
+
+![A collage of Framework Desktop community projects](https://images.frame.work/frameworkmarketplace/6G04pBMLYkoOUGjw_fwdesktop_overview_community-projects.jpg?auto=format,compress)
+
+Framework Desktop Front
+
+Panel Monitor System
+
+[View Project](https://www.printables.com/model/1532556-front-panel-monitor-system-for-framework-desktop)
+
+Framework Desktop
+
+Tile Generator
+
+[View Project](https://www.printables.com/model/1397765-framework-desktop-tile-generator)
+
+Framework Desktop Geometric
+
+Circles Tile
+
+[View Project](https://www.printables.com/model/1804187-geometric-circles-tile-for-framework-desktop)
+
+Framework Desktop
+
+ITX-Mainboard 10Zoll Rack
+
+[View Project](https://www.printables.com/model/1489451-itx-mainboard-10zoll-rack-framework-desktop)
+
+Framework Desktop
+
+Under Desk Mount
+
+[View Project](https://www.printables.com/model/1562218-framework-desktop-under-desk-mount)
+
+Framework Desktop
+
+Front Panel
+
+[View Project](https://www.printables.com/model/1789145-framework-desktop-front-panel)
+
+Framework Desktop Tile
+
+Picker UI
+
+[View Project](https://fw.wolfgang.lol/)
+
+## The choice is **yours**
+
+The Framework Desktop is available pre-built with Fedora pre-installed, or as a DIY Edition that lets you install the operating system of your choice.
+
+[![Top-down view of a person's hands installing a brown-and-beige Noctua cooling fan directly into the desktop chassis.](https://images.frame.work/frameworkmarketplace/kFRNmu0F4TE-MRjo_fwdesktop-family_overview_os-choice_diy.jpg?auto=format,compress)](https://frame.work/products/desktop-diy-amd-aimax400/configuration/new)
+
+
+Great for Windows & Linux
+
+###### DIY Edition
+
+Bring your own memory, storage, and operating system, including Linux or Windows, and build it yourself.
+
+[Configure now](https://frame.work/products/desktop-diy-amd-aimax400/configuration/new)
+
+[![A hand lifts the assembled Framework Desktop by its top handle.](https://images.frame.work/frameworkmarketplace/sMkuxsRdZAeO7kuW_fwdesktop-family_overview_os-choice_Prebuilt.jpg?auto=format,compress)](https://frame.work/products/desktop-amd-aimax400/configuration/new)
+
+
+With Fedora
+
+###### Pre-built
+
+Ready to go out of the box with Fedora.  Easy to upgrade whenever you need to.
+
+[Configure now](https://frame.work/products/desktop-amd-aimax400/configuration/new)
+
+### Planning a volume purchase?
+
+[Contact our Business team](https://share.hsforms.com/1GjuuZvpJRJKsAzc2XdPLYQe5dti)
+
+![A horizontal line of 6 Framework Desktops](https://images.frame.work/frameworkmarketplace/N0IMHXpVvQ6zZc2y_fwdesktop-family_overview_volume-order.jpg?auto=format,compress)
+
+### Keep track of what we’re working on with the Framework Newsletter.
+
+Monthly-ish
+
+![wiggle](https://frame.work/assets/wiggle-17ac27cfea3f79f2c8b5e5dcaa61840e7c343cbdd59b7ed0bec5512428ccf9e8.png)![](https://frame.work/assets/wiggle-17ac27cfea3f79f2c8b5e5dcaa61840e7c343cbdd59b7ed0bec5512428ccf9e8.png)
+
+![An overhead, knolling-style flat lay photography shot of a disassembled Framework desktop chassis and its modular components.](https://images.frame.work/frameworkmarketplace/h2FrNWGN2Kjk5TzR_fwdesktop-family_overview_teardown.jpg?auto=format,compress)
+
+[Configure now](https://frame.work/products/desktop-diy-amd-aimax400/configuration/new)
