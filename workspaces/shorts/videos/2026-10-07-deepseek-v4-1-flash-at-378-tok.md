@@ -2,14 +2,14 @@
 slug: 2026-10-07-deepseek-v4-1-flash-at-378-tok
 workspace: shorts
 title: "DeepSeek v4.1 Flash at 378 tok/s: the cache-hit catch"
-status: researched
+status: scripted
 pillar: myth-bust
-structure: ""
+structure: contrarian-take
 format: smooth-explainer
-style_pack: ""
+style_pack: blueprint
 value_types: "REFRAMES,PROVES"
 created: 2026-10-07
-updated: "2026-10-07T11:52:04Z"
+updated: "2026-10-07T12:21:59Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-07-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-07-ideas]]
 - Research: [[stages/03-research/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-brief|Brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-script|Script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,3 +38,9 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-07T11:52:04Z 03-research complete: brief md+json written, validate_research.py exit 0
+
+## ## Decisions
+- 2026-10-07T12:21:59Z - 04-script (unattended): contrarian-take beat worked-example 21-18 (kimi-k3 judge, no grafts); hooks from two patterns (named-contradiction vs situation); gates on winner: validator 0 blockers, eval exit 0, variety ok (entry 32); pack blueprint; 99.7 kept off the tongue, three numbers spent.
+
+## ## Build journal
+- 2026-10-07T12:21:59Z - 2026-10-07 04-script complete: draft A contrarian-take wins; storyboard + script + drafts saved; narration normalized for voice.
