@@ -1,0 +1,211 @@
+{
+  "slug": "2026-10-07-deepseek-v4-1-flash-at-378-tok",
+  "topic": "DeepSeek V4.1 Flash at 378 tok/s: the cache-hit catch",
+  "generated_at": "2026-10-07T11:48:00Z",
+  "depth": "standard",
+  "thesis": "378 tok/s is what DeepSeek V4.1 Flash does for an agent that already paid to read its prompt once; your first, cold prompt pays the prefill bill in seconds and cents, and only the repeats after it get the headline speed.",
+  "explanation_path": "The viewer must hold what a cache hit is before any speed number can be judged: a model that has read text once saves the reading work, and a request whose opening exactly matches saved work skips it, so the speed a repeat enjoys is speed the first request had to earn. With that in place the fine print becomes the story: the 99.7% figure is the cached share of the single best qualifying account on RunInfra's heaviest agent traffic, and the 378 figure is model-only, measured before the gateway, on a stack built to keep sessions warm. DeepSeek's own documents price the cold path in seconds and money, the wait for a first token on a long prompt and the split between cold and warmed input pricing, which turns the gap from jargon into a bill. The same model measured independently on DeepSeek's first-party API, and measured single-stream on a DGX Station, shows what one ordinary conversation actually gets. The viewer leaves able to ask of any tok/s headline: warmed or cold, and model-only or end to end.",
+  "claims": [
+    {
+      "claim": "RunInfra's page for DeepSeek V4.1 Flash reports an output speed of 378 output tokens per second, model only, with a cache hit rate of 99.7% last 24 hours.",
+      "source_url": "https://runinfra.ai/inference-api/deepseek-v4-1-flash",
+      "source_title": "DeepSeek V4.1 Flash API pricing and speed | RunInfra",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "The 378 figure carries a qualifier most readers skip: it is model-only and measured before the gateway, wording RunInfra prints on its own homepage next to the same number.",
+      "source_url": "https://runinfra.ai/",
+      "source_title": "Open models, built for agents | RunInfra",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "The 99.7% cache hit rate is the highest qualifying account's cached-input share on paid settled traffic, agent sessions of five or more turns with at least 10 million billed input tokens per account, and RunInfra states the published figure is not a typical rate or a guarantee.",
+      "source_url": "https://runinfra.ai/methodology",
+      "source_title": "Measurement methodology | RunInfra",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "A cache hit requires exact prefix reuse: DeepSeek's caching guide states a subsequent request can only hit the cache if it fully matches a cache prefix unit, and that the system is best-effort and does not guarantee a 100% cache hit rate.",
+      "source_url": "https://api-docs.deepseek.com/guides/kv_cache/",
+      "source_title": "Context Caching | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cold prompts pay in waiting: for a 128K prompt with high reference, DeepSeek reports first token latency cut from 13s to just 500ms when the cache hits, which makes the cold read the 13s case.",
+      "source_url": "https://api-docs.deepseek.com/news/news0802/",
+      "source_title": "DeepSeek API introduces Context Caching on Disk, cutting prices by an order of magnitude | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "Cold prompts also pay full input price: DeepSeek's list price is $0.15 per 1M input tokens on a cache miss versus $0.003 on a cache hit, off-peak.",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "source_title": "Models & Pricing | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "Independent measurement puts the same model far below the headline: Artificial Analysis measures DeepSeek V4.1 Flash (Max) at 226.6 tokens per second based on DeepSeek's API, well above a 75.0 t/s median for similar open-weight models.",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "source_title": "DeepSeek V4.1 Flash (max) - Intelligence, Performance & Price Analysis | Artificial Analysis",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "DeepSeek V4.1 Flash is a multimodal MoE with 552B backbone parameters that activates only 8B parameters per token during prefill and 16B during decode, and compresses its global KV cache to 890 bytes per token.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash | Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "On a DGX Station with one GB300 GPU, vLLM's verified recipe measures 90.5 aggregate tok/s for a single stream and reaches 378 only across twelve concurrent streams.",
+      "source_url": "https://recipes.vllm.ai/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash | vLLM Recipes",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    },
+    {
+      "claim": "The number went public on Hacker News on 2026-10-07 under the title DeepSeek v4.1 Flash at 378 tok/s 99.7% Cache hit rate, two points and no comments at fetch time.",
+      "source_url": "https://news.ycombinator.com/item?id=49989109",
+      "source_title": "DeepSeek v4.1 Flash at 378 tok/s 99.7% Cache hit rate | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-10-07"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "headline output speed (RunInfra, model only)",
+      "value": "378 output tokens per second",
+      "source_url": "https://runinfra.ai/inference-api/deepseek-v4-1-flash"
+    },
+    {
+      "label": "cache hit rate behind the headline",
+      "value": "99.7% last 24 hours",
+      "source_url": "https://runinfra.ai/inference-api/deepseek-v4-1-flash"
+    },
+    {
+      "label": "floor to qualify for that rate, per account",
+      "value": "at least 10 million billed input tokens",
+      "source_url": "https://runinfra.ai/methodology"
+    },
+    {
+      "label": "first token on a 128K prompt, cold to warmed",
+      "value": "from 13s to just 500ms",
+      "source_url": "https://api-docs.deepseek.com/news/news0802/"
+    },
+    {
+      "label": "input price, miss vs hit (DeepSeek list, off-peak)",
+      "value": "$0.15 (miss) vs $0.003 (hit) per 1M input tokens",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing"
+    },
+    {
+      "label": "independent output speed (DeepSeek API)",
+      "value": "226.6 tokens per second",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash"
+    },
+    {
+      "label": "one stream on DGX Station GB300",
+      "value": "90.5 aggregate tok/s, prose",
+      "source_url": "https://recipes.vllm.ai/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "global KV cache footprint",
+      "value": "890 bytes per token",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a kitchen where the prep cook has already chopped everything",
+      "mapping": "the cache hit is cooking from mise en place, the cache miss is chopping every vegetable from scratch, and the tok/s figure is plates per minute once the pan is hot",
+      "limit": "the cache speeds up the reading of your prompt and cuts the input bill, not the writing itself; the writing hand is the same either way"
+    },
+    {
+      "vehicle": "rereading a long document with your highlights in hand",
+      "mapping": "the prefix is the part you already highlighted, the hit is skimming those highlights instead of rereading, the miss is the full first read",
+      "limit": "nothing carries over between two different conversations; only an identical opening counts, and the highlights get thrown out after hours to days"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "378 tok/s is the speed you get when you call DeepSeek V4.1 Flash.",
+      "reality": "It is RunInfra's model-only figure behind a 99.7% cache hit rate, and independent measurement on DeepSeek's own API is 226.6 tokens per second (claims 1, 2, 7)."
+    },
+    {
+      "myth": "A high cache hit rate is a property of the model.",
+      "reality": "It is a property of the traffic; only requests that fully match a stored prefix hit, and DeepSeek says the system does not guarantee a 100% cache hit rate (claim 4)."
+    },
+    {
+      "myth": "Once the cache is warm it stays warm.",
+      "reality": "RunInfra holds prefixes on the serving GPU with best-effort retention under memory pressure, and DeepSeek clears unused entries, usually within a few hours to a few days (claim 4's sources)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "token",
+      "definition": "The smallest chunk of text a model reads or writes, roughly a word or a piece of one."
+    },
+    {
+      "term": "tokens per second (tok/s)",
+      "definition": "How fast a model produces new tokens once it has started writing."
+    },
+    {
+      "term": "prefill",
+      "definition": "The phase where the model reads your whole prompt before it can write the first token."
+    },
+    {
+      "term": "time to first token (TTFT)",
+      "definition": "How long you wait between sending a prompt and seeing the first word."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The saved intermediate results of a model reading text, kept so the same text never has to be fully re-read."
+    },
+    {
+      "term": "cache hit / cache miss",
+      "definition": "A request whose opening exactly matches something already stored is a hit, cheap and fast; anything else is a miss and pays full price."
+    },
+    {
+      "term": "prefix",
+      "definition": "The start of your prompt, matched from the very first token; partial matches in the middle do not count."
+    },
+    {
+      "term": "model-only vs end-to-end",
+      "definition": "Speed measured at the model itself versus speed measured at your client, gateway and network included."
+    },
+    {
+      "term": "aggregate tok/s",
+      "definition": "The combined speed of all concurrent conversations on one server, not the speed of one conversation."
+    },
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model architecture that keeps many specialist blocks and activates only a few per token."
+    }
+  ],
+  "unverified": [
+    "What a fully cold prompt measures in tok/s on RunInfra's own stack is not published anywhere fetched this run; the page reports one output speed and a hit rate, never a cold-path speed.",
+    "Whether any community quantization of the 552B DeepSeek V4.1 Flash fits and runs on a 128 GB DGX Spark was not verified; the native checkpoint is roughly 511 GB on disk per vLLM's recipe.",
+    "The radar's second lead, a fast single-box DeepSeek v4.1 Flash runtime at tangled.org, could not be located in this run's searches; nothing about it is cited.",
+    "RunInfra's homepage showed 99.3% cache hit for the same last-24-hours window its model page reported as 99.7%; hourly revalidation per its methodology likely explains the drift, but that is our reading, not a confirmed explanation."
+  ],
+  "suggested_outline": "Hook: the headline says DeepSeek v4.1 Flash at 378 tok/s, and the fine print under it says 99.7% cache hit rate.\nWhat a cache hit is: the model saves the work of reading text, and only a request whose opening exactly matches saved work skips it; a first, cold prompt can never hit.\nThe receipt: 99.7% is the best qualifying account on RunInfra, sessions of five or more turns and at least 10 million billed input tokens, a figure the site itself says is not a typical rate or a guarantee.\nWhat cold costs: on DeepSeek's own API a 128K prompt's first token takes 13s cold versus 500ms warmed, and cold input lists at $0.15 per 1M tokens versus $0.003 warmed; measured independently, the model does 226.6 tok/s.\nThe local mirror and the landing: one stream on a DGX Station GB300 is 90.5 tok/s, with 378 only across twelve streams at once; cache speed is earned by repetition, and the first prompt always pays full price.",
+  "notes": "Source conflict: RunInfra's homepage said \"99.3% cache hit, last 24 hours\" while its model page said \"99.7% last 24 hours\", both fetched on 2026-10-07; quote the model page and HN title (99.7%) since that is the headline being busted, and expect the live figure to move. The vLLM DGX Station table's 378 aggregate tok/s at twelve streams is numerically identical to RunInfra's 378 by coincidence; if the writer uses it, say plainly it is a different measurement, twelve conversations on one box rather than one conversation in one cloud. Tiering: RunInfra measures its own serving with a published method, so its pages are tier 3 benchmark here even though they are vendor pages; DeepSeek docs and the model card are tier 1. Artificial Analysis measures 226.6 tok/s on DeepSeek's first-party API, not on RunInfra; it bounds the model's publicly measured single-conversation speed, not RunInfra's stack.",
+  "viewer_situation": "You saw a Hacker News headline saying DeepSeek v4.1 Flash runs at 378 tok/s and you want to know whether the model you would call or run is actually that fast.",
+  "has_process": false,
+  "objection": "The number is still real: a measured 378 on real serving hardware, and cache hits are simply how production agents run, so the headline is not wrong, it is just not about your first prompt."
+}
