@@ -2,14 +2,14 @@
 slug: 2026-10-06-beam-is-a-501b-open-weight-mod
 workspace: shorts
 title: Beam is a 501B open-weight model you cannot run
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: classic
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-06
-updated: "2026-10-06T11:06:52Z"
+updated: "2026-10-07T13:35:04Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Why: biggest release of the window (468 HN pts/16 h), REFRAMES 'open weights' as downloadable-not-servable; classic band fits one-fact-one-consequence; skipped #1 Flash-Agents (Minecraft-polluted keyword) and #3 Qwen finetune (lane repeat).
 
 ## Build journal
-
+- 2026-10-07T13:35:04Z 2026-10-07T13:35:04Z expired: not from today's picks (2026-10-07); the factory carries no backlog
