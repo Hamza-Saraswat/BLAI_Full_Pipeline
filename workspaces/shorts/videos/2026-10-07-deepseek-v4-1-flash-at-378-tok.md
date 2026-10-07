@@ -2,19 +2,19 @@
 slug: 2026-10-07-deepseek-v4-1-flash-at-378-tok
 workspace: shorts
 title: "DeepSeek v4.1 Flash at 378 tok/s: the cache-hit catch"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "REFRAMES,PROVES"
 created: 2026-10-07
-updated: "2026-10-07T12:24:44Z"
+updated: "2026-10-07T12:30:10Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -38,6 +38,7 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-07T11:52:04Z 03-research complete: brief md+json written, validate_research.py exit 0
+- 2026-10-07T12:30:10Z build start on gn100-83c4
 
 ## ## Decisions
 - 2026-10-07T12:21:59Z - 04-script (unattended): contrarian-take beat worked-example 21-18 (kimi-k3 judge, no grafts); hooks from two patterns (named-contradiction vs situation); gates on winner: validator 0 blockers, eval exit 0, variety ok (entry 32); pack blueprint; 99.7 kept off the tongue, three numbers spent.
