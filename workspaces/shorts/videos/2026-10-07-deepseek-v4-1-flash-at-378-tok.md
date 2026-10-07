@@ -2,16 +2,16 @@
 slug: 2026-10-07-deepseek-v4-1-flash-at-378-tok
 workspace: shorts
 title: "DeepSeek v4.1 Flash at 378 tok/s: the cache-hit catch"
-status: scripted
+status: ready-to-build
 pillar: myth-bust
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "REFRAMES,PROVES"
 created: 2026-10-07
-updated: "2026-10-07T12:21:59Z"
+updated: "2026-10-07T12:24:44Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-07-ideas]]
 - Research: [[stages/03-research/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-brief|Brief]]
 - Script: [[stages/04-script/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-script|Script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-package|Package]]
+- Voice: [[stages/06-voice/output/2026-10-07-deepseek-v4-1-flash-at-378-tok-narration|Narration (normalized)]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -41,6 +41,8 @@ blotato_post_id: ""
 
 ## ## Decisions
 - 2026-10-07T12:21:59Z - 04-script (unattended): contrarian-take beat worked-example 21-18 (kimi-k3 judge, no grafts); hooks from two patterns (named-contradiction vs situation); gates on winner: validator 0 blockers, eval exit 0, variety ok (entry 32); pack blueprint; 99.7 kept off the tongue, three numbers spent.
+- 2026-10-07T12:24:44Z - 05-package (unattended checkpoint): searchable title kept (52 chars, keyword in first 20; half credit on the length row accepted because product search traffic dominates and truncation keeps the keyword); seo_score 90; description leads with the 378 catch and names the 2026-09-17 DeepSeek receipt video; contains_synthetic_media false (typographic scenes plus creator voice clone); check_outputs exit 0 after linking Package and the normalized narration artifact.
 
 ## ## Build journal
 - 2026-10-07T12:21:59Z - 2026-10-07 04-script complete: draft A contrarian-take wins; storyboard + script + drafts saved; narration normalized for voice.
+- 2026-10-07T12:24:44Z - 2026-10-07 05-package complete: package note + manifest written, seo 90, hub ready-to-build. Stages 06-08 belong to build/build.py.
