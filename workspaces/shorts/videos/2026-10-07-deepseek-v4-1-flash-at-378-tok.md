@@ -2,18 +2,19 @@
 slug: 2026-10-07-deepseek-v4-1-flash-at-378-tok
 workspace: shorts
 title: "DeepSeek v4.1 Flash at 378 tok/s: the cache-hit catch"
-status: building
+status: blocked
 pillar: myth-bust
 structure: contrarian-take
 format: smooth-explainer
 style_pack: blueprint
 value_types: "REFRAMES,PROVES"
 created: 2026-10-07
-updated: "2026-10-07T12:30:10Z"
+updated: "2026-10-07T12:54:06Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
-blocked_reason: ""
+blocked_reason: "\"07-render: 07-render: assemble.py exited 1: pseek-v4-1-flash-at-378-tok/render/qa"
+assemble: "$ npx remotion still Assembly /home/buildlocalai/blai/builds/2026-10-07-deepseek-v4-1-flash-at-378-tok/render/qa/safe-z\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -40,6 +41,10 @@ blotato_post_id: ""
 - 2026-10-07T11:52:04Z 03-research complete: brief md+json written, validate_research.py exit 0
 - 2026-10-07T12:30:10Z build start on gn100-83c4
 - 2026-10-07T12:31:51Z 06-voice ok 99s
+- 2026-10-07T12:44:59Z 07-render fail 785s (07-render: scene s05 did not pass safe_zone_check after 5 rounds)
+- 2026-10-07T12:54:06Z 07-render fail 546s (07-render: assemble.py exited 1: pseek-v4-1-flash-at-378-tok/render/qa
+assemble: $ node /home/buildlocalai/blai/repo/skills/render-shorts/remotion/scripts/loop_)
+- 2026-10-07T12:54:06Z blocked at 07-render
 
 ## ## Decisions
 - 2026-10-07T12:21:59Z - 04-script (unattended): contrarian-take beat worked-example 21-18 (kimi-k3 judge, no grafts); hooks from two patterns (named-contradiction vs situation); gates on winner: validator 0 blockers, eval exit 0, variety ok (entry 32); pack blueprint; 99.7 kept off the tongue, three numbers spent.
