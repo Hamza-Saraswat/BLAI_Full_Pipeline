@@ -2,14 +2,14 @@
 slug: 2026-10-08-glm-5-3-flash-e224-runs-on-two
 workspace: shorts
 title: GLM 5.3 Flash E224 on two DGX Sparks
-status: building
+status: review
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-10-08
-updated: "2026-10-08T12:21:10Z"
+updated: "2026-10-08T12:40:36Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-script]]
 - Package: [[stages/05-package/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-package]]
 - Voice: [[stages/06-voice/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-08T12:21:10Z build start on gn100-83c4
 - 2026-10-08T12:22:09Z 06-voice ok 56s
+- 2026-10-08T12:40:40Z 07-render ok 38.90s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 188
+- 2026-10-08T12:40:40Z 07-render ok 1108s
