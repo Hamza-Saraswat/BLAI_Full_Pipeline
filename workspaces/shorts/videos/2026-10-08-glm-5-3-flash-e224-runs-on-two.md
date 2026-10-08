@@ -2,19 +2,19 @@
 slug: 2026-10-08-glm-5-3-flash-e224-runs-on-two
 workspace: shorts
 title: GLM 5.3 Flash E224 on two DGX Sparks
-status: ready-to-build
+status: building
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-10-08
-updated: "2026-10-08T12:20:40Z"
+updated: "2026-10-08T12:21:10Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 - Package 2026-10-08: searchable title chosen ("GLM 5.3 Flash E224 on two DGX Sparks", 36 chars) because the keyword gap is the owner's search query; rubric 90/100 (half credit lost on Description row: related-video line sits second per the shipped layout); contains_synthetic_media false (typographic scenes plus the creator's own cloned voice); check_outputs 0 failures after linking the package note and the stage-04 narration sidecar in Artifacts.
 
 ## Build journal
-
+- 2026-10-08T12:21:10Z build start on gn100-83c4
