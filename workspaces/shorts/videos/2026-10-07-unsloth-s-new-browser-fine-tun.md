@@ -2,14 +2,14 @@
 slug: 2026-10-07-unsloth-s-new-browser-fine-tun
 workspace: shorts
 title: "Unsloth's new browser: fine-tuning without a terminal"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-07
-updated: "2026-10-07T11:07:18Z"
+updated: "2026-10-08T13:35:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Lane how-to repeats yesterday because every other candidate above 60 opportunity is how-to (selection-rules exception); band classic -- one fact, one consequence.
 
 ## Build journal
-
+- 2026-10-08T13:35:21Z 2026-10-08T13:35:21Z expired: not from today's picks (2026-10-08); the factory carries no backlog
