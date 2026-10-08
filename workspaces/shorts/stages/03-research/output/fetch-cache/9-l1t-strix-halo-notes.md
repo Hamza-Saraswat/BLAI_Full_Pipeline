@@ -316,7 +316,7 @@ What’s changed:
 
 The headline: ROCm drops 64% at full context, but MTP recovers most of it. Vulkan barely drops.
 
-Full writeup with all tables: [Strix Halo at Full Context — Why Your Decode Drops 64% and What Actually Fixes It · kmarble.dev](https://kmarble.dev/posts/strix-halo-full-context-decode-drops/)
+Full writeup with all tables: [Strix Halo at Full Context -- Why Your Decode Drops 64% and What Actually Fixes It · kmarble.dev](https://kmarble.dev/posts/strix-halo-full-context-decode-drops/)
 
 But the quick version:
 

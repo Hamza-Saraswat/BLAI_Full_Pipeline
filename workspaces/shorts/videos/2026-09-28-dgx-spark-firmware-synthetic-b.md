@@ -32,7 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
-- Picked from 2026-09-28 ideas (rank 4, opportunity 56.6): Petronella's 8-unit GB10 field report (Sep 25) plus the NVIDIA forum power-off thread give two sources and a measured myth-bust — synthetic burn test down ~11% after the firmware update while real LLM serving got 4-8% faster.
+- Picked from 2026-09-28 ideas (rank 4, opportunity 56.6): Petronella's 8-unit GB10 field report (Sep 25) plus the NVIDIA forum power-off thread give two sources and a measured myth-bust -- synthetic burn test down ~11% after the firmware update while real LLM serving got 4-8% faster.
 - Format smooth-explainer: the burn-test-vs-serving worked example must be carried the whole way; also breaks the two-day classic run. Skipped rank 3 (Rene-1 vs GLM 5.3 Flash): same product and angle as yesterday's published pick.
 
 ## Build journal

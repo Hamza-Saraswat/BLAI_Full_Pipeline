@@ -23,7 +23,7 @@ Both drafts were scanned against the hard constraints. Neither is bounced:
 
 ---
 
-## Draft A (structure: news-react-so-what, hook pattern: named-contradiction) — in full
+## Draft A (structure: news-react-so-what, hook pattern: named-contradiction) -- in full
 
 ```json
 {
@@ -151,7 +151,7 @@ Both drafts were scanned against the hard constraints. Neither is bounced:
 
 ---
 
-## Draft B (structure: number-first, hook pattern: number-shock) — in full
+## Draft B (structure: number-first, hook pattern: number-shock) -- in full
 
 ```json
 {
@@ -287,9 +287,9 @@ Both drafts were scanned against the hard constraints. Neither is bounced:
 | 2 | Payoff timing | **2** | **2** | A pays concretely by second ~6 ("Free weights dropped this morning"), with the 890 number landing by ~second 8. B's promised drop completes ~second 5, its meaning (the KV cache gloss) by ~second 8. Neither pays inside four seconds. |
 | 3 | Specificity | **2** | **2** | Both spend numbers where they land and hedge their own math, but both load two new numbers into the s04 sentence ("a million-token context… one gigabyte"), past the one-new-number-per-sentence ceiling. No finding-17 drift: absence stays absence in both. |
 | 4 | Voice | **3** | **3** | Both clean, second person, legal "we," no em dashes, caps held. Each lands one wry beat without explaining it: A's "Sous chefs, one clipboard"; B's "Flash got bigger, not smaller." |
-| 5 | Navigation | **3** | **3** | No labels used, none needed. In both, every transition names what changed (cost → mechanism → consequence → credibility → gate), and the caveat scene is load-bearing for the close — "watch for the first quant" breaks without it adjacent. Neither script survives reordering intact. |
+| 5 | Navigation | **3** | **3** | No labels used, none needed. In both, every transition names what changed (cost → mechanism → consequence → credibility → gate), and the caveat scene is load-bearing for the close -- "watch for the first quant" breaks without it adjacent. Neither script survives reordering intact. |
 | 6 | Difference | **1** | **1** | Neither matches the last two scripts (comparison-ladder, worked-example), so not 0. But A runs 38s, duplicating the most recent video's duration, and its structure aired three days ago (09-07). B runs 37s, duplicating 09-08, and repeats 09-06's exact number-first/number-shock combo. Both close in the same viewer-imperative family as 09-06 and 09-07. |
-| 7 | Repeat test | **2** | **2** | A's "Your card is the gate" and B's "the cache stopped being your bottleneck; the weights are it" are both repeatable — but in both drafts a "watch for the first quant" line follows the punchline, so the repeatable line is not the last thing heard. Tier 3 is unreachable for both. |
+| 7 | Repeat test | **2** | **2** | A's "Your card is the gate" and B's "the cache stopped being your bottleneck; the weights are it" are both repeatable -- but in both drafts a "watch for the first quant" line follows the punchline, so the repeatable line is not the last thing heard. Tier 3 is unreachable for both. |
 | 8 | Teaching | **3** | **2** | A shows two mechanisms (cross-layer sharing, half-size shorthand) and states the limit ("the model trained to share"), so the viewer can predict a case the script never mentions: an older model cannot retrofit this trick without retraining. B shows the sharing mechanism once, concretely, but omits the trained-to-share limit; the viewer leaves knowing the cache shrank, not why rivals can't simply copy it. |
 | | **Total** | **19** | **17** | |
 
@@ -297,7 +297,7 @@ Both drafts were scanned against the hard constraints. Neither is bounced:
 
 ## Winner: Draft A (19–17)
 
-No tie, so the row-6 tiebreak is not invoked. For the retro's benefit: had the totals tied, row 6 was level too, and the call would have turned on which collision is worse — A's duration match with the immediately previous video versus B's exact structure-and-hook repeat from 09-06.
+No tie, so the row-6 tiebreak is not invoked. For the retro's benefit: had the totals tied, row 6 was level too, and the call would have turned on which collision is worse -- A's duration match with the immediately previous video versus B's exact structure-and-hook repeat from 09-06.
 
 ---
 
@@ -306,7 +306,7 @@ No tie, so the row-6 tiebreak is not invoked. For the retro's benefit: had the t
 **None performed.**
 
 - **Hook graft:** not eligible. B's hook scored 2 against A's 3; the rule requires the loser's hook to score at least two points higher.
-- **Sentence graft considered and rejected:** B's "A token is roughly a word." It fills a real gap — A uses "token" from s02 onward without a gloss. But its only natural home is inside A's giant-number scene, where it either rewrites that beat (forbidden) or trails the 890 reveal as a footnote, diluting the payoff timing the scene exists to serve. Logged instead as a voice-rules candidate: gloss "token" on first use for non-fluent viewers.
+- **Sentence graft considered and rejected:** B's "A token is roughly a word." It fills a real gap -- A uses "token" from s02 onward without a gloss. But its only natural home is inside A's giant-number scene, where it either rewrites that beat (forbidden) or trails the 890 reveal as a footnote, diluting the payoff timing the scene exists to serve. Logged instead as a voice-rules candidate: gloss "token" on first use for non-fluent viewers.
 - **Second candidate rejected:** B's "The twist: Flash got bigger, not smaller." A's s04 split-compare already delivers the cache-cheap/weights-huge inversion; the line has no seam in A that doesn't require rewriting surrounding beats.
 
 One phrasing note for the retro, not a graft: B's "Every benchmark is DeepSeek's own" is a universal claim where A scopes to "that beat-its-Pro score." Not scored as drift absent the brief text, but A's scoped phrasing is the safer pattern under finding 17.
@@ -315,7 +315,7 @@ One phrasing note for the retro, not a graft: B's "Every benchmark is DeepSeek's
 
 ## What the losing shape would have needed to win
 
-Number-first needed its shock inside the first five words — leading with the drop itself, as its own first hook candidate did ("Eight hundred ninety bytes. That is what one token costs now."), instead of spending sentence one on setup and landing the tension in sentence two. And it needed the second mechanism, the trained-to-share limit, so the viewer leaves able to predict which models can't copy the trick rather than only knowing that Flash's cache got cheap.
+Number-first needed its shock inside the first five words -- leading with the drop itself, as its own first hook candidate did ("Eight hundred ninety bytes. That is what one token costs now."), instead of spending sentence one on setup and landing the tension in sentence two. And it needed the second mechanism, the trained-to-share limit, so the viewer leaves able to predict which models can't copy the trick rather than only knowing that Flash's cache got cheap.
 
 ---
 

@@ -302,10 +302,10 @@ All the workflows above are _offline_ quantization: you run a script, write a ne
 
 _Online_ quantization instead quantizes the weights at load time, directly from a high-precision checkpoint, and offers several advantages over the offline flow:
 
-- **No export step** — serve directly from the original `bf16`/`fp16` checkpoint; no separate quantization run before deployment.
-- **No extra disk footprint** — nothing new is written to disk, so there is no second copy of the model to store or manage.
-- **No calibration data** — activations are scaled dynamically at runtime, so no calibration dataset is needed.
-- **Fast iteration** — switch schemes or per-layer selections instantly by changing a config, without re-exporting.
+- **No export step** -- serve directly from the original `bf16`/`fp16` checkpoint; no separate quantization run before deployment.
+- **No extra disk footprint** -- nothing new is written to disk, so there is no second copy of the model to store or manage.
+- **No calibration data** -- activations are scaled dynamically at runtime, so no calibration dataset is needed.
+- **Fast iteration** -- switch schemes or per-layer selections instantly by changing a config, without re-exporting.
 
 ### vLLM online quantization [¶](https://docs.vllm.ai/en/stable/features/quantization/quark/\#vllm-online-quantization "Permanent link")
 
@@ -319,11 +319,11 @@ Its quant math is aligned byte-for-byte with Quark's offline export, so what you
 
 Compared to vLLM's built-in online quantization, the `quark_online` plugin adds:
 
-- **Flexible config parsing** — a terse config expands into Quark's verbose per-layer config, delegating all per-layer matching to a real `QuarkConfig`.
-- **Per-layer / mixed schemes** — dispatch a different method per layer (e.g. MXFP4 experts with FP8 attention on an MoE model). Each online method subclasses the matching offline scheme, so a load-time quantized layer runs the identical inference kernel as an offline one.
-- **Re-quantizing an already-quantized checkpoint** — an FP8 block-scale checkpoint (e.g. DeepSeek-R1) is dequantized and re-quantized to a target scheme layer-locally at load time, with no new checkpoint.
+- **Flexible config parsing** -- a terse config expands into Quark's verbose per-layer config, delegating all per-layer matching to a real `QuarkConfig`.
+- **Per-layer / mixed schemes** -- dispatch a different method per layer (e.g. MXFP4 experts with FP8 attention on an MoE model). Each online method subclasses the matching offline scheme, so a load-time quantized layer runs the identical inference kernel as an offline one.
+- **Re-quantizing an already-quantized checkpoint** -- an FP8 block-scale checkpoint (e.g. DeepSeek-R1) is dequantized and re-quantized to a target scheme layer-locally at load time, with no new checkpoint.
 
-The plugin ships in AMD Quark — no fork of vLLM, no patched checkpoint format; see the [Quark documentation](https://quark.docs.amd.com/latest/) for details. Three presets ship ready to use:
+The plugin ships in AMD Quark -- no fork of vLLM, no patched checkpoint format; see the [Quark documentation](https://quark.docs.amd.com/latest/) for details. Three presets ship ready to use:
 
 | Preset key | Scheme |
 | --- | --- |
@@ -362,7 +362,7 @@ vllm serve Qwen/Qwen3-8B \
 
 ### Re-quantizing an offline checkpoint [¶](https://docs.vllm.ai/en/stable/features/quantization/quark/\#re-quantizing-an-offline-checkpoint "Permanent link")
 
-No extra arguments — the same `hf_overrides` detects the checkpoint's existing config and merges it automatically:
+No extra arguments -- the same `hf_overrides` detects the checkpoint's existing config and merges it automatically:
 
 ```
 llm = LLM(

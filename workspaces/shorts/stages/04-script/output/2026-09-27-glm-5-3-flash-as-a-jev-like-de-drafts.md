@@ -51,7 +51,7 @@ row 7: A=2 B=3
 row 8: A=3 B=3
 total A=22 B=22
 
-WINNER: draft B — totals and row 6 both tie, so the slot goes to the draft whose last sound is its repeatable payoff: B's decision rule lands final, quantified (seventy point two percent on sixteen hundred scanned documents) and reusable, in five fewer seconds, while A buries its best line under a kicker and leaves the scan claim qualitative.
+WINNER: draft B -- totals and row 6 both tie, so the slot goes to the draft whose last sound is its repeatable payoff: B's decision rule lands final, quantified (seventy point two percent on sixteen hundred scanned documents) and reusable, in five fewer seconds, while A buries its best line under a kicker and leaves the scan claim qualitative.
 
 GRAFTS: A's closing line "Your routing calls stop being a metered bill and become electricity." moves into B's payoff scene as the setup sentence before the rule; legal because B states the same at-home economics flatter ("the bill drops to zero"), the sentence adds no numbers, keeps second person, requires no rewriting of the surrounding beat, and leaves B's rule as the last line heard.
 

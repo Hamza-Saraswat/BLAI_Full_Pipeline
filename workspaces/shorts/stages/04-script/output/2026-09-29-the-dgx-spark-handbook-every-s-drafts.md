@@ -62,13 +62,13 @@ Title: The DGX Spark Handbook, Decoded  |  target 37 s  |  7 scenes
 Draft A, 20–18: it pays its number-shock with brief-sanctioned figures, lands its first substance by ~second 8, and saves its most repeatable line for last, while B opens on two scenes of re-promising and builds its payoff on a price the brief contradicts.
 
 ## Grafts
-- none — B's hook ties A's at 2 (clears no +2 bar), and B's distinctive lines ("one author's stopwatch," the 13/196 Gbps beat) would need new surrounding beats or break A's five-number budget.
+- none -- B's hook ties A's at 2 (clears no +2 bar), and B's distinctive lines ("one author's stopwatch," the 13/196 Gbps beat) would need new surrounding beats or break A's five-number budget.
 
 ## What the loser needed
 B needed its first settled answer on screen before second 8 instead of spending scenes 1–2 re-stating the one-link promise. It also needed the brief's actual price figure: the $4,699 claim capped its specificity and undercut the payoff it was setting up.
 
 ## Breaches
-- Draft B, factual drift: the shared hook pool (brief-sanctioned facts) carries "$7,999 new asking price," "eight grand," and "four thousand last year, five used" — B's "hiked list price: $4,699" appears nowhere and contradicts them; row 3 capped at 1.
+- Draft B, factual drift: the shared hook pool (brief-sanctioned facts) carries "$7,999 new asking price," "eight grand," and "four thousand last year, five used" -- B's "hiked list price: $4,699" appears nowhere and contradicts them; row 3 capped at 1.
 
 The judge's breach note on B is overruled by the wrapper: "$4,699" is the brief's verbatim
 hiked-MSRP key number (claim 2), not a contradiction. The score stands; the note is kept

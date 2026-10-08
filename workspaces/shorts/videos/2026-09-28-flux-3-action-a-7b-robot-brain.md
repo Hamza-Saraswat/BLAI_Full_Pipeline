@@ -33,7 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 - Picked from 2026-09-28 ideas (rank 2, opportunity 79.8): BFL shipped FLUX 3 Action this week, open weights, two radar sources; highest-scoring candidate that names a product and rotates off yesterday's lanes.
-- Format classic: one fact (7B world-action model, open weights) plus one consequence (runs on one consumer GPU); keyword gap — "flux 3 action" has no owning local-AI video yet.
+- Format classic: one fact (7B world-action model, open weights) plus one consequence (runs on one consumer GPU); keyword gap -- "flux 3 action" has no owning local-AI video yet.
 
 ## Build journal
 - 2026-09-29T13:35:50Z 2026-09-29T13:35:50Z expired: not from today's picks (2026-09-29); the factory carries no backlog

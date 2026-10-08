@@ -46,7 +46,7 @@ A: 21/24 | B: 20/24
 ===WINNER===
 A | Contrarian shape wins on difference, navigation, and voice despite B's faster payoff.
 ===GRAFTS===
-B's "Answers cost one forward pass, a single run through the network" moves into A s03 after "probabilities attached" — gives A the mechanism it lacks, adds no new number, fits the same breath.
+B's "Answers cost one forward pass, a single run through the network" moves into A s03 after "probabilities attached" -- gives A the mechanism it lacks, adds no new number, fits the same breath.
 ===LOSER_ADVICE===
 Number-first needed a hook and close not recycled from the 09-22 number-shock and the recent "tonight" closings. It also needed one wry beat and transitions that lock the middle scenes in place.
 ```

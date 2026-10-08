@@ -36,7 +36,7 @@ All three were run with llama.cpp `llama-perplexity` on wikitext-2 test (`n_ctx=
 
 | Format | PPL | vs float | Size |
 | --- | --- | --- | --- |
-| F16 float (baseline) | 6.61 ±0.23 | — | 71 GB |
+| F16 float (baseline) | 6.61 ±0.23 | -- | 71 GB |
 | Q4\_1 (UINT4 affine) | 6.73 ±0.24 | +1.8% | ~21 GB |
 | **Q4\_0 (INT4 symmetric)** | **6.79 ±0.24** | **+2.7%** | **~21 GB** |
 
@@ -56,7 +56,7 @@ The six leaderboard-v2 tasks use two scoring methods in lm-eval:
 
 Stock `llama-server` returns logprobs only for tokens the model itself generates, not for prompt tokens (both `/v1/completions` with `echo=true` and the native `/completion` with `n_probs` were tested), so the four multiple-choice tasks originally could not be scored. This was fixed by patching `llama-server` on branch **`hongweimeng/gguf-prompt-logprobs`**: `/v1/completions` with `echo=true` \+ `logprobs` now returns the legacy OpenAI logprobs format (`text_offset` / `tokens` / `token_logprobs` / `top_logprobs`) covering the **prompt tokens**. With that, lm-eval's `gguf` (GGUFLM) backend scores all four multiple-choice tasks directly on the GGUF. Logprob correctness was verified against `llama-perplexity` (matching PPL).
 
-So all 6 leaderboard-v2 tasks are now measured on this GGUF file — no vLLM / safetensors substitution is needed.
+So all 6 leaderboard-v2 tasks are now measured on this GGUF file -- no vLLM / safetensors substitution is needed.
 
 ### Results (updated 2026-08-08, all 6 tasks complete)
 

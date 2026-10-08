@@ -55,16 +55,16 @@ Judge: kimi-k3 blind call, rubric verbatim as system file, both storyboards as u
 
 | Row | A (comparison-ladder) | B (myth-bust) |
 |---|---|---|
-| 1 Hook | 2 — names the Spark and a two-coder tension, but not in the first five words | 1 — "biggest coder that fits" names the topic only |
-| 2 Payoff | 1 — first concrete (23k prompt) lands ~10s, first coder named ~20s | 1 — break lands ~14s ("Speed is not the score"), after 8 even from the break |
-| 3 Specificity | 3 — each beat earns one specific; the two GLM/DeepSeek fit beats carry facts, not numbers | 2 — s8 and s9 cram (quant + three-quarters + twice-the-box; price + driver + Ubuntu + provenance in one beat) |
-| 4 Voice | 3 — clean second person, "it stays a science project" is wry and unexplained | 2 — clean and correct, no wry beat that lands |
-| 5 Navigation | 3 — "But your day also has hard code" / "What fits settles the rest" / "Back on the box"; ladder order is load-bearing | 2 — transitions carry content, but s8's "The myth survives here" reopens rather than advances |
-| 6 Difference | 3 — new shape, choice-framed hook, routing-rule landing; none match the last two | 2 — myth-bust already ran three entries ago; opening rhythm echoes it |
-| 7 Repeat test | 3 — the routing rule is the last thing heard and is quotable | 3 — "your configuration is" is repeatable and last |
-| 8 Teaching | 3 — the speed/smarts axis plus routing rule lets you place a model the script never mentions | 2 — MoE tradeoff is asserted ("why hard code beats it") but never shown |
+| 1 Hook | 2 -- names the Spark and a two-coder tension, but not in the first five words | 1 -- "biggest coder that fits" names the topic only |
+| 2 Payoff | 1 -- first concrete (23k prompt) lands ~10s, first coder named ~20s | 1 -- break lands ~14s ("Speed is not the score"), after 8 even from the break |
+| 3 Specificity | 3 -- each beat earns one specific; the two GLM/DeepSeek fit beats carry facts, not numbers | 2 -- s8 and s9 cram (quant + three-quarters + twice-the-box; price + driver + Ubuntu + provenance in one beat) |
+| 4 Voice | 3 -- clean second person, "it stays a science project" is wry and unexplained | 2 -- clean and correct, no wry beat that lands |
+| 5 Navigation | 3 -- "But your day also has hard code" / "What fits settles the rest" / "Back on the box"; ladder order is load-bearing | 2 -- transitions carry content, but s8's "The myth survives here" reopens rather than advances |
+| 6 Difference | 3 -- new shape, choice-framed hook, routing-rule landing; none match the last two | 2 -- myth-bust already ran three entries ago; opening rhythm echoes it |
+| 7 Repeat test | 3 -- the routing rule is the last thing heard and is quotable | 3 -- "your configuration is" is repeatable and last |
+| 8 Teaching | 3 -- the speed/smarts axis plus routing rule lets you place a model the script never mentions | 2 -- MoE tradeoff is asserted ("why hard code beats it") but never shown |
 
-TOTAL A: 21 — TOTAL B: 15
+TOTAL A: 21 -- TOTAL B: 15
 
 WINNER: A
 
