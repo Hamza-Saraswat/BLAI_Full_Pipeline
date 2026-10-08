@@ -1,0 +1,570 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-08T12:17:03+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 8,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 1,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.875,
+    "key_numbers_total": 8,
+    "entities_total": 22,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.385,
+    "source_domains": [
+      "flowtivity.ai",
+      "huggingface.co",
+      "nvidia.com",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 5,
+      "distinct": 5,
+      "score": 0.625,
+      "detail": [
+        {
+          "label": "single-stream decode, 2x Spark, vLLM 0.31.0 TP=2, fp8 KV cache",
+          "value": "15.7 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "15.7 tok/s",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "8-way aggregate decode, 2x Spark, same harness",
+          "value": "71.8 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "E224 weight footprint (NVFP4 experts)",
+          "value": "141 GiB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "141",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "routed experts kept per layer, of 288 in the base model",
+          "value": "224",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "224",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "active parameters per token (top-8 of 224)",
+          "value": "18 B",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark unified memory (GB10, LPDDR5x)",
+          "value": "128 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "128",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "DGX Spark memory bandwidth",
+          "value": "273 GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Unsloth UD-IQ3_XXS dynamic GGUF size, single-Spark path",
+          "value": "120.37 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "120.37",
+          "scene_ids": [
+            "s02",
+            "s05"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 22,
+      "found_count": 4,
+      "score": 0.182,
+      "found": [
+        "Spark",
+        "E224",
+        "vLLM 0.31.0",
+        "GGUF"
+      ],
+      "missing": [
+        "GLM-5",
+        "GLM-5.3-Flash",
+        "Sparks",
+        "GiB",
+        "DGX Spark",
+        "DGX Sparks",
+        "Neural Architecture Search",
+        "GB LPDDR5x",
+        "UD-IQ3_XXS",
+        "NVIDIA DGX Spark",
+        "Mac",
+        "Spark DeepSWE",
+        "DeepSeek V4 Flash",
+        "DeepSWE",
+        "GB DGX Spark",
+        "GiB of KV",
+        "GB Spark",
+        "CUDA"
+      ],
+      "top2": [
+        "GLM-5",
+        "Spark"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "GLM-5",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GLM-5.3-Flash",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sparks",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "E224",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GiB",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Sparks",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Neural Architecture Search",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB LPDDR5x",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM 0.31.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GGUF",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "UD-IQ3_XXS",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA DGX Spark",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Spark DeepSWE",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4 Flash",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSWE",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB DGX Spark",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB of KV",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB Spark",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 9,
+      "hits": 1,
+      "density": 0.111,
+      "offenders": [
+        "Then the wall: one hundred forty-one gigabytes of weights."
+      ]
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Spark"
+      ],
+      "hook_text": "Your Spark can't hold it",
+      "first_sentence": "You download the trimmed GLM five point three Flash build."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:141 GiB",
+            "entity:E224"
+          ],
+          "narration": "You download the trimmed GLM five point three Flash build. Then the wall: one hundred forty-one gigabytes of weights."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "num:128 GB",
+            "num:120.37 GB",
+            "entity:Spark",
+            "entity:E224"
+          ],
+          "narration": "Your Spark holds one hundred twenty-eight gigabytes of memory. The E two twenty-four build prunes the mixture of experts, a model waking a slice per word."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "num:224"
+          ],
+          "narration": "It keeps two hundred twenty-four experts a layer in NVIDIA's four-bit format, weights rounded smaller."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "num:15.7 tok/s",
+            "entity:Spark",
+            "entity:vLLM 0.31.0"
+          ],
+          "narration": "The fix: a second cabled Spark and tensor parallelism, splitting every word across both boxes. The builder's runbook reports fifteen point seven tokens a second."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "num:120.37 GB",
+            "entity:Spark",
+            "entity:GGUF"
+          ],
+          "narration": "Or keep one Spark: Unsloth's three-bit file, one hundred twenty gigabytes of weights, lower quality."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 3.8,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "Cable a second Spark for near-full quality, or stay at three-bit."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 7.2,
+      "words": 119,
+      "sentences": 9,
+      "est_speech_s": 41.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "You download the trimmed GLM five point three Flash build. Then the wall: one hundred forty-one gigabytes of weights. Your Spark holds one hundred twenty-eight gigabytes of memory. The E two twenty-four build prunes the mixture of experts, a model waking a slice per word. It keeps two hundred twenty-four experts a layer in NVIDIA's four-bit format, weights rounded smaller. The fix: a second cabled Spark and tensor parallelism, splitting every word across both boxes. The builder's runbook reports fifteen point seven tokens a second. Or keep one Spark: Unsloth's three-bit file, one hundred twenty gigabytes of weights, lower quality. Cable a second Spark for near-full quality, or stay at three-bit.",
+    "on_screen": "Your Spark can't hold it | E224 build | 141 GB of weights | Spark: 128 GB | E224 prunes the experts | 224 experts kept per layer | NVFP4 4-bit weights | ConnectX-7 cable | Tensor parallelism 2 | vLLM 0.31.0: 15.7 tok/s | Unsloth 3-bit GGUF | 120.37 GB on one Spark | Build Local AI"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 7.2,
+        "words": 119,
+        "est_speech_s": 41.0,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 7.2 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 'GLM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 5,
+        "heard": 5,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.182,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "GLM-5",
+          "Spark"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Spark"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.111,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

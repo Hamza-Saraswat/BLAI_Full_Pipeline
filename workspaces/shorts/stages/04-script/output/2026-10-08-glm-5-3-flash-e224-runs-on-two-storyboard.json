@@ -1,0 +1,137 @@
+{
+  "slug": "2026-10-08-glm-5-3-flash-e224-runs-on-two",
+  "topic": "GLM 5.3 Flash E224 build on two DGX Sparks",
+  "title": "GLM 5.3 Flash E224 on two DGX Sparks",
+  "description": "A community E224 build of GLM 5.3 Flash lands at 141 GB of weights, too big for one 128 GB DGX Spark, so the builder's runbook cables two Sparks together and reports 15.7 tokens a second. A 120.37 GB 3-bit file exists if you would rather stay on one box. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DGXSpark",
+    "#GLM53Flash",
+    "#LocalAI"
+  ],
+  "hook_text": "Your Spark can't hold it",
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "TEACHES,PROVES",
+  "target_duration_s": 35,
+  "narration_full": "You download the trimmed GLM five point three Flash build. Then the wall: one hundred forty-one gigabytes of weights. Your Spark holds one hundred twenty-eight gigabytes of memory. The E two twenty-four build prunes the mixture of experts, a model waking a slice per word. It keeps two hundred twenty-four experts a layer in NVIDIA's four-bit format, weights rounded smaller. The fix: a second cabled Spark and tensor parallelism, splitting every word across both boxes. The builder's runbook reports fifteen point seven tokens a second. Or keep one Spark: Unsloth's three-bit file, one hundred twenty gigabytes of weights, lower quality. Cable a second Spark for near-full quality, or stay at three-bit.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You download the trimmed GLM five point three Flash build. Then the wall: one hundred forty-one gigabytes of weights.",
+      "on_screen_text": "E224 build | 141 GB of weights",
+      "visual_brief": "Frame 1: matte black silicon field with faint amber circuit traces, hook text 'Your Spark can't hold it' at top, a dark DGX Spark outline centered low. Motion onset within 0.5 s: at 0.35 s a giant amber '141 GB' scales in center on 'one hundred forty-one gigabytes'. On 'the wall' the number settles and a thin amber rule snaps under it. Hard cut out.",
+      "est_duration_s": 6.6,
+      "sfx": [
+        {
+          "cue": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Your Spark holds one hundred twenty-eight gigabytes of memory. The E two twenty-four build prunes the mixture of experts, a model waking a slice per word.",
+      "on_screen_text": "Spark: 128 GB | E224 prunes the experts",
+      "visual_brief": "Dark field, a tight grid of small amber dots fills center on 'mixture of experts'. On 'prunes', a portion of the dots dims to grey while the survivors brighten; '224' ticks in beneath on 'two hundred twenty-four'. On 'four-bit format', each bright dot compresses into a short amber bar. At most two dot-groups animate at once; first and last 8 frames static.",
+      "est_duration_s": 9.0,
+      "sfx": [
+        {
+          "cue": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "It keeps two hundred twenty-four experts a layer in NVIDIA's four-bit format, weights rounded smaller.",
+      "on_screen_text": "224 experts kept per layer | NVFP4 4-bit weights",
+      "visual_brief": "Centered stack on dark silicon: a column of tiny expert slots, amber-lit, most rows solid. On 'two hundred twenty-four experts' the kept slots brighten in a stagger while grayed-out slots thin to hairlines. On 'NVIDIA's four-bit format' each remaining slot compresses with a single tick, then the stack stills. Hard cut.",
+      "est_duration_s": 5.2,
+      "sfx": [
+        {
+          "cue": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The fix: a second cabled Spark and tensor parallelism, splitting every word across both boxes. The builder's runbook reports fifteen point seven tokens a second.",
+      "on_screen_text": "ConnectX-7 cable | Tensor parallelism 2 | vLLM 0.31.0: 15.7 tok/s",
+      "visual_brief": "One dark Spark box sits left. On 'a second cabled Spark' the second box fades in right and an amber cable line draws between them, labeled ConnectX-7. On 'splitting every word', small amber packets travel the cable in both directions. On 'fifteen point seven', a counter rises-in-place below reading '15.7 tok/s' with 'vLLM 0.31.0' under it. Cable pulse holds to scene end.",
+      "est_duration_s": 8.6,
+      "sfx": [
+        {
+          "cue": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Or keep one Spark: Unsloth's three-bit file, one hundred twenty gigabytes of weights, lower quality.",
+      "on_screen_text": "Unsloth 3-bit GGUF | 120.37 GB on one Spark",
+      "visual_brief": "Hard cut to split screen. Left half: the two cabled Sparks from s03, dimmed to grey and static. Right half: a single Spark outline glows amber; on 'one hundred twenty gigabytes' a file card fades in above it reading 'Unsloth UD-IQ3_XXS, 120.37 GB'. The card gently settles into the box outline on 'lower quality'. Left side never moves.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Cable a second Spark for near-full quality, or stay at three-bit.",
+      "on_screen_text": "Build Local AI",
+      "visual_brief": "Hard cut to the same dark silicon field as frame 1, faint amber traces. On 'Two Sparks for the bigger build' the amber wordmark 'Build Local AI' fades in center, letterspacing settling from wide to tight across the scene, then holding static for the final 8 frames. No other text or motion.",
+      "est_duration_s": 3.8
+    }
+  ],
+  "notes_for_review": "Numbers rounded for the ear: one hundred twenty gigabytes spoken for the 120.37 GB Unsloth three-bit file; fifteen point seven tokens a second is the builder's runbook figure on two linked Sparks, not our measurement. The hook says 'the trimmed build' so one hundred forty-one gigabytes is attributed to E224, not the base model. The analogy limit for the mixture-of-experts picture is carried by 'a model waking a slice per word'; no extended analogy is used, so no limit clause was needed. The judge's graft replaced the original close with draft A's payoff line.",
+  "hook_candidates": [
+    "GLM 5.3 Flash runs on two Sparks, as of tonight",
+    "You download GLM 5.3 Flash. Then the wall",
+    "141 GiB. Two boxes to hold it",
+    "Everyone says one Spark can't run GLM Flash",
+    "One Spark or two for GLM Flash? The gigabytes decide",
+    "Your Spark isn't too slow for GLM Flash. It's too small",
+    "Two linked Sparks just served GLM Flash at 15.7 tok/s",
+    "15.7 tok/s, from two desk boxes",
+    "Your one Spark met its match: GLM 5.3 Flash",
+    "One builder's two Sparks now serve GLM Flash whole"
+  ],
+  "tags": [
+    "dgx spark",
+    "glm 5.3 flash",
+    "glm flash",
+    "glm 5.3",
+    "e224",
+    "nvfp4",
+    "two dgx sparks",
+    "local llm",
+    "local ai",
+    "run glm locally",
+    "dgx spark cluster",
+    "tokens per second",
+    "mixture of experts",
+    "unsloth gguf",
+    "glm 5.3 flash dgx spark",
+    "connectx-7"
+  ],
+  "hook_pattern": "situation"
+}
