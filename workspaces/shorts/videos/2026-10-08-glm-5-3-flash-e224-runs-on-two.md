@@ -2,21 +2,21 @@
 slug: 2026-10-08-glm-5-3-flash-e224-runs-on-two
 workspace: shorts
 title: GLM 5.3 Flash E224 on two DGX Sparks
-status: scheduled
+status: published
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-10-08
-updated: "2026-10-08T14:04:12Z"
+updated: "2026-10-08T16:04:10Z"
 publish_slot: "2026-10-08T11:00:00-05:00"
 seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=cd-szRRRKvY"
 blotato_post_id: 62d75f7f-c031-4429-8973-837a7e1dcaa5
 ---
 # GLM 5.3 Flash E224 runs on two DGX Sparks
@@ -46,3 +46,4 @@ blotato_post_id: 62d75f7f-c031-4429-8973-837a7e1dcaa5
 - 2026-10-08T12:40:43Z build done, status review
 - 2026-10-08T14:03:44Z telegram approve (approved_at 2026-10-08T14:03:44Z)
 - 2026-10-08T14:04:12Z 08-publish ok 2s
+- 2026-10-08T16:04:10Z published https://www.youtube.com/watch?v=cd-szRRRKvY
