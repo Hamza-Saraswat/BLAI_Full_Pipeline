@@ -2,14 +2,14 @@
 slug: 2026-10-08-glm-5-3-flash-e224-runs-on-two
 workspace: shorts
 title: GLM 5.3 Flash E224 on two DGX Sparks
-status: review
+status: approved
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-10-08
-updated: "2026-10-08T12:40:36Z"
+updated: "2026-10-08T14:03:44Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-08T12:40:40Z 07-render ok 38.90s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 188
 - 2026-10-08T12:40:40Z 07-render ok 1108s
 - 2026-10-08T12:40:43Z build done, status review
+- 2026-10-08T14:03:44Z telegram approve (approved_at 2026-10-08T14:03:44Z)
