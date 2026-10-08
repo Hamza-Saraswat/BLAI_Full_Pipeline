@@ -33,5 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
+- Picked at ideas stage 2026-10-08: strongest on-brand item of the radar window -- measured two-Spark numbers (15.7 tok/s single-stream, 71.8 tok/s 8-way, 141 GiB) on DGX Spark hardware, 36 h fresh. news-react/classic keeps the day's lane rotation (yesterday: myth-bust, how-to).
+
 ## Build journal
 

@@ -33,5 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
+- Picked at ideas stage 2026-10-08: top-scoring candidate (opportunity 70.6) in an open lane; comparison/smooth-explainer differs from pick 1 and from yesterday (myth-bust, how-to). Tool-name title carries search intent for "llm api prices" (autocomplete depth 22).
+
 ## Build journal
 
