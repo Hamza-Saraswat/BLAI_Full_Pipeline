@@ -1,0 +1,197 @@
+{
+  "slug": "2026-10-08-glm-5-3-flash-e224-runs-on-two",
+  "topic": "GLM 5.3 Flash E224 runs on two DGX Sparks",
+  "generated_at": "2026-10-08T11:39:21Z",
+  "depth": "standard",
+  "thesis": "A community build that prunes GLM-5.3-Flash to 224 experts per layer and quantizes the survivors to NVFP4 lands at 141 GiB, too big for one 128 GB DGX Spark and served by two ConnectX-7-linked Sparks at 15.7 tok/s single-stream.",
+  "explanation_path": "Open with the receipt, not the model: two small boxes on a desk serving GLM-5.3-Flash at conversation speed, with the numbers written down the same day. Establish what a DGX Spark is before any other fact, because every memory number in the video depends on it: 128 GB of unified LPDDR5x shared by CPU and GPU at 273 GB/s. Then show why one Spark fails: the build's 141 GiB of weights exceed 128 GB before the OS, CUDA graphs or any KV cache get a byte. Mixture of experts must be understood before the pruning story makes sense: GLM-5.3-Flash stores 288 routed experts per layer but consults only 8 per token, which is exactly why deleting rarely-routed experts is safe enough to try. The E224 build keeps 224 of 288 experts chosen by Neural Architecture Search and quantizes them to NVFP4, leaving 18 B active parameters per token unchanged, so the model stays as smart per token while its footprint drops from the unpruned NVFP4 build's roughly 190 GiB to 141 GiB. The second Spark then stops being magic: tensor parallelism over a ConnectX-7 QSFP link splits the weights about 70 GiB per node and leaves roughly 40 GiB per node for KV cache. Close on the measured trade and its honest edges: 15.7 tok/s single-stream and 71.8 tok/s eight-way, MTP speculative decoding measured slower on Spark and kept off, accuracy validated on a B200, and a single-Spark 2-bit or 3-bit GGUF path for viewers who stop at one box.",
+  "claims": [
+    {
+      "claim": "The E224 build keeps 224 of GLM-5.3-Flash's 288 routed experts per layer, selected by Neural Architecture Search, quantizes them to NVFP4, and still activates 18 B parameters per token.",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark",
+      "source_title": "autotrust/GLM5.3-Flash-E224-DGX-Spark (Hugging Face)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "The E224 weights take 141 GiB (151.5 GB on disk), sized to fit two ConnectX-7-linked DGX Sparks with 256 GB of unified memory in total and room for long-context KV cache.",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark",
+      "source_title": "autotrust/GLM5.3-Flash-E224-DGX-Spark (Hugging Face)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "A single DGX Spark cannot run the E224 build: its 128 GB unified memory is smaller than the 141 GiB of weights, so it needs two Sparks or a GPU with 180 GB or more.",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark",
+      "source_title": "autotrust/GLM5.3-Flash-E224-DGX-Spark (Hugging Face)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "The builder's deployment guide, measured 2026-10-08 on two ConnectX-7-linked Sparks running vLLM 0.31.0 with tensor parallelism 2 and fp8 KV cache, records single-stream decode of 15.7 tok/s and 8-way aggregate throughput of 71.8 tok/s with both GPUs about 96% utilized.",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark/raw/main/DEPLOY-2X-DGX-SPARK.md",
+      "source_title": "GLM-5.3-Flash-E224 on 2x NVIDIA DGX Spark -- Deployment & Operations Guide",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "NVIDIA's user guide specifies the Spark's memory as 128 GB LPDDR5x unified at 273 GB/s bandwidth and positions the machine for AI models up to 200 billion parameters, or 405B in a dual-Spark configuration.",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html",
+      "source_title": "Hardware Overview -- DGX Spark User Guide",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "The smallest full-model path that fits one 128 GB machine is a low-bit GGUF: Unsloth's 3-bit UD-IQ3_XXS dynamic quant of GLM-5.3-Flash is 120.37 GB and fits 128 GB devices like a Mac or NVIDIA DGX Spark, while 1-bit runs on 100 GB.",
+      "source_url": "https://unsloth.ai/docs/models/glm-5.3-flash",
+      "source_title": "GLM-5.3-Flash: How to Run Locally (Unsloth Documentation)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "An independent two-Spark DeepSWE field report found the unpruned GLM-5.3-Flash NVFP4 decoded at 10 to 15 tokens per second and could only be served stably at 24,576 tokens of context because of a kernel bug in its serving stack, while DeepSeek V4 Flash served its full 1,048,576-token window at 41 to 66 tok/s on the same cluster.",
+      "source_url": "https://flowtivity.ai/blog/glm-5-3-flash-vs-deepseek-v4-flash-dgx-spark-benchmark/",
+      "source_title": "GLM-5.3-Flash vs DeepSeek V4 Flash on 2x DGX Spark: Real-World DeepSWE Benchmark Results (Flowtivity)",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-10-08"
+    },
+    {
+      "claim": "GLM-5.3-Flash is Z.ai's first natively multimodal model in the GLM-5 series, with 320B total parameters and 18B active, built on a hybrid sparse and linear attention architecture.",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "source_title": "zai-org/GLM-5.3-Flash (Hugging Face)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "single-stream decode, 2x Spark, vLLM 0.31.0 TP=2, fp8 KV cache",
+      "value": "15.7 tok/s",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark/raw/main/DEPLOY-2X-DGX-SPARK.md"
+    },
+    {
+      "label": "8-way aggregate decode, 2x Spark, same harness",
+      "value": "71.8 tok/s",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark/raw/main/DEPLOY-2X-DGX-SPARK.md"
+    },
+    {
+      "label": "E224 weight footprint (NVFP4 experts)",
+      "value": "141 GiB",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark"
+    },
+    {
+      "label": "routed experts kept per layer, of 288 in the base model",
+      "value": "224",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark"
+    },
+    {
+      "label": "active parameters per token (top-8 of 224)",
+      "value": "18 B",
+      "source_url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark"
+    },
+    {
+      "label": "DGX Spark unified memory (GB10, LPDDR5x)",
+      "value": "128 GB",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "DGX Spark memory bandwidth",
+      "value": "273 GB/s",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "Unsloth UD-IQ3_XXS dynamic GGUF size, single-Spark path",
+      "value": "120.37 GB",
+      "source_url": "https://unsloth.ai/docs/models/glm-5.3-flash"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "laying off specialists, not cutting their pay",
+      "mapping": "GLM-5.3-Flash is a 288-person consultancy where every question goes to only 8 specialists; the E224 build lays off the 64 least-called specialists per department (chosen by NAS) and puts the rest on a 4-bit salary (NVFP4), so the firm moves into two small offices (two Sparks) while every question still reaches 8 specialists and costs the same 18 B parameters per token",
+      "limit": "a real layoff changes who answers; here quality stayed within noise only on the measured benchmarks, and GPQA-Diamond at low thinking effort did drop (about 78% versus low-80s for larger builds)"
+    },
+    {
+      "vehicle": "furniture versus truck bed",
+      "mapping": "141 GiB of weights is furniture, one Spark's 128 GB is a truck bed that also carries the OS and luggage (KV cache); no repacking (quantization alone) fit the unpruned build, so the builder threw out furniture (64 experts per layer) until two truck beds held it with room left",
+      "limit": "furniture is not re-read every second, but weights are; decode speed on Spark is set by the 273 GB/s bandwidth, not by whether the truck has space"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Quantization alone put GLM-5.3-Flash on two DGX Sparks.",
+      "reality": "The unpruned NVFP4 checkpoint at roughly 190 GiB leaves almost no KV room per node; the E224 build also prunes 64 of 288 experts per layer to buy back about 40 GiB of KV cache per node (claims 1, 2)."
+    },
+    {
+      "myth": "Two linked Sparks behave like one 256 GB GPU, so any model under 256 GB fits.",
+      "reality": "Each 128 GB node must hold its own share of weights, KV cache, CUDA graphs, the OS and the desktop; the field runbook had to drop the context target to 65536 tokens and gpu-memory-utilization to 0.72 because the model card's 163840 and 0.85 settings OOM-killed the worker during profiling (claims 2, 4)."
+    },
+    {
+      "myth": "You need two Sparks to run GLM-5.3-Flash at all.",
+      "reality": "Unsloth's 3-bit UD-IQ3_XXS GGUF at 120.37 GB runs on one 128 GB Spark (claim 6); the second Spark buys near-full-quality NVFP4 weights plus long-context KV headroom (claims 1, 2)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Quantization",
+      "definition": "Storing model weights at lower numeric precision (4-bit, 3-bit, 2-bit) so they take less memory, at some cost in quality."
+    },
+    {
+      "term": "NVFP4",
+      "definition": "NVIDIA's 4-bit floating-point weight format with 16-element groups and two levels of scaling, executed natively by Blackwell tensor cores like the Spark's."
+    },
+    {
+      "term": "Mixture of experts (MoE)",
+      "definition": "A model design that stores many specialist sub-networks (experts) but routes each token through only a few of them, so total size and per-token cost are different numbers."
+    },
+    {
+      "term": "Expert pruning",
+      "definition": "Permanently deleting the experts the router rarely uses, shrinking memory footprint without changing per-token compute."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The memory that stores a conversation's keys and values so past tokens are not recomputed; it grows with context length and competes with weights for room."
+    },
+    {
+      "term": "Tensor parallelism",
+      "definition": "Splitting one model's layers across multiple GPUs so each device holds part of the weights and the group acts as a single engine."
+    },
+    {
+      "term": "ConnectX-7",
+      "definition": "The high-speed Smart NIC in each DGX Spark whose QSFP ports link two units into one cluster for tensor-parallel serving."
+    },
+    {
+      "term": "tok/s (tokens per second)",
+      "definition": "How fast a model generates text; single-stream is one user's chat speed, aggregate is all concurrent users combined."
+    }
+  ],
+  "unverified": [
+    "No independent page confirms the build's Neural Architecture Search pruning method; it rests on the builder's own model card.",
+    "Every accuracy number for the E224 build (GPQA-Diamond 90.9%, AIME 2025 88.3%, HumanEval 98.2%) was measured on a single B200, not on DGX Spark hardware.",
+    "The roughly 40 GiB of free memory per node is calculated from the measured weight footprint, not measured on Spark hardware.",
+    "Community reports of about 65 t/s decode for GLM-5.3-Flash on two Sparks were seen only in a search snippet and never fetched.",
+    "Build Local AI has not measured this build on its own Sparks; every throughput figure here is the builder's or a third party's."
+  ],
+  "suggested_outline": "Cold open on the receipt: two desk-sized boxes serving GLM-5.3-Flash at 15.7 tok/s single-stream, 71.8 tok/s across eight streams.\nName the hardware: DGX Spark, 128 GB unified memory, 273 GB/s, and why unified memory is the whole game.\nThe wall: 141 GiB of weights versus 128 GB of memory, and the OS already lives there.\nThe fix in two moves: NVFP4 on the experts, then NAS pruning from 288 to 224 experts per layer with 18 B active parameters per token unchanged.\nThe second Spark and the cable: ConnectX-7 QSFP link, tensor parallelism, about 70 GiB of weights and 40 GiB of KV cache per node.\nThe honest catch: accuracy measured on a B200, MTP measured slower on Spark and left off, and the model card's own context settings had to be lowered in the field.\nThe viewer's decision: link a second Spark for near-full quality and long context, or stay on one box with the 120.37 GB 3-bit GGUF.",
+  "notes": "Two conflicts the writer must not blend. (1) Internal to the build's own pages: the model card's quick start says --max-model-len 163840 with --gpu-memory-utilization 0.85, but the field-tested runbook says 163840 OOM-kills the worker during profiling on unified memory and runs 65536 at 0.72 with about 9.2 GiB of KV cache per node; the runbook is the receipt, the card is the aspiration, and the video should not quote the card's context settings as the achieved ones. (2) Across sources: the E224 card's table rules out the unpruned NVFP4 checkpoint on two Sparks (about 95 GiB per node, little KV room), while Flowtivity did serve that unpruned build there in August, capped at 24,576 tokens of context by a kernel bug; both are true at different times and serving stacks. Thin spot: all Spark-side throughput figures trace to the builder's pages (single runs, methodology in the runbook), and the only independent Spark measurement found (Flowtivity) covers the unpruned build, not E224. The companion GGUF card (source 4) gives the single-Spark contrast: 79.1 GiB at 2-bit with 256 experts, expected but not measured by its author at roughly 15-20 t/s single-stream.",
+  "viewer_situation": "You have a DGX Spark on your desk and you keep hearing GLM-5.3-Flash is the model to run, but every recipe you find either needs two boxes or crushes it to 2 bits.",
+  "has_process": true,
+  "process_steps": [
+    "Connect the two Sparks with QSFP cables on the ConnectX-7 ports and follow NVIDIA's \"Connect two Sparks\" playbook for networking and passwordless SSH.",
+    "Download autotrust/GLM5.3-Flash-E224-DGX-Spark to the same path on both nodes (about 158 GB).",
+    "Create a Python venv on each node and install vllm==0.31.0 with transformers and ninja.",
+    "Add a 64 GB swap file on each node and cap FlashInfer JIT parallelism with MAX_JOBS=2 to survive weight loading.",
+    "Point NCCL's socket bootstrap at the management NIC and RDMA at the ConnectX-7 cards using NCCL_SOCKET_IFNAME and NCCL_IB_HCA.",
+    "Launch vllm serve on the head node with --tensor-parallel-size 2 --nnodes 2, then the worker with --headless.",
+    "Wait for the worker rendezvous line in the head log, then hit the health endpoint and send a test chat."
+  ],
+  "objection": "Every number here comes from the builder's own runbook, the accuracy runs happened on a B200 rather than a Spark, and a 2-bit single-Spark GGUF already serves this model on one box -- so why should I buy and cable a second Spark for 15.7 tok/s?"
+}
