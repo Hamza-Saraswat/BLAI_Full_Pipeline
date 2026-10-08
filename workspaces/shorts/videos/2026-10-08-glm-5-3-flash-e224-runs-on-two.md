@@ -2,22 +2,22 @@
 slug: 2026-10-08-glm-5-3-flash-e224-runs-on-two
 workspace: shorts
 title: GLM 5.3 Flash E224 on two DGX Sparks
-status: approved
+status: scheduled
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-10-08
-updated: "2026-10-08T14:03:44Z"
-publish_slot: ""
+updated: "2026-10-08T14:04:12Z"
+publish_slot: "2026-10-08T11:00:00-05:00"
 seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 62d75f7f-c031-4429-8973-837a7e1dcaa5
 ---
 # GLM 5.3 Flash E224 runs on two DGX Sparks
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-package]]
 - Voice: [[stages/06-voice/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-narration]]
 - Render: [[stages/07-render/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-08-glm-5-3-flash-e224-runs-on-two-publish]]
 
 ## Decisions
 
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-10-08T12:40:40Z 07-render ok 1108s
 - 2026-10-08T12:40:43Z build done, status review
 - 2026-10-08T14:03:44Z telegram approve (approved_at 2026-10-08T14:03:44Z)
+- 2026-10-08T14:04:12Z 08-publish ok 2s
