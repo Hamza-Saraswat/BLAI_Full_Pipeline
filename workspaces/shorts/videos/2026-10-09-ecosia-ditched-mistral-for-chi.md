@@ -2,14 +2,14 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
 title: "Ecosia vs Mistral: why open weights won"
-status: building
+status: review
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T12:25:10Z"
+updated: "2026-10-09T12:54:46Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-09-ecosia-ditched-mistral-for-chi-script]]
 - Package: [[stages/05-package/output/2026-10-09-ecosia-ditched-mistral-for-chi-package]]
 - Voice: [[stages/06-voice/output/2026-10-09-ecosia-ditched-mistral-for-chi-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-09-ecosia-ditched-mistral-for-chi-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -36,6 +36,9 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-09T12:25:10Z build start on gn100-83c4
 - 2026-10-09T12:26:10Z 06-voice ok 58s
+- 2026-10-09T12:42:49Z 07-render fail 997s (07-render: scene s04 did not pass HyperFrames inspect after 5 rounds: t=4.5-4.51s (2 samples) text_occluded #gbText inside div.prompt-line.caption-box "19GB" — )
+- 2026-10-09T12:54:49Z 07-render ok 37.97s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 193
+- 2026-10-09T12:54:49Z 07-render ok 720s
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
