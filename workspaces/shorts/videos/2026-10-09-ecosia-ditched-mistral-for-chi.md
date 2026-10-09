@@ -2,22 +2,22 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
 title: "Ecosia vs Mistral: why open weights won"
-status: approved
+status: scheduled
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T16:24:36Z"
-publish_slot: ""
+updated: "2026-10-09T16:27:12Z"
+publish_slot: "2026-10-09T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: da1993f5-9bdd-4aa8-aa02-f08caaa350f2
 ---
 # Ecosia ditched Mistral for Chinese open weights: what it proves
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-09-ecosia-ditched-mistral-for-chi-package]]
 - Voice: [[stages/06-voice/output/2026-10-09-ecosia-ditched-mistral-for-chi-voice]]
 - Render: [[stages/07-render/output/2026-10-09-ecosia-ditched-mistral-for-chi-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-09-ecosia-ditched-mistral-for-chi-publish]]
 
 ## Decisions
 
@@ -41,6 +41,7 @@ blotato_post_id: ""
 - 2026-10-09T12:54:49Z 07-render ok 720s
 - 2026-10-09T12:54:52Z build done, status review
 - 2026-10-09T16:24:36Z telegram approve (approved_at 2026-10-09T16:24:36Z)
+- 2026-10-09T16:27:13Z 08-publish ok 3s
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
