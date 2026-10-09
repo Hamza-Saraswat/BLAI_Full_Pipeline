@@ -2,8 +2,9 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 title: "Ecosia vs Mistral: why open weights won"
 published_slot: "2026-10-09T18:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=L0XrLKHxDM0"
 blotato_post_id: da1993f5-9bdd-4aa8-aa02-f08caaa350f2
+updated: "2026-10-09T23:00:29Z"
 ---
 # Ecosia vs Mistral: why open weights won
 

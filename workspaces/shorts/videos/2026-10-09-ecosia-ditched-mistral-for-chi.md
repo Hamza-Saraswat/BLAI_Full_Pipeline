@@ -2,21 +2,21 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
 title: "Ecosia vs Mistral: why open weights won"
-status: scheduled
+status: published
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T16:27:12Z"
+updated: "2026-10-09T23:00:29Z"
 publish_slot: "2026-10-09T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=L0XrLKHxDM0"
 blotato_post_id: da1993f5-9bdd-4aa8-aa02-f08caaa350f2
 ---
 # Ecosia ditched Mistral for Chinese open weights: what it proves
@@ -42,6 +42,7 @@ blotato_post_id: da1993f5-9bdd-4aa8-aa02-f08caaa350f2
 - 2026-10-09T12:54:52Z build done, status review
 - 2026-10-09T16:24:36Z telegram approve (approved_at 2026-10-09T16:24:36Z)
 - 2026-10-09T16:27:13Z 08-publish ok 3s
+- 2026-10-09T23:00:29Z published https://www.youtube.com/watch?v=L0XrLKHxDM0
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
