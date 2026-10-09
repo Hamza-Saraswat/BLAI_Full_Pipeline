@@ -2,19 +2,19 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
 title: "Ecosia vs Mistral: why open weights won"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T12:22:47Z"
+updated: "2026-10-09T12:25:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-09T12:25:10Z build start on gn100-83c4
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
