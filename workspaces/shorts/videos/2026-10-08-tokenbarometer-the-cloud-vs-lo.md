@@ -2,14 +2,14 @@
 slug: 2026-10-08-tokenbarometer-the-cloud-vs-lo
 workspace: shorts
 title: "Tokenbarometer: the cloud vs local cost calculator"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-08
-updated: "2026-10-08T11:08:48Z"
+updated: "2026-10-09T13:35:51Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Picked at ideas stage 2026-10-08: top-scoring candidate (opportunity 70.6) in an open lane; comparison/smooth-explainer differs from pick 1 and from yesterday (myth-bust, how-to). Tool-name title carries search intent for "llm api prices" (autocomplete depth 22).
 
 ## Build journal
-
+- 2026-10-09T13:35:51Z 2026-10-09T13:35:51Z expired: not from today's picks (2026-10-09); the factory carries no backlog
