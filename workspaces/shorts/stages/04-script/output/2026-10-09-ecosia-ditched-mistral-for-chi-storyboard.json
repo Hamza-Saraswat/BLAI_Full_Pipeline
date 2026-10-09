@@ -1,0 +1,127 @@
+{
+  "slug": "2026-10-09-ecosia-ditched-mistral-for-chi",
+  "topic": "Ecosia ditched Mistral for Chinese open weights: what it proves",
+  "title": "Ecosia ditched Mistral for Chinese open weights: what it proves",
+  "description": "Ecosia ditched Mistral for Chinese open weights: what it proves. Europe's climate search engine dropped France's flagship AI lab, calling its models a year behind, and its CEO says the switch to open-weight models roughly cut costs in half while quality improved. The same GLM family it now pays to serve is a nineteen-gigabyte Ollama download at home. You'll learn what open weights actually are, why a paying European company choosing them ends the hobby myth, and the honest catch about bias and rented servers. Subscribe to Build Local AI for weekly guides to running AI on your own hardware. (Narration is AI-generated.)",
+  "hashtags": [
+    "#Ecosia",
+    "#GLM",
+    "#OpenWeights"
+  ],
+  "tags": [
+    "ecosia mistral",
+    "ecosia chinese ai",
+    "open weights explained",
+    "what are open weights",
+    "glm 5.3",
+    "z.ai glm",
+    "ollama glm-4.7-flash",
+    "run ai at home",
+    "local ai models",
+    "mistral vs glm",
+    "open weight models in production",
+    "melious ai",
+    "ecosia ai costs",
+    "chinese open source ai",
+    "ai inference costs",
+    "self hosted ai",
+    "open source llm 2026",
+    "are open weights production ready",
+    "artificial analysis open model ranking",
+    "build local ai"
+  ],
+  "hook_text": "Ecosia dumped Mistral for open weights",
+  "hook_candidates": [
+    "European search engine dumps Mistral",
+    "Ecosia dumped Mistral for open weights",
+    "Ecosia cut AI costs in half",
+    "Open weights kept a paying customer",
+    "Mistral is a year behind, Ecosia says",
+    "Open weights aren't a hobby anymore",
+    "Half the AI bill, better answers",
+    "Ecosia bet on Chinese open weights",
+    "The myth: open weights are toys",
+    "Chinese models run a European product"
+  ],
+  "style_pack": "halftone",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "REFRAMES,TEACHES",
+  "target_duration_s": 36,
+  "narration_full": "Ecosia dumped Mistral for Chinese open weights. Costs roughly halved, its CEO says. You've heard open weights are a hobby. They're model files anyone can download and run. Ecosia says quality went up, not down. Its new route is Melious, a German host serving only public weights, chiefly Z.ai's GLM. Mistral's Large four preview ranks eighth; every open model above it is Chinese. Even Mistral hosts GLM. That family is downloadable tonight: GLM four point seven Flash on Ollama, a nineteen-gigabyte download. The grain of truth: Ecosia still rents servers, and open weights don't scrub bias. The hobby excuse is dead.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "layout_archetype": "centered-stack",
+      "tool": "hyperframes",
+      "narration": "Ecosia dumped Mistral for Chinese open weights. Costs roughly halved, its CEO says.",
+      "on_screen_text": "Ecosia dumped Mistral for open weights | costs roughly halved",
+      "visual_brief": "Finished punch-card composition at frame 1 on ink-black newsprint: amber halftone masthead 'Ecosia dumped Mistral for open weights' at 96px, centered, fully legible, over a faint dotted map texture. Card holds static until just after t=0.30s, then a halftone dot ripple sweeps the frame. On 'Costs roughly halved' an amber rubber-stamp reading 'costs roughly halved' scales in under the headline with a pop, paper grain flickering behind it.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ],
+      "est_duration_s": 4.5
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "layout_archetype": "split-compare",
+      "tool": "hyperframes",
+      "narration": "You've heard open weights are a hobby. They're model files anyone can download and run. Ecosia says quality went up, not down.",
+      "on_screen_text": "open weights = hobby? | model files anyone can run | 15M users",
+      "visual_brief": "Split panel in punched frames: left, a grayed newsprint tag 'open weights = hobby?' over dense halftone dots; right panel blank. On 'They are model files anyone can download and run' the right panel fills with an amber punch-card labeled 'model files anyone can run', a small download glyph rising in place. On 'fifteen million users' a dotted counter card fades in showing '15M users' at 120px with a tick, halftone crowd dots multiplying beneath it while the left tag crumples at the edges.",
+      "sfx": [],
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "layout_archetype": "diagram-flow",
+      "tool": "manim",
+      "narration": "Its new route is Melious, a German host serving only public weights, chiefly Z.ai's GLM. Mistral's Large four preview ranks eighth; every open model above it is Chinese. Even Mistral hosts GLM.",
+      "on_screen_text": "Ecosia → Melious → GLM | Mistral preview: 8th | even Mistral hosts GLM",
+      "visual_brief": "Ink-black field, amber punched nodes. On 'Its new route is Melious' a diagram draws itself: ECOSIA node, dotted line to a MELIOUS node, then on to a GLM node, each link ticked in with halftone arrows. On 'ranks eighth' a newsprint leaderboard rises at right: eight bars, the bottom one stamped 'Mistral preview: 8th' in gray while seven amber bars above it pulse once. On 'Even Mistral hosts GLM' a tiny amber GLM chip fades in inside the gray Mistral bar, dots jittering around it.",
+      "sfx": [],
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "layout_archetype": "giant-number",
+      "tool": "hyperframes",
+      "narration": "That family is downloadable tonight: GLM four point seven Flash on Ollama, a nineteen-gigabyte download.",
+      "on_screen_text": "ollama pull glm-4.7-flash | 19GB | tonight",
+      "visual_brief": "Punch-card terminal window on dotted black, sprocket holes along both edges. On 'downloadable tonight' the line 'ollama pull glm-4.7-flash' types itself in amber monospace. On 'nineteen gigabytes' a giant amber '19GB' scales in at 240px over a halftone dot burst with a ding, the terminal shrinking to the lower corner. A small punched tag reading 'tonight' fades in beneath the giant number and holds.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "layout_archetype": "centered-stack",
+      "tool": "hyperframes",
+      "narration": "The grain of truth: Ecosia still rents servers, and open weights don't scrub bias. The hobby excuse is dead.",
+      "on_screen_text": "still renting servers | run + inspect, bias included | hobby: dead | Build Local AI",
+      "visual_brief": "Centered stack on newsprint black. On 'Ecosia still rents servers' a gray punch-card labeled 'still renting servers' rises in place. On 'not remove bias' a second amber card stacks below it reading 'run + inspect, bias included', its halftone dots visibly smudged. On 'The hobby excuse is dead' the word 'hobby' is struck through with a heavy amber X in one pop. Both cards then settle down-frame as the 'Build Local AI' wordmark fades in center frame and rests.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ],
+      "est_duration_s": 6.6
+    }
+  ],
+  "notes_for_review": "Check these soft spots before render. (1) 'Costs roughly halved' is CEO Christian Kroll's claim per POLITICO, attributed in-scene ('its CEO says', 'Ecosia says'); we measured nothing. (2) 'Fifteen million users' is Ecosia's own 2021 figure, the freshest first-party number in the brief; it is dated. (3) The ranking line ('eighth, every model above Chinese') comes from Trending Topics at medium confidence; the digits-only rule is satisfied with '8th' on screen and 'eighth' spoken. (4) Timing hedge: Melious is called 'its new route', not current production, because Kroll said 'we'll probably be using Melious in future' while POLITICO ties the cost cut to the move, and Ecosia's help center still lists Mistral small models. (5) GLM four point seven Flash is the small sibling (19GB q4_K_M on Ollama), not the model Ecosia buys; the model name is spelled out in narration to keep narration digit-free, digits appear only on screen. (6) The single wry beat is 'Even Mistral hosts GLM' (claim 10), landing on Mistral, not the viewer. (7) The cookbook analogy was deliberately omitted to stay inside the word band; the catch compresses 'when the myth is still right' into the rented-servers grain of truth.",
+  "hook_pattern": "case"
+}
