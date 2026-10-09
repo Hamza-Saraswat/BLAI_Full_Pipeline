@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
-title: "Ecosia ditched Mistral for Chinese open weights: what it proves"
-status: scripted
+title: "Ecosia vs Mistral: why open weights won"
+status: ready-to-build
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T12:19:57Z"
+updated: "2026-10-09T12:22:47Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-09-ideas]]
 - Research: [[stages/03-research/output/2026-10-09-ecosia-ditched-mistral-for-chi-brief]]
 - Script: [[stages/04-script/output/2026-10-09-ecosia-ditched-mistral-for-chi-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-10-09-ecosia-ditched-mistral-for-chi-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - Hook: candidate 2 "Ecosia dumped Mistral for open weights" (case pattern) for A; candidate 7 in number-shock for B. hook_pattern set explicitly to case on the storyboard.
 - Gates: validator 0 blockers / 0 advisories; eval_short all 9 pass (entity_spend soft-advisory 0.227, top2 present; kept, companies over model-card siblings in a 36 s band); sameness clean vs last 5; normalizer not yet run (voice stage owns it).
 - Style pack halftone (rotation pick, previous silicon); ledger entry 34 recorded.
+- Package: searchable title "Ecosia vs Mistral: why open weights won" (keyword first, both products named, 40 visible chars); seo-rubric 100/100; closest related video (yesterday's GLM E224 run) linked in description; no duplicate of any published title.
+- Compliance: contains_synthetic_media false (typographic halftone scenes, creator's own voice clone); original_insight states the local receipt angle.
