@@ -2,14 +2,14 @@
 slug: 2026-10-09-ecosia-ditched-mistral-for-chi
 workspace: shorts
 title: "Ecosia vs Mistral: why open weights won"
-status: review
+status: approved
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T12:54:46Z"
+updated: "2026-10-09T16:24:36Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -40,6 +40,7 @@ blotato_post_id: ""
 - 2026-10-09T12:54:49Z 07-render ok 37.97s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 193
 - 2026-10-09T12:54:49Z 07-render ok 720s
 - 2026-10-09T12:54:52Z build done, status review
+- 2026-10-09T16:24:36Z telegram approve (approved_at 2026-10-09T16:24:36Z)
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
