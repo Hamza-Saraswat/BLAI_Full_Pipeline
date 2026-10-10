@@ -2,14 +2,14 @@
 slug: 2026-10-10-aleph-alpha-kolibri-1m-context
 workspace: shorts
 title: Aleph Alpha Kolibri 1M context explained
-status: review
+status: approved
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: axon
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-10
-updated: "2026-10-10T12:43:42Z"
+updated: "2026-10-10T22:45:37Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -39,6 +39,7 @@ blotato_post_id: ""
 - 2026-10-10T12:43:45Z 07-render ok 47.47s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 198
 - 2026-10-10T12:43:45Z 07-render ok 725s
 - 2026-10-10T12:43:49Z build done, status review
+- 2026-10-10T22:45:37Z telegram approve (approved_at 2026-10-10T22:45:37Z)
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
