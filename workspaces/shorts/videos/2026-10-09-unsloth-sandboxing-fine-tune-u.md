@@ -2,14 +2,14 @@
 slug: 2026-10-09-unsloth-sandboxing-fine-tune-u
 workspace: shorts
 title: "Unsloth sandboxing: fine-tune untrusted data without wrecking the host"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-09
-updated: "2026-10-09T11:09:33Z"
+updated: "2026-10-10T13:35:18Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-10T13:35:18Z 2026-10-10T13:35:18Z expired: not from today's picks (2026-10-10); the factory carries no backlog
 
 ## Decisions
 - Chosen as a 2026-10-09 pick: top opportunity in an open lane (see stages/02-ideas/output/2026-10-09-ideas.md).
