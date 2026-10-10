@@ -1,8 +1,8 @@
 ---
 slug: 2026-10-10-aleph-alpha-kolibri-1m-context
 workspace: shorts
-title: "Aleph Alpha Kolibri: 1M context in open weights"
-status: scripted
+title: "Aleph Alpha Kolibri 1M context explained"
+status: ready-to-build
 pillar: news-react
 structure: number-first
 format: classic
@@ -11,7 +11,7 @@ value_types: "TEACHES,EQUIPS"
 created: 2026-10-10
 updated: "2026-10-10T11:06:20Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-10-ideas]]
 - Research: [[stages/03-research/output/2026-10-10-aleph-alpha-kolibri-1m-context-brief]]
 - Script: [[stages/04-script/output/2026-10-10-aleph-alpha-kolibri-1m-context-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-10-10-aleph-alpha-kolibri-1m-context-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - 04 checkpoint 2: 10 hooks scored; A named-contradiction "Kolibri promises a million tokens. Its own card says don't.", B number-shock "A million tokens of context, forty-seven gigabytes of download."; different patterns per finding 12.
 - 04: writer B's first call returned empty (32k reasoning tokens, no text); one retry with tightened packet succeeded. Judge (kimi-k3): B wins 21-20; graft of A's "Ollama and LM Studio just stare." into s05 applied.
 - 04 gates: winner validator 0/0, eval exit 0 (number_spend 4/7 spent, hook via digit + two numbers), variety ok; ledger entry 35 recorded; pack axon recorded.
+- 05 checkpoint: three titles written, searchable pick "Aleph Alpha Kolibri 1M context explained" (fresh product name, 32 autocomplete expansions); description keyword-first; rubric 100/100.
+- 05 audit: check_outputs exit 0 after hub links closed; title unique vs published/; no em dash anywhere. Hub at ready-to-build; stages 06-08 left to the blai-build job per blai-run.
