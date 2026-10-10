@@ -1,0 +1,117 @@
+{
+  "slug": "2026-10-10-aleph-alpha-kolibri-1m-context",
+  "topic": "Aleph Alpha Kolibri: open weights with a 1M-token context window",
+  "title": "Aleph Alpha Kolibri: 1M context in open weights",
+  "description": "Working description; the package stage overwrites.",
+  "hashtags": [
+    "#kolibri",
+    "#alephalpha",
+    "#localai"
+  ],
+  "tags": [
+    "aleph alpha kolibri",
+    "kolibri 1m context",
+    "aleph alpha kolibri review",
+    "kolibri gguf",
+    "kolibri llama.cpp",
+    "1m context window local",
+    "mixture of experts explained",
+    "open weight models 2026",
+    "run local llm gaming pc",
+    "kolibri vs qwen",
+    "aleph alpha local",
+    "kolibri benchmark",
+    "long context local model",
+    "kolibri ollama",
+    "german ai model open weights",
+    "kolibri vllm",
+    "kolibri 78b",
+    "3.46b active parameters",
+    "kolibri quantized",
+    "million token context"
+  ],
+  "hook_text": "1M tokens | 47 GB",
+  "hook_candidates": [
+    "Kolibri promises a million tokens. Its own card says don't.",
+    "A million tokens of context, forty-seven gigabytes of download.",
+    "A million tokens isn't the whole story.",
+    "1M tokens | 47 GB",
+    "You've got the headlines. Your RAM has the answer.",
+    "Seventy-eight billion parameters, three point five billion awake.",
+    "Germany just open-sourced a million-token model.",
+    "Ollama can't load this week's biggest model.",
+    "Check your RAM before the million finds you.",
+    "A million tokens, if your memory can host them."
+  ],
+  "style_pack": "axon",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 38,
+  "narration_full": "A million tokens of context, forty-seven gigabytes of download. That's Kolibri, a German model with open weights, files you run yourself. You've seen million-token headlines all week and asked if it fits your machine. Context is how much text it reads at once. Aleph Alpha itself says stay at two hundred sixty-two thousand tokens or below for complex work. The headline's own footnote. It's a mixture of experts: each word, a receptionist wakes the few specialists needed. All seventy-eight billion parameters sit in memory. The community file needs a patched llama.cpp, the local runner, modified by hand. Ollama and LM Studio just stare. One measured llama.cpp setup needed one hundred twenty-eight gigabytes of system RAM. Count yours before you trust the headline.",
+  "analogy": "receptionist: a company of specialists with a receptionist who wakes only the few you need; re-picks for every word",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "A million tokens of context, forty-seven gigabytes of download.",
+      "on_screen_text": "1M tokens | 47 GB",
+      "visual_brief": "Frame 1: hook text fully legible, giant, centered above the caption band. On \"A million tokens\", \"1M tokens\" scales in at 0.3 s; on \"forty-seven gigabytes of download\", \"47 GB\" fades in beneath it. Static dark model-card texture behind, outer margins clear.",
+      "est_duration_s": 3.5
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "That's Kolibri, a German model with open weights, files you run yourself. You've seen million-token headlines all week and asked if it fits your machine.",
+      "on_screen_text": "Kolibri | open weights",
+      "visual_brief": "On \"That's Kolibri\", the \"Kolibri\" wordmark fades in center at 0.3 s; on \"files you run yourself\", a small download-file chip rises in place below it; on \"million-token headlines\", a headline card fades in at top. Text minimum 64 px, caption band clear, at most 2 elements moving at once.",
+      "est_duration_s": 7.0
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Context is how much text it reads at once. Aleph Alpha itself says stay at two hundred sixty-two thousand tokens or below for complex work. The headline's own footnote.",
+      "on_screen_text": "≤ 262,144 tokens",
+      "visual_brief": "On \"how much text it reads at once\", a tall document pane fades in left at 0.3 s; on \"two hundred sixty-two thousand tokens or below\", \"≤ 262,144 tokens\" scales in right with a thin marker line across the document; on \"The headline's own footnote\", a small asterisk chip fades in beneath.",
+      "est_duration_s": 7.5
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "It's a mixture of experts: each word, a receptionist wakes the few specialists needed. All seventy-eight billion parameters sit in memory.",
+      "on_screen_text": "78B parameters in memory",
+      "visual_brief": "On \"a receptionist\", a desk node fades in center at 0.3 s; on \"wakes the few specialists needed\", a few specialist chips rise in place around it; on \"seventy-eight billion parameters sit in memory\", a full-width memory bar fades in above the caption band labeled \"78B parameters in memory\". At most 2 elements animating at once.",
+      "est_duration_s": 6.5
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The community file needs a patched llama.cpp, the local runner, modified by hand. Ollama and LM Studio just stare.",
+      "on_screen_text": "patched llama.cpp only | Ollama, LM Studio: not yet",
+      "visual_brief": "On \"patched llama.cpp\", a terminal tile fades in at 0.3 s with a small patch badge; on \"Ollama and LM Studio just stare\", two app tiles rise in place beside it and cross marks fade onto each. Caption band and outer margins clear.",
+      "est_duration_s": 6.0
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "One measured llama.cpp setup needed one hundred twenty-eight gigabytes of system RAM. Count yours before you trust the headline.",
+      "on_screen_text": "128 GB system RAM",
+      "visual_brief": "On \"one hundred twenty-eight gigabytes of system RAM\", \"128 GB system RAM\" scales in giant at 0.3 s, centered above the caption band. On \"Count yours before you trust the headline\", no new motion; the number settles and the cut lands within a second of the last word.",
+      "est_duration_s": 5.5
+    }
+  ],
+  "notes_for_review": "The hook rounds 47.5 GB to forty-seven gigabytes; digits on screen stay exact per source (47 GB in the hook, 47.5 GB available if the scene worker wants it). The 128 GB close is the measured llama-bench machine's system RAM, attributed as one measured setup, not a universal requirement. Receptionist analogy carries its limit: the router re-picks for every word. Graft from draft A per judge: s05 closes with A's wry line; the explicit fact stays on screen ('not yet')."
+}
