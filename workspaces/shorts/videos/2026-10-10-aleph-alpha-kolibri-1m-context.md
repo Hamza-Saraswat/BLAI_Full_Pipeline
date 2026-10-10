@@ -2,14 +2,14 @@
 slug: 2026-10-10-aleph-alpha-kolibri-1m-context
 workspace: shorts
 title: Aleph Alpha Kolibri 1M context explained
-status: building
+status: review
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: axon
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-10
-updated: "2026-10-10T12:30:34Z"
+updated: "2026-10-10T12:43:42Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-10-aleph-alpha-kolibri-1m-context-script]]
 - Package: [[stages/05-package/output/2026-10-10-aleph-alpha-kolibri-1m-context-package]]
 - Voice: [[stages/06-voice/output/2026-10-10-aleph-alpha-kolibri-1m-context-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-10-aleph-alpha-kolibri-1m-context-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -36,6 +36,8 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-10T12:30:34Z build start on gn100-83c4
 - 2026-10-10T12:31:37Z 06-voice ok 61s
+- 2026-10-10T12:43:45Z 07-render ok 47.47s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 198
+- 2026-10-10T12:43:45Z 07-render ok 725s
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
