@@ -38,6 +38,7 @@ blotato_post_id: ""
 - 2026-10-10T12:31:37Z 06-voice ok 61s
 - 2026-10-10T12:43:45Z 07-render ok 47.47s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 198
 - 2026-10-10T12:43:45Z 07-render ok 725s
+- 2026-10-10T12:43:49Z build done, status review
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
