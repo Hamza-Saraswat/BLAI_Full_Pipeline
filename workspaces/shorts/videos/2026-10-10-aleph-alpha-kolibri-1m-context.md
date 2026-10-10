@@ -35,3 +35,7 @@ blotato_post_id: ""
 
 ## Build journal
 
+
+## Decisions
+- Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
+- Pick 2 (Kisoku): evergreen keyword meets this-week proof, explainer/smooth-explainer; rotation respected.

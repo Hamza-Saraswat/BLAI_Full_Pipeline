@@ -35,3 +35,7 @@ blotato_post_id: ""
 
 ## Build journal
 
+
+## Decisions
+- Pick 2 (Kisoku): 72.1, explainer fills rotation gap; smooth-explainer band, differs from pick 1.
+- Skipped Unsloth (83.9): how-to lane + product repeated yesterday.
