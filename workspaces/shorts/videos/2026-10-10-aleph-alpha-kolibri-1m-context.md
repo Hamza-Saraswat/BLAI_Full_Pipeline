@@ -1,20 +1,20 @@
 ---
 slug: 2026-10-10-aleph-alpha-kolibri-1m-context
 workspace: shorts
-title: "Aleph Alpha Kolibri 1M context explained"
-status: ready-to-build
+title: Aleph Alpha Kolibri 1M context explained
+status: building
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: axon
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-10
-updated: "2026-10-10T11:06:20Z"
+updated: "2026-10-10T12:30:34Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-10T12:30:34Z build start on gn100-83c4
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
