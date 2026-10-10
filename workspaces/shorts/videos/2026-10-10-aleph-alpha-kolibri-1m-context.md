@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-10-aleph-alpha-kolibri-1m-context-brief]]
 - Script: [[stages/04-script/output/2026-10-10-aleph-alpha-kolibri-1m-context-script]]
 - Package: [[stages/05-package/output/2026-10-10-aleph-alpha-kolibri-1m-context-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-10-aleph-alpha-kolibri-1m-context-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -35,6 +35,7 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-10T12:30:34Z build start on gn100-83c4
+- 2026-10-10T12:31:37Z 06-voice ok 61s
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
