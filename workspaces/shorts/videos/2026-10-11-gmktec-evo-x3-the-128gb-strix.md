@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-brief]]
 - Script: [[stages/04-script/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-script]]
 - Package: [[stages/05-package/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -41,3 +41,4 @@ blotato_post_id: ""
 - 2026-10-11T12:20:14Z 04-script ok: draft B contrarian-take won 21-18 over comparison-ladder; validator 0/0 both drafts; eval gates pass; ledger recorded
 - 2026-10-11T12:21:56Z 05-package ok: seo 93, title intriguing pick, manifest written
 - 2026-10-11T12:22:10Z build start on gn100-83c4
+- 2026-10-11T12:23:11Z 06-voice ok 59s
