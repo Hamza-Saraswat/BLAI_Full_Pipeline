@@ -2,21 +2,21 @@
 slug: 2026-10-11-gmktec-evo-x3-the-128gb-strix
 workspace: shorts
 title: "DGX Spark vs Strix Halo: same chat speed?"
-status: scheduled
+status: published
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: signal
 value_types: "TEACHES,PROVES"
 created: 2026-10-11
-updated: "2026-10-11T16:26:11Z"
+updated: "2026-10-11T23:00:22Z"
 publish_slot: "2026-10-11T18:00:00-05:00"
 seo_score: 93
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=JRHMpl1izi0"
 blotato_post_id: d4e5abd3-3e1a-46f2-9fe6-866296b92df5
 ---
 # GMKtec EVO-X3: the 128GB Strix Halo local AI box
@@ -47,3 +47,4 @@ blotato_post_id: d4e5abd3-3e1a-46f2-9fe6-866296b92df5
 - 2026-10-11T12:38:36Z build done, status review
 - 2026-10-11T16:22:09Z telegram approve (approved_at 2026-10-11T16:22:09Z)
 - 2026-10-11T16:26:12Z 08-publish ok 2s
+- 2026-10-11T23:00:22Z published https://www.youtube.com/watch?v=JRHMpl1izi0
