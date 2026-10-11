@@ -2,21 +2,21 @@
 slug: 2026-10-10-aleph-alpha-kolibri-1m-context
 workspace: shorts
 title: Aleph Alpha Kolibri 1M context explained
-status: scheduled
+status: published
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: axon
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-10
-updated: "2026-10-10T22:46:11Z"
+updated: "2026-10-11T16:02:10Z"
 publish_slot: "2026-10-11T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=MZ3mgT9kXX4"
 blotato_post_id: 665a44d2-d41f-49c2-8eae-d54ad12957ec
 ---
 # Aleph Alpha Kolibri: 1M context in open weights
@@ -41,6 +41,7 @@ blotato_post_id: 665a44d2-d41f-49c2-8eae-d54ad12957ec
 - 2026-10-10T12:43:49Z build done, status review
 - 2026-10-10T22:45:37Z telegram approve (approved_at 2026-10-10T22:45:37Z)
 - 2026-10-10T22:46:12Z 08-publish ok 2s
+- 2026-10-11T16:02:10Z published https://www.youtube.com/watch?v=MZ3mgT9kXX4
 
 ## Decisions
 - Pick 1 (Kolibri): highest opportunity 89.1, product named, news-react/classic; lane differs from yesterday.
