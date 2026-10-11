@@ -2,14 +2,14 @@
 slug: 2026-10-11-gmktec-evo-x3-the-128gb-strix
 workspace: shorts
 title: "GMKtec EVO-X3: the 128GB Strix Halo local AI box"
-status: idea
+status: researched
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-10-11
-updated: "2026-10-11T11:08:30Z"
+updated: "2026-10-11T11:49:30Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-11-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-11-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Took rank 4 over equal-scoring rank 3 (Qwen-Image GGUF) on lane rotation: the other pick already holds how-to. Format classic by fit (one fact, one consequence); value types TEACHES + PROVES (STH numbers carry the PROVES claim).
 
 ## Build journal
-
+- 2026-10-11T11:49:30Z 03-research ok: 12 sources (4 primary vendor, 4 STH benchmark, 2 community), 10 claims, 6 key numbers

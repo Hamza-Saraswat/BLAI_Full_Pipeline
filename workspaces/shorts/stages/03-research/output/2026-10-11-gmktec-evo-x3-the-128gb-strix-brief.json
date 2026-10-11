@@ -1,0 +1,191 @@
+{
+  "slug": "2026-10-11-gmktec-evo-x3-the-128gb-strix",
+  "topic": "GMKtec EVO-X3: the 128GB Strix Halo local AI box versus the DGX Spark",
+  "generated_at": "2026-10-11T17:55:00Z",
+  "depth": "standard",
+  "thesis": "The EVO-X3 turns the 128GB local-AI purchase into a memory-versus-ecosystem call: Strix Halo buys Spark-class model capacity for $3,100 less and decode speed within about a fifth, while the Spark keeps CUDA and multiplies prompt processing.",
+  "explanation_path": "Open on the decision the viewer is actually making: which single box swallows the biggest open models, and what each gigabyte costs. Establish unified memory as the scarce resource before either machine appears -- model size in gigabytes is the wall, and both machines stand at 128GB of it. Then show the real split: Windows on Strix Halo allocates up to 96GB of that pool as GPU memory, while the Spark exposes one roughly 120GB unified pool, so both swallow a 59.02 GiB gpt-oss-120b with room to spare. Next the speed question, which is really a bandwidth question: 256 GB/s on Strix Halo against 273 GB/s on the Spark, about 7 percent apart, which is why measured token generation lands within about a fifth (tg32 47.46 vs 56.33 tokens/s, community llama-bench). Then the honest catch that redeems the Spark's price: token generation is the bandwidth-bound half, but prompt processing is compute-bound, and there the Spark runs roughly 2x-5x faster with CUDA behind it. Land on the decision rule: chat and budget point at the EVO-X3; long-context RAG, agentic loops and CUDA prototyping point at the Spark. Close with the physical caveat -- the 128GB is soldered, so the buyer lives with the choice.",
+  "claims": [
+    {
+      "claim": "The GMKtec EVO-X3 is a mini-PC built on AMD's Ryzen AI Max+ 395 (Strix Halo) with 128GB of soldered LPDDR5X-8000 and Radeon 8060S graphics with 40 compute units.",
+      "source_url": "https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/",
+      "source_title": "GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "GMKtec's US store lists the EVO-X3 (128GB RAM + 2TB SSD config) at a sale price of $3,799.99, regular price $4,100.00.",
+      "source_url": "https://www.gmktec.com/products/gmktec-evo-x3-ai-mini-pc-amd-ryzen-ai-max-395",
+      "source_title": "GMKtec EVO-X3 AI Mini PC AMD Ryzen AI Max+ 395 - GMKtec",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "Up to 96GB of the EVO-X3's unified memory can be allocated as GPU memory for local AI workloads.",
+      "source_url": "https://www.gmktec.uk/products/gmktec-evo-x3-amd-ryzen%E2%84%A2-ai-max-395-ai-mini-pc",
+      "source_title": "GMKtec EVO-X3 AMD Ryzen AI Max+ 395 AI Mini PC",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "AMD's official blog states the Strix Halo platform's memory bandwidth as 256 GB/s.",
+      "source_url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html",
+      "source_title": "AMD Ryzen AI MAX+ 395 Processor: Breakthrough AI Performance in Thin and Light",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "NVIDIA's DGX Spark product page specs memory bandwidth at 273 GB/s over a 256-bit LPDDR5x interface.",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "source_title": "Personal AI Supercomputer Powered by Blackwell | NVIDIA DGX Spark",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "NVIDIA's own marketplace lists the DGX Spark (GB10, 128GB, 4TB) at $6,950.00 and shows it Out of Stock.",
+      "source_url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/?superchip=GB10&page=1&limit=15",
+      "source_title": "Personal AI Supercomputers | DGX Systems for AI | NVIDIA",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "ServeTheHome measured the EVO-X3 on MLPerf Client v1.6.1 (Windows, OrtGenAI/DirectML) running the Phi-4 14B reasoning model at 24.7 tokens per second with a 1.46-second time to first token.",
+      "source_url": "https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/3/",
+      "source_title": "GMKtec EVO-X3 Mini-PC Review - Page 3",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "ServeTheHome measured the DGX Spark's out-of-the-box Ollama at over 49 tokens per second on gpt-oss 20B and 14.48 tokens per second on gpt-oss 120B.",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-review-the-gb10-machine-is-so-freaking-cool/3/",
+      "source_title": "NVIDIA DGX Spark Review - Page 3",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "An owner who ran identical llama-bench commands on a 128GB Strix Halo box (GMKtec EVO-X2, same Ryzen AI Max+ 395 SoC) and a DGX Spark found gpt-oss-120b MXFP4 decode within about a fifth (tg32 47.46 vs 56.33 tokens/s) but prefill about 2x faster on the Spark (pp2048 1000.93 vs 1939.32 tokens/s), and summarized prompt processing as 2-5x higher on the Spark.",
+      "source_url": "https://forums.developer.nvidia.com/t/dgx-spark-vs-amd-strix-halo/348751",
+      "source_title": "DGX Spark vs AMD Strix Halo - NVIDIA Developer Forums",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-10-11"
+    },
+    {
+      "claim": "ServeTheHome notes Strix Halo systems under Windows split memory roughly 32GB CPU / 96GB GPU, while the DGX Spark exposes a single roughly 120GB unified pool instead.",
+      "source_url": "https://www.servethehome.com/nvidia-dgx-spark-review-the-gb10-machine-is-so-freaking-cool/3/",
+      "source_title": "NVIDIA DGX Spark Review - Page 3",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-10-11"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "EVO-X3 price (128GB RAM + 2TB SSD, sale)",
+      "value": "$3,799.99",
+      "source_url": "https://www.gmktec.com/products/gmktec-evo-x3-ai-mini-pc-amd-ryzen-ai-max-395"
+    },
+    {
+      "label": "DGX Spark price (128GB, 4TB, NVIDIA marketplace)",
+      "value": "$6,950.00",
+      "source_url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/?superchip=GB10&page=1&limit=15"
+    },
+    {
+      "label": "Strix Halo memory bandwidth (AMD official)",
+      "value": "256 GB/s",
+      "source_url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html"
+    },
+    {
+      "label": "DGX Spark memory bandwidth (NVIDIA official)",
+      "value": "273 GB/s",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    },
+    {
+      "label": "EVO-X3 GPU-allocatable memory",
+      "value": "Up to 96GB",
+      "source_url": "https://www.gmktec.uk/products/gmktec-evo-x3-amd-ryzen%E2%84%A2-ai-max-395-ai-mini-pc"
+    },
+    {
+      "label": "EVO-X3 MLPerf Client Phi-4 14B reasoning",
+      "value": "24.7 tokens per second",
+      "source_url": "https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/3/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Two delivery trucks on the same highway",
+      "mapping": "Token generation is cruising speed, set by the highway (memory bandwidth, 256 vs 273 GB/s), so both trucks cruise within about a fifth of each other hauling the same 59GB trailer; the Spark's ~1 PFLOP engine only shortens the loading dock (prefill).",
+      "limit": "A truck's bigger engine also raises top speed, while here the compute edge barely moves decode -- say \"same speed limit\" explicitly or the analogy misleads."
+    },
+    {
+      "vehicle": "Soldered memory is an engine with a welded hood",
+      "mapping": "The 128GB pool is fixed at the factory like a sealed engine, so the RAM decision is permanent; the two M.2 bays are the only bays that open.",
+      "limit": "Extended to storage, which is upgradeable, not welded."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "128GB of unified memory means 128GB of VRAM.",
+      "reality": "The EVO-X3 allocates up to 96GB as GPU memory, and the Spark exposes a single roughly 120GB pool (claims 3 and 10)."
+    },
+    {
+      "myth": "The Spark's up-to-1-PFLOP-FP4 compute makes chat much faster than Strix Halo.",
+      "reality": "Token generation is memory-bandwidth-bound (256 vs 273 GB/s, about 7 percent apart), and measured gpt-oss-120b decode sits within about a fifth; the compute pays out in prompt processing, 2-5x faster on the Spark (claims 4, 5, 9)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Strix Halo",
+      "definition": "AMD's Ryzen AI Max+ 300-series halo chip pairing Zen 5 CPU cores with a Radeon 8060S iGPU and up to 128GB of unified LPDDR5X memory."
+    },
+    {
+      "term": "Unified memory",
+      "definition": "One pool of RAM shared by CPU and GPU, so a model loads once instead of being copied into separate VRAM."
+    },
+    {
+      "term": "Memory bandwidth (GB/s)",
+      "definition": "How fast weights can stream from memory each second; it caps tokens per second when the model is generating."
+    },
+    {
+      "term": "Tokens per second",
+      "definition": "How many words-or-pieces the model emits each second while answering; the speed a viewer actually feels."
+    },
+    {
+      "term": "Prefill (prompt processing)",
+      "definition": "The phase where the model reads your whole prompt at once; it is compute-bound, which is where the Spark pulls ahead."
+    },
+    {
+      "term": "Decode (token generation)",
+      "definition": "The phase where the model writes the answer one token at a time; it is memory-bandwidth-bound, which is why the two boxes tie."
+    },
+    {
+      "term": "gpt-oss-120b",
+      "definition": "An open mixture-of-experts model shipped in MXFP4 quantization at 59.02 GiB, small enough for both 128GB boxes."
+    },
+    {
+      "term": "OCuLink",
+      "definition": "A cabled PCIe port on the EVO-X3 for attaching an external GPU, rarer than Thunderbolt on mini-PCs."
+    }
+  ],
+  "unverified": [
+    "No EVO-X3-specific gpt-oss-120b tokens-per-second measurement exists in the fetched pages; the tg32 47.46 figure is an EVO-X2 (same SoC) in an owner's forum post, and the EVO-X3's own number is STH's MLPerf Phi-4 14B on Windows.",
+    "The Strix Halo tg32 47.46 row was partially reconstructed from a truncated forum table (community tier, medium confidence).",
+    "The DGX Spark's street availability and price at non-NVIDIA retailers was not checked; only NVIDIA's marketplace listing ($6,950.00, Out of Stock) was fetched.",
+    "The Ask HN thread \"Best Local LLM Box?\" (id 50039529) had 2 points and 0 comments when fetched, so it contributes no quotable recommendations.",
+    "Historical DGX Spark launch prices ($3,999 or $4,999) could not be grounded in any fetched page.",
+    "What the EVO-X3 does on Linux with ROCm rather than Windows DirectML was not measured in any fetched page."
+  ],
+  "suggested_outline": "Same desk, same 128GB, $3,100 apart: the EVO-X3 at $3,799.99 and the Spark at $6,950.00 both exist to swallow models no gaming GPU can hold.\nWhat fits and how fast: up to 96GB of GPU memory versus a roughly 120GB unified pool (both hold the 59.02 GiB gpt-oss-120b), then the bandwidth tie -- 256 versus 273 GB/s -- and the measurements showing token generation within about a fifth.\nThe honest catch and the rule: prefill and CUDA are what the extra dollars buy (2-5x prompt processing), so chat-on-a-budget points at the EVO-X3 and long-context or CUDA work points at the Spark -- and the memory is soldered, so choose once.",
+  "notes": "Price grounding: the first research pass reported a $3,600-$3,800 band without a quote; the follow-up pass grounded the exact string ($3,799.99 sale, $4,100.00 regular, 128GB RAM + 2TB SSD) on GMKtec's US store, and the band was discarded. Bandwidth grounding: ServeTheHome's EVO-X3 review does not print a GB/s figure; the verbatim 256 GB/s comes from AMD's official blog. Conflict kept: the llama-bench cross-machine numbers (claim 9) are community-tier and the EVO-X2 shares the EVO-X3's SoC but not its chassis or cooling; STH's EVO-X3 numbers are Windows MLPerf, not llama.cpp. The two measurements are kept separate and neither is averaged into the other.",
+  "viewer_situation": "You want one box on the desk that runs the biggest open models at home, you keep seeing 128GB machines, and the DGX Spark's $6,950 price tag makes you ask whether the mini-PC does the same job.",
+  "has_process": false,
+  "objection": "One forum owner's llama-bench table and a Windows-only MLPerf run are not review-grade cross-platform evidence, and none of it tells me what the EVO-X3 does on Linux with ROCm or how it holds up as context fills."
+}
