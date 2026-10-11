@@ -2,14 +2,14 @@
 slug: 2026-10-11-gmktec-evo-x3-the-128gb-strix
 workspace: shorts
 title: "DGX Spark vs Strix Halo: same chat speed?"
-status: review
+status: approved
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: signal
 value_types: "TEACHES,PROVES"
 created: 2026-10-11
-updated: "2026-10-11T12:38:28Z"
+updated: "2026-10-11T16:22:09Z"
 publish_slot: ""
 seo_score: 93
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-10-11T12:38:34Z 07-render ok 42.97s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 203
 - 2026-10-11T12:38:34Z 07-render ok 920s
 - 2026-10-11T12:38:36Z build done, status review
+- 2026-10-11T16:22:09Z telegram approve (approved_at 2026-10-11T16:22:09Z)
