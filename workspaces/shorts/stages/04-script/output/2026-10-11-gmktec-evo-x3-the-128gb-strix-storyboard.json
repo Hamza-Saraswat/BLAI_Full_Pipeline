@@ -1,0 +1,160 @@
+{
+  "slug": "dgx-spark-vs-strix-halo-speed-myth",
+  "topic": "DGX Spark vs Strix Halo: what the premium actually buys",
+  "title": "DGX Spark vs Strix Halo: Speed Myth?",
+  "description": "NVIDIA's DGX Spark packs up to one petaFLOP of FP4 compute at $6,950, while GMKtec's EVO-X3 with AMD Strix Halo and 128GB of shared memory sells for about $3,800. An owner's identical llama-bench runs on gpt-oss-120b tell a different story about token generation versus prompt processing. You'll learn what the Spark's premium actually buys and how to check your own workload against it. Which box would you pick? (Narration is AI-generated.)",
+  "hashtags": [
+    "#StrixHalo",
+    "#DGXSpark",
+    "#LocalAI"
+  ],
+  "tags": [
+    "dgx spark vs strix halo",
+    "gmktec evo-x3 review",
+    "nvidia dgx spark",
+    "amd strix halo",
+    "ryzen ai max plus 395",
+    "local ai mini pc",
+    "128gb ai pc",
+    "gpt-oss-120b benchmark",
+    "llama-bench results",
+    "prefill vs decode explained",
+    "memory bandwidth tokens per second",
+    "dgx spark price",
+    "strix halo llm performance",
+    "best local llm hardware",
+    "run gpt-oss-120b at home",
+    "local ai workstation",
+    "dgx spark benchmark",
+    "unified memory ai pc"
+  ],
+  "hook_text": "You think $6,950 buys speed.",
+  "hook_candidates": [
+    "EVO-X3 or DGX Spark? One number decides.",
+    "You think $6,950 buys speed. It buys prompt processing.",
+    "Thirty-one hundred dollars apart. Same chat speed.",
+    "128GB for $3,799. The Spark costs $6,950.",
+    "Same highway. Same speed. Different loading dock.",
+    "Forty-five percent cheaper. Same chat speed.",
+    "The $6,950 box is faster. Barely, where it counts.",
+    "One model fits both. One wallet disagrees.",
+    "The mini-PC that runs 120B like the Spark.",
+    "Same tokens per second. Very different receipts."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,PROVES",
+  "hook_pattern": "wrong-diagnosis",
+  "target_duration_s": 35,
+  "narration_full": "You think six thousand nine hundred fifty buys speed. It buys prompt processing. You want one home box for giant open models. The spec sheet crowns the Spark. An owner benched both on one model. The Spark wrote fifty-six word-pieces a second, the mini-PC forty-seven. Writing rides on bandwidth, how fast weights stream. Two hundred fifty-six versus two hundred seventy-three gigabytes per second. Same doorway. Prefill, the pass reading your whole prompt, is one big math block, no doorway. There the Spark runs roughly two to five times faster. Giant prompts and agent loops earn the Spark. Everyday chat does not. Same chat speed, much faster prompt processing. That is the Spark's premium, three thousand one hundred dollars.",
+  "analogy": {
+    "vehicle": "A kitchen where the chef chops instantly but every ingredient arrives through one narrow doorway",
+    "mapping": "The chef is compute, the Spark's petaFLOP; the doorway is memory bandwidth; the ingredients are the model's weights",
+    "limit": "It breaks for prefill, which is one big block of math rather than one ingredient at a time, and that is exactly where the Spark's chef wins"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You think six thousand nine hundred fifty buys speed. It buys prompt processing.",
+      "on_screen_text": "You think $6,950 buys speed. | It buys prompt processing.",
+      "visual_brief": "Frame 1: charcoal background, giant white '$6,950' centered, the line 'You think $6,950 buys speed.' beneath it in medium type. On 'buys speed' at about 0.4s the word 'speed' scales up slightly. On 'It buys prompt processing' the first line dims and the second line rises in place below, while a thin line fades through the word 'speed'. Motion onset t=0.30s: the '$6,950' figure scales up 8 percent and locks by 0.5s.",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You want one home box for giant open models. The spec sheet crowns the Spark.",
+      "on_screen_text": "One box, biggest open models | Spec sheet crowns the Spark",
+      "visual_brief": "On 'You want one home box' a left card fades in showing a small desk with one mini-PC silhouette, captioned 'One box, biggest open models'. On 'The spec sheet crowns the Spark' a right card fades in holding a spec sheet, and a laurel crown scales down onto a Spark silhouette. Only the two cards animate, staggered by phrase.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "An owner benched both on one model. The Spark wrote fifty-six word-pieces a second, the mini-PC forty-seven.",
+      "on_screen_text": "Same model, both boxes | DGX SPARK 56 tokens/sec | STRIX HALO 47 tokens/sec",
+      "visual_brief": "On 'An owner benched both on one model' a small tag reading 'Same model, both boxes' fades in top center. On 'fifty-six word-pieces a second' a giant '56' scales in on the left under the label 'DGX SPARK' with caption 'tokens/sec'. On 'the mini-PC forty-seven' a giant '47' scales in on the right under 'STRIX HALO' with the same caption.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Writing rides on bandwidth, how fast weights stream. Two hundred fifty-six versus two hundred seventy-three gigabytes per second. Same doorway.",
+      "on_screen_text": "CHEF = compute | DOORWAY = memory bandwidth",
+      "visual_brief": "On 'memory bandwidth' a doorway outline fades in right of center, labeled 'DOORWAY = memory bandwidth', while small weight cubes rise in and hop through it in a loop. On 'Faster chef' a chef icon labeled 'CHEF = compute' scales up left of the doorway. On 'same doorway' the doorway pulses once without growing. Frame-1 legible: 'DOORWAY = memory bandwidth'.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Prefill, the pass reading your whole prompt, is one big math block, no doorway. There the Spark runs roughly two to five times faster.",
+      "on_screen_text": "PREFILL reads the whole prompt | Spark 2-5x faster",
+      "visual_brief": "On 'the pass reading your whole prompt' a document icon fades in above two empty horizontal bars. On 'one big math block, no doorway' the doorway icon from the previous scene fades to gray and the document scales once. On 'two to five times faster' both bars fill left to right, the Spark bar ending roughly three times longer, and a '2-5x' label pops at its end.",
+      "est_duration_s": 8.3,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Giant prompts and agent loops earn the Spark. Everyday chat does not.",
+      "on_screen_text": "Earns it: long prompts, agents, CUDA | One owner's run, not a lab",
+      "visual_brief": "On 'Giant prompts and agent loops' two checklist rows rise in place, 'LONG PROMPTS' and 'AGENT LOOPS', each with a small check mark. On 'Everyday chat does not' a third row 'EVERYDAY CHAT' rises in and dims with a small cross, while a footnote line fades in below: 'One owner's run, not a lab'. At most two elements move at once.",
+      "est_duration_s": 4.1,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Same chat speed, much faster prompt processing. That is the Spark's premium, three thousand one hundred dollars.",
+      "on_screen_text": "Same chat, faster prompts | $3,100 premium | BUILD LOCAL AI",
+      "visual_brief": "On 'Same chat speed, much faster prompt processing' two short lines settle center screen. On 'three thousand one hundred dollars' a giant '$3,100' scales in beneath them. Everything then fades to the 'BUILD LOCAL AI' wordmark, which scales gently to rest, echoing the centered single-statement composition of frame 1.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Rounded 56.33 and 47.46 tokens per second to fifty-six and forty-seven, kept the owner's prefill summary as 'roughly two to five times faster', and used the brief's own three-thousand-one-hundred-dollar gap; the hook price follows the assigned verbatim line with the dollar unit carried on screen as $6,950. Hedged the evidence as one owner's bench in narration and on screen ('One owner's run, not a lab'), and said 'mini-PC' rather than EVO-X3 because the benched box was an EVO-X2 with the same Strix Halo chip. The doorway analogy's limit lives in s05's clause 'one big math block, no doorway'."
+}
