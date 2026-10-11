@@ -1,0 +1,625 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-11T12:20:43+00:00",
+  "slug": "winner-final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "benchmark": 4,
+      "primary": 5,
+      "community": 1
+    },
+    "pct_primary_docs": 0.5,
+    "key_numbers_total": 6,
+    "entities_total": 31,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "amd.com",
+      "gmktec.com",
+      "gmktec.uk",
+      "nvidia.com",
+      "servethehome.com"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.333,
+      "detail": [
+        {
+          "label": "EVO-X3 price (128GB RAM + 2TB SSD, sale)",
+          "value": "$3,799.99",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark price (128GB, 4TB, NVIDIA marketplace)",
+          "value": "$6,950.00",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$6,950",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Strix Halo memory bandwidth (AMD official)",
+          "value": "256 GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark memory bandwidth (NVIDIA official)",
+          "value": "273 GB/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two hundred seventy-three gigabytes per second",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "EVO-X3 GPU-allocatable memory",
+          "value": "Up to 96GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "EVO-X3 MLPerf Client Phi-4 14B reasoning",
+          "value": "24.7 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 31,
+      "found_count": 4,
+      "score": 0.129,
+      "found": [
+        "Spark",
+        "DGX Spark",
+        "CUDA",
+        "NVIDIA DGX Spark"
+      ],
+      "missing": [
+        "EVO-X3",
+        "Out",
+        "LPDDR5x",
+        "Out of Stock",
+        "GB10",
+        "Stock",
+        "ServeTheHome",
+        "Ryzen AI Max",
+        "Windows",
+        "GMKtec EVO-X3",
+        "MLPerf Client",
+        "LPDDR5X-8000",
+        "OrtGenAI",
+        "DirectML",
+        "Phi-4 14B",
+        "Radeon",
+        "Phi",
+        "Ollama",
+        "gpt-oss-120b",
+        "GMKtec EVO-X2",
+        "SoC",
+        "MXFP4",
+        "tg32 47.46",
+        "pp2048 1000.93",
+        "AMD Ryzen AI Max",
+        "LPDDR5X-8000 and Radeon 8060",
+        "GMKtec US"
+      ],
+      "top2": [
+        "Spark",
+        "DGX Spark"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "EVO-X3",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Out",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5x",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Out of Stock",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Stock",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ServeTheHome",
+          "tier": 2,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ryzen AI Max",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Windows",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GMKtec EVO-X3",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MLPerf Client",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5X-8000",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OrtGenAI",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DirectML",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Phi-4 14B",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Radeon",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Phi",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gpt-oss-120b",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GMKtec EVO-X2",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SoC",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MXFP4",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "tg32 47.46",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "pp2048 1000.93",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "AMD Ryzen AI Max",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5X-8000 and Radeon 8060",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GMKtec US",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA DGX Spark",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 15,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:$6,950.00"
+      ],
+      "hook_text": "You think $6,950 buys speed.",
+      "first_sentence": "You think six thousand nine hundred fifty buys speed."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "contrarian-take",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 7,
+      "specific_count": 7,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "num:$6,950.00"
+          ],
+          "narration": "You think six thousand nine hundred fifty buys speed. It buys prompt processing."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "You want one home box for giant open models. The spec sheet crowns the Spark."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Spark",
+            "entity:DGX Spark"
+          ],
+          "narration": "An owner benched both on one model. The Spark wrote fifty-six word-pieces a second, the mini-PC forty-seven."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s"
+          ],
+          "narration": "Writing rides on bandwidth, how fast weights stream. Two hundred fifty-six versus two hundred seventy-three gigabytes per second. Same doorway."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "Prefill, the pass reading your whole prompt, is one big math block, no doorway. There the Spark runs roughly two to five times faster."
+        },
+        {
+          "id": "s06",
+          "role": "foreshadow",
+          "est_duration_s": 4.1,
+          "specific": true,
+          "hits": [
+            "entity:Spark",
+            "entity:CUDA"
+          ],
+          "narration": "Giant prompts and agent loops earn the Spark. Everyday chat does not."
+        },
+        {
+          "id": "s07",
+          "role": "payoff_close",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Spark"
+          ],
+          "narration": "Same chat speed, much faster prompt processing. That is the Spark's premium, three thousand one hundred dollars."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.0,
+      "words": 124,
+      "sentences": 15,
+      "est_speech_s": 42.8,
+      "vo_band_ok": true
+    },
+    "narration_full": "You think six thousand nine hundred fifty buys speed. It buys prompt processing. You want one home box for giant open models. The spec sheet crowns the Spark. An owner benched both on one model. The Spark wrote fifty-six word-pieces a second, the mini-PC forty-seven. Writing rides on bandwidth, how fast weights stream. Two hundred fifty-six versus two hundred seventy-three gigabytes per second. Same doorway. Prefill, the pass reading your whole prompt, is one big math block, no doorway. There the Spark runs roughly two to five times faster. Giant prompts and agent loops earn the Spark. Everyday chat does not. Same chat speed, much faster prompt processing. That is the Spark's premium, three thousand one hundred dollars.",
+    "on_screen": "You think $6,950 buys speed. | You think $6,950 buys speed. | It buys prompt processing. | One box, biggest open models | Spec sheet crowns the Spark | Same model, both boxes | DGX SPARK 56 tokens/sec | STRIX HALO 47 tokens/sec | CHEF = compute | DOORWAY = memory bandwidth | PREFILL reads the whole prompt | Spark 2-5x faster | Earns it: long prompts, agents, CUDA | One owner's run, not a lab | Same chat, faster prompts | $3,100 premium | BUILD LOCAL AI"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-storyboard.json",
+        "scenes": 7,
+        "fk_grade": 4.0,
+        "words": 124,
+        "est_speech_s": 42.8,
+        "blockers": [],
+        "advisories": [
+          "style_pack 'signal' same as previous video \u2014 rotate"
+        ],
+        "violations": [
+          "style_pack 'signal' same as previous video \u2014 rotate"
+        ],
+        "warnings": [
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 6,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.129,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Spark",
+          "DGX Spark"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:$6,950.00"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 6,
+        "total": 7
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "contrarian-take",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
