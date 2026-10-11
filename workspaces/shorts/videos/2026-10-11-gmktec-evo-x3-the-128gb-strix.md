@@ -2,14 +2,14 @@
 slug: 2026-10-11-gmktec-evo-x3-the-128gb-strix
 workspace: shorts
 title: "DGX Spark vs Strix Halo: same chat speed?"
-status: building
+status: review
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: signal
 value_types: "TEACHES,PROVES"
 created: 2026-10-11
-updated: "2026-10-11T12:22:10Z"
+updated: "2026-10-11T12:38:28Z"
 publish_slot: ""
 seo_score: 93
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-script]]
 - Package: [[stages/05-package/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-package]]
 - Voice: [[stages/06-voice/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -42,3 +42,5 @@ blotato_post_id: ""
 - 2026-10-11T12:21:56Z 05-package ok: seo 93, title intriguing pick, manifest written
 - 2026-10-11T12:22:10Z build start on gn100-83c4
 - 2026-10-11T12:23:11Z 06-voice ok 59s
+- 2026-10-11T12:38:34Z 07-render ok 42.97s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 203
+- 2026-10-11T12:38:34Z 07-render ok 920s
