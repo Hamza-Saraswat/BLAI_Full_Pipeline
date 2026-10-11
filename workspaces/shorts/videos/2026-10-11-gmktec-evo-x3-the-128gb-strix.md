@@ -2,22 +2,22 @@
 slug: 2026-10-11-gmktec-evo-x3-the-128gb-strix
 workspace: shorts
 title: "DGX Spark vs Strix Halo: same chat speed?"
-status: approved
+status: scheduled
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: signal
 value_types: "TEACHES,PROVES"
 created: 2026-10-11
-updated: "2026-10-11T16:22:09Z"
-publish_slot: ""
+updated: "2026-10-11T16:26:11Z"
+publish_slot: "2026-10-11T18:00:00-05:00"
 seo_score: 93
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: d4e5abd3-3e1a-46f2-9fe6-866296b92df5
 ---
 # GMKtec EVO-X3: the 128GB Strix Halo local AI box
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-package]]
 - Voice: [[stages/06-voice/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-voice]]
 - Render: [[stages/07-render/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-11-gmktec-evo-x3-the-128gb-strix-publish]]
 
 ## Decisions
 
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-10-11T12:38:34Z 07-render ok 920s
 - 2026-10-11T12:38:36Z build done, status review
 - 2026-10-11T16:22:09Z telegram approve (approved_at 2026-10-11T16:22:09Z)
+- 2026-10-11T16:26:12Z 08-publish ok 2s
