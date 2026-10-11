@@ -2,14 +2,14 @@
 slug: 2026-10-10-kisoku-1-6b-one-person-trained
 workspace: shorts
 title: "Kisoku 1.6B: one person trained an LLM from scratch"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-10-10
-updated: "2026-10-10T11:06:20Z"
+updated: "2026-10-11T13:35:52Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-11T13:35:52Z 2026-10-11T13:35:52Z expired: not from today's picks (2026-10-11); the factory carries no backlog
 
 ## Decisions
 - Pick 2 (Kisoku): 72.1, explainer fills rotation gap; smooth-explainer band, differs from pick 1.
