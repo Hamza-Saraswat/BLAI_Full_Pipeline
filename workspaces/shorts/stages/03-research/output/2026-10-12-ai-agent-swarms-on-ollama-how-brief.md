@@ -143,3 +143,7 @@ Cheap tokens are not free results: every handoff re-sends context through a smal
 
 ## Notes
 CrewAI's docs point at http://localhost:11434 through the LiteLLM provider while Ollama's own compatibility examples standardize on http://localhost:11434/v1; both reach the same server, and the narration should pick one form and stay consistent. The Karpathy "thousands of agents" line is community tier and should stay framed as a quote from a post, not an established fact. The electricity-per-token math is deliberately not claimed anywhere in this brief; the writer can contrast $2.00 / 1M tokens against a 240 Watts box without asserting a computed local per-token price.
+
+## Decisions
+- Checkpoint: slug confirmed as picked; angle restated "a local swarm's marginal token costs electricity, not dollars; teach the coordination pattern with one worked example".
+- Why: hub and ideas note steer the same direction (Ask HN demand for the mental model, keyword "ai agent swarm"); no redirect signal, so research proceeded on the pick's angle.
