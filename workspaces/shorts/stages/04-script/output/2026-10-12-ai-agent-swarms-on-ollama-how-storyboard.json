@@ -1,0 +1,159 @@
+{
+  "slug": "2026-10-12-ai-agent-swarms-on-ollama-how",
+  "topic": "How AI agent swarms actually work when the models run locally on Ollama",
+  "title": "An Agent Swarm Runs on One Local Model",
+  "description": "Working description: how an AI agent swarm coordinates, and how to point it at your own Ollama server so tokens cost electricity instead of dollars.",
+  "hashtags": [
+    "#Ollama",
+    "#AIagents",
+    "#LocalAI"
+  ],
+  "hook_text": "A swarm isn't many models.",
+  "hook_candidates": [
+    "You've got Ollama running. A swarm is one line away.",
+    "Three agents. One model. No per-token bill.",
+    "Thousands of agents, says Karpathy. You can't wire three.",
+    "A swarm isn't many models. It's turns.",
+    "One model, many roles, zero token bills.",
+    "Your Ollama box could run a swarm tonight.",
+    "Two dollars per million tokens, or your wall socket.",
+    "Every agent in the swarm is the same model.",
+    "Swarms aren't magic. They're group chat.",
+    "Stop renting agents. Your GPU already is one."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 117,
+  "narration_full": "A swarm isn't many models. It's a single model taking turns. You already run that model in Ollama, and a swarm sounds like a pile of extra machines. An agent is your Ollama chat with a name, a role, and tools. The same model answers as each agent. Every agent is that same model taking turns. So who speaks next? AutoGen's SelectorGroupChat hands that choice to a model. It reads the shared conversation and picks the next speaker. Each reply is broadcast to the whole team. A stop word or message cap, the termination condition, ends the run. OpenAI's Agents SDK does it with a tool call. A handoff, one agent passing the task, is a tool called transfer to refund agent. LangGraph instead shares one state, a common board every agent reads and writes. Every framework points at a base U R L, the address for model requests. Set it to localhost, port eleven thousand four hundred thirty-four. One line re-points the swarm to your Ollama server. The client demands an A P I key; Ollama ignores it. The deeper change is the bill. G P T six point one Sol charges two dollars per million input tokens, chunks of text. A swarm re-sends its conversation with every turn. Every message between agents pays that meter. Your box never meters a token. NVIDIA's D G X Spark, built for this workload, ships with a two hundred forty watt power supply. Cloud charges per plate. Your box is a buffet, stove already on. The buffet has a single stove, though. Ollama serves a single request at a time by default, and extra parallel slots cost memory. Your agents take turns. Want them at once? Then the myth has a point: parallelism costs memory. The honest catch: MAST, the largest published audit of multi-agent failures. It annotated traces of real swarm runs across the popular frameworks. It sorted them into fourteen failure modes, mostly coordination, not weak models. So a local swarm buys you unlimited cheap tokens, not unlimited good ones.",
+  "analogy": {
+    "vehicle": "cloud per-plate billing versus a buffet with the stove already on",
+    "mapping": "cloud APIs charge per token like a la carte; the local box is flat-rate because the model is already loaded",
+    "limit": "the buffet has one stove: requests queue by default and parallelism is paid in RAM"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A swarm isn't many models. It's a single model taking turns. You already run that model in Ollama, and a swarm sounds like a pile of extra machines.",
+      "on_screen_text": "A swarm isn't many models.",
+      "visual_brief": "Frame 1: hook text \"A swarm isn't many models.\" fully legible, amber accent, centered above the caption band. Motion onset within 0.5 s: at 0.35 s three agent chips scale in and merge into one model card on 'one model taking turns'; two spare card outlines fade out on 'three cards'.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "An agent is your Ollama chat with a name, a role, and tools. The same model answers as each agent. Every agent is that same model taking turns.",
+      "on_screen_text": "name + role + tools",
+      "visual_brief": "On \"a name, a role, and tools\" a loop diagram, prompt arrow to model box to reply, fades in while three tags rise onto the single model box. On \"taking turns\" a dot cycles through the tags, one at a time.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "So who speaks next? AutoGen's SelectorGroupChat hands that choice to a model. It reads the shared conversation and picks the next speaker. Each reply is broadcast to the whole team. A stop word or message cap, the termination condition, ends the run.",
+      "on_screen_text": "who speaks next?",
+      "visual_brief": "On \"who speaks next\" a chat thread rises message by message. On \"picks the next speaker\" an amber marker hops to one avatar, and on \"broadcast\" the new reply fades in under every name. On 'stop word' a small TERMINATE chip fades in at the thread's end.",
+      "est_duration_s": 14.5
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "OpenAI's Agents SDK does it with a tool call. A handoff, one agent passing the task, is a tool called transfer to refund agent. LangGraph instead shares one state, a common board every agent reads and writes.",
+      "on_screen_text": "handoff = a tool call",
+      "visual_brief": "On \"transfer to refund agent\" a tool-call chip scales in on the left panel. On \"common board\" the right panel fades in, one board filling as two agent icons write to it; the second label rises only after the first settles.",
+      "est_duration_s": 12.8
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Every framework points at a base U R L, the address for model requests. Set it to localhost, port eleven thousand four hundred thirty-four. One line re-points the swarm to your Ollama server. The client demands an A P I key; Ollama ignores it.",
+      "on_screen_text": "base_url = localhost:11434",
+      "visual_brief": "On \"base U R L\" a config card fades in showing the base_url line, then the localhost address scales in as the port is spoken. On \"ignores it\" the API key field fades to grey.",
+      "est_duration_s": 15.2
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The deeper change is the bill. G P T six point one Sol charges two dollars per million input tokens, chunks of text. A swarm re-sends its conversation with every turn. Every message between agents pays that meter.",
+      "on_screen_text": "GPT-6.1 Sol | $2.00 / 1M input tokens",
+      "visual_brief": "On \"two dollars\" a giant price scales in with the model caption beneath. On \"pays that meter\" a small meter ticks up beside each message in the thread. On 're-sends its conversation' the transcript loop visibly grows one pass longer.",
+      "est_duration_s": 13.1
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your box never meters a token. NVIDIA's D G X Spark, built for this workload, ships with a two hundred forty watt power supply. Cloud charges per plate. Your box is a buffet, stove already on.",
+      "on_screen_text": "240 W power supply",
+      "visual_brief": "On \"power supply\" the frame splits: an invoice card fades out left while a wall plug and the wattage rise in right. On \"stove already on\" a stove icon glows amber.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "The buffet has a single stove, though. Ollama serves a single request at a time by default, and extra parallel slots cost memory. Your agents take turns. Want them at once? Then the myth has a point: parallelism costs memory.",
+      "on_screen_text": "more parallel = more RAM",
+      "visual_brief": "On \"one request at a time\" three agent chips queue at a single stove slot. On \"parallelism costs memory\" a memory bar rises and the equation fades in above it.",
+      "est_duration_s": 13.8
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The honest catch: MAST, the largest published audit of multi-agent failures. It annotated traces of real swarm runs across the popular frameworks.",
+      "on_screen_text": "MAST: why swarms fail",
+      "visual_brief": "On \"sixteen hundred traces\" rows of trace cards rise in fast, staggered, filling a grid under the heading.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "It sorted them into fourteen failure modes, mostly coordination, not weak models. So a local swarm buys you unlimited cheap tokens, not unlimited good ones.",
+      "on_screen_text": "14 failure modes",
+      "visual_brief": "On \"fourteen failure modes\" the digits scale in over the dimmed grid. On \"cheap tokens\" the text cross-fades to the closing line, rhyming frame 1, then the wordmark settles for the final half second.",
+      "est_duration_s": 8.6
+    }
+  ],
+  "notes_for_review": "One analogy: cloud per-plate billing versus a buffet with the stove already on (s07), with its limit stated at the top of s08, one stove so requests queue and memory is the real cap. Key numbers spent on screen: $2.00 / 1M input tokens (s06), 240 W (s07), 14 failure modes (s10); the sixteen hundred traces are spoken only, and port 11434 is shown so it is spoken. Hedged by omission: no local cents-per-token figure and no Karpathy line, both Unverified in the brief; used the bare localhost:11434 form per the brief's endpoint note, and dropped the termination-condition step for time.",
+  "tags": [
+    "ai agent swarm",
+    "ai agents",
+    "ollama",
+    "local llm",
+    "autogen",
+    "langgraph",
+    "crewai",
+    "multi agent system",
+    "local ai",
+    "ollama tutorial",
+    "ai agents explained",
+    "run ai locally",
+    "llm agents",
+    "agent orchestration",
+    "ollama openai compatibility",
+    "dgx spark",
+    "local llm tutorial",
+    "how ai agents work"
+  ]
+}

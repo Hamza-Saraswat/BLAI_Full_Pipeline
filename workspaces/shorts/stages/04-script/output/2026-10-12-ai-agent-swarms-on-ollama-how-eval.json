@@ -1,0 +1,589 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-12T12:22:18+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/.local-builds/2026-10-12-ai-agent-swarms-on-ollama-how/draft-B/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-12-ai-agent-swarms-on-ollama-how-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "community": 1,
+      "primary": 5,
+      "docs": 4
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 20,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "arxiv.org",
+      "crewai.com",
+      "github.io",
+      "nvidia.com",
+      "ollama.com",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "OLLAMA_NUM_PARALLEL default (parallel requests each model processes at once)",
+          "value": "1",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "OLLAMA_MAX_LOADED_MODELS default (models loaded concurrently)",
+          "value": "3 * the number of GPUs or 3 for CPU inference",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama default context window",
+          "value": "4096 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPT-6.1 Sol input price (standard processing, OpenAI pricing page, 2026-10-12)",
+          "value": "$2.00 / 1M tokens",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$2",
+          "scene_ids": [
+            "s06"
+          ]
+        },
+        {
+          "label": "GPT-6.1 Sol output price (standard processing, OpenAI pricing page, 2026-10-12)",
+          "value": "$10.00 / 1M tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark whole-system power supply",
+          "value": "240 Watts",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "240",
+          "scene_ids": [
+            "s07"
+          ]
+        },
+        {
+          "label": "GB10 chip thermal design power (CPU and GPU)",
+          "value": "140 W",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "MAST-Data annotated multi-agent traces (across 7 frameworks)",
+          "value": "1600+",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 20,
+      "found_count": 6,
+      "score": 0.3,
+      "found": [
+        "OpenAI",
+        "localhost:11434",
+        "MAST",
+        "NVIDIA",
+        "AutoGen",
+        "LangGraph"
+      ],
+      "missing": [
+        "DGX Spark",
+        "W GB10",
+        "TDP",
+        "ConnectX",
+        "MAS",
+        "Watts",
+        "Sparks",
+        "llama3:70b",
+        "OllamaChatCompletionClient",
+        "Ask HN",
+        "Karpathy",
+        "Microsoft AutoGen SelectorGroupChat",
+        "Ollama OpenAI-compatible",
+        "Ollama OLLAMA"
+      ],
+      "top2": [
+        "OpenAI",
+        "localhost:11434"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "OpenAI",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "localhost:11434",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "MAST",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "W GB10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "TDP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ConnectX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MAS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Watts",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sparks",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AutoGen",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "LangGraph",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "llama3:70b",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OllamaChatCompletionClient",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ask HN",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Karpathy",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Microsoft AutoGen SelectorGroupChat",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama OpenAI-compatible",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama OLLAMA",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 35,
+      "hits": 1,
+      "density": 0.029,
+      "offenders": [
+        "Then the myth has a point: parallelism costs memory."
+      ]
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "A swarm isn't many models.",
+      "first_sentence": "A swarm isn't many models."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 10,
+      "specific_count": 10,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "glossary:swarm"
+          ],
+          "narration": "A swarm isn't many models. It's a single model taking turns. You already run that model in Ollama, and a swarm sounds like a pile of extra machines."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "glossary:agent"
+          ],
+          "narration": "An agent is your Ollama chat with a name, a role, and tools. The same model answers as each agent. Every agent is that same model taking turns."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 14.5,
+          "specific": true,
+          "hits": [
+            "entity:AutoGen"
+          ],
+          "narration": "So who speaks next? AutoGen's SelectorGroupChat hands that choice to a model. It reads the shared conversation and picks the next speaker. Each reply is broadcast to the whole team. A stop word or message cap, the termination condition, ends the run."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "entity:OpenAI",
+            "entity:LangGraph"
+          ],
+          "narration": "OpenAI's Agents SDK does it with a tool call. A handoff, one agent passing the task, is a tool called transfer to refund agent. LangGraph instead shares one state, a common board every agent reads and writes."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 15.2,
+          "specific": true,
+          "hits": [
+            "entity:localhost:11434"
+          ],
+          "narration": "Every framework points at a base U R L, the address for model requests. Set it to localhost, port eleven thousand four hundred thirty-four. One line re-points the swarm to your Ollama server. The client demands an A P I key; Ollama ignores it."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 13.1,
+          "specific": true,
+          "hits": [
+            "num:$2.00 / 1M tokens"
+          ],
+          "narration": "The deeper change is the bill. G P T six point one Sol charges two dollars per million input tokens, chunks of text. A swarm re-sends its conversation with every turn. Every message between agents pays that meter."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 12.4,
+          "specific": true,
+          "hits": [
+            "num:240 Watts",
+            "entity:NVIDIA"
+          ],
+          "narration": "Your box never meters a token. NVIDIA's D G X Spark, built for this workload, ships with a two hundred forty watt power supply. Cloud charges per plate. Your box is a buffet, stove already on."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "glossary:agent"
+          ],
+          "narration": "The buffet has a single stove, though. Ollama serves a single request at a time by default, and extra parallel slots cost memory. Your agents take turns. Want them at once? Then the myth has a point: parallelism costs memory."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "entity:MAST"
+          ],
+          "narration": "The honest catch: MAST, the largest published audit of multi-agent failures. It annotated traces of real swarm runs across the popular frameworks."
+        },
+        {
+          "id": "s10",
+          "role": "payoff_close",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "glossary:swarm",
+            "glossary:token"
+          ],
+          "narration": "It sorted them into fourteen failure modes, mostly coordination, not weak models. So a local swarm buys you unlimited cheap tokens, not unlimited good ones."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.0,
+      "words": 344,
+      "sentences": 35,
+      "est_speech_s": 118.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "A swarm isn't many models. It's a single model taking turns. You already run that model in Ollama, and a swarm sounds like a pile of extra machines. An agent is your Ollama chat with a name, a role, and tools. The same model answers as each agent. Every agent is that same model taking turns. So who speaks next? AutoGen's SelectorGroupChat hands that choice to a model. It reads the shared conversation and picks the next speaker. Each reply is broadcast to the whole team. A stop word or message cap, the termination condition, ends the run. OpenAI's Agents SDK does it with a tool call. A handoff, one agent passing the task, is a tool called transfer to refund agent. LangGraph instead shares one state, a common board every agent reads and writes. Every framework points at a base U R L, the address for model requests. Set it to localhost, port eleven thousand four hundred thirty-four. One line re-points the swarm to your Ollama server. The client demands an A P I key; Ollama ignores it. The deeper change is the bill. G P T six point one Sol charges two dollars per million input tokens, chunks of text. A swarm re-sends its conversation with every turn. Every message between agents pays that meter. Your box never meters a token. NVIDIA's D G X Spark, built for this workload, ships with a two hundred forty watt power supply. Cloud charges per plate. Your box is a buffet, stove already on. The buffet has a single stove, though. Ollama serves a single request at a time by default, and extra parallel slots cost memory. Your agents take turns. Want them at once? Then the myth has a point: parallelism costs memory. The honest catch: MAST, the largest published audit of multi-agent failures. It annotated traces of real swarm runs across the popular frameworks. It sorted them into fourteen failure modes, mostly coordination, not weak models. So a local swarm buys you unlimited cheap tokens, not unlimited good ones.",
+    "on_screen": "A swarm isn't many models. | A swarm isn't many models. | name + role + tools | who speaks next? | handoff = a tool call | base_url = localhost:11434 | GPT-6.1 Sol | $2.00 / 1M input tokens | 240 W power supply | more parallel = more RAM | MAST: why swarms fail | 14 failure modes"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/.local-builds/2026-10-12-ai-agent-swarms-on-ollama-how/draft-B/storyboard.json",
+        "scenes": 10,
+        "fk_grade": 6.0,
+        "words": 344,
+        "est_speech_s": 118.6,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 6.0 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s04: 'SDK' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s06: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s07: 12s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s08: 14s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s09: 'MAST' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 8s scene with ~1 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-12-ai-agent-swarms-on-ollama-how-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.3,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "OpenAI",
+          "localhost:11434"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": [],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 10,
+        "need": 8,
+        "total": 10
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.029,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
