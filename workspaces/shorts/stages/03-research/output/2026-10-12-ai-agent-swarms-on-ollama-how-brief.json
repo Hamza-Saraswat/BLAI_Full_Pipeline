@@ -1,0 +1,226 @@
+{
+  "slug": "2026-10-12-ai-agent-swarms-on-ollama-how",
+  "topic": "How AI agent swarms actually work when the models run locally on Ollama",
+  "generated_at": "2026-10-12T11:39:03Z",
+  "depth": "standard",
+  "thesis": "A swarm is not many minds on your machine but one local model taking turns through roles, and once Ollama serves those turns your marginal token is paid in electricity and RAM, not a per-token bill.",
+  "explanation_path": "Start from what the viewer already owns: one model in a chat window, where every answer is one model reading a prompt and writing a reply. An agent is that same loop dressed with a name, a role description, and tools, so nothing exotic has to be bought for swarming to make sense. The swarm is the coordination layer sitting over those agents: something must decide who goes next, and that something is usually itself a model call, whether it is AutoGen's selector reading the shared conversation, an OpenAI Agents SDK handoff disguised as a tool call, or LangGraph edges routing between nodes that read and write one shared state object. Establish what actually travels between agents, messages, tool results, and task objects riding a shared conversation or state, before any hardware enters, because the coordination pattern rather than the model count is what defines the system. Then move the whole thing onto the viewer's machine: every agent points at the same Ollama server through its OpenAI-compatible endpoint at http://localhost:11434/v1, which is why framework code written for a cloud API turns local by changing one base_url line. With the wiring understood, the economics land as a reversal: a cloud swarm meters every coordination token at a posted per-million price, while the local swarm's marginal token comes from a box with a fixed watt ceiling, so cost moves from the invoice to the wall socket and the memory. Close on the honest catch, the MAST finding that multi-agent failures cluster into coordination problems with 14 named modes, so the payoff is the viewer knowing a local swarm buys unlimited cheap tokens, not unlimited good ones, and that parallelism is paid for in RAM.",
+  "claims": [
+    {
+      "claim": "The question is real and current: an Ask HN thread quotes Karpathy that frontier labs look like swarms of thousands of agents collaborating over weeks on software mega projects while the poster admits I'm already struggling to get 2-3 agents to work together reliably.",
+      "source_url": "https://news.ycombinator.com/item?id=50047180",
+      "source_title": "Ask HN: How do swarms of AI agents work?",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "In the OpenAI Agents SDK, a handoff between agents is represented to the model as an ordinary tool call with a name like transfer_to_refund_agent, so delegation is just routing.",
+      "source_url": "https://openai.github.io/openai-agents-python/handoffs/",
+      "source_title": "Handoffs - OpenAI Agents SDK",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "Microsoft AutoGen's SelectorGroupChat implements the orchestrator pattern: a generative model reads the shared conversation plus each agent's name and description to pick the next speaker, whose response is then broadcast to all other participants before a termination condition is checked.",
+      "source_url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/selector-group-chat.html",
+      "source_title": "Selector Group Chat - AutoGen",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "LangGraph implements the shared-blackboard pattern: agents are nodes, functions that encode agent logic, that read and write a single shared state object while edges decide which node runs next, in the docs' own words nodes do the work, edges tell what to do next.",
+      "source_url": "https://langchain-ai.github.io/langgraph/concepts/multi_agent/",
+      "source_title": "Graph API overview - Docs by LangChain",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "A swarm reaches local models through Ollama's OpenAI-compatible endpoint: any OpenAI client points at base_url http://localhost:11434/v1/ and the API key is required but ignored.",
+      "source_url": "https://docs.ollama.com/api/openai-compatibility",
+      "source_title": "OpenAI compatibility - Ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "CrewAI's docs give the local recipe in three moves, install Ollama, run a model, then configure LLM(model=\"ollama/llama3:70b\", base_url=\"http://localhost:11434\"), so a crew of agents shares one local server.",
+      "source_url": "https://docs.crewai.com/concepts/llms",
+      "source_title": "LLMs - CrewAI",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "AutoGen ships a dedicated OllamaChatCompletionClient that assumes your Ollama server runs locally on port 11434, while warning that small local models are typically not as capable as larger cloud models.",
+      "source_url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/models.html",
+      "source_title": "Models - AutoGen",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "A local swarm's real ceiling is memory, governed by two Ollama defaults: OLLAMA_NUM_PARALLEL, parallel requests each model processes at the same time, default 1, and OLLAMA_MAX_LOADED_MODELS, default 3 * the number of GPUs or 3 for CPU inference, with required RAM scaling by OLLAMA_NUM_PARALLEL * OLLAMA_CONTEXT_LENGTH.",
+      "source_url": "https://docs.ollama.com/faq",
+      "source_title": "FAQ - Ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "NVIDIA sells DGX Spark explicitly for this workload, saying its stack lets agents and large models run locally, reducing the need for cloud-based token generation resources, inside a 240 Watts power supply with a 140 W GB10 chip TDP, and its ConnectX networking links up to four Sparks to run multi-agent workloads.",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "source_title": "NVIDIA DGX Spark",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    },
+    {
+      "claim": "The largest published audit of multi-agent failures, MAST, annotated 1600+ traces across 7 popular MAS frameworks and identified 14 unique failure modes clustered into 3 categories: system design issues, inter-agent misalignment, and task verification.",
+      "source_url": "https://arxiv.org/abs/2503.13657",
+      "source_title": "Why Do Multi-Agent LLM Systems Fail?",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "OLLAMA_NUM_PARALLEL default (parallel requests each model processes at once)",
+      "value": "1",
+      "source_url": "https://docs.ollama.com/faq"
+    },
+    {
+      "label": "OLLAMA_MAX_LOADED_MODELS default (models loaded concurrently)",
+      "value": "3 * the number of GPUs or 3 for CPU inference",
+      "source_url": "https://docs.ollama.com/faq"
+    },
+    {
+      "label": "Ollama default context window",
+      "value": "4096 tokens",
+      "source_url": "https://docs.ollama.com/faq"
+    },
+    {
+      "label": "GPT-6.1 Sol input price (standard processing, OpenAI pricing page, 2026-10-12)",
+      "value": "$2.00 / 1M tokens",
+      "source_url": "https://openai.com/api/pricing/"
+    },
+    {
+      "label": "GPT-6.1 Sol output price (standard processing, OpenAI pricing page, 2026-10-12)",
+      "value": "$10.00 / 1M tokens",
+      "source_url": "https://openai.com/api/pricing/"
+    },
+    {
+      "label": "DGX Spark whole-system power supply",
+      "value": "240 Watts",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    },
+    {
+      "label": "GB10 chip thermal design power (CPU and GPU)",
+      "value": "140 W",
+      "source_url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    },
+    {
+      "label": "MAST-Data annotated multi-agent traces (across 7 frameworks)",
+      "value": "1600+",
+      "source_url": "https://arxiv.org/abs/2503.13657"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A kitchen brigade",
+      "mapping": "The orchestrator is the head chef who plans and delegates but never cooks, agents are stations, and orders ride the rail as messages; the pass where every finished plate lands is the shared conversation.",
+      "limit": "A brigade's stations are genuinely different skills, while swarm agents are one model wearing different prompt hats, so any agent could in principle work any station."
+    },
+    {
+      "vehicle": "A group chat with a moderator",
+      "mapping": "AutoGen's SelectorGroupChat is literally a chat where a model moderates, picking the next speaker from each member's name and description, every reply broadcast to all, until a termination condition fires.",
+      "limit": "Human chatters bring separate memories and minds, while these agents share one context window and often one model, one mind with name tags."
+    },
+    {
+      "vehicle": "An all-you-can-eat buffet versus a la carte",
+      "mapping": "Cloud APIs charge per plate, $2.00 / 1M tokens input on GPT-6.1 Sol, while the local box is a flat-rate buffet where the stove is already on.",
+      "limit": "The buffet has one stove, so extra diners queue instead of eating in parallel, and the real limit is pantry size, meaning RAM, not appetite."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Every agent in a swarm needs its own model or its own GPU.",
+      "reality": "Agents are role prompts hitting the same endpoint; AutoGen's docs build a whole team on one model client, and Ollama's OLLAMA_MAX_LOADED_MODELS default of 3 models is a ceiling you could hit, not a floor you need (claims 3, 8)."
+    },
+    {
+      "myth": "More agents means better output.",
+      "reality": "The MAST audit of 1600+ traces found 14 failure modes and shows coordination design, not model capability, is where multi-agent systems break (claim 10)."
+    },
+    {
+      "myth": "A local swarm is free to scale up.",
+      "reality": "Tokens stop costing dollars but parallelism costs memory, since Ollama's required RAM scales by OLLAMA_NUM_PARALLEL * OLLAMA_CONTEXT_LENGTH and its default is 1 parallel request per model (claim 8)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "agent",
+      "definition": "A model in a loop, given a name, a role description, and tools, that reads messages and produces messages or tool calls."
+    },
+    {
+      "term": "swarm",
+      "definition": "Several agents coordinated so tasks decompose and results combine, what researchers call a multi-agent system."
+    },
+    {
+      "term": "orchestrator",
+      "definition": "The agent or mechanism that decides which agent works next, either by selecting a speaker or by routing handoffs."
+    },
+    {
+      "term": "handoff",
+      "definition": "A delegation from one agent to another that the OpenAI Agents SDK represents to the model as a tool call."
+    },
+    {
+      "term": "shared state",
+      "definition": "The single data object that every agent node reads from and writes to, the blackboard in LangGraph's graph model."
+    },
+    {
+      "term": "token",
+      "definition": "The chunk of text, roughly a word fragment, that models consume and emit and that cloud APIs bill by the million."
+    },
+    {
+      "term": "endpoint",
+      "definition": "The URL a framework sends model requests to, such as Ollama's http://localhost:11434/v1."
+    },
+    {
+      "term": "base URL",
+      "definition": "The base_url config field where swapping the cloud address for the local one re-points an entire swarm."
+    },
+    {
+      "term": "OLLAMA_NUM_PARALLEL",
+      "definition": "The Ollama setting for how many requests one model processes simultaneously, default 1, with RAM scaling by it times the context length."
+    },
+    {
+      "term": "context window",
+      "definition": "How much text a model can hold at once, 4096 tokens under Ollama's default."
+    },
+    {
+      "term": "termination condition",
+      "definition": "The rule, such as a stop word like TERMINATE or a message cap, that tells a swarm to halt."
+    }
+  ],
+  "unverified": [
+    "No fetched page computes a cents-per-million-token cost for local inference; any such figure must wait for a first-party measurement on our own hardware.",
+    "How many tokens per second a three-agent swarm actually sustains on consumer GPUs is unmeasured here.",
+    "That frontier labs really run thousands of concurrent agents rests on Karpathy's post quoted in a community thread, not on a primary source.",
+    "Whether a single Ollama instance bottlenecks beyond three concurrent agents on 8 to 24 GB cards is community folklore until we measure it."
+  ],
+  "suggested_outline": "Open on the gap: Karpathy's thousands of agents versus an Ask HN poster who cannot get 3 to cooperate.\nName the trick: a swarm is one model, many roles, taking turns.\nShow what travels: messages, tool results, and task objects riding a shared conversation or state.\nContrast the coordination shapes: a selector or handoff picks the next agent versus a shared blackboard every agent reads.\nWire it locally: one line, base_url http://localhost:11434/v1, turns cloud swarm code into local swarm code.\nFlip the meter: $2.00 / 1M input tokens in the cloud versus a 240 Watts box that never meters.\nAdmit the real bill: RAM scales by OLLAMA_NUM_PARALLEL times OLLAMA_CONTEXT_LENGTH, default 1 parallel slot.\nLand the honest catch: MAST's 1600+ traces and 14 failure modes, coordination fails, not the model.\nClose: electricity, not dollars, so swarm cheap but verify everything.",
+  "notes": "CrewAI's docs point at http://localhost:11434 through the LiteLLM provider while Ollama's own compatibility examples standardize on http://localhost:11434/v1; both reach the same server, and the narration should pick one form and stay consistent. The Karpathy thousands-of-agents line is community tier and should stay framed as a quote from a post, not an established fact. The electricity-per-token math is deliberately not claimed anywhere in this brief; the writer can contrast $2.00 / 1M tokens against a 240 Watts box without asserting a computed local per-token price.",
+  "viewer_situation": "You run a model like llama3.2 in Ollama on your own GPU and talk to it one prompt at a time, and you have heard about agent swarms but never wired one up.",
+  "has_process": true,
+  "process_steps": [
+    "Install Ollama and pull a model with ollama run llama3",
+    "Point your framework's LLM config at the local server with model \"ollama/llama3:70b\" and base_url \"http://localhost:11434\"",
+    "Define each agent's name, description, and role so a selector or handoff can route between them",
+    "Give the team a termination condition, a stop word or message cap, so the run ends"
+  ],
+  "objection": "Cheap tokens are not free results: every handoff re-sends context through a small local model, so a swarm that loops burns your night and your RAM even when it never bills a card."
+}
