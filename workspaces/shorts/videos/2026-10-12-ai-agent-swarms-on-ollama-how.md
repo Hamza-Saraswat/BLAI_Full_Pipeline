@@ -2,14 +2,14 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama, explained"
-status: building
+status: review
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T12:29:10Z"
+updated: "2026-10-12T13:05:52Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-12-ai-agent-swarms-on-ollama-how-script]]
 - Package: [[stages/05-package/output/2026-10-12-ai-agent-swarms-on-ollama-how-package]]
 - Voice: [[stages/06-voice/output/2026-10-12-ai-agent-swarms-on-ollama-how-narration|narration sidecars]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-12-ai-agent-swarms-on-ollama-how-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-12T12:29:10Z build start on gn100-83c4
 - 2026-10-12T12:31:40Z 06-voice ok 148s
+- 2026-10-12T13:05:55Z 07-render ok 115.37s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 210
+- 2026-10-12T13:05:55Z 07-render ok 2053s
