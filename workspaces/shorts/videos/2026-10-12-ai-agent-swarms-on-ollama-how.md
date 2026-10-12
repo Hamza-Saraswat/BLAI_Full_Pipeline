@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
-title: "AI agent swarms on Ollama: how they actually work"
-status: scripted
+title: "AI agent swarms on Ollama, explained"
+status: ready-to-build
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T12:23:34Z"
+updated: "2026-10-12T12:25:34Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-12-ideas]]
 - Research: [[stages/03-research/output/2026-10-12-ai-agent-swarms-on-ollama-how-brief]]
 - Script: [[stages/04-script/output/2026-10-12-ai-agent-swarms-on-ollama-how-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-12-ai-agent-swarms-on-ollama-how-package]]
+- Voice: [[stages/06-voice/output/2026-10-12-ai-agent-swarms-on-ollama-how-narration|narration sidecars]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -40,5 +40,7 @@ blotato_post_id: ""
 - 2026-10-12 script (unattended checkpoints): structures worked-example + myth-bust (rotation clear of number-first/contrarian-take); hooks picked situation (#1) and number-shock (#2) from ten scored.
 - Why: writer divergence forced by pattern; number-shock later withdrawn (variety gate: repeats 2026-10-10) and B re-hooked to named-contradiction "A swarm isn't many models".
 - 2026-10-12 judge: B wins 24/24 vs 20/24; two grafts from A (resend mechanism, termination condition). Final board 117 s, 340 words; validator 0/0, eval gate1_ready true (entity_spend soft advisory), variety ok; narration normalized to 06-voice sidecars; ledger + style pack terminal recorded.
+- 2026-10-12 package (unattended checkpoint): title "AI agent swarms on Ollama, explained" (searchable; keyword in chars 1-25, 36 visible); rubric all 8 rows pass, seo_score 92; related-video line points at the 2026-09-02 DGX Spark Short.
+- Why: topic pulled as a search-demand pick (autocomplete depth 26), so the searchable title wins over the intriguing variants; description's first 114 chars carry keyword plus promise.
 ## Build journal
 
