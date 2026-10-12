@@ -2,19 +2,19 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama, explained"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T12:25:34Z"
+updated: "2026-10-12T12:29:10Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,4 +43,4 @@ blotato_post_id: ""
 - 2026-10-12 package (unattended checkpoint): title "AI agent swarms on Ollama, explained" (searchable; keyword in chars 1-25, 36 visible); rubric all 8 rows pass, seo_score 92; related-video line points at the 2026-09-02 DGX Spark Short.
 - Why: topic pulled as a search-demand pick (autocomplete depth 26), so the searchable title wins over the intriguing variants; description's first 114 chars carry keyword plus promise.
 ## Build journal
-
+- 2026-10-12T12:29:10Z build start on gn100-83c4
