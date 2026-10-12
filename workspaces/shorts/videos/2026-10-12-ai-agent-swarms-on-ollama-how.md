@@ -2,14 +2,14 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama: how they actually work"
-status: researched
+status: scripted
 pillar: explainer
-structure: ""
+structure: myth-bust
 format: smooth-explainer
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T11:49:13Z"
+updated: "2026-10-12T12:23:34Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-12-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-12-ideas]]
 - Research: [[stages/03-research/output/2026-10-12-ai-agent-swarms-on-ollama-how-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-12-ai-agent-swarms-on-ollama-how-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,5 +37,8 @@ blotato_post_id: ""
 - Why: Ask HN shows demand for the swarm mental model; smooth-explainer band because the coordination pattern needs a worked example, and the local angle (tokens cost electricity, not dollars) is the reframe.
 - 2026-10-12 research (unattended checkpoint): slug and angle confirmed; brief landed 11 sources / 10 claims / 8 key numbers, validator 0. Thesis: one local model taking turns through roles; marginal token paid in electricity and RAM.
 
+- 2026-10-12 script (unattended checkpoints): structures worked-example + myth-bust (rotation clear of number-first/contrarian-take); hooks picked situation (#1) and number-shock (#2) from ten scored.
+- Why: writer divergence forced by pattern; number-shock later withdrawn (variety gate: repeats 2026-10-10) and B re-hooked to named-contradiction "A swarm isn't many models".
+- 2026-10-12 judge: B wins 24/24 vs 20/24; two grafts from A (resend mechanism, termination condition). Final board 117 s, 340 words; validator 0/0, eval gate1_ready true (entity_spend soft advisory), variety ok; narration normalized to 06-voice sidecars; ledger + style pack terminal recorded.
 ## Build journal
 
