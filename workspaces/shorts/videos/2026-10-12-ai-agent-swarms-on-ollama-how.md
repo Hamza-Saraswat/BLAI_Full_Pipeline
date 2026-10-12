@@ -2,21 +2,21 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama, explained"
-status: scheduled
+status: published
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T14:16:12Z"
+updated: "2026-10-12T16:04:10Z"
 publish_slot: "2026-10-12T11:00:00-05:00"
 seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=P5RFYixO8CE"
 blotato_post_id: 9e20c746-1515-4030-a3af-65c60c7a3b6a
 ---
 # AI agent swarms on Ollama: how they actually work
@@ -50,3 +50,4 @@ blotato_post_id: 9e20c746-1515-4030-a3af-65c60c7a3b6a
 - 2026-10-12T13:05:57Z build done, status review
 - 2026-10-12T14:13:51Z telegram approve (approved_at 2026-10-12T14:13:51Z)
 - 2026-10-12T14:16:13Z 08-publish ok 3s
+- 2026-10-12T16:04:10Z published https://www.youtube.com/watch?v=P5RFYixO8CE
