@@ -2,22 +2,22 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama, explained"
-status: approved
+status: scheduled
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T14:13:51Z"
-publish_slot: ""
+updated: "2026-10-12T14:16:12Z"
+publish_slot: "2026-10-12T11:00:00-05:00"
 seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 9e20c746-1515-4030-a3af-65c60c7a3b6a
 ---
 # AI agent swarms on Ollama: how they actually work
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-12-ai-agent-swarms-on-ollama-how-package]]
 - Voice: [[stages/06-voice/output/2026-10-12-ai-agent-swarms-on-ollama-how-narration|narration sidecars]]
 - Render: [[stages/07-render/output/2026-10-12-ai-agent-swarms-on-ollama-how-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-12-ai-agent-swarms-on-ollama-how-publish]]
 
 ## Decisions
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-12T13:05:55Z 07-render ok 2053s
 - 2026-10-12T13:05:57Z build done, status review
 - 2026-10-12T14:13:51Z telegram approve (approved_at 2026-10-12T14:13:51Z)
+- 2026-10-12T14:16:13Z 08-publish ok 3s
