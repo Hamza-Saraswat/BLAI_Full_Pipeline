@@ -1,0 +1,720 @@
+[
+  {
+    "id": "hn-44c65736f8",
+    "title": "The gap in shared understanding of LLM capability is widening",
+    "url": "https://twitter.com/karpathy/status/2109361546505966046",
+    "source": "hn",
+    "published_at": "2026-10-11T20:20:52Z",
+    "signals": {
+      "points": 479,
+      "num_comments": 702,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.8092,
+      "age_h": 14.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 479 points, 702 comments on HN, 15 h ago",
+    "score": 69
+  },
+  {
+    "id": "github-11f78819af",
+    "title": "llama.cpp b11565",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11565",
+    "source": "github",
+    "published_at": "2026-10-12T09:15:54Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11565",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9751,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sycl: guard DMMV reads at row tails (#29338) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/54988744> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11565/ll",
+    "why_now": "Shipped: ggml-org/llama.cpp b11565 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-811900e90f",
+    "title": "llama.cpp b11564",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11564",
+    "source": "github",
+    "published_at": "2026-10-12T06:56:44Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11564",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.943,
+      "age_h": 4.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> vulkan: use ternary expressions to avoid switch lowering for CM2 quant block size (#30164) * vulkan: specialize quant block size for CM2 matmul * vulkan: use ternary expressions to avoid switch lowering for CM2 quant block size * vulkan: clarify CM2 quant block size comment </details>",
+    "why_now": "Shipped: ggml-org/llama.cpp b11564 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-29591b091d",
+    "title": "llama.cpp b11563",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11563",
+    "source": "github",
+    "published_at": "2026-10-12T06:38:24Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11563",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9389,
+      "age_h": 4.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> ggml: Change default visibility of symbols to hidden (#30014) See discussion in #29997. This prevents a handful of internal symbols leaking via GGML_API. </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/54949054> **m",
+    "why_now": "Shipped: ggml-org/llama.cpp b11563 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-942eb3765a",
+    "title": "Mistral releases open-weight Arabic realtime STT and dialect classifier",
+    "url": "https://huggingface.co/collections/mistralai/mistral-mtnra",
+    "source": "hn",
+    "published_at": "2026-10-12T08:04:19Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9585,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 3 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-bde4d20fe3",
+    "title": "Dgxtop v2: A Terminal Monitor for Nvidia GPUs on Linux and DGX Spark",
+    "url": "https://dennysora.me/en/projects/tools/dgxtop/",
+    "source": "hn",
+    "published_at": "2026-10-12T08:13:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9605,
+      "age_h": 2.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 3 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-5b0b945970",
+    "title": "Ask HN: How do swarms of AI agents work?",
+    "url": "https://news.ycombinator.com/item?id=50047180",
+    "source": "hn",
+    "published_at": "2026-10-11T19:57:45Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 5,
+      "signal": 0.362,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.357
+      },
+      "decay": 0.8047,
+      "age_h": 15.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:agents",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Andrej Karpathy posted about the growing gap in how people experience AI:<p>~75% have barely used LLMs ~20% use them casually ~0.2% use frontier models professionally for math and code ~0.00006% have access to frontier systems internally<p>He writes:<p>&quot;And finally we get to the ~5,000 people (",
+    "why_now": "Measured: 7 points, 5 comments on HN, 15 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-2a0658ad72",
+    "title": "Show HN: EpochGo - Local-first multi-agent AutoML on Ollama ($0 API costs)",
+    "url": "https://github.com/AryanDinakaran/EpochGo",
+    "source": "hn",
+    "published_at": "2026-10-12T10:20:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9903,
+      "age_h": 0.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 1 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-312a96eb78",
+    "title": "Operation Cheepseek Phase 3: $80 of usage for DeepSeek v4.1 Flash",
+    "url": "https://twitter.com/opencode/status/2109573342584058065",
+    "source": "hn",
+    "published_at": "2026-10-12T10:14:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9889,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 1 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-dc04815f10",
+    "title": "Qwen 3.8 27B: Taiwan Pilled",
+    "url": "https://huggingface.co/noisebridge/qwen3.8-27b-taiwan-pilled",
+    "source": "hn",
+    "published_at": "2026-10-11T19:42:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8018,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d668d03e3a",
+    "title": "Show HN: CLI-Dispatch - Delegate Claude Code Tasks to Codex, Gemini, DeepSeek",
+    "url": "https://github.com/rbinar/cli-dispatch",
+    "source": "hn",
+    "published_at": "2026-10-11T19:03:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7943,
+      "age_h": 15.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Gemini",
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d6edea3290",
+    "title": "Ask HN: Is there any defense against LLM-based reverse engineering?",
+    "url": "https://news.ycombinator.com/item?id=50045579",
+    "source": "hn",
+    "published_at": "2026-10-11T17:27:00Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 8,
+      "signal": 0.301,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.438
+      },
+      "decay": 0.776,
+      "age_h": 17.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Recent news headlines [1] about LLM-based reverse engineering make it seem that anyone with a monthly subscription is capable of translating any executable into an equivalent source code representation.<p>If this is true, then how can one guard against having their source code essentially unveiled w",
+    "why_now": "Shipped: 3 points, 8 comments on HN, 18 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-b94448a899",
+    "title": "Ask HN: Can we discourage Show HNs that \"ship the first draft\"",
+    "url": "https://news.ycombinator.com/item?id=50049991",
+    "source": "hn",
+    "published_at": "2026-10-12T01:03:56Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.8662,
+      "age_h": 9.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Agents are here to stay - so slop is too. Unfortunately it&#x27;s easy to vibe a plausible thing for A Show HN, so (some, not all) Show HNs demonstrate only the creator&#x27;s ability to ask agents for a thing. Shipping a first draft (instead of refining it into something only you could&#x27;ve done",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 10 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-f7f2eda947",
+    "title": "Fetch transformers, HF download etc. via Torrent with uv run pirateface",
+    "url": "https://github.com/pirateface/pirateface_hub",
+    "source": "hn",
+    "published_at": "2026-10-12T07:18:13Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9479,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:transformer",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-6328dd394d",
+    "title": "What broke when an LLM read 9k pages of German election programs",
+    "url": "https://parteiprogramm.com/en",
+    "source": "hn",
+    "published_at": "2026-10-11T17:01:20Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7712,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 3 points, 1 comments on HN, 18 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-97632a8241",
+    "title": "Measuring the Depth of LLM Unlearning via Activation Patching",
+    "url": "https://gnueaj.github.io/unlearning-depth-score/",
+    "source": "hn",
+    "published_at": "2026-10-11T16:42:16Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7677,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 3 points, 0 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-9a6310419c",
+    "title": "The Universal LLM Server",
+    "url": "https://zml.ai/llmd/",
+    "source": "hn",
+    "published_at": "2026-10-11T21:03:35Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8176,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f9fb077b54",
+    "title": "Driving directions from LLM memory",
+    "url": "https://fig.blue/posts/directions-from-memory/",
+    "source": "hn",
+    "published_at": "2026-10-11T20:11:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8073,
+      "age_h": 14.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-cb523a199a",
+    "title": "Share one live stream across multiple widgets",
+    "url": "https://github.com/akshar07/llm-coalesce",
+    "source": "hn",
+    "published_at": "2026-10-11T16:59:52Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.771,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f624ccac01",
+    "title": "Show HN: An open source AI leaderboard of the best models your machine can run",
+    "url": "https://whatmodel.sh",
+    "source": "hn",
+    "published_at": "2026-10-12T09:18:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9758,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:gpu",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi everyone, I made whatmodel. It&#x27;s a simple site that can be visited in the browser or used from the terminal via a:<p>curl whatmodel.sh<p>To use it,<p>1. Enter your RAM and GPU<p>2. See what models you can run locally with its rank and the command to run it<p>3. Compare them with API models o",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-07674d1278",
+    "title": "Show HN: Running EmbeddingGemma2 on the Browser",
+    "url": "https://searchyourcollection.com/examples",
+    "source": "hn",
+    "published_at": "2026-10-11T14:46:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7466,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:embedding",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "During this summer I wanted to start a side project, and I got the idea of embedding image search directly on your browser. This wasn&#x27;t a new idea for me as i had built it at work as a small internal tool for me to search the company icons semantically instead of scrolling in the company deck.<",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-147c02b9a1",
+    "title": "Show HN: Korosta - Remember and highlight job postings you've seen",
+    "url": "https://chromewebstore.google.com/detail/korosta/dhpnogbefakbfmbihmjkgicbelndidif",
+    "source": "hn",
+    "published_at": "2026-10-11T14:35:10Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7446,
+      "age_h": 20.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:local model",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "# What is and whats not<p>Korosta is a privacy-first user-customizable tool to highlight job postings based on how frequent are those, and your ratings: * how often the job postings appeared to the user -&gt; fade repeatedly seen job postings * learns from your ratings with a simple local model -&gt",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-15b33cd13f",
+    "title": "Ask HN: Open-source model weights on bluray drives, anyone?",
+    "url": "https://news.ycombinator.com/item?id=50043254",
+    "source": "hn",
+    "published_at": "2026-10-11T13:45:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7358,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-source model",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "do people want it? it sounds cools to me lol",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-1abdf52d45",
+    "title": "Cloudflare/clef",
+    "url": "https://huggingface.co/Cloudflare/clef",
+    "source": "hf",
+    "published_at": "2026-09-30T21:15:35Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 2059,
+      "downloads": 15064,
+      "trendingScore": 621.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.923,
+      "signal_parts": {
+        "trending": 0.846,
+        "likes": 1.0,
+        "downloads": 0.696
+      },
+      "decay": 0.05,
+      "age_h": 277.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 2.1k likes, 15.1k downloads, trending score 621, created 2026-09-30",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 2.1k likes, 15.1k downloads, trending score 621, 12 d ago",
+    "score": 4
+  },
+  {
+    "id": "hf-da99a1199a",
+    "title": "Cloudflare/clef-flash",
+    "url": "https://huggingface.co/Cloudflare/clef-flash",
+    "source": "hf",
+    "published_at": "2026-09-30T21:15:36Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 774,
+      "downloads": 23285,
+      "trendingScore": 249.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.845,
+      "signal_parts": {
+        "trending": 0.726,
+        "likes": 0.963,
+        "downloads": 0.728
+      },
+      "decay": 0.05,
+      "age_h": 277.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 774 likes, 23.3k downloads, trending score 249, created 2026-09-30",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 774 likes, 23.3k downloads, trending score 249, 12 d ago",
+    "score": 3
+  }
+]
