@@ -2,14 +2,14 @@
 slug: 2026-10-11-lora-over-gguf-fine-tune-qwen3
 workspace: shorts
 title: "LoRA over GGUF: fine-tune Qwen3.8-Flash-Next in 40GB"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-11
-updated: "2026-10-11T11:08:30Z"
+updated: "2026-10-12T13:35:09Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format smooth-explainer by fit: a worked example from GGUF base to trained adapter carried the whole way; value types EQUIPS + TEACHES locked.
 
 ## Build journal
-
+- 2026-10-12T13:35:09Z 2026-10-12T13:35:09Z expired: not from today's picks (2026-10-12); the factory carries no backlog
