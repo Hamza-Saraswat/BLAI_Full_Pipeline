@@ -2,14 +2,14 @@
 slug: 2026-10-12-ai-agent-swarms-on-ollama-how
 workspace: shorts
 title: "AI agent swarms on Ollama, explained"
-status: review
+status: approved
 pillar: explainer
 structure: myth-bust
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-12
-updated: "2026-10-12T13:05:52Z"
+updated: "2026-10-12T14:13:51Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-12T13:05:55Z 07-render ok 115.37s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 210
 - 2026-10-12T13:05:55Z 07-render ok 2053s
 - 2026-10-12T13:05:57Z build done, status review
+- 2026-10-12T14:13:51Z telegram approve (approved_at 2026-10-12T14:13:51Z)
