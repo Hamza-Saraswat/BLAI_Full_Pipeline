@@ -2,8 +2,9 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 title: "Sandbox an AI agent on your Mac: Airlock"
 published_slot: "2026-10-13T11:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=z46qGIL1Cds"
 blotato_post_id: f1de4a81-7dc9-4c80-8c9a-5db1efc00e12
+updated: "2026-10-13T16:03:10Z"
 ---
 # Sandbox an AI agent on your Mac: Airlock
 

@@ -2,21 +2,21 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Sandbox an AI agent on your Mac: Airlock"
-status: scheduled
+status: published
 pillar: enterprise-privacy
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T14:51:11Z"
+updated: "2026-10-13T16:03:10Z"
 publish_slot: "2026-10-13T11:00:00-05:00"
 seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=z46qGIL1Cds"
 blotato_post_id: f1de4a81-7dc9-4c80-8c9a-5db1efc00e12
 ---
 # Airlock: see what your AI agent touches
@@ -46,3 +46,4 @@ blotato_post_id: f1de4a81-7dc9-4c80-8c9a-5db1efc00e12
 - 2026-10-13T12:27:50Z build done, status review
 - 2026-10-13T14:51:06Z telegram approve (approved_at 2026-10-13T14:51:06Z)
 - 2026-10-13T14:51:12Z 08-publish ok 2s
+- 2026-10-13T16:03:10Z published https://www.youtube.com/watch?v=z46qGIL1Cds
