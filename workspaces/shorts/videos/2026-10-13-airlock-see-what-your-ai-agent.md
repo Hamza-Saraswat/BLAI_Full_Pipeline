@@ -2,14 +2,14 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Sandbox an AI agent on your Mac: Airlock"
-status: review
+status: approved
 pillar: enterprise-privacy
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T12:27:45Z"
+updated: "2026-10-13T14:51:06Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-13T12:27:48Z 07-render ok 38.77s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 215
 - 2026-10-13T12:27:48Z 07-render ok 729s
 - 2026-10-13T12:27:50Z build done, status review
+- 2026-10-13T14:51:06Z telegram approve (approved_at 2026-10-13T14:51:06Z)
