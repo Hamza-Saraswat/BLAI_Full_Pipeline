@@ -1,0 +1,106 @@
+{
+ "slug": "2026-10-13-airlock-see-what-your-ai-agent",
+ "topic": "Sandbox your AI agent and see what it touches (Airlock)",
+ "title": "Airlock: see what your AI agent touches",
+ "description": "Airlock sandbox for AI agents: run Claude Code or Codex in a VM and watch every file it touches. You'll learn how to sandbox an AI agent on your Mac tonight. Full how-to in the description. (Narration is AI-generated.)",
+ "hashtags": [
+  "#Airlock",
+  "#ClaudeCode",
+  "#AIAgents"
+ ],
+ "hook_text": "He caged his AI agent.",
+ "hook_candidates": [
+  "Forty allow-clicks. You stopped reading.",
+  "He caged his AI agent.",
+  "Your agent's allow button is blind.",
+  "Airlock watches what your agent touches.",
+  "The curl hid inside the build script.",
+  "Two VMs. Zero router access.",
+  "Airlock: a fence with a window.",
+  "Your agent, but on a leash.",
+  "macOS 26. Your agent. Contained.",
+  "Stop trusting. Start watching."
+ ],
+ "style_pack": "signal",
+ "script_format": "classic",
+ "structure": "news-react-so-what",
+ "value_types": "EQUIPS,REFRAMES",
+ "target_duration_s": 35,
+ "narration_full": "Yesterday, Simon Maddox caged his Claude and Codex agents with Airlock. His free Mac app is the cage. You click allow on every prompt, and the box only ever sees the command. Never what the script did. By allow-click forty, you're not reading. Airlock runs your agent in a virtual machine, a second computer inside your Mac, on a project copy. A live timeline lists every process, file and server. Changes return as a diff, a before-and-after per file you tick. Catch: a cage, not a conscience. Public servers stay reachable. Tonight, on Apple silicon with macOS twenty-six or later, a brew install gets you airlock run claude. Watch before you tick.",
+ "music_mood": "curious-tech",
+ "scenes": [
+  {
+   "id": "s1",
+   "role": "hook",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Yesterday, Simon Maddox caged his Claude and Codex agents with Airlock. His free Mac app is the cage.",
+   "on_screen_text": "He caged his AI agent. | AIRLOCK: free, day one",
+   "visual_brief": "Frame 1: matte black frame, thin amber cage bars behind a giant centered headline 'He caged his AI agent.' in signal amber, fully legible immediately. At 0.35 s the bars rise-in-place a few pixels and the headline scales from 0.96 to 1.0 as narration says 'caged the AI agents'. When 'His free app, Airlock' lands, a small tag 'AIRLOCK: free, day one' fades in beneath. At most two elements animating; first and last 8 frames locked. Motion onset at 0.4 s: the cage bars draw on over the headline.",
+   "est_duration_s": 6.2
+  },
+  {
+   "id": "s2",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "You click allow on every prompt, and the box only ever sees the command. Never what the script did. By allow-click forty, you're not reading.",
+   "on_screen_text": "prompt shows the command only | the script did more | 40 allow-clicks, unread",
+   "visual_brief": "On 'You click allow', a terminal-style allow prompt fades in with one command line highlighted. On 'never what the script did', a dimmed second line fades in below it, marked as the part the prompt never showed. On 'allow-click forty', a giant amber '40' scales in at 0.3 s or later with the caption 'allow-clicks, unread'. Entrances are fade and scale only, never edge slides; two elements animate at most; hold the final 8 frames still.",
+   "est_duration_s": 8.6
+  },
+  {
+   "id": "s3",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "timeline",
+   "narration": "Airlock runs your agent in a virtual machine, a second computer inside your Mac, on a project copy. A live timeline lists every process, file and server.",
+   "on_screen_text": "a second computer inside your Mac | project copy, no network | every process, file, server live | curl in a script, shown",
+   "visual_brief": "On 'a virtual machine', a rounded second-computer outline scales in beside a Mac outline, holding a folder labeled 'project copy' with a crossed-out network icon. On 'A live timeline lists every process, file and server', a horizontal timeline rises-in-place and three rows light in turn: process, file, server, while a 'curl' row pulses amber once beside the command that launched it. Motion onsets stay at 0.3 s or later; at most two animations overlap; last 8 frames frozen.",
+   "est_duration_s": 9.3
+  },
+  {
+   "id": "s4",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "split-compare",
+   "narration": "Changes return as a diff, a before-and-after per file you tick. Catch: a cage, not a conscience. Public servers stay reachable.",
+   "on_screen_text": "diff per file, tick to apply | build scripts flagged: they run later | cage, not conscience | public servers stay reachable",
+   "visual_brief": "On 'Changes return as a diff', a per-file list fades in, each row a before-and-after with a checkbox; one checkbox ticks as narration says 'you tick', and a build-script row carries an amber flag. On 'Catch: a cage, not a conscience', the frame splits: left keeps the diff under a small cage glyph, right shows an open door labeled 'public servers stay reachable'. Fades only, onset at 0.3 s or later; the final composition holds.",
+   "est_duration_s": 7.2
+  },
+  {
+   "id": "s5",
+   "role": "payoff_close",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Tonight, on Apple silicon with macOS twenty-six or later, a brew install gets you airlock run claude. Watch before you tick.",
+   "on_screen_text": "Apple silicon, macOS 26+ | brew install --cask simonmaddox/tap/airlock | airlock run claude | watch before you tick | AIRLOCK",
+   "visual_brief": "On 'Apple silicon with macOS twenty-six', a requirement chip fades in reading 'Apple silicon, macOS 26+'. On 'a brew install', a terminal card fades in with the full cask command; 'airlock run claude' fades in as a second line on 'gets you airlock run claude'. On 'Watch before you tick', a timeline row and a ticked checkbox appear side by side. The card then fades out and the AIRLOCK wordmark scales in, settling center and holding through the last 8 frames.",
+   "est_duration_s": 7.2
+  }
+ ],
+ "notes_for_review": "Confirm the spoken shorthand 'a brew install' is acceptable with the full cask command shown on screen, and that 'By allow-click forty' voices naturally. Total is 113 spoken words, near the cap, so trim there first if pacing runs long.",
+ "tags": [
+  "airlock",
+  "sandbox ai agent",
+  "ai agent sandbox",
+  "claude code sandbox",
+  "codex sandbox",
+  "sandbox your ai agent",
+  "airlock mac",
+  "simon maddox airlock",
+  "ai coding agent safety",
+  "claude code permissions",
+  "macos virtual machine",
+  "run claude code in a vm",
+  "docker sandboxes",
+  "e2b sandbox",
+  "local ai agents",
+  "build local ai",
+  "ai agent security",
+  "brew install airlock",
+  "approval fatigue",
+  "agent containment"
+ ]
+}

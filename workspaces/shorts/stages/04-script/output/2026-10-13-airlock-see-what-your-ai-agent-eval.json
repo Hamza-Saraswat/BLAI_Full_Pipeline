@@ -1,0 +1,523 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-13T12:08:35+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-13-airlock-see-what-your-ai-agent-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-13-airlock-see-what-your-ai-agent-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "community": 1,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 6,
+    "entities_total": 19,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "claude.com",
+      "docker.com",
+      "sorrel.systems",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.333,
+      "detail": [
+        {
+          "label": "Airlock minimum macOS version",
+          "value": "macOS 26 or later",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "26",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "concurrent macOS virtual machines Apple allows (Airlock session ceiling)",
+          "value": "two macOS virtual machines at a time",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Airlock current version (Homebrew cask, seen 2026-10-13)",
+          "value": "1.0.1 (202610130921)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "one",
+          "scene_ids": [
+            "s1"
+          ]
+        },
+        {
+          "label": "E2B Pro plan price",
+          "value": "$150 /month",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "E2B Hobby tier concurrent sandboxes",
+          "value": "20 concurrent sandboxes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Docker Sandboxes cloud Micro sandbox price (1 vCPU, 2 GB)",
+          "value": "$0.07 per hour",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 19,
+      "found_count": 7,
+      "score": 0.368,
+      "found": [
+        "Airlock",
+        "Claude",
+        "macOS",
+        "Codex",
+        "Apple",
+        "macOS 26",
+        "Claude and Codex"
+      ],
+      "missing": [
+        "Claude Code",
+        "Anthropic",
+        "Docker",
+        "OpenAI",
+        "DMG",
+        "NAS",
+        "Linux and WSL2",
+        "WSL2",
+        "Linux",
+        "Simon Maddox of England",
+        "Hacker News",
+        "England"
+      ],
+      "top2": [
+        "Airlock",
+        "Claude"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Airlock",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Claude",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Claude Code",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "macOS",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Codex",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Anthropic",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apple",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Docker",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "macOS 26",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DMG",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NAS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux and WSL2",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "WSL2",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Simon Maddox of England",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hacker News",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude and Codex",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "England",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Airlock",
+        "entity:Claude",
+        "entity:Codex",
+        "entity:Claude and Codex"
+      ],
+      "hook_text": "He caged his AI agent.",
+      "first_sentence": "Yesterday, Simon Maddox caged his Claude and Codex agents with Airlock."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:1.0.1 (202610130921)",
+            "entity:Airlock",
+            "entity:Claude",
+            "entity:Codex",
+            "entity:Claude and Codex"
+          ],
+          "narration": "Yesterday, Simon Maddox caged his Claude and Codex agents with Airlock. His free Mac app is the cage."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": false,
+          "hits": [],
+          "narration": "You click allow on every prompt, and the box only ever sees the command. Never what the script did. By allow-click forty, you're not reading."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "entity:Airlock"
+          ],
+          "narration": "Airlock runs your agent in a virtual machine, a second computer inside your Mac, on a project copy. A live timeline lists every process, file and server."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "glossary:diff"
+          ],
+          "narration": "Changes return as a diff, a before-and-after per file you tick. Catch: a cage, not a conscience. Public servers stay reachable."
+        },
+        {
+          "id": "s5",
+          "role": "payoff_close",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "num:macOS 26 or later",
+            "entity:Airlock",
+            "entity:Claude",
+            "entity:macOS",
+            "entity:Apple",
+            "entity:macOS 26"
+          ],
+          "narration": "Tonight, on Apple silicon with macOS twenty-six or later, a brew install gets you airlock run claude. Watch before you tick."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.6,
+      "words": 116,
+      "sentences": 12,
+      "est_speech_s": 40.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "Yesterday, Simon Maddox caged his Claude and Codex agents with Airlock. His free Mac app is the cage. You click allow on every prompt, and the box only ever sees the command. Never what the script did. By allow-click forty, you're not reading. Airlock runs your agent in a virtual machine, a second computer inside your Mac, on a project copy. A live timeline lists every process, file and server. Changes return as a diff, a before-and-after per file you tick. Catch: a cage, not a conscience. Public servers stay reachable. Tonight, on Apple silicon with macOS twenty-six or later, a brew install gets you airlock run claude. Watch before you tick.",
+    "on_screen": "He caged his AI agent. | He caged his AI agent. | AIRLOCK: free, day one | prompt shows the command only | the script did more | 40 allow-clicks, unread | a second computer inside your Mac | project copy, no network | every process, file, server live | curl in a script, shown | diff per file, tick to apply | build scripts flagged: they run later | cage, not conscience | public servers stay reachable | Apple silicon, macOS 26+ | brew install --cask simonmaddox/tap/airlock | airlock run claude | watch before you tick | AIRLOCK"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-13-airlock-see-what-your-ai-agent-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 5.6,
+        "words": 116,
+        "est_speech_s": 40.0,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 5.6 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-13-airlock-see-what-your-ai-agent-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 6,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.368,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Airlock",
+          "Claude"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Airlock",
+          "entity:Claude",
+          "entity:Codex",
+          "entity:Claude and Codex"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

@@ -2,14 +2,14 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Airlock: see what your AI agent touches"
-status: researched
+status: scripted
 pillar: enterprise-privacy
-structure: ""
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T11:42:15Z"
+updated: "2026-10-13T12:08:42Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-13-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-13-ideas]]
 - Research: [[stages/03-research/output/2026-10-13-airlock-see-what-your-ai-agent-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-13-airlock-see-what-your-ai-agent-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,4 +37,5 @@ blotato_post_id: ""
 - Rotation: yesterday ran explainer + news-react, so both blocked lanes (MiniCPM 94.5, MEF 74.6, Boole 59.2) were skipped per selection-rules.md; Airlock vs SonicBoom differ in lane and name products.
 
 ## Build journal
+- 04-script: two blind Kimi drafts (how-to-three-moves vs news-react-so-what); judge picked B 21/16, no grafts. Gates on winner: validator 0/0, eval 9/9, variety clean, normalizer 0 changes. Style pack signal (terminal excluded by rotation). Ledger entry 38 recorded.
 
