@@ -2,14 +2,14 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Sandbox an AI agent on your Mac: Airlock"
-status: building
+status: review
 pillar: enterprise-privacy
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T12:13:10Z"
+updated: "2026-10-13T12:27:45Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-13-airlock-see-what-your-ai-agent-script]]
 - Package: [[stages/05-package/output/2026-10-13-airlock-see-what-your-ai-agent-package]]
 - Voice: [[stages/06-voice/output/2026-10-13-airlock-see-what-your-ai-agent-narration|narration sidecars]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-13-airlock-see-what-your-ai-agent-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 04-script: two blind Kimi drafts (how-to-three-moves vs news-react-so-what); judge picked B 21/16, no grafts. Gates on winner: validator 0/0, eval 9/9, variety clean, normalizer 0 changes. Style pack signal (terminal excluded by rotation). Ledger entry 38 recorded.
 - 2026-10-13T12:13:10Z build start on gn100-83c4
 - 2026-10-13T12:15:37Z 06-voice ok 144s
+- 2026-10-13T12:27:48Z 07-render ok 38.77s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 215
+- 2026-10-13T12:27:48Z 07-render ok 729s
