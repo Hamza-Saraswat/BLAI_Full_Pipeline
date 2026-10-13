@@ -2,14 +2,14 @@
 slug: 2026-10-12-cloudflare-clef-open-weight-vi
 workspace: shorts
 title: "Cloudflare Clef: open-weight vision model runs locally"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-12
-updated: "2026-10-12T11:07:02Z"
+updated: "2026-10-13T13:35:48Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Why: open weights + 2.1k HF likes in 12 d gives a concrete "runs on your hardware" question; classic band fits one fact plus one consequence.
 
 ## Build journal
-
+- 2026-10-13T13:35:48Z 2026-10-13T13:35:48Z expired: not from today's picks (2026-10-13); the factory carries no backlog
