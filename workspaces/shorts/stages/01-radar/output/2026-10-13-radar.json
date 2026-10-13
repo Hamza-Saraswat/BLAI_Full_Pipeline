@@ -1,0 +1,961 @@
+[
+  {
+    "id": "github-d83655c9fb",
+    "title": "unsloth v0.1.906-beta: Browser Use + Qwen-Image-2.1-Turbo",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+    "source": "github",
+    "published_at": "2026-10-12T14:17:13Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.906-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7411,
+      "age_h": 20.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen"
+    ],
+    "summary": "Models can now use the browser in Unsloth. Turn on Browser use and your model can open pages, read them, click, type and scroll while you watch. Qwen-Image-2.1-Turbo is here too, making images in just 8 steps. Also included: text-diffusion LLM training, faster MoE GGUFs and speculative decoding on M",
+    "why_now": "Shipped: unslothai/unsloth v0.1.906-beta released, 21 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-95b68c8a0d",
+    "title": "llama.cpp b11583",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11583",
+    "source": "github",
+    "published_at": "2026-10-13T09:34:36Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11583",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9792,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> graph : avoid reallocations in the \"no cache\" path (#30439) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/55354972> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/dow",
+    "why_now": "Shipped: ggml-org/llama.cpp b11583 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-3e2bdea3cc",
+    "title": "llama.cpp b11582",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11582",
+    "source": "github",
+    "published_at": "2026-10-13T08:29:12Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11582",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9639,
+      "age_h": 2.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> ggml-zdnn : introduce Q8_0 mat mul (#29836) * ggml-zdnn: initial prototype of q8_0 matmul Signed-off-by: Aaron Teo <aaron.teo1@ibm.com> * docs: update zdnn docs Signed-off-by: Aaron Teo <aaron.teo1@ibm.com> --------- Signed-off-by: Aaron Teo <aaron.teo1@ibm.com> </details> **Website:*",
+    "why_now": "Shipped: ggml-org/llama.cpp b11582 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-dea9ac9e15",
+    "title": "llama.cpp b11581",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11581",
+    "source": "github",
+    "published_at": "2026-10-13T07:54:11Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11581",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9558,
+      "age_h": 3.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Qwen"
+    ],
+    "summary": "<details open> models : remove redundant ggml_cont calls now supported by all unary kernels (#30198) * models: remove redundant ggml_cont calls now supported by CUDA unary kernels * models: restore cont_2d after sigmoid for broadcast mul, clean dflash cont * Update src/models/qwen3next.cpp Co-author",
+    "why_now": "Shipped: ggml-org/llama.cpp b11581 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-324d401eae",
+    "title": "ollama v0.40.4-rc1: v0.40.4",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc1",
+    "source": "github",
+    "published_at": "2026-10-12T19:00:12Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.4-rc1",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.7934,
+      "age_h": 16.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Llama",
+      "llama.cpp",
+      "MLX"
+    ],
+    "summary": "## What's Changed * llama: update llama.cpp to b11521 for decision models and EmbeddingGemma 2 by @jmorganca in https://github.com/ollama/ollama/pull/18917 * server: reuse verified manifests and loaded models in inference routes by @dhiltgen in https://github.com/ollama/ollama/pull/18947 * mlx: comp",
+    "why_now": "Shipped: ollama/ollama v0.40.4-rc1 released (pre-release), 16 h ago",
+    "score": 49
+  },
+  {
+    "id": "hn-d2298457f1",
+    "title": "Show HN: Opus 5.5 made a fully featured Figma clone in 3 hours / 8 prompts",
+    "url": "https://www.mana.space/home/rZfbotNWAXegQypmpkzaAPFC6Mp1/Apps/Figma%20Next%20Launch",
+    "source": "hn",
+    "published_at": "2026-10-12T18:03:56Z",
+    "signals": {
+      "points": 39,
+      "num_comments": 43,
+      "signal": 0.679,
+      "signal_parts": {
+        "points": 0.646,
+        "comments": 0.754
+      },
+      "decay": 0.7827,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:benchmark",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I think a chasm has been crossed. Opus 5.5 few shotted a fully working Figma for me. In the past year I have been trying to benchmark vibe coded apps and see how good they get and this week it did it with very very little guidance from me. I basically just told it reach feature parity.<p>Prior to th",
+    "why_now": "Shipped: 39 points, 43 comments on HN, 17 h ago",
+    "score": 45
+  },
+  {
+    "id": "hn-fd228cdcb5",
+    "title": "Nvidia accused of trying to cut a deal with Anna's Archive",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-accused-of-trying-to-cut-a-deal-with-annas-archive-for-high-speed-access-to-the-massive-pirated-book-haul-allegedly-chased-stolen-data-to-fuel-its-llms",
+    "source": "hn",
+    "published_at": "2026-10-12T19:57:38Z",
+    "signals": {
+      "points": 19,
+      "num_comments": 3,
+      "signal": 0.45,
+      "signal_parts": {
+        "points": 0.525,
+        "comments": 0.276
+      },
+      "decay": 0.8044,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 19 points, 3 comments on HN, 15 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-374e5a93ea",
+    "title": "Show HN: MEF LLM Studio - Learn how LLMs generate text, token by token",
+    "url": "https://www.mef-llm-studio.com/en/",
+    "source": "hn",
+    "published_at": "2026-10-13T02:24:46Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.883,
+      "age_h": 8.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:LM Studio",
+      "group": "how-to"
+    },
+    "products": [
+      "LM Studio"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 9 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-c4976a264a",
+    "title": "Show HN: I built Airlock, to sandbox your AI agent and know what it's doing",
+    "url": "https://airlock.sorrel.systems",
+    "source": "hn",
+    "published_at": "2026-10-12T11:10:06Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.7085,
+      "age_h": 23.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I didn&#x27;t like that Claude and codex effectively have the ability to do anything they want on my laptop and my local network - we&#x27;ve all read the horror stories of files accidentally being deleted - and while their permission classifier is getting better, it still requires a lot of trust. S",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 24 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-a9ca69f8c1",
+    "title": "SonicBoom - llama.cpp's own kernels, 14% faster decode via a graph compiler",
+    "url": "https://github.com/hardenedlinux/sonicboom",
+    "source": "hn",
+    "published_at": "2026-10-13T09:40:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9806,
+      "age_h": 1.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 1 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-25fc2d7b71",
+    "title": "How to Choose the Best Local LLM Basis MacBook RAM Size",
+    "url": "https://medium.com/data-science-collective/best-local-llms-for-your-mac-in-october-2026-24gb-to-128gb-picks-7d6f32819dd5",
+    "source": "hn",
+    "published_at": "2026-10-13T09:04:14Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9721,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:MacBook",
+      "group": "how-to"
+    },
+    "products": [
+      "MacBook"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-ef2113516e",
+    "title": "Show HN: Boole-1.7B, a 1-bit LLM that outperforms Bonsai-1.7B",
+    "url": "https://precisionnumerics.ai/blog/boole-1p7b",
+    "source": "hn",
+    "published_at": "2026-10-12T15:49:48Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7578,
+      "age_h": 19.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "comparison"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "Introducing Boole-1.7B, a 1-bit version of Qwen3-1.7B.<p>Boole-1.7B retains 85.9% of BF16 performance using 247MB (13.9x smaller). It outperforms 1-bit Bonsai-1.7B and similar-sized LFM models, and nearly matches 1.58-bit Bonsai-1.7B.<p>It’s intended for low-latency tasks using English and non-think",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 19 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-ceaebbbeef",
+    "title": "A shared, verifiable fix database that AI agents read and write themselves",
+    "url": "https://cuddly-guide-4q6q54rg76653jvxj-8000.app.github.dev/llms.txt",
+    "source": "hn",
+    "published_at": "2026-10-12T23:22:00Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 1,
+      "signal": 0.324,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.138
+      },
+      "decay": 0.845,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 9 points, 1 comments on HN, 12 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-b4d6b4ab4a",
+    "title": "QwenGyre: An Elastic RL Framework for Training XLong-Horizon Agents",
+    "url": "https://arxiv.org/abs/2609.33848",
+    "source": "hn",
+    "published_at": "2026-10-12T13:36:10Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7339,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-0ff2b37277",
+    "title": "Ask HN: What is your usecase for ONNX model format?",
+    "url": "https://news.ycombinator.com/item?id=50063110",
+    "source": "hn",
+    "published_at": "2026-10-12T21:10:19Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8186,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GGUF",
+      "group": "explainer"
+    },
+    "products": [
+      "GGUF"
+    ],
+    "summary": "Seems like GGUF has become the most popular format (at least for LLMs). Curious why and what for people are using ONNX in 2026. Either you personally or past&#x2F;present employer",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 14 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-ed2557f9ff",
+    "title": "Coinbase's own model based on Qwen",
+    "url": "https://www.coinbase.com/blog/part-one-how-coinbase-built-evaluated-and-post-trained-a-fraud-agent",
+    "source": "hn",
+    "published_at": "2026-10-12T17:39:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7781,
+      "age_h": 17.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d889c60f34",
+    "title": "Show HN: Reflex - A GGUF-native Rust/CUDA engine for scale-to-zero LLM routing",
+    "url": "https://console.runpod.io/hub/listing/lateos-ai/reflex",
+    "source": "hn",
+    "published_at": "2026-10-12T16:05:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7606,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "CUDA"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-e9fecc0b00",
+    "title": "Show HN: E2E - Open-source agentic testing framework for web, iOS and Android",
+    "url": "https://github.com/tester-army/e2e",
+    "source": "hn",
+    "published_at": "2026-10-12T15:41:29Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 1,
+      "signal": 0.311,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.138
+      },
+      "decay": 0.7563,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, I’m Oskar, one of the co-founders of TesterArmy. We built an agentic testing framework for web and mobile because traditional testing frameworks can’t keep up with the pace of how we build software today.<p>e2e allows you to mix deterministic and agentic APIs in the same test. You can write",
+    "why_now": "Shipped: 8 points, 1 comments on HN, 19 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-bdf9768d74",
+    "title": "LLMs Broke Developer Education",
+    "url": "https://www.augmentedswe.com/p/ai-is-changing-developer-education",
+    "source": "hn",
+    "published_at": "2026-10-13T01:15:44Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.8684,
+      "age_h": 9.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 4 points, 1 comments on HN, 10 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-43409ec21d",
+    "title": "Ask HN: CAD for wood working with LLM support?",
+    "url": "https://news.ycombinator.com/item?id=50067325",
+    "source": "hn",
+    "published_at": "2026-10-13T05:54:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.9286,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I’m a hobbyist woodworker. I manually design simple things in Shapr3d with a lot of patience when I build things. I wonder in the time of LLMs if there is an effective way to accelerate the 3D model design using AI.. Anybody tried using AI to model wood projects? Any tools to recommend?",
+    "why_now": "Discussed: 2 points, 2 comments on HN, 5 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-c30962a3ef",
+    "title": "LLM Agents Can Easily Tamper with Their Own Traces",
+    "url": "https://arxiv.org/abs/2609.30266",
+    "source": "hn",
+    "published_at": "2026-10-13T05:00:05Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9166,
+      "age_h": 6.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 6 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-19b622f4d9",
+    "title": "Decentralize AI: Use Model torrents for your Python scripts",
+    "url": "https://twitter.com/thepirateface/status/2109691589954310152",
+    "source": "hn",
+    "published_at": "2026-10-12T19:29:04Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7989,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 16 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-80705e33de",
+    "title": "Looking at the Luddites from the Age of AI",
+    "url": "https://read.misalignedmag.com/looking-at-the-luddites-from-the-age-of-ai-8e5cd34475fc",
+    "source": "hn",
+    "published_at": "2026-10-12T15:01:17Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.749,
+      "age_h": 20.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 20 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c01843722f",
+    "title": "Llmtobinary - get an LLM to write machine code",
+    "url": "https://llmtobinary.com?hn",
+    "source": "hn",
+    "published_at": "2026-10-12T23:19:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8445,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 12 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-9c5b81c757",
+    "title": "LLM-inspired study sheds light on how brain cells encode the meaning of words",
+    "url": "https://medicalxpress.com/news/2026-10-llm-brain-cells-encode-words.html",
+    "source": "hn",
+    "published_at": "2026-10-13T10:43:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9955,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-39203c1704",
+    "title": "Show HN: We tested how 5 LLMs handle failed write actions (duplicate prevention)",
+    "url": "https://github.com/0xguenther/agent-write-path-runs",
+    "source": "hn",
+    "published_at": "2026-10-13T08:51:23Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9691,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-2429133a0a",
+    "title": "Show HN: Open Health Sync - Self-hosted API for wearable and health data",
+    "url": "https://github.com/soma-intelligence/open-health-sync",
+    "source": "hn",
+    "published_at": "2026-10-13T04:34:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9109,
+      "age_h": 6.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:self-host",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hf-2b2992191c",
+    "title": "openbmb/MiniCPM-V-4.7-35B-A3B",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+    "source": "hf",
+    "published_at": "2026-10-07T07:07:30Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 257,
+      "downloads": 630,
+      "trendingScore": 241.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.763,
+      "signal_parts": {
+        "trending": 0.722,
+        "likes": 0.804,
+        "downloads": 0.467
+      },
+      "decay": 0.1181,
+      "age_h": 147.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 257 likes, 630 downloads, trending score 241, created 2026-10-07",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 257 likes, 630 downloads, trending score 241, 6 d ago",
+    "score": 7
+  },
+  {
+    "id": "hn-2898cf56bb",
+    "title": "Show HN: Vibecheck - merge gate that checks you understand your AI-written code",
+    "url": "https://github.com/bhurghundii/vibecheck.dev",
+    "source": "hn",
+    "published_at": "2026-10-12T21:13:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8193,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "Good evening folks, I built Github merge gate which that checks whether developers understand their own code when they create a PR.<p>I kept getting sent PRs to review where it was obvious the author had pasted the ticket into an LLM and called it a day.<p>It&#x27;s self-hosted (so you can use it in",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 14 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b628360975",
+    "title": "Show HN: Guilds - Open-source inspectable multi-agents collaboration framework",
+    "url": "https://github.com/CigaleAI/guilds",
+    "source": "hn",
+    "published_at": "2026-10-11T14:11:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.5233,
+      "age_h": 44.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "Getting AI to handle long-running tasks reliably takes more than good prompts. There’s a lot of system design involved: figuring out how agents should work together, anticipating edge cases, and being able to debug and tune the system when things go wrong.<p>That’s why we built guilds.run.<p>The goa",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 45 h ago",
+    "score": 6
+  },
+  {
+    "id": "hf-8347050428",
+    "title": "openbmb/MiniCPM-V-4.7-1B",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B",
+    "source": "hf",
+    "published_at": "2026-10-06T17:40:13Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 156,
+      "downloads": 263,
+      "trendingScore": 148.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.695,
+      "signal_parts": {
+        "trending": 0.658,
+        "likes": 0.732,
+        "downloads": 0.404
+      },
+      "decay": 0.0973,
+      "age_h": 161.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 156 likes, 263 downloads, trending score 148, created 2026-10-06",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 156 likes, 263 downloads, trending score 148, 7 d ago",
+    "score": 5
+  },
+  {
+    "id": "hn-39384a7954",
+    "title": "Show HN: Atlas Runa - E2E AI-enhanced language learning",
+    "url": "https://atlasruna.com/",
+    "source": "hn",
+    "published_at": "2026-10-11T16:20:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.5399,
+      "age_h": 42.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! We&#x27;ve been working hard on Atlas Runa and it&#x27;s time to share it! We built it to target three key complementary aspects of learning a language: 1. Comprehensible input - Atlas Runa learns your lexicon and then tracks it, which lets us find comprehensible input for you. This works wel",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 43 h ago",
+    "score": 4
+  },
+  {
+    "id": "hf-2b2041c9e9",
+    "title": "Aleph-Alpha/Kolibri-1",
+    "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+    "source": "hf",
+    "published_at": "2026-10-02T05:54:02Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 921,
+      "downloads": 15335,
+      "trendingScore": 203.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.844,
+      "signal_parts": {
+        "trending": 0.7,
+        "likes": 0.988,
+        "downloads": 0.698
+      },
+      "decay": 0.05,
+      "age_h": 269.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 921 likes, 15.3k downloads, trending score 203, created 2026-10-02",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 921 likes, 15.3k downloads, trending score 203, 11 d ago",
+    "score": 3
+  }
+]
