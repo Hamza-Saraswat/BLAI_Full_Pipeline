@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
-title: "Airlock: see what your AI agent touches"
-status: scripted
+title: "Sandbox an AI agent on your Mac: Airlock"
+status: ready-to-build
 pillar: enterprise-privacy
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T12:08:42Z"
+updated: "2026-10-13T12:10:16Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-13-ideas]]
 - Research: [[stages/03-research/output/2026-10-13-airlock-see-what-your-ai-agent-brief]]
 - Script: [[stages/04-script/output/2026-10-13-airlock-see-what-your-ai-agent-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-13-airlock-see-what-your-ai-agent-package]]
+- Voice: [[stages/06-voice/output/2026-10-13-airlock-see-what-your-ai-agent-narration|narration sidecars]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -37,5 +37,6 @@ blotato_post_id: ""
 - Rotation: yesterday ran explainer + news-react, so both blocked lanes (MiniCPM 94.5, MEF 74.6, Boole 59.2) were skipped per selection-rules.md; Airlock vs SonicBoom differ in lane and name products.
 
 ## Build journal
+- 05-package: three titles (searchable chosen, keyword "sandbox ai agent" at char 1, 40 visible chars); rubric 8/8 rows, recorded 92; check_outputs clean after hub links filled. Checkpoint 05-3 unattended: kept the searchable title over the two intriguing variants because the keyword surface is search-heavy (depth 18, cloud-vendor gap).
 - 04-script: two blind Kimi drafts (how-to-three-moves vs news-react-so-what); judge picked B 21/16, no grafts. Gates on winner: validator 0/0, eval 9/9, variety clean, normalizer 0 changes. Style pack signal (terminal excluded by rotation). Ledger entry 38 recorded.
 
