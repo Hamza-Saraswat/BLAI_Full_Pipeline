@@ -2,14 +2,14 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Airlock: see what your AI agent touches"
-status: idea
+status: researched
 pillar: enterprise-privacy
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T11:08:24Z"
+updated: "2026-10-13T11:42:15Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-13-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-13-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-13-airlock-see-what-your-ai-agent-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Research: 9 sources (7 primary/docs), 10 claims, 6 key numbers; free macOS Apple-silicon app by Simon Maddox, brew cask install; honest limits on the site itself; has_process true (5 viewer steps). Checkpoint 03-2 unattended: angle kept as picked.
 - Picked: Airlock (enterprise-privacy, classic) -- leads the rotation-eligible field at opportunity 68.4; keyword "sandbox ai agent" depth 18 with a cloud-vendor gap.
 - Rotation: yesterday ran explainer + news-react, so both blocked lanes (MiniCPM 94.5, MEF 74.6, Boole 59.2) were skipped per selection-rules.md; Airlock vs SonicBoom differ in lane and name products.
 

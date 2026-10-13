@@ -1,0 +1,208 @@
+{
+  "slug": "2026-10-13-airlock-see-what-your-ai-agent",
+  "topic": "Sandbox your AI agent and see what it touches (Airlock)",
+  "generated_at": "2026-10-13T11:40:00Z",
+  "depth": "standard",
+  "thesis": "Stop clicking allow on your AI agent's fortieth prompt: run it in a disposable virtual machine that copies your project, logs every process it spawns, and hands you a per-file diff to accept or reject.",
+  "explanation_path": "The viewer starts where they already are: an agent in the terminal and an allow-click every time it asks. Establish why that gate fails before proposing anything -- the prompt only shows the command the agent typed, never what a build script does next, and attention is gone by the fortieth yes. With the problem felt, introduce the fence as an old idea applied to agents: a virtual machine the agent gets instead of your Mac, holding a copy of the project, so the worst case shrinks from your laptop to a disposable duplicate. Then deliver the half approval prompts never had: because Airlock observes from inside the virtual machine's operating system, it lists every process the agent spawned, every file it touched and every server it contacted, live, in one timeline -- the curl hidden inside a script appears next to the command that launched it. Show the return path: changes come back as a per-file diff you tick, with the dangerous categories (build scripts, git hooks, CI config) flagged because they execute on your Mac later. Close honestly before the landscape: containment is not trust -- public hosts stay reachable unless locked, and the model still calls Anthropic or OpenAI. Then place the move in the field: Docker Sandboxes does the virtual-machine trick across platforms and can burst to cloud, Claude Code and Codex ship built-in OS sandboxes that are off by default, and E2B rents cloud sandboxes by the hour -- so the Mac viewer can act tonight with one brew command, and the PC viewer knows which door is theirs.",
+  "claims": [
+    {
+      "claim": "Airlock runs Claude Code or Codex in a virtual machine on your Mac, works on a copy of your project, and you choose which of its changes to keep; it requires a Mac with Apple silicon running macOS 26 or later and installs from a DMG or with brew install --cask simonmaddox/tap/airlock.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Typing airlock run claude in a project folder opens Claude Code in your terminal as normal, with your CLAUDE.md, skills and memory, and the virtual machine cannot see your local network, so your router and NAS are out of reach.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Approval prompts only ever see the command the agent typed, not what the build script went on to do, and by the fortieth you are clicking yes without reading, so Airlock turns the prompts off and moves the agent somewhere the only thing of yours it can touch is a copy of your project.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Airlock watches from inside the virtual machine's operating system, so it sees every process rather than just the commands the agent typed: if the agent writes a script that calls curl, you see the curl, with files touched and servers talked to in the same timeline.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "When the agent is done you get every file it changed as a diff; you tick the ones you want applied and can undo them later, and build scripts, git hooks, CI config and the agent's own settings are flagged because they run on your Mac later.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Apple allows two macOS virtual machines at a time, so that is the limit on concurrent Airlock sessions.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Airlock's creator is Simon Maddox of England, UK, who wrote on Hacker News that Claude and Codex effectively have the ability to do anything they want on his laptop; the app is free, requires no account, and has no tracking or analytics.",
+      "source_url": "https://news.ycombinator.com/item?id=50054620",
+      "source_title": "Show HN: I built Airlock, to sandbox your AI agent and know what it's doing",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "The project is candid about limits: Airlock contains the agent, it does not make it trustworthy; sessions can reach public hosts unless you lock them down, so anything in the copy of your project could be sent somewhere, and model requests go to Anthropic or OpenAI as usual.",
+      "source_url": "https://airlock.sorrel.systems/",
+      "source_title": "Airlock: coding agents, kept contained",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Claude Code ships its own sandbox around shell commands, enforced by the operating system (Seatbelt on macOS, bubblewrap on Linux and WSL2) and built on the open source @anthropic-ai/sandbox-runtime package, but the sandbox is off by default.",
+      "source_url": "https://code.claude.com/docs/en/sandboxing",
+      "source_title": "Configure the sandboxed Bash tool - Claude Code Docs",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    },
+    {
+      "claim": "Docker Sandboxes is the established cross-platform alternative: it runs Claude Code, Codex and other agents in MicroVM environments that each get their own kernel and no path back to the host, locally or in Docker-managed cloud, with cloud compute metered from $0.07 per hour for a Micro sandbox.",
+      "source_url": "https://www.docker.com/products/docker-sandboxes/",
+      "source_title": "Docker Sandboxes | Sandboxes for Coding Agents | Docker",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Airlock minimum macOS version",
+      "value": "macOS 26 or later",
+      "source_url": "https://airlock.sorrel.systems/"
+    },
+    {
+      "label": "concurrent macOS virtual machines Apple allows (Airlock session ceiling)",
+      "value": "two macOS virtual machines at a time",
+      "source_url": "https://airlock.sorrel.systems/"
+    },
+    {
+      "label": "Airlock current version (Homebrew cask, seen 2026-10-13)",
+      "value": "1.0.1 (202610130921)",
+      "source_url": "https://github.com/simonmaddox/homebrew-tap"
+    },
+    {
+      "label": "E2B Pro plan price",
+      "value": "$150 /month",
+      "source_url": "https://e2b.dev/pricing"
+    },
+    {
+      "label": "E2B Hobby tier concurrent sandboxes",
+      "value": "20 concurrent sandboxes",
+      "source_url": "https://e2b.dev/pricing"
+    },
+    {
+      "label": "Docker Sandboxes cloud Micro sandbox price (1 vCPU, 2 GB)",
+      "value": "$0.07 per hour",
+      "source_url": "https://www.docker.com/products/docker-sandboxes/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Hazmat quarantine airlock",
+      "mapping": "The agent suits up in a sealed room with a copy of your materials; you watch through the window (the live timeline) and carry only the approved items back through the airlock (the per-file diff).",
+      "limit": "A quarantine room goes silent once sealed, but Airlock's room reports every move as it happens; and unless you cut the phone line, the occupant can still call out to public hosts."
+    },
+    {
+      "vehicle": "Rental car with a dashcam",
+      "mapping": "The agent drives a rental (a copy of the project) while your own car stays parked at home; the dashcam (watching from inside the VM) shows every place it actually went, and you decide what comes back inside it.",
+      "limit": "A rental protects the car, not the places it drives to; network destinations stay reachable unless you lock the session to a host list."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The allow prompts keep an agent contained.",
+      "reality": "Prompts only ever see the command the agent typed, not what a build script it launches goes on to do, and by the fortieth one you are clicking yes without reading (claim 3)."
+    },
+    {
+      "myth": "If the agent is sandboxed, whatever it does inside is harmless.",
+      "reality": "Sessions can still reach public hosts unless you lock them down, so anything in the copied project could be sent somewhere, and model requests still go to Anthropic or OpenAI (claim 8)."
+    },
+    {
+      "myth": "Sandboxing an agent means putting it in a Docker container.",
+      "reality": "A container shares your machine's kernel; Docker's own sandbox product is a microVM with its own kernel and no path back to the host (claim 10)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "sandbox",
+      "definition": "A fenced-off corner of your computer where a program can work without being able to touch anything outside the fence."
+    },
+    {
+      "term": "virtual machine (VM)",
+      "definition": "A complete pretend computer running inside your real one, with its own operating system."
+    },
+    {
+      "term": "kernel",
+      "definition": "The core program of an operating system that decides what every other program is allowed to touch."
+    },
+    {
+      "term": "microVM",
+      "definition": "A stripped-down virtual machine that starts in seconds and exists to be thrown away."
+    },
+    {
+      "term": "Seatbelt",
+      "definition": "The sandboxing machinery built into macOS; App Store apps run under it."
+    },
+    {
+      "term": "bubblewrap",
+      "definition": "A Linux tool that walls one process off from the rest of the system."
+    },
+    {
+      "term": "diff",
+      "definition": "A before-and-after view of a file showing exactly which lines were added or removed."
+    },
+    {
+      "term": "git hook",
+      "definition": "A script that runs automatically at git moments such as commit, on your machine."
+    },
+    {
+      "term": "approval prompt",
+      "definition": "The allow-or-deny question an agent shows before running a command it considers risky."
+    },
+    {
+      "term": "prompt fatigue",
+      "definition": "The numbness that sets in after dozens of approval prompts, where you click allow without reading."
+    }
+  ],
+  "unverified": [
+    "The creator's design write-up on simonmaddox.com returned Access Denied when fetched, so its contents could not be read this session.",
+    "Community reception beyond the two Hacker News comments could not be sampled: Reddit JSON returned 403 on this box and a surfaced Reddit showcase thread was not fetchable.",
+    "Whether Apple will accept Airlock into the Mac App Store is unknown; the site says Coming soon to the Mac App Store and the creator says he hopes Apple approves it.",
+    "How much overhead an Airlock virtual machine adds to agent run time on a given Mac is unmeasured; the site only says it starts in seconds."
+  ],
+  "suggested_outline": "Hook: your agent ran a command you approved -- and a script you never saw did the real work; by the fortieth allow-click, nobody reads.\nThe move: one brew command puts Claude Code or Codex in a virtual machine on a copy of your project, watched from inside the VM's OS so every process, file and host lands in one live timeline, and you accept changes per file.\nHonest catch and the field: public hosts stay open unless you lock them, model traffic still leaves for Anthropic or OpenAI, Apple allows two macOS VMs at a time -- and Docker Sandboxes, built-in Seatbelt or bubblewrap sandboxes, or E2B's cloud tier cover the viewer without a Mac.",
+  "notes": "Freshness: the Show HN thread was 15 hours old at fetch with 3 points and 2 comments, and the Homebrew tap carries Airlock 1.0.1 (202610130921) committed the same day -- this is a day-one project, so expect rough edges and fast change; the tap repo shows 0 stars, 0 watching, 0 forks. Vendor framing: Docker's product page carries a comparison table calling E2B, Daytona, Modal and Cloudflare cloud-only; treat competitor rows as marketing -- E2B's own pricing page was fetched and agrees it sells cloud sandbox tiers (Hobby free with $100 of usage credits, Pro $150 /month). scode (binds.ch, tier 4) is an independent single-script Seatbelt and bubblewrap wrapper by an EPFL researcher, evidence the problem is widely felt; its numbers were not used. The OpenAI Codex sandbox docs page corroborates that Codex also ships a Seatbelt-based sandbox on macOS and frames sandboxes as the cure for approval fatigue. Fetch blockers this session: FireCrawl 402 and Reddit JSON 403.",
+  "viewer_situation": "You've got a Mac (or you're watching from a gaming PC) and you let Claude Code or Codex loose in your terminal, clicking allow every time it asks and hoping nothing wanders outside the project folder.",
+  "has_process": true,
+  "process_steps": [
+    "Install Airlock on your Apple-silicon Mac with brew install --cask simonmaddox/tap/airlock, or download the DMG.",
+    "Open your project folder in the terminal and run airlock run claude or airlock run codex.",
+    "Let the agent work in the virtual machine on its copy of the project, without approving individual prompts.",
+    "Watch the timeline for every process it ran, every file it touched, and every server it talked to.",
+    "Review the per-file diff when it finishes and tick only the changes you want applied to your real project."
+  ],
+  "objection": "A virtual machine is a wall around the agent, not a filter on it: unless you lock down hosts, the copy of your project can still be sent to public servers, model traffic still goes to Anthropic or OpenAI, applied code still needs reading, and Apple caps you at two macOS VMs at a time."
+}
