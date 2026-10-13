@@ -2,22 +2,22 @@
 slug: 2026-10-13-airlock-see-what-your-ai-agent
 workspace: shorts
 title: "Sandbox an AI agent on your Mac: Airlock"
-status: approved
+status: scheduled
 pillar: enterprise-privacy
 structure: news-react-so-what
 format: classic
 style_pack: signal
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-13
-updated: "2026-10-13T14:51:06Z"
-publish_slot: ""
+updated: "2026-10-13T14:51:11Z"
+publish_slot: "2026-10-13T11:00:00-05:00"
 seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: f1de4a81-7dc9-4c80-8c9a-5db1efc00e12
 ---
 # Airlock: see what your AI agent touches
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-13-airlock-see-what-your-ai-agent-package]]
 - Voice: [[stages/06-voice/output/2026-10-13-airlock-see-what-your-ai-agent-narration|narration sidecars]]
 - Render: [[stages/07-render/output/2026-10-13-airlock-see-what-your-ai-agent-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-13-airlock-see-what-your-ai-agent-publish]]
 
 ## Decisions
 - Research: 9 sources (7 primary/docs), 10 claims, 6 key numbers; free macOS Apple-silicon app by Simon Maddox, brew cask install; honest limits on the site itself; has_process true (5 viewer steps). Checkpoint 03-2 unattended: angle kept as picked.
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-10-13T12:27:48Z 07-render ok 729s
 - 2026-10-13T12:27:50Z build done, status review
 - 2026-10-13T14:51:06Z telegram approve (approved_at 2026-10-13T14:51:06Z)
+- 2026-10-13T14:51:12Z 08-publish ok 2s
