@@ -1,0 +1,642 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-14T12:21:25+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 26,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "huggingface.co",
+      "liquid.ai",
+      "ollama.com"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "total parameters (all stored in memory)",
+          "value": "24.0B",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "24",
+          "scene_ids": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "label": "active parameters per token",
+          "value": "2.45B",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two point four five",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "experts per MoE block / routing",
+          "value": "64 per MoE block, top-4 routing",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "decode speed on Apple M5 Max (llama.cpp, Q4_K_M, 4K-token input)",
+          "value": "184 tokens/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one hundred eighty-four",
+          "scene_ids": [
+            "s6"
+          ]
+        },
+        {
+          "label": "memory in use on Apple M5 Max (llama.cpp, Q4_K_M, 4K-token input)",
+          "value": "15 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "download size of the Q4_K_M GGUF",
+          "value": "14.5 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "LiveClaw score vs Qwen3.6-35B-A3B (vendor-run, vLLM)",
+          "value": "48.09",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "context length",
+          "value": "131,072 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 26,
+      "found_count": 7,
+      "score": 0.269,
+      "found": [
+        "Liquid",
+        "LFM2.5",
+        "Qwen3.6-35B-A3B",
+        "M5 Max",
+        "Apple M5 Max",
+        "LFM2.5-24B-A2B",
+        "MLX and LM Studio"
+      ],
+      "missing": [
+        "Liquid AI",
+        "vLLM",
+        "MLX",
+        "ONNX and FP8",
+        "AMD Ryzen AI Max",
+        "GPQA Diamond 74.42",
+        "SWE-Bench Verified",
+        "GQA",
+        "ONNX",
+        "FP8",
+        "LiveClaw 48.09",
+        "AutomationBench 27.69",
+        "OpenCode",
+        "Transformers",
+        "Hugging Face",
+        "a1b",
+        "GPQA Diamond and SWE-Bench",
+        "GB Q4",
+        "LiquidAI LFM2.5-24B-A2B"
+      ],
+      "top2": [
+        "Liquid",
+        "LFM2.5"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Liquid",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "LFM2.5",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Qwen3.6-35B-A3B",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Liquid AI",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Max",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "MLX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apple M5 Max",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "LFM2.5-24B-A2B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "MLX and LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "ONNX and FP8",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AMD Ryzen AI Max",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA Diamond 74.42",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SWE-Bench Verified",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GQA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ONNX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP8",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LiveClaw 48.09",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AutomationBench 27.69",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenCode",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Transformers",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "a1b",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA Diamond and SWE-Bench",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB Q4",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LiquidAI LFM2.5-24B-A2B",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 30,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:24.0B"
+      ],
+      "hook_text": "Big models crawl. This one sprints.",
+      "first_sentence": "You've watched twenty-four-billion-parameter models crawl on your machine."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 10,
+      "specific_count": 8,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:24.0B"
+          ],
+          "narration": "You've watched twenty-four-billion-parameter models crawl on your machine. This one writes faster than you can read. Follow a single token as it gets written."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 12.1,
+          "specific": true,
+          "hits": [
+            "num:24.0B"
+          ],
+          "narration": "Picture it mid-answer, about to write the next word. Before anything moves, the whole model is already loaded. The model card lists twenty-four billion parameters, the learned numbers a model stores, all sitting in memory."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 10.7,
+          "specific": true,
+          "hits": [
+            "glossary:expert",
+            "glossary:token"
+          ],
+          "narration": "The token moves. A token is a chunk of text about a word long. It enters a mixture of experts, a block of specialists that wakes only a few per word."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": false,
+          "hits": [],
+          "narration": "Picture a specialist clinic: a triage nurse pages the handful each visit needs. That nurse is the router, a small scorer, and she re-picks for every word."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "num:2.45B"
+          ],
+          "narration": "What fires is two point four five billion parameters, the active count on the model card. The rest of the roster stays dark. The clinic pays every specialist whether or not they are paged, so the memory bill never shrinks. Their shift is mostly waiting."
+        },
+        {
+          "id": "s6",
+          "role": "explain",
+          "est_duration_s": 14.8,
+          "specific": true,
+          "hits": [
+            "num:184 tokens/s",
+            "entity:Liquid",
+            "entity:M5 Max",
+            "entity:Apple M5 Max"
+          ],
+          "narration": "So your token exits at small-model speed. Liquid measured one hundred eighty-four tokens a second on Apple's newest laptop chip, in llama.cpp. The reframe: memory pays for the total, speed pays for the active. A big model is not automatically a slow one."
+        },
+        {
+          "id": "s7",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:Liquid",
+            "entity:Qwen3.6-35B-A3B"
+          ],
+          "narration": "The catch shows up in Liquid's own table. The model beats the bigger Qwen on most of Liquid's agent benchmarks, tests that grade tool use."
+        },
+        {
+          "id": "s8",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Liquid"
+          ],
+          "narration": "It loses the knowledge-heavy ones; Liquid suggests pairing it with web search. No independent benchmark exists yet, so quality is Liquid's word for now."
+        },
+        {
+          "id": "s9",
+          "role": "explain",
+          "est_duration_s": 12.4,
+          "specific": false,
+          "hits": [],
+          "narration": "Running it today is one file download. One llama.cpp command starts it, and LM Studio works too. Ollama's tag still pulls the smaller model in that family. The file fits in a laptop-sized slice of memory."
+        },
+        {
+          "id": "s10",
+          "role": "payoff_close",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "entity:LFM2.5",
+            "entity:LFM2.5-24B-A2B"
+          ],
+          "narration": "Follow one token and the trick resolves. The roster is what memory buys; the paged handful is what speed spends. Your next big model does not have to crawl."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.1,
+      "words": 331,
+      "sentences": 30,
+      "est_speech_s": 114.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "You've watched twenty-four-billion-parameter models crawl on your machine. This one writes faster than you can read. Follow a single token as it gets written. Picture it mid-answer, about to write the next word. Before anything moves, the whole model is already loaded. The model card lists twenty-four billion parameters, the learned numbers a model stores, all sitting in memory. The token moves. A token is a chunk of text about a word long. It enters a mixture of experts, a block of specialists that wakes only a few per word. Picture a specialist clinic: a triage nurse pages the handful each visit needs. That nurse is the router, a small scorer, and she re-picks for every word. What fires is two point four five billion parameters, the active count on the model card. The rest of the roster stays dark. The clinic pays every specialist whether or not they are paged, so the memory bill never shrinks. Their shift is mostly waiting. So your token exits at small-model speed. Liquid measured one hundred eighty-four tokens a second on Apple's newest laptop chip, in llama.cpp. The reframe: memory pays for the total, speed pays for the active. A big model is not automatically a slow one. The catch shows up in Liquid's own table. The model beats the bigger Qwen on most of Liquid's agent benchmarks, tests that grade tool use. It loses the knowledge-heavy ones; Liquid suggests pairing it with web search. No independent benchmark exists yet, so quality is Liquid's word for now. Running it today is one file download. One llama.cpp command starts it, and LM Studio works too. Ollama's tag still pulls the smaller model in that family. The file fits in a laptop-sized slice of memory. Follow one token and the trick resolves. The roster is what memory buys; the paged handful is what speed spends. Your next big model does not have to crawl.",
+    "on_screen": "Big models crawl. This one sprints. | Big models crawl. This one sprints. | Follow one token through it | The whole model sits in memory | 24.0B parameters, all stored | The token moves | A token: a chunk of text | Many specialists, one token at a time | The router pages a handful | She re-picks every word | What fires per token | 2.45B active parameters | The rest stays dark, still paid | 184 tok/s on Apple M5 Max | Liquid's llama.cpp measurement | Memory pays total. Speed pays active | Liquid's own table | Beats Qwen3.6-35B-A3B on agent tests | Loses knowledge-heavy ones | No independent scores yet | One file download | One llama.cpp command | LM Studio: ready today | Ollama tag: still the smaller model | Total is memory. Active is speed. | LFM2.5-24B-A2B"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-storyboard.json",
+        "scenes": 10,
+        "fk_grade": 6.1,
+        "words": 331,
+        "est_speech_s": 114.1,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 6.1 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s6: 15s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
+          "s9: 'LM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s10: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.269,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Liquid",
+          "LFM2.5"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:24.0B"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 8,
+        "need": 8,
+        "total": 10
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

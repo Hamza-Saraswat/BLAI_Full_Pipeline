@@ -1,0 +1,67 @@
+{
+  "full": "You've watched twenty-four-billion-parameter models crawl on your machine. This one writes faster than you can read. Follow a single token as it gets written. Picture it mid-answer, about to write the next word. Before anything moves, the whole model is already loaded. The model card lists twenty-four billion parameters, the learned numbers a model stores, all sitting in memory. The token moves. A token is a chunk of text about a word long. It enters a mixture of experts, a block of specialists that wakes only a few per word. Picture a specialist clinic: a triage nurse pages the handful each visit needs. That nurse is the router, a small scorer, and she re-picks for every word. What fires is two point four five billion parameters, the active count on the model card. The rest of the roster stays dark. The clinic pays every specialist whether or not they are paged, so the memory bill never shrinks. Their shift is mostly waiting. So your token exits at small-model speed. Liquid measured one hundred eighty-four tokens a second on Apple's newest laptop chip, in llama.cpp. The reframe: memory pays for the total, speed pays for the active. A big model is not automatically a slow one. The catch shows up in Liquid's own table. The model beats the bigger chwen on most of Liquid's agent benchmarks, tests that grade tool use. It loses the knowledge-heavy ones; Liquid suggests pairing it with web search. No independent benchmark exists yet, so quality is Liquid's word for now. Running it today is one file download. One llama.cpp command starts it, and L M studio works too. oh-lah-mah's tag still pulls the smaller model in that family. The file fits in a laptop-sized slice of memory. Follow one token and the trick resolves. The roster is what memory buys; the paged handful is what speed spends. Your next big model does not have to crawl.",
+  "words": 320,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "You've watched twenty-four-billion-parameter models crawl on your machine. This one writes faster than you can read. Follow a single token as it gets written.",
+      "words": 24,
+      "changed": false
+    },
+    {
+      "id": "s2",
+      "text": "Picture it mid-answer, about to write the next word. Before anything moves, the whole model is already loaded. The model card lists twenty-four billion parameters, the learned numbers a model stores, all sitting in memory.",
+      "words": 35,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "The token moves. A token is a chunk of text about a word long. It enters a mixture of experts, a block of specialists that wakes only a few per word.",
+      "words": 31,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "Picture a specialist clinic: a triage nurse pages the handful each visit needs. That nurse is the router, a small scorer, and she re-picks for every word.",
+      "words": 27,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "What fires is two point four five billion parameters, the active count on the model card. The rest of the roster stays dark. The clinic pays every specialist whether or not they are paged, so the memory bill never shrinks. Their shift is mostly waiting.",
+      "words": 45,
+      "changed": false
+    },
+    {
+      "id": "s6",
+      "text": "So your token exits at small-model speed. Liquid measured one hundred eighty-four tokens a second on Apple's newest laptop chip, in llama.cpp. The reframe: memory pays for the total, speed pays for the active. A big model is not automatically a slow one.",
+      "words": 43,
+      "changed": false
+    },
+    {
+      "id": "s7",
+      "text": "The catch shows up in Liquid's own table. The model beats the bigger chwen on most of Liquid's agent benchmarks, tests that grade tool use.",
+      "words": 25,
+      "changed": true
+    },
+    {
+      "id": "s8",
+      "text": "It loses the knowledge-heavy ones; Liquid suggests pairing it with web search. No independent benchmark exists yet, so quality is Liquid's word for now.",
+      "words": 24,
+      "changed": false
+    },
+    {
+      "id": "s9",
+      "text": "Running it today is one file download. One llama.cpp command starts it, and L M studio works too. oh-lah-mah's tag still pulls the smaller model in that family. The file fits in a laptop-sized slice of memory.",
+      "words": 37,
+      "changed": true
+    },
+    {
+      "id": "s10",
+      "text": "Follow one token and the trick resolves. The roster is what memory buys; the paged handful is what speed spends. Your next big model does not have to crawl.",
+      "words": 29,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

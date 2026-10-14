@@ -1,0 +1,51 @@
+---
+slug: 2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that
+format: smooth-explainer
+structure: worked-example
+style_pack: axon
+value_types: TEACHES,REFRAMES
+promise: after this Short you can explain total versus active parameters, why a 24B model can run fast, and what the honest trade-off is
+target_duration_s: 105
+brief: 2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-brief.md
+drafts: 2026-10-14-lfm2-5-24b-a2b-a-24b-moe-that-drafts.md
+---
+
+# LFM2.5-24B-A2B: the 24B model that runs like a 2B
+
+## Decisions
+- Structures tried: worked-example (A) and number-first (B); A won 21-19 on the judge rubric, no grafts. Rotation clear: last two shipped were myth-bust and news-react-so-what.
+- Hook: situation pattern, "You've watched twenty-four-billion-parameter models crawl on your machine." (candidate 3), frame-1 text "Big models crawl. This one sprints." B ran number-shock "184 tok/s. On a laptop." (candidate 8); two different patterns per finding 12.
+- Number budget 3 of the smooth cap: 24.0B total, 2.45B active, 184 tok/s; all vendor numbers attributed to Liquid in the same beat.
+- Gates: validate_storyboard 0 blockers, 1 advisory (YouTube keyword tags); eval_short all hard gates pass, entity_spend soft advisory kept on purpose: the number budget spends three numbers and the brief's benchmark-score entities (LiveClaw, GPQA, SWE-Bench) stay on screen only, so the 50 percent entity floor is not met by design.
+- Analogies: the specialist clinic (signature receptionist re-taught in fresh words), limit stated in s5.
+
+## Hook candidates
+1. "Big models crawl. This one sprints."
+2. "LFM2.5-24B-A2B: 24B that runs like 2B."
+3. "You've watched 24B models crawl on your machine." *
+4. "Your laptop just outran a 24B model."
+5. "One hundred eighty-four tokens a second, on a laptop."
+6. "184 tok/s. On a laptop. From a 24B."
+7. "This 24B model wakes only 2.45B per word."
+8. "184 tok/s. On a laptop." (draft B)
+9. "Twenty-four billion parameters. Two point four five awake."
+10. "Your 24B model slot just got faster."
+
+## Script
+
+| Scene | Role | Narration (spoken form) | On-screen text | Visual brief | Tool | Layout | Est s |
+|-------|------|-------------------------|----------------|--------------|------|--------|-------|
+| s1 | hook | You've watched twenty-four-billion-parameter models crawl on your machine. This one writes faster than you can read. Follow a single token as it gets written. | Big models crawl. This one sprints. | Follow one token through it | Frame 1: centered hook text 'Big models crawl. This one sprints.' above a lone steel-blue tower block on the dark floor grid, all stable. At 0.40 s one amber packet fades in at the tower base and rises in place on 'models crawl on your machine'. On 'writes faster than you can read' the packet darts up the tower leaving a short amber trail, and 'Follow one token through it' rises in place below. At most the packet and one text block animate at once; first and last 8 frames hold still. | hyperframes | centered-stack | 8.3 |
+| s2 | explain | Picture it mid-answer, about to write the next word. Before anything moves, the whole model is already loaded. The model card lists twenty-four billion parameters, the learned numbers a model stores, all sitting in memory. | The whole model sits in memory | 24.0B parameters, all stored | On 'the whole model is already loaded' an iso diorama of steel-blue blocks fades in across the grid, one tall tower at center. On 'twenty-four billion parameters' the giant digits '24.0B' scale in above the tower, with the label 'parameters, all stored' rising in place beneath. On 'all sitting in memory' a soft amber edge-glow spreads through the blocks to show memory occupancy. Cool steel structure, amber only as data glow; entrances are fade and scale only, one text block at a time. | hyperframes | giant-number | 12.1 |
+| s3 | explain | The token moves. A token is a chunk of text about a word long. It enters a mixture of experts, a block of specialists that wakes only a few per word. | The token moves | A token: a chunk of text | Many specialists, one token at a time | Diagram-flow: on 'The token moves' an amber packet, the token, fades in and drifts along a floor path toward a bank of dim steel-blue specialist blocks. On 'a chunk of text about a word long' a small label types under the packet. On 'a mixture of experts, a block of specialists' the bank's label fades in and one cube rises in place. Motion onset at 0.35 s with the packet fade; structure stays steel, the packet is the only amber. | hyperframes | diagram-flow | 10.7 |
+| s4 | explain | Picture a specialist clinic: a triage nurse pages the handful each visit needs. That nurse is the router, a small scorer, and she re-picks for every word. | The router pages a handful | She re-picks every word | Grid: on 'a specialist clinic' a wide grid of steel-blue cubes stands like a staff roster, every cube faintly lit, all stable. On 'a triage nurse pages the handful' a small front cube rises in place and four cubes light amber. On 'she re-picks for every word' the amber four swap to a different four, twice, with a quiet floor-grid ripple. Only the nurse cube and the amber set move; hard cut out. | hyperframes | grid | 9.3 |
+| s5 | explain | What fires is two point four five billion parameters, the active count on the model card. The rest of the roster stays dark. The clinic pays every specialist whether or not they are paged, so the memory bill never shrinks. Their shift is mostly waiting. | What fires per token | 2.45B active parameters | The rest stays dark, still paid | Split-compare: on 'two point four five billion parameters' the left cluster of paged specialists lights amber and the giant digits '2.45B' scale in above it, while the right side holds the remaining roster in cool dim steel. On 'stays dark' the right side settles darker. On 'the memory bill never shrinks' a faint amber outline holds around the dark roster, marking memory still paid for. Entrances are fade and scale only, at most two elements animating, labels appear one block at a time. | hyperframes | split-compare | 15.5 |
+| s6 | explain | So your token exits at small-model speed. Liquid measured one hundred eighty-four tokens a second on Apple's newest laptop chip, in llama.cpp. The reframe: memory pays for the total, speed pays for the active. A big model is not automatically a slow one. | 184 tok/s on Apple M5 Max | Liquid's llama.cpp measurement | Memory pays total. Speed pays active | Giant-number: on 'Liquid measured one hundred eighty-four tokens a second' the digits '184 tok/s' scale in over a laptop-shaped steel block while amber packets stream from its screen port in a fast, even rhythm. The caption 'Liquid's llama.cpp measurement, Apple M5 Max' rises in place below. On 'memory pays for the total, speed pays for the active' a single caption block fades in: 'memory pays total, speed pays active'. At most two elements animate at once; first and last 8 frames hold. | hyperframes | giant-number | 14.8 |
+| s7 | explain | The catch shows up in Liquid's own table. The model beats the bigger Qwen on most of Liquid's agent benchmarks, tests that grade tool use. | Liquid's own table | Beats Qwen3.6-35B-A3B on agent tests | Grid: on 'Liquid's own table' a neat grid of benchmark tiles fades in under that label. On 'beats the bigger Qwen on most' most tiles rise in place with amber check packets landing on them; a few stay dim and steel. Motion onset at 0.35 s; at most two tiles animate at once, staggered; no slide-ins. | hyperframes | grid | 8.6 |
+| s8 | explain | It loses the knowledge-heavy ones; Liquid suggests pairing it with web search. No independent benchmark exists yet, so quality is Liquid's word for now. | Loses knowledge-heavy ones | No independent scores yet | Split-compare: on 'loses the knowledge-heavy ones' the left panel shows two dim tiles sinking slightly while a steel-cyan leader labels them. On 'No independent benchmark exists yet' the right panel shows an empty pedestal where a score block would sit, outline only. Both halves settle; one amber packet stalls at the pedestal and fades. Hard cut in, hard cut out. | hyperframes | split-compare | 8.3 |
+| s9 | explain | Running it today is one file download. One llama.cpp command starts it, and LM Studio works too. Ollama's tag still pulls the smaller model in that family. The file fits in a laptop-sized slice of memory. | One file download | One llama.cpp command | LM Studio: ready today | Ollama tag: still the smaller model | Diagram-flow left to right: on 'one file download' a single steel file block with an amber seal fades in over the grid. On 'One llama.cpp command starts it' a command line types itself beneath and the file blooms into the lit tower diorama. On 'LM Studio works too' a small app badge fades in beside it. On 'Ollama's lfm2.5 tag still pulls the smaller model' a half-height tower labeled 'ollama lfm2.5' rises in place with the tag 'smaller model'. One mechanism at a time, fade and rise entrances only. | hyperframes | diagram-flow | 12.4 |
+| s10 | payoff_close | Follow one token and the trick resolves. The roster is what memory buys; the paged handful is what speed spends. Your next big model does not have to crawl. | Total is memory. Active is speed. | LFM2.5-24B-A2B | The full diorama settles: the lit handful cluster on the left, the dark roster on the right, one steel frame on the grid. On 'The roster is what memory buys; the paged handful is what speed spends' the text 'Total is memory. Active is speed.' rises in place at center. On 'Your next big model does not have to crawl' the diorama dims and the wordmark 'LFM2.5-24B-A2B' scales in exactly where the hook text sat in scene 1, so the last frame rhymes with frame 1. Final 8 frames hold on the settled wordmark. | hyperframes | centered-stack | 10.3 |
+
+## Notes for review
+- Every speed, memory and benchmark claim is Liquid's own measurement; the script says "Liquid measured" in the same beat each time. No independent benchmark exists yet; s8 keeps that as absence of evidence.
+- The "runs like a 2B" phrasing is decoded, never spoken as a literal claim; exact expert counts and context length stay out of the narration to respect the three-number budget.
