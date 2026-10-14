@@ -2,14 +2,14 @@
 slug: 2026-10-13-sonicboom-llama-cpp-decode-14
 workspace: shorts
 title: "SonicBoom: llama.cpp decode 14% faster"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-10-13
-updated: "2026-10-13T11:08:24Z"
+updated: "2026-10-14T13:35:46Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Rotation: comparison lane free (yesterday explainer + news-react); PROVES tag justified by the 14% measurement to reproduce on our own hardware; classic band fits a one-fact release measurement.
 
 ## Build journal
-
+- 2026-10-14T13:35:46Z 2026-10-14T13:35:46Z expired: not from today's picks (2026-10-14); the factory carries no backlog
