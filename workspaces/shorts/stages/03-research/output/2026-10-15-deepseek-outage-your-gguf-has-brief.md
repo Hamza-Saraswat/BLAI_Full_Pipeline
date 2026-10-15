@@ -3,7 +3,7 @@ slug: 2026-10-15-deepseek-outage-your-gguf-has
 stage: 03-research
 topic: "When the DeepSeek API goes down, your local GGUF keeps generating"
 depth: standard
-generated_at: 2026-10-15T16:20:00Z
+generated_at: 2026-10-15T11:47:11Z
 sources: 12
 hub: "[[videos/2026-10-15-deepseek-outage-your-gguf-has]]"
 ---
@@ -19,7 +19,6 @@ The DeepSeek API is a service wrapped around open-weight models, and when the se
 ## Explanation path
 Establish that the thing the viewer uses daily is two things stacked: a model, which is files of numbers, and a service, which is someone else's computers running those files for them. Then show the service failing on DeepSeek's own record: the status history with its October incident count and the partial web and API outage resolved the morning of October 15. Only then introduce the escape hatch: DeepSeek published the weights under a permissive license, so the model itself can live on the viewer's disk as a GGUF file. Ground the size reality honestly: the full 671B model is a colossal file, while the distilled 7B is explicitly sized against a 24GB gaming GPU in unsloth's own card. Close on the reframe: the API was never the model, and dependency on it is a choice.
 
-## Claims
 ## Claims
 1. **DeepSeek's status page records a partial web and API outage that began Wed, Oct 14, 2026, 08:11 PM and was resolved Thu, Oct 15, 2026, 01:04 AM, lasting 4h 52min (America/New_York).**
    - Source: DeepSeek Web/API Partially Unavailable, incident 7116348214287, DeepSeek Status, https://status.deepseek.com/incidents/7116348214287
