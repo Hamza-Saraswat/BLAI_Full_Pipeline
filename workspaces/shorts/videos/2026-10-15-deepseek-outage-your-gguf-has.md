@@ -2,22 +2,22 @@
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
 title: DeepSeek down? Your GGUF never noticed
-status: approved
+status: scheduled
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T14:06:29Z"
-publish_slot: ""
+updated: "2026-10-15T14:10:12Z"
+publish_slot: "2026-10-15T11:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 32cadcb2-675c-438c-ba1c-8865ae88158a
 ---
 # DeepSeek outage: your GGUF has no status page
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-15-deepseek-outage-your-gguf-has-package]]
 - Voice: [[stages/06-voice/output/2026-10-15-deepseek-outage-your-gguf-has-narration]]
 - Render: [[stages/07-render/output/2026-10-15-deepseek-outage-your-gguf-has-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-15-deepseek-outage-your-gguf-has-publish]]
 
 ## Decisions
 - Picked over #2 Open WebUI (81.7): a second news-react would break the one-per-day rule; the outage angle reframes as myth-bust with a durable evergreen pull.
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-10-15T13:05:11Z 07-render ok 666s
 - 2026-10-15T13:05:13Z build done, status review
 - 2026-10-15T14:06:29Z telegram approve (approved_at 2026-10-15T14:06:29Z)
+- 2026-10-15T14:10:12Z 08-publish ok 2s
