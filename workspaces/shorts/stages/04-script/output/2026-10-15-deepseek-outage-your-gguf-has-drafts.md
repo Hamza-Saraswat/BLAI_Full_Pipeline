@@ -60,7 +60,7 @@ TOTALS: A=21 B=16
 
 WINNER: A
 
-GRAFTS: none — B's hook scores lower, and its two strongest lines (the API gloss, the battery analogy) are load-bearing inside B's own beats, so moving either would force rewrites in A's disc-analogy through-line
+GRAFTS: none -- B's hook scores lower, and its two strongest lines (the API gloss, the battery analogy) are load-bearing inside B's own beats, so moving either would force rewrites in A's disc-analogy through-line
 
 LOSER-NOTES: The comparison-ladder had the better navigation and the fresher shape, but it spent its first ten seconds on an either/or question built on an undefined term, so its evidence landed after the winner had already spent its number. To win, it needed to open on the named event, define GGUF in the same breath it first uses it, and let "Meet the seven billion parameter distill" arrive as a turn the script had earned rather than a rescue.
 ```
