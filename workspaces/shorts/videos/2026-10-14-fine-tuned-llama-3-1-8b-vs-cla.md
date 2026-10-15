@@ -2,14 +2,14 @@
 slug: 2026-10-14-fine-tuned-llama-3-1-8b-vs-cla
 workspace: shorts
 title: Fine-tuned Llama 3.1 8B vs Claude Sonnet 5 on 437 legal clauses
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-10-14
-updated: "2026-10-14T11:07:30Z"
+updated: "2026-10-15T13:35:20Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-15T13:35:20Z 2026-10-15T13:35:20Z expired: not from today's picks (2026-10-15); the factory carries no backlog
