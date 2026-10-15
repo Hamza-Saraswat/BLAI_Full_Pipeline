@@ -2,14 +2,14 @@
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
 title: DeepSeek down? Your GGUF never noticed
-status: review
+status: approved
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T13:05:04Z"
+updated: "2026-10-15T14:06:29Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-10-15T13:05:11Z 07-render ok 95.10s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 225
 - 2026-10-15T13:05:11Z 07-render ok 666s
 - 2026-10-15T13:05:13Z build done, status review
+- 2026-10-15T14:06:29Z telegram approve (approved_at 2026-10-15T14:06:29Z)
