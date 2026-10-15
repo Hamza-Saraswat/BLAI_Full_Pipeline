@@ -2,14 +2,14 @@
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
 title: DeepSeek down? Your GGUF never noticed
-status: building
+status: review
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T12:25:43Z"
+updated: "2026-10-15T13:05:04Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-15-deepseek-outage-your-gguf-has-script]]
 - Package: [[stages/05-package/output/2026-10-15-deepseek-outage-your-gguf-has-package]]
 - Voice: [[stages/06-voice/output/2026-10-15-deepseek-outage-your-gguf-has-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-15-deepseek-outage-your-gguf-has-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-15T12:25:43Z build start on gn100-83c4
 - 2026-10-15T12:27:44Z 06-voice ok 118s
+- 2026-10-15T12:54:05Z 07-render fail 1578s (07-render: scene s08 did not pass HyperFrames inspect after 5 rounds: t=6.35-6.55s (5 samples) clipped_text #tileR overflowed right 19px "THE DISTILL 7B DISTILL)
+- 2026-10-15T13:05:11Z 07-render ok 95.10s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 225
+- 2026-10-15T13:05:11Z 07-render ok 666s
