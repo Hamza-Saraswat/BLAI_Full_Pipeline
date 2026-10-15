@@ -1,20 +1,20 @@
 ---
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
-title: "DeepSeek down? Your GGUF never noticed"
-status: ready-to-build
+title: DeepSeek down? Your GGUF never noticed
+status: building
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T14:20:00Z"
+updated: "2026-10-15T12:25:43Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,4 +45,4 @@ blotato_post_id: ""
 - 05 package: description keyword-first with the Ecosia open-weights video as closest related; 3 hashtags; 15 tags (218 chars); contains_synthetic_media false (typographic scenes + creator voice clone); original_insight: October's five incidents vs 99.47% Flash uptime reframes the outage as an opted-in dependency; check_outputs exit 0.
 
 ## Build journal
-
+- 2026-10-15T12:25:43Z build start on gn100-83c4
