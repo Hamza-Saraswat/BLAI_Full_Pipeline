@@ -1,0 +1,627 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-15T12:22:11+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-15-deepseek-outage-your-gguf-has-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-15-deepseek-outage-your-gguf-has-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 1
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 24,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.231,
+    "source_domains": [
+      "deepseek.com",
+      "huggingface.co",
+      "reuters.com"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "Oct 14-15, 2026 partial web/API outage duration (status page)",
+          "value": "4h 52min",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "four",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Incidents on DeepSeek's history page, October 2026",
+          "value": "5 incidents",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DeepSeek V4.1 Flash API uptime, Jul 2026 - Oct 2026 (status page)",
+          "value": "99.47% uptime",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "March 30, 2026 chatbot major outage duration (Reuters)",
+          "value": "7 hours and 13 minutes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Full DeepSeek-R1 GGUF file size at Q4_K_M (bartowski repo)",
+          "value": "404.43GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "four hundred four",
+          "scene_ids": [
+            "s07"
+          ]
+        },
+        {
+          "label": "Full DeepSeek-R1 model size (LM Studio community card)",
+          "value": "671B params",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPU memory unsloth cites for the 7B distill (RTX 4090 given as example)",
+          "value": "24GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "24 GB",
+          "scene_ids": [
+            "s08"
+          ]
+        },
+        {
+          "label": "Downloads of unsloth's 7B distill GGUF (Hugging Face models API)",
+          "value": "42,060 downloads",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 24,
+      "found_count": 6,
+      "score": 0.25,
+      "found": [
+        "DeepSeek",
+        "MIT",
+        "LM Studio",
+        "Hugging Face",
+        "RTX",
+        "Llama"
+      ],
+      "missing": [
+        "DeepSeek-R1",
+        "Qwen",
+        "Q4_K_M",
+        "Oct",
+        "Oct 14",
+        "Affected Components",
+        "Chat Service",
+        "Llama and Qwen",
+        "DeepSeek-R1-Zero",
+        "Q3_K_L",
+        "Q6_K",
+        "Q8_0",
+        "deepseek-v4-pro",
+        "Wed",
+        "Thu",
+        "R1 and V3",
+        "DeepSeek R1",
+        "GB and Q8"
+      ],
+      "top2": [
+        "DeepSeek",
+        "DeepSeek-R1"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 9,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-R1",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q4_K_M",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Oct",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Oct 14",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Affected Components",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Chat Service",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Llama and Qwen",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-R1-Zero",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q3_K_L",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q6_K",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q8_0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RTX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "deepseek-v4-pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Wed",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Thu",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Llama",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "R1 and V3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek R1",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB and Q8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 32,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DeepSeek"
+      ],
+      "hook_text": "DeepSeek went down. Yours didn't.",
+      "first_sentence": "DeepSeek went down last night."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 10,
+      "specific_count": 8,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "num:4h 52min",
+            "entity:DeepSeek"
+          ],
+          "narration": "DeepSeek went down last night. Yours didn't have to. You just watched its status page log four hours and fifty-two minutes of downtime."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "You chat with DeepSeek in the browser, or you call its API from your side projects. Either way, it feels like one thing. Somewhere along the way, the website became the model."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "DeepSeek is two things stacked. The model is files of numbers, called its parameters. The service is someone else's computers running those files for you."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Last night, that service went dark. The files did not change. One of those two things can live on your disk."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "glossary:GGUF"
+          ],
+          "narration": "Treat the chat app like a streaming service. The GGUF file, a single file holding a whole model, is the disc on your shelf. The service going dark does not touch the disc."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 15.5,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek",
+            "entity:MIT",
+            "entity:LM Studio",
+            "entity:Hugging Face",
+            "entity:Llama"
+          ],
+          "narration": "DeepSeek published the R one weights, the trained model files themselves, free for anyone under the MIT license. They sit on Hugging Face right now. LM Studio or llama.cpp runs the file on your machine. No account, no API key, no status page to check."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:404.43GB",
+            "entity:DeepSeek"
+          ],
+          "narration": "Now the honest part. At the common download quality, the full DeepSeek R one is a four hundred four gigabyte file. Your gaming PC is not loading that. Neither is your Mac."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 12.4,
+          "specific": true,
+          "hits": [
+            "num:24GB",
+            "entity:DeepSeek",
+            "entity:RTX"
+          ],
+          "narration": "DeepSeek also shipped distills, smaller models trained to imitate the big one. One of those carries seven billion parameters. Unsloth's GGUF card sizes it against a twenty-four gigabyte gaming GPU, an RTX forty ninety for example."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 11.7,
+          "specific": false,
+          "hits": [],
+          "narration": "One catch. A disc holds the identical movie. Your copy is cut down, so the quality genuinely drops. When you need the full model's best answers, the cloud is still where that brain lives."
+        },
+        {
+          "id": "s10",
+          "role": "payoff_close",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "glossary:API",
+            "glossary:status page"
+          ],
+          "narration": "The API was never the model. A file on your disk has no status page."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.6,
+      "words": 299,
+      "sentences": 32,
+      "est_speech_s": 103.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "DeepSeek went down last night. Yours didn't have to. You just watched its status page log four hours and fifty-two minutes of downtime. You chat with DeepSeek in the browser, or you call its API from your side projects. Either way, it feels like one thing. Somewhere along the way, the website became the model. DeepSeek is two things stacked. The model is files of numbers, called its parameters. The service is someone else's computers running those files for you. Last night, that service went dark. The files did not change. One of those two things can live on your disk. Treat the chat app like a streaming service. The GGUF file, a single file holding a whole model, is the disc on your shelf. The service going dark does not touch the disc. DeepSeek published the R one weights, the trained model files themselves, free for anyone under the MIT license. They sit on Hugging Face right now. LM Studio or llama.cpp runs the file on your machine. No account, no API key, no status page to check. Now the honest part. At the common download quality, the full DeepSeek R one is a four hundred four gigabyte file. Your gaming PC is not loading that. Neither is your Mac. DeepSeek also shipped distills, smaller models trained to imitate the big one. One of those carries seven billion parameters. Unsloth's GGUF card sizes it against a twenty-four gigabyte gaming GPU, an RTX forty ninety for example. One catch. A disc holds the identical movie. Your copy is cut down, so the quality genuinely drops. When you need the full model's best answers, the cloud is still where that brain lives. The API was never the model. A file on your disk has no status page.",
+    "on_screen": "DeepSeek went down. Yours didn't. | DeepSeek went down. Yours didn't have to. | the website is the model | model = files of numbers | the files didn't change | the disc still plays | R1 weights on Hugging Face | 404.43 GB | 24 GB gaming GPU | same movie, cut-down copy | a file has no status page"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-15-deepseek-outage-your-gguf-has-storyboard.json",
+        "scenes": 10,
+        "fk_grade": 4.6,
+        "words": 299,
+        "est_speech_s": 103.1,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 45 chars \u2014 mobile truncates ~40",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s02: 'API' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s05: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s06: 'MIT' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s06: 'LM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s06: 'API' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s08: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s08: 'RTX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 12s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s10: 'API' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-15-deepseek-outage-your-gguf-has-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.25,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "DeepSeek-R1"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DeepSeek"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 8,
+        "need": 8,
+        "total": 10
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

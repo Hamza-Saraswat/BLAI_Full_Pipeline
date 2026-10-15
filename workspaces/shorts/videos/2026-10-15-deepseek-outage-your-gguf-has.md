@@ -2,14 +2,14 @@
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
 title: "DeepSeek outage: your GGUF has no status page"
-status: researched
+status: scripted
 pillar: myth-bust
-structure: ""
+structure: myth-bust
 format: smooth-explainer
-style_pack: ""
+style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T11:50:00Z"
+updated: "2026-10-15T13:58:00Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-15-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-15-ideas]]
 - Research: [[stages/03-research/output/2026-10-15-deepseek-outage-your-gguf-has-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-15-deepseek-outage-your-gguf-has-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -36,6 +36,10 @@ blotato_post_id: ""
 - Format: smooth-explainer per selection-rules.md (a belief to dismantle: "the cloud API is the model"; needs a worked example carried through).
 - 03 checkpoint (unattended): angle confirmed as "when the hosted API blinks out, a local GGUF keeps generating; dependency is a choice"; slug unchanged.
 - 03 research: 12 sources fetched (status page, incident, history, pricing, R1 card, three GGUF cards, two HF API records, Reuters, HN); validator exit 0; has_process false (argument video, no viewer steps); thesis: the API is a service wrapped around open-weight models.
+
+- 04 checkpoint (unattended): structures myth-bust (A) and comparison-ladder (B), both clearing rotation; value types TEACHES+REFRAMES confirmed; promise: after this you can say what failed, why a GGUF kept working, and which copy fits your GPU.
+- 04 hooks: 10 candidates scored; A kept the situation hook "DeepSeek went down last night. Yours didn't have to."; B drew a decision hook to force divergence.
+- 04 gates: validator 0 blockers 0 advisories on the winner; eval gate1_ready (soft advisories entity_spend, top2 kept with reason); number budget capped at three (4h 52m, 404.43 GB, 24 GB); judge A 21-16, no grafts; variety_check clean; style pack halftone; ledger entry 40; normalizer 10 scenes, 8 changed.
 
 ## Build journal
 

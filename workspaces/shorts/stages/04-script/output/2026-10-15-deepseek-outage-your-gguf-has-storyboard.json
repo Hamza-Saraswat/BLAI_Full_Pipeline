@@ -1,0 +1,161 @@
+{
+  "slug": "2026-10-15-deepseek-outage-your-gguf-has",
+  "topic": "When the DeepSeek API goes down, your local GGUF keeps generating",
+  "title": "DeepSeek outage: your GGUF has no status page",
+  "description": "working description; the package stage overwrites",
+  "hashtags": [
+    "#deepseek",
+    "#localai",
+    "#gguf"
+  ],
+  "tags": [
+    "deepseek",
+    "local ai",
+    "gguf",
+    "llama.cpp",
+    "lm studio",
+    "hugging face",
+    "open weights",
+    "api outage",
+    "run llm locally",
+    "ai at home",
+    "ollama",
+    "local llm",
+    "deepseek r1",
+    "distill model",
+    "quantization",
+    "rtx 4090",
+    "diy ai",
+    "self hosted ai",
+    "offline ai",
+    "large language model"
+  ],
+  "hook_text": "DeepSeek went down. Yours didn't.",
+  "hook_candidates": [
+    "DeepSeek went down last night. Yours didn't have to.",
+    "DeepSeek gives away the model and sells the uptime.",
+    "Four hours fifty-two minutes dark. Your copy didn't notice.",
+    "Your model isn't down. Its website is.",
+    "Cloud API or local file? One outage decides.",
+    "A four-hundred-gigabyte file that never goes down.",
+    "The API went down. The model didn't go anywhere.",
+    "You pay for uptime, not intelligence.",
+    "Five incidents in October. Your disk had zero.",
+    "When DeepSeek blinks out, your GPU doesn't care."
+  ],
+  "style_pack": "halftone",
+  "script_format": "smooth-explainer",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 95,
+  "narration_full": "DeepSeek went down last night. Yours didn't have to. You just watched its status page log four hours and fifty-two minutes of downtime. You chat with DeepSeek in the browser, or you call its API from your side projects. Either way, it feels like one thing. Somewhere along the way, the website became the model. DeepSeek is two things stacked. The model is files of numbers, called its parameters. The service is someone else's computers running those files for you. Last night, that service went dark. The files did not change. One of those two things can live on your disk. Treat the chat app like a streaming service. The GGUF file, a single file holding a whole model, is the disc on your shelf. The service going dark does not touch the disc. DeepSeek published the R one weights, the trained model files themselves, free for anyone under the MIT license. They sit on Hugging Face right now. LM Studio or llama.cpp runs the file on your machine. No account, no API key, no status page to check. Now the honest part. At the common download quality, the full DeepSeek R one is a four hundred four gigabyte file. Your gaming PC is not loading that. Neither is your Mac. DeepSeek also shipped distills, smaller models trained to imitate the big one. One of those carries seven billion parameters. Unsloth's GGUF card sizes it against a twenty-four gigabyte gaming GPU, an RTX forty ninety for example. One catch. A disc holds the identical movie. Your copy is cut down, so the quality genuinely drops. When you need the full model's best answers, the cloud is still where that brain lives. The API was never the model. A file on your disk has no status page.",
+  "analogy": {
+    "vehicle": "streaming service vs the disc on your shelf",
+    "mapping": "the chat app is a streaming service and the GGUF file is the disc you own; the service going dark does not touch the disc",
+    "limit": "a disc holds the identical movie, but a local distill is a cut-down model, so the quality genuinely drops"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "DeepSeek went down last night. Yours didn't have to. You just watched its status page log four hours and fifty-two minutes of downtime.",
+      "on_screen_text": "DeepSeek went down. Yours didn't have to.",
+      "visual_brief": "Frame 1 composition: hook text 'DeepSeek went down. Yours didn't have to.' centered and fully legible, a red status dot above it. Motion onset at 0.3s: the dot pulses. On 'Yours didn't have to' the pulse stops on solid red. On 'four hours and fifty-two minutes' a staged swap: hook text fades out, giant '4h 52m' scales in with caption 'DeepSeek status page' beneath. One soft alert ping on 'went down'. Last 8 frames hold.",
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You chat with DeepSeek in the browser, or you call its API from your side projects. Either way, it feels like one thing. Somewhere along the way, the website became the model.",
+      "on_screen_text": "the website is the model",
+      "visual_brief": "Split screen, both panels static from frame 1: left a chat window labeled 'chat', right a terminal panel labeled 'API call'. On 'feels like one thing' the divider line between the panels fades out. On 'the website became the model' the bottom caption rises in; it is the only text block animating then.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "DeepSeek is two things stacked. The model is files of numbers, called its parameters. The service is someone else's computers running those files for you.",
+      "on_screen_text": "model = files of numbers",
+      "visual_brief": "Stack diagram builds on 'two things stacked': top block labeled 'service' fades in, then bottom block labeled 'model' rises in, never two text blocks at once. On 'files of numbers' the model block's caption 'model = files of numbers' fades in.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Last night, that service went dark. The files did not change. One of those two things can live on your disk.",
+      "on_screen_text": "the files didn't change",
+      "visual_brief": "Same stack, now centered: on 'went dark' the top 'service' block dims to grey. On 'did not change' the bottom 'model' block stays lit and the caption 'the files didn't change' fades in. On 'live on your disk' a small download-arrow icon fades in beside the bottom block.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Treat the chat app like a streaming service. The GGUF file, a single file holding a whole model, is the disc on your shelf. The service going dark does not touch the disc.",
+      "on_screen_text": "the disc still plays",
+      "visual_brief": "Left: a streaming app window, greyed, static text 'service unavailable'. Right: a shelf holding a disc case labeled 'GGUF'. On 'goes dark' the left panel dims further. On 'does not touch the disc' the disc case rises slightly in place and catches a highlight while the caption 'the disc still plays' fades in. A faint disc-tray click on 'disc on your shelf'.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "DeepSeek published the R one weights, the trained model files themselves, free for anyone under the MIT license. They sit on Hugging Face right now. LM Studio or llama.cpp runs the file on your machine. No account, no API key, no status page to check.",
+      "on_screen_text": "R1 weights on Hugging Face",
+      "visual_brief": "Three-tile grid, tiles rising one at a time. On 'published the R one weights' tile one fades in: a Hugging Face model card labeled 'R1 weights'. On 'LM Studio or llama.cpp' tile two rises in with the LM Studio and llama.cpp logos. On 'no status page to check' tile three rises in, labeled 'no API call'. On 'right now' the full grid holds, all tiles lit.",
+      "est_duration_s": 15.5
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Now the honest part. At the common download quality, the full DeepSeek R one is a four hundred four gigabyte file. Your gaming PC is not loading that. Neither is your Mac.",
+      "on_screen_text": "404.43 GB",
+      "visual_brief": "On 'four hundred four gigabyte file' the digits '404.43 GB' scale in at center. Below, a download progress bar creeps and stalls near empty on 'is not loading that'. On 'Neither is your Mac' a small laptop icon fades in beside the bar, equally stalled. A low thunk as the number lands.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "DeepSeek also shipped distills, smaller models trained to imitate the big one. One of those carries seven billion parameters. Unsloth's GGUF card sizes it against a twenty-four gigabyte gaming GPU, an RTX forty ninety for example.",
+      "on_screen_text": "24 GB gaming GPU",
+      "visual_brief": "Two-tile grid: left tile 'full R1' with a tall file stack, right tile 'the distill' with a small file. On 'seven billion parameters' the right tile's caption '7B distill' fades in. On 'twenty-four gigabyte gaming GPU' the text '24 GB gaming GPU' rises in under the right tile as a GPU outline fades in beside it.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "One catch. A disc holds the identical movie. Your copy is cut down, so the quality genuinely drops. When you need the full model's best answers, the cloud is still where that brain lives.",
+      "on_screen_text": "same movie, cut-down copy",
+      "visual_brief": "Split compare: left a disc labeled 'same movie', right a smaller copy labeled 'cut-down copy'. On 'quality genuinely drops' the small copy's image softens. On 'still where that brain lives' a cloud icon above the left side stays lit.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The API was never the model. A file on your disk has no status page.",
+      "on_screen_text": "a file has no status page",
+      "visual_brief": "The caption 'a file has no status page' centered from the first frame. On 'The API was never the model' a dim status-page window behind it fades to black. On 'no status page' a single file icon stays lit at center. After the last spoken word the wordmark settles into the corner, visual only. One short warm settle tone under the wordmark.",
+      "est_duration_s": 5.2
+    }
+  ],
+  "notes_for_review": "Numbers rounded once for the ear: 404.43GB -> four hundred four gigabyte; est durations from the 2.9 wps config."
+}
