@@ -2,21 +2,21 @@
 slug: 2026-10-15-deepseek-outage-your-gguf-has
 workspace: shorts
 title: DeepSeek down? Your GGUF never noticed
-status: scheduled
+status: published
 pillar: myth-bust
 structure: myth-bust
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-15
-updated: "2026-10-15T14:10:12Z"
+updated: "2026-10-15T16:04:10Z"
 publish_slot: "2026-10-15T11:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=X_TFWYxDKrM"
 blotato_post_id: 32cadcb2-675c-438c-ba1c-8865ae88158a
 ---
 # DeepSeek outage: your GGUF has no status page
@@ -53,3 +53,4 @@ blotato_post_id: 32cadcb2-675c-438c-ba1c-8865ae88158a
 - 2026-10-15T13:05:13Z build done, status review
 - 2026-10-15T14:06:29Z telegram approve (approved_at 2026-10-15T14:06:29Z)
 - 2026-10-15T14:10:12Z 08-publish ok 2s
+- 2026-10-15T16:04:10Z published https://www.youtube.com/watch?v=X_TFWYxDKrM
