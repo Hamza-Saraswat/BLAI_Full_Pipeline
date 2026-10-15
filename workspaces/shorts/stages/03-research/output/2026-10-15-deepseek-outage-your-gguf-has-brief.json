@@ -1,0 +1,199 @@
+{
+  "slug": "2026-10-15-deepseek-outage-your-gguf-has",
+  "topic": "When the DeepSeek API goes down, your local GGUF keeps generating",
+  "generated_at": "2026-10-15T16:20:00Z",
+  "depth": "standard",
+  "thesis": "The DeepSeek API is a service wrapped around open-weight models, and when the service blinks out, a copy of the model on your own disk keeps generating.",
+  "explanation_path": "Establish that the thing the viewer uses daily is two things stacked: a model, which is files of numbers, and a service, which is someone else's computers running those files for them. Then show the service failing on DeepSeek's own record: the status history with its October incident count and the partial web and API outage resolved the morning of October 15. Only then introduce the escape hatch: DeepSeek published the weights under a permissive license, so the model itself can live on the viewer's disk as a GGUF file. Ground the size reality honestly: the full 671B model is a colossal file, while the distilled 7B is explicitly sized against a 24GB gaming GPU in unsloth's own card. Close on the reframe: the API was never the model, and dependency on it is a choice.",
+  "claims": [
+    {
+      "claim": "DeepSeek's status page records a partial web and API outage that began Wed, Oct 14, 2026, 08:11 PM and was resolved Thu, Oct 15, 2026, 01:04 AM, lasting 4h 52min (America/New_York).",
+      "source_url": "https://status.deepseek.com/incidents/7116348214287",
+      "source_title": "DeepSeek Web/API Partially Unavailable, incident 7116348214287, DeepSeek Status",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "The Oct 14 outage's Affected Components list covers DeepSeek V4 Pro API Service, DeepSeek V4.1 Flash API Service, and the Chat Service, so both API products and the chat app went down together.",
+      "source_url": "https://status.deepseek.com/incidents/7116348214287",
+      "source_title": "DeepSeek Web/API Partially Unavailable, incident 7116348214287, DeepSeek Status",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "DeepSeek's own incident history lists 5 incidents in October 2026 and 8 incidents in September 2026, while August 2026 shows \"All systems operational\".",
+      "source_url": "https://status.deepseek.com/history",
+      "source_title": "Historical events, DeepSeek Status",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "Reuters reported that on March 30, 2026 DeepSeek's chatbot suffered a \"major outage\" lasting 7 hours and 13 minutes, its longest since the R1 and V3 viral rise, with no reason given per company protocol.",
+      "source_url": "https://www.reuters.com/technology/chinas-deepseek-ai-chatbot-suffers-longest-outage-since-viral-rise-early-2025-2026-03-30/",
+      "source_title": "China's DeepSeek AI chatbot suffers longest outage since viral rise in early 2025, Reuters",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "DeepSeek's R1 model card states the company open-sourced DeepSeek-R1-Zero, DeepSeek-R1, and six dense models distilled from DeepSeek-R1 based on Llama and Qwen, released under the MIT license.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "source_title": "DeepSeek-R1, Hugging Face model card (deepseek-ai)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "The bartowski GGUF repo lists DeepSeek-R1-Q4_K_M.gguf at 404.43GB, described as \"Good quality, default size for most use cases, recommended\".",
+      "source_url": "https://huggingface.co/bartowski/DeepSeek-R1-GGUF",
+      "source_title": "Llamacpp imatrix Quantizations of DeepSeek-R1, bartowski, Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "LM Studio's community card for the same GGUF lists the model at 671B params and its hardware compatibility table puts Q3_K_L at 347 GB, Q4_K_M at 404 GB, Q6_K at 551 GB and Q8_0 at 713 GB.",
+      "source_url": "https://huggingface.co/lmstudio-community/DeepSeek-R1-GGUF",
+      "source_title": "DeepSeek R1 GGUF, LM Studio Community, Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "unsloth's DeepSeek-R1-Distill-Qwen-7B-GGUF card says that with a GPU (RTX 4090 for example) with 24GB you can offload multiple layers to the GPU, and its example command runs the DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf file.",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF",
+      "source_title": "DeepSeek-R1-Distill-Qwen-7B-GGUF, unsloth, Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "The Hugging Face models API reports 42,060 downloads for the unsloth DeepSeek-R1-Distill-Qwen-7B-GGUF repo, fetched 2026-10-15.",
+      "source_url": "https://huggingface.co/api/models/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF",
+      "source_title": "Hugging Face models API record for unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    },
+    {
+      "claim": "DeepSeek's pricing page lists, per 1M tokens, deepseek-flash input (cache miss) at $0.3 peak and output at $1.2 peak, deepseek-v4-pro output at $3.96 peak, and states \"Off-peak rates are half of the peak rates\".",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "source_title": "Models & Pricing, DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Oct 14-15, 2026 partial web/API outage duration (status page)",
+      "value": "4h 52min",
+      "source_url": "https://status.deepseek.com/incidents/7116348214287"
+    },
+    {
+      "label": "Incidents on DeepSeek's history page, October 2026",
+      "value": "5 incidents",
+      "source_url": "https://status.deepseek.com/history"
+    },
+    {
+      "label": "DeepSeek V4.1 Flash API uptime, Jul 2026 - Oct 2026 (status page)",
+      "value": "99.47% uptime",
+      "source_url": "https://status.deepseek.com/"
+    },
+    {
+      "label": "March 30, 2026 chatbot major outage duration (Reuters)",
+      "value": "7 hours and 13 minutes",
+      "source_url": "https://www.reuters.com/technology/chinas-deepseek-ai-chatbot-suffers-longest-outage-since-viral-rise-early-2025-2026-03-30/"
+    },
+    {
+      "label": "Full DeepSeek-R1 GGUF file size at Q4_K_M (bartowski repo)",
+      "value": "404.43GB",
+      "source_url": "https://huggingface.co/bartowski/DeepSeek-R1-GGUF"
+    },
+    {
+      "label": "Full DeepSeek-R1 model size (LM Studio community card)",
+      "value": "671B params",
+      "source_url": "https://huggingface.co/lmstudio-community/DeepSeek-R1-GGUF"
+    },
+    {
+      "label": "GPU memory unsloth cites for the 7B distill (RTX 4090 given as example)",
+      "value": "24GB",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF"
+    },
+    {
+      "label": "Downloads of unsloth's 7B distill GGUF (Hugging Face models API)",
+      "value": "42,060 downloads",
+      "source_url": "https://huggingface.co/api/models/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Grid power vs the battery in your basement",
+      "mapping": "The API is grid electricity and the hosted model is the power plant; a local GGUF file is your own battery, so when the grid blinks your lights stay on.",
+      "limit": "A battery stores energy you already had, while a local model is a new and often smaller copy of the capability, so the local lights are dimmer, not merely off-grid."
+    },
+    {
+      "vehicle": "Streaming service vs the disc on your shelf",
+      "mapping": "The chat app is a streaming service and the GGUF file is the disc you own; the service going dark does not touch the disc.",
+      "limit": "A disc holds the identical movie, but a local distill is a cut-down model, so the picture quality genuinely drops."
+    },
+    {
+      "vehicle": "Gym membership vs dumbbells in the garage",
+      "mapping": "The API is the fully equipped gym that can close for maintenance; the local model is the dumbbells that are always there.",
+      "limit": "Dumbbells never improve after you buy them, while a local model file can be swapped for a newer release whenever you choose."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The cloud API is the model; when DeepSeek's API goes down, DeepSeek is down.",
+      "reality": "DeepSeek published the R1 weights under the MIT license, and GGUF files derived from them run entirely on your machine with no API call (claims 6, 7)."
+    },
+    {
+      "myth": "Running DeepSeek locally means downloading the whole 671B model.",
+      "reality": "DeepSeek also shipped six smaller distills, and the 7B distill's GGUF card explicitly sizes it against a 24GB gaming GPU (claims 6, 9)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "API",
+      "definition": "A way for your code to talk to a program running on someone else's computers, here DeepSeek's servers."
+    },
+    {
+      "term": "open weights",
+      "definition": "The trained model files published for anyone to download and run, so the model can exist on your machine without DeepSeek's servers."
+    },
+    {
+      "term": "GGUF",
+      "definition": "A single-file format for storing a model so local tools like llama.cpp and LM Studio can load and run it."
+    },
+    {
+      "term": "quantization",
+      "definition": "Shrinking a model's file size by storing its numbers with less precision; Q4_K_M is a common mid-quality setting."
+    },
+    {
+      "term": "distill model",
+      "definition": "A smaller model trained to imitate a bigger model's answers, trading some capability for a file that fits ordinary hardware."
+    },
+    {
+      "term": "status page",
+      "definition": "A vendor's own dashboard that reports when its services are degraded or down."
+    },
+    {
+      "term": "uptime",
+      "definition": "The percentage of time a service was working over a stated window, as reported by the vendor."
+    }
+  ],
+  "unverified": [
+    "No cause for the Oct 14, 2026 outage beyond the status page's \"The cause has been identified and a fix is being implemented\" line appears in any page fetched this session.",
+    "No tokens-per-second measurement for the 7B distill on any named GPU was found in the fetched pages, so local speed claims stay out of the narration.",
+    "Whether DeepSeek's newer V4-series API models will be released as open weights is not stated on any page fetched this session."
+  ],
+  "suggested_outline": "Open on DeepSeek's own record: a 4h 52min partial web and API outage resolved the morning of Oct 15, 2026, inside a month that logged 5 incidents on the history page; establish the pain before any jargon.\nSplit the two things the viewer has been treating as one: the model, files of numbers, versus the API, a service on someone else's machines; the R1 weights are MIT-licensed on Hugging Face, so one of those two things can live on their disk.\nLand the honest trade and the reframe: the full 671B model is a 404.43GB file at Q4_K_M, but the 7B distill is sized for a 24GB gaming GPU, and when the cloud blinks the local file keeps generating; dependency is a choice.",
+  "notes": "The status history page rounds the Oct 14 incident to \"Lasted 4 hours\" while the incident page itself says 4h 52min; both are DeepSeek first-party, the incident page is the precise one and no real conflict exists. Community reaction is thin: a Hacker News submission titled \"DeepSeek Outage\" (https://news.ycombinator.com/item?id=50098365) linked the incident page and drew no comments in its first hours, fetched 2026-10-15. Reuters is used only for the March 2026 deep-past comparison, not for the October incident.",
+  "viewer_situation": "You chat with DeepSeek in the browser or call its API from your side projects, you own a gaming PC or a Mac with a decent GPU, and so far you have treated the model and the website as the same thing.",
+  "has_process": false,
+  "objection": "\"A 7B distill is not the 671B model; you are trading the real thing for a weaker copy you also have to babysit, and a 4h 52min outage once a month is a price most people will happily pay.\""
+}
