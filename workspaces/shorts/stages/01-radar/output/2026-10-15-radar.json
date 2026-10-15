@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "github-7d652b51f2",
+    "title": "open-webui v0.12.2",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+    "source": "github",
+    "published_at": "2026-10-14T21:07:29Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.12.2",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.8183,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Open WebUI",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 📑 **MinerU 4.x servers.** The MinerU document engine now works with self-hosted MinerU 4.x servers, where every document failed with a 404 because 4.x removed the old parsing interface; 3.x servers work as before, 4.x servers take a tier (flash, basic, standard or advanced) and enable_oc",
+    "why_now": "Shipped with a known break: open-webui/open-webui v0.12.2 released, 14 h ago",
+    "score": 64
+  },
+  {
+    "id": "github-7829139590",
+    "title": "open-webui v0.12.1",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.1",
+    "source": "github",
+    "published_at": "2026-10-14T16:06:35Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.12.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7611,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 🧱 **External apps in channels.** Administrators can now turn on Apps in Admin Settings > General, or with \"ENABLE_APPS\", and connect external apps in the new Apps tab of Admin Settings by their HTTPS address, reviewing the permissions each app asks for, such as reading its mentions, read",
+    "why_now": "Shipped: open-webui/open-webui v0.12.1 released, 19 h ago",
+    "score": 60
+  },
+  {
+    "id": "github-25b06b75a0",
+    "title": "llama.cpp b11643",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11643",
+    "source": "github",
+    "published_at": "2026-10-15T09:58:02Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11643",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.985,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> graph: keep the graph non empty without embeddings (#30522) An embedding-only graph has no logits, and build_pooling() returns early when embeddings are off, so since the models no longer expand t_embd the graph ends up empty and its inputs are never allocated. Expand t_embd in that c",
+    "why_now": "Shipped: ggml-org/llama.cpp b11643 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-8dcade83f3",
+    "title": "llama.cpp b11642",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11642",
+    "source": "github",
+    "published_at": "2026-10-15T07:30:48Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11642",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9507,
+      "age_h": 3.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> server: save only restorable slot states to the prompt cache (#30498) * server: save only restorable slot states to the prompt cache The idle-slot save loop stores every idle slot whenever a task starts, while only completion tasks restore from the prompt cache. Rerank, embedding, dec",
+    "why_now": "Shipped: ggml-org/llama.cpp b11642 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-b63a85fef5",
+    "title": "llama.cpp b11641",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11641",
+    "source": "github",
+    "published_at": "2026-10-15T06:53:04Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11641",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9421,
+      "age_h": 4.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> spec : add lilicorr support (#30506) * spec : add lilicorr support * convert : use convention for hparam assignment * add todo for hparam use in llama-batch.cpp Co-authored-by: Georgi Gerganov <ggerganov@gmail.com> * typo fix --------- Co-authored-by: Georgi Gerganov <ggerganov@gmail.",
+    "why_now": "Shipped: ggml-org/llama.cpp b11641 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-21ab5a698b",
+    "title": "ollama v0.40.5-rc0: v0.40.5",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5-rc0",
+    "source": "github",
+    "published_at": "2026-10-14T19:45:22Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.5-rc0",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8022,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "MLX",
+      "CUDA",
+      "OpenAI"
+    ],
+    "summary": "## What's Changed * mlx: port the Metal custom kernels to CUDA by @dhiltgen in https://github.com/ollama/ollama/pull/18657 * docs: model recs and language standardization by @anra8571 in https://github.com/ollama/ollama/pull/18981 * openai: accept custom tool calls in Responses history by @hoyyeva i",
+    "why_now": "Shipped: ollama/ollama v0.40.5-rc0 released (pre-release), 15 h ago",
+    "score": 49
+  },
+  {
+    "id": "github-884bd12f42",
+    "title": "TensorRT-LLM v1.4.0rc0",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc0",
+    "source": "github",
+    "published_at": "2026-10-14T16:35:44Z",
+    "signals": {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "tag": "v1.4.0rc0",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.7665,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:TensorRT",
+      "group": "how-to"
+    },
+    "products": [
+      "TensorRT",
+      "H100",
+      "DeepSeek",
+      "RTX PRO 6000",
+      "Blackwell"
+    ],
+    "summary": "Highlights - Known Issues - Multi-GPU (TP2) streaming or RPC executor workloads may hang during worker initialization when MPI worker pools are reused across LLM instances (observed on H100). - DeepSeek MLA models on SM120/SM121 GPUs (for example RTX PRO 6000 Blackwell) may crash with an illegal mem",
+    "why_now": "Shipped with a known break: NVIDIA/TensorRT-LLM v1.4.0rc0 released (pre-release), 18 h ago",
+    "score": 48
+  },
+  {
+    "id": "hn-85a4cc32fe",
+    "title": "Tell HN: Don't mass spam employers with LLM generated emails",
+    "url": "https://news.ycombinator.com/item?id=50095323",
+    "source": "hn",
+    "published_at": "2026-10-14T21:09:24Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.8186,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "If you&#x27;re looking for a job, do -not- have Claude bulk email every company on &quot;Who&#x27;s Hiring&quot;.<p>These things all look the same and your message is just going to get marked spam.<p>For example, it&#x27;s painfully obvious that our staff eng role&#x27;s &quot;combination of distrib",
+    "why_now": "Discussed: 6 points, 2 comments on HN, 14 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-f15042ad3e",
+    "title": "DeepSeek Outage",
+    "url": "https://status.deepseek.com/incidents/7116348214287",
+    "source": "hn",
+    "published_at": "2026-10-15T02:20:16Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.8822,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Broke: 5 points, 1 comments on HN, 9 h ago",
+    "score": 35
+  },
+  {
+    "id": "hn-e68b97f15b",
+    "title": "AI Safety Is Not a Corporate Plot",
+    "url": "https://www.astralcodexten.com/p/ai-safety-is-not-a-corporate-plot",
+    "source": "hn",
+    "published_at": "2026-10-15T01:22:03Z",
+    "signals": {
+      "points": 13,
+      "num_comments": 9,
+      "signal": 0.461,
+      "signal_parts": {
+        "points": 0.462,
+        "comments": 0.459
+      },
+      "decay": 0.87,
+      "age_h": 9.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 13 points, 9 comments on HN, 10 h ago",
+    "score": 34
+  },
+  {
+    "id": "hn-81289dea71",
+    "title": "Someone on Reddit is running Qwen 27B at ~20 tok/s on a jailbroken PS5's GPU",
+    "url": "https://www.reddit.com/r/LocalLLM/comments/1x4y61f/qwen_27b_at_20_toks_on_a_jailbroken_ps5s_gpu_i/",
+    "source": "hn",
+    "published_at": "2026-10-14T17:20:09Z",
+    "signals": {
+      "points": 10,
+      "num_comments": 0,
+      "signal": 0.294,
+      "signal_parts": {
+        "points": 0.42,
+        "comments": 0.0
+      },
+      "decay": 0.7747,
+      "age_h": 17.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 10 points, 0 comments on HN, 18 h ago",
+    "score": 34
+  },
+  {
+    "id": "hn-232a58a0d6",
+    "title": "New Material Acquired by Mistral",
+    "url": "https://newmaterial.ai/stories/newmaterial-joins-mistral",
+    "source": "hn",
+    "published_at": "2026-10-15T00:15:35Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8562,
+      "age_h": 10.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 11 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-65de633468",
+    "title": "Show HN: Merlin, Run Your Claude Code and Codex from Slack, Linear and GitHub",
+    "url": "https://usemerlin.ai",
+    "source": "hn",
+    "published_at": "2026-10-14T14:13:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.7407,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hi HN, I built Merlin to let you use your own Claude Code and Codex subscription from Slack, Linear, and GitHub.<p>There is a desktop app for macOS and Windows, and a CLI daemon for Linux. When someone mentions Merlin in a Slack thread or Linear issue comment, the task runs on that team member&#x27;",
+    "why_now": "Shipped: 1 points, 2 comments on HN, 21 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-2a8b4aa312",
+    "title": "Show HN: How to Use LLMs",
+    "url": "https://github.com/canaanmckenzie/sidelong",
+    "source": "hn",
+    "published_at": "2026-10-15T04:01:52Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.9041,
+      "age_h": 7.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "I think one of the biggest issues with the current LLM format is the vertical scrolling, it makes it really difficult to track how your are working, and to cover multiple conversation topics. This I think is going to be an easier format to use.",
+    "why_now": "Shipped: 6 points, 2 comments on HN, 7 h ago",
+    "score": 23
+  },
+  {
+    "id": "hf-b349677403",
+    "title": "autotrust/GLM5.3-Flash-E192-DGX-Spark",
+    "url": "https://huggingface.co/autotrust/GLM5.3-Flash-E192-DGX-Spark",
+    "source": "hf",
+    "published_at": "2026-10-09T23:02:37Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 177,
+      "downloads": 7230,
+      "trendingScore": 123.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.692,
+      "signal_parts": {
+        "trending": 0.634,
+        "likes": 0.75,
+        "downloads": 0.643
+      },
+      "decay": 0.1487,
+      "age_h": 132.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "DGX Spark",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 177 likes, 7.2k downloads, trending score 123, created 2026-10-09",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 177 likes, 7.2k downloads, trending score 123, 5 d ago",
+    "score": 23
+  },
+  {
+    "id": "hf-5d67e740db",
+    "title": "LiquidAI/LFM2.5-24B-A2B-GGUF",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-09T18:03:23Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 132,
+      "downloads": 45676,
+      "trendingScore": 132.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.71,
+      "signal_parts": {
+        "trending": 0.643,
+        "likes": 0.708,
+        "downloads": 0.777
+      },
+      "decay": 0.1384,
+      "age_h": 137.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 132 likes, 45.7k downloads, trending score 132, created 2026-10-09",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 132 likes, 45.7k downloads, trending score 132, 6 d ago",
+    "score": 23
+  },
+  {
+    "id": "hn-9dd15a37a4",
+    "title": "Show HN: Working on Plug and play AI memory that works across AI agents",
+    "url": "https://news.ycombinator.com/item?id=50100700",
+    "source": "hn",
+    "published_at": "2026-10-15T08:02:49Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9581,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "So I&#x27;ve been working on a project (Make0 AI) for a long time where I wanted to give common context to both Codex and Claude Code. The problem is simple - while working on Claude and after exhausting the daily&#x2F;weekly limits I&#x27;ve start again from scratch in Codex. Of course I can prompt",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-b86a3cd450",
+    "title": "Show HN: T0: We trained a 256M SOTA open-weights time-series forecasting model",
+    "url": "https://github.com/theforecastingcompany/tfc-t0",
+    "source": "hn",
+    "published_at": "2026-10-14T14:51:04Z",
+    "signals": {
+      "points": 14,
+      "num_comments": 0,
+      "signal": 0.332,
+      "signal_parts": {
+        "points": 0.475,
+        "comments": 0.0
+      },
+      "decay": 0.7474,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple",
+      "Hugging Face"
+    ],
+    "summary": "Hi everyone, we are excited to share t0-gamma, the latest model in our t0 family. It is a 256M parameter open-weights foundation model for time series (TSFM). It runs on CPU, GPU or Apple chips.<p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;theforecastingcompany&#x2F;t0-gamma\" rel=\"nofollow\">http",
+    "why_now": "Shipped: 14 points, 0 comments on HN, 20 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-cf9783aae3",
+    "title": "openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+    "source": "hf",
+    "published_at": "2026-10-06T18:05:14Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 127,
+      "downloads": 100853,
+      "trendingScore": 124.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.735,
+      "signal_parts": {
+        "trending": 0.635,
+        "likes": 0.702,
+        "downloads": 0.834
+      },
+      "decay": 0.05,
+      "age_h": 208.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 127 likes, 100.9k downloads, trending score 124, created 2026-10-06",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 127 likes, 100.9k downloads, trending score 124, 9 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-41de98e434",
+    "title": "Show HN: OWASP Finbot Defended with Tenuo",
+    "url": "https://github.com/tenuo-ai/finbot-ctf",
+    "source": "hn",
+    "published_at": "2026-10-14T16:17:39Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.7631,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Tenuo is a task-scoped authz primitive for agentic work. We are an open protocol and an open source implementation at github.com&#x2F;tenuo-ai&#x2F;tenuo<p>We created a fork of OWASP finbot with Tenuo wired in and red-teamed it with promptfoo. We went from 50 successful attacks to 0 with Tenuo.<p>Th",
+    "why_now": "Shipped: 4 points, 2 comments on HN, 19 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-80672c0bb2",
+    "title": "Show HN: Eevo - Consequential Decision Model",
+    "url": "https://www.uprightproject.com/eevo/",
+    "source": "hn",
+    "published_at": "2026-10-14T18:52:50Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 3,
+      "signal": 0.218,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.276
+      },
+      "decay": 0.7922,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I&#x27;m Juho from Upright. I think we may have stumbled upon an interesting approach to AI alignment.<p>The idea is as follows: 1. train a decision model to be really good at comparative sizing of consequences, expected value problems, and modelling overlap between different consequences 2.",
+    "why_now": "Shipped: 2 points, 3 comments on HN, 16 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-50d6cbbf1a",
+    "title": "RenkuOS: Haiku OS forked with AI-assisted coding and LLM integrations",
+    "url": "https://renkuos.org/",
+    "source": "hn",
+    "published_at": "2026-10-15T05:36:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9249,
+      "age_h": 5.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 5 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-164d4b9ce0",
+    "title": "Show HN: Golang DL/ML primitives with inference, diffusion, vision, systemone",
+    "url": "https://github.com/computerex/dlgo",
+    "source": "hn",
+    "published_at": "2026-10-14T17:53:56Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.781,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I created a DL inference engine that slowly grew to have more and functionality.<p>- Inference for a bunch of open weights architectures<p>- Diffusion image generation fir Z ai turbo<p>- Vision input into LLM for inference<p>- Vulkan&#x2F;fast CPU, optimized kernels<p>- Playground for testing<p>- La",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 17 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-4d63b6775f",
+    "title": "Show HN: Give (low vRAM) local sLLMs codebase-wide context with SQLite (attempt)",
+    "url": "https://github.com/govindgcoder/arcKode",
+    "source": "hn",
+    "published_at": "2026-10-15T01:56:09Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8771,
+      "age_h": 9.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:vram",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 9 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-1fc0c2762e",
+    "title": "Does quantization hurt coding agents? Deep-dive with actual numbers",
+    "url": "https://aistack.imec-int.com/blog/quantization",
+    "source": "hn",
+    "published_at": "2026-10-14T14:28:00Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7433,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 1 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-3db3a10a11",
+    "title": "The Verifiability Gap in Quantized LLM Supply Chains",
+    "url": "https://arxiv.org/abs/2610.19498",
+    "source": "hn",
+    "published_at": "2026-10-15T02:13:23Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8808,
+      "age_h": 8.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 9 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-45b6b06e78",
+    "title": "Local Model Guide - Find what LLMs fit on your machine",
+    "url": "https://localmodelguide.com/",
+    "source": "hn",
+    "published_at": "2026-10-14T23:23:59Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8456,
+      "age_h": 11.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:local model",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-126d84548d",
+    "title": "Show HN: SPEV: Open Weight, Omnimodal Decision Model Trained for Turn Detection",
+    "url": "https://huggingface.co/SpragAI/SPEV",
+    "source": "hn",
+    "published_at": "2026-10-14T15:52:42Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7586,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "Where Jev and other Jev-style models like OpenAI&#x27;s Decisions and Cloudflare&#x27;s Clef are multimodal, supporting text or images in, decision out, SPEV natively supports audio and video inputs. These native capabilities allow SPEV to reason directly from audio without the lossy speech to text",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-5241da4e26",
+    "title": "Ling 3.1 Flash: 560B open-weight MoE, MIT license, 1M context",
+    "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash",
+    "source": "hn",
+    "published_at": "2026-10-15T10:21:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9905,
+      "age_h": 0.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-e4aa73a49a",
+    "title": "Show HN: Real Design Benchmark - can you tell AI designs from real products?",
+    "url": "https://www.realdesignbenchmark.com",
+    "source": "hn",
+    "published_at": "2026-10-15T05:31:11Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9237,
+      "age_h": 5.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Hi HN,<p>I&#x27;m Adam Ginzberg, one of the cofounders of Subframe, a code-first design tool.<p>One of the things I&#x27;m really curious about is understanding LLM performance on subjective domains like design.<p>As an experiment I built this game which presents two designs of the same screen, one",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 5 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-d9ac450d4c",
+    "title": "Barista: Synthesizing Typestate Specifications with LLM Agents",
+    "url": "https://catarinagamboa.github.io/papers/barista/",
+    "source": "hn",
+    "published_at": "2026-10-15T05:16:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9205,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-606da42eee",
+    "title": "Five Possible Backdoors into LLM Search Results",
+    "url": "https://www.unite.ai/five-possible-back-doors-into-llm-search-results/",
+    "source": "hn",
+    "published_at": "2026-10-15T02:41:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8867,
+      "age_h": 8.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-1dbaf31c79",
+    "title": "Open-source LLM trading bots vs. the government bond, on paper money",
+    "url": "https://blueprintau.com/knives/",
+    "source": "hn",
+    "published_at": "2026-10-15T00:33:56Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8599,
+      "age_h": 10.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 10 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-6f7e95efc0",
+    "title": "LLM vs. Decision models like Jev and use-cases",
+    "url": "https://grigio.org/llm-vs-decision-models-like-jev-and-use-cases/",
+    "source": "hn",
+    "published_at": "2026-10-14T19:55:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8041,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-d17969bd1d",
+    "title": "Production-grade RAG for complex tables with Docling ASTs and VLM repair",
+    "url": "https://github.com/Souheil007/Rag_Full_Version",
+    "source": "hn",
+    "published_at": "2026-10-14T18:51:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.792,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:rag",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b41cc080d5",
+    "title": "RAG compliance: Where confidential data goes",
+    "url": "https://llmknowledge.org/ch5",
+    "source": "hn",
+    "published_at": "2026-10-14T17:26:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7758,
+      "age_h": 17.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:rag",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-76956d5d64",
+    "title": "Show HN: Eulix - Local code index and call graphs for large repos, LLM optional",
+    "url": "https://github.com/Nurysso/eulix",
+    "source": "hn",
+    "published_at": "2026-10-14T16:04:32Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7607,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-16b9f04f1d",
+    "title": "The AI race: China's open-weight models trail US closed models by just 7 months",
+    "url": "https://www.reddit.com/r/dataisbeautiful/comments/1x5ntpl/the_ai_race_chinas_openweight_models_trail_us/",
+    "source": "hn",
+    "published_at": "2026-10-14T15:44:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.757,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  }
+]
