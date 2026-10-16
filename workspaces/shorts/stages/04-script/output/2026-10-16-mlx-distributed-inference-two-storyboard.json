@@ -1,0 +1,120 @@
+{
+  "slug": "2026-10-16-mlx-distributed-inference-two",
+  "topic": "MLX distributed inference: two Mac Studios as one machine",
+  "title": "MLX distributed inference: two Mac Studios as one",
+  "description": "MLX distributed inference on two Mac Studios: macOS 26.2 RDMA over Thunderbolt 5 and the JACCL backend shard one model across both machines. You will learn the two split modes and the one command that launches them.",
+  "hashtags": [
+    "#mlx",
+    "#macstudio",
+    "#localai"
+  ],
+  "hook_text": "Muse Spark Open, on your desk tonight",
+  "hook_candidates": [
+    "Three moves, and Muse Spark Open runs on your desk tonight.",
+    "Your Mac Studio isn't the machine. Your desk is.",
+    "Two Mac Studios just became one computer, over a cable.",
+    "Apple shipped a way to double your model memory tonight.",
+    "Muse Spark Open: 816 B parameters, zero data center.",
+    "Your MLX memory ceiling just moved to a second desk.",
+    "A 493 GB model, two Macs, one command tonight.",
+    "Apple just gave MLX its own NCCL, pronounced jackal.",
+    "You don't need a bigger Mac. You need a second one.",
+    "One command now shards a model across your Macs."
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "hook_pattern": "tonight",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 86,
+  "narration_full": "Three moves, and Muse Spark Open runs on your desk tonight. Eight hundred sixteen billion parameters. Your Mac hit its memory ceiling; tonight you go through it. Quantization to four bits shrinks the weights. Even quartered, they take about four hundred ninety-three gigabytes of model weights. Add working memory and it tips past what one Studio holds. It does not fit. Move one: cable the pair and switch on RDMA, remote direct memory access. One Mac writes straight into the other's memory. The wire is Thunderbolt Five, the port already on your Studio. Two cables double the bandwidth. macOS twenty six point two shipped it. Move two: install the MLX build with JACCL. You want version zero point thirty point one or later. MLX is Apple's framework for models on Apple silicon. JACCL is the collectives layer: two Macs talking as one cluster. Move three: launch one command with a hostfile, a list of your two machines. It shards the model across both automatically. Tensor mode slices every layer, and both Macs compute each layer together, in sync. Muse Spark Open writes back at twenty four point nine nine tokens, word-pieces, a second. Pipeline mode splits by depth, each Mac holding consecutive layers. Like an assembly line. Mistral Medium writes at the same speed on one Mac or two, pipelined. A real line fills up and gets faster; decode never does. Capacity, not speed. Same trick NVIDIA clusters have run for years. The desk cable is the new part. The unit of local AI is no longer the machine. It is the desk.",
+  "analogy": {
+    "vehicle": "an assembly line",
+    "mapping": "pipeline parallelism: each Mac is one station holding a consecutive block of layers and passes half-finished work down the line",
+    "limit": "a real line fills with many items and speeds up; pipelined decode pushes each token through every station, so it fits bigger models without generating faster"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "narration": "Three moves, and Muse Spark Open runs on your desk tonight. Eight hundred sixteen billion parameters. Your Mac hit its memory ceiling; tonight you go through it.",
+      "on_screen_text": "Muse Spark Open, on your desk tonight | 816B parameters",
+      "visual_brief": "Frame 1: title card fully legible, motion onset at 0.3s as a slow scale pulse begins. At \"eight hundred sixteen billion\" a hard cut swaps in a giant 816B rising in place.",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 9.5
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "narration": "Quantization to four bits shrinks the weights. Even quartered, they take about four hundred ninety-three gigabytes of model weights. Add working memory and it tips past what one Studio holds. It does not fit.",
+      "on_screen_text": "493GB | NVFP4: a four-bit format",
+      "visual_brief": "On \"four hundred ninety-three gigabytes\" a weight bar fades in beside a slightly taller bar labeled Mac Studio ceiling. At \"does not fit\" the weight bar flashes once and the text swaps to does not fit.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "narration": "Move one: cable the pair and switch on RDMA, remote direct memory access. One Mac writes straight into the other's memory. The wire is Thunderbolt Five, the port already on your Studio. Two cables double the bandwidth. macOS twenty six point two shipped it.",
+      "on_screen_text": "RDMA = remote direct memory access",
+      "visual_brief": "On \"cable the pair\" two Studio boxes fade in and two cable lines draw between them. At \"writes straight into the other's memory\" a dot pulses along one cable into the second box.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 13.5
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "narration": "Move two: install the MLX build with JACCL. You want version zero point thirty point one or later. MLX is Apple's framework for models on Apple silicon. JACCL is the collectives layer: two Macs talking as one cluster.",
+      "on_screen_text": "JACCL, pronounced jackal",
+      "visual_brief": "On \"install the MLX build\" a terminal-style line fades in and the version tag pops on. At \"two Macs talking as one cluster\" two small nodes scale up and a link draws between them under the JACCL label.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 14.0
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "narration": "Move three: launch one command with a hostfile, a list of your two machines. It shards the model across both automatically. Tensor mode slices every layer, and both Macs compute each layer together, in sync. Muse Spark Open writes back at twenty four point nine nine tokens, word-pieces, a second.",
+      "on_screen_text": "mlx.launch --hostfile hosts.json | 24.99 tokens/s",
+      "visual_brief": "On \"launch one command\" the command fades in as a single line. At \"writes back\" a hard cut swaps to the giant 24.99 landing center while token ticks pop beneath it.",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 15.0
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "narration": "Pipeline mode splits by depth, each Mac holding consecutive layers. Like an assembly line. Mistral Medium writes at the same speed on one Mac or two, pipelined.",
+      "on_screen_text": "capacity, not speed",
+      "visual_brief": "On \"assembly line\" two station blocks fade in side by side. At \"same speed\" two equal-height bars pop up under labels one Mac and two Macs, staying level.",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 9.0
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "narration": "A real line fills up and gets faster; decode never does. Capacity, not speed. Same trick NVIDIA clusters have run for years. The desk cable is the new part.",
+      "on_screen_text": "same trick, new cable",
+      "visual_brief": "A filling progress bar appears on \"fills up and gets faster\" and stalls flat on \"decode never does\" as the text swaps to capacity, not speed. On \"NVIDIA clusters\" a data-center tag fades in, then dissolves on \"desk cable\".",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "est_duration_s": 8.5
+    },
+    {
+      "id": "s08",
+      "role": "payoff_close",
+      "narration": "The unit of local AI is no longer the machine. It is the desk.",
+      "on_screen_text": "The unit is the desk.",
+      "visual_brief": "Frame 1 of the scene holds both Studio outlines; on \"no longer the machine\" they fade into one shared rounded frame, motion onset 0.3s. At \"It is the desk\" the frame settles into a desk silhouette, then the wordmark settles for the final half second.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 6.0
+    }
+  ],
+  "notes_for_review": "Numbers rounded once for the ear: none. 24.99 tokens per second is Apple's measured two-machine tensor-parallel decode at 8,192-token context. The 493GB NVFP4 figure fits a 512GB Studio only before working memory; the script says \"tips past\" for that reason. RDMA enablement per the MLX docs (recovery mode), not the WWDC Settings toggle; the brief records the conflict."
+}

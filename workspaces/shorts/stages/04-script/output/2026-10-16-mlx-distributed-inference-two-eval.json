@@ -1,0 +1,515 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-16T12:44:23+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/.local-builds/2026-10-16-mlx-distributed-inference-two/draft-A/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-16-mlx-distributed-inference-two-brief.json",
+    "project_record": null,
+    "ledger_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 10
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 14,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "apple.com"
+    ],
+    "domain_diversity": 1,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "Muse Spark Open size (total parameters, active parameters)",
+          "value": "816B total parameters (42B active)",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Eight hundred sixteen",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Memory footprint in 4-bit NVFP4",
+          "value": "about 493GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "four hundred ninety-three gigabytes",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Memory needed in native BF16, parameters alone",
+          "value": "more than 1.6TB of RAM",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Decode speed, two M5 Ultras, pipeline parallelization, 8,192-token context",
+          "value": "15.74 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Decode speed, two M5 Ultras, tensor parallelization, 8,192-token context",
+          "value": "24.99 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Decode speed, four M5 Ultras, tensor parallelization, 8,192-token context",
+          "value": "36.73 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen 3.8 decode, one M5 Ultra vs two in tensor parallelization",
+          "value": "19.69 vs 33.27 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Thunderbolt 5 port bandwidth (Mac Studio)",
+          "value": "up to 120Gb/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 14,
+      "found_count": 4,
+      "score": 0.286,
+      "found": [
+        "Muse Spark Open",
+        "Mac",
+        "Apple",
+        "NVIDIA"
+      ],
+      "missing": [
+        "macOS 26.2",
+        "M5 Ultra",
+        "M5 Ultras",
+        "Qwen",
+        "Mistral Medium 3.5",
+        "Mac Studio",
+        "BF16",
+        "Two Mac Studios",
+        "NCCL",
+        "Nvidia NCCL"
+      ],
+      "top2": [
+        "Muse Spark Open",
+        "Mac"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Muse Spark Open",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Mac",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "macOS 26.2",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Ultra",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apple",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "M5 Ultras",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mistral Medium 3.5",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Two Mac Studios",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "NCCL",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nvidia NCCL",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 29,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Muse Spark Open"
+      ],
+      "hook_text": "Muse Spark Open, on your desk tonight",
+      "first_sentence": "Three moves, and Muse Spark Open runs on your desk tonight."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "how-to-three-moves",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 8,
+      "specific_count": 7,
+      "ratio": 0.875,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 9.5,
+          "specific": true,
+          "hits": [
+            "num:816B total parameters (42B active)",
+            "entity:Muse Spark Open",
+            "entity:Mac"
+          ],
+          "narration": "Three moves, and Muse Spark Open runs on your desk tonight. Eight hundred sixteen billion parameters. Your Mac hit its memory ceiling; tonight you go through it."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:about 493GB"
+          ],
+          "narration": "Quantization to four bits shrinks the weights. Even quartered, they take about four hundred ninety-three gigabytes of model weights. Add working memory and it tips past what one Studio holds. It does not fit."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 13.5,
+          "specific": true,
+          "hits": [
+            "entity:Mac"
+          ],
+          "narration": "Move one: cable the pair and switch on RDMA, remote direct memory access. One Mac writes straight into the other's memory. The wire is Thunderbolt Five, the port already on your Studio. Two cables double the bandwidth. macOS twenty six point two shipped it."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 14.0,
+          "specific": true,
+          "hits": [
+            "entity:Apple"
+          ],
+          "narration": "Move two: install the MLX build with JACCL. You want version zero point thirty point one or later. MLX is Apple's framework for models on Apple silicon. JACCL is the collectives layer: two Macs talking as one cluster."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 15.0,
+          "specific": true,
+          "hits": [
+            "entity:Muse Spark Open"
+          ],
+          "narration": "Move three: launch one command with a hostfile, a list of your two machines. It shards the model across both automatically. Tensor mode slices every layer, and both Macs compute each layer together, in sync. Muse Spark Open writes back at twenty four point nine nine tokens, word-pieces, a second."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "entity:Mac"
+          ],
+          "narration": "Pipeline mode splits by depth, each Mac holding consecutive layers. Like an assembly line. Mistral Medium writes at the same speed on one Mac or two, pipelined."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 8.5,
+          "specific": true,
+          "hits": [
+            "entity:NVIDIA"
+          ],
+          "narration": "A real line fills up and gets faster; decode never does. Capacity, not speed. Same trick NVIDIA clusters have run for years. The desk cable is the new part."
+        },
+        {
+          "id": "s08",
+          "role": "payoff_close",
+          "est_duration_s": 6.0,
+          "specific": false,
+          "hits": [],
+          "narration": "The unit of local AI is no longer the machine. It is the desk."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.2,
+      "words": 265,
+      "sentences": 29,
+      "est_speech_s": 91.4,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves, and Muse Spark Open runs on your desk tonight. Eight hundred sixteen billion parameters. Your Mac hit its memory ceiling; tonight you go through it. Quantization to four bits shrinks the weights. Even quartered, they take about four hundred ninety-three gigabytes of model weights. Add working memory and it tips past what one Studio holds. It does not fit. Move one: cable the pair and switch on RDMA, remote direct memory access. One Mac writes straight into the other's memory. The wire is Thunderbolt Five, the port already on your Studio. Two cables double the bandwidth. macOS twenty six point two shipped it. Move two: install the MLX build with JACCL. You want version zero point thirty point one or later. MLX is Apple's framework for models on Apple silicon. JACCL is the collectives layer: two Macs talking as one cluster. Move three: launch one command with a hostfile, a list of your two machines. It shards the model across both automatically. Tensor mode slices every layer, and both Macs compute each layer together, in sync. Muse Spark Open writes back at twenty four point nine nine tokens, word-pieces, a second. Pipeline mode splits by depth, each Mac holding consecutive layers. Like an assembly line. Mistral Medium writes at the same speed on one Mac or two, pipelined. A real line fills up and gets faster; decode never does. Capacity, not speed. Same trick NVIDIA clusters have run for years. The desk cable is the new part. The unit of local AI is no longer the machine. It is the desk.",
+    "on_screen": "Muse Spark Open, on your desk tonight | Muse Spark Open, on your desk tonight | 816B parameters | 493GB | NVFP4: a four-bit format | RDMA = remote direct memory access | JACCL, pronounced jackal | mlx.launch --hostfile hosts.json | 24.99 tokens/s | capacity, not speed | same trick, new cable | The unit is the desk."
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/.local-builds/2026-10-16-mlx-distributed-inference-two/draft-A/storyboard.json",
+        "scenes": 8,
+        "fk_grade": 5.2,
+        "words": 265,
+        "est_speech_s": 91.4,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s05: narration ~51 words (~18s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s05: narration ~51 words (~18s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 5.2 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s03: 'RDMA' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'MLX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'JACCL' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'MLX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'JACCL' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-16-mlx-distributed-inference-two-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.286,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Muse Spark Open",
+          "Mac"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Muse Spark Open"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 6,
+        "total": 8
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
