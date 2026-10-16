@@ -1,0 +1,227 @@
+{
+  "slug": "2026-10-16-mlx-distributed-inference-two",
+  "topic": "MLX distributed inference: two Mac Studios as one",
+  "generated_at": "2026-10-16T11:40:58Z",
+  "depth": "standard",
+  "thesis": "Two Mac Studios wired together with Thunderbolt cables now act as one inference machine: macOS 26.2's RDMA and MLX's JACCL let a single model's memory span both, running the 816B-parameter Muse Spark Open at up to 24.99 tokens per second where no single Mac can hold it.",
+  "explanation_path": "Start with the wall every local runner already knows: a model's weights have to sit in memory before it can think, and the biggest open model of the moment, Muse Spark Open, holds 816B parameters, about 493GB even after 4-bit quantization, and one Mac Studio tops out at 512GB of unified memory, so once working memory is added the model cannot fit. Establish the memory ceiling before the second machine appears, so the problem is clearly capacity, not speed. Then split the model two ways: by depth, where each Mac holds consecutive layers and hands activations to its neighbor (pipeline parallelism, minimal code changes, decode speed essentially unchanged), and by width, where each Mac holds a slice of every layer and they compute in lockstep (tensor parallelism, faster, but communication-hungry). That hunger motivates the plumbing: macOS 26.2 added RDMA over Thunderbolt 5 so one Mac writes into another's memory with little overhead, and MLX v0.30.1 and later added the JACCL collectives that coordinate the group. With the plumbing named, the recipe collapses to one command, mlx.launch with a JSON hostfile, and the model is sharded across all devices automatically. Land the honest catch before the payoff: pipelined decode runs at single-machine speed, so two Studios buy capacity, not speed; speed comes from tensor parallelism, and only because the cable is fast. Close on the reframe: the unit of local AI is no longer the machine, it is the desk.",
+  "claims": [
+    {
+      "claim": "Apple published the distributed-inference recipe on 2026-10-15, showing how to run Muse Spark Open, nearly a trillion parameters, right from your desk with the latest version of MLX, released that day.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "The model cannot fit on any single machine: Muse Spark Open would require more than 1.6TB of RAM in BF16 for the parameters alone, and about 493GB in 4-bit NVFP4, while a single Mac Studio tops out at 512GB of unified memory.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "MLX splits a model two ways: pipeline parallelization splits it across depth and requires only minimal code changes, while tensor parallelization splits it across width and needs a very low-latency link like Thunderbolt RDMA to yield any speedup.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "Muse Spark Open decodes at 15.74 tokens per second on two M5 Ultras with pipeline parallelization, 24.99 with tensor parallelization, and 36.73 on four with tensor parallelization, at a context size of 8,192 tokens.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "Pipeline parallelization does not speed up generation: Mistral Medium 3.5 decodes at 7.70 tokens per second on one M5 Ultra and 7.70 on two in pipeline, and Qwen 3.8 goes 19.69 to 19.44, because the layers still run sequentially.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "Tensor parallelization speeds up models that already fit: Qwen 3.8 goes from 19.69 tokens per second on one M5 Ultra to 33.27 on two and 50.89 on four.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "macOS 26.2 shipped the interconnect this needs: its release notes say RDMA over Thunderbolt enables low-latency communication between Thunderbolt 5 hosts for use cases including distributed AI inference using MLX.",
+      "source_url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_2-release-notes",
+      "source_title": "macOS Tahoe 26.2 Release Notes",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "MLX v0.30.1 and later builds on the macOS 26.2 RDMA driver and provides the communication collectives named jaccl, pronounced jackal.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "Running it is one command: launch mlx_lm.server through mlx.launch with a hostfile and the model is automatically sharded across all available devices, with speed-ups up to three times with four nodes.",
+      "source_url": "https://developer.apple.com/videos/play/wwdc2026/232/",
+      "source_title": "Run local agentic AI on the Mac using MLX (WWDC26 session 232)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    },
+    {
+      "claim": "Apple's two-Mac setup uses two Thunderbolt cables between the pair to double the link bandwidth, and on four M5 Ultras at a 65,536-token context two cables per link cut time to first token from about 50.5s to 40.6s.",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-16"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Muse Spark Open size (total parameters, active parameters)",
+      "value": "816B total parameters (42B active)",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Memory footprint in 4-bit NVFP4",
+      "value": "about 493GB",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Memory needed in native BF16, parameters alone",
+      "value": "more than 1.6TB of RAM",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Decode speed, two M5 Ultras, pipeline parallelization, 8,192-token context",
+      "value": "15.74 tokens per second",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Decode speed, two M5 Ultras, tensor parallelization, 8,192-token context",
+      "value": "24.99 tokens per second",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Decode speed, four M5 Ultras, tensor parallelization, 8,192-token context",
+      "value": "36.73 tokens per second",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Qwen 3.8 decode, one M5 Ultra vs two in tensor parallelization",
+      "value": "19.69 vs 33.27 tokens per second",
+      "source_url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    },
+    {
+      "label": "Thunderbolt 5 port bandwidth (Mac Studio)",
+      "value": "up to 120Gb/s",
+      "source_url": "https://www.apple.com/mac-studio/specs/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Assembly line",
+      "mapping": "Pipeline parallelism as an assembly line: each Mac is one station holding a consecutive block of layers and passes the half-finished work down the line.",
+      "limit": "A real line works on many items at once and so speeds output, but pipelined decode pushes each token through both stations in sequence, so it fits bigger models without making generation faster."
+    },
+    {
+      "vehicle": "Two cooks chopping one recipe",
+      "mapping": "Tensor parallelism gives each cook half of every ingredient (a slice of every layer) and they hand pieces back and forth constantly; the wide pass-through counter is Thunderbolt RDMA.",
+      "limit": "If the counter is narrow (plain Ethernet), the handing costs more than the parallel chopping saves, which is why only the low-latency link makes it worth it."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Two Mac Studios behave like one Mac with double the memory and double the speed.",
+      "reality": "Pipeline parallelism fits bigger models but leaves decode speed very similar to a single machine: Mistral Medium 3.5 decodes at 7.70 tokens per second on one M5 Ultra and 7.70 on two in pipeline."
+    },
+    {
+      "myth": "You need data-center networking to spread one model across machines.",
+      "reality": "macOS 26.2 added RDMA over Thunderbolt 5, plain cables between machines on a desk, and MLX's docs say JACCL reaches communication latency an order of magnitude lower than the ring backend."
+    },
+    {
+      "myth": "This is a new Apple invention.",
+      "reality": "Tensor and pipeline parallelism are how NVIDIA clusters already split models; MLX's own docs call JACCL an obvious pun to Nvidia's NCCL -- the Mac is getting its own NCCL, not a new law of physics."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "MLX",
+      "definition": "Apple's open-source array framework for Apple silicon that runs and trains models using the chip's unified memory."
+    },
+    {
+      "term": "unified memory",
+      "definition": "Memory on an Apple silicon Mac shared by the CPU and GPU, so a model's weights sit in one pool the GPU can read directly."
+    },
+    {
+      "term": "RDMA (Remote Direct Memory Access)",
+      "definition": "A way for one machine to read and write another machine's memory directly, skipping most CPU and operating-system overhead."
+    },
+    {
+      "term": "Thunderbolt 5",
+      "definition": "The latest Thunderbolt port (up to 120Gb/s) that since macOS 26.2 also carries RDMA traffic between Macs."
+    },
+    {
+      "term": "JACCL",
+      "definition": "Apple's open-source collective communication library, pronounced jackal, that coordinates Macs over RDMA for MLX."
+    },
+    {
+      "term": "pipeline parallelism",
+      "definition": "Splitting a model by depth so each machine holds a consecutive slice of the layers and passes activations to the next machine."
+    },
+    {
+      "term": "tensor parallelism",
+      "definition": "Splitting a model by width so every machine holds a fraction of every layer and they compute in lockstep."
+    },
+    {
+      "term": "tokens per second (decode speed)",
+      "definition": "How fast a model generates new text after it has read your prompt."
+    },
+    {
+      "term": "time to first token (TTFT)",
+      "definition": "How long you wait for the model's first word, dominated by reading the prompt."
+    },
+    {
+      "term": "quantization (4-bit, NVFP4)",
+      "definition": "Storing model weights in fewer bits so they take less memory, at some cost in precision."
+    },
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model design where only a fraction of the experts, and thus parameters, is active for any given token."
+    },
+    {
+      "term": "hostfile",
+      "definition": "A small JSON file listing each Mac's SSH name and RDMA connections that tells mlx.launch how to reach every machine."
+    }
+  ],
+  "unverified": [
+    "The achieved sustained throughput of RDMA over Thunderbolt 5 was not measured in any page fetched this session; a community-reported 3.5-3.8 GB/s file-transfer figure appeared only in unfetched search snippets, so the script should not quote a cable speed beyond the port spec of up to 120Gb/s.",
+    "Whether the recipe works on non-Studio Macs (MacBook Pro, Mac mini) is not stated in any fetched page; every fetched demo uses Mac Studio with M3 Ultra or M5 Ultra.",
+    "The price of a two-512GB-Mac-Studio setup was not verified from a fetched Apple page this session.",
+    "Hacker News reception of the Apple post was minimal when fetched (6 points, 1 comment), too thin to characterize community reaction.",
+    "No first-party measurement on our own hardware exists yet; any 'what it is like to run' line must wait for one."
+  ],
+  "suggested_outline": "Hook: a nearly-trillion-parameter model running on a desk, Muse Spark Open generating over 36 tokens per second spread across four Mac Studios, and 24.99 on just two.\nThe wall and the split: 816B parameters need about 493GB even quantized and one Studio tops out at 512GB of unified memory, so split the model by depth (each Mac holds half the layers) or by width (each Mac holds a slice of every layer) and the pair becomes one memory pool.\nThe recipe and the catch: macOS 26.2 RDMA over Thunderbolt plus MLX's JACCL make it a one-command launch that shards automatically, but pipelining buys capacity, not speed -- Qwen 3.8 sits at 19.44 tokens per second pipelined versus 19.69 on one machine, while tensor parallelism takes it to 33.27.",
+  "notes": "Conflict, RDMA enablement: WWDC26 session 233 says to enable RDMA from Settings, while the MLX 0.32.4 docs say it has to be done in macOS recovery by running rdma_ctl enable; trust the MLX docs (maintained, more specific). Conflict, MLX_METAL_FAST_SYNCH=1: Apple's post sets it in every launch command, but the MLX docs warn it can lead to deadlock and leave the GPU wedged, so it is off by default. Referents: all decode numbers are from the 8,192-token context column (batch 1, 128 generated tokens); the 50.5s to 40.6s TTFT comparison is at 65,536-token context on four M5 Ultras; Muse Spark Open is MoE in NVFP4, so its speeds are not comparable to the dense models'. Freshness chain: Apple post dated 2026-10-15 with 'the latest version of MLX, released today'; MLX v0.32.4 released 14 Oct 2026 including the jaccl second-cable-for-the-mesh change; mlx-lm v0.32.2 released 2026-10-16; the Hacker News thread appeared about 8 hours before this brief.",
+  "viewer_situation": "You run big models on one Mac with MLX and you have hit the ceiling where the model you want needs more memory than your machine has.",
+  "has_process": true,
+  "process_steps": [
+    "Connect the two Macs directly with Thunderbolt 5 cables, two cables between the pair to double the link bandwidth.",
+    "Enable RDMA on each machine (in macOS recovery run rdma_ctl enable per the MLX docs; Apple's WWDC session shows a Settings toggle).",
+    "Generate the cluster's hostfile with mlx.distributed_config --hosts <names> --over thunderbolt --backend jaccl --auto-setup.",
+    "Launch one command: mlx.launch --hostfile hostfile.json --backend jaccl --env MLX_METAL_FAST_SYNCH=1 -- mlx_lm.server --model meta-models/Muse-Spark-Open-816B-A42B-NVFP4 --port 8080.",
+    "Point any OpenAI-compatible client at http://127.0.0.1:8080/v1."
+  ],
+  "objection": "Tensor and pipeline parallelism are exactly how NVIDIA clusters already split models, and a 120Gb/s Thunderbolt link is no NVLink, so two Studios is an expensive way to buy memory one bigger machine would hold -- and pipeline mode does not even generate faster."
+}
