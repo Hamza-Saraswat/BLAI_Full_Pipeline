@@ -35,3 +35,7 @@ blotato_post_id: ""
 
 ## Build journal
 
+
+## Decisions
+- Chosen as pick 2: opportunity 77.6, Apple source 7 h old, clean lane rotation (explainer vs yesterday myth-bust/news-react).
+- Format smooth-explainer: mechanism that needs a carried worked example; fit beats the no-shared-band soft constraint, noted in the ideas note.

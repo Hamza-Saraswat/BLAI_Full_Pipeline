@@ -35,3 +35,7 @@ blotato_post_id: ""
 
 ## Build journal
 
+
+## Decisions
+- Chosen as pick 1: highest opportunity of the day (91.4, deepest autocomplete depth 31) with a fresh release peg (unsloth v0.1.908-beta, 16 h old).
+- Format smooth-explainer: a three-move worked example needs the long band; classic had run three straight days.
