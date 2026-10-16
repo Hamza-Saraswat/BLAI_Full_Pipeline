@@ -2,14 +2,14 @@
 slug: 2026-10-15-ollama-v0-40-5-ports-its-mlx-k
 workspace: shorts
 title: Ollama v0.40.5 ports its MLX kernels to CUDA
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-15
-updated: "2026-10-15T11:10:00Z"
+updated: "2026-10-16T13:35:47Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Format: classic per selection-rules.md (a release: one fact, one consequence, actionable in one sentence).
 
 ## Build journal
-
+- 2026-10-16T13:35:47Z 2026-10-16T13:35:47Z expired: not from today's picks (2026-10-16); the factory carries no backlog
