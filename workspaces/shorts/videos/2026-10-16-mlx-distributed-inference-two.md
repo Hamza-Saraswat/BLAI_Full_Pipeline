@@ -2,21 +2,21 @@
 slug: 2026-10-16-mlx-distributed-inference-two
 workspace: shorts
 title: MLX distributed inference on two Macs
-status: scheduled
+status: published
 pillar: explainer
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-16
-updated: "2026-10-16T14:46:12Z"
+updated: "2026-10-16T16:04:10Z"
 publish_slot: "2026-10-16T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=8oN-lQZF1-8"
 blotato_post_id: f920da11-feba-4a24-9bec-05a0596ee85f
 ---
 # MLX distributed inference: two Mac Studios as one
@@ -44,6 +44,7 @@ blotato_post_id: f920da11-feba-4a24-9bec-05a0596ee85f
 - 2026-10-16T13:18:46Z build done, status review
 - 2026-10-16T14:42:33Z telegram approve (approved_at 2026-10-16T14:42:33Z)
 - 2026-10-16T14:46:12Z 08-publish ok 2s
+- 2026-10-16T16:04:10Z published https://www.youtube.com/watch?v=8oN-lQZF1-8
 
 ## Decisions
 - Chosen as pick 2: opportunity 77.6, Apple source 7 h old, clean lane rotation (explainer vs yesterday myth-bust/news-react).
