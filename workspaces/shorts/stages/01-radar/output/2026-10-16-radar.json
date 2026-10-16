@@ -1,0 +1,945 @@
+[
+  {
+    "id": "github-37a0ac49a2",
+    "title": "unsloth v0.1.908-beta: NVIDIA Nemotron 3.5 + Meta Muse Spark Open",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+    "source": "github",
+    "published_at": "2026-10-15T18:50:55Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.908-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7917,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "NVIDIA",
+      "Nemotron",
+      "Meta"
+    ],
+    "summary": "Run NVIDIA's new Nemotron 3.5 models and Meta's new Muse Spark Open locally in Unsloth. New: text-diffusion LLMs, DeepSpeed training and better prompt caching for coding agents. ## Highlights - **NVIDIA Nemotron 3.5 Bolt**: Run on 24 GB of memory. [Guide](https://unsloth.ai/docs/models/nemotron-3.5-",
+    "why_now": "Shipped: unslothai/unsloth v0.1.908-beta released, 16 h ago",
+    "score": 62
+  },
+  {
+    "id": "github-907bfd52f0",
+    "title": "llama.cpp b11693",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11693",
+    "source": "github",
+    "published_at": "2026-10-16T10:56:43Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11693",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9989,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> [SYCL]: fix memory errors in mul_mat, split buffer, host pool (#29889) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/56630304> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/r",
+    "why_now": "Shipped: ggml-org/llama.cpp b11693 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-aebf02ca6a",
+    "title": "llama.cpp b11690",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11690",
+    "source": "github",
+    "published_at": "2026-10-16T10:19:29Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11690",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.99,
+      "age_h": 0.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> common : read ngram cache parts by reference instead of copying (#30061) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/56620013> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp",
+    "why_now": "Shipped: ggml-org/llama.cpp b11690 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-bdc206a08b",
+    "title": "llama.cpp b11688",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11688",
+    "source": "github",
+    "published_at": "2026-10-16T10:03:55Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11688",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9863,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> cpu : reduce AVX2 tiled accumulators together (#30296) Assisted-by: Codex </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/56615050> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cp",
+    "why_now": "Shipped: ggml-org/llama.cpp b11688 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-f13ac0bb4d",
+    "title": "ollama v0.40.5",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5",
+    "source": "github",
+    "published_at": "2026-10-14T19:45:22Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.5",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.5672,
+      "age_h": 39.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "explainer"
+    },
+    "products": [
+      "Ollama",
+      "NVIDIA",
+      "Nemotron"
+    ],
+    "summary": "## NVIDIA Nemotron 3.5 Super [NVIDIA Nemotron 3.5 Super](https://ollama.com/library/nemotron-3.5-super) is a vision-language model for coding, reasoning, tool use, and document understanding. It pairs a 120B-parameter hybrid Mamba-2/Transformer mixture-of-experts backbone (12B active per token) with",
+    "why_now": "Shipped: ollama/ollama v0.40.5 released, 39 h ago",
+    "score": 49
+  },
+  {
+    "id": "github-e812566e88",
+    "title": "transformers v5.20.0: Release v5.20.0",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.0",
+    "source": "github",
+    "published_at": "2026-10-15T18:05:36Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.20.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7831,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Meta",
+      "group": "news-react"
+    },
+    "products": [
+      "Meta"
+    ],
+    "summary": "# Release v5.20.0 ## New Model additions ### Muse Spark Open <img width=\"2400\" height=\"1296\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bf34ea27-0edf-4ded-ba6f-905b04096126\" /> Muse Spark Open is a multimodal mixture-of-experts model from Meta that takes text, images, audio, and vid",
+    "why_now": "Shipped: huggingface/transformers v5.20.0 released, 17 h ago",
+    "score": 47
+  },
+  {
+    "id": "hn-9c5a34aec3",
+    "title": "Show HN: Just gave Claude Code the website and ad budget to see what it would do",
+    "url": "https://snitch.alphaventure.com/gate.php",
+    "source": "hn",
+    "published_at": "2026-10-15T18:00:51Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 4,
+      "signal": 0.379,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.321
+      },
+      "decay": 0.7822,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "myth-bust"
+    },
+    "products": [
+      "Claude",
+      "Google"
+    ],
+    "summary": "I build websites for a living. Lately, it&#x27;s more about prompting than actually writing the code (the art part is still there). So I decided to leave that part to Claude too and see what it would come up with. So far, I have given it<p>- A baseline website - Full access to Google, X, LinkedIn an",
+    "why_now": "Shipped: 9 points, 4 comments on HN, 17 h ago",
+    "score": 40
+  },
+  {
+    "id": "hn-34bf133078",
+    "title": "Muse Spark Open, the Most Capable US Open‑Weight Model to Date",
+    "url": "https://research.meta.ai/blog/muse-spark-open",
+    "source": "hn",
+    "published_at": "2026-10-15T16:58:30Z",
+    "signals": {
+      "points": 71,
+      "num_comments": 1,
+      "signal": 0.566,
+      "signal_parts": {
+        "points": 0.749,
+        "comments": 0.138
+      },
+      "decay": 0.7706,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 71 points, 1 comments on HN, 18 h ago",
+    "score": 37
+  },
+  {
+    "id": "hn-98e6a11f87",
+    "title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+    "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+    "source": "hn",
+    "published_at": "2026-10-16T03:34:45Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 1,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.138
+      },
+      "decay": 0.8981,
+      "age_h": 7.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:MLX",
+      "group": "how-to"
+    },
+    "products": [
+      "MLX",
+      "Mac Studio"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 1 comments on HN, 7 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-a81600533a",
+    "title": "Mistral Timestral",
+    "url": "https://github.com/mistralai/timestral/",
+    "source": "hn",
+    "published_at": "2026-10-15T15:55:37Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 0,
+      "signal": 0.269,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.0
+      },
+      "decay": 0.759,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 8 points, 0 comments on HN, 19 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-b2d019fdd8",
+    "title": "DeepSeek v4.1 Flash is now free in OpenCode",
+    "url": "https://twitter.com/opencode/status/2110635747648909472",
+    "source": "hn",
+    "published_at": "2026-10-15T12:00:08Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7172,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 23 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-b8a89667dd",
+    "title": "Mistral announces Timestral: SOTA time-series foundation models",
+    "url": "https://mistral.ai/news/timestral/",
+    "source": "hn",
+    "published_at": "2026-10-16T07:57:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9567,
+      "age_h": 3.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [],
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 3 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-6dc9ce4a03",
+    "title": "Timestral open weight timeseries foundation models from Mistral",
+    "url": "https://huggingface.co/collections/mistralai/timestral",
+    "source": "hn",
+    "published_at": "2026-10-16T05:54:00Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9287,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 5 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-aa5fd40b01",
+    "title": "Show HN: Trustmux - Async tmux from your phone, now in Ubuntu, Debian, Fedora",
+    "url": "https://news.ycombinator.com/item?id=50115537",
+    "source": "hn",
+    "published_at": "2026-10-16T08:06:27Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9588,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I&#x27;m Dustin Kirkland, author of Byobu. I recently flew to Australia and kept nudging my Claude, Codex, and Bash jobs along back home from somewhere over the Pacific, at 700ms of latency.<p>That&#x27;s what Trustmux is for: secure, asynchronous access to your tmux or Byobu sessions from your phon",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-7a02470877",
+    "title": "If llama.cpp enables MoE to activate multiple experts",
+    "url": "https://www.openai-hub.com/news/1924/",
+    "source": "hn",
+    "published_at": "2026-10-15T21:08:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8184,
+      "age_h": 13.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 14 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d58f6112c1",
+    "title": "Same LLM, same input tokens, different answers on a MacBook and a Jetson",
+    "url": "https://kernwerk.org/blog/same-model-different-board/",
+    "source": "hn",
+    "published_at": "2026-10-15T20:09:27Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8068,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:MacBook",
+      "group": "news-react"
+    },
+    "products": [
+      "MacBook",
+      "Jetson"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-fe05b7b44d",
+    "title": "SGLang - High-performance serving framework for LLM's and multimodal models",
+    "url": "https://github.com/sgl-project/sglang",
+    "source": "hn",
+    "published_at": "2026-10-15T19:08:28Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7951,
+      "age_h": 15.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:SGLang",
+      "group": "how-to"
+    },
+    "products": [
+      "SGLang"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-413b5bc1cf",
+    "title": "Push-Based KV Transfer to Improve TTFT, TPOT for Disaggregated Inference in vLLM",
+    "url": "https://vllm.ai/blog/2026-10-14-nixl-push-connector",
+    "source": "hn",
+    "published_at": "2026-10-15T18:41:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.79,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-b0dfc6e776",
+    "title": "Show HN: RDST - A local agent that watches Postgres/MySQL for query regressions",
+    "url": "https://github.com/readysettech/rdst",
+    "source": "hn",
+    "published_at": "2026-10-15T18:09:01Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.7838,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "We noticed during the course of many many years of DBA related work that fixes to database issues and queries are always reactive. An entire database can fall over extremely quickly when an unbounded query grows without warning.<p>Traditionally, DBAs hear complaints of slowness and follow a methodic",
+    "why_now": "Broke: 6 points, 2 comments on HN, 17 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-ecb4475a44",
+    "title": "Show HN: Face, a browser window over agents that keeps the plan in files",
+    "url": "https://face.kodel.com.br",
+    "source": "hn",
+    "published_at": "2026-10-15T12:29:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7222,
+      "age_h": 22.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude",
+      "Copilot"
+    ],
+    "summary": "Hi HN, I&#x27;m the author. FACE is a single Go binary. You run `face` in the folder that holds your projects and it serves a page on 127.0.0.1. It speaks ACP (the Agent Client Protocol that Zed published) to the official CLI of the agent you already use: Claude Code, Codex, Copilot, Cursor, OpenCod",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-29771baf87",
+    "title": "Show HN: Endo - A Higher-Order Harness",
+    "url": "https://github.com/longsurf-ai/endo",
+    "source": "hn",
+    "published_at": "2026-10-15T21:32:10Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.823,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Endo is a Higher-Order Harness (HOH).<p>From the easiest concept to understand to the more complex ones, Endo gives you: * A single, simple UI to use any agent provider with your existing subscriptions, and hot-swap agents right in the middle of a session. * An orchestration layer, which I call HOH,",
+    "why_now": "Shipped: 6 points, 0 comments on HN, 13 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-c047f5217e",
+    "title": "Show HN: Asked LLM to show the most stereotypical man/woman for each country",
+    "url": "https://anvaka.github.io/imaginary-faces/#",
+    "source": "hn",
+    "published_at": "2026-10-15T21:42:12Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.825,
+      "age_h": 13.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 13 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-5b0d9f116e",
+    "title": "Show HN: Guess the LLM - read an answer and guess which model wrote it",
+    "url": "https://guessthellm.com/",
+    "source": "hn",
+    "published_at": "2026-10-15T21:53:54Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8274,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I made a game to test if people can really tell AI models apart.<p>Models from all the frontier labs answer the same question. You read one answer and guess who wrote it. You can also pick just the models you want to compare.<p>I made it and still only get 5&#x2F;10 lol. Curious how you all d",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 13 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-5e2d2d15b0",
+    "title": "Ask HN: Frontier Capability on Average Computers",
+    "url": "https://news.ycombinator.com/item?id=50109846",
+    "source": "hn",
+    "published_at": "2026-10-15T20:36:30Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8121,
+      "age_h": 14.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:gpu",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I really want to find a way to get frontier-level intelligence on local hardware.<p>I think some really cool ways to get this have been done already like the technique of spreading an LLMs weights across a fast-enough SSD and then only serving up an expert at a time on the GPU&#x2F;SoC.<p>I have thi",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 14 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-cf79adcc9b",
+    "title": "AI as a part of capitalism - the right way to go",
+    "url": "https://news.ycombinator.com/item?id=50115335",
+    "source": "hn",
+    "published_at": "2026-10-16T07:38:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9523,
+      "age_h": 3.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "The way things go now are obsiously flawed.<p>1. AI companies objective is to get rid of a very large part of jobs, thus converting a large part of consumers into jobless people - who are very bad at consuming.<p>2. They also take other people&#x27;s and companie&#x27;s content for free, turning the",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 3 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-f13bb69364",
+    "title": "A tool to compare LLM benchmarks",
+    "url": "https://philippdubach.com/posts/model-atlas-capability-weights/",
+    "source": "hn",
+    "published_at": "2026-10-15T23:09:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8425,
+      "age_h": 11.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 1 comments on HN, 12 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-18b9c83b9d",
+    "title": "Show HN: Turbo Lisp - A Common Lisp IDE for macOS and the Terminal",
+    "url": "https://gitlab.com/patchwork1-ai/turbolisp",
+    "source": "hn",
+    "published_at": "2026-10-15T21:00:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8168,
+      "age_h": 14.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "When Apple left Clozure Common Lisp behind by switching to Apple Silicon, I started kicking around the idea of building my own Lisp&#x2F;Objective-C bridge by combining Apple Documentation, the clang AST, and introspection of the Objective-C runtime.<p>There was a CCL porting effort, but I really wa",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-1e96a75eac",
+    "title": "A 4B LLM learns to write tools that other LLMs can use",
+    "url": "https://tool-use-smith.github.io/",
+    "source": "hn",
+    "published_at": "2026-10-16T08:05:22Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9585,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-5ff9d31f45",
+    "title": "AI Coding Tools - Architecture, Local LLMs and SWE-Bench",
+    "url": "https://github.com/mahmoudsajjadi/awesome-ai-coding-tools",
+    "source": "hn",
+    "published_at": "2026-10-15T21:29:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8225,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 14 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-98eeb6a51e",
+    "title": "Show HN: Slop City, a FOSS game that embeds social media posts",
+    "url": "https://github.com/hollingsworthd/SLOP_CITY",
+    "source": "hn",
+    "published_at": "2026-10-15T19:48:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8028,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "Hi HN, I created this game with Codex Astra and Astra subagents. It went remarkably well. SLOP CITY is an autobiographical first-person lounge that embeds my TikTok posts. I use it to market my Digilore podcast app which is in the Apple App store.<p>However this submission is not a shameless plug, o",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hf-17d642994c",
+    "title": "Cloudflare/clef-omni",
+    "url": "https://huggingface.co/Cloudflare/clef-omni",
+    "source": "hf",
+    "published_at": "2026-10-09T04:10:22Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 123,
+      "downloads": 3650,
+      "trendingScore": 122.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.665,
+      "signal_parts": {
+        "trending": 0.633,
+        "likes": 0.698,
+        "downloads": 0.594
+      },
+      "decay": 0.0801,
+      "age_h": 174.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 123 likes, 3.6k downloads, trending score 122, created 2026-10-09",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 123 likes, 3.6k downloads, trending score 122, 7 d ago",
+    "score": 4
+  },
+  {
+    "id": "hf-13d2575360",
+    "title": "LiquidAI/d1-3B",
+    "url": "https://huggingface.co/LiquidAI/d1-3B",
+    "source": "hf",
+    "published_at": "2026-10-05T09:55:28Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 427,
+      "downloads": 17820,
+      "trendingScore": 178.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.78,
+      "signal_parts": {
+        "trending": 0.682,
+        "likes": 0.877,
+        "downloads": 0.708
+      },
+      "decay": 0.05,
+      "age_h": 265.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 427 likes, 17.8k downloads, trending score 178, created 2026-10-05",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 427 likes, 17.8k downloads, trending score 178, 11 d ago",
+    "score": 3
+  }
+]
