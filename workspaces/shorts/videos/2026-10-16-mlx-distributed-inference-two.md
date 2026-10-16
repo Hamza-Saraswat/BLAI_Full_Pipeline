@@ -2,14 +2,14 @@
 slug: 2026-10-16-mlx-distributed-inference-two
 workspace: shorts
 title: MLX distributed inference on two Macs
-status: review
+status: approved
 pillar: explainer
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-16
-updated: "2026-10-16T13:18:39Z"
+updated: "2026-10-16T14:42:33Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -42,6 +42,7 @@ blotato_post_id: ""
 - 2026-10-16T13:18:43Z 07-render ok 88.80s: 8 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 231
 - 2026-10-16T13:18:43Z 07-render ok 1451s
 - 2026-10-16T13:18:46Z build done, status review
+- 2026-10-16T14:42:33Z telegram approve (approved_at 2026-10-16T14:42:33Z)
 
 ## Decisions
 - Chosen as pick 2: opportunity 77.6, Apple source 7 h old, clean lane rotation (explainer vs yesterday myth-bust/news-react).
