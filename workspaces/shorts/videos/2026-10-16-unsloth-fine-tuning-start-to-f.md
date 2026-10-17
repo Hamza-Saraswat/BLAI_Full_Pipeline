@@ -2,14 +2,14 @@
 slug: 2026-10-16-unsloth-fine-tuning-start-to-f
 workspace: shorts
 title: Unsloth fine-tuning start to finish
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-16
-updated: "2026-10-16T11:09:04Z"
+updated: "2026-10-17T13:35:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-17T13:35:21Z 2026-10-17T13:35:21Z expired: not from today's picks (2026-10-17); the factory carries no backlog
 
 ## Decisions
 - Chosen as pick 1: highest opportunity of the day (91.4, deepest autocomplete depth 31) with a fresh release peg (unsloth v0.1.908-beta, 16 h old).
