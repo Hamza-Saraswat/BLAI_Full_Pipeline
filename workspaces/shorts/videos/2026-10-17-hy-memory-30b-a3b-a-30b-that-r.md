@@ -2,14 +2,14 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 workspace: shorts
 title: "Hy-Memory-30B-A3B: the memory writer"
-status: review
+status: approved
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-17
-updated: "2026-10-17T12:30:43Z"
+updated: "2026-10-17T13:15:54Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -42,3 +42,4 @@ blotato_post_id: ""
 - 2026-10-17T12:30:47Z 07-render ok 38.83s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 235
 - 2026-10-17T12:30:47Z 07-render ok 845s
 - 2026-10-17T12:30:49Z build done, status review
+- 2026-10-17T13:15:54Z telegram approve (approved_at 2026-10-17T13:15:54Z)
