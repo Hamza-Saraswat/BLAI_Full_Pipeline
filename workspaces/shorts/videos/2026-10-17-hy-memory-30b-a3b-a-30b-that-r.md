@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-brief]]
 - Script: [[stages/04-script/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-script]]
 - Package: [[stages/05-package/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -38,3 +38,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-17T12:14:57Z build start on gn100-83c4
+- 2026-10-17T12:16:39Z 06-voice ok 100s
