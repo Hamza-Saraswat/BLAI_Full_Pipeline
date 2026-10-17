@@ -2,14 +2,14 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 workspace: shorts
 title: "Hy-Memory-30B-A3B: the memory writer"
-status: building
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-17
-updated: "2026-10-17T12:14:57Z"
+updated: "2026-10-17T12:30:43Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-script]]
 - Package: [[stages/05-package/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-package]]
 - Voice: [[stages/06-voice/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -39,3 +39,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-17T12:14:57Z build start on gn100-83c4
 - 2026-10-17T12:16:39Z 06-voice ok 100s
+- 2026-10-17T12:30:47Z 07-render ok 38.83s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 235
+- 2026-10-17T12:30:47Z 07-render ok 845s
