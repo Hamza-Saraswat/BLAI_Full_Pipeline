@@ -1,0 +1,112 @@
+{
+  "slug": "2026-10-17-hy-memory-30b-a3b-a-30b-that-r",
+  "topic": "Hy-Memory-30B-A3B, the Tencent memory-writer model that runs locally",
+  "title": "Hy-Memory-30B-A3B: a 30B that remembers",
+  "description": "Hy-Memory-30B-A3B is Tencent's memory writer model. What it is, what it beats, and how it runs locally tonight. (working description; stage 05 overwrites)",
+  "hashtags": [
+    "#hymemory30ba3b",
+    "#localai",
+    "#tencent"
+  ],
+  "hook_text": "18 GB beats Claude at remembering",
+  "hook_candidates": [
+    "Eighteen gigabytes just beat Claude at remembering.",
+    "Your model isn't forgetful. Its memory was never written.",
+    "Tencent shipped a model that only remembers.",
+    "Fifty-five point four nine beats fifty-four point six two.",
+    "You chat. It forgets. That was the whole problem.",
+    "Hy-Memory-30B-A3B: the 30B that never talks to you.",
+    "A three-billion-active model just matched Claude's memory.",
+    "Stop paying Claude to take notes.",
+    "Your local model needs a secretary, not a bigger brain.",
+    "Thirty billion parameters for one job: remembering."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 36,
+  "narration_full": "Eighteen gigabytes just beat Claude at remembering. Tencent's Hy-Memory has one job. It writes what your assistant remembers. Your local model forgets you between chats. Frameworks like mem zero keep a memory bank, notes stored outside the model. A frontier model wrote those notes. Hy-Memory takes that job. It never chats; it decides what to keep and what to overwrite. On the memory tests it scores fifty-five point five percent. Claude Opus five scores fifty-four point six. Catch: the scores are Tencent's own. Half are statistical ties. The weights are free; that eighteen-gigabyte file runs tonight. Remembering stopped being a bigger brain. It's a small service beside the model you already run.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Eighteen gigabytes just beat Claude at remembering. Tencent's Hy-Memory has one job. It writes what your assistant remembers.",
+      "on_screen_text": "18 GB beats Claude at remembering",
+      "visual_brief": "Frame 1 finished and legible; motion onset at 0.4 s: the number scales up. Frame 1 is finished and legible: giant amber \"18 GB\" centered in the 900x1160 safe area, white subline beneath, dark background. At 0.4 s the number scales up slightly while a thin amber underline rises under the subline, timed to \"just beat Claude\". Only these two elements move.",
+      "est_duration_s": 5.6
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Your local model forgets you between chats. Frameworks like mem zero keep a memory bank, notes stored outside the model.",
+      "on_screen_text": "Mem0 keeps a bank | outside the model",
+      "visual_brief": "A chat-bubble icon labeled \"your model\" sits left of a notebook labeled \"memory bank\". On \"forgets you between chats\" the bubble fades to grey; on \"notes stored outside the model\" a dotted path rises from bubble to notebook. Entrances are fade and rise only, onset after 0.3 s.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A frontier model wrote those notes. Hy-Memory takes that job. It never chats; it decides what to keep and what to overwrite.",
+      "on_screen_text": "frontier wrote notes | Hy-Memory takes over | never chats",
+      "visual_brief": "Short text chips rise one at a time in a centered stack: \"frontier model wrote the notes\", then \"Hy-Memory takes the job\", then \"never chats\". Stagger so at most two chips animate at once. The amber highlight lands on \"Hy-Memory\" exactly on \"takes that job\".",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "On the memory tests it scores fifty-five point five percent. Claude Opus five scores fifty-four point six.",
+      "on_screen_text": "Hy-Memory 55.49% | Claude Opus 5 54.62%",
+      "visual_brief": "Two horizontal bars scale from zero on \"scores fifty-five point five percent\": an amber bar to 55.49 labeled Hy-Memory, a grey bar to 54.62 labeled Claude Opus 5. The amber bar edges past grey precisely on \"fifty-four point six\". Both shown numbers are spoken in this scene.",
+      "est_duration_s": 5.3
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Catch: the scores are Tencent's own. Half are statistical ties. The weights are free; that eighteen-gigabyte file runs tonight.",
+      "on_screen_text": "Tencent's own scores | half are ties | 18 GB GGUF",
+      "visual_brief": "A two-cell grid fades in on \"the scores are Tencent's own\": left cell reads \"Tencent's own scores\", right cell \"half are statistical ties\" over two equal mini-bars. On \"the weights are free\" the grid fades and a single file chip labeled \"18 GB GGUF\" rises, timed to \"eighteen-gigabyte file runs tonight\".",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Remembering stopped being a bigger brain. It's a small service beside the model you already run.",
+      "on_screen_text": "chat model + memory writer",
+      "visual_brief": "On \"stopped being a bigger brain\" one large grey box fades out; on \"small service beside the model you already run\" two small boxes rise side by side, grey \"chat model\" and amber \"memory writer\". In the final 0.5 s the amber box settles into a centered wordmark, echoing the hook's amber-on-dark frame.",
+      "est_duration_s": 5.0
+    }
+  ],
+  "notes_for_review": "",
+  "tags": [
+    "hy-memory-30b-a3b",
+    "hy memory 30b",
+    "tencent hy memory",
+    "memory writer model",
+    "mem0",
+    "memos",
+    "local llm memory",
+    "llm memory framework",
+    "agent memory",
+    "run llm locally",
+    "llama.cpp gguf",
+    "q4_k_m gguf",
+    "mlx model",
+    "tencent hunyuan",
+    "local ai memory"
+  ],
+  "hook_pattern": "number-shock"
+}
