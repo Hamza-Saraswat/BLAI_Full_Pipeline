@@ -2,8 +2,9 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 title: "Hy-Memory-30B-A3B: the memory writer"
 published_slot: "2026-10-17T11:00:00-05:00"
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=Q_WF4TYjz68"
 blotato_post_id: ad5a30e7-7e11-4365-8de4-b5c647ca6b81
+updated: "2026-10-17T16:04:10Z"
 ---
 # Hy-Memory-30B-A3B: the memory writer
 

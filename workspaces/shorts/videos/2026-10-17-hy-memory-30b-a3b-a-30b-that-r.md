@@ -2,21 +2,21 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 workspace: shorts
 title: "Hy-Memory-30B-A3B: the memory writer"
-status: scheduled
+status: published
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-17
-updated: "2026-10-17T13:16:11Z"
+updated: "2026-10-17T16:04:10Z"
 publish_slot: "2026-10-17T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=Q_WF4TYjz68"
 blotato_post_id: ad5a30e7-7e11-4365-8de4-b5c647ca6b81
 ---
 # Hy-Memory-30B-A3B: a 30B that remembers
@@ -44,3 +44,4 @@ blotato_post_id: ad5a30e7-7e11-4365-8de4-b5c647ca6b81
 - 2026-10-17T12:30:49Z build done, status review
 - 2026-10-17T13:15:54Z telegram approve (approved_at 2026-10-17T13:15:54Z)
 - 2026-10-17T13:16:12Z 08-publish ok 2s
+- 2026-10-17T16:04:10Z published https://www.youtube.com/watch?v=Q_WF4TYjz68
