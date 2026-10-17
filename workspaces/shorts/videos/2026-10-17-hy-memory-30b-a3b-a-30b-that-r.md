@@ -2,22 +2,22 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 workspace: shorts
 title: "Hy-Memory-30B-A3B: the memory writer"
-status: approved
+status: scheduled
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-17
-updated: "2026-10-17T13:15:54Z"
-publish_slot: ""
+updated: "2026-10-17T13:16:11Z"
+publish_slot: "2026-10-17T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: ad5a30e7-7e11-4365-8de4-b5c647ca6b81
 ---
 # Hy-Memory-30B-A3B: a 30B that remembers
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-package]]
 - Voice: [[stages/06-voice/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-voice]]
 - Render: [[stages/07-render/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-17-hy-memory-30b-a3b-a-30b-that-r-publish]]
 
 ## Decisions
 - 05-package: searchable title chosen (autocomplete depth 44 makes this a search-surface topic); rubric 100/100; description leads with the memory-writer reframe and names LFM2.5-24B-A2B as closest video; contains_synthetic_media false; original_insight states the never-chats inversion.
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-10-17T12:30:47Z 07-render ok 845s
 - 2026-10-17T12:30:49Z build done, status review
 - 2026-10-17T13:15:54Z telegram approve (approved_at 2026-10-17T13:15:54Z)
+- 2026-10-17T13:16:12Z 08-publish ok 2s
