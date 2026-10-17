@@ -2,19 +2,19 @@
 slug: 2026-10-17-hy-memory-30b-a3b-a-30b-that-r
 workspace: shorts
 title: "Hy-Memory-30B-A3B: the memory writer"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-17
-updated: "2026-10-17T12:14:33Z"
+updated: "2026-10-17T12:14:57Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - 03-research: angle confirmed as picked, slug unchanged (unattended checkpoint). Ten sources fetched (6 primary, 2 docs, 2 benchmark); validator exit 0; has_process false, so no how-to structure.
 
 ## Build journal
-
+- 2026-10-17T12:14:57Z build start on gn100-83c4
