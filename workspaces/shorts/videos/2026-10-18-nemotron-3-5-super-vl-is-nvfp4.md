@@ -2,21 +2,21 @@
 slug: 2026-10-18-nemotron-3-5-super-vl-is-nvfp4
 workspace: shorts
 title: "Nemotron NVFP4: which GPUs can run it"
-status: scheduled
+status: published
 pillar: explainer
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-18
-updated: "2026-10-18T14:21:11Z"
+updated: "2026-10-18T16:03:10Z"
 publish_slot: "2026-10-18T11:00:00-05:00"
 seo_score: 93
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=76P1a0iegNk"
 blotato_post_id: e06e82ec-f9af-474b-b4b2-b681380c1da4
 ---
 # Nemotron 3.5 Super VL is NVFP4 only: what that means for local
@@ -57,3 +57,4 @@ blotato_post_id: e06e82ec-f9af-474b-b4b2-b681380c1da4
 - 2026-10-18T12:45:33Z build done, status review
 - 2026-10-18T14:20:04Z telegram approve (approved_at 2026-10-18T14:20:04Z)
 - 2026-10-18T14:21:12Z 08-publish ok 2s
+- 2026-10-18T16:03:10Z published https://www.youtube.com/watch?v=76P1a0iegNk
