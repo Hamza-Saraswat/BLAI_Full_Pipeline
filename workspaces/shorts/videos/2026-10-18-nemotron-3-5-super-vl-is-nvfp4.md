@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-brief]]
 - Script: [[stages/04-script/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-script]]
 - Package: [[stages/05-package/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-10-18T12:21:43Z 04-script ok: A won 21-18, gates clean, ledger+style recorded
 - 2026-10-18T12:23:53Z 05-package ok: seo 93, ready-to-build
 - 2026-10-18T12:27:10Z build start on gn100-83c4
+- 2026-10-18T12:28:13Z 06-voice ok 61s
