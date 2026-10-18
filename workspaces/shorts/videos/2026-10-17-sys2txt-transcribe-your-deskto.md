@@ -2,14 +2,14 @@
 slug: 2026-10-17-sys2txt-transcribe-your-deskto
 workspace: shorts
 title: "Sys2txt: transcribe your desktop audio locally"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-17
-updated: "2026-10-17T11:06:56Z"
+updated: "2026-10-18T13:35:38Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-18T13:35:38Z 2026-10-18T13:35:38Z expired: not from today's picks (2026-10-18); the factory carries no backlog
