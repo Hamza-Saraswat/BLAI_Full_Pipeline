@@ -1,0 +1,43 @@
+{
+  "full": "You downloaded the wrong Nemotron. The seventy-five gigabyte file everyone grabbed may not run on your card. Inside, weights are quantized, stored in fewer bits, four each. Sixteen weights share a scale, which shrinks the file. Four-bit math at speed needs Blackwell tensor cores. Compute capability, your GPU's feature version, must read ten point zero. The blocker is generation, not size. Below that version, grab a G G U F re-quant, the format llama.cpp tools load, rebuilt from the reference weights. The re-quant is a power adapter, except this one rebuilds the appliance. un-sloth's re-quant ladder starts at forty-six point one gigabytes of download. Check your card's compute capability: ten point zero takes the file, older takes the re-quant. Not a file size, a hardware commitment.",
+  "words": 126,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "You downloaded the wrong Nemotron. The seventy-five gigabyte file everyone grabbed may not run on your card.",
+      "words": 17,
+      "changed": false
+    },
+    {
+      "id": "s2",
+      "text": "Inside, weights are quantized, stored in fewer bits, four each. Sixteen weights share a scale, which shrinks the file.",
+      "words": 19,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "Four-bit math at speed needs Blackwell tensor cores. Compute capability, your GPU's feature version, must read ten point zero. The blocker is generation, not size.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "Below that version, grab a G G U F re-quant, the format llama.cpp tools load, rebuilt from the reference weights. The re-quant is a power adapter, except this one rebuilds the appliance.",
+      "words": 32,
+      "changed": true
+    },
+    {
+      "id": "s5",
+      "text": "un-sloth's re-quant ladder starts at forty-six point one gigabytes of download.",
+      "words": 11,
+      "changed": true
+    },
+    {
+      "id": "s6",
+      "text": "Check your card's compute capability: ten point zero takes the file, older takes the re-quant. Not a file size, a hardware commitment.",
+      "words": 22,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

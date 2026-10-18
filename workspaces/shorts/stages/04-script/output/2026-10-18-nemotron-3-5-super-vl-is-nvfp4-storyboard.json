@@ -1,0 +1,132 @@
+{
+  "slug": "2026-10-18-nemotron-3-5-super-vl-is-nvfp4",
+  "topic": "Nemotron 3.5 Super VL ships NVFP4-only and what that means for local hardware",
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "value_types": "TEACHES,REFRAMES",
+  "hook_candidates": [
+    "You downloaded the wrong Nemotron.",
+    "Everyone says just quantize it.",
+    "Seventy-five gigabytes your GPU cannot read.",
+    "NVIDIA's new four-bit file skips your GPU.",
+    "Your GPU isn't too small. It's too old.",
+    "Check one number before you download Nemotron.",
+    "The most downloaded Nemotron won't run here.",
+    "Blackwell only: NVIDIA shipped a format gate.",
+    "Can your card do four-bit math?",
+    "A 120B model your 4090 can't touch."
+  ],
+  "structure": "worked-example",
+  "title": "Nemotron NVFP4: your GPU might be too old",
+  "description": "NVIDIA posted Nemotron 3.5 Super VL as an NVFP4 checkpoint, and that format only accelerates on Blackwell. You will learn which file your GPU can actually run: the NVFP4 original or a GGUF re-quant. Full guide on the channel page. (Narration is AI-generated.)",
+  "hashtags": [
+    "#Nemotron",
+    "#NVFP4",
+    "#DGXSpark"
+  ],
+  "hook_text": "You downloaded the wrong Nemotron.",
+  "music_mood": "steady-build",
+  "target_duration_s": 37,
+  "analogy": null,
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You downloaded the wrong Nemotron. The seventy-five gigabyte file everyone grabbed may not run on your card.",
+      "on_screen_text": "You downloaded the wrong Nemotron. | 75 GB NVFP4",
+      "visual_brief": "Frame 1: dark canvas, hook line 'You downloaded the wrong Nemotron.' centered in the upper third, fully legible. At 0.35 s a file card labeled 'NVFP4' rises in place at center; on 'seventy-five gigabyte file' a giant amber '75 GB' scales in on the card. On 'may not run on your card' the card's amber edge dims to gray and a hairline crack fades across it. Only the card and number animate; entrances are rise-in-place or scale; everything sits above the caption band.",
+      "est_duration_s": 5.3,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Inside, weights are quantized, stored in fewer bits, four each. Sixteen weights share a scale, which shrinks the file.",
+      "on_screen_text": "4 bits per weight | 16 weights share a scale",
+      "visual_brief": "Sixteen small square cells fade in as a row under 'weights are quantized'; on 'four each' each cell is stamped '4 bits'. On 'Sixteen weights share a scale' the stamps fade out, the cells cluster into one amber-outlined block, and a single chip labeled 'a scale' fades in above it. On 'which shrinks the file' the whole block scales down into a small file glyph at center. Dark background, amber #FFB347 accents, one text block animating at a time, content above the caption band.",
+      "est_duration_s": 5.9,
+      "render_notes": "Manim: 16-cell VGroup with 0.06 s staggered fade-ins; stamps as small Text children; final scale-down about 0.4 s."
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Four-bit math at speed needs Blackwell tensor cores. Compute capability, your GPU's feature version, must read ten point zero. The blocker is generation, not size.",
+      "on_screen_text": "4-bit math | compute capability 10.0 | Blackwell only",
+      "visual_brief": "On 'needs Blackwell tensor cores' two GPU slabs fade in side by side: left labeled 'Blackwell' with lit amber traces, right dim gray labeled 'older'. On 'must read ten point zero' a badge '10.0' scales in over the Blackwell slab. On 'The blocker is generation, not size' a vertical amber gate line rises in place between the slabs and the gray slab dims further. Small labels '4-bit math' and 'compute capability' fade in one at a time above the slabs. Fade and scale entrances only; nothing in the bottom 450 px.",
+      "est_duration_s": 7.8,
+      "render_notes": "Hyperframes: keep the 10.0 badge scale-in under 0.3 s; the gate line rises only after the badge settles.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Below that version, grab a GGUF re-quant, the format llama.cpp tools load, rebuilt from the reference weights. The re-quant is a power adapter, except this one rebuilds the appliance.",
+      "on_screen_text": "GGUF re-quant | from BF16 reference",
+      "visual_brief": "The gate line fades as a horizontal ladder base fades in on 'Below that version'. On 'grab a GGUF re-quant' three rung cards rise in place, the first labeled 'GGUF re-quant'. On 'rebuilt from the reference weights' a tall dim slab labeled 'reference weights' fades in behind the ladder, thin lines feeding each rung. On 'forty-six point one gigabytes' the first rung lights amber with the text 'starts at 46.1 GB'; upper rungs stay gray and unlabeled. Rise-in-place only, at most two elements moving at once.",
+      "est_duration_s": 9.1
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Unsloth's re-quant ladder starts at forty-six point one gigabytes of download.",
+      "on_screen_text": "Unsloth GGUF | from 46.1 GB",
+      "visual_brief": "Giant amber '46.1 GB' types on over the dark slab as the narration says 'forty-six point one'; a thin capacity bar fills beneath it to the 'gigabytes of download' phrase, comparing against a ghosted 75 GB outline behind. No edge motion; the number scales up 1.05 in place after the bar fills.",
+      "est_duration_s": 3.4
+    },
+    {
+      "id": "s6",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Check your card's compute capability: ten point zero takes the file, older takes the re-quant. Not a file size, a hardware commitment.",
+      "on_screen_text": "10.0 -> NVFP4 | older -> GGUF | a hardware commitment",
+      "visual_brief": "On 'A re-quant is different weights' the line 'different weights, not unpacked' fades in at center, then fades out on 'Check your card's compute capability' as two stacked cards fade in: the frame-1 NVFP4 file card returns on top tagged '10.0' with a small check for 'ten point zero takes the file', and a 'GGUF' card tagged 'older' fades in below for 'older takes the re-quant', both with the same amber edge. Final frame holds the two centered cards, a rhyme of frame 1's single card, while the wordmark settles in the last half second.",
+      "est_duration_s": 6.9,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "narration_full": "You downloaded the wrong Nemotron. The seventy-five gigabyte file everyone grabbed may not run on your card. Inside, weights are quantized, stored in fewer bits, four each. Sixteen weights share a scale, which shrinks the file. Four-bit math at speed needs Blackwell tensor cores. Compute capability, your GPU's feature version, must read ten point zero. The blocker is generation, not size. Below that version, grab a GGUF re-quant, the format llama.cpp tools load, rebuilt from the reference weights. The re-quant is a power adapter, except this one rebuilds the appliance. Unsloth's re-quant ladder starts at forty-six point one gigabytes of download. Check your card's compute capability: ten point zero takes the file, older takes the re-quant. Not a file size, a hardware commitment.",
+  "notes_for_review": "Working values; package stage overwrites title/description/hashtags.",
+  "tags": [
+    "nemotron 3.5 super vl",
+    "nvfp4",
+    "nemotron nvfp4",
+    "nvidia nemotron",
+    "gguf quantization",
+    "dgx spark llm",
+    "compute capability",
+    "blackwell gpu",
+    "llama.cpp gguf",
+    "unsloth gguf",
+    "local ai gpu",
+    "run llm locally",
+    "4bit quantization",
+    "vram quantization",
+    "build local ai"
+  ]
+}
