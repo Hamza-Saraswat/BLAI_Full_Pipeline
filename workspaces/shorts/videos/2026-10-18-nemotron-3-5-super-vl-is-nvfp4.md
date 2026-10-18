@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-18-nemotron-3-5-super-vl-is-nvfp4
 workspace: shorts
-title: "Nemotron 3.5 Super VL is NVFP4 only: what that means for local"
-status: scripted
+title: "Nemotron NVFP4: which GPUs can run it"
+status: ready-to-build
 pillar: explainer
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-18
-updated: "2026-10-18T12:21:43Z"
+updated: "2026-10-18T12:23:53Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 93
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-18-ideas]]
 - Research: [[stages/03-research/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-brief]]
 - Script: [[stages/04-script/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -44,6 +44,9 @@ blotato_post_id: ""
 - 04 gates: winner validator 0 blockers 0 advisories; eval all hard gates pass; sameness clean vs last 5; normalizer 6 scenes / 2 changed; ledger entry 43 recorded; style silicon recorded (prev terminal).
 - 04 soft gates kept with reason: entity_spend 0.065, top2 NVIDIA/Blackwell absent as literal tokens (extractor misses possessives; script carries "NVIDIA's" and "Blackwell tensor cores" once each).
 - 04 value lines: TEACHES = s2 "weights are quantized, stored in fewer bits, four each. Sixteen weights share a scale"; REFRAMES = s3 "The blocker is generation, not size."
+- 05 checkpoint: searchable title picked over two intriguing variants (thin "nvfp4" keyword field is product-query surface); score 93, rubric rows all pass.
+- 05 compliance: contains_synthetic_media false (typographic scenes + creator voice clone, both exempt); original_insight names the silicon-gate reframe; narration normalized files live beside the storyboard (2026-10-17 precedent), 06-voice/output left for the Spark.
 ## Build journal
 - 2026-10-18T11:50:53Z 03-research ok: 9 sources, validator 0
 - 2026-10-18T12:21:43Z 04-script ok: A won 21-18, gates clean, ledger+style recorded
+- 2026-10-18T12:23:53Z 05-package ok: seo 93, ready-to-build
