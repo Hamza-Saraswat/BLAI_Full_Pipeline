@@ -2,14 +2,14 @@
 slug: 2026-10-18-nemotron-3-5-super-vl-is-nvfp4
 workspace: shorts
 title: "Nemotron NVFP4: which GPUs can run it"
-status: building
+status: review
 pillar: explainer
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-18
-updated: "2026-10-18T12:27:10Z"
+updated: "2026-10-18T12:45:27Z"
 publish_slot: ""
 seo_score: 93
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-script]]
 - Package: [[stages/05-package/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-package]]
 - Voice: [[stages/06-voice/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -52,3 +52,5 @@ blotato_post_id: ""
 - 2026-10-18T12:23:53Z 05-package ok: seo 93, ready-to-build
 - 2026-10-18T12:27:10Z build start on gn100-83c4
 - 2026-10-18T12:28:13Z 06-voice ok 61s
+- 2026-10-18T12:45:31Z 07-render ok 44.80s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 240
+- 2026-10-18T12:45:31Z 07-render ok 1035s
