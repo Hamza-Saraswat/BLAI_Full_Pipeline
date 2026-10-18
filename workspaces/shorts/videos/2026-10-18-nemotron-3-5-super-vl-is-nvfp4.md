@@ -2,22 +2,22 @@
 slug: 2026-10-18-nemotron-3-5-super-vl-is-nvfp4
 workspace: shorts
 title: "Nemotron NVFP4: which GPUs can run it"
-status: approved
+status: scheduled
 pillar: explainer
 structure: worked-example
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-18
-updated: "2026-10-18T14:20:04Z"
-publish_slot: ""
+updated: "2026-10-18T14:21:11Z"
+publish_slot: "2026-10-18T11:00:00-05:00"
 seo_score: 93
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: e06e82ec-f9af-474b-b4b2-b681380c1da4
 ---
 # Nemotron 3.5 Super VL is NVFP4 only: what that means for local
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-package]]
 - Voice: [[stages/06-voice/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-voice]]
 - Render: [[stages/07-render/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-18-nemotron-3-5-super-vl-is-nvfp4-publish]]
 
 ## Decisions
 
@@ -56,3 +56,4 @@ blotato_post_id: ""
 - 2026-10-18T12:45:31Z 07-render ok 1035s
 - 2026-10-18T12:45:33Z build done, status review
 - 2026-10-18T14:20:04Z telegram approve (approved_at 2026-10-18T14:20:04Z)
+- 2026-10-18T14:21:12Z 08-publish ok 2s
