@@ -2,21 +2,21 @@
 slug: 2026-10-19-deepseek-v4-1-flash-1017-max-t
 workspace: shorts
 title: DeepSeek V4.1 Flash 1017 vs your GPU
-status: scheduled
+status: published
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-19
-updated: "2026-10-19T16:39:12Z"
+updated: "2026-10-19T23:03:10Z"
 publish_slot: "2026-10-19T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=HhCWzfdmA84"
 blotato_post_id: a0a302c4-4a1d-40c9-b207-e35e887578e5
 ---
 # DeepSeek V4.1 Flash 1017 (Max) tops the index; GGUFs when?
@@ -43,3 +43,4 @@ blotato_post_id: a0a302c4-4a1d-40c9-b207-e35e887578e5
 - 2026-10-19T12:46:25Z build done, status review
 - 2026-10-19T16:38:52Z telegram approve (approved_at 2026-10-19T16:38:52Z)
 - 2026-10-19T16:39:12Z 08-publish ok 2s
+- 2026-10-19T23:03:10Z published https://www.youtube.com/watch?v=HhCWzfdmA84
