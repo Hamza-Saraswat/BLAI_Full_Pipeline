@@ -1,0 +1,114 @@
+{
+  "slug": "2026-10-19-deepseek-v4-1-flash-1017-max-t",
+  "topic": "DeepSeek V4.1 Flash 1017 (Max): the index score, the open weights, and the machine that fits them",
+  "title": "DeepSeek Flash 1017: open weights your card can't run",
+  "description": "DeepSeek V4.1 Flash 1017 landed with MIT weights and a top open-weight index score. What it costs per benchmark task, and which machine actually loads it. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "763B: your card can't run it",
+  "hook_candidates": [
+    "DeepSeek's Flash costs twenty-six cents a benchmark task.",
+    "Your card still can't run DeepSeek's new open weights.",
+    "Forty-five on the index, and the weights are already yours.",
+    "Seven hundred sixty-three billion parameters, free to download today.",
+    "DeepSeek 1017 is open, MIT licensed, and huge.",
+    "The best open model just got too big for your card.",
+    "You waited for DeepSeek GGUFs. They landed yesterday.",
+    "One twenty-eight gigabytes to run it. Your card has twenty-four.",
+    "Second of one hundred twenty-one open models. Not first.",
+    "Open weights day one. Your gaming card day never."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 37,
+  "narration_full": "Your card still can't run DeepSeek's new open weights. Seven hundred sixty-three billion parameters on the spec sheet. The old rule: DeepSeek's open weights shrink onto a gaming card. Not this time, at any compression. A community builder reports a repackaged copy loading on a single DGX Spark. That box shares its memory between processor and graphics: one hundred twenty-eight gigabytes of unified memory. Another community build reports a heavier recipe: a pair of ninety-six-gigabyte cards plus host memory. Flash is doing work in that name. The rule survives one size up: a Spark with unified memory loads it at your desk. Your card's way in: the API, renting DeepSeek's machines at twenty-six cents a task.",
+  "analogy": {},
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your card still can't run DeepSeek's new open weights. Seven hundred sixty-three billion parameters on the spec sheet.",
+      "on_screen_text": "763B: your card can't run it",
+      "visual_brief": "Frame 1: a gaming card centered low on a dark field, the figure 763B locked in the upper third, composition finished at frame 1. Motion onset within half a second: a scale pulse on the card. On the words still can't run, the download bar under the card freezes mid-fill. On seven hundred sixty-three billion, the 763B figure scales up until it dwarfs the card. On spec sheet, a thin spec-sheet line draws beneath the giant figure.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "The old rule: DeepSeek's open weights shrink onto a gaming card. Not this time, at any compression.",
+      "on_screen_text": "old rule: open weights fit your card",
+      "visual_brief": "On \"old rule\" a row of earlier DeepSeek drop markers fades in left to right, each shrinking down onto the same card icon at the row end. On \"Not this time\" the newest marker rebounds off the card and the card outline flickers once.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "A community builder reports a repackaged copy loading on a single DGX Spark. That box shares its memory between processor and graphics: one hundred twenty-eight gigabytes of unified memory.",
+      "on_screen_text": "community build: one DGX Spark, 128 GB",
+      "visual_brief": "On \"single DGX Spark\" a small desktop box rises in place beside the gaming card. On \"shares its memory\" a single pool outline draws inside the box. On \"one hundred twenty-eight gigabytes\" the pool fills to a 128 GB mark in two steps, then lines flow from the pool to a processor icon and a graphics icon.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Another community build reports a heavier recipe: a pair of ninety-six-gigabyte cards plus host memory. Flash is doing work in that name.",
+      "on_screen_text": "llama.cpp route: two 96 GB cards",
+      "visual_brief": "On \"pair of ninety-six-gigabyte cards\" two tall workstation cards fade in on the left, a stack of host memory sticks on the right. On \"Flash\" the word Flash printed on the weights box stretches until it strains at its edges, then snaps back.",
+      "est_duration_s": 7.6,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The rule survives one size up: a Spark with unified memory loads it at your desk.",
+      "on_screen_text": "still local: one desk box",
+      "visual_brief": "On \"one size up\" the Spark box centers on a desk surface. On \"loads it at your desk\" the weights file fades into the box and a small chat window opens beside it with a cursor blink.",
+      "est_duration_s": 4.5
+    },
+    {
+      "id": "s6",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your card's way in: the API, renting DeepSeek's machines at twenty-six cents a task.",
+      "on_screen_text": "$0.26 per task",
+      "visual_brief": "On \"twenty-six cents a task\" the gaming card from frame 1 returns in the same position, now wearing a small \"$0.26\" tag that scales up once. Wordmark settle in the final half second; last frame rhymes with frame 1.",
+      "est_duration_s": 4.8,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Scene 5 says loads, not runs, to match the community-sourced claim of a build loading on one DGX Spark. The 96 GB figure is community-reported and attributed. Fixed from the writer draft during assembly.",
+  "hook_pattern": "named-contradiction"
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "2026-10-19-deepseek-v4-1-flash-1017-max-t",
+  "topic": "DeepSeek V4.1 Flash 1017 (Max): the index score, the open weights, and the machine that fits them",
+  "title": "DeepSeek Flash 1017 costs 26 cents a task, and 128 GB to run it",
+  "description": "DeepSeek V4.1 Flash 1017 landed with MIT weights and a top open-weight index score. What it costs per benchmark task, and which machine actually loads it. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "$0.26 a task, Flash 1017",
+  "hook_candidates": [
+    "DeepSeek's Flash costs twenty-six cents a benchmark task.",
+    "Your card still can't run DeepSeek's new open weights.",
+    "Forty-five on the index, and the weights are already yours.",
+    "Seven hundred sixty-three billion parameters, free to download today.",
+    "DeepSeek 1017 is open, MIT licensed, and huge.",
+    "The best open model just got too big for your card.",
+    "You waited for DeepSeek GGUFs. They landed yesterday.",
+    "One twenty-eight gigabytes to run it. Your card has twenty-four.",
+    "Second of one hundred twenty-one open models. Not first.",
+    "Open weights day one. Your gaming card day never."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 36,
+  "narration_full": "DeepSeek's Flash costs twenty-six cents a benchmark task. One task on the Artificial Analysis index, an independent scoreboard. The size will surprise you: five hundred fifty-two billion parameters. It's a mixture of experts, a receptionist waking the few each word needs. Sixteen billion wake per word. She re-picks for every word. The weights are MIT licensed, downloadable today. A community converter reports a build fitting one DGX Spark with one hundred twenty-eight gigabytes of shared memory. Flash is a name, not a size. Your twenty-four-gigabyte card stays out, at any quant, any shrunken file. What's yours is the number: twenty-six cents a task, no new box.",
+  "analogy": {
+    "vehicle": "a receptionist waking only the few specialists each word needs",
+    "mapping": "the router in a mixture of experts picks a few of the 552B parameters per word; sixteen billion wake",
+    "limit": "she re-picks for every word, never one hand-off per question"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "DeepSeek's Flash costs twenty-six cents a benchmark task. One task on the Artificial Analysis index, an independent scoreboard.",
+      "on_screen_text": "$0.26 a task, Flash 1017",
+      "visual_brief": "Frame 1: a giant \"$0.26\" centered in the upper safe area with \"Flash 1017\" small above it, composition already finished. Motion onset within half a second: the \"$0.26\" scales up slightly on \"twenty-six cents\". On \"benchmark task\" the words \"per benchmark task\" fade in beneath the number. On \"Artificial Analysis index\" a thin scoreboard bar draws left to right under the whole stack.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The size will surprise you: five hundred fifty-two billion parameters. It's a mixture of experts, a receptionist waking the few each word needs. Sixteen billion wake per word. She re-picks for every word.",
+      "on_screen_text": "552B total / 16B per word",
+      "visual_brief": "On \"five hundred fifty-two billion parameters\" a dark grid of tiny tiles fills the frame tile by tile. On \"receptionist\" a small desk glyph fades in at the grid edge. On \"Sixteen billion wake\" sixteen tiles light amber, in two steps matching the spoken figure. On \"re-picks for every word\" the lit set flickers to a different sixteen, twice.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The weights are MIT licensed, downloadable today. A community converter reports a build fitting one DGX Spark with one hundred twenty-eight gigabytes of shared memory.",
+      "on_screen_text": "MIT weights, out now / 128 GB shared memory",
+      "visual_brief": "On \"downloadable today\" a Hugging Face style file card rises in place center frame. On \"one DGX Spark\" a single box outline draws around it. On \"shared memory\" the card text swaps to \"128 GB shared memory\" with a scale pulse on the number.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s4",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Flash is a name, not a size. Your twenty-four-gigabyte card stays out, at any quant, any shrunken file.",
+      "on_screen_text": "24 GB: out at any quant",
+      "visual_brief": "Split frame: left, the word \"Flash\" on a small nameplate; right, a gaming-card silhouette. On \"Your twenty-four-gigabyte card\" the silhouette fades up on the right. On \"stays out\" it grays out and a strike line draws across it, once.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "What's yours is the number: twenty-six cents a task, no new box.",
+      "on_screen_text": "$0.26, no new box",
+      "visual_brief": "Hard cut back to the frame-1 composition: the \"$0.26\" digits in the same position, now alone. On \"no new box\" the words fade beneath it. Wordmark settle in the final half second; last frame rhymes with frame 1.",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "whoosh"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "The 24 GB card figure is the brief's viewer situation, not a key number. The 128 GB fit is community-reported and is attributed in narration. Price hook: cost per Artificial Analysis Intelligence Index task, measured by AA."
+}

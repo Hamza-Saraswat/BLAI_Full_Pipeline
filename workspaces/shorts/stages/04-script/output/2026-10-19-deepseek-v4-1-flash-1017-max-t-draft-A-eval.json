@@ -1,0 +1,601 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-19T12:09:56+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-draft-A-storyboard.json",
+    "research_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-brief.json",
+    "project_record": null,
+    "ledger_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "primary": 4,
+      "benchmark": 4,
+      "docs": 1,
+      "community": 2
+    },
+    "pct_primary_docs": 0.455,
+    "key_numbers_total": 7,
+    "entities_total": 28,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.353,
+    "source_domains": [
+      "artificialanalysis.ai",
+      "deepseek.com",
+      "huggingface.co",
+      "the-decoder.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.429,
+      "detail": [
+        {
+          "label": "Artificial Analysis Intelligence Index score, 1017 (Max)",
+          "value": "45",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Same index, September predecessor V4.1 Flash (Max)",
+          "value": "39",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Backbone parameters",
+          "value": "552B",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "five hundred fifty-two",
+          "scene_ids": [
+            "s2"
+          ]
+        },
+        {
+          "label": "Parameters activated per token during decode",
+          "value": "16B",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Sixteen billion",
+          "scene_ids": [
+            "s2"
+          ]
+        },
+        {
+          "label": "Model size on the 1017 card",
+          "value": "763B params",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Cost per Intelligence Index task (1017 vs predecessor)",
+          "value": "$0.26 vs $0.49",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$0.26",
+          "scene_ids": [
+            "s1",
+            "s5"
+          ]
+        },
+        {
+          "label": "Context length",
+          "value": "1M",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 28,
+      "found_count": 5,
+      "score": 0.179,
+      "found": [
+        "DeepSeek",
+        "Flash",
+        "DeepSeek V4.1 Flash 1017",
+        "GB DGX Spark",
+        "DeepSeek Flash 1017"
+      ],
+      "missing": [
+        "V4.1",
+        "V4.1 Flash",
+        "Hugging Face",
+        "MIT License",
+        "V4.1-Flash-1017",
+        "Claude Opus 5",
+        "Kimi K3 and GLM 5.3",
+        "GPT 5.6",
+        "GLM 5.3",
+        "DeepSWE",
+        "v1.1 77.0",
+        "Sonnet",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5.5",
+        "GPT-6 Astra",
+        "Muse Wonder Full",
+        "Default Fallback",
+        "Terminal",
+        "GiB",
+        "GB GPUs",
+        "ds4-dfm-rs",
+        "API-only MIT",
+        "GiB IQ2"
+      ],
+      "top2": [
+        "DeepSeek",
+        "Flash"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "V4.1",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4.1 Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT License",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4.1-Flash-1017",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 5",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Kimi K3 and GLM 5.3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT 5.6",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GLM 5.3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSWE",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v1.1 77.0",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sonnet",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Sonnet 5.5",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 5.5",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT-6 Astra",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1 Flash 1017",
+          "tier": 2,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Muse Wonder Full",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Default Fallback",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Terminal",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB",
+          "tier": 3,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB DGX Spark",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB GPUs",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ds4-dfm-rs",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "API-only MIT",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB IQ2",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek Flash 1017",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:$0.26 vs $0.49",
+        "entity:DeepSeek",
+        "entity:Flash"
+      ],
+      "hook_text": "$0.26 a task, Flash 1017",
+      "first_sentence": "DeepSeek's Flash costs twenty-six cents a benchmark task."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "number-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:$0.26 vs $0.49",
+            "entity:DeepSeek",
+            "entity:Flash"
+          ],
+          "narration": "DeepSeek's Flash costs twenty-six cents a benchmark task. One task on the Artificial Analysis index, an independent scoreboard."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "num:552B",
+            "num:16B"
+          ],
+          "narration": "The size will surprise you: five hundred fifty-two billion parameters. It's a mixture of experts, a receptionist waking the few each word needs. Sixteen billion wake per word. She re-picks for every word."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": false,
+          "hits": [],
+          "narration": "The weights are MIT licensed, downloadable today. A community converter reports a build fitting one DGX Spark with one hundred twenty-eight gigabytes of shared memory."
+        },
+        {
+          "id": "s4",
+          "role": "foreshadow",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Flash"
+          ],
+          "narration": "Flash is a name, not a size. Your twenty-four-gigabyte card stays out, at any quant, any shrunken file."
+        },
+        {
+          "id": "s5",
+          "role": "payoff_close",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "num:$0.26 vs $0.49"
+          ],
+          "narration": "What's yours is the number: twenty-six cents a task, no new box."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.7,
+      "words": 113,
+      "sentences": 11,
+      "est_speech_s": 39.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "DeepSeek's Flash costs twenty-six cents a benchmark task. One task on the Artificial Analysis index, an independent scoreboard. The size will surprise you: five hundred fifty-two billion parameters. It's a mixture of experts, a receptionist waking the few each word needs. Sixteen billion wake per word. She re-picks for every word. The weights are MIT licensed, downloadable today. A community converter reports a build fitting one DGX Spark with one hundred twenty-eight gigabytes of shared memory. Flash is a name, not a size. Your twenty-four-gigabyte card stays out, at any quant, any shrunken file. What's yours is the number: twenty-six cents a task, no new box.",
+    "on_screen": "$0.26 a task, Flash 1017 | $0.26 a task, Flash 1017 | 552B total / 16B per word | MIT weights, out now / 128 GB shared memory | 24 GB: out at any quant | $0.26, no new box"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-draft-A-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 6.7,
+        "words": 113,
+        "est_speech_s": 39.0,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 63 chars \u2014 mobile truncates ~40",
+          "FK grade 6.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s3: 'MIT' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s3: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.179,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "Flash"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:$0.26 vs $0.49",
+          "entity:DeepSeek",
+          "entity:Flash"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "number-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

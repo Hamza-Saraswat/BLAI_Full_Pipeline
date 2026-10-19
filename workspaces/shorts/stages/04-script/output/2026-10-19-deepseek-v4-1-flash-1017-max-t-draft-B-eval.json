@@ -1,0 +1,601 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-19T12:09:57+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-draft-B-storyboard.json",
+    "research_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-brief.json",
+    "project_record": null,
+    "ledger_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "primary": 4,
+      "benchmark": 4,
+      "docs": 1,
+      "community": 2
+    },
+    "pct_primary_docs": 0.455,
+    "key_numbers_total": 7,
+    "entities_total": 28,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.353,
+    "source_domains": [
+      "artificialanalysis.ai",
+      "deepseek.com",
+      "huggingface.co",
+      "the-decoder.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.286,
+      "detail": [
+        {
+          "label": "Artificial Analysis Intelligence Index score, 1017 (Max)",
+          "value": "45",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Same index, September predecessor V4.1 Flash (Max)",
+          "value": "39",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Backbone parameters",
+          "value": "552B",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Parameters activated per token during decode",
+          "value": "16B",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Model size on the 1017 card",
+          "value": "763B params",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Seven hundred sixty-three billion",
+          "scene_ids": [
+            "s1"
+          ]
+        },
+        {
+          "label": "Cost per Intelligence Index task (1017 vs predecessor)",
+          "value": "$0.26 vs $0.49",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$0.26",
+          "scene_ids": [
+            "s6"
+          ]
+        },
+        {
+          "label": "Context length",
+          "value": "1M",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 28,
+      "found_count": 3,
+      "score": 0.107,
+      "found": [
+        "DeepSeek",
+        "Flash",
+        "GB DGX Spark"
+      ],
+      "missing": [
+        "V4.1",
+        "V4.1 Flash",
+        "Hugging Face",
+        "MIT License",
+        "V4.1-Flash-1017",
+        "Claude Opus 5",
+        "Kimi K3 and GLM 5.3",
+        "GPT 5.6",
+        "GLM 5.3",
+        "DeepSWE",
+        "v1.1 77.0",
+        "Sonnet",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5.5",
+        "GPT-6 Astra",
+        "DeepSeek V4.1 Flash 1017",
+        "Muse Wonder Full",
+        "Default Fallback",
+        "Terminal",
+        "GiB",
+        "GB GPUs",
+        "ds4-dfm-rs",
+        "API-only MIT",
+        "GiB IQ2",
+        "DeepSeek Flash 1017"
+      ],
+      "top2": [
+        "DeepSeek",
+        "Flash"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "V4.1",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4.1 Flash",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT License",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4.1-Flash-1017",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 5",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Kimi K3 and GLM 5.3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT 5.6",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GLM 5.3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSWE",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v1.1 77.0",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sonnet",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Sonnet 5.5",
+          "tier": 2,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 5.5",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPT-6 Astra",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1 Flash 1017",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Muse Wonder Full",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Default Fallback",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Terminal",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB",
+          "tier": 3,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB DGX Spark",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GB GPUs",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "ds4-dfm-rs",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "API-only MIT",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB IQ2",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek Flash 1017",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 10,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "entity:DeepSeek"
+      ],
+      "hook_text": "763B: your card can't run it",
+      "first_sentence": "Your card still can't run DeepSeek's new open weights."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:763B params",
+            "entity:DeepSeek"
+          ],
+          "narration": "Your card still can't run DeepSeek's new open weights. Seven hundred sixty-three billion parameters on the spec sheet."
+        },
+        {
+          "id": "s2",
+          "role": "foreshadow",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "The old rule: DeepSeek's open weights shrink onto a gaming card. Not this time, at any compression."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "glossary:Unified memory"
+          ],
+          "narration": "A community builder reports a repackaged copy loading on a single DGX Spark. That box shares its memory between processor and graphics: one hundred twenty-eight gigabytes of unified memory."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "entity:Flash"
+          ],
+          "narration": "Another community build reports a heavier recipe: a pair of ninety-six-gigabyte cards plus host memory. Flash is doing work in that name."
+        },
+        {
+          "id": "s5",
+          "role": "foreshadow",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "glossary:Unified memory"
+          ],
+          "narration": "The rule survives one size up: a Spark with unified memory loads it at your desk."
+        },
+        {
+          "id": "s6",
+          "role": "payoff_close",
+          "est_duration_s": 4.8,
+          "specific": true,
+          "hits": [
+            "num:$0.26 vs $0.49",
+            "entity:DeepSeek"
+          ],
+          "narration": "Your card's way in: the API, renting DeepSeek's machines at twenty-six cents a task."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 7.9,
+      "words": 121,
+      "sentences": 10,
+      "est_speech_s": 41.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your card still can't run DeepSeek's new open weights. Seven hundred sixty-three billion parameters on the spec sheet. The old rule: DeepSeek's open weights shrink onto a gaming card. Not this time, at any compression. A community builder reports a repackaged copy loading on a single DGX Spark. That box shares its memory between processor and graphics: one hundred twenty-eight gigabytes of unified memory. Another community build reports a heavier recipe: a pair of ninety-six-gigabyte cards plus host memory. Flash is doing work in that name. The rule survives one size up: a Spark with unified memory loads it at your desk. Your card's way in: the API, renting DeepSeek's machines at twenty-six cents a task.",
+    "on_screen": "763B: your card can't run it | 763B: your card can't run it | old rule: open weights fit your card | community build: one DGX Spark, 128 GB | llama.cpp route: two 96 GB cards | still local: one desk box | $0.26 per task"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-draft-B-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 7.9,
+        "words": 121,
+        "est_speech_s": 41.7,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 53 chars \u2014 mobile truncates ~40",
+          "FK grade 7.9 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s3: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s6: 'API' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.107,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "Flash"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "entity:DeepSeek"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
