@@ -2,22 +2,22 @@
 slug: 2026-10-19-deepseek-v4-1-flash-1017-max-t
 workspace: shorts
 title: DeepSeek V4.1 Flash 1017 vs your GPU
-status: approved
+status: scheduled
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-19
-updated: "2026-10-19T16:38:52Z"
-publish_slot: ""
+updated: "2026-10-19T16:39:12Z"
+publish_slot: "2026-10-19T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: a0a302c4-4a1d-40c9-b207-e35e887578e5
 ---
 # DeepSeek V4.1 Flash 1017 (Max) tops the index; GGUFs when?
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-package]]
 - Voice: [[stages/06-voice/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-narration|narration (normalized by stage 04; build agent takes over)]]
 - Render: [[stages/07-render/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-publish]]
 
 ## Decisions
 - Picked: rank 1 of 11, opportunity 98.3 (autocomplete depth 40, highest demand signal of the day). Lane news-react, format classic.
@@ -42,3 +42,4 @@ blotato_post_id: ""
 - 2026-10-19T12:46:22Z 07-render ok 1269s
 - 2026-10-19T12:46:25Z build done, status review
 - 2026-10-19T16:38:52Z telegram approve (approved_at 2026-10-19T16:38:52Z)
+- 2026-10-19T16:39:12Z 08-publish ok 2s
