@@ -2,14 +2,14 @@
 slug: 2026-10-19-deepseek-v4-1-flash-1017-max-t
 workspace: shorts
 title: DeepSeek V4.1 Flash 1017 (Max) tops the index; GGUFs when?
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-19
-updated: "2026-10-19T11:09:00Z"
+updated: "2026-10-19T11:58:00Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-19-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-19-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-19-deepseek-v4-1-flash-1017-max-t-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
