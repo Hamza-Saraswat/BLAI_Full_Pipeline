@@ -2,14 +2,14 @@
 slug: 2026-10-19-deepseek-v4-1-flash-1017-max-t
 workspace: shorts
 title: DeepSeek V4.1 Flash 1017 vs your GPU
-status: review
+status: approved
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-19
-updated: "2026-10-19T12:46:19Z"
+updated: "2026-10-19T16:38:52Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -41,3 +41,4 @@ blotato_post_id: ""
 - 2026-10-19T12:46:22Z 07-render ok 40.77s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 245
 - 2026-10-19T12:46:22Z 07-render ok 1269s
 - 2026-10-19T12:46:25Z build done, status review
+- 2026-10-19T16:38:52Z telegram approve (approved_at 2026-10-19T16:38:52Z)
