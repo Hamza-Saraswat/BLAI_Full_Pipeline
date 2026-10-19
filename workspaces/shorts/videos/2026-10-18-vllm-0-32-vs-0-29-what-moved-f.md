@@ -2,14 +2,14 @@
 slug: 2026-10-18-vllm-0-32-vs-0-29-what-moved-f
 workspace: shorts
 title: "vLLM 0.32 vs 0.29: what moved for small setups"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-18
-updated: "2026-10-18T11:07:31Z"
+updated: "2026-10-19T13:35:08Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Format: the 0.29 -> 0.32 delta needs a carried worked example, and smooth-explainer breaks classic's three-day run.
 
 ## Build journal
-
+- 2026-10-19T13:35:08Z 2026-10-19T13:35:08Z expired: not from today's picks (2026-10-19); the factory carries no backlog
