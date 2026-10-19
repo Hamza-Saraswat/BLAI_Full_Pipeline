@@ -2,19 +2,19 @@
 slug: 2026-10-19-deepseek-v4-1-flash-1017-max-t
 workspace: shorts
 title: DeepSeek V4.1 Flash 1017 vs your GPU
-status: ready-to-build
+status: building
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-19
-updated: "2026-10-19T13:20:00Z"
+updated: "2026-10-19T12:24:10Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Why: new Flash 1017 (Max) drop with no open weights yet; angle (when GGUFs land, what card fits) is new versus the three published DeepSeek Flash Shorts (KV cache, receipt, outage). One news-react only.
 
 ## Build journal
-
+- 2026-10-19T12:24:10Z build start on gn100-83c4
