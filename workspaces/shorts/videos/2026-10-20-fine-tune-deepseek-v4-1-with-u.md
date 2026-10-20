@@ -2,19 +2,19 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: "Unsloth fine tuning: the DeepSeek catch"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T12:24:21Z"
+updated: "2026-10-20T12:26:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-10-20T11:47:20Z 03 research: validator exit 0; 9 sources web_search+web_extract (FireCrawl 402); 9 claims, 7 key numbers
 - 2026-10-20T12:22:43Z 04 script: winner storyboard 102s 299 words; ledger recorded; style terminal
 - 2026-10-20T12:24:21Z 05 package: seo 100, check_outputs clean, status ready-to-build
+- 2026-10-20T12:26:10Z build start on gn100-83c4
