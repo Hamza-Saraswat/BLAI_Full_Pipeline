@@ -2,14 +2,14 @@
 slug: 2026-10-19-secret-guard-an-llm-gateway-wh
 workspace: shorts
 title: "Secret Guard: an LLM gateway where keys never leave the machine"
-status: idea
+status: expired
 pillar: enterprise-privacy
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-19
-updated: "2026-10-19T11:09:00Z"
+updated: "2026-10-20T13:35:46Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Why: rotation -- basal-Omni (comparison, 70.0) is blocked because yesterday's other pick was comparison; Secret Guard is the strongest remaining candidate above 60 in a lane untouched by yesterday (explainer/comparison) or by pick 1 (news-react).
 
 ## Build journal
-
+- 2026-10-20T13:35:46Z 2026-10-20T13:35:46Z expired: not from today's picks (2026-10-20); the factory carries no backlog
