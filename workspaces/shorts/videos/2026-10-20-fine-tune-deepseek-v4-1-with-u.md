@@ -2,14 +2,14 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: "Unsloth fine tuning: the DeepSeek catch"
-status: review
+status: approved
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T12:49:23Z"
+updated: "2026-10-20T13:24:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-20T12:49:27Z 07-render ok 99.23s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 250
 - 2026-10-20T12:49:27Z 07-render ok 1259s
 - 2026-10-20T12:49:29Z build done, status review
+- 2026-10-20T13:24:48Z telegram approve (approved_at 2026-10-20T13:24:48Z)
