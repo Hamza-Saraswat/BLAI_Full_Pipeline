@@ -2,21 +2,21 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: "Unsloth fine tuning: the DeepSeek catch"
-status: scheduled
+status: published
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T13:25:11Z"
+updated: "2026-10-20T16:05:10Z"
 publish_slot: "2026-10-20T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=g2tn9DcSiiE"
 blotato_post_id: 4a8fbd37-a097-4852-b557-5b778d6c6bc3
 ---
 # Fine-tune DeepSeek V4.1 with Unsloth 0.1.909
@@ -50,3 +50,4 @@ blotato_post_id: 4a8fbd37-a097-4852-b557-5b778d6c6bc3
 - 2026-10-20T12:49:29Z build done, status review
 - 2026-10-20T13:24:48Z telegram approve (approved_at 2026-10-20T13:24:48Z)
 - 2026-10-20T13:25:12Z 08-publish ok 2s
+- 2026-10-20T16:05:10Z published https://www.youtube.com/watch?v=g2tn9DcSiiE
