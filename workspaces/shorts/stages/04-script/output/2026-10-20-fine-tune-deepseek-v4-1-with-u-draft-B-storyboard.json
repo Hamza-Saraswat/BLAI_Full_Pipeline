@@ -25,8 +25,8 @@
   "script_format": "smooth-explainer",
   "structure": "news-react-so-what",
   "value_types": "EQUIPS,TEACHES",
-  "target_duration_s": 96,
-  "narration_full": "V four point one runs locally, about one hundred twenty-five gigabytes of memory. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
+  "target_duration_s": 102,
+  "narration_full": "V four point one runs locally, about one hundred twenty-five gigabytes of memory. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. The stock recipe fine-tunes with just three gigabytes of V RAM, your graphics card's memory. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
   "hook_pattern": "number-shock",
   "analogy": {
     "vehicle": "a library with a basement archive",
@@ -120,10 +120,10 @@
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "grid",
-      "narration": "It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs.",
+      "narration": "It runs on the free tier of Colab. The stock recipe fine-tunes with just three gigabytes of V RAM, your graphics card's memory. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs.",
       "on_screen_text": "Load, attach, train, export GGUF",
       "visual_brief": "Four sharp-corner step cards in a row. Each card rises in place as its verb is spoken, only one card animating at a time, amber border on the active card. On \"guff\" the last card gains its \"GGUF\" label.",
-      "est_duration_s": 10.3
+      "est_duration_s": 16.6
     },
     {
       "id": "s10",

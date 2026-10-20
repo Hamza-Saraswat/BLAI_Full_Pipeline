@@ -2,14 +2,14 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: Fine-tune DeepSeek V4.1 with Unsloth 0.1.909
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: news-react-so-what
 format: smooth-explainer
-style_pack: ""
+style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T11:47:20Z"
+updated: "2026-10-20T12:22:43Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,15 +25,19 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-20-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-20-ideas]]
 - Research: [[stages/03-research/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 04 script: B (news-react-so-what) beat A (how-to-three-moves) 22-16; hook number-shock "V four point one runs locally, about one hundred twenty-five gigabytes of memory."; one graft (3 GB VRAM floor).
+- 04 script: validator 0 blockers both boards; eval gates pass (heard 3 numbers, cap 3); entity_spend/top2 soft advisories kept (both top-2 entities present).
+- 04 script: B hook moved off 233 GB to 125 GB -- spoken "two-hundred-thirty-three-gigabyte" matched the 3 GB row as a false fourth number; gate integrity over the bigger number.
 - 03 research: checkpoint auto-confirm -- angle/slug matched the pick row; no redirect.
 - 03 research: angle corrected by sources -- v0.1.909-beta shipped V4.1 run support, not a fine-tuning recipe; brief carries the honest path (stock QLoRA flow on a model that fits).
 
 ## Build journal
 - 2026-10-20T11:47:20Z 03 research: validator exit 0; 9 sources web_search+web_extract (FireCrawl 402); 9 claims, 7 key numbers
+- 2026-10-20T12:22:43Z 04 script: winner storyboard 102s 299 words; ledger recorded; style terminal
