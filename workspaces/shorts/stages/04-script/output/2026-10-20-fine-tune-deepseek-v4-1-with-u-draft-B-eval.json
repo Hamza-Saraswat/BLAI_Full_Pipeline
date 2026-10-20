@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-10-20T12:06:14+00:00",
+  "generated_at": "2026-10-20T12:10:21+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-draft-B-storyboard.json",
@@ -31,9 +31,9 @@
   "board_metrics": {
     "number_spend": {
       "total": 7,
-      "spent": 4,
-      "distinct": 4,
-      "score": 0.571,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.286,
       "detail": [
         {
           "label": "DeepSeek-V4.1-Flash-1017 scale (total, Engram, active)",
@@ -49,9 +49,10 @@
           "label": "1-bit memory with Engram table on SSD",
           "value": "about 125 GB of memory at 1-bit, or 300 GB at 4-bit",
           "spent": true,
-          "matched_in": "narration",
+          "matched_in": "both",
           "matched_token": "one hundred twenty-five",
           "scene_ids": [
+            "s01",
             "s03"
           ]
         },
@@ -66,12 +67,10 @@
         {
           "label": "Smallest V4.1 download (UD-IQ1_S total size)",
           "value": "233.0 GB",
-          "spent": true,
-          "matched_in": "both",
-          "matched_token": "two-hundred-thirty-three",
-          "scene_ids": [
-            "s01"
-          ]
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
         },
         {
           "label": "Coding-agent benchmark jump (1017 vs earlier Flash)",
@@ -92,12 +91,10 @@
         {
           "label": "Stock recipe fine-tuning entry floor",
           "value": "just 3GB VRAM",
-          "spent": true,
-          "matched_in": "both",
-          "matched_token": "three-gigabyte",
-          "scene_ids": [
-            "s01"
-          ]
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
         }
       ]
     },
@@ -146,8 +143,7 @@
           "claim_count": 7,
           "found": true,
           "matched_in": [
-            "narration",
-            "on_screen"
+            "narration"
           ]
         },
         {
@@ -347,12 +343,10 @@
     "hook": {
       "concrete": true,
       "via": [
-        "number:233.0 GB",
-        "number:just 3GB VRAM",
-        "entity:DeepSeek"
+        "number:about 125 GB of memory at 1-bit, or 300 GB at 4-bit"
       ],
-      "hook_text": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.",
-      "first_sentence": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download."
+      "hook_text": "V four point one runs locally, about one hundred twenty-five gigabytes of memory.",
+      "first_sentence": "V four point one runs locally, about one hundred twenty-five gigabytes of memory."
     },
     "positional_labels": {
       "count": 0,
@@ -370,11 +364,10 @@
           "est_duration_s": 3.1,
           "specific": true,
           "hits": [
-            "num:233.0 GB",
-            "num:just 3GB VRAM",
-            "entity:DeepSeek"
+            "num:about 125 GB of memory at 1-bit, or 300 GB at 4-bit",
+            "entity:V4.1"
           ],
-          "narration": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download."
+          "narration": "V four point one runs locally, about one hundred twenty-five gigabytes of memory."
         },
         {
           "id": "s02",
@@ -476,14 +469,14 @@
       ]
     },
     "language": {
-      "fk_grade": 6.3,
+      "fk_grade": 6.5,
       "words": 293,
       "sentences": 24,
       "est_speech_s": 101.0,
       "vo_band_ok": true
     },
-    "narration_full": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
-    "on_screen": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download. | The fine-tune you want: 233 GB | Unsloth beta: V4.1 runs locally | Engram on SSD: about 125 GB | Library: archive in the basement | 552B parameters, few fire per word | No V4.1 training recipe shipped | Guide: train other models. No chat template. | Stock QLoRA: load_in_4bit = True | Load, attach, train, export GGUF | Train what fits your card"
+    "narration_full": "V four point one runs locally, about one hundred twenty-five gigabytes of memory. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
+    "on_screen": "V four point one runs locally, about one hundred twenty-five gigabytes of memory. | V4.1 runs locally: about 125 GB | Unsloth beta: V4.1 runs locally | Engram on SSD: about 125 GB | Library: archive in the basement | 552B parameters, few fire per word | No V4.1 training recipe shipped | Guide: train other models. No chat template. | Stock QLoRA: load_in_4bit = True | Load, attach, train, export GGUF | Train what fits your card"
   },
   "validators": {
     "storyboard": {
@@ -491,21 +484,21 @@
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-draft-B-storyboard.json",
         "scenes": 10,
-        "fk_grade": 6.3,
+        "fk_grade": 6.5,
         "words": 293,
         "est_speech_s": 101.0,
         "blockers": [],
         "advisories": [
           "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "hook_text >7 words: 'The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.'"
+          "hook_text >7 words: 'V four point one runs locally, about one hundred twenty-five gigabytes of memory.'"
         ],
         "violations": [
           "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "hook_text >7 words: 'The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.'"
+          "hook_text >7 words: 'V four point one runs locally, about one hundred twenty-five gigabytes of memory.'"
         ],
         "warnings": [
           "title 58 chars \u2014 mobile truncates ~40",
-          "FK grade 6.3 \u2014 target <=5",
+          "FK grade 6.5 \u2014 target <=5",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence",
           "s02: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
           "s04: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
@@ -564,23 +557,20 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "number_spend"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend"
     ],
     "detail": {
       "number_spend": {
-        "spent": 4,
-        "heard": 4,
+        "spent": 2,
+        "heard": 2,
         "total": 7,
         "need": "<=3",
         "min": null,
         "max": 3,
-        "mode": "cap",
-        "reason": "the viewer hears 4 distinct numbers (4 of 7 brief rows matched); the band is 0-3"
+        "mode": "cap"
       },
       "entity_spend": {
         "score": 0.32,
@@ -598,9 +588,7 @@
       "hook_concrete": {
         "concrete": true,
         "via": [
-          "number:233.0 GB",
-          "number:just 3GB VRAM",
-          "entity:DeepSeek"
+          "number:about 125 GB of memory at 1-bit, or 300 GB at 4-bit"
         ],
         "waived": true
       },

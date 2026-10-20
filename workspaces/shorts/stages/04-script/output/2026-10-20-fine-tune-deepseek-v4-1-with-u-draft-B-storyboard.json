@@ -8,7 +8,7 @@
     "#deepseek",
     "#llama"
   ],
-  "hook_text": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.",
+  "hook_text": "V four point one runs locally, about one hundred twenty-five gigabytes of memory.",
   "hook_candidates": [
     "Three moves and your fine-tuned Llama runs tonight.",
     "The DeepSeek fine-tune you want sits on a two-hundred-thirty-three-gigabyte download.",
@@ -26,7 +26,7 @@
   "structure": "news-react-so-what",
   "value_types": "EQUIPS,TEACHES",
   "target_duration_s": 96,
-  "narration_full": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
+  "narration_full": "V four point one runs locally, about one hundred twenty-five gigabytes of memory. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
   "hook_pattern": "number-shock",
   "analogy": {
     "vehicle": "a library with a basement archive",
@@ -40,9 +40,9 @@
       "role": "hook",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.",
-      "on_screen_text": "The fine-tune you want: 233 GB",
-      "visual_brief": "Dark frame, hook line centered in the safe area, legible from frame 1, type at least 64 px, amber on \"233 GB\". At 0.30 s the number does one subtle scale pulse. One text block animating, first and last 8 frames stable.",
+      "narration": "V four point one runs locally, about one hundred twenty-five gigabytes of memory.",
+      "on_screen_text": "V4.1 runs locally: about 125 GB",
+      "visual_brief": "Dark frame, hook line centered in the safe area, legible from frame 1, type at least 64 px, amber on \"125 GB\". At 0.30 s the number does one subtle scale pulse. One text block animating, first and last 8 frames stable.",
       "est_duration_s": 3.1
     },
     {
