@@ -2,22 +2,22 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: "Unsloth fine tuning: the DeepSeek catch"
-status: approved
+status: scheduled
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T13:24:48Z"
-publish_slot: ""
+updated: "2026-10-20T13:25:11Z"
+publish_slot: "2026-10-20T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 4a8fbd37-a097-4852-b557-5b778d6c6bc3
 ---
 # Fine-tune DeepSeek V4.1 with Unsloth 0.1.909
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-package]]
 - Voice: [[stages/06-voice/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-voice]]
 - Render: [[stages/07-render/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-publish]]
 
 ## Decisions
 - 05 package: searchable title (keyword depth 30 surface); rubric 100/100; hook moved off 233 GB carried into description; original_insight = the run-vs-train reading of v0.1.909.
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-20T12:49:27Z 07-render ok 1259s
 - 2026-10-20T12:49:29Z build done, status review
 - 2026-10-20T13:24:48Z telegram approve (approved_at 2026-10-20T13:24:48Z)
+- 2026-10-20T13:25:12Z 08-publish ok 2s
