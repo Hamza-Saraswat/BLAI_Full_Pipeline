@@ -1,0 +1,130 @@
+{
+  "slug": "2026-10-20-fine-tune-deepseek-v4-1-with-u",
+  "topic": "Fine-tune DeepSeek V4.1 with Unsloth 0.1.909",
+  "title": "Three Moves to a Fine-Tuned Llama Tonight (Unsloth 0.1.909)",
+  "description": "Working title, draft A: the stock Unsloth QLoRA flow in three moves on a model that fits your card.",
+  "hashtags": [
+    "#unsloth",
+    "#deepseek",
+    "#llama"
+  ],
+  "hook_text": "Three moves to your own fine-tuned Llama tonight.",
+  "hook_candidates": [
+    "Three moves and your fine-tuned Llama runs tonight.",
+    "The DeepSeek fine-tune you want sits on a two-hundred-thirty-three-gigabyte download.",
+    "You watched DeepSeek V4.1 land. The fine-tune did not.",
+    "Unsloth shipped V4.1 support. Support means running.",
+    "Just 3GB of VRAM trains a model tonight.",
+    "Fifty-five-two billion parameters. About sixteen wake per word.",
+    "You want your own DeepSeek. Tonight you train Llama.",
+    "Your card can't fine-tune V4.1. Nothing can.",
+    "Yesterday's beta runs DeepSeek V4.1 in 125 GB.",
+    "Stop waiting for a V4.1 fine-tune that isn't coming."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 100,
+  "narration_full": "Three moves to your own fine-tuned Llama tonight. You watched DeepSeek V four point one land yesterday and wanted your own. Here is the honest catch. Unsloth's new beta runs that model in about one hundred twenty-five gigabytes of memory. But support means running it. Running shipped; the training recipe stayed home. Fine-tuning, teaching it your own examples, shipped no recipe. So tonight you train the stock Unsloth recipe on a model that fits your card. Memory follows the whole checkpoint, every saved weight, not the slice that thinks. If a V four point one training path lands later, this same recipe inherits it. Move one: install Unsloth with one pasted command. Pip is Python's installer, and this one line grabs the toolkit. The stock recipe fine-tunes with just three gigabytes of V RAM, your graphics card's memory. Move two: load a four-bit Llama and attach LoRA. Four bit squeezes each weight to a quarter of its size, about a four-times memory cut. LoRA adds thin trainable layers while the base model stays frozen. Think vinyl wrap, not repaint, and the wrap still needs the whole car in your garage. So you pick a model that fits and paste one string. LoRA on a four-bit copy: that is Q LoRA. Move three: train on your question-and-answer pairs. Two columns, questions and answers, and the loss, your error score, falls while you watch. Write them yourself or generate them. Save the adapter, your small trained file, then export to G G U F, the one file Ollama runs. Ollama, LM Studio and llama dot C P P all read it. Ollama loads it and you ask your question. The answer comes back in your voice: your fine-tuned Llama, running tonight.",
+  "hook_pattern": "tonight",
+  "analogy": {
+    "vehicle": "a vinyl wrap on a car",
+    "mapping": "LoRA trains thin added matrices instead of repainting the whole body",
+    "limit": "the wrap still needs the entire car underneath; you cannot wrap a chassis that does not fit in your garage"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Three moves to your own fine-tuned Llama tonight. You watched DeepSeek V four point one land yesterday and wanted your own.",
+      "on_screen_text": "Three moves to your fine-tuned Llama tonight",
+      "visual_brief": "Full hook static at frame 1, centered in safe area, two stacked lines, amber on \"tonight\"; at 0.4 s a sharp amber underline sweeps under \"tonight\"; no other motion.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Here is the honest catch. Unsloth's new beta runs that model in about one hundred twenty-five gigabytes of memory. But support means running it. Running shipped; the training recipe stayed home. Fine-tuning, teaching it your own examples, shipped no recipe.",
+      "on_screen_text": "about 125 GB / runs, not trains",
+      "visual_brief": "Sharp-corner release card fades in on \"Unsloth's new beta\"; \"about 125 GB\" scales up in amber on the spoken figure; hard cut on \"stayed home\" to split-compare: left \"runs\" filled amber, right \"train\" empty outline (5 chars); one text block animates at a time.",
+      "est_duration_s": 13.8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "So tonight you train the stock Unsloth recipe on a model that fits your card. Memory follows the whole checkpoint, every saved weight, not the slice that thinks. If a V four point one training path lands later, this same recipe inherits it.",
+      "on_screen_text": "stock recipe, unchanged / memory = whole checkpoint",
+      "visual_brief": "On \"stock Unsloth recipe\" the line \"stock recipe, unchanged\" rises in place; hard swap on \"Memory follows\" to \"memory = whole checkpoint\" beside a full amber weight grid; grid holds while \"inherits it\" lands; max one text block animating.",
+      "est_duration_s": 14.8
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Move one: install Unsloth with one pasted command. Pip is Python's installer, and this one line grabs the toolkit. The stock recipe fine-tunes with just three gigabytes of V RAM, your graphics card's memory.",
+      "on_screen_text": "pip install unsloth / 3GB VRAM floor",
+      "visual_brief": "Terminal, sharp corners, first 8 frames stable; \"pip install unsloth\" typewriter-reveals on \"one pasted command\"; amber cursor blinks; on \"three gigabytes\" a sharp amber tag \"3GB VRAM floor\" fades in beside the prompt; nothing else moves.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Move two: load a four-bit Llama and attach LoRA. Four bit squeezes each weight to a quarter of its size, about a four-times memory cut. LoRA adds thin trainable layers while the base model stays frozen.",
+      "on_screen_text": "load_in_4bit = True / 4x memory cut",
+      "visual_brief": "Code line \"load_in_4bit = True\" types in on \"load a four-bit Llama\"; on \"quarter of its size\" a weight grid shrinks to one quarter, amber \"4x memory cut\" fades in; on \"thin trainable layers\" two slim amber layers attach onto a gray frozen block; at most two elements animating.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Think vinyl wrap, not repaint, and the wrap still needs the whole car in your garage. So you pick a model that fits and paste one string. LoRA on a four-bit copy: that is Q LoRA.",
+      "on_screen_text": "model_name = \\ \"unsloth/llama...bnb-4bit\" / QLoRA",
+      "visual_brief": "Hard cut to terminal card; on \"paste one string\" the code cell typewrites with backslash continuation across two lines; on \"that is Q LoRA\" a sharp amber \"QLoRA\" tag fades in above the cell; car silhouette behind terminal stays static; entrances rise-in-place only.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "Move three: train on your question-and-answer pairs. Two columns, questions and answers, and the loss, your error score, falls while you watch. Write them yourself or generate them.",
+      "on_screen_text": "Q | A / loss",
+      "visual_brief": "On \"Two columns\" a sharp two-column table fills row by row; on \"falls while you watch\" an amber loss curve descends rightward; only curve animates after table settles; axis labeled \"loss\", no numeric ticks.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Save the adapter, your small trained file, then export to G G U F, the one file Ollama runs. Ollama, LM Studio and llama dot C P P all read it.",
+      "on_screen_text": "adapter -> GGUF -> Ollama",
+      "visual_brief": "Terminal steps with hard cuts: \"adapter saved\" stamps on \"Save the adapter\"; cut to \"GGUF exported\" on \"export to G G U F\"; on \"all read it\" the runtime line fades in below; sharp corners, no soft fades on text.",
+      "est_duration_s": 10.7
+    },
+    {
+      "id": "s09",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Ollama loads it and you ask your question. The answer comes back in your voice: your fine-tuned Llama, running tonight.",
+      "on_screen_text": "running tonight",
+      "visual_brief": "Chat terminal: prompt \"> your question\" types on \"ask your question\"; answer lines typewriter out on \"answer comes back in your voice\"; amber \"running tonight\" rises on the payoff phrase; final 0.5 s wordmark settles, \"Three moves\" motif echoing frame 1; last 8 frames stable.",
+      "est_duration_s": 6.9
+    }
+  ],
+  "notes_for_review": "Draft from blind kimi-k3 writer; est recomputed at 2.9 wps."
+}

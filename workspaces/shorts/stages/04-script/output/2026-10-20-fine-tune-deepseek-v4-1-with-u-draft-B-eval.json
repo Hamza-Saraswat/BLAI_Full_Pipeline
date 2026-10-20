@@ -1,0 +1,648 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-20T12:06:14+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-draft-B-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 3
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 7,
+    "entities_total": 25,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.308,
+    "source_domains": [
+      "github.com",
+      "huggingface.co",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.571,
+      "detail": [
+        {
+          "label": "DeepSeek-V4.1-Flash-1017 scale (total, Engram, active)",
+          "value": "552B parameters plus 196B in its Engram table, about 16B active",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "five hundred fifty-two billion",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "1-bit memory with Engram table on SSD",
+          "value": "about 125 GB of memory at 1-bit, or 300 GB at 4-bit",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one hundred twenty-five",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "1-bit total-memory requirement (run guide table)",
+          "value": "128\u2013145 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Smallest V4.1 download (UD-IQ1_S total size)",
+          "value": "233.0 GB",
+          "spent": true,
+          "matched_in": "both",
+          "matched_token": "two-hundred-thirty-three",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "Coding-agent benchmark jump (1017 vs earlier Flash)",
+          "value": "42.3 on Terminal-Bench 4.0, up from 31.2",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Maximum context window",
+          "value": "1,048,576 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Stock recipe fine-tuning entry floor",
+          "value": "just 3GB VRAM",
+          "spent": true,
+          "matched_in": "both",
+          "matched_token": "three-gigabyte",
+          "scene_ids": [
+            "s01"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 25,
+      "found_count": 8,
+      "score": 0.32,
+      "found": [
+        "DeepSeek",
+        "V4.1",
+        "Unsloth",
+        "Training",
+        "LoRA",
+        "load_in_4bit",
+        "True",
+        "Colab"
+      ],
+      "missing": [
+        "DeepSeek-V4",
+        "DeepSeek-V4.1",
+        "DeepSeek-V4.1-Flash",
+        "DeepSeek-V4.1-Flash-1017",
+        "DeepSeek-V4.1 & FLUX-3",
+        "DeepSeek R1 0528",
+        "v0.1.909-beta",
+        "FLUX-3",
+        "FSDP2",
+        "Qwen3",
+        "Terminal",
+        "Jinja",
+        "Python",
+        "Rust",
+        "llama-3.1-8b-unsloth-bnb-4bit",
+        "Kaggle",
+        "DeepSeek V4.1"
+      ],
+      "top2": [
+        "DeepSeek",
+        "V4.1"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "V4.1",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4",
+          "tier": 0,
+          "claim_count": 6,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1",
+          "tier": 0,
+          "claim_count": 5,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash-1017",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Training",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4.1 & FLUX-3",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek R1 0528",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.1.909-beta",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FLUX-3",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FSDP2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LoRA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Qwen3",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Terminal",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Jinja",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Python",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Rust",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "llama-3.1-8b-unsloth-bnb-4bit",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "load_in_4bit",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "True",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Colab",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Kaggle",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 24,
+      "hits": 1,
+      "density": 0.042,
+      "offenders": [
+        "Then V four point one runs in about one hundred twenty-five gigabytes of memory."
+      ]
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:233.0 GB",
+        "number:just 3GB VRAM",
+        "entity:DeepSeek"
+      ],
+      "hook_text": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.",
+      "first_sentence": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 10,
+      "specific_count": 10,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 3.1,
+          "specific": true,
+          "hits": [
+            "num:233.0 GB",
+            "num:just 3GB VRAM",
+            "entity:DeepSeek"
+          ],
+          "narration": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek",
+            "entity:V4.1",
+            "entity:Unsloth"
+          ],
+          "narration": "Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "num:about 125 GB of memory at 1-bit, or 300 GB at 4-bit"
+          ],
+          "narration": "Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "glossary:Engram table"
+          ],
+          "narration": "Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 12.8,
+          "specific": true,
+          "hits": [
+            "num:552B parameters plus 196B in its Engram table, about 16B active"
+          ],
+          "narration": "The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires."
+        },
+        {
+          "id": "s06",
+          "role": "foreshadow",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:V4.1",
+            "entity:Training"
+          ],
+          "narration": "Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 11.7,
+          "specific": true,
+          "hits": [
+            "entity:Unsloth",
+            "entity:Training"
+          ],
+          "narration": "Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "entity:Unsloth",
+            "entity:LoRA",
+            "entity:load_in_4bit",
+            "entity:True"
+          ],
+          "narration": "So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "entity:Colab"
+          ],
+          "narration": "It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs."
+        },
+        {
+          "id": "s10",
+          "role": "payoff_close",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Training"
+          ],
+          "narration": "If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.3,
+      "words": 293,
+      "sentences": 24,
+      "est_speech_s": 101.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download. Yesterday, Unsloth shipped a beta whose headline is DeepSeek V four point one running locally. You watched it land wanting your own copy, fine-tuned, meaning retrained on your examples. Here is what changes for you. Park the Engram table, a giant lookup memory, on your S S D. Then V four point one runs in about one hundred twenty-five gigabytes of memory. Picture a library. The Engram table is the basement archive; each word pages up only the rows it needs. The limit: the reading room alone still overflows any gaming card. The model holds five hundred fifty-two billion parameters. It is a mixture of experts: a router wakes only a few specialist blocks per word. And memory bills you for the whole model, not the slice that fires. Here is the honest part: in this release, support means running. No fine-tuning recipe, no notebook, no training checkpoint shipped for V four point one. Unsloth's own guide points its training advice at other models. V four point one even ships without a chat template, the rules that shape your prompts. Support, it turns out, is a spectator sport. So tonight, run Unsloth's stock Q LoRA recipe. That is thin LoRA adapters trained on a four-bit compressed copy of a model that fits your card. It runs on the free tier of Colab. Load a four-bit Llama checkpoint and attach the adapters. Train on your question-and-answer dataset, save the adapter, and export to guff, the file Ollama runs. If a V four point one training path ever ships, this same recipe inherits it. Tonight, you train the model that fits your card.",
+    "on_screen": "The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download. | The fine-tune you want: 233 GB | Unsloth beta: V4.1 runs locally | Engram on SSD: about 125 GB | Library: archive in the basement | 552B parameters, few fire per word | No V4.1 training recipe shipped | Guide: train other models. No chat template. | Stock QLoRA: load_in_4bit = True | Load, attach, train, export GGUF | Train what fits your card"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-draft-B-storyboard.json",
+        "scenes": 10,
+        "fk_grade": 6.3,
+        "words": 293,
+        "est_speech_s": 101.0,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "hook_text >7 words: 'The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.'"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "hook_text >7 words: 'The DeepSeek fine-tune you want is a two-hundred-thirty-three-gigabyte download.'"
+        ],
+        "warnings": [
+          "title 58 chars \u2014 mobile truncates ~40",
+          "FK grade 6.3 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s02: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s04: 10s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s09: 10s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "number_spend"
+    ],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 4,
+        "total": 7,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap",
+        "reason": "the viewer hears 4 distinct numbers (4 of 7 brief rows matched); the band is 0-3"
+      },
+      "entity_spend": {
+        "score": 0.32,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "V4.1"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:233.0 GB",
+          "number:just 3GB VRAM",
+          "entity:DeepSeek"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 10,
+        "need": 8,
+        "total": 10
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.042,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
