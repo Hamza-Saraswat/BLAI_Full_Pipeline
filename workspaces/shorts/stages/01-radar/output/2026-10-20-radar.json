@@ -1,0 +1,1207 @@
+[
+  {
+    "id": "hn-79e072c528",
+    "title": "DeepSeek just open-sourced its inference engine",
+    "url": "https://github.com/deepseek-ai/DeepInfer",
+    "source": "hn",
+    "published_at": "2026-10-20T09:08:54Z",
+    "signals": {
+      "points": 312,
+      "num_comments": 105,
+      "signal": 0.979,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.929
+      },
+      "decay": 0.9733,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 312 points, 105 comments on HN, 2 h ago",
+    "score": 96
+  },
+  {
+    "id": "hn-73e349e9fd",
+    "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
+    "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
+    "source": "hn",
+    "published_at": "2026-10-19T16:16:46Z",
+    "signals": {
+      "points": 281,
+      "num_comments": 241,
+      "signal": 0.992,
+      "signal_parts": {
+        "points": 0.989,
+        "comments": 1.0
+      },
+      "decay": 0.7629,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "<a href=\"https:&#x2F;&#x2F;public-inspection.federalregister.gov&#x2F;2026-21447.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;public-inspection.federalregister.gov&#x2F;2026-21447.pdf</a>",
+    "why_now": "Discussed: 281 points, 241 comments on HN, 19 h ago",
+    "score": 79
+  },
+  {
+    "id": "hn-efa8c4c666",
+    "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+    "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+    "source": "hn",
+    "published_at": "2026-10-19T23:22:18Z",
+    "signals": {
+      "points": 466,
+      "num_comments": 137,
+      "signal": 0.995,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.982
+      },
+      "decay": 0.8452,
+      "age_h": 11.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 466 points, 137 comments on HN, 12 h ago",
+    "score": 71
+  },
+  {
+    "id": "hn-a59b2acc8c",
+    "title": "Show HN: Qwen3-4B with the AI writing tics trained out",
+    "url": "https://100toolkit.com/blog/deslop-model/",
+    "source": "hn",
+    "published_at": "2026-10-19T13:00:47Z",
+    "signals": {
+      "points": 148,
+      "num_comments": 109,
+      "signal": 0.895,
+      "signal_parts": {
+        "points": 0.877,
+        "comments": 0.937
+      },
+      "decay": 0.7277,
+      "age_h": 22.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 148 points, 109 comments on HN, 22 h ago",
+    "score": 70
+  },
+  {
+    "id": "github-9eb34cc7a0",
+    "title": "unsloth v0.1.909-beta: DeepSeek-V4.1 & FLUX-3",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta",
+    "source": "github",
+    "published_at": "2026-10-19T16:21:58Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.909-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7639,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "DeepSeek",
+      "FLUX"
+    ],
+    "summary": "DeepSeek-V4.1-Flash-1017 and FLUX.3 Image Klein are here! Run both locally in Unsloth. Also new: images and videos in chat, multi-GPU training with FSDP2 (alpha) and one-command MCP setup for coding agents. ## Highlights - **DeepSeek-V4.1-Flash-1017**: 552B (16B active) - runs on ~125 GB at 1-bit wi",
+    "why_now": "Shipped: unslothai/unsloth v0.1.909-beta released, 19 h ago",
+    "score": 60
+  },
+  {
+    "id": "github-4455e96b1b",
+    "title": "llama.cpp b11753",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11753",
+    "source": "github",
+    "published_at": "2026-10-20T09:06:38Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11753",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9728,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> vocab : add \\p{M} to lookaheads in Tekken and GPT-4o pre-tokenizer regexes (#30845) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/57723477> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-or",
+    "why_now": "Shipped: ggml-org/llama.cpp b11753 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-f6f62a5308",
+    "title": "llama.cpp b11752",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11752",
+    "source": "github",
+    "published_at": "2026-10-20T08:18:15Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11752",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9615,
+      "age_h": 2.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> tests : make MoE router selection independent of the backend noise (#30818) * tests : make MoE router selection independent of the backend noise The router scores are in the range [0, 1), so a random draw can leave the last expert (or expert group) still selected and the first one dro",
+    "why_now": "Shipped: ggml-org/llama.cpp b11752 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-b2bffdf66e",
+    "title": "llama.cpp b11751",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11751",
+    "source": "github",
+    "published_at": "2026-10-20T07:18:14Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11751",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9477,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> hexagon: update to snapdragon-toolchain v0.8 and enable hexagon v85 (#30854) * hex-build: bump toolchain, enable v85 * hex-build: bump toolchain to v0.8 in the CI and build scripts * hex-build: add a little python script for swiv needed on some iot devices * hex-build: fix flake8 warn",
+    "why_now": "Shipped: ggml-org/llama.cpp b11751 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-5493f66b68",
+    "title": "The US orders every civilian agency to rip out DeepSeek, even tools built on it",
+    "url": "https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/",
+    "source": "hn",
+    "published_at": "2026-10-19T18:41:10Z",
+    "signals": {
+      "points": 66,
+      "num_comments": 2,
+      "signal": 0.581,
+      "signal_parts": {
+        "points": 0.737,
+        "comments": 0.219
+      },
+      "decay": 0.7899,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 66 points, 2 comments on HN, 16 h ago",
+    "score": 54
+  },
+  {
+    "id": "github-e394ec11d3",
+    "title": "transformers v5.20.2: Patch release v5.20.2",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.2",
+    "source": "github",
+    "published_at": "2026-10-19T17:45:37Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.20.2",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7794,
+      "age_h": 17.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:transformer",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "# Patch release: v5.20.2 This patch notably solves an issue where some inputs could loose their original type inside `prepare_inputs_for_generation` in `generate`, leading to problems with multimodal models. It also fixes some other issues listed on the below commits. It contains the following commi",
+    "why_now": "Shipped: huggingface/transformers v5.20.2 released, 17 h ago",
+    "score": 46
+  },
+  {
+    "id": "hf-c836144346",
+    "title": "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
+    "url": "https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
+    "source": "hf",
+    "published_at": "2026-10-18T04:11:31Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 161,
+      "downloads": 2803,
+      "trendingScore": 151.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.699,
+      "signal_parts": {
+        "trending": 0.661,
+        "likes": 0.736,
+        "downloads": 0.575
+      },
+      "decay": 0.453,
+      "age_h": 54.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "FP8",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 161 likes, 2.8k downloads, trending score 151, created 2026-10-18",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 161 likes, 2.8k downloads, trending score 151, 2 d ago",
+    "score": 39
+  },
+  {
+    "id": "hn-9424e35072",
+    "title": "DHS Orders DeepSeek Technology Removed from Federal Civilian IT Systems",
+    "url": "https://www.wsj.com/tech/ai/dhs-orders-deepseek-technology-removed-from-federal-civilian-it-systems-060b6d3d",
+    "source": "hn",
+    "published_at": "2026-10-19T19:30:22Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 1,
+      "signal": 0.324,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.138
+      },
+      "decay": 0.7993,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 9 points, 1 comments on HN, 16 h ago",
+    "score": 37
+  },
+  {
+    "id": "hn-e9b8c6385b",
+    "title": "US bans DeepSeek AI from government use as tech tension with China continues",
+    "url": "https://www.bbc.com/news/articles/cjkgeq0k1wevo",
+    "source": "hn",
+    "published_at": "2026-10-19T23:58:34Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.8526,
+      "age_h": 11.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 2 comments on HN, 11 h ago",
+    "score": 34
+  },
+  {
+    "id": "hn-db62fe967b",
+    "title": "Ask HN: What happened to open weights models?",
+    "url": "https://news.ycombinator.com/item?id=50158840",
+    "source": "hn",
+    "published_at": "2026-10-19T22:21:23Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.8329,
+      "age_h": 12.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "Where have all the open weights models producers gone?<p>The last &#x27;big thing&#x27;, was Ornith-1.5. And its really a creatively post-trained Qwen3.5.<p>Why has the release of open weights models stalled? they were on a fairly predictable schedule, coming out just before or just after any given",
+    "why_now": "Shipped: 4 points, 2 comments on HN, 13 h ago",
+    "score": 34
+  },
+  {
+    "id": "hn-289fe6f69c",
+    "title": "Homeland Security is requiring all civilian federal agencies to remove DeepSeek",
+    "url": "https://twitter.com/AndrewCurran_/status/2112250754358788437",
+    "source": "hn",
+    "published_at": "2026-10-19T19:52:45Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.8036,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Broke: 5 points, 1 comments on HN, 15 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-50068e4fdf",
+    "title": "DeepSeek Banned by Homeland Security",
+    "url": "https://tech-insider.org/dhs-deepseek-federal-it-ban-fascsa-2026/",
+    "source": "hn",
+    "published_at": "2026-10-19T18:53:40Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.7923,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Broke: 5 points, 1 comments on HN, 16 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-880c155a8b",
+    "title": "Show HN: Flyingcar.pet - a physics simulation of Tesla's flying Roadster stunt",
+    "url": "https://flyingcar.pet",
+    "source": "hn",
+    "published_at": "2026-10-19T20:51:22Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 5,
+      "signal": 0.242,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.357
+      },
+      "decay": 0.815,
+      "age_h": 14.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hi HN. I kept watching the Tesla Roadster&#x27;s flying video and wondered how much force would be required to pull off a stunt like that since it seemed unreal to me, so I asked Claude Opus 5.5 to create a simulation for me.<p>I gave Opus one task: look at the video and create a simulation like tha",
+    "why_now": "Shipped: 2 points, 5 comments on HN, 14 h ago",
+    "score": 32
+  },
+  {
+    "id": "hf-9633882307",
+    "title": "lodestones/Kromoss",
+    "url": "https://huggingface.co/lodestones/Kromoss",
+    "source": "hf",
+    "published_at": "2026-10-19T01:34:35Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 135,
+      "downloads": 5365,
+      "trendingScore": 134.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.678,
+      "signal_parts": {
+        "trending": 0.645,
+        "likes": 0.711,
+        "downloads": 0.622
+      },
+      "decay": 0.617,
+      "age_h": 33.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 135 likes, 5.4k downloads, trending score 134, created 2026-10-19",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 135 likes, 5.4k downloads, trending score 134, 33 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-443e2486d3",
+    "title": "Show HN: I removed every float from GPT-2 for identical neural compression",
+    "url": "https://github.com/tac0mania/taco",
+    "source": "hn",
+    "published_at": "2026-10-20T06:55:54Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.9427,
+      "age_h": 4.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "also_seen_in": [],
+      "relevance": "product:CUDA",
+      "group": "news-react"
+    },
+    "products": [
+      "CUDA"
+    ],
+    "summary": "GPT-2 with zero floats. Compress on a Mac, decompress on Windows&#x2F;CUDA&#x2F;Vulkan: byte-for-byte identical. 7 backends, 1 hash. An alpha of lossless LLM compression that doesn’t break when the hardware changes.",
+    "why_now": "Broke: 2 points, 2 comments on HN, 4 h ago",
+    "score": 31
+  },
+  {
+    "id": "hf-609d49b4c1",
+    "title": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+    "source": "hf",
+    "published_at": "2026-10-16T18:25:29Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 139,
+      "downloads": 2480,
+      "trendingScore": 138.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.682,
+      "signal_parts": {
+        "trending": 0.649,
+        "likes": 0.715,
+        "downloads": 0.566
+      },
+      "decay": 0.2782,
+      "age_h": 88.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "Nemotron",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 139 likes, 2.5k downloads, trending score 138, created 2026-10-16",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 139 likes, 2.5k downloads, trending score 138, 4 d ago",
+    "score": 30
+  },
+  {
+    "id": "hn-38fb0e145f",
+    "title": "China's DeepSeek deep-sixed at all US federal civilian agencies",
+    "url": "https://www.theregister.com/security/2026/10/20/deepseek-deep-sixed-at-all-us-federal-civilian-agencies/5304010",
+    "source": "hn",
+    "published_at": "2026-10-20T09:31:24Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9786,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 1 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-804eb44abb",
+    "title": "DeepSeek v4.1 Flash 1017 available in OpenCode Go and Free",
+    "url": "https://www.reddit.com/r/opencode/comments/1xa1qy7/deepseek_v41_flash_updated_to_1017_in_opencode_go/",
+    "source": "hn",
+    "published_at": "2026-10-19T23:21:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.845,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 12 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-8985bca01d",
+    "title": "Show HN: Civ 1 period accurate decompilation",
+    "url": "https://github.com/sjmelia/civd",
+    "source": "hn",
+    "published_at": "2026-10-20T09:05:58Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.9726,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft"
+    ],
+    "summary": "I&#x27;ve used LLMs to decompile Civ 1 and put the reconstructed C source on GitHub, along with a technical book and story.<p>The reconstructed source builds with what i&#x27;m pretty sure is the original Microsoft C compiler and toolchain. It produces a byte-for-byte match with the original executa",
+    "why_now": "Shipped: 5 points, 2 comments on HN, 2 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-3eb6524012",
+    "title": "DHS orders removal of DeepSeek from government agency IT systems",
+    "url": "https://thehill.com/policy/technology/6159116-dhs-bans-chinese-deepseek-ai/",
+    "source": "hn",
+    "published_at": "2026-10-19T21:50:22Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8267,
+      "age_h": 13.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 13 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-7c77283556",
+    "title": "MaixStation Beats DGX Spark",
+    "url": "https://sipeed.com/maixstation/",
+    "source": "hn",
+    "published_at": "2026-10-19T19:23:47Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.798,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DGX Spark",
+      "group": "comparison"
+    },
+    "products": [
+      "DGX Spark"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-2b4066ebd6",
+    "title": "PyTorch-native TPU back end for vLLM",
+    "url": "https://github.com/vllm-project/vllm-torchtpu",
+    "source": "hn",
+    "published_at": "2026-10-19T22:34:38Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8355,
+      "age_h": 12.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d9f1f1ec18",
+    "title": "What is still hard to become good at as AI makes coding easier?",
+    "url": "https://news.ycombinator.com/item?id=50157098",
+    "source": "hn",
+    "published_at": "2026-10-19T19:43:46Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 6,
+      "signal": 0.314,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.388
+      },
+      "decay": 0.8019,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Since LLMs came, how I build software changed for so many reasons. Since then, I’ve spent most of my time deciding what I want to build, how I want to build it, how I want to give the context, checking the result, seeing if there is an error, and paving the way for the LLM to do the right thing. And",
+    "why_now": "Changed: 4 points, 6 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-56500a2083",
+    "title": "Show HN: Krites, Claude Code Plugin that forces your tests to run",
+    "url": "https://github.com/krites-dev/krites",
+    "source": "hn",
+    "published_at": "2026-10-19T18:45:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7908,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hi my name is Quinn, and I have been testing and using LLMs for various coding projects for about a year now. And at this point I run all my agents overnight or for even days at a time. And I’ve sunk countless hours and tokens into coming back to a job that&#x27;s half done with issues and bugs. Tha",
+    "why_now": "Broke: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-0ec6f5b4de",
+    "title": "Yzma now over 2.6X faster at embeddings than Ollama or Docker Model Runner",
+    "url": "https://yzma.ai/docs/reference/benchmarks/#comparing-engines",
+    "source": "hn",
+    "published_at": "2026-10-19T14:26:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.743,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Docker Model Runner"
+    ],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-9a5216ac69",
+    "title": "Run Qwen3.8-Flash-Next on 8GB VRAM and 32 GB RAM at 20T/S",
+    "url": "https://github.com/tin-hat/Qwen-tin",
+    "source": "hn",
+    "published_at": "2026-10-19T13:41:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7349,
+      "age_h": 21.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-af2de150ea",
+    "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+    "source": "hf",
+    "published_at": "2026-10-07T17:50:42Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 132,
+      "downloads": 6820,
+      "trendingScore": 130.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.675,
+      "signal_parts": {
+        "trending": 0.641,
+        "likes": 0.708,
+        "downloads": 0.639
+      },
+      "decay": 0.05,
+      "age_h": 305.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVIDIA",
+      "group": "how-to"
+    },
+    "products": [
+      "NVIDIA",
+      "Nemotron",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 132 likes, 6.8k downloads, trending score 130, created 2026-10-07",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 132 likes, 6.8k downloads, trending score 130, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-fd791ad44f",
+    "title": "DeepInfer, our in-house inference framework, now open source",
+    "url": "https://twitter.com/deepseek_ai/status/2112476496283775135",
+    "source": "hn",
+    "published_at": "2026-10-20T10:12:46Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.9884,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:inference",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 2 comments on HN, 1 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-ccb36837ca",
+    "title": "Time to LLM Post",
+    "url": "https://news.ycombinator.com/item?id=50157348",
+    "source": "hn",
+    "published_at": "2026-10-19T20:04:37Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 4,
+      "signal": 0.231,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.321
+      },
+      "decay": 0.8059,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "My new hobby: 1) open hn 2) read headlines and maybe the stories behind them, in order 3) if I hit one about AI, close Hn<p>I&#x27;m doing this for a few days and I&#x27;ve yet to reach post #3 any day",
+    "why_now": "Discussed: 2 points, 4 comments on HN, 15 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-cdbfca469b",
+    "title": "Should LLMs write in mainstream languages?",
+    "url": "https://www.nobodywho.ai/posts/why-is-pi-not-written-in-lisp/",
+    "source": "hn",
+    "published_at": "2026-10-20T07:17:51Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9477,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-ba3fdb173c",
+    "title": "Elias in the Lighthouse, Again? Diagnosing Low Diversity in LLM Stories",
+    "url": "https://arxiv.org/abs/2605.26492",
+    "source": "hn",
+    "published_at": "2026-10-19T22:33:04Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8352,
+      "age_h": 12.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 12 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-9532bdfc09",
+    "title": "Show HN: ProvLedger - stops coding agents repeating mistakes",
+    "url": "https://github.com/yizhao95/prov_ledger",
+    "source": "hn",
+    "published_at": "2026-10-19T17:09:06Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7726,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 18 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-9d134d95ae",
+    "title": "Running Apertus: A Swiss-Made Multimodal LLM",
+    "url": "https://blog.x504.dev/p/running-apertus-a-swiss-made-multimodal",
+    "source": "hn",
+    "published_at": "2026-10-20T08:24:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9631,
+      "age_h": 2.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-c35a02a877",
+    "title": "Show HN: A practical framework for evaluating agentic AI systems",
+    "url": "https://deepsense.ai/blog/your-agent-passed-the-eval-should-you-ship-it/",
+    "source": "hn",
+    "published_at": "2026-10-20T07:45:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9539,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-aeead532e3",
+    "title": "Show HN: Hiding messages as a generative art; open sourcing my code from 2020",
+    "url": "https://stegano.graphics",
+    "source": "hn",
+    "published_at": "2026-10-19T20:21:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8092,
+      "age_h": 14.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;ve always been fascinated by secret messages, and for years I scribbled ideas for a graphical way of hiding messages that would be decipherable by humans without computers, while still being non-trivial and novel.<p>This is what I came up with in 2020 (pre-LLM era ^^). The shapes are inspired",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b9f4d69370",
+    "title": "Lobster moderator's updates to site guidelines and AI/LLM tags",
+    "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+    "source": "hn",
+    "published_at": "2026-10-19T18:34:37Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7886,
+      "age_h": 16.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-8c42cdf061",
+    "title": "Open-weight RAG stack scores 90% on FinanceBench, all 150 answers published",
+    "url": "https://vectogrid.com/financebench/",
+    "source": "hn",
+    "published_at": "2026-10-19T13:23:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7318,
+      "age_h": 21.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  }
+]
