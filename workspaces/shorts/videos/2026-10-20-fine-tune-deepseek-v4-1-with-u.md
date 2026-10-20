@@ -2,14 +2,14 @@
 slug: 2026-10-20-fine-tune-deepseek-v4-1-with-u
 workspace: shorts
 title: "Unsloth fine tuning: the DeepSeek catch"
-status: building
+status: review
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-20
-updated: "2026-10-20T12:26:10Z"
+updated: "2026-10-20T12:49:23Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-script]]
 - Package: [[stages/05-package/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-package]]
 - Voice: [[stages/06-voice/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - 2026-10-20T12:24:21Z 05 package: seo 100, check_outputs clean, status ready-to-build
 - 2026-10-20T12:26:10Z build start on gn100-83c4
 - 2026-10-20T12:28:25Z 06-voice ok 133s
+- 2026-10-20T12:49:27Z 07-render ok 99.23s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 250
+- 2026-10-20T12:49:27Z 07-render ok 1259s
