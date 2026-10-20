@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-brief]]
 - Script: [[stages/04-script/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-script]]
 - Package: [[stages/05-package/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-20-fine-tune-deepseek-v4-1-with-u-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-20T12:22:43Z 04 script: winner storyboard 102s 299 words; ledger recorded; style terminal
 - 2026-10-20T12:24:21Z 05 package: seo 100, check_outputs clean, status ready-to-build
 - 2026-10-20T12:26:10Z build start on gn100-83c4
+- 2026-10-20T12:28:25Z 06-voice ok 133s
