@@ -2,14 +2,14 @@
 slug: 2026-10-20-yzma-vs-ollama-2-6x-faster-emb
 workspace: shorts
 title: "Yzma vs Ollama: 2.6x faster embeddings?"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "PROVES,REFRAMES"
 created: 2026-10-20
-updated: "2026-10-20T11:09:11Z"
+updated: "2026-10-21T13:35:17Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-21T13:35:17Z 2026-10-21T13:35:17Z expired: not from today's picks (2026-10-21); the factory carries no backlog
