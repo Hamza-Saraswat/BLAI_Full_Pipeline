@@ -2,11 +2,11 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Same MCP server, different answers: what the Harness measured"
-status: researched
+status: scripted
 pillar: explainer
-structure: ""
+structure: contrarian-take
 format: smooth-explainer
-style_pack: ""
+style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
 updated: "2026-10-21T11:09:48Z"
@@ -30,7 +30,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-21-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-21-ideas]]
 - Research: [[stages/03-research/output/2026-10-21-same-mcp-server-different-answ-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-21-same-mcp-server-different-answ-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -40,6 +40,10 @@ blotato_post_id: ""
 
 - Checkpoint (angle, unattended): confirmed slug 2026-10-21-same-mcp-server-different-answ on the ideas row (rank 1 of 10, opportunity 100.0); angle held: measured per-harness differences, not the docs, are the spec. No picks.md swap exists for today.
 - Research (unattended): 8 sources, all fetched this run; 10 claims, 6 key numbers; FireCrawl 402 so direct fetches; validate_research.py exit 0. Thesis: one MCP server, different harnesses, different answers, so the measured compatibility table is the working spec.
+- Checkpoint (structures, unattended): contrarian-take (A) vs worked-example (B); both clear the rotation rule (last two were myth-bust, news-react-so-what); value types TEACHES+REFRAMES confirmed; promise: after this you check what your own harness shows the model before you blame the server.
+- Checkpoint (hooks, unattended): 10 written and scored; kept situation (A) and case (B), two different patterns per finding 12; frame-1 texts "ONE SERVER. TWO AGENTS. TWO ANSWERS." and "EVERY AGENT. ONE MCP PROBE."
+- Writers: two blind kimi-k3 calls (llm_call.py, temp 1 recipe, 32000 max tokens, 900 timeout); A 724 s, B 785 s; both boards validated clean (validator 0/0) and eval gates all pass; explicit hook_pattern set per variety.md because the classifier misread both hooks as number-shock.
+- Judge: kimi-k3 blind verdict B wins 20/24 vs 16/24; graft from A (marker mechanism sentence) applied; draft B re-gated clean after the graft. MCP added to tts_lexicon keep list, self-test 168/168. Ledger recorded (entry 46); style pack signal recorded.
 
 ## Build journal
 
