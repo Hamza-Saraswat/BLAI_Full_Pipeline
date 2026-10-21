@@ -2,19 +2,19 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Claude Code MCP: two agents, two answers"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
-updated: "2026-10-21T11:09:48Z"
+updated: "2026-10-21T12:38:12Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -47,4 +47,4 @@ blotato_post_id: ""
 - Checkpoint (package, unattended): searchable title "Claude Code MCP: two agents, two answers" picked over two intriguing variants; keyword "claude code mcp" is the day's deepest autocomplete (115), so the search-heavy surface gets the searchable type. Rubric 100/100; check_outputs 0 failures; contains_synthetic_media false (typographic scenes plus the creator's cloned voice, both exempt); slot hint empty (default 11:00/18:00 CT rotation).
 
 ## Build journal
-
+- 2026-10-21T12:38:12Z build start on gn100-83c4
