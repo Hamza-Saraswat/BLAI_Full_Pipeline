@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "hn-835e678b11",
+    "title": "Voxtral 3",
+    "url": "https://mistral.ai/news/voxtral-3/",
+    "source": "hn",
+    "published_at": "2026-10-20T16:02:07Z",
+    "signals": {
+      "points": 690,
+      "num_comments": 172,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7602,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 690 points, 172 comments on HN, 19 h ago",
+    "score": 65
+  },
+  {
+    "id": "hn-e1c84590a5",
+    "title": "Alibaba hikes DeepSeek V4 Flash 0731 output prices by 230%",
+    "url": "https://www.stork.ai/newsletter/2026-10-20-alibaba-quietly-tripled-deepseek-prices#lead",
+    "source": "hn",
+    "published_at": "2026-10-21T05:17:15Z",
+    "signals": {
+      "points": 23,
+      "num_comments": 26,
+      "signal": 0.587,
+      "signal_parts": {
+        "points": 0.557,
+        "comments": 0.657
+      },
+      "decay": 0.9206,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Alibaba",
+      "group": "how-to"
+    },
+    "products": [
+      "Alibaba",
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Measured: 23 points, 26 comments on HN, 6 h ago",
+    "score": 61
+  },
+  {
+    "id": "github-5a8922e835",
+    "title": "llama.cpp b11790",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11790",
+    "source": "github",
+    "published_at": "2026-10-21T10:40:10Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11790",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.995,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> hexagon: neon-vectorized and threaded repack (tiling) (#30901) * add vectorized q4_0 repack * apply to more types * hex-repack: neon-vectorize the rest of the types q1/q2/f16/... * hex-repack: add simple chunking / threading --------- Co-authored-by: hubezhou <hubezhou@qti.qualcomm.co",
+    "why_now": "Shipped: ggml-org/llama.cpp b11790 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-83b0a962c7",
+    "title": "llama.cpp b11789",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11789",
+    "source": "github",
+    "published_at": "2026-10-21T10:23:49Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11789",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9911,
+      "age_h": 0.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> opencl: add dp4a GEMM variants to vector load activation (#30753) * opencl: add dp4a GEMM variants with vector activation loads * opencl: rename kernels and env vars </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/5",
+    "why_now": "Shipped: ggml-org/llama.cpp b11789 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-1b8637eece",
+    "title": "llama.cpp b11788",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11788",
+    "source": "github",
+    "published_at": "2026-10-21T10:09:37Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11788",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9877,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sycl : fix fa crash for Query head dimension mismatch (neq0 != HSK / D=2048/4096) (#30286) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/58155998> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b11788 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "hn-ec286bca24",
+    "title": "Nexus-CLI - Pure Go Bridge to DeepSeek R1/V3 with Claude Code and Ollama Support",
+    "url": "https://github.com/xamrayev/nexus-cli",
+    "source": "hn",
+    "published_at": "2026-10-21T04:37:18Z",
+    "signals": {
+      "points": 12,
+      "num_comments": 3,
+      "signal": 0.397,
+      "signal_parts": {
+        "points": 0.449,
+        "comments": 0.276
+      },
+      "decay": 0.9118,
+      "age_h": 6.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Claude",
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 12 points, 3 comments on HN, 6 h ago",
+    "score": 46
+  },
+  {
+    "id": "hn-8603bde2a2",
+    "title": "Launch HN: Respan (YC W24) - Open-source Rust AI gateway built around plugins",
+    "url": "https://news.ycombinator.com/item?id=50167583",
+    "source": "hn",
+    "published_at": "2026-10-20T15:09:29Z",
+    "signals": {
+      "points": 49,
+      "num_comments": 20,
+      "signal": 0.662,
+      "signal_parts": {
+        "points": 0.685,
+        "comments": 0.607
+      },
+      "decay": 0.7507,
+      "age_h": 19.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, this is Andy from Respan (<a href=\"https:&#x2F;&#x2F;www.respan.ai\">https:&#x2F;&#x2F;www.respan.ai</a>). We are building an open-source Rust AI gateway. It is a decoupled gateway, so everything is a plugin, including different providers, protocols (MCP, voice), modalities (images, videos),",
+    "why_now": "Shipped: 49 points, 20 comments on HN, 20 h ago",
+    "score": 42
+  },
+  {
+    "id": "hn-f0ebfb0f00",
+    "title": "US bans DeepSeek from federal agencies, prompting angry response from China",
+    "url": "https://www.techspot.com/news/114269-us-bans-deepseek-ai-tools-built-models-federal.html",
+    "source": "hn",
+    "published_at": "2026-10-20T20:40:31Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.8129,
+      "age_h": 14.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 2 comments on HN, 14 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-0392b49379",
+    "title": "DeepSeek Unveils Open-Source Tool to Help Cut AI Operating Costs",
+    "url": "https://www.bloomberg.com/news/articles/2026-10-20/deepseek-unveils-open-source-tool-to-help-cut-ai-operating-costs",
+    "source": "hn",
+    "published_at": "2026-10-21T03:50:30Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.9015,
+      "age_h": 7.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 1 comments on HN, 7 h ago",
+    "score": 33
+  },
+  {
+    "id": "github-645246ac6f",
+    "title": "ollama v0.40.7",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7",
+    "source": "github",
+    "published_at": "2026-10-18T00:28:57Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.7",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.3037,
+      "age_h": 82.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Qwen",
+      "OpenAI"
+    ],
+    "summary": "## What's Changed * [pplx-decider](https://ollama.com/library/pplx-decider) is a 27B decision model from Perplexity, fine-tuned from Qwen3.8-27B * Continuing an OpenAI-compatible Responses conversation no longer fails when switching between models with and without thinking, or when the history conta",
+    "why_now": "Shipped with a known break: ollama/ollama v0.40.7 released, 3 d ago",
+    "score": 33
+  },
+  {
+    "id": "hn-90e3466f80",
+    "title": "Launch HN: Alter (YC S25) - Access control for multi-user agents",
+    "url": "https://alterauth.com/",
+    "source": "hn",
+    "published_at": "2026-10-21T06:42:12Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 9,
+      "signal": 0.393,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.459
+      },
+      "decay": 0.9396,
+      "age_h": 4.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! We’re Srikar and Kevan, founders of Alter - <a href=\"https:&#x2F;&#x2F;alterauth.com&#x2F;\">https:&#x2F;&#x2F;alterauth.com&#x2F;</a>. We’re building access control for agents that can take actions on behalf of multiple users.<p>If you’ve built an internal agent people use through Slack, you",
+    "why_now": "Shipped: 7 points, 9 comments on HN, 4 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-635de0a41e",
+    "title": "Kapitsa: New Apple Silicon Optimized Engine Runs Qwen 35B on 160 Tok/S on M4 Pro",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xbdxg3/kflash_benchmarks_of_newly_released_versions_of/",
+    "source": "hn",
+    "published_at": "2026-10-21T05:03:59Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9176,
+      "age_h": 6.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Apple",
+      "group": "how-to"
+    },
+    "products": [
+      "Apple",
+      "Qwen",
+      "Apple M4"
+    ],
+    "summary": "",
+    "why_now": "Measured: 4 points, 0 comments on HN, 6 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-04a2cdaeef",
+    "title": "Show HN: Agent Archive - Session Handoffs and Backups for Claude Code and Codex",
+    "url": "https://github.com/wangjohn/agent-archive",
+    "source": "hn",
+    "published_at": "2026-10-20T15:54:31Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7588,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I often switch between Claude Code and Codex throughout the week, and between my laptop and an older machine I leave running at home. I built agent-archive to make it easier to pick up where I left off, especially when i hit usage limits.<p>It lets you (or a coding agent) find past coding sessions a",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-34cd54d4b6",
+    "title": "Ask HN: Time to read those programming books?",
+    "url": "https://news.ycombinator.com/item?id=50170094",
+    "source": "hn",
+    "published_at": "2026-10-20T17:53:36Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 10,
+      "signal": 0.341,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.478
+      },
+      "decay": 0.7809,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "As llm usage becomes the way we all program and reading code becomes more valuable than writing it, what programming books would you recommend to boost this particular skill?",
+    "why_now": "Discussed: 4 points, 10 comments on HN, 17 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-34b84ef907",
+    "title": "Latest open artifacts (#25): DeepSeek v4.1 Flash 1017, American-made models",
+    "url": "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
+    "source": "hn",
+    "published_at": "2026-10-20T19:01:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7937,
+      "age_h": 16.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-229f137431",
+    "title": "Show HN: What the Harness? LLM agent inconsistencies in MCP implementation",
+    "url": "https://what-the-harness.polytomic.com",
+    "source": "hn",
+    "published_at": "2026-10-20T18:40:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7898,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Grok"
+    ],
+    "summary": "Hi HN,<p>We (Polytomic) noticed that LLM agents (Claude, Codex, Grok, Amp, etc) are inconsistent in their MCP implementations.<p>We made tables inspired by the browser-compatibility tables of yore that list the differences.<p>Hope you find this as useful as we did!",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-60593e7862",
+    "title": "The DHS DeepSeek removal order, transcribed: scope, exceptions, open weights",
+    "url": "https://theainewsreport.com/2026-10-20-dhs-deepseek-removal-order-explained.html",
+    "source": "hn",
+    "published_at": "2026-10-20T16:43:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7679,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-1e150b34a9",
+    "title": "Show HN: A layer on top llama.cpp enabling big MoE streaming on phone and laptop",
+    "url": "https://github.com/Helldez/BigMoeOnEdge",
+    "source": "hn",
+    "published_at": "2026-10-20T15:45:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7572,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "OpenAI"
+    ],
+    "summary": "Adaptive Streaming Optimizer: Run any Big MoE model on any device, any OS, any HW, local OpenAI-compatible server. Android, Windows, Mac, IOS, Linux. CPU, GPU, NPU (35B on phone 12gb RAM 10 tok&#x2F;s decode 100-300+ prefill, Windows, Mac even more: 25+ tok&#x2F;s 16 gb RAM)",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-f106f87bae",
+    "title": "Show HN: Gauge CLI - Open-Source Hillclimbing for Agent Experience",
+    "url": "https://github.com/gauge-sh/gauge-cli",
+    "source": "hn",
+    "published_at": "2026-10-20T18:01:22Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.7824,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! We&#x27;re releasing an open-source CLI for hillclimbing Agent Experience. That means optimizing your agent-facing surfaces (Skills, CLIs, SDKs, and docs) so that your users&#x27; coding agents can easily use your product. Pointing your own agent at the repo is enough to get started. <a href=",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 17 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-46471f36f6",
+    "title": "Show HN: Contrack - Self-hosted contact manager and people search",
+    "url": "https://github.com/arvarik/contrack",
+    "source": "hn",
+    "published_at": "2026-10-20T17:01:02Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7711,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:self-host",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "I got into homelabbing a year ago and have been deploying OSS and making some of my own to address some pain points in my everyday life.<p>One particular area I thought I could improve was keeping in touch with people.<p>Well that first required having a centralized place to see all my contacts. I h",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 18 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-fd38680e9b",
+    "title": "Linus Torvalds posts his first AI-assisted patch to the Linux kernel",
+    "url": "https://www.tomshardware.com/software/linux/linus-torvalds-posts-his-first-llm-assisted-patch-to-the-linux-kernel-after-issuing-clear-pro-ai-directives-the-bossman-makes-use-of-ai-tooling-himself",
+    "source": "hn",
+    "published_at": "2026-10-20T16:37:13Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7667,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 3 points, 1 comments on HN, 18 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-55200b4d31",
+    "title": "Show HN: Rocus: Browser local LLM that organizes your websites, notes and files",
+    "url": "https://rocus.io/",
+    "source": "hn",
+    "published_at": "2026-10-20T18:28:16Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7874,
+      "age_h": 16.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 17 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-726617e195",
+    "title": "The Topology of an LLM Agent Loop with Tool Use",
+    "url": "https://blog.exe.dev/topology",
+    "source": "hn",
+    "published_at": "2026-10-20T16:38:57Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.767,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 18 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-b2ae53e7f9",
+    "title": "Show HN: Koody for Business - AI bookkeeping for people who aren't accountants",
+    "url": "https://koody.com/business",
+    "source": "hn",
+    "published_at": "2026-10-20T16:09:44Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7616,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I&#x27;m Hallie, founder of Koody. Today, I&#x27;m launching Koody for Business: AI-powered accounting, bookkeeping, and tax prep software for sole proprietors and small businesses.<p>For years, I used accounting software for my business. I went into it to create invoices, categorize and reco",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 19 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-0ef7b7288d",
+    "title": "Using LLM for confidence scoring is a bad idea",
+    "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
+    "source": "hn",
+    "published_at": "2026-10-21T04:27:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9097,
+      "age_h": 6.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 7 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-c007ec5936",
+    "title": "Your LLM is probably overkill for text classification",
+    "url": "https://jeffyclassify.com/blog/jeffy-vs-llm-classification/",
+    "source": "hn",
+    "published_at": "2026-10-21T03:15:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8941,
+      "age_h": 7.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 8 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-09f0eb7b90",
+    "title": "Testing Jev, a fast multiple-choice AI model, on forensic accounting tasks",
+    "url": "https://case-trail.com/blog/testing-jev-ai-model-forensic-accounting",
+    "source": "hn",
+    "published_at": "2026-10-20T16:25:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.7645,
+      "age_h": 18.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 2 comments on HN, 19 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-b278ec1a07",
+    "title": "JustEat apologises for AI-generated slop",
+    "url": "https://www.thejournal.ie/justeat-ai-pictures-takeaway-mistakes-7198965-Oct2026/",
+    "source": "hn",
+    "published_at": "2026-10-20T12:47:10Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7254,
+      "age_h": 22.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 22 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-c3a342ba5b",
+    "title": "Show HN: A daily game where the goal is to be unpredictable to an LLM",
+    "url": "https://notbotgame.com",
+    "source": "hn",
+    "published_at": "2026-10-20T19:08:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7952,
+      "age_h": 15.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 16 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-46316dc20d",
+    "title": "The Honest Raw LLM Code Review Benchmark: 21 Models, 7,980 Reviews",
+    "url": "https://ironbee.ai/blog/the-honest-raw-llm-code-review-benchmark",
+    "source": "hn",
+    "published_at": "2026-10-20T14:56:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7483,
+      "age_h": 20.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hf-aae47ade8a",
+    "title": "orcarouter/OrcaCyber-Nano-1.0",
+    "url": "https://huggingface.co/orcarouter/OrcaCyber-Nano-1.0",
+    "source": "hf",
+    "published_at": "2026-10-16T10:04:56Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 154,
+      "downloads": 19697,
+      "trendingScore": 145.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.693,
+      "signal_parts": {
+        "trending": 0.656,
+        "likes": 0.73,
+        "downloads": 0.716
+      },
+      "decay": 0.1744,
+      "age_h": 120.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 154 likes, 19.7k downloads, trending score 145, created 2026-10-16",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 154 likes, 19.7k downloads, trending score 145, 5 d ago",
+    "score": 9
+  },
+  {
+    "id": "hn-770da8a7f2",
+    "title": "Show HN: Daisy - macOS software KVM with native trackpad gestures",
+    "url": "https://misfitdev.github.io/daisy/",
+    "source": "hn",
+    "published_at": "2026-10-20T14:10:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7401,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "I have three laptops on my desk most days. Each laptop is used for different work, that I need to keep separate. (Day job, advisory work, personal.) When I went looking for a software KVM, the only free one that correctly handled trackpad gestures was Apple&#x27;s Universal Control but that requires",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 21 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-b330bf20dc",
+    "title": "Show HN: Better search of public data, strategystudio.org",
+    "url": "https://strategystudio.org/",
+    "source": "hn",
+    "published_at": "2026-10-20T21:56:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8278,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I got tired of public data being silo&#x27;d or difficult to search or aggregate. LLM&#x27;s could only handle so much and slowly. So I built a free site and loaded lots in. Know of any other data to pour in, LMK.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-034daaa027",
+    "title": "EGPU and Local LLM Inference",
+    "url": "https://pgaleone.eu/ai/2026/10/20/eGPU-for-local-llm-inference/",
+    "source": "hn",
+    "published_at": "2026-10-20T18:07:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7836,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-534523f443",
+    "title": "Best LLM Fine-Tuning Services: What to Look for in 2026",
+    "url": "https://www.rebiha.com/best-llm-fine-tuning-services",
+    "source": "hn",
+    "published_at": "2026-10-20T16:24:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7644,
+      "age_h": 18.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-149276a789",
+    "title": "llm-d v1.0: State-of-the-art inference",
+    "url": "https://llm-d.ai/blog/llm-d-v1.0-state-of-the-art-inference-ready-for-day-2",
+    "source": "hn",
+    "published_at": "2026-10-20T16:07:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7612,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-aa3da0cb47",
+    "title": "Show HN: Seclai - See what your LLM agents are doing in production",
+    "url": "https://seclai.com/",
+    "source": "hn",
+    "published_at": "2026-10-20T15:00:10Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.749,
+      "age_h": 20.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-276afffa9d",
+    "title": "FastAPI-stream-lease - Limit concurrent SSE/LLM streams instead of req/min",
+    "url": "https://github.com/agustin18/fastapi-stream-lease",
+    "source": "hn",
+    "published_at": "2026-10-20T14:48:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7469,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  }
+]
