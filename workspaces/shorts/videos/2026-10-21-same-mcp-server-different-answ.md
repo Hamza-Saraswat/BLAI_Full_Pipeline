@@ -2,14 +2,14 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Claude Code MCP: two agents, two answers"
-status: building
+status: review
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
-updated: "2026-10-21T12:38:12Z"
+updated: "2026-10-21T13:04:00Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -33,7 +33,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-21-same-mcp-server-different-answ-script]]
 - Package: [[stages/05-package/output/2026-10-21-same-mcp-server-different-answ-package]]
 - Voice: [[stages/06-voice/output/2026-10-21-same-mcp-server-different-answ-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-21-same-mcp-server-different-answ-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -49,3 +49,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-21T12:38:12Z build start on gn100-83c4
 - 2026-10-21T12:40:35Z 06-voice ok 140s
+- 2026-10-21T13:04:04Z 07-render ok 106.63s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 255
+- 2026-10-21T13:04:04Z 07-render ok 1406s
