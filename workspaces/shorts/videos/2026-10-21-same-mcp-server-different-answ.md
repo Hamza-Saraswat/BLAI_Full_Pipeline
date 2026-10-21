@@ -1,8 +1,8 @@
 ---
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
-title: "Same MCP server, different answers: what the Harness measured"
-status: scripted
+title: "Claude Code MCP: two agents, two answers"
+status: ready-to-build
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
@@ -11,7 +11,7 @@ value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
 updated: "2026-10-21T11:09:48Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -31,8 +31,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-21-ideas]]
 - Research: [[stages/03-research/output/2026-10-21-same-mcp-server-different-answ-brief]]
 - Script: [[stages/04-script/output/2026-10-21-same-mcp-server-different-answ-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-21-same-mcp-server-different-answ-package]]
+- Voice: [[stages/06-voice/output/2026-10-21-same-mcp-server-different-answ-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,6 +44,7 @@ blotato_post_id: ""
 - Checkpoint (hooks, unattended): 10 written and scored; kept situation (A) and case (B), two different patterns per finding 12; frame-1 texts "ONE SERVER. TWO AGENTS. TWO ANSWERS." and "EVERY AGENT. ONE MCP PROBE."
 - Writers: two blind kimi-k3 calls (llm_call.py, temp 1 recipe, 32000 max tokens, 900 timeout); A 724 s, B 785 s; both boards validated clean (validator 0/0) and eval gates all pass; explicit hook_pattern set per variety.md because the classifier misread both hooks as number-shock.
 - Judge: kimi-k3 blind verdict B wins 20/24 vs 16/24; graft from A (marker mechanism sentence) applied; draft B re-gated clean after the graft. MCP added to tts_lexicon keep list, self-test 168/168. Ledger recorded (entry 46); style pack signal recorded.
+- Checkpoint (package, unattended): searchable title "Claude Code MCP: two agents, two answers" picked over two intriguing variants; keyword "claude code mcp" is the day's deepest autocomplete (115), so the search-heavy surface gets the searchable type. Rubric 100/100; check_outputs 0 failures; contains_synthetic_media false (typographic scenes plus the creator's cloned voice, both exempt); slot hint empty (default 11:00/18:00 CT rotation).
 
 ## Build journal
 
