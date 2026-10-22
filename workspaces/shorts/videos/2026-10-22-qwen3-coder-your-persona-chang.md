@@ -2,14 +2,14 @@
 slug: 2026-10-22-qwen3-coder-your-persona-chang
 workspace: shorts
 title: "Qwen3-Coder: persona changes security"
-status: building
+status: review
 pillar: myth-bust
 structure: worked-example
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-22T12:32:10Z"
+updated: "2026-10-22T12:54:03Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-22-qwen3-coder-your-persona-chang-script]]
 - Package: [[stages/05-package/output/2026-10-22-qwen3-coder-your-persona-chang-package]]
 - Voice: [[stages/06-voice/output/2026-10-22-qwen3-coder-your-persona-chang-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-22-qwen3-coder-your-persona-chang-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -40,3 +40,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-22T12:32:10Z build start on gn100-83c4
 - 2026-10-22T12:33:11Z 06-voice ok 59s
+- 2026-10-22T12:42:32Z 07-render fail 558s (07-render: scene s03 did not pass HyperFrames inspect after 5 rounds: t=0.09-0.28s (2 samples) text_box_overflow div.gutter-stage inside div.gutter-stage overfl)
+- 2026-10-22T12:54:06Z 07-render ok 42.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 258
+- 2026-10-22T12:54:06Z 07-render ok 694s
