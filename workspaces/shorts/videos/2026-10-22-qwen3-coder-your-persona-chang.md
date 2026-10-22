@@ -2,14 +2,14 @@
 slug: 2026-10-22-qwen3-coder-your-persona-chang
 workspace: shorts
 title: "Qwen3-Coder: your persona changes its security"
-status: idea
+status: researched
 pillar: myth-bust
 structure: ""
 format: classic
 style_pack: ""
 value_types: "REFRAMES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-22T11:06:47Z"
+updated: "2026-10-22T11:46:35Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-22-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-22-qwen3-coder-your-persona-chang-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 2026-10-22T11:46:41Z - research checkpoint (unattended): angle confirmed as picked -- persona phrase in the prompt changes Qwen3-Coder security output; slug kept. Validator exit 0; 10 claims, 8 key numbers, 10 sources; FireCrawl unused.
 
 ## Build journal
 

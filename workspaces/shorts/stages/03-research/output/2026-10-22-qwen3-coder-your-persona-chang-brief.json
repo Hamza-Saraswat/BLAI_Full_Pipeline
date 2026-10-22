@@ -55,7 +55,7 @@
       "accessed": "2026-10-22"
     },
     {
-      "claim": "Qwen3-Coder-30B-A3B-Instruct is a mixture-of-expans coding model with 30.5B parameters in total and 3.3B activated, a native context length of 262,144 tokens, downloadable from Hugging Face and supported for local use by Ollama, LM Studio, MLX-LM, llama.cpp and KTransformers.",
+      "claim": "Qwen3-Coder-30B-A3B-Instruct is a mixture-of-experts coding model with 30.5B parameters in total and 3.3B activated, a native context length of 262,144 tokens, downloadable from Hugging Face and supported for local use by Ollama, LM Studio, MLX-LM, llama.cpp and KTransformers.",
       "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
       "source_title": "Qwen/Qwen3-Coder-30B-A3B-Instruct model card (Hugging Face)",
       "source_quality": "primary",
@@ -144,13 +144,11 @@
   "misconceptions": [
     {
       "myth": "Running an open-weight model locally keeps you safe because it cannot send your data anywhere.",
-      "reality": "Local keeps your data in, but the weakness travels inside the code the model writes: an app that lets any user read everyone's secrets is exactly as exploitable whether it was written in the cloud or on an air-gamped machine (claim 5, claim 6).",
-      "": ""
+      "reality": "Local keeps your data in, but the weakness travels inside the code the model writes: an app that lets any user read everyone's secrets is exactly as exploitable whether it was written in the cloud or on an air-gapped machine (claim 5, claim 6)."
     },
     {
       "myth": "Just tell the model to write secure code and the risk goes away.",
-      "reality": "With BaxBench's own follow-best-practices instruction in the prompt, the US contractor's apps were still hackable 74% of the time against 59% for a neutral customer; the only fix that closed the gap was editing the model's weights (claim 3, claim 6).",
-      "": ""
+      "reality": "With BaxBench's own follow-best-practices instruction in the prompt, the US contractor's apps were still hackable 74% of the time against 59% for a neutral customer; the only fix that closed the gap was editing the model's weights (claim 3, claim 6)."
     }
   ],
   "glossary": [
