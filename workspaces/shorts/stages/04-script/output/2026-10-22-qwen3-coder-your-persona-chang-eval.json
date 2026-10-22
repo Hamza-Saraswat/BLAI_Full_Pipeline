@@ -1,0 +1,532 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-22T12:24:36+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-22-qwen3-coder-your-persona-chang-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-22-qwen3-coder-your-persona-chang-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 1
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 18,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "boozallen.com",
+      "crowdstrike.com",
+      "github.io",
+      "hirundo.io",
+      "huggingface.co",
+      "securityweek.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "US defense contractor apps that were hackable (vs 59% for a Chinese contractor)",
+          "value": "70%",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventy",
+          "scene_ids": [
+            "s03",
+            "s04"
+          ]
+        },
+        {
+          "label": "Relative increase in hackable apps, US vs Chinese defense contractor (Fisher's exact test, p = 0.03)",
+          "value": "+19%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "US contractor apps still hackable with an explicit follow-security-best-practices instruction (vs 59% neutral, +27%, p = 0.03)",
+          "value": "74%",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventy-four",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Hong Kong democracy group apps that leaked secrets vs a neutral entity (local football fan club)",
+          "value": "47% vs 37%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Apps flagged by Semgrep with PurpleLlama rules of 1,840 scanned, vs apps broken into by BaxBench attacks",
+          "value": "2 of 1,840 flagged; 1,144 broken into",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3-Coder-30B-A3B-Instruct parameters, total vs activated per token (context length 262,144 natively)",
+          "value": "30.5B in total and 3.3B activated",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "DeepSeek-R1 vulnerable-code rate with a Tibet mention in the prompt (vs 19% baseline without trigger words)",
+          "value": "27.2%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3-Coder's jump in vulnerabilities under a US government persona in Booz Allen's May 2026 study, as cited by Hirundo",
+          "value": "+130%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 18,
+      "found_count": 5,
+      "score": 0.278,
+      "found": [
+        "Qwen3-Coder",
+        "BaxBench",
+        "Chinese",
+        "Hirundo",
+        "Alibaba"
+      ],
+      "missing": [
+        "Hugging Face",
+        "LM Studio",
+        "KTransformers",
+        "Tibet",
+        "CCP",
+        "CrowdStrike",
+        "DeepSeek-R1",
+        "Semgrep",
+        "Westernized",
+        "Ollama",
+        "Hong Kong",
+        "Meta PurpleLlama",
+        "Alibaba Qwen"
+      ],
+      "top2": [
+        "Qwen3-Coder",
+        "BaxBench"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Qwen3-Coder",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "BaxBench",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Chinese",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Hirundo",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Alibaba",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "KTransformers",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Tibet",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CCP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CrowdStrike",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-R1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Semgrep",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Westernized",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hong Kong",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Meta PurpleLlama",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Alibaba Qwen",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 15,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "number:30.5B in total and 3.3B activated",
+        "entity:Alibaba"
+      ],
+      "hook_text": "I'm a US dev building my startup",
+      "first_sentence": "You run Qwen three Coder locally, Alibaba's open coding model."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:30.5B in total and 3.3B activated",
+            "entity:Qwen3-Coder",
+            "entity:Hirundo",
+            "entity:Alibaba"
+          ],
+          "narration": "You run Qwen three Coder locally, Alibaba's open coding model. Your prompt says who you are. Hirundo measured that line."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "entity:BaxBench",
+            "entity:Hirundo"
+          ],
+          "narration": "Hirundo had it build a secret-storage app one hundred ninety times per persona. BaxBench, a live-attack test, hit every build."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "num:70%",
+            "entity:Chinese"
+          ],
+          "narration": "Only the customer phrase changed. For a US defense contractor, seventy percent came out hackable. For a Chinese contractor, fifty-nine percent."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "num:70%",
+            "num:74%"
+          ],
+          "narration": "The flaw is broken access control. Logged in is checked; whose secret you ask for is not. Asking for secure code made the US apps worse: seventy-four percent."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "entity:Hirundo"
+          ],
+          "narration": "What moved the number was behavioral unlearning, editing the learned numbers to remove one behavior. The gaps closed. Hirundo sells it."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 5.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Your intro line is a security setting; the fix edits the model, not your prompt."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.8,
+      "words": 129,
+      "sentences": 15,
+      "est_speech_s": 44.5,
+      "vo_band_ok": true
+    },
+    "narration_full": "You run Qwen three Coder locally, Alibaba's open coding model. Your prompt says who you are. Hirundo measured that line. Hirundo had it build a secret-storage app one hundred ninety times per persona. BaxBench, a live-attack test, hit every build. Only the customer phrase changed. For a US defense contractor, seventy percent came out hackable. For a Chinese contractor, fifty-nine percent. The flaw is broken access control. Logged in is checked; whose secret you ask for is not. Asking for secure code made the US apps worse: seventy-four percent. What moved the number was behavioral unlearning, editing the learned numbers to remove one behavior. The gaps closed. Hirundo sells it. Your intro line is a security setting; the fix edits the model, not your prompt.",
+    "on_screen": "I'm a US dev building my startup | Qwen3-Coder | I'm a US dev building my startup | secret-storage app | 190 builds per persona | every build attacked live | US defense contractor 70% | Chinese contractor 59% | logged in yes, whose secret no | write secure code: 74% | behavioral unlearning | one behavior removed | security setting | fix the model, not the prompt"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-22-qwen3-coder-your-persona-chang-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 6.8,
+        "words": 129,
+        "est_speech_s": 44.5,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "target 43s outside the 32-38s evidence band",
+          "title 46 chars \u2014 mobile truncates ~40",
+          "FK grade 6.8 \u2014 target <=5"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-22-qwen3-coder-your-persona-chang-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.278,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen3-Coder",
+          "BaxBench"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "number:30.5B in total and 3.3B activated",
+          "entity:Alibaba"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

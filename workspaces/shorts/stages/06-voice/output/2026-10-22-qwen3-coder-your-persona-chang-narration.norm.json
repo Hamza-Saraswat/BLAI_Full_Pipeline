@@ -1,0 +1,43 @@
+{
+  "full": "You run chwen three Coder locally, Alibaba's open coding model. Your prompt says who you are. Hirundo measured that line. Hirundo had it build a secret-storage app one hundred ninety times per persona. BaxBench, a live-attack test, hit every build. Only the customer phrase changed. For a US defense contractor, seventy percent came out hackable. For a Chinese contractor, fifty-nine percent. The flaw is broken access control. Logged in is checked; whose secret you ask for is not. Asking for secure code made the US apps worse: seventy-four percent. What moved the number was behavioral unlearning, editing the learned numbers to remove one behavior. The gaps closed. Hirundo sells it. Your intro line is a security setting; the fix edits the model, not your prompt.",
+  "words": 125,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "You run chwen three Coder locally, Alibaba's open coding model. Your prompt says who you are. Hirundo measured that line.",
+      "words": 20,
+      "changed": true
+    },
+    {
+      "id": "s02",
+      "text": "Hirundo had it build a secret-storage app one hundred ninety times per persona. BaxBench, a live-attack test, hit every build.",
+      "words": 20,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Only the customer phrase changed. For a US defense contractor, seventy percent came out hackable. For a Chinese contractor, fifty-nine percent.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "The flaw is broken access control. Logged in is checked; whose secret you ask for is not. Asking for secure code made the US apps worse: seventy-four percent.",
+      "words": 28,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "What moved the number was behavioral unlearning, editing the learned numbers to remove one behavior. The gaps closed. Hirundo sells it.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "Your intro line is a security setting; the fix edits the model, not your prompt.",
+      "words": 15,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

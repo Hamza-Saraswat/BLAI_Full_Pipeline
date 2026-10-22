@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-22-ideas]]
 - Research: [[stages/03-research/output/2026-10-22-qwen3-coder-your-persona-chang-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-22-qwen3-coder-your-persona-chang-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
