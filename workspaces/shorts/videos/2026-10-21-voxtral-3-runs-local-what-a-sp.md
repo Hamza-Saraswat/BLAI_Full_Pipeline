@@ -2,14 +2,14 @@
 slug: 2026-10-21-voxtral-3-runs-local-what-a-sp
 workspace: shorts
 title: "Voxtral 3 runs local: what a speech model needs on your GPU"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-21
-updated: "2026-10-21T11:09:48Z"
+updated: "2026-10-22T13:35:55Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-22T13:35:55Z 2026-10-22T13:35:55Z expired: not from today's picks (2026-10-22); the factory carries no backlog
