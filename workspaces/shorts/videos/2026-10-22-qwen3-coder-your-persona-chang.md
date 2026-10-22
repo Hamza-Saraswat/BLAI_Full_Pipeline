@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-22-qwen3-coder-your-persona-chang-brief]]
 - Script: [[stages/04-script/output/2026-10-22-qwen3-coder-your-persona-chang-script]]
 - Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-22-qwen3-coder-your-persona-chang-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
