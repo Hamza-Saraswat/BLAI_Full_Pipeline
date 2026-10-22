@@ -2,19 +2,19 @@
 slug: 2026-10-22-qwen3-coder-your-persona-chang
 workspace: shorts
 title: "Qwen3-Coder: persona changes security"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: worked-example
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-22T12:27:47Z"
+updated: "2026-10-22T12:32:10Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -38,4 +38,4 @@ blotato_post_id: ""
 - 2026-10-22T12:27:58Z - package checkpoint (unattended): searchable title chosen (deepest autocomplete of the day, 85); rubric 100/100, stored seo_score 95 (5 held back: title stops one word short of the full finding); description carries the Booz Allen vs Hirundo conflict the script left out; manifest validates against publish-manifest.schema.json.
 
 ## Build journal
-
+- 2026-10-22T12:32:10Z build start on gn100-83c4
