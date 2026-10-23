@@ -2,14 +2,14 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Claude Code MCP: two agents, two answers"
-status: expired
+status: approved
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
-updated: "2026-10-22T13:35:55Z"
+updated: "2026-10-23T10:56:48Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -53,3 +53,4 @@ blotato_post_id: ""
 - 2026-10-21T13:04:04Z 07-render ok 1406s
 - 2026-10-21T13:04:06Z build done, status review
 - 2026-10-22T13:35:55Z 2026-10-22T13:35:55Z expired: not from today's picks (2026-10-22); the factory carries no backlog
+- 2026-10-23T10:56:48Z telegram approve (approved_at 2026-10-23T10:56:48Z)
