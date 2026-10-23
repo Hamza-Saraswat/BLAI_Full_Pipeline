@@ -1,0 +1,108 @@
+{
+ "slug": "2026-10-23-8-dgx-sparks-1-tb-frontier-mod",
+ "topic": "Eight NVIDIA DGX Sparks clustered into 1 TB of unified memory running the GLM 5.3 753B frontier model",
+ "title": "8 DGX Sparks, 1 TB: frontier AI on a desk",
+ "description": "Working description; the package stage overwrites this. Eight DGX Sparks now cluster into 1 TB of unified memory and run the full GLM 5.3 (753B) at about 470 GB in NVFP4. You'll learn what the cluster really buys: capacity, not speed. (Narration is AI-generated.)",
+ "hashtags": [
+  "#DGXSpark",
+  "#NVIDIA",
+  "#GLM",
+  "#LocalAI",
+  "#AICluster",
+  "#BuildLocalAI",
+  "#FrontierModels",
+  "#UnifiedMemory"
+ ],
+ "hook_text": "8 desk boxes, 1 TB memory",
+ "hook_candidates": [
+  "One terabyte of memory, on your desk.",
+  "Eight desk boxes now hold what a datacenter rents.",
+  "NVIDIA just blessed an eight-Spark cluster.",
+  "Your desk just got a terabyte of model memory.",
+  "753B parameters, zero datacenter.",
+  "A frontier model now runs on eight desk boxes.",
+  "Eight Sparks, one terabyte, one cable.",
+  "Eight DGX Sparks replaced the datacenter rental.",
+  "The four hundred seventy gigabyte file on a desk.",
+  "Eight little boxes, one frontier model, no cloud."
+ ],
+ "style_pack": "silicon",
+ "script_format": "classic",
+ "structure": "number-first",
+ "value_types": "TEACHES,REFRAMES",
+ "target_duration_s": 32,
+ "narration_full": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent. GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model. NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed. The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed. So the biggest models stopped being rentals. A frontier checkpoint now runs on your desk.",
+ "music_mood": "steady-build",
+ "scenes": [
+  {
+   "id": "s01",
+   "role": "hook",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent.",
+   "on_screen_text": "8 desk boxes | 1 TB pooled memory",
+   "visual_brief": "Frame 1: '8 desk boxes' as giant digits-plus-words inside the silicon slab frame, fully legible. Motion onset t=0.30s: the '8' scales 1.0 to 1.08 and settles. On 'desk boxes' eight tiny slab glyphs fade in beneath the number. On 'used to mean a datacenter' the glyphs hold still and a faint chrome rack outline fades in behind, then dims. One text block animating at a time.",
+   "est_duration_s": 6.6,
+   "render_notes": "Silicon pack. Writer ignored the assigned named-contradiction pattern; board keeps the draft as written.",
+   "sfx": [
+    {
+     "at": "number-reveal",
+     "name": "ding"
+    }
+   ]
+  },
+  {
+   "id": "s02",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "split-compare",
+   "narration": "GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model.",
+   "on_screen_text": "GLM 5.3 across 8 nodes | 753B params -> 470 GB",
+   "visual_brief": "Split: left 'GLM 5.3' over a row of eight slab glyphs, each pulsing once in sequence on 'across all eight' (staggered, never simultaneous). Mid-scene on 'seven hundred fifty-three billion parameters' the left label hard-cuts from '753B params' to '4-bit weights' in amber. Right: a weight value '1.0000' collapses to '1.0' as the text hard-cuts to '470 GB', amber fill on the collapsed value; the fill completes on 'gigabytes of model'. Two animated elements max; hard cuts only.",
+   "est_duration_s": 9.0,
+   "sfx": [
+    {
+     "at": "number-reveal",
+     "name": "pop"
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed.",
+   "on_screen_text": "31 tokens/sec | 1 user, reading speed",
+   "visual_brief": "Giant '31' digits with 'tokens/sec' beneath in the slab frame. On 'one user' a single amber cursor glyph blinks at a text line under the number, typing three short dashes then pausing: reading speed made visible. On 'about reading speed' the cursor stops and the line dims. Number is on screen exactly while spoken.",
+   "est_duration_s": 6.6
+  },
+  {
+   "id": "s04",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "diagram-flow",
+   "narration": "The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed.",
+   "on_screen_text": "ConnectX-7 cable: 11x slower | room, not speed",
+   "visual_brief": "Two panels flow: a wide amber lane inside one slab (fast) over a long thin trace running box to box (slow). On 'eleven times faster' the inner lane pulses once; the trace stays dull. On 'eight boxes buy room' the eight-slab grid from s01 returns small at top, pooling outline drawing around them while the trace dims. Hard cuts only.",
+   "est_duration_s": 9.3
+  },
+  {
+   "id": "s05",
+   "role": "payoff_close",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "So the biggest models stopped being rentals. A frontier checkpoint now runs on your desk.",
+   "on_screen_text": "frontier checkpoint | your desk: capacity",
+   "visual_brief": "Centered: 'frontier checkpoint' types on one line, then hard-cuts to 'on your desk' beneath it as the slab frame from frame 1 fades back in around the words (rhyme with s01). Amber underline settles under 'your desk'. Wordmark settle in the final 0.5 s; stop within a second of the last word.",
+   "est_duration_s": 5.2,
+   "sfx": [
+    {
+     "at": "end",
+     "name": "ding"
+    }
+   ]
+  }
+ ],
+ "notes_for_review": "Reviewer: this draft opens number-first despite the named-contradiction assignment; no second person until s05; 'the biggest models' is spoken as the thesis but the brief only supports 'a frontier model'. Estimated speech 31.0 s is just under the 32-38 sweet band."
+}
