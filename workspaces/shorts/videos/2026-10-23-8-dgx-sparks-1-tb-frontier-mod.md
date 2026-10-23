@@ -2,14 +2,14 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
-status: review
+status: approved
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
-updated: "2026-10-23T12:31:24Z"
+updated: "2026-10-23T17:23:01Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-10-23T12:31:27Z 07-render ok 36.10s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 265
 - 2026-10-23T12:31:27Z 07-render ok 987s
 - 2026-10-23T12:31:29Z build done, status review
+- 2026-10-23T17:23:01Z telegram approve (approved_at 2026-10-23T17:23:01Z)
