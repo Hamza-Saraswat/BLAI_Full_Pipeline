@@ -1,9 +1,9 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-10-23T11:59:01+00:00",
-  "slug": "draft-A-r2",
+  "generated_at": "2026-10-23T12:10:52+00:00",
+  "slug": "final",
   "inputs": {
-    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-draft-A-storyboard.json",
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-storyboard.json",
     "research_path": "workspaces/shorts/stages/03-research/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-brief.json",
     "project_record": null,
     "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
@@ -41,11 +41,10 @@
           "label": "eight-node cluster unified memory",
           "value": "1 TB",
           "spent": true,
-          "matched_in": "narration",
-          "matched_token": "One",
+          "matched_in": "on_screen",
+          "matched_token": "1",
           "scene_ids": [
-            "s01",
-            "s04"
+            "s01"
           ]
         },
         {
@@ -55,7 +54,7 @@
           "matched_in": "on_screen",
           "matched_token": "470 GB",
           "scene_ids": [
-            "s03"
+            "s02"
           ]
         },
         {
@@ -63,9 +62,9 @@
           "value": "753B in total and 40B activated",
           "spent": true,
           "matched_in": "narration",
-          "matched_token": "seven hundred fifty-three",
+          "matched_token": "Seven hundred fifty-three",
           "scene_ids": [
-            "s03"
+            "s02"
           ]
         },
         {
@@ -112,15 +111,15 @@
     },
     "entity_spend": {
       "total": 11,
-      "found_count": 3,
-      "score": 0.273,
+      "found_count": 4,
+      "score": 0.364,
       "found": [
         "GLM 5.3",
+        "ConnectX-7",
         "NVIDIA",
         "Sparks"
       ],
       "missing": [
-        "ConnectX-7",
         "Gigabits",
         "Oct",
         "GTC Berlin",
@@ -133,7 +132,7 @@
         "GLM 5.3",
         "ConnectX-7"
       ],
-      "top2_present": false,
+      "top2_present": true,
       "entities": [
         {
           "name": "GLM 5.3",
@@ -148,8 +147,10 @@
           "name": "ConnectX-7",
           "tier": 0,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "Gigabits",
@@ -194,8 +195,7 @@
           "claim_count": 1,
           "found": true,
           "matched_in": [
-            "narration",
-            "on_screen"
+            "narration"
           ]
         },
         {
@@ -222,7 +222,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 9,
+      "sentences": 13,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -231,95 +231,94 @@
       "concrete": true,
       "via": [
         "digit",
-        "number:1 TB"
+        "number:1 TB",
+        "entity:Sparks"
       ],
-      "hook_text": "1 TB on your desk",
-      "first_sentence": "One terabyte of memory just shrank to your desk."
+      "hook_text": "8 desk boxes, 1 TB memory",
+      "first_sentence": "Eight DGX Sparks pool one terabyte of memory."
     },
     "positional_labels": {
       "count": 0,
-      "structure": "news-react-so-what",
+      "structure": "number-first",
       "labels": []
     },
     "scene_specificity": {
       "total": 5,
-      "specific_count": 5,
-      "ratio": 1.0,
+      "specific_count": 4,
+      "ratio": 0.8,
       "scenes": [
         {
           "id": "s01",
           "role": "hook",
-          "est_duration_s": 3.1,
+          "est_duration_s": 6.6,
           "specific": true,
           "hits": [
-            "num:1 TB"
+            "num:1 TB",
+            "entity:Sparks"
           ],
-          "narration": "One terabyte of memory just shrank to your desk."
+          "narration": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent."
         },
         {
           "id": "s02",
           "role": "explain",
-          "est_duration_s": 9.3,
-          "specific": true,
-          "hits": [
-            "entity:NVIDIA",
-            "entity:Sparks"
-          ],
-          "narration": "NVIDIA now supports linking eight DGX Sparks, desk-side AI computers, into one shared pool. Your gaming PC or Mac watched models this size from a browser tab."
-        },
-        {
-          "id": "s03",
-          "role": "explain",
-          "est_duration_s": 9.3,
+          "est_duration_s": 9.0,
           "specific": true,
           "hits": [
             "num:about 470 GB",
             "num:753B in total and 40B activated",
             "entity:GLM 5.3"
           ],
-          "narration": "That pool runs G L M five point three, seven hundred fifty-three billion parameters. The whole model is one four hundred seventy gigabyte file on a desk."
+          "narration": "GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model."
         },
         {
-          "id": "s04",
+          "id": "s03",
           "role": "explain",
-          "est_duration_s": 7.2,
-          "specific": true,
-          "hits": [
-            "num:1 TB"
-          ],
-          "narration": "The catch: the cable between boxes is eleven times slower than the memory inside each one. You buy room, not speed."
-        },
-        {
-          "id": "s05",
-          "role": "payoff_close",
-          "est_duration_s": 8.6,
+          "est_duration_s": 6.6,
           "specific": true,
           "hits": [
             "entity:NVIDIA"
           ],
-          "narration": "And yet it types at thirty-one tokens per second in NVIDIA's own test, no cloud account. The frontier moved from their building to your desk."
+          "narration": "NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "entity:ConnectX-7"
+          ],
+          "narration": "The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 5.5,
+          "specific": false,
+          "hits": [],
+          "narration": "So the biggest models stopped being rentals. The frontier moved from their building to your desk."
         }
       ]
     },
     "language": {
-      "fk_grade": 6.2,
-      "words": 112,
-      "sentences": 9,
-      "est_speech_s": 38.6,
+      "fk_grade": 5.7,
+      "words": 109,
+      "sentences": 13,
+      "est_speech_s": 37.6,
       "vo_band_ok": true
     },
-    "narration_full": "One terabyte of memory just shrank to your desk. NVIDIA now supports linking eight DGX Sparks, desk-side AI computers, into one shared pool. Your gaming PC or Mac watched models this size from a browser tab. That pool runs G L M five point three, seven hundred fifty-three billion parameters. The whole model is one four hundred seventy gigabyte file on a desk. The catch: the cable between boxes is eleven times slower than the memory inside each one. You buy room, not speed. And yet it types at thirty-one tokens per second in NVIDIA's own test, no cloud account. The frontier moved from their building to your desk.",
-    "on_screen": "1 TB on your desk | 1 TB | on your desk | 8 DGX Sparks | one shared pool | GLM 5.3 | 753B parameters | 470 GB file | cable ~11x slower | room, not speed | 31 tokens/sec | your desk, not theirs"
+    "narration_full": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent. GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model. NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed. The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed. So the biggest models stopped being rentals. The frontier moved from their building to your desk.",
+    "on_screen": "8 desk boxes, 1 TB memory | 8 desk boxes | 1 TB pooled memory | GLM 5.3 across 8 nodes | 753B params -> 470 GB | 31 tokens/sec | 1 user, reading speed | ConnectX-7 cable: 11x slower | room, not speed | frontier models, not rentals | your desk"
   },
   "validators": {
     "storyboard": {
       "exit_code": 3,
       "output": {
-        "file": "workspaces/shorts/stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-draft-A-storyboard.json",
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-storyboard.json",
         "scenes": 5,
-        "fk_grade": 6.2,
-        "words": 112,
-        "est_speech_s": 38.6,
+        "fk_grade": 5.7,
+        "words": 109,
+        "est_speech_s": 37.6,
         "blockers": [],
         "advisories": [
           "8 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
@@ -331,9 +330,9 @@
         ],
         "warnings": [
           "title 41 chars \u2014 mobile truncates ~40",
-          "FK grade 6.2 \u2014 target <=5",
-          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
-          "s02: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json"
+          "FK grade 5.7 \u2014 target <=5",
+          "s01: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s02: 'GLM' will be spoken via skills/script-gates/tts_lexicon.json"
         ]
       }
     },
@@ -391,8 +390,7 @@
     "gate1_ready": true,
     "failures": [],
     "advisories": [
-      "entity_spend",
-      "top2"
+      "entity_spend"
     ],
     "detail": {
       "number_spend": {
@@ -405,7 +403,7 @@
         "mode": "band"
       },
       "entity_spend": {
-        "score": 0.273,
+        "score": 0.364,
         "need": 0.5,
         "advisory": true
       },
@@ -414,18 +412,19 @@
           "GLM 5.3",
           "ConnectX-7"
         ],
-        "present": false,
+        "present": true,
         "advisory": true
       },
       "hook_concrete": {
         "concrete": true,
         "via": [
           "digit",
-          "number:1 TB"
+          "number:1 TB",
+          "entity:Sparks"
         ]
       },
       "scene_specificity": {
-        "specific": 5,
+        "specific": 4,
         "need": 4,
         "total": 5
       },
@@ -440,7 +439,7 @@
       },
       "positional_labels": {
         "count": 0,
-        "structure": "news-react-so-what",
+        "structure": "number-first",
         "allowed_structures": [
           "how-to-three-moves",
           "worked-example"

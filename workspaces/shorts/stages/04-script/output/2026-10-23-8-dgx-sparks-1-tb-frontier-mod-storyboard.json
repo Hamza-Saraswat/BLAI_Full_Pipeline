@@ -31,7 +31,7 @@
  "structure": "number-first",
  "value_types": "TEACHES,REFRAMES",
  "target_duration_s": 32,
- "narration_full": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent. GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model. NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed. The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed. So the biggest models stopped being rentals. A frontier checkpoint now runs on your desk.",
+ "narration_full": "Eight DGX Sparks pool one terabyte of memory. They are desk boxes. A terabyte meant a building you rent. GLM five point three runs across all eight. Seven hundred fifty-three billion parameters. Squeezed to four bits a weight: about four hundred seventy gigabytes of model. NVIDIA measured thirty-one tokens per second for one user. That is how fast the model writes: about reading speed. The catch is the cable. A Spark's own memory outruns its ConnectX seven link, the cable between boxes, eleven times over. Eight boxes buy room, not speed. So the biggest models stopped being rentals. The frontier moved from their building to your desk.",
  "music_mood": "steady-build",
  "scenes": [
   {
@@ -92,10 +92,10 @@
    "role": "payoff_close",
    "tool": "hyperframes",
    "layout_archetype": "centered-stack",
-   "narration": "So the biggest models stopped being rentals. A frontier checkpoint now runs on your desk.",
-   "on_screen_text": "frontier checkpoint | your desk: capacity",
-   "visual_brief": "Centered: 'frontier checkpoint' types on one line, then hard-cuts to 'on your desk' beneath it as the slab frame from frame 1 fades back in around the words (rhyme with s01). Amber underline settles under 'your desk'. Wordmark settle in the final 0.5 s; stop within a second of the last word.",
-   "est_duration_s": 5.2,
+   "narration": "So the biggest models stopped being rentals. The frontier moved from their building to your desk.",
+   "on_screen_text": "frontier models, not rentals | your desk",
+   "visual_brief": "Centered: 'frontier models, not rentals' types on one line, then hard-cuts to 'your desk' beneath it as the slab frame from frame 1 fades back in around the words (rhyme with s01). Amber underline settles under 'your desk'. Wordmark settle in the final 0.5 s; stop within a second of the last spoken word.",
+   "est_duration_s": 5.5,
    "sfx": [
     {
      "at": "end",
@@ -104,5 +104,5 @@
    ]
   }
  ],
- "notes_for_review": "Reviewer: this draft opens number-first despite the named-contradiction assignment; no second person until s05; 'the biggest models' is spoken as the thesis but the brief only supports 'a frontier model'. Estimated speech 31.0 s is just under the 32-38 sweet band."
+ "notes_for_review": "Grafted closer from draft A (judge order): 'The frontier moved from their building to your desk.' replaces 'A frontier checkpoint now runs on your desk.' Reviewer: 'eleven times slower' rounds the measured 196 Gb/s link vs 273 GB/s inside one Spark (claim 8); 31 TPS is NVIDIA's vendor benchmark, attributed in narration; the ~$55,600 build cost and the 816B/Q8 fit stay unspoken (Unverified). 'G L M five point three' and 'ConnectX seven' are pre-spoken for the voice engine."
 }

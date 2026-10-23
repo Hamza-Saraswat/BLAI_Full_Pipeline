@@ -2,11 +2,11 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: frontier models on a desk"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: "number-first"
 format: classic
-style_pack: ""
+style_pack: "silicon"
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
 updated: "2026-10-23T11:15:46Z"
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-23-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-23-ideas]]
 - Research: [[stages/03-research/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,6 +37,11 @@ blotato_post_id: ""
 
 - Stage 03 checkpoint (unattended): angle confirmed unchanged -- eight clustered Sparks expose 1 TB unified memory; frontier model on a desk, not a datacenter node.
 - Stage 03 brief: 10 claims, 12 sources, validator exit 0; exemplar GLM 5.3 753B at about 470 GB NVFP4; 816B/Muse-Spark fit parked under Unverified (no tier 1-3 source this run).
+
+- Stage 04 checkpoint (unattended): structures A news-react-so-what + B number-first (both clear rotation); value types TEACHES, REFRAMES confirmed; promise: what eight linked Sparks run, and the catch, capacity not speed.
+- Stage 04 hooks: 10 written, kept family "eight desk boxes hold what a datacenter rents"; writer B drifted from its assigned named-contradiction to number-first and the judge kept it (row 6).
+- Stage 04 judge: tie 21/24, B won on row 6 (difference); graft: A's closer into B's s05. Validator 0 blockers; eval hard gates pass; soft entity_spend kept on purpose (ConnectX-7 said as "the cable" in s04; named in full on screen).
+- Stage 04 advisories kept: 8 hashtags/0 keyword tags finalized at stage 05; FK 5.7; title 41 chars rewritten at stage 05; DGX/GLM have lexicon say entries. Ledger + style pack (silicon) recorded.
 
 ## Build journal
 
