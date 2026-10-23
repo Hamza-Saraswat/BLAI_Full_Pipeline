@@ -2,21 +2,21 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Claude Code MCP: two agents, two answers"
-status: scheduled
+status: published
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
-updated: "2026-10-23T10:57:12Z"
+updated: "2026-10-23T16:05:10Z"
 publish_slot: "2026-10-23T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=d9MWlSqkudw"
 blotato_post_id: 031e9bc4-13da-48ad-b0b0-539caecad7b8
 ---
 # Same MCP server, different answers: what the Harness measured
@@ -55,3 +55,4 @@ blotato_post_id: 031e9bc4-13da-48ad-b0b0-539caecad7b8
 - 2026-10-22T13:35:55Z 2026-10-22T13:35:55Z expired: not from today's picks (2026-10-22); the factory carries no backlog
 - 2026-10-23T10:56:48Z telegram approve (approved_at 2026-10-23T10:56:48Z)
 - 2026-10-23T10:57:12Z 08-publish ok 2s
+- 2026-10-23T16:05:10Z published https://www.youtube.com/watch?v=d9MWlSqkudw
