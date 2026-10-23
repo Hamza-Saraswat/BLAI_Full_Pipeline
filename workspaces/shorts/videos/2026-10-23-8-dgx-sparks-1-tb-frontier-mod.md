@@ -2,19 +2,19 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
-status: ready-to-build
+status: building
 pillar: news-react
-structure: "number-first"
+structure: number-first
 format: classic
-style_pack: "silicon"
+style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
-updated: "2026-10-23T11:15:46Z"
+updated: "2026-10-23T12:14:00Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -47,4 +47,4 @@ blotato_post_id: ""
 - Stage 05 rubric 95/100, all rows scored; check_outputs exit 0 after hub link; contains_synthetic_media false (typographic scenes, creator's own cloned voice); title differs from every published title.
 
 ## Build journal
-
+- 2026-10-23T12:14:00Z build start on gn100-83c4
