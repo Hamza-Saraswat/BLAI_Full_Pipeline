@@ -2,14 +2,14 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
-status: building
+status: review
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
-updated: "2026-10-23T12:14:00Z"
+updated: "2026-10-23T12:31:24Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-script]]
 - Package: [[stages/05-package/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-package]]
 - Voice: [[stages/06-voice/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -49,3 +49,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-23T12:14:00Z build start on gn100-83c4
 - 2026-10-23T12:14:58Z 06-voice ok 55s
+- 2026-10-23T12:31:27Z 07-render ok 36.10s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 265
+- 2026-10-23T12:31:27Z 07-render ok 987s
