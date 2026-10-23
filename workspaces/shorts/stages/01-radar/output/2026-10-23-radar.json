@@ -1,0 +1,2475 @@
+[
+ {
+  "id": "github-55c074d11a",
+  "title": "llama.cpp b11836",
+  "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11836",
+  "source": "github",
+  "published_at": "2026-10-23T08:20:06Z",
+  "signals": {
+   "repo": "ggml-org/llama.cpp",
+   "tag": "b11836",
+   "prerelease": true,
+   "signal": 0.5,
+   "signal_parts": {
+    "release": 0.4,
+    "notes": 0.1
+   },
+   "decay": 0.9611,
+   "age_h": 2.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:llama.cpp",
+   "group": "how-to"
+  },
+  "products": [
+   "llama.cpp",
+   "Llama",
+   "Apple"
+  ],
+  "summary": "<details open> CANN: missing `const` qualifiers added for consistency (#30933) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/58989960> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases",
+  "why_now": "Shipped: ggml-org/llama.cpp b11836 released (pre-release), 3 h ago",
+  "score": 56,
+  "so_what": "Third llama.cpp build in 24 h; this one is a CANN const-cleanup. No local-user-facing change; routine rollup."
+ },
+ {
+  "id": "github-93eab60282",
+  "title": "llama.cpp b11835",
+  "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11835",
+  "source": "github",
+  "published_at": "2026-10-23T07:29:18Z",
+  "signals": {
+   "repo": "ggml-org/llama.cpp",
+   "tag": "b11835",
+   "prerelease": true,
+   "signal": 0.5,
+   "signal_parts": {
+    "release": 0.4,
+    "notes": 0.1
+   },
+   "decay": 0.9495,
+   "age_h": 3.6,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:llama.cpp",
+   "group": "how-to"
+  },
+  "products": [
+   "llama.cpp",
+   "Llama",
+   "Apple"
+  ],
+  "summary": "<details open> sycl : pass device into mul_mat_uses_onednn (#31014) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/58974916> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b",
+  "why_now": "Shipped: ggml-org/llama.cpp b11835 released (pre-release), 4 h ago",
+  "score": 55,
+  "so_what": "SYCL fix passing the device into oneDNN mul_mat; only matters on Intel GPUs. Routine rollup."
+ },
+ {
+  "id": "github-3ed73eed21",
+  "title": "ollama v0.40.9",
+  "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9",
+  "source": "github",
+  "published_at": "2026-10-22T01:33:10Z",
+  "signals": {
+   "repo": "ollama/ollama",
+   "tag": "v0.40.9",
+   "prerelease": false,
+   "signal": 0.7,
+   "signal_parts": {
+    "release": 0.6,
+    "notes": 0.1
+   },
+   "decay": 0.6162,
+   "age_h": 33.5,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Ollama",
+   "group": "how-to"
+  },
+  "products": [
+   "Ollama",
+   "Apple",
+   "OpenAI"
+  ],
+  "summary": "## Speech Ollama can now generate [speech](https://docs.ollama.com/capabilities/speech) with Phonon on Apple Silicon. `ollama run` plays text or a chat model's reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible `/v1/audio/speech` endpoint. ```sh ollama run",
+  "why_now": "Shipped: ollama/ollama v0.40.9 released, 34 h ago",
+  "score": 52,
+  "so_what": "Ollama 0.40.9 adds local speech generation with Phonon on Apple Silicon plus an OpenAI-compatible /v1/audio/speech endpoint, and d3 decision models (2B-27B) -- one binary now covers chat, TTS and routing."
+ },
+ {
+  "id": "github-8e2789c8fa",
+  "title": "llama.cpp b11829",
+  "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11829",
+  "source": "github",
+  "published_at": "2026-10-22T23:43:43Z",
+  "signals": {
+   "repo": "ggml-org/llama.cpp",
+   "tag": "b11829",
+   "prerelease": true,
+   "signal": 0.5,
+   "signal_parts": {
+    "release": 0.4,
+    "notes": 0.1
+   },
+   "decay": 0.8488,
+   "age_h": 11.4,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:llama.cpp",
+   "group": "how-to"
+  },
+  "products": [
+   "llama.cpp",
+   "Llama",
+   "Apple"
+  ],
+  "summary": "<details open> server: Substitute rerank placeholder from the original template only. (#30864) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/58867720> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/ll",
+  "why_now": "Shipped: ggml-org/llama.cpp b11829 released (pre-release), 11 h ago",
+  "score": 51,
+  "so_what": "llama-server reranker template fix; matters only if you serve /rerank endpoints. Routine rollup."
+ },
+ {
+  "id": "hn-7a18b24f21",
+  "title": "The Rise and Fall of Jev",
+  "url": "https://blog.alexewerlof.com/p/rise-and-fall-of-jev-eval-hype-vs-llm",
+  "source": "hn",
+  "published_at": "2026-10-23T09:21:00Z",
+  "signals": {
+   "points": 21,
+   "num_comments": 9,
+   "signal": 0.517,
+   "signal_parts": {
+    "points": 0.542,
+    "comments": 0.459
+   },
+   "decay": 0.9753,
+   "age_h": 1.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 21 points, 9 comments on HN, 2 h ago",
+  "score": 43,
+  "so_what": "Argues JEVAL-style eval scores did not predict real LLM performance. No product, no runnable number; local angle is thin -- trust benchmarks you can run on your own box."
+ },
+ {
+  "id": "firecrawl-812612727f",
+  "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
+  "url": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "# Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes ## AI-Generated Summary ### Next Steps AI developers aren’t just running a single model anymore--they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting with frontier-class architectures that de",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 39,
+  "so_what": "NVIDIA documents running frontier-class models across 8 DGX Spark nodes = 1 TB unified memory; model classes that needed a datacenter GPU node now run on desktop hardware."
+ },
+ {
+  "id": "firecrawl-f396958243",
+  "title": "NVIDIA Gives DGX And RTX Systems A 40% AI Inference Boost, While ...",
+  "url": "https://wccftech.com/nvidia-gives-dgx-rtx-systems-a-ai-inference-boost-dgx-spark-now-clusters-up-to-8-units/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "# NVIDIA Gives DGX And RTX Systems A 40% AI Inference Boost, While DGX Spark Now Clusters Up To 8 Units For 1 TB Memory NVIDIA has announced DGX Spark platforms now support 8-way clusters while AI inference gains a 40% boost on DGX & RTX systems. ## 8-Way NVIDIA DGX Spark Clusters Now Supported, Boo",
+  "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 39,
+  "so_what": "Stack update claims a 40% inference boost for DGX and RTX plus 8-unit clustering. The 40% is vendor-claimed; needs a tokens-per-second re-measure on your own box."
+ },
+ {
+  "id": "firecrawl-8362923704",
+  "title": "NVIDIA Put a DGX Spark in a Laptop… Almost - YouTube",
+  "url": "https://www.youtube.com/watch?v=iZ88PPiAsl8",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "how-to"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "# I Put My Whole Dev Setup and a 120B Model on One Laptop ## I Put My Whole Dev Setup and a 120B Model on One Laptop I put the MSI's RTX Spark, up against my DGX Spark, then pulled the plug.",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 39,
+  "so_what": "Hands-on video about a DGX-Spark-class laptop prototype; no measured number given -- would need TDP and memory bandwidth measured before repeating any claim."
+ },
+ {
+  "id": "firecrawl-f9f9ffd2c7",
+  "title": "Nvidia's DGX Spark can now join forces with seven others to deliver 1 ...",
+  "url": "https://www.notebookcheck.net/Nvidia-s-DGX-Spark-can-now-join-forces-with-seven-others-to-deliver-1-TB-of-memory.1430472.0.html",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "Nvidia has announced a series of upgrades for its [DGX Spark](https://www.notebookcheck.net/Nvidia-and-MediaTek-extend-collaboration-to-develop-multiple-generations-of-RTX-Spark-and-DGX-Spark-PC-chips.1384037.0.html) AI mini PC at [GTC Berlin](https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark",
+  "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 39,
+  "so_what": "8 clustered DGX Sparks expose 1 TB of unified memory; a roughly 700 GB set of weights (an 816B at Q8) becomes runnable at home -- if you buy 8 units."
+ },
+ {
+  "id": "firecrawl-17ec4ed85e",
+  "title": "Nvidia's DGX Spark is sold out, but Dell's GB10 workstation delivers the ...",
+  "url": "https://www.tomshardware.com/desktops/nvidias-dgx-spark-is-sold-out-but-dells-gb10-workstation-delivers-the-same-grace-blackwell-power-for-less-skip-the-waitlist-with-the-2tb-config-at-usd5-903",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark",
+   "GB10",
+   "Grace Blackwell",
+   "Blackwell"
+  ],
+  "summary": "2 days ago · Nvidia's DGX Spark is sold out, but Dell's GB10 workstation delivers the same Grace Blackwell power for less -- skip the waitlist with the 2TB config at $5,903.",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 39,
+  "so_what": "DGX Spark is sold out; Dell's GB10 workstation with the 2 TB config at $5,903 ships the same Grace Blackwell silicon -- a waitlist escape with a real price attached."
+ },
+ {
+  "id": "firecrawl-2a0329710f",
+  "title": "Claude refused to finish patching my servers. My local LLM took over",
+  "url": "https://dev.to/seppegadeyne/claude-refused-to-finish-patching-my-servers-my-local-llm-took-over-3l8j",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Changed",
+   "relevance": "product:Claude",
+   "group": "how-to"
+  },
+  "products": [
+   "Claude",
+   "Qwen"
+  ],
+  "summary": "## Switching to the local model ``` providers: strata-qwen: name: Strata Qwen3.8-Flash-Next (UD-Q5_K_XL) base_url: http://127.0.0.1:8081/v1 default_model: strata models: strata: context_length: 524288 ```",
+  "why_now": "Changed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 39,
+  "so_what": "A cloud agent refused to finish a server patch; a local Qwen took over and finished it. Refusal policy is the vendor's dial to turn; on local models it is yours."
+ },
+ {
+  "id": "firecrawl-bc2cbc5a2e",
+  "title": "Best Local LLMs (October 2026): Benchmarks, Memory & Workload",
+  "url": "https://benchlm.ai/best/local-llm",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Measured",
+   "relevance": "product:Qwen",
+   "group": "how-to"
+  },
+  "products": [
+   "Qwen",
+   "Alibaba",
+   "Hugging Face"
+  ],
+  "summary": "## Compare the source-checked local LLM shortlist | Model | Public capability score | Published model facts | Local fit evidence | Workload starting point | |-|-|-|-|-| | [Qwen3.6-27B](https://benchlm.ai/models/qwen3-6-27b) Alibaba · Apache 2.0 [Official model card](https://huggingface.co/Qwen/Qwen3",
+  "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 39,
+  "so_what": "Monthly roundup of best local LLMs per GPU memory tier; strong source for a 'best model for your card' comparison -- verify each benchmark before repeating it."
+ },
+ {
+  "id": "firecrawl-817b959b11",
+  "title": "Best Local LLM in October 2026 (Updated Monthly Methodology)",
+  "url": "https://app.stationx.net/articles/best-local-llm",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Changed",
+   "relevance": "product:Claude",
+   "group": "enterprise-privacy"
+  },
+  "products": [
+   "Claude"
+  ],
+  "summary": "# Best Local LLM in October 2026 (Updated Monthly Methodology) October 202611 min readBy Nathan House I run Claude Opus 4.7 as my daily driver and fall back to local models for privacy-sensitive work and to keep my own students from being locked out by an API bill.",
+  "why_now": "Changed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 39,
+  "so_what": "Second monthly 'best local LLM' roundup in the window; signals search demand for model-per-GPU guidance -- cross-check against benchlm.ai before repeating any pick."
+ },
+ {
+  "id": "firecrawl-2651526ca0",
+  "title": "My local LLM didn't replace my $20 Claude subscription, it replaced ...",
+  "url": "https://www.xda-developers.com/my-local-llm-didnt-replace-my-20-claude-subscription-it-replaced-everything-i-was-never-comfortable-sending-to-the-cloud/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Changed",
+   "relevance": "product:Claude",
+   "group": "news-react"
+  },
+  "products": [
+   "Claude"
+  ],
+  "summary": "3 days ago · My local LLM offers zero data retention by default. I can do my taxes, look at health records, and dump my bank statements.",
+  "why_now": "Changed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 39,
+  "so_what": "Writer's local LLM replaced the work they would never send to the cloud, not the $20 subscription -- the privacy slice is the wedge. No numbers; would need a workload list."
+ },
+ {
+  "id": "firecrawl-f6c1ada927",
+  "title": "Open WebUI Desktop Hands-On: Running Local LLMs on Windows",
+  "url": "https://www.storagereview.com/review/open-webui-desktop-hands-on-running-local-llms-on-windows?amp",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:Open WebUI",
+   "group": "enterprise-privacy"
+  },
+  "products": [
+   "Open WebUI"
+  ],
+  "summary": "3 days ago · Open WebUI is an open-source, self-hosted AI platform designed to give local and remote AI models a browser-based interface that looks and works much like the ...",
+  "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 39,
+  "so_what": "Open WebUI now has a desktop app: local LLMs on Windows without Docker. Measure install-to-first-token time before claiming an easier on-ramp."
+ },
+ {
+  "id": "firecrawl-655d4595ff",
+  "title": "FW upgrade fail - DGX Spark / GB10 - NVIDIA Developer Forums",
+  "url": "https://forums.developer.nvidia.com/t/fw-upgrade-fail/386507",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Broke",
+   "relevance": "product:DGX Spark",
+   "group": "news-react"
+  },
+  "products": [
+   "DGX Spark",
+   "GB10",
+   "NVIDIA"
+  ],
+  "summary": "# [FW upgrade fail](https://forums.developer.nvidia.com/t/fw-upgrade-fail/386507) ## post by dgxspark 1 day ago ```plaintext ╔══════════════════════════════════════════════════════════════════════════════╗ ║ Upgrade Embedded Controller from 0x03000508 to 0x03000d07? ║ ╠══════════════════════════════",
+  "why_now": "Broke: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-45541b7e5c",
+  "title": "[PDF] DGX Spark User Guide - NVIDIA Docs",
+  "url": "https://docs.nvidia.com/dgx/dgx-spark/dgx-spark.pdf",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:DGX Spark",
+   "group": "how-to"
+  },
+  "products": [
+   "DGX Spark",
+   "NVIDIA",
+   "GB10"
+  ],
+  "summary": "2 days ago · : Firmware update to facilitate GB10 partner factory updates. 2.1.1.6 February 2026 Release ... firmware on your DGX Spark. The DGX Spark runs on NVIDIA ...",
+  "why_now": "Shipped: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-2fb708b7ad",
+  "title": "DOWNLOAD DGX Spark System Recovery Image - NVIDIA",
+  "url": "https://www.nvidia.com/en-us/drivers/dgx-spark-recovery-software/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DGX Spark",
+   "group": "how-to"
+  },
+  "products": [
+   "DGX Spark",
+   "NVIDIA"
+  ],
+  "summary": "2 days ago · NVIDIA DGX Spark System Recovery Image. Version 1.155.49. Recovery instructions: Detailed recovery steps are listed in the DGX Spark User Guide.",
+  "why_now": "Discussed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-1a4782b7fc",
+  "title": "Updating the BMC -- NVIDIA DGX H100/H200 Firmware Update Guide",
+  "url": "https://docs.nvidia.com/dgx/dgxh100-fw-update-guide/bmc.html",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Changed",
+   "relevance": "product:NVIDIA",
+   "group": "how-to"
+  },
+  "products": [
+   "NVIDIA",
+   "H100",
+   "H200"
+  ],
+  "summary": "3 days ago · Overall Time Taken: 0:36:11 Refer to 'DGX H100 Firmware Update Document' on activation steps for new firmware to take effect. Reset the BMC so the BMC boots the ...",
+  "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-e089d3c9c8",
+  "title": "Qblox Advances Hybrid Quantum Computing with Integration of ...",
+  "url": "https://qblox.com/newsroom/qblox-advances-hybrid-quantum-computing-with-integration-of-nvidia-dgx-spark-leveraging-nvidia-nvqlink",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Measured",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "23 hours ago · Qblox is proud to work with NVIDIA's NVQLink to advance GPU integration and bring faster calibration and error correction to the quantum industry.” “DGX Spark ...",
+  "why_now": "Measured: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-73139f3708",
+  "title": "Need help....Download for DGX Station V100?",
+  "url": "https://forums.developer.nvidia.com/t/need-help-download-for-dgx-station-v100/386416",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DGX Station",
+   "group": "how-to"
+  },
+  "products": [
+   "DGX Station"
+  ],
+  "summary": "3 days ago · I would very much like/need to download the last compatible version of the DGX OS install ISO (I believe 6.3.2. is the last version that supports V100). Also ...",
+  "why_now": "Discussed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-332866138b",
+  "title": "Why Big Tech is giving away open-weight AI models, and what it ...",
+  "url": "https://www.thehindu.com/business/Industry/why-big-tech-is-giving-away-open-weight-ai-models-and-what-it-wants-in-return-explained/article71596411.ece",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Nemotron",
+   "group": "explainer"
+  },
+  "products": [
+   "Nemotron"
+  ],
+  "summary": "# Why Big Tech is giving away open-weight AI models, and what it wants in return | Explained ## From Muse Spark Open to Beam, Nemotron and Timestral, technology companies are releasing AI models to attract developers, challenge Chinese rivals and strengthen their ecosystems They are, in fact, names",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-0ed63e25c3",
+  "title": "Open Weights vs Open Source: The Real Difference (2026) - GEO Toolbox",
+  "url": "https://geotoolbox.ai/blog/open-weights-vs-open-source",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Llama",
+   "group": "comparison"
+  },
+  "products": [
+   "Llama",
+   "DeepSeek",
+   "Qwen",
+   "Gemma"
+  ],
+  "summary": "Open weights means you can download the finished model and run it. Almost every model marketed as \"open source\" today - Llama, DeepSeek, Qwen, Gemma - is actually only open-weight. ## The Openness Spectrum: Closed, Open-Weight, Open-Source | Tier | What you get | Example models | Typical license | |",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-2e71ff339b",
+  "title": "Run Local LLMs | Playbooks - NVIDIA Build",
+  "url": "https://build.nvidia.com/playbooks/llms",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "how-to"
+  },
+  "products": [
+   "NVIDIA",
+   "Ollama",
+   "LM Studio"
+  ],
+  "summary": "# Run Local LLMs Beginner6 MIN Chat, agents, coding, and document Q&A with Ollama, LM Studio, and AnythingLLM on your hardware - [Inference](https://build.nvidia.com/search?label=Inference) - [LM Studio](https://build.nvidia.com/search?label=LM+Studio) - [Ollama](https://build.nvidia.com/search?labe",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-f0d6c4f4cb",
+  "title": "Best Local LLM Apps for Mac (2026): Ollama, LM Studio, MLX",
+  "url": "https://llmcheck.net/software",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:Ollama",
+   "group": "how-to"
+  },
+  "products": [
+   "Ollama",
+   "LM Studio",
+   "MLX",
+   "llama.cpp",
+   "Apple",
+   "OpenAI"
+  ],
+  "summary": "### LM StudioRecommended It runs models on llama.cpp or Apple’s MLX and serves an OpenAI-compatible local API.",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "firecrawl-4b38fc734d",
+  "title": "Run a Local LLM on iPad and Android Tablet in 2026 - PromptQuorum",
+  "url": "https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:Apple M5",
+   "group": "news-react"
+  },
+  "products": [
+   "Apple M5"
+  ],
+  "summary": "[Home](https://www.promptquorum.com/)/ [Power Local LLM](https://www.promptquorum.com/power-local-llm)/Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026) # Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026) ## Can you run a local LLM on a",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 39
+ },
+ {
+  "id": "hn-cd2dd1fbc0",
+  "title": "Show HN: I made new search engine with DeepSeek's search API",
+  "url": "https://seekpeek.pages.dev",
+  "source": "hn",
+  "published_at": "2026-10-22T17:37:25Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 3,
+   "signal": 0.253,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.276
+   },
+   "decay": 0.7772,
+   "age_h": 17.5,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:DeepSeek",
+   "group": "how-to"
+  },
+  "products": [
+   "DeepSeek"
+  ],
+  "summary": "I made new search engine UI using DeepSeek&#x27;s new search API",
+  "why_now": "Shipped: 3 points, 3 comments on HN, 17 h ago",
+  "score": 32
+ },
+ {
+  "id": "hn-c8009b1dff",
+  "title": "DeepSeek just raised $15 billion to take on OpenAI and Anthropic",
+  "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+  "source": "hn",
+  "published_at": "2026-10-22T14:32:29Z",
+  "signals": {
+   "points": 8,
+   "num_comments": 0,
+   "signal": 0.269,
+   "signal_parts": {
+    "points": 0.385,
+    "comments": 0.0
+   },
+   "decay": 0.7434,
+   "age_h": 20.5,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DeepSeek",
+   "group": "how-to"
+  },
+  "products": [
+   "DeepSeek",
+   "OpenAI",
+   "Anthropic"
+  ],
+  "summary": "",
+  "why_now": "Discussed: 8 points, 0 comments on HN, 21 h ago",
+  "score": 32
+ },
+ {
+  "id": "hf-3892febc0d",
+  "title": "unsloth/flint-GGUF",
+  "url": "https://huggingface.co/unsloth/flint-GGUF",
+  "source": "hf",
+  "published_at": "2026-10-20T03:26:14Z",
+  "signals": {
+   "pipeline_tag": "text-generation",
+   "likes": 166,
+   "downloads": 33277,
+   "trendingScore": 163.0,
+   "lists": [
+    "trending"
+   ],
+   "signal": 0.712,
+   "signal_parts": {
+    "trending": 0.671,
+    "likes": 0.741,
+    "downloads": 0.754
+   },
+   "decay": 0.3166,
+   "age_h": 79.6,
+   "source_weight": 0.9,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Unsloth",
+   "group": "how-to"
+  },
+  "products": [
+   "Unsloth",
+   "GGUF",
+   "Hugging Face"
+  ],
+  "summary": "text-generation model on Hugging Face, 166 likes, 33.3k downloads, trending score 163, created 2026-10-20",
+  "why_now": "Shipped: new on Hugging Face (text-generation), 166 likes, 33.3k downloads, trending score 163, 3 d ago",
+  "score": 32
+ },
+ {
+  "id": "hn-e3b28f6b5f",
+  "title": "A Strongly Worded Letter: Mistakes Claude Makes with Hardware in the Loop",
+  "url": "https://groundrun.io/blog/mistakes-claude-makes-with-hardware-in-the-loop/",
+  "source": "hn",
+  "published_at": "2026-10-23T09:49:39Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 0,
+   "signal": 0.17,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.0
+   },
+   "decay": 0.9821,
+   "age_h": 1.3,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:Claude",
+   "group": "news-react"
+  },
+  "products": [
+   "Claude"
+  ],
+  "summary": "",
+  "why_now": "Discussed: 3 points, 0 comments on HN, 1 h ago",
+  "score": 29
+ },
+ {
+  "id": "hn-daecb53d00",
+  "title": "OCRia-1: A new SOTA 4B document parser",
+  "url": "https://www.llamaindex.ai/blog/parse-ocria-1",
+  "source": "hn",
+  "published_at": "2026-10-22T17:23:03Z",
+  "signals": {
+   "points": 14,
+   "num_comments": 2,
+   "signal": 0.398,
+   "signal_parts": {
+    "points": 0.475,
+    "comments": 0.219
+   },
+   "decay": 0.7745,
+   "age_h": 17.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:ai",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 14 points, 2 comments on HN, 18 h ago",
+  "score": 26
+ },
+ {
+  "id": "hn-03ec72e8eb",
+  "title": "DeepSeek Raised Another 15B",
+  "url": "https://www.reuters.com/world/asia-pacific/deepseek-raises-15-billion-challenge-leading-us-labs-bloomberg-news-reports-2026-10-22/",
+  "source": "hn",
+  "published_at": "2026-10-22T15:57:19Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 0,
+   "signal": 0.17,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.0
+   },
+   "decay": 0.7587,
+   "age_h": 19.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DeepSeek",
+   "group": "how-to"
+  },
+  "products": [
+   "DeepSeek"
+  ],
+  "summary": "",
+  "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+  "score": 26
+ },
+ {
+  "id": "hn-3cf52a5172",
+  "title": "vLLM TorchTPU: Zero-copy KV cache offloading and disaggregated serving",
+  "url": "https://vllm.ai/blog/2026-10-20-vllm-torchtpu",
+  "source": "hn",
+  "published_at": "2026-10-22T17:25:31Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.775,
+   "age_h": 17.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:vLLM",
+   "group": "how-to"
+  },
+  "products": [
+   "vLLM"
+  ],
+  "summary": "",
+  "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+  "score": 24
+ },
+ {
+  "id": "hn-cd354a1257",
+  "title": "Show HN: Zilla - Use the OpenAI SDK to Call Claude and Gemini",
+  "url": "https://github.com/aklivity/zilla-demos/blob/main/llm.gateway/README.md",
+  "source": "hn",
+  "published_at": "2026-10-22T14:23:45Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.7418,
+   "age_h": 20.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:OpenAI",
+   "group": "news-react"
+  },
+  "products": [
+   "OpenAI",
+   "Claude",
+   "Gemini"
+  ],
+  "summary": "",
+  "why_now": "Shipped: 2 points, 0 comments on HN, 21 h ago",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-0b1d731f90",
+  "title": "Bringing the Spark to Europe: Local Intelligence Powers Next Wave of ...",
+  "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA"
+  ],
+  "summary": "At GTC Berlin, NVIDIA is showcasing its full lineup of local AI hardware. [RTX Spark](https://www.nvidia.com/en-us/products/rtx-spark/), which [launched last week](https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs), powers personal agents on Wind",
+  "why_now": "Shipped: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-2714b59c0c",
+  "title": "feel how fast a local LLM runs before you buy the hardware - Hacker News",
+  "url": "https://news.ycombinator.com/item?id=50127979",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "| | | [Show HN: Llmspeed - feel how fast a local LLM runs before you buy the hardware](https://llmspeed.dev/) ( [llmspeed.dev](https://news.ycombinator.com/from?site=llmspeed.dev)) | | | | | |-|-|-| | ![](https://news.ycombinator.com/s.gif) | | [anon373839](https://news.ycombinator.com/user?id=anon3",
+  "why_now": "Shipped: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-57be848855",
+  "title": "Local LLM Blog -- Guides, Reviews & Comparisons for Mac AI",
+  "url": "https://llmcheck.net/blog/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Measured",
+   "relevance": "topic:llm",
+   "group": "comparison"
+  },
+  "products": [],
+  "summary": "6 days ago · Local AI on Mac -- The Blog. Guides, benchmarks, and model comparisons to help you get the most out of running AI locally on your Mac.",
+  "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-c0790f20e8",
+  "title": "I tried running AI locally on my laptop, and it was shockingly easy",
+  "url": "https://www.windowscentral.com/artificial-intelligence/local-ai-windows-laptop-3-easy-steps-how-to",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "how-to"
+  },
+  "products": [],
+  "summary": "21 hours ago · Local AI isn't just for advanced PC users. Setting up a local LLM is about as easy as downloading and installing any other piece of software. If you're ...",
+  "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-786c68bdab",
+  "title": "Code, Test, and Deploy on One Machine with NVIDIA RTX Spark",
+  "url": "https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "local LLM news",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA"
+  ],
+  "summary": "# Code, Test, and Deploy on One Machine with NVIDIA RTX Spark ## Local coding agents come to RTX Spark [Scroll to Local coding agents come to RTX Spark section](https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark#local_coding_agents_come_to_rtx_spark) ### New",
+  "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-27d142c232",
+  "title": "Firmware Update Steps - NVIDIA DGX Systems",
+  "url": "https://docs.nvidia.com/dgx/dgxh100-fw-update-guide/sequence.html",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Measured",
+   "relevance": "product:NVIDIA",
+   "group": "how-to"
+  },
+  "products": [
+   "NVIDIA"
+  ],
+  "summary": "4 days ago · View the installed versions compared with the newly available firmware. · Update the BMC. · Reboot the BMC. · Update the components on the motherboard tray.",
+  "why_now": "Measured: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-bcf2ac595e",
+  "title": "Updating the ConnectX-7 Firmware - NVIDIA Docs",
+  "url": "https://docs.nvidia.com/dgx/dgxh100-fw-update-guide/network-card-fw-update.html",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Changed",
+   "relevance": "product:NVIDIA",
+   "group": "how-to"
+  },
+  "products": [
+   "NVIDIA"
+  ],
+  "summary": "4 days ago · After replacing or installing the ConnectX-7 cards, ensure the cards are running the latest firmware. Navigate to the NVIDIA Networking Firmware Downloads page.",
+  "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-b378fa8844",
+  "title": "ASUS GX10 - capsule firmware update (EC 0x02000007 + SoC ...",
+  "url": "https://forums.developer.nvidia.com/t/asus-gx10-capsule-firmware-update-ec-0x02000007-soc-0x03000008-stuck-on-asus-logo-progress-bar-for-6-hours/386166",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "NVIDIA DGX Spark firmware update",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Changed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA"
+  ],
+  "summary": "# [ASUS GX10 - capsule firmware update (EC 0x02000007 + SoC 0x03000008) stuck on ASUS logo progress bar for 6+ hours](https://forums.developer.nvidia.com/t/asus-gx10-capsule-firmware-update-ec-0x02000007-soc-0x03000008-stuck-on-asus-logo-progress-bar-for-6-hours/386166) ## post by berj1976 1 day ago",
+  "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-90e176fd3c",
+  "title": "Three new open-weight models from US companies give builders more ...",
+  "url": "https://nebius.com/blog/posts/three-new-open-weight-models-from-us-companies-give-builders-more-choice",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "news-react"
+  },
+  "products": [
+   "Meta"
+  ],
+  "summary": "- Muse Spark Open, an open weights release from Meta, is built for multi-file coding and tool use, and accepts text, image, and video input via API. ## [Muse Spark Open: Meta’s coding model, now with open weights](https://nebius.com/blog/posts/three-new-open-weight-models-from-us-companies-give-buil",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-7a1512802a",
+  "title": "Meta Just Dropped a MASSIVE Open-Weight AI Model! - YouTube",
+  "url": "https://www.youtube.com/watch?v=KQJ3iWsGsyk",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "explainer"
+  },
+  "products": [
+   "Meta"
+  ],
+  "summary": "## Meta Just Dropped a MASSIVE Open-Weight AI Model! 0:00 Live # Meta Just Dropped a MASSIVE Open-Weight AI Model! [**Release - Muse Spark Open explained**](https://www.youtube.com/watch?v=KQJ3iWsGsyk&t=38s) [**Release - Muse Spark Open explained**](https://www.youtube.com/watch?v=KQJ3iWsGsyk&t=38s&",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-708db3edc6",
+  "title": "Meta Challenges China With New Open-Weight AI Model - Tech.co",
+  "url": "https://tech.co/news/meta-challenges-china-with-new-open-weight-ai-model",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "news-react"
+  },
+  "products": [
+   "Meta",
+   "Apple"
+  ],
+  "summary": "- Meta has released **a new open-weight AI model** called Muse Spark Open ## Meta Releases Muse Spark Open AI Model with Apple Meta has **turned its attention to open-weight AI models** with the release of Muse Spark Open, in a collaboration with Apple that sees the model able to run locally on Mac",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-2afcea980d",
+  "title": "Muse Spark Open: Meta's Open-Weight Agent Model - Eigent AI",
+  "url": "https://www.eigent.ai/blog/meta-muse-spark-open",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "explainer"
+  },
+  "products": [
+   "Meta"
+  ],
+  "summary": "**Muse Spark Open** is Meta's new open-weight model for coding and agentic work, released October 15, 2026. Meta calls it the \"most capable US open-weight model to date.\" ## What Is Muse Spark Open? It is the open-weights version of Meta's Muse Spark model, with additional safety post-training so it",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-987754dece",
+  "title": "Meta shakes up the frontiers, open and closed - Interconnects AI",
+  "url": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "news-react"
+  },
+  "products": [
+   "Meta"
+  ],
+  "summary": "# Meta shakes up the frontiers, open and closed ### US open weights are back! 79 12 11 Share Article voiceover 0:00 Please upgrade. This has been a week where the balance of American open-weight models took a step change back toward the frontier. Meta took the lead of this charge with [Muse Spark Op",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-ca3e238055",
+  "title": "Meta Muse Spark Open: 816B Open Weights, Licence, Hardware",
+  "url": "https://www.digitalapplied.com/blog/meta-muse-spark-open-open-weights-licence-hardware",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Meta",
+   "group": "news-react"
+  },
+  "products": [
+   "Meta"
+  ],
+  "summary": "# Meta Muse Spark Open: 816B Open Weights, _Licence, Hardware_ On October 15, 2026 Meta Superintelligence Labs published the weights of Muse Spark Open, an 816-billion-parameter mixture-of-experts model with about 42 billion parameters active per token, a one-million-token context and text, image, v",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-546f12cdb4",
+  "title": "Artificial Analysis on X: \"Reflection's first model, Beam, scores 30 on the ...",
+  "url": "https://x.com/ArtificialAnlys/status/2111087606759030831",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Hugging Face",
+   "group": "news-react"
+  },
+  "products": [
+   "Hugging Face"
+  ],
+  "summary": "# Post by @ArtificialAnlys ## Post Reflection’s first model, Beam, scores 30 on the Artificial Analysis Intelligence Index, placing it #2 among US open weights models Beam is an open weights model with 501B total and 23B active parameters, released on @huggingface ➤ Second among US open weights mode",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-90b226622a",
+  "title": "Introducing Reflection Beam: an open-weight model for agentic ...",
+  "url": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "open weights model release",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Hugging Face",
+   "group": "news-react"
+  },
+  "products": [
+   "Hugging Face"
+  ],
+  "summary": "# Introducing Reflection Beam: an open-weight model for agentic coding on AWS ## About Reflection Beam Reflection releases Beam’s weights through Hugging Face under the Apache 2.0 license.",
+  "why_now": "Shipped: in this week's web news for 'open weights model release', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-f3b3fb292f",
+  "title": "AI Without Sending Your Data Away: A Guide to Local LLMs",
+  "url": "https://dev.to/addwebsolutionpvtltd/ai-without-sending-your-data-away-a-guide-to-local-llms-15dl",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Measured",
+   "relevance": "topic:llm",
+   "group": "enterprise-privacy"
+  },
+  "products": [],
+  "summary": "## Table of Content 3. Why Run an LLM Locally? - Data Privacy and Control - Offline Operation - Customization - Latency and Infrastructure Control ## 3. Why Run an LLM Locally? **3.1 Data Privacy and Control** One of the strongest reasons for local inference is control over sensitive information. Co",
+  "why_now": "Measured: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-0126886a48",
+  "title": "Learn how to run AI LLM models locally on your own ... - YouTube",
+  "url": "https://www.youtube.com/watch?v=DlO8SeIfCR0&vl=id",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "how-to"
+  },
+  "products": [],
+  "summary": "Learn how to run AI LLM models locally on your own computer completely for FREE in under 10 minutes!",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-5dfcf0712e",
+  "title": "Can I run AI locally? Best models for your GPU",
+  "url": "https://canirun.ai/",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:gpu",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "4 days ago · Detect your GPU or Mac and see which open LLMs, coding, image and video models you can run locally. VRAM requirements, speed estimates and grades.",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-ead32d55c1",
+  "title": "How to run AI models locally as a beginner? - Jan.ai",
+  "url": "https://www.jan.ai/post/run-ai-models-locally",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:ai",
+   "group": "how-to"
+  },
+  "products": [],
+  "summary": "4 days ago · A straightforward guide to running AI models locally on your computer, regardless of your background.",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "firecrawl-75c7cf9ca6",
+  "title": "How to check which local LLM can run on your laptop or Desktop PC?",
+  "url": "https://www.thewindowsclub.com/how-to-check-which-local-llm-run-on-windows",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "run LLM locally",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "how-to"
+  },
+  "products": [],
+  "summary": "If you want to use a [Large Language Model (LLM)](https://www.thewindowsclub.com/free-tools-to-run-llm-locally-on-windows) locally on your system, its hardware should be capable of running the required model. ## How to check which local LLM can run on your laptop or Desktop PC #### 1] Know your hard",
+  "why_now": "Discussed: in this week's web news for 'run LLM locally', date unknown (this week)",
+  "score": 24
+ },
+ {
+  "id": "hn-5d6c7c0acd",
+  "title": "Show HN: CATT 0.2.1: Test agents/services against a Muse/Instinct-alike, in CI",
+  "url": "https://github.com/Coverage-Cat/consumer-agent-testing-tool",
+  "source": "hn",
+  "published_at": "2026-10-22T22:18:40Z",
+  "signals": {
+   "points": 7,
+   "num_comments": 2,
+   "signal": 0.321,
+   "signal_parts": {
+    "points": 0.364,
+    "comments": 0.219
+   },
+   "decay": 0.8316,
+   "age_h": 12.8,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:agents",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "Hey HN, we recently open sourced our Consumer Agent Testing Tool to help teams iterate against proprietary assistants like Muse and Instinct. We built this to reduce our own frustrations with building an MCP&#x2F;API for these agents to consume.<p>The problem: testing against these tools is hard! Ag",
+  "why_now": "Shipped: 7 points, 2 comments on HN, 13 h ago",
+  "score": 23
+ },
+ {
+  "id": "hn-6a158bb32a",
+  "title": "Show HN: Kino Transcode - Open Red and Blackmagic Raw Files in the Browser",
+  "url": "https://kino.ai/tools/transcode",
+  "source": "hn",
+  "published_at": "2026-10-22T16:57:37Z",
+  "signals": {
+   "points": 9,
+   "num_comments": 2,
+   "signal": 0.348,
+   "signal_parts": {
+    "points": 0.403,
+    "comments": 0.219
+   },
+   "decay": 0.7698,
+   "age_h": 18.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:ai",
+   "group": "how-to"
+  },
+  "products": [],
+  "summary": "I&#x27;m Luke from Kino. We make a video editor + MAM in the browser. Transcode opens Blackmagic RAW, RED R3D, ProRes, DNxHR, and MXF files in the browser (including the famously tricky OP-Atom). You can scrub rapidly, convert to H.264 or ProRes, all without installing anything or uploading footage.",
+  "why_now": "Shipped: 9 points, 2 comments on HN, 18 h ago",
+  "score": 23
+ },
+ {
+  "id": "hn-bc6d0c0257",
+  "title": "Tested 18 new Local LLMs on two RTX 5060 Ti cards: none replaced Qwen3.8-27B",
+  "url": "https://siimtolk.github.io/articles/llm-testing-overnight/",
+  "source": "hn",
+  "published_at": "2026-10-22T13:20:53Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 1,
+   "signal": 0.126,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.138
+   },
+   "decay": 0.7307,
+   "age_h": 21.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Measured",
+   "relevance": "product:Qwen",
+   "group": "how-to"
+  },
+  "products": [
+   "Qwen"
+  ],
+  "summary": "",
+  "why_now": "Measured: 1 points, 1 comments on HN, 22 h ago",
+  "score": 23
+ },
+ {
+  "id": "hf-eac3db6276",
+  "title": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+  "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+  "source": "hf",
+  "published_at": "2026-10-17T20:36:06Z",
+  "signals": {
+   "pipeline_tag": "image-text-to-text",
+   "likes": 131,
+   "downloads": 29212,
+   "trendingScore": 126.0,
+   "lists": [
+    "trending"
+   ],
+   "signal": 0.691,
+   "signal_parts": {
+    "trending": 0.637,
+    "likes": 0.707,
+    "downloads": 0.744
+   },
+   "decay": 0.1434,
+   "age_h": 134.5,
+   "source_weight": 0.9,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Unsloth",
+   "group": "how-to"
+  },
+  "products": [
+   "Unsloth",
+   "DeepSeek",
+   "GGUF",
+   "Hugging Face"
+  ],
+  "summary": "image-text-to-text model on Hugging Face, 131 likes, 29.2k downloads, trending score 126, created 2026-10-17",
+  "why_now": "Shipped: new on Hugging Face (image-text-to-text), 131 likes, 29.2k downloads, trending score 126, 6 d ago",
+  "score": 23
+ },
+ {
+  "id": "hn-645ee23f18",
+  "title": "Show HN: An automated news site Distribute Software",
+  "url": "https://distribute.software/",
+  "source": "hn",
+  "published_at": "2026-10-23T06:01:20Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.9296,
+   "age_h": 5.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:DeepSeek",
+   "group": "how-to"
+  },
+  "products": [
+   "DeepSeek"
+  ],
+  "summary": "I wanted to see what it would look like building a fully automated news site monitoring different newsrooms, desks, feeds etc on the web. Creating an aggregator of aggregators. There is some AI utilized here, the new Deepseek API for search, classifiers from Cloudflare (and mostly hosted here). With",
+  "why_now": "Shipped: 1 points, 0 comments on HN, 5 h ago",
+  "score": 22
+ },
+ {
+  "id": "hf-2e829f1f35",
+  "title": "KRAFTON/Raon-1-mini-preview",
+  "url": "https://huggingface.co/KRAFTON/Raon-1-mini-preview",
+  "source": "hf",
+  "published_at": "2026-10-21T00:14:48Z",
+  "signals": {
+   "pipeline_tag": "text-generation",
+   "likes": 139,
+   "downloads": 548,
+   "trendingScore": 130.0,
+   "lists": [
+    "trending"
+   ],
+   "signal": 0.678,
+   "signal_parts": {
+    "trending": 0.641,
+    "likes": 0.715,
+    "downloads": 0.457
+   },
+   "decay": 0.4276,
+   "age_h": 58.8,
+   "source_weight": 0.9,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Hugging Face",
+   "group": "news-react"
+  },
+  "products": [
+   "Hugging Face"
+  ],
+  "summary": "text-generation model on Hugging Face, 139 likes, 548 downloads, trending score 130, created 2026-10-21",
+  "why_now": "Shipped: new on Hugging Face (text-generation), 139 likes, 548 downloads, trending score 130, 2 d ago",
+  "score": 22
+ },
+ {
+  "id": "hn-306a4364db",
+  "title": "Tell HN: Claude resets expire at an arbitrary time during deadline day",
+  "url": "https://news.ycombinator.com/item?id=50199036",
+  "source": "hn",
+  "published_at": "2026-10-22T18:12:23Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7838,
+   "age_h": 16.9,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:Claude",
+   "group": "news-react"
+  },
+  "products": [
+   "Claude"
+  ],
+  "summary": "I was saving a reset on Claude until today and maximising my usage because of it, i.e. I&#x27;m almost out of tokens.<p>When I went to use my reset this afternoon (which was listed as expiring on the 22nd Oct), it said it was no longer valid as it had expired, despite still being in a window I had o",
+  "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+  "score": 21
+ },
+ {
+  "id": "hn-93bbf4272d",
+  "title": "Show HN: Train LoRA directly on the GGUF you have, then merge the adapter",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5j48s/train_lora_directly_on_quantized_ggufs_no_pytorch/",
+  "source": "hn",
+  "published_at": "2026-10-22T17:54:10Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7803,
+   "age_h": 17.2,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:GGUF",
+   "group": "how-to"
+  },
+  "products": [
+   "GGUF"
+  ],
+  "summary": "Use the same GGUF you serve, merge the adapter back into it and then use the same engine to run the model, all in all a &quot;LLM Toolbox&quot;",
+  "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+  "score": 21
+ },
+ {
+  "id": "hn-eba7a4b79d",
+  "title": "DeepSeek v4.1 Flash 1017 Scores on ARC-AGI-1/2",
+  "url": "https://arcprize.org/results/deepseek-v4-1-flash-1017",
+  "source": "hn",
+  "published_at": "2026-10-22T17:40:03Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7777,
+   "age_h": 17.4,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DeepSeek",
+   "group": "how-to"
+  },
+  "products": [
+   "DeepSeek"
+  ],
+  "summary": "",
+  "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+  "score": 21
+ },
+ {
+  "id": "hf-bf04d12d42",
+  "title": "MiniMaxAI/MiniMax-M3.1-Flash",
+  "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+  "source": "hf",
+  "published_at": "2026-10-17T06:37:50Z",
+  "signals": {
+   "pipeline_tag": "image-text-to-text",
+   "likes": 177,
+   "downloads": 1096,
+   "trendingScore": 172.0,
+   "lists": [
+    "trending"
+   ],
+   "signal": 0.714,
+   "signal_parts": {
+    "trending": 0.678,
+    "likes": 0.75,
+    "downloads": 0.507
+   },
+   "decay": 0.1172,
+   "age_h": 148.4,
+   "source_weight": 0.9,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:MiniMax",
+   "group": "how-to"
+  },
+  "products": [
+   "MiniMax",
+   "Hugging Face"
+  ],
+  "summary": "image-text-to-text model on Hugging Face, 177 likes, 1.1k downloads, trending score 172, created 2026-10-17",
+  "why_now": "Shipped: new on Hugging Face (image-text-to-text), 177 likes, 1.1k downloads, trending score 172, 6 d ago",
+  "score": 21
+ },
+ {
+  "id": "hn-c4c6fc96be",
+  "title": "Kimi K3.1 vs. Qwen 4: 3D helicopter",
+  "url": "https://twitter.com/luminabench/status/2113217029675085963",
+  "source": "hn",
+  "published_at": "2026-10-22T14:50:49Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7466,
+   "age_h": 20.2,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Measured",
+   "relevance": "product:Kimi",
+   "group": "comparison"
+  },
+  "products": [
+   "Kimi",
+   "Qwen"
+  ],
+  "summary": "",
+  "why_now": "Measured: 1 points, 0 comments on HN, 20 h ago",
+  "score": 20
+ },
+ {
+  "id": "hn-6678c8bcaa",
+  "title": "Show HN: Dolittle, explore and steer Qwen3's internal activations",
+  "url": "https://github.com/plainsight-systems/dolittle",
+  "source": "hn",
+  "published_at": "2026-10-22T14:49:47Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7465,
+   "age_h": 20.2,
+   "source_weight": 1.0,
+   "product_bonus": 0.15,
+   "why_now_kind": "Shipped",
+   "relevance": "product:Qwen",
+   "group": "how-to"
+  },
+  "products": [
+   "Qwen"
+  ],
+  "summary": "",
+  "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+  "score": 20
+ },
+ {
+  "id": "firecrawl-7fc27a2b46",
+  "title": "This is a disaster.. - YouTube",
+  "url": "https://www.youtube.com/watch?v=RBjLfAb3sCg",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark"
+  ],
+  "summary": "5 days ago · ... spark-n1x-20-core-2026-32gb-memory-1tb-storage-nano-black/JJGHGSJKWC ... NVIDIA Put a DGX Spark... Notebook Check: • Nvidia's RTX Spark Is ... https ...",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 15,
+  "so_what": "Reaction video, no measurement and no shipping claim; no local angle -- scored down."
+ },
+ {
+  "id": "firecrawl-f292425b96",
+  "title": "NVIDIA DGX Spark; 20 core Arm, 10 Cortex-X925 + 10 ... - Micro Center",
+  "url": "https://www.microcenter.com/product/699008/nvidia-dgx-spark?bvstate=pg%3A4%2Fct%3Ar&storeid=181",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:NVIDIA",
+   "group": "news-react"
+  },
+  "products": [
+   "NVIDIA",
+   "DGX Spark",
+   "Blackwell"
+  ],
+  "summary": "# NVIDIA DGX Spark 20 core Arm, 10 Cortex-X925 + 10 Cortex-A725 Arm; 128GB LPDDR5x Unified RAM; 4TB Solid State Drive; NVIDIA Blackwell Architecture ## Frequently bought together DGX Spark **$6,949.99** ## Overview NVIDIA DGX Spark; 20 core Arm, 10 Cortex-X925 + 10 Cortex-A725 Arm; 128GB LPDDR5x Uni",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 15,
+  "so_what": "Retail product listing, no news content; no local angle -- scored down."
+ },
+ {
+  "id": "firecrawl-233e93f5d5",
+  "title": "dgx spark 128gb | Newegg.com",
+  "url": "https://www.newegg.com/p/pl?d=dgx+spark+128gb&srsltid=AYCX9vJKajR-DNUpi1-QzI4NpxlUZ3tUg8dA1KLoca_FpA1firgmvqwT",
+  "source": "firecrawl",
+  "published_at": null,
+  "signals": {
+   "query": "DGX Spark",
+   "signal": 0.5,
+   "signal_parts": {
+    "news": 0.5
+   },
+   "decay": 0.7071,
+   "age_h": null,
+   "source_weight": 0.8,
+   "product_bonus": 0.15,
+   "why_now_kind": "Discussed",
+   "relevance": "product:DGX Spark",
+   "group": "news-react"
+  },
+  "products": [
+   "DGX Spark"
+  ],
+  "summary": "# \"dgx spark 128gb\" - Sold by Newegg ONOFF Department Type Sold by",
+  "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+  "score": 15,
+  "so_what": "Retail search page, no news content; no local angle -- scored down."
+ },
+ {
+  "id": "hn-0b3e0c530d",
+  "title": "Show HN: Hlas-1: open-weight 3B params TTS with frontier performance",
+  "url": "https://huggingface.co/cekal/hlas-1",
+  "source": "hn",
+  "published_at": "2026-10-23T06:52:05Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 0,
+   "signal": 0.17,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.0
+   },
+   "decay": 0.941,
+   "age_h": 4.2,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:open-weight",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "With the release and hype around Drama-3 by Fish Audio, I&#x27;ve decided to challenge myself &amp; create my own TTS model in my spare time.<p>It is 1&#x2F;10th the size of Drama 3, can be just as expressive, and can take instructions about emotion and pacing for fine-grained output.<p>Obviously it",
+  "why_now": "Shipped: 3 points, 0 comments on HN, 4 h ago",
+  "score": 14
+ },
+ {
+  "id": "hn-a4d6e22480",
+  "title": "M3.1 Flash weights are now open",
+  "url": "https://www.together.ai/models/minimax-m3-1-flash",
+  "source": "hn",
+  "published_at": "2026-10-23T02:27:17Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 1,
+   "signal": 0.176,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.138
+   },
+   "decay": 0.8829,
+   "age_h": 8.6,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:ai",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 2 points, 1 comments on HN, 9 h ago",
+  "score": 13
+ },
+ {
+  "id": "hn-2f375244a1",
+  "title": "Humming: Fast, Flexible Kernels for Quantized Inference",
+  "url": "https://vllm.ai/blog/2026-10-21-humming",
+  "source": "hn",
+  "published_at": "2026-10-23T01:42:24Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 0,
+   "signal": 0.17,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.0
+   },
+   "decay": 0.8734,
+   "age_h": 9.4,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:quantiz",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 3 points, 0 comments on HN, 9 h ago",
+  "score": 13
+ },
+ {
+  "id": "hn-c24b6175cb",
+  "title": "Show HN: Ternlux - Free, local-first, bring-your-own-key AI pipeline builder",
+  "url": "https://www.ternlux.com/online-demo/",
+  "source": "hn",
+  "published_at": "2026-10-22T16:33:58Z",
+  "signals": {
+   "points": 3,
+   "num_comments": 0,
+   "signal": 0.17,
+   "signal_parts": {
+    "points": 0.243,
+    "comments": 0.0
+   },
+   "decay": 0.7654,
+   "age_h": 18.5,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:ai",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "For the past 12 years as a data engineer, I&#x27;ve been building pipelines across many different business categories and sizes. Most pipelines that I’ve encountered were relatively simple jobs and required more orchestration and infrastructure than the work seems to justify. I wanted to make it eas",
+  "why_now": "Shipped: 3 points, 0 comments on HN, 19 h ago",
+  "score": 11
+ },
+ {
+  "id": "hn-8f34ad24cf",
+  "title": "Show HN: What LLM fits my GPU? - VRAM measured on real hardware for 117 models",
+  "url": "https://quantized.uk/",
+  "source": "hn",
+  "published_at": "2026-10-23T03:25:46Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.8954,
+   "age_h": 7.6,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Shipped: 2 points, 0 comments on HN, 8 h ago",
+  "score": 10
+ },
+ {
+  "id": "hn-5a2bbbca27",
+  "title": "HyperCache - Distributed KV-cache quantization and relative RoPE reuse",
+  "url": "https://github.com/SamGanYX/HyperCache",
+  "source": "hn",
+  "published_at": "2026-10-23T02:56:38Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.8892,
+   "age_h": 8.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:quantiz",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 2 points, 0 comments on HN, 8 h ago",
+  "score": 10
+ },
+ {
+  "id": "hn-d206881667",
+  "title": "Ask HN: Should AI be making decisions, or just make sure you see what matters?",
+  "url": "https://news.ycombinator.com/item?id=50198389",
+  "source": "hn",
+  "published_at": "2026-10-22T17:25:05Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 2,
+   "signal": 0.151,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.219
+   },
+   "decay": 0.7749,
+   "age_h": 17.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:ai",
+   "group": "myth-bust"
+  },
+  "products": [],
+  "summary": "Everyone is rushing to develop an “AI chief of staff” which replaces the human role entirely. But I feel like that’s taking the wrong perspective altogether. Decisions must remain human-made. The thing that’s missing is timely, relevant information.<p>Right now, leadership has to hop through multipl",
+  "why_now": "Discussed: 1 points, 2 comments on HN, 18 h ago",
+  "score": 10
+ },
+ {
+  "id": "hn-8d48ed9342",
+  "title": "Using LLMs for Text Classification in Production (2026): From Raw Prompts To",
+  "url": "https://lucasaguiar.xyz/posts/llm-classification-production-guide-2026/",
+  "source": "hn",
+  "published_at": "2026-10-22T15:20:42Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.752,
+   "age_h": 19.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+  "score": 9
+ },
+ {
+  "id": "hn-f896ac2aed",
+  "title": "Opus 5.5 built a 3D film explaining how LLM works",
+  "url": "https://www.youtube.com/watch?v=LDH7UhHeKG4",
+  "source": "hn",
+  "published_at": "2026-10-22T17:23:38Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 1,
+   "signal": 0.126,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.138
+   },
+   "decay": 0.7746,
+   "age_h": 17.7,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "explainer"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 1 points, 1 comments on HN, 18 h ago",
+  "score": 8
+ },
+ {
+  "id": "hn-4313de7c41",
+  "title": "Show HN: Using an LLM chat template in reverse to play the user",
+  "url": "https://selfgpt.pages.dev/",
+  "source": "hn",
+  "published_at": "2026-10-22T14:11:04Z",
+  "signals": {
+   "points": 2,
+   "num_comments": 0,
+   "signal": 0.135,
+   "signal_parts": {
+    "points": 0.192,
+    "comments": 0.0
+   },
+   "decay": 0.7395,
+   "age_h": 20.9,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Shipped: 2 points, 0 comments on HN, 21 h ago",
+  "score": 8
+ },
+ {
+  "id": "hn-9814369d77",
+  "title": "Living House: Adaptive UI and docs using in-browser inference",
+  "url": "https://passo.uno/adaptive-ui-docs-using-llms/",
+  "source": "hn",
+  "published_at": "2026-10-23T11:02:28Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.9995,
+   "age_h": 0.0,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:inference",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+  "score": 7
+ },
+ {
+  "id": "hn-7ca92b76f4",
+  "title": "Toward fast AI interpretability and control",
+  "url": "https://research.ibm.com/blog/fast-interpretability-plugin-vllm",
+  "source": "hn",
+  "published_at": "2026-10-23T08:01:18Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.9568,
+   "age_h": 3.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:ai",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+  "score": 7
+ },
+ {
+  "id": "hn-9627e1e730",
+  "title": "Show HN: Dedoomify - AI news, minus the doom",
+  "url": "https://dedoomify.com/",
+  "source": "hn",
+  "published_at": "2026-10-22T16:05:28Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7602,
+   "age_h": 19.0,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Broke",
+   "relevance": "topic:ai",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "What if AI failures were described like ordinary software issues? Paste a link to an AI article and dedoomify turns down the apocalypse: &quot;the model is misaligned&quot; becomes &quot;the model has a bug&quot;.<p>Less Skynet. More software. And every change is highlighted with the original text o",
+  "why_now": "Broke: 1 points, 0 comments on HN, 19 h ago",
+  "score": 5
+ },
+ {
+  "id": "hn-9a6adbb39b",
+  "title": "Abliteration - Removing LLM refusal behaviors via representation engineering",
+  "url": "https://github.com/nevenkordic/abliteration](https://github.com/nevenkordic/abliteration",
+  "source": "hn",
+  "published_at": "2026-10-22T14:05:23Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7385,
+   "age_h": 21.0,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Discussed",
+   "relevance": "topic:llm",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "",
+  "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+  "score": 5
+ },
+ {
+  "id": "hn-d708b165ca",
+  "title": "Boundry - Real-time security proxy and guardrail for AI agents and LLMs",
+  "url": "https://news.ycombinator.com/item?id=50195403",
+  "source": "hn",
+  "published_at": "2026-10-22T13:57:02Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.737,
+   "age_h": 21.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Broke",
+   "relevance": "topic:agents",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "latence minimale, interception des injections Unicode, isolation par tenant, alertes Webhook et",
+  "why_now": "Broke: 1 points, 0 comments on HN, 21 h ago",
+  "score": 5
+ },
+ {
+  "id": "hn-040c7a8590",
+  "title": "Show HN: Caudra - An open-source terminal coding agent in one native binary",
+  "url": "https://github.com/caudra/caudra",
+  "source": "hn",
+  "published_at": "2026-10-22T13:43:58Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 0,
+   "signal": 0.085,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.0
+   },
+   "decay": 0.7347,
+   "age_h": 21.3,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:agent",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "Hi HN, I&#x27;m Thorsten. Caudra (<a href=\"https:&#x2F;&#x2F;caudra.ai\" rel=\"nofollow\">https:&#x2F;&#x2F;caudra.ai</a>) is an open source TUI coding agent written in Rust. It started as a fork of Maki and has grown into its own project.<p>I spend most of my working day with coding agents and i have",
+  "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+  "score": 5
+ },
+ {
+  "id": "hn-a9e08b18c9",
+  "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
+  "url": "https://huggingface.co/destined/hurston-1",
+  "source": "hn",
+  "published_at": "2026-10-21T11:56:29Z",
+  "signals": {
+   "points": 1,
+   "num_comments": 1,
+   "signal": 0.126,
+   "signal_parts": {
+    "points": 0.121,
+    "comments": 0.138
+   },
+   "decay": 0.5063,
+   "age_h": 47.1,
+   "source_weight": 1.0,
+   "product_bonus": 0.0,
+   "why_now_kind": "Shipped",
+   "relevance": "topic:prompt",
+   "group": "news-react"
+  },
+  "products": [],
+  "summary": "Hey HN. I founded Destined AI, a small Atlanta company that has collected over 1,800 hours of consented, paid speech recordings from Southern American and African English speakers since 2021.<p>Most TTS models handle accents through the prompt. Ask for a Southern or Nigerian accent and you get somet",
+  "why_now": "Shipped: 1 points, 1 comments on HN, 47 h ago",
+  "score": 5
+ }
+]
