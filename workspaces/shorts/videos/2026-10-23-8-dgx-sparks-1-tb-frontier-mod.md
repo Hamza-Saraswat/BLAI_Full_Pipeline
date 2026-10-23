@@ -2,22 +2,22 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
-status: approved
+status: scheduled
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
-updated: "2026-10-23T17:23:01Z"
-publish_slot: ""
+updated: "2026-10-23T17:28:12Z"
+publish_slot: "2026-10-24T11:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 2e1e753e-97a1-431d-8545-37ec86785707
 ---
 # 8 DGX Sparks, 1 TB: frontier models on a desk
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-package]]
 - Voice: [[stages/06-voice/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-voice]]
 - Render: [[stages/07-render/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-publish]]
 
 ## Decisions
 - Chosen as pick 2: opportunity 62.2; news-react lane, distinct from pick 1 and yesterday's; the one news-react of the day.
@@ -53,3 +53,4 @@ blotato_post_id: ""
 - 2026-10-23T12:31:27Z 07-render ok 987s
 - 2026-10-23T12:31:29Z build done, status review
 - 2026-10-23T17:23:01Z telegram approve (approved_at 2026-10-23T17:23:01Z)
+- 2026-10-23T17:28:13Z 08-publish ok 2s
