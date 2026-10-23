@@ -1,8 +1,8 @@
 ---
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
-title: "8 DGX Sparks, 1 TB: frontier models on a desk"
-status: scripted
+title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
+status: ready-to-build
 pillar: news-react
 structure: "number-first"
 format: classic
@@ -11,7 +11,7 @@ value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
 updated: "2026-10-23T11:15:46Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-23-ideas]]
 - Research: [[stages/03-research/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-brief]]
 - Script: [[stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -42,6 +42,9 @@ blotato_post_id: ""
 - Stage 04 hooks: 10 written, kept family "eight desk boxes hold what a datacenter rents"; writer B drifted from its assigned named-contradiction to number-first and the judge kept it (row 6).
 - Stage 04 judge: tie 21/24, B won on row 6 (difference); graft: A's closer into B's s05. Validator 0 blockers; eval hard gates pass; soft entity_spend kept on purpose (ConnectX-7 said as "the cable" in s04; named in full on screen).
 - Stage 04 advisories kept: 8 hashtags/0 keyword tags finalized at stage 05; FK 5.7; title 41 chars rewritten at stage 05; DGX/GLM have lexicon say entries. Ledger + style pack (silicon) recorded.
+
+- Stage 05 checkpoint (unattended): three titles written (1 searchable, 2 intriguing), searchable picked -- "DGX Spark" at character 3, "GLM 5.3" named, the how-it-works surface draws search viewers; description carries keyword + promise in 150 chars and links the closest related video (2026-09-15 multi-node math).
+- Stage 05 rubric 95/100, all rows scored; check_outputs exit 0 after hub link; contains_synthetic_media false (typographic scenes, creator's own cloned voice); title differs from every published title.
 
 ## Build journal
 
