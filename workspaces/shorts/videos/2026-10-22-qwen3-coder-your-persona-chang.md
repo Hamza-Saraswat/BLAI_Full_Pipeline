@@ -2,21 +2,21 @@
 slug: 2026-10-22-qwen3-coder-your-persona-chang
 workspace: shorts
 title: "Qwen3-Coder: persona changes security"
-status: scheduled
+status: published
 pillar: myth-bust
 structure: worked-example
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-23T10:57:16Z"
+updated: "2026-10-23T23:03:10Z"
 publish_slot: "2026-10-23T18:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=qLeMmhgXRkE"
 blotato_post_id: 8ba5bdec-9d68-4d87-8ce4-972dea7b372e
 ---
 # Qwen3-Coder: your persona changes its security
@@ -46,3 +46,4 @@ blotato_post_id: 8ba5bdec-9d68-4d87-8ce4-972dea7b372e
 - 2026-10-22T12:54:09Z build done, status review
 - 2026-10-23T10:56:58Z telegram approve (approved_at 2026-10-23T10:56:58Z)
 - 2026-10-23T10:57:16Z 08-publish ok 2s
+- 2026-10-23T23:03:10Z published https://www.youtube.com/watch?v=qLeMmhgXRkE
