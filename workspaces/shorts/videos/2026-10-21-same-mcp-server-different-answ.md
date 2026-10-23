@@ -2,22 +2,22 @@
 slug: 2026-10-21-same-mcp-server-different-answ
 workspace: shorts
 title: "Claude Code MCP: two agents, two answers"
-status: approved
+status: scheduled
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: signal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-21
-updated: "2026-10-23T10:56:48Z"
-publish_slot: ""
+updated: "2026-10-23T10:57:12Z"
+publish_slot: "2026-10-23T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 031e9bc4-13da-48ad-b0b0-539caecad7b8
 ---
 # Same MCP server, different answers: what the Harness measured
 
@@ -34,7 +34,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-21-same-mcp-server-different-answ-package]]
 - Voice: [[stages/06-voice/output/2026-10-21-same-mcp-server-different-answ-narration]]
 - Render: [[stages/07-render/output/2026-10-21-same-mcp-server-different-answ-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-21-same-mcp-server-different-answ-publish]]
 
 ## Decisions
 
@@ -54,3 +54,4 @@ blotato_post_id: ""
 - 2026-10-21T13:04:06Z build done, status review
 - 2026-10-22T13:35:55Z 2026-10-22T13:35:55Z expired: not from today's picks (2026-10-22); the factory carries no backlog
 - 2026-10-23T10:56:48Z telegram approve (approved_at 2026-10-23T10:56:48Z)
+- 2026-10-23T10:57:12Z 08-publish ok 2s
