@@ -2,14 +2,14 @@
 slug: 2026-10-22-omnara-run-your-own-claude-age
 workspace: shorts
 title: "Omnara: run your own Claude agent control plane"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-22T11:06:47Z"
+updated: "2026-10-23T13:35:31Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-23T13:35:31Z 2026-10-23T13:35:31Z expired: not from today's picks (2026-10-23); the factory carries no backlog
