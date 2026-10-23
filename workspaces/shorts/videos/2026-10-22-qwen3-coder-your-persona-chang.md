@@ -2,14 +2,14 @@
 slug: 2026-10-22-qwen3-coder-your-persona-chang
 workspace: shorts
 title: "Qwen3-Coder: persona changes security"
-status: review
+status: approved
 pillar: myth-bust
 structure: worked-example
 format: classic
 style_pack: halftone
 value_types: "REFRAMES,EQUIPS"
 created: 2026-10-22
-updated: "2026-10-22T12:54:03Z"
+updated: "2026-10-23T10:56:58Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-22T12:54:06Z 07-render ok 42.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 258
 - 2026-10-22T12:54:06Z 07-render ok 694s
 - 2026-10-22T12:54:09Z build done, status review
+- 2026-10-23T10:56:58Z telegram approve (approved_at 2026-10-23T10:56:58Z)
