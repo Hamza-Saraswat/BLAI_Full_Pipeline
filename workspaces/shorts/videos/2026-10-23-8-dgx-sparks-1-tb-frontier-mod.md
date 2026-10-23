@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-brief]]
 - Script: [[stages/04-script/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-script]]
 - Package: [[stages/05-package/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-23-8-dgx-sparks-1-tb-frontier-mod-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -48,3 +48,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-23T12:14:00Z build start on gn100-83c4
+- 2026-10-23T12:14:58Z 06-voice ok 55s
