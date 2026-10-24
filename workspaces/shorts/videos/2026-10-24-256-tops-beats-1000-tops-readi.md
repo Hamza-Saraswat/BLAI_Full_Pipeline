@@ -28,6 +28,8 @@ blotato_post_id: ""
 - 2026-10-24 research checkpoint: angle confirmed as "a 40 W Chinese box claims to beat DGX Spark prefill on Qwen; we read what the claim actually measured".
 - Reason: it is the ideas row's own angle and the TechRadar why-now; slug 2026-10-24-256-tops-beats-1000-tops-readi unchanged.
 - 2026-10-24 research: brief saved (10 claims, 8 key numbers, 10 sources; validator exit 0). FireCrawl returned 402 so fetches ran via web_extract; vendor margin conflict (25%/30% vs slightly ahead) recorded under Notes with both sides.
+- 2026-10-24 script checkpoint 1: structures myth-bust (draft A) and comparison-ladder (draft B); value types TEACHES + REFRAMES confirmed; promise "after forty seconds you can read an AI box's spec sheet and know which number actually sets the speed you feel".
+- Reason: has_process is false and the brief is a belief broken by a measurement (myth-bust's exact trigger); the ladder tells the same facts as a two-box climb ending in the decision rule, a different shape, not a cousin. Both clear rotation (last two: worked-example, number-first).
 
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
