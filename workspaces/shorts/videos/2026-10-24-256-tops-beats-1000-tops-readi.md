@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
-title: 256 TOPS beats 1000 TOPS? Reading the box that claims to beat DGX Spark
-status: scripted
+title: 256 TOPS vs 1000 TOPS: the label isn't the speed
+status: ready-to-build
 pillar: myth-bust
 structure: "myth-bust"
 format: classic
 style_pack: "halftone"
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-24T12:27:01Z"
+updated: "2026-10-24T12:57:13Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -36,13 +36,15 @@ blotato_post_id: ""
 - entity_spend soft advisory 0.238 kept on purpose: the brief's entity pool is source-heavy; the script names the products the viewer meets and top-2 (DGX Spark, Spark) are present.
 - Hook reworded at board time to "DGX Spark's label isn't its speed." -- classifier reads "thousand" as number-shock (used 2026-10-23) and ten words broke the frame-1 budget; 256-vs-1000 stays on screen as the loop anchor.
 - Style pack halftone recorded; ledger entry appended (structure myth-bust, hook named-contradiction).
+- 2026-10-24 package checkpoint: title picked "256 TOPS vs 1000 TOPS: the label isn't the speed" (intriguing; product pair in the first 16 chars; does not restate the hook); rubric 95/100 (all rows full credit); description names the closest related video (DGX Spark vs Strix Halo, JRHMpl1izi0).
+- Reason: the label-vs-speed gap is the searchable surface here -- the pick's keyword lands at char 0 and the question form carries long-tail variants; searchable variant kept as title_variants[0].
 
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-24-ideas]]
 - Research: [[stages/03-research/output/2026-10-24-256-tops-beats-1000-tops-readi-brief]]
 - Script: [[stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-10-24-256-tops-beats-1000-tops-readi-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
