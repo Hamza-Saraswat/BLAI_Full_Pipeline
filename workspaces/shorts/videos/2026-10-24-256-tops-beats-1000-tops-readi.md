@@ -2,14 +2,14 @@
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
 title: "256 TOPS vs 1000 TOPS: the label isn't the speed"
-status: building
+status: review
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-24T13:00:10Z"
+updated: "2026-10-24T13:16:27Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -46,7 +46,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-script]]
 - Package: [[stages/05-package/output/2026-10-24-256-tops-beats-1000-tops-readi-package]]
 - Voice: [[stages/06-voice/output/2026-10-24-256-tops-beats-1000-tops-readi-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-24-256-tops-beats-1000-tops-readi-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -54,3 +54,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-24T13:00:10Z build start on gn100-83c4
 - 2026-10-24T13:01:11Z 06-voice ok 59s
+- 2026-10-24T13:16:30Z 07-render ok 39.90s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 270
+- 2026-10-24T13:16:30Z 07-render ok 917s
