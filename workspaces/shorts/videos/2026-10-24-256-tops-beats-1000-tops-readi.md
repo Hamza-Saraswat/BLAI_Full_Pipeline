@@ -1,20 +1,20 @@
 ---
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
-title: 256 TOPS vs 1000 TOPS: the label isn't the speed
-status: ready-to-build
+title: "256 TOPS vs 1000 TOPS: the label isn't the speed"
+status: building
 pillar: myth-bust
-structure: "myth-bust"
+structure: myth-bust
 format: classic
-style_pack: "halftone"
+style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-24T12:57:13Z"
+updated: "2026-10-24T13:00:10Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -52,4 +52,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-24T13:00:10Z build start on gn100-83c4
