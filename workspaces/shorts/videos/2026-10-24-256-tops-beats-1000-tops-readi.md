@@ -21,6 +21,11 @@ blotato_post_id: ""
 ---
 # 256 TOPS beats 1000 TOPS? Reading the box that claims to beat DGX Spark
 
+## Decisions
+
+- 2026-10-24 ideas: picked (myth-bust, classic, opp 78.5) -- deepest demand signal of the day (autocomplete depth 64) on a fresh vendor claim; rotates off yesterday's lanes.
+- Scores carry no competition/vidIQ data (YT_API_KEY unset, no vidIQ connector); ranked on autocomplete depth only.
+
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-24-ideas]]
