@@ -30,6 +30,8 @@ blotato_post_id: ""
 - 2026-10-24 research: brief saved (10 claims, 8 key numbers, 10 sources; validator exit 0). FireCrawl returned 402 so fetches ran via web_extract; vendor margin conflict (25%/30% vs slightly ahead) recorded under Notes with both sides.
 - 2026-10-24 script checkpoint 1: structures myth-bust (draft A) and comparison-ladder (draft B); value types TEACHES + REFRAMES confirmed; promise "after forty seconds you can read an AI box's spec sheet and know which number actually sets the speed you feel".
 - Reason: has_process is false and the brief is a belief broken by a measurement (myth-bust's exact trigger); the ladder tells the same facts as a two-box climb ending in the decision rule, a different shape, not a cousin. Both clear rotation (last two: worked-example, number-first).
+- 2026-10-24 script checkpoint 2: 10 hooks scored; top raw score was "One number ties these boxes: two hundred seventy-three gigabytes a second" (6) but its pattern is number-shock, used 2026-10-23, so it was passed over for rotation.
+- Hook picks: draft A "A forty-watt box claims it beats NVIDIA's thousand-TOPS giant." (named-contradiction); draft B "DGX Spark or the forty-watt challenger? Bandwidth decides." (decision). Different patterns, neither in the sameness window (other, number-shock).
 
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
