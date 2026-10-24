@@ -45,7 +45,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-24-256-tops-beats-1000-tops-readi-brief]]
 - Script: [[stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-script]]
 - Package: [[stages/05-package/output/2026-10-24-256-tops-beats-1000-tops-readi-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-24-256-tops-beats-1000-tops-readi-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -53,3 +53,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-24T13:00:10Z build start on gn100-83c4
+- 2026-10-24T13:01:11Z 06-voice ok 59s
