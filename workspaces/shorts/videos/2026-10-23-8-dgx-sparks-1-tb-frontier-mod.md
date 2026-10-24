@@ -2,21 +2,21 @@
 slug: 2026-10-23-8-dgx-sparks-1-tb-frontier-mod
 workspace: shorts
 title: "8 DGX Sparks, 1 TB: run GLM 5.3 locally"
-status: scheduled
+status: published
 pillar: news-react
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-23
-updated: "2026-10-23T17:28:12Z"
+updated: "2026-10-24T16:00:58Z"
 publish_slot: "2026-10-24T11:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=bNNHr936R3M"
 blotato_post_id: 2e1e753e-97a1-431d-8545-37ec86785707
 ---
 # 8 DGX Sparks, 1 TB: frontier models on a desk
@@ -54,3 +54,4 @@ blotato_post_id: 2e1e753e-97a1-431d-8545-37ec86785707
 - 2026-10-23T12:31:29Z build done, status review
 - 2026-10-23T17:23:01Z telegram approve (approved_at 2026-10-23T17:23:01Z)
 - 2026-10-23T17:28:13Z 08-publish ok 2s
+- 2026-10-24T16:00:58Z published https://www.youtube.com/watch?v=bNNHr936R3M
