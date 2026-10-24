@@ -25,6 +25,8 @@ blotato_post_id: ""
 
 - 2026-10-24 ideas: picked (myth-bust, classic, opp 78.5) -- deepest demand signal of the day (autocomplete depth 64) on a fresh vendor claim; rotates off yesterday's lanes.
 - Scores carry no competition/vidIQ data (YT_API_KEY unset, no vidIQ connector); ranked on autocomplete depth only.
+- 2026-10-24 research checkpoint: angle confirmed as "a 40 W Chinese box claims to beat DGX Spark prefill on Qwen; we read what the claim actually measured".
+- Reason: it is the ideas row's own angle and the TechRadar why-now; slug 2026-10-24-256-tops-beats-1000-tops-readi unchanged.
 
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
