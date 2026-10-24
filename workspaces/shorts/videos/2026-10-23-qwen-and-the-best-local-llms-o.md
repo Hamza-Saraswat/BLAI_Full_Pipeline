@@ -2,14 +2,14 @@
 slug: 2026-10-23-qwen-and-the-best-local-llms-o
 workspace: shorts
 title: "Qwen and the best local LLMs: October 2026 per-GPU picks"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-23
-updated: "2026-10-23T11:15:46Z"
+updated: "2026-10-24T13:35:54Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Format smooth-explainer: a per-GPU tier list is a worked example carried the whole way, not one fact.
 
 ## Build journal
-
+- 2026-10-24T13:35:54Z 2026-10-24T13:35:54Z expired: not from today's picks (2026-10-24); the factory carries no backlog
