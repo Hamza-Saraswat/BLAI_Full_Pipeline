@@ -1,0 +1,43 @@
+{
+  "full": "D G X Spark's label isn't its speed. NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's tops, its peak-math rating, and assumed four times meant four times faster. Prefill reads your prompt once. Decode answers word by word, re-reading the model each time. tops is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving. Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one chwen model, speculative decoding off, barely ahead. Judge boxes by tokens per second on the chwen you run, never by tops on the tin.",
+  "words": 107,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "D G X Spark's label isn't its speed.",
+      "words": 8,
+      "changed": true
+    },
+    {
+      "id": "s02",
+      "text": "NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's tops, its peak-math rating, and assumed four times meant four times faster.",
+      "words": 27,
+      "changed": true
+    },
+    {
+      "id": "s03",
+      "text": "Prefill reads your prompt once. Decode answers word by word, re-reading the model each time.",
+      "words": 15,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "tops is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving.",
+      "words": 21,
+      "changed": true
+    },
+    {
+      "id": "s05",
+      "text": "Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one chwen model, speculative decoding off, barely ahead.",
+      "words": 19,
+      "changed": true
+    },
+    {
+      "id": "s06",
+      "text": "Judge boxes by tokens per second on the chwen you run, never by tops on the tin.",
+      "words": 17,
+      "changed": true
+    }
+  ],
+  "source": "normalize_narration.py"
+}

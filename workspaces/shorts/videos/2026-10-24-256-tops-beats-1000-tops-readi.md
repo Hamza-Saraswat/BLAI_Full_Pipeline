@@ -2,11 +2,11 @@
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
 title: 256 TOPS beats 1000 TOPS? Reading the box that claims to beat DGX Spark
-status: researched
+status: scripted
 pillar: myth-bust
-structure: ""
+structure: "myth-bust"
 format: classic
-style_pack: ""
+style_pack: "halftone"
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
 updated: "2026-10-24T12:27:01Z"
@@ -32,12 +32,16 @@ blotato_post_id: ""
 - Reason: has_process is false and the brief is a belief broken by a measurement (myth-bust's exact trigger); the ladder tells the same facts as a two-box climb ending in the decision rule, a different shape, not a cousin. Both clear rotation (last two: worked-example, number-first).
 - 2026-10-24 script checkpoint 2: 10 hooks scored; top raw score was "One number ties these boxes: two hundred seventy-three gigabytes a second" (6) but its pattern is number-shock, used 2026-10-23, so it was passed over for rotation.
 - Hook picks: draft A "A forty-watt box claims it beats NVIDIA's thousand-TOPS giant." (named-contradiction); draft B "DGX Spark or the forty-watt challenger? Bandwidth decides." (decision). Different patterns, neither in the sameness window (other, number-shock).
+- 2026-10-24 script: blind drafts A (myth-bust) and B (comparison-ladder) on kimi-k3; judge picked A 21-18, no grafts. Final board: validator 0 blockers 0 advisories; eval gate1_ready, all hard gates pass; sameness clean; normalizer 6 scenes (5 touched), 107 words.
+- entity_spend soft advisory 0.238 kept on purpose: the brief's entity pool is source-heavy; the script names the products the viewer meets and top-2 (DGX Spark, Spark) are present.
+- Hook reworded at board time to "DGX Spark's label isn't its speed." -- classifier reads "thousand" as number-shock (used 2026-10-23) and ten words broke the frame-1 budget; 256-vs-1000 stays on screen as the loop anchor.
+- Style pack halftone recorded; ledger entry appended (structure myth-bust, hook named-contradiction).
 
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-24-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-24-ideas]]
 - Research: [[stages/03-research/output/2026-10-24-256-tops-beats-1000-tops-readi-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)

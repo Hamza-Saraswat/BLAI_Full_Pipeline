@@ -1,0 +1,555 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-24T12:52:53+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-24-256-tops-beats-1000-tops-readi-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "docs": 6,
+      "primary": 3,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 21,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "cnx-software.com",
+      "github.com",
+      "nvidia.com",
+      "sipeed.com",
+      "techradar.com",
+      "wccftech.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "DGX Spark advertised AI performance (the 1,000-class figure, sparse)",
+          "value": "Up to 1 PFLOP FP4",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "one",
+          "scene_ids": []
+        },
+        {
+          "label": "MaixStation AX8860P NPU, dense FP4 (the hook: 256 against 1,000)",
+          "value": "256 TOPS",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark dense FP4 compute, as Sipeed frames NVIDIA's number",
+          "value": "500 TOPS",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Memory bandwidth, identical on both machines",
+          "value": "273 GB/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "273 GB/s",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "MaixStation power draw",
+          "value": "About 40 Watts",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark price, October 2026 (reportedly)",
+          "value": "$6,949.99",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark prefill, qwen3moe 30B.A3B Q8_0, llama.cpp pp2048",
+          "value": "2986.97 \u00b1 18.87 t/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DGX Spark decode, same model, llama.cpp tg32",
+          "value": "61.06 \u00b1 0.23 t/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 21,
+      "found_count": 5,
+      "score": 0.238,
+      "found": [
+        "Spark",
+        "DGX Spark",
+        "Sipeed",
+        "Qwen",
+        "NVIDIA DGX Spark"
+      ],
+      "missing": [
+        "PFLOP",
+        "Same",
+        "GB10 TDP",
+        "petaFLOP",
+        "Arm Cortex-A55 CPU",
+        "Tensor Cores",
+        "SoC",
+        "LPDDR5x",
+        "TechRadar",
+        "Watts",
+        "pp2048",
+        "tg32",
+        "qwen3moe 30B.A3B",
+        "Sipeed MaixStation",
+        "Axera AX8860P",
+        "A3B Q8"
+      ],
+      "top2": [
+        "Spark",
+        "DGX Spark"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Spark",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Sipeed",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "PFLOP",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Same",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB10 TDP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "petaFLOP",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Arm Cortex-A55 CPU",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA DGX Spark",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Tensor Cores",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SoC",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LPDDR5x",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "TechRadar",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Watts",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "pp2048",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "tg32",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "qwen3moe 30B.A3B",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sipeed MaixStation",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Axera AX8860P",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "A3B Q8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 10,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Spark",
+        "entity:DGX Spark"
+      ],
+      "hook_text": "DGX Spark's label isn't its speed.",
+      "first_sentence": "DGX Spark's label isn't its speed."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 3,
+          "specific": true,
+          "hits": [
+            "entity:Spark",
+            "entity:DGX Spark"
+          ],
+          "narration": "DGX Spark's label isn't its speed."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 9,
+          "specific": true,
+          "hits": [
+            "glossary:TOPS"
+          ],
+          "narration": "NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's TOPS, its peak-math rating, and assumed four times meant four times faster."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "glossary:Prefill"
+          ],
+          "narration": "Prefill reads your prompt once. Decode answers word by word, re-reading the model each time."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:273 GB/s"
+          ],
+          "narration": "TOPS is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "entity:Sipeed",
+            "entity:Qwen"
+          ],
+          "narration": "Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one Qwen model, speculative decoding off, barely ahead."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 5,
+          "specific": true,
+          "hits": [
+            "entity:Qwen"
+          ],
+          "narration": "Judge boxes by tokens per second on the Qwen you run, never by TOPS on the tin."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.5,
+      "words": 109,
+      "sentences": 10,
+      "est_speech_s": 37.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "DGX Spark's label isn't its speed. NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's TOPS, its peak-math rating, and assumed four times meant four times faster. Prefill reads your prompt once. Decode answers word by word, re-reading the model each time. TOPS is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving. Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one Qwen model, speculative decoding off, barely ahead. Judge boxes by tokens per second on the Qwen you run, never by TOPS on the tin.",
+    "on_screen": "DGX Spark's label isn't its speed. | 256 TOPS vs 1000 TOPS | 1000 TOPS: theoretical, sparse | prefill: one pass, decode: word by word | 273 GB/s on both boxes | 1 model, vendor-run, spec decode off | tokens per second > TOPS"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-24-256-tops-beats-1000-tops-readi-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 6.5,
+        "words": 109,
+        "est_speech_s": 37.6,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 46 chars \u2014 mobile truncates ~40",
+          "FK grade 6.5 \u2014 target <=5",
+          "s01: 'DGX' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s02: 'TOPS' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'TOPS' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s06: 'TOPS' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-24-256-tops-beats-1000-tops-readi-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.238,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Spark",
+          "DGX Spark"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Spark",
+          "entity:DGX Spark"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

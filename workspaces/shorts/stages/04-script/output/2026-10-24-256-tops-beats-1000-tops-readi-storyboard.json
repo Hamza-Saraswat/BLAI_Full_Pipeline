@@ -1,0 +1,120 @@
+{
+  "slug": "2026-10-24-256-tops-beats-1000-tops-readi",
+  "topic": "Why a 256-TOPS box can honestly chart ahead of a 1000-TOPS DGX Spark: sparse TOPS, prefill, and the 273 GB/s decode tie",
+  "title": "256 TOPS vs 1,000 TOPS: reading the fine print",
+  "description": "Working description; stage 05 overwrites. A 40 W box claims its 256 TOPS beats DGX Spark's 1000 TOPS on Qwen prefill; the fine print says why, and why chat speed is something else.",
+  "hashtags": [
+    "#DGXSpark",
+    "#LocalAI",
+    "#TOPS"
+  ],
+  "tags": [
+    "dgx spark",
+    "nvidia dgx spark",
+    "tops",
+    "npu",
+    "sipeed",
+    "maixstation",
+    "axera",
+    "local ai",
+    "llm hardware",
+    "memory bandwidth",
+    "prefill",
+    "decode",
+    "tokens per second",
+    "qwen",
+    "llama.cpp",
+    "ai accelerator",
+    "ai pc",
+    "edge ai"
+  ],
+  "hook_text": "DGX Spark's label isn't its speed.",
+  "hook_candidates": [
+    "DGX Spark's label isn't its speed. *",
+    "A forty-watt box claims it beats NVIDIA's thousand-TOPS giant.",
+    "DGX Spark or the forty-watt challenger? Bandwidth decides.",
+    "One number ties these boxes: two hundred seventy-three gigabytes a second.",
+    "The thousand-TOPS machine is not the fast one.",
+    "Two hundred fifty-six TOPS just picked a fight with a thousand.",
+    "NVIDIA's biggest number is a footnote.",
+    "You are comparing AI boxes by the wrong number.",
+    "A forty-dollar-a-year-to-run box says it beats NVIDIA's desk giant.",
+    "Reading the label, not the benchmark, settles this box fight.",
+    "The spec sheet says four times faster. Your chat says otherwise."
+  ],
+  "style_pack": "halftone",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 37,
+  "narration_full": "DGX Spark's label isn't its speed. NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's TOPS, its peak-math rating, and assumed four times meant four times faster. Prefill reads your prompt once. Decode answers word by word, re-reading the model each time. TOPS is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving. Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one Qwen model, speculative decoding off, barely ahead. Judge boxes by tokens per second on the Qwen you run, never by TOPS on the tin.",
+  "analogy": {
+    "vehicle": "Engine horsepower against the speed limit",
+    "mapping": "TOPS is peak horsepower on a bench at ideal RPM; memory bandwidth is the road; decode is city driving where anything past the limit buys nothing, so both boxes cruise at the same 273 GB/s ceiling.",
+    "limit": "Horsepower genuinely wins the drag race: at batch prefill, big TOPS do pull ahead, so the number is not useless, just not the one that sets chat speed."
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "DGX Spark's label isn't its speed.",
+      "on_screen_text": "256 TOPS vs 1000 TOPS",
+      "visual_brief": "Frame 1: two spec plaques centered and fully legible, small amber 256 plaque left, large gray 1000 plaque right; motion onset at 0.30 s as both plaques rise-in-place, small plaque takes a 1.12 punch fitted inside the safe area; first and last 8 frames stable.",
+      "est_duration_s": 3
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "NVIDIA's footnote calls its thousand theoretical, sparse math that skips zeros. You read the label's TOPS, its peak-math rating, and assumed four times meant four times faster.",
+      "on_screen_text": "1000 TOPS: theoretical, sparse",
+      "visual_brief": "Footnote line fades in under the big plaque on \"footnote\"; a magnifier scale-in highlights the sparse disclaimer on \"skips zeros\". One text block animates.",
+      "est_duration_s": 9
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Prefill reads your prompt once. Decode answers word by word, re-reading the model each time.",
+      "on_screen_text": "prefill: one pass, decode: word by word",
+      "visual_brief": "Prompt block flows into a wide amber bar on \"reads your prompt once\"; then single tokens drip out one at a time on \"word by word\". Diagram draws on, onset 0.3 s.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "TOPS is horsepower, bandwidth the speed limit: both boxes cruise at two hundred seventy-three gigabytes per second. Decode is city driving.",
+      "on_screen_text": "273 GB/s on both boxes",
+      "visual_brief": "Giant amber digits rise on \"two hundred seventy-three\"; two box silhouettes fade in beneath, capped by one shared ceiling bar on \"both boxes\".",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Horsepower wins drag races, and prefill is one. Sipeed's chart: vendor-run, one Qwen model, speculative decoding off, barely ahead.",
+      "on_screen_text": "1 model, vendor-run, spec decode off",
+      "visual_brief": "Two bar columns draw on nearly level on \"barely ahead\"; a small amber tag fades in listing the test conditions. Onset 0.3 s, two elements max.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Judge boxes by tokens per second on the Qwen you run, never by TOPS on the tin.",
+      "on_screen_text": "tokens per second > TOPS",
+      "visual_brief": "Centered rule line scales in on \"tokens per second\"; holds static; cut within one second of the last word.",
+      "est_duration_s": 5
+    }
+  ],
+  "notes_for_review": "Hook reworded at board time (number-shock rotation clash + frame-1 budget); 256-vs-1000 pair on screen in s01 is the unspoken loop-anchor exception; vendor margins omitted as unverified ('barely ahead' follows the TechRadar/CNX reading); llama.cpp pp/tg pair cut for the number budget."
+}
