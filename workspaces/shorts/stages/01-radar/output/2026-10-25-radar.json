@@ -1,0 +1,555 @@
+[
+  {
+    "id": "hn-325a829b85",
+    "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
+    "url": "https://github.com/slee-persis/GVS5H",
+    "source": "hn",
+    "published_at": "2026-10-25T03:56:01Z",
+    "signals": {
+      "points": 165,
+      "num_comments": 57,
+      "signal": 0.87,
+      "signal_parts": {
+        "points": 0.896,
+        "comments": 0.809
+      },
+      "decay": 0.9027,
+      "age_h": 7.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 165 points, 57 comments on HN, 7 h ago",
+    "score": 82
+  },
+  {
+    "id": "github-48c08baa64",
+    "title": "open-webui v0.12.4",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.4",
+    "source": "github",
+    "published_at": "2026-10-25T08:07:13Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.12.4",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9589,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 🎯 **Load selected skills on demand.** Administrators can turn on \"Load selected skills on demand\" under Admin Settings > General or set \"ENABLE_SKILL_LAZY_LOADING\", so skills selected in the chat or attached to a model are only listed for the model to load when it needs them instead of s",
+    "why_now": "Shipped: open-webui/open-webui v0.12.4 released, 3 h ago",
+    "score": 72
+  },
+  {
+    "id": "github-2fa5576694",
+    "title": "llama.cpp b11871",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11871",
+    "source": "github",
+    "published_at": "2026-10-25T06:28:47Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11871",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9365,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> chat : reject JSON nested more than 128 levels before walking it (#30242) * chat : reject JSON nested more than 128 levels before walking it The schema builder, the jinja engine and the decision code walk request JSON with recursion. A request nested deep enough overflows the stack of",
+    "why_now": "Shipped: ggml-org/llama.cpp b11871 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-2b9e0a635e",
+    "title": "llama.cpp b11870",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11870",
+    "source": "github",
+    "published_at": "2026-10-25T02:15:14Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11870",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.881,
+      "age_h": 8.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "DeepSeek"
+    ],
+    "summary": "<details open> model: DSV4.1 flash (#31086) * model : add DeepSeek-V4.1-Flash (deepseek41) * deepseek41 : remove MXFP8, convert the Engram table to BF16 * deepseek41 : compute the compressed-KV read layers once in the cache * deepseek41 : use get_cells() for the shared-history check, drop llama_kv_c",
+    "why_now": "Shipped: ggml-org/llama.cpp b11870 released (pre-release), 9 h ago",
+    "score": 52
+  },
+  {
+    "id": "github-0a4225397b",
+    "title": "ollama v0.40.11",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+    "source": "github",
+    "published_at": "2026-10-24T00:30:13Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.11",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.6074,
+      "age_h": 34.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "OpenAI"
+    ],
+    "summary": "## Speech Ollama can now generate [speech](https://docs.ollama.com/capabilities/speech) on macOS. `ollama run` plays text or a chat model's reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible `/v1/audio/speech` endpoint. ```sh ollama run phonon \"Hello from ",
+    "why_now": "Shipped: ollama/ollama v0.40.11 released, 35 h ago",
+    "score": 51
+  },
+  {
+    "id": "github-e96a507d77",
+    "title": "llama.cpp b11869",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11869",
+    "source": "github",
+    "published_at": "2026-10-24T21:18:54Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11869",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8204,
+      "age_h": 13.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> jinja : fix select and selectattr argument handling (#31059) * jinja : fix select and selectattr argument handling * jinja : address review feedback * jinja : Simplified test attr </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/",
+    "why_now": "Shipped: ggml-org/llama.cpp b11869 released (pre-release), 14 h ago",
+    "score": 50
+  },
+  {
+    "id": "hn-ff0ac760fe",
+    "title": "Show HN: DeepSearch - Search engine built on DeepSeek API",
+    "url": "https://deepsearch.ing/",
+    "source": "hn",
+    "published_at": "2026-10-24T22:44:35Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.8375,
+      "age_h": 12.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "DeepSeek launched their search API so I had to build a search engine on top of it.<p>The search engine is very simple: add your DeepSeek API credentials or OAuth with your DeepSeek account and you can search the web using their API and view results in a familiar web interface.<p>Credentials are stor",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 12 h ago",
+    "score": 32
+  },
+  {
+    "id": "hf-b6e78c8276",
+    "title": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+    "url": "https://huggingface.co/orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-22T04:06:52Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 177,
+      "downloads": 7293,
+      "trendingScore": 164.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.711,
+      "signal_parts": {
+        "trending": 0.672,
+        "likes": 0.75,
+        "downloads": 0.644
+      },
+      "decay": 0.32,
+      "age_h": 78.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 177 likes, 7.3k downloads, trending score 164, created 2026-10-22",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 177 likes, 7.3k downloads, trending score 164, 3 d ago",
+    "score": 32
+  },
+  {
+    "id": "hn-f59c80e889",
+    "title": "GLM 5.3 Flash Is Ace",
+    "url": "https://terfi.fyi/blog/my-current-llm-driver",
+    "source": "hn",
+    "published_at": "2026-10-24T19:25:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7984,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-96b10f13b0",
+    "title": "Show HN: Narro - Read web pages and Kindle books using local AI voices",
+    "url": "https://github.com/swrdfish/narro",
+    "source": "hn",
+    "published_at": "2026-10-24T19:37:32Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 1,
+      "signal": 0.324,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.138
+      },
+      "decay": 0.8006,
+      "age_h": 15.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:local ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I wanted a read-aloud extension that could read from the Kindle Online Reader. The ones I tried used voices I did not enjoy listening to or had a UX that was too cluttered or annoying or needed a signup.<p>So I decided to vibe code my own. It is open source and uses open weight models that run in th",
+    "why_now": "Shipped: 9 points, 1 comments on HN, 15 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-4dba6b6a01",
+    "title": "Show HN: Claude Code(and others) embedded in your app",
+    "url": "https://github.com/gtanczyk/genaicode",
+    "source": "hn",
+    "published_at": "2026-10-24T20:54:27Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8156,
+      "age_h": 14.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I started this project in 2024 when I got fascinated with LLMs, and what I did was a coding agent (CLI -&gt; interactive -&gt; GUI). I also added an integration with Vite for having it embedded inside my apps(mostly games). Few months ago I pivoted it to become a low profile AI provider wrapper libr",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 14 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-8d7d8ab7e1",
+    "title": "Local inferencing in one JVM JAR, dependency free, faster than llama.cpp",
+    "url": "https://qxotic.ai/",
+    "source": "hn",
+    "published_at": "2026-10-24T18:11:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7843,
+      "age_h": 16.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-9b13d6a721",
+    "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "source": "hf",
+    "published_at": "2026-10-17T02:40:38Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 2867,
+      "downloads": 85275,
+      "trendingScore": 1296.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.971,
+      "signal_parts": {
+        "trending": 0.943,
+        "likes": 1.0,
+        "downloads": 0.822
+      },
+      "decay": 0.0554,
+      "age_h": 200.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 2.9k likes, 85.3k downloads, trending score 1.3k, created 2026-10-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 2.9k likes, 85.3k downloads, trending score 1.3k, 8 d ago",
+    "score": 19
+  },
+  {
+    "id": "hf-cc06fa55e1",
+    "title": "ttindall/Qwen3.8-27B-Defiance-Uncensored-MTP-GGUF",
+    "url": "https://huggingface.co/ttindall/Qwen3.8-27B-Defiance-Uncensored-MTP-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-17T05:46:24Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 154,
+      "downloads": 34862,
+      "trendingScore": 125.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.697,
+      "signal_parts": {
+        "trending": 0.636,
+        "likes": 0.73,
+        "downloads": 0.757
+      },
+      "decay": 0.0579,
+      "age_h": 197.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 154 likes, 34.9k downloads, trending score 125, created 2026-10-17",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 154 likes, 34.9k downloads, trending score 125, 8 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-de65db5e66",
+    "title": "Kevlar = MCP Firewall for LLM's",
+    "url": "https://github.com/Ablation-Tool/kevlar",
+    "source": "hn",
+    "published_at": "2026-10-24T22:24:09Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8334,
+      "age_h": 12.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 13 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-f9a68d9b28",
+    "title": "How LLM-Based Penetration Testing Harnesses Work",
+    "url": "https://utkusen.substack.com/p/how-llm-based-penetration-testing",
+    "source": "hn",
+    "published_at": "2026-10-24T17:15:47Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7738,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-2eba926e7b",
+    "title": "Exploring Apple's On-Device Model: Twenty Billion Parameters in Flash",
+    "url": "https://www.airealist.ai/p/exploring-apple-on-device-model",
+    "source": "hn",
+    "published_at": "2026-10-25T08:23:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9628,
+      "age_h": 2.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hf-3da2031900",
+    "title": "tencent/Hy-Memory-30B-A3B",
+    "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+    "source": "hf",
+    "published_at": "2026-10-15T09:52:00Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 312,
+      "downloads": 4208,
+      "trendingScore": 128.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.736,
+      "signal_parts": {
+        "trending": 0.639,
+        "likes": 0.832,
+        "downloads": 0.604
+      },
+      "decay": 0.05,
+      "age_h": 241.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 312 likes, 4.2k downloads, trending score 128, created 2026-10-15",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 312 likes, 4.2k downloads, trending score 128, 10 d ago",
+    "score": 3
+  }
+]
