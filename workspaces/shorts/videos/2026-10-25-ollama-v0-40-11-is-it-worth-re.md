@@ -2,14 +2,14 @@
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
 title: "Ollama v0.40.11 update: re-pull models?"
-status: building
+status: review
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T12:37:11Z"
+updated: "2026-10-25T12:50:50Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-script|2026-10-25-ollama-v0-40-11-is-it-worth-re-script]]
 - Package: [[stages/05-package/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-package|2026-10-25-ollama-v0-40-11-is-it-worth-re-package]]
 - Voice: [[stages/06-voice/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-narration.txt|2026-10-25-ollama-v0-40-11-is-it-worth-re-narration]] (normalized narration from stage 04; stage 06 proper runs on the Spark)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -48,3 +48,5 @@ blotato_post_id: ""
 - 2026-10-25T12:32:09Z 05 checkpoint lines added post-commit (unattended rule)
 - 2026-10-25T12:37:11Z build start on gn100-83c4
 - 2026-10-25T12:38:11Z 06-voice ok 58s
+- 2026-10-25T12:50:53Z 07-render ok 40.20s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 272
+- 2026-10-25T12:50:53Z 07-render ok 759s
