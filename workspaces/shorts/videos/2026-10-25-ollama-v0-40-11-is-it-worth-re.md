@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
-title: "Ollama v0.40.11: is it worth re-pulling your models?"
-status: scripted
+title: "Ollama v0.40.11 update: re-pull models?"
+status: ready-to-build
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T12:29:21Z"
+updated: "2026-10-25T12:31:44Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-25-ideas]]
 - Research: [[stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief|2026-10-25-ollama-v0-40-11-is-it-worth-re-brief]]
 - Script: [[stages/04-script/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-script|2026-10-25-ollama-v0-40-11-is-it-worth-re-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-package|2026-10-25-ollama-v0-40-11-is-it-worth-re-package]]
+- Voice: [[stages/06-voice/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-narration.txt|2026-10-25-ollama-v0-40-11-is-it-worth-re-narration]] (normalized narration from stage 04; stage 06 proper runs on the Spark)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -42,3 +42,4 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-25T11:57:26Z 03-research ok: 10 sources, 9 claims, validator exit 0
 - 2026-10-25T12:29:21Z 04-script ok: A beat B 20-18, 0 blockers, eval exit 0, sameness clean
+- 2026-10-25T12:31:44Z 05-package ok: seo 100, check_outputs clean after links
