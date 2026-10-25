@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-25-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-25-ideas]]
 - Research: [[stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief|2026-10-25-ollama-v0-40-11-is-it-worth-re-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-script|2026-10-25-ollama-v0-40-11-is-it-worth-re-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
