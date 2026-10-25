@@ -37,9 +37,12 @@ blotato_post_id: ""
 - 03 checkpoint (unattended): angle confirmed -- the v0.40.11 patch notes decide whether re-pulling your models is worth the evening; slug unchanged.
 - 03 rationale: classic band, one fact one consequence; the viewer already runs Ollama, so the brief targets the update-or-re-pull decision, not an install walkthrough.
 - 04 checkpoint 1 (unattended): structures A news-react-so-what (release told as one consequence; last two ledger shapes were number-first and myth-bust, so both are rotation-banned) and B how-to-three-moves (brief has_process true with five real viewer steps). Value types TEACHES + EQUIPS. Promise: after half a minute you can decide the v0.40.11 ping deserves no re-pull, and the only pull worth tonight is phonon or d3.
+- 05 checkpoint (unattended): chose the searchable title "Ollama v0.40.11 update: re-pull models?" over two intriguing variants; keyword depth 283 makes this a search surface, and the ideas keyword notes carry "ollama update" phrasing.
+- 05 rationale: rubric scored 100/100 on first pass (keyword at char 0, 40 visible chars, related Ollama Short linked, 15 tags, 3 hashtags); original_insight names the assembled no-re-pull rule, so it is specific to this video.
 - 04 checkpoint 2 (unattended): 10 hooks scored; picks A decision ("Should you update Ollama tonight? Nothing re-downloads.") and B tonight ("Three moves and Ollama's updated tonight.") -- different hook patterns, and the last two ledger hooks (number-shock, named-contradiction) are avoided. Style pack terminal (topic fit; previous halftone).
 
 ## Build journal
 - 2026-10-25T11:57:26Z 03-research ok: 10 sources, 9 claims, validator exit 0
 - 2026-10-25T12:29:21Z 04-script ok: A beat B 20-18, 0 blockers, eval exit 0, sameness clean
 - 2026-10-25T12:31:44Z 05-package ok: seo 100, check_outputs clean after links
+- 2026-10-25T12:32:09Z 05 checkpoint lines added post-commit (unattended rule)

@@ -21,6 +21,10 @@ A local-AI Short every morning: https://youtube.com/@BuildLocalAI
 
 #ollama #localai #localllm
 
+## Decisions
+- Chose the searchable title: keyword depth 283 is a search surface and the ideas keyword notes carry "ollama update" phrasing; the two intriguing variants stay in title_variants.
+- Scored 100/100 on the first rubric pass; no rows needed revising.
+
 ## Rubric
 | Row | Points | Result |
 |-----|--------|--------|
