@@ -1,0 +1,161 @@
+{
+  "slug": "2026-10-25-ollama-v0-40-11-is-it-worth-re",
+  "topic": "Ollama v0.40.11: is it worth re-pulling your models?",
+  "generated_at": "2026-10-25T11:52:27Z",
+  "depth": "standard",
+  "thesis": "Ollama v0.40.11's patch notes settle the question: updating swaps the app and never your pulled models, so the only downloads worth your evening are the new ones -- phonon at 113MB and the d3 decision models.",
+  "explanation_path": "Establish what an update actually replaces before touching any feature: the Ollama application is one thing, and the models it pulled are files in a separate directory (~/.ollama/models and its siblings) that the updater does not write to. With that separation in place, read the v0.40.11 notes as a checklist of what changed in the app: speech generation on macOS, and the d3 decision-model family in four sizes. Then place .11 on the release calendar -- one calendar day after .10, two after .9 -- so the viewer can tell a routine bump from an urgent hotfix; the notes flag no breaking changes. The one counterexample that explains the re-download myth comes last: v0.40.2's background upgrades of pre-0.40 models, which kept the original on disk as a backup and only demanded a re-pull if you downgraded below 0.40. The payoff is the decision rule the viewer keeps: update the app always, re-pull never, pull new only when a feature names a model.",
+  "claims": [
+    {
+      "claim": "Ollama v0.40.11's headline change is speech generation on macOS: ollama run plays text or a chat model's reply aloud, and apps can stream audio through the OpenAI-compatible /v1/audio/speech endpoint.",
+      "source_url": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+      "source_title": "Release v0.40.11 · ollama/ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "v0.40.11 also ships the d3 decision-model family from vLLM Semantic Router, sized 2B, 4B, 9B, and 27B, for classifying text, answering yes or no, and scoring options with probabilities.",
+      "source_url": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+      "source_title": "Release v0.40.11 · ollama/ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "v0.40.11 is a routine bump, not a hotfix: it was released 24 Oct 00:30, one calendar day after v0.40.10 (23 Oct 15:03) and two days after v0.40.9 (22 Oct 01:33), and none of those three release notes flag a breaking change.",
+      "source_url": "https://github.com/ollama/ollama/releases",
+      "source_title": "Releases · ollama/ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "An Ollama update replaces the application, not the models: pulled models live in ~/.ollama/models on macOS, /usr/share/ollama/.ollama/models on Linux, and C:\\Users\\%username%\\.ollama\\models on Windows, directories the update mechanisms never write to.",
+      "source_url": "https://docs.ollama.com/faq",
+      "source_title": "FAQ - Ollama",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "The only model-touching change in the 0.40 line came in v0.40.2: models pulled with earlier versions were upgraded in the background on first run with the original kept on disk as a backup, and it is a downgrade below 0.40, not an update, that forces a re-pull.",
+      "source_url": "https://github.com/ollama/ollama/releases",
+      "source_title": "Releases · ollama/ollama",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "Updating is one step per platform: macOS and Windows download updates automatically and apply them by clicking Restart to update in the taskbar or menubar, and Linux re-runs the install script.",
+      "source_url": "https://docs.ollama.com/faq",
+      "source_title": "FAQ - Ollama",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "The new speech capability costs one new pull, not a re-pull: phonon:latest downloads at 113MB, and the packages require Apple Silicon and Ollama 0.40.9 or later.",
+      "source_url": "https://ollama.com/library/phonon",
+      "source_title": "phonon",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "Trying the new decision models is an evening-sized pull measured in single digits: d3:2b downloads at 3.1GB - 3.2GB with a 256K context window, while the 27B sibling runs 29GB - 30GB.",
+      "source_url": "https://ollama.com/library/d3",
+      "source_title": "d3",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    },
+    {
+      "claim": "The Windows docs confirm the app/model separation from the removal side: even the uninstaller leaves downloaded models alone when OLLAMA_MODELS was moved.",
+      "source_url": "https://docs.ollama.com/windows",
+      "source_title": "Windows - Ollama",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-25"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "phonon:latest download size (the whole speech feature)",
+      "value": "113MB",
+      "source_url": "https://ollama.com/library/phonon"
+    },
+    {
+      "label": "d3:2b download size",
+      "value": "3.1GB - 3.2GB",
+      "source_url": "https://ollama.com/library/d3"
+    },
+    {
+      "label": "d3:27b download size",
+      "value": "29GB - 30GB",
+      "source_url": "https://ollama.com/library/d3"
+    },
+    {
+      "label": "d3 family sizes",
+      "value": "2B, 4B, 9B, and 27B",
+      "source_url": "https://github.com/ollama/ollama/releases/tag/v0.40.11"
+    },
+    {
+      "label": "v0.40.11 release time (page-printed date)",
+      "value": "24 Oct 00:30",
+      "source_url": "https://github.com/ollama/ollama/releases"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Music player update",
+      "mapping": "Updating Ollama is like updating the music player app on your phone -- the player changes, the songs on your storage do not, and re-downloading only enters the picture when you want a new album (phonon, d3).",
+      "limit": "Models are not inert songs; they are format-coupled to the engine, and the v0.40.2 runner swap shows a player update can rewrite your library's format under you -- with a backup kept, but disk usage temporarily doubled."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Every Ollama update re-downloads your models.",
+      "reality": "The updater replaces the app while pulled models sit untouched in ~/.ollama/models, and the 0.40 line's only model change (v0.40.2) was an automatic background upgrade that kept the original as a backup (claims 4 and 5)."
+    },
+    {
+      "myth": "v0.40.11 is an urgent hotfix you must drop everything for.",
+      "reality": "It shipped one calendar day after v0.40.10 as a routine feature bump -- speech plus d3 -- with no breaking changes flagged in the notes (claim 3)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Ollama",
+      "definition": "An app that downloads and runs open AI models locally on your own machine."
+    },
+    {
+      "term": "pull",
+      "definition": "Downloading a model from ollama.com's library onto your disk; the only large download in Ollama."
+    },
+    {
+      "term": "speech model",
+      "definition": "A model that turns written text into spoken audio, streamed as it generates."
+    },
+    {
+      "term": "decision model",
+      "definition": "A small model trained to classify input, answer yes or no, or score options instead of chatting."
+    }
+  ],
+  "unverified": [
+    "How widespread the belief that updates re-download models actually is: the Reddit and forum threads surfaced by search could not be fetched this session (403), so the myth's reach is unmeasured.",
+    "No first-party or benchmark performance numbers exist for v0.40.11; any tokens-per-second or load-time claim must wait for a measurement on our own hardware.",
+    "When speech generation reaches Windows and Linux is not stated in the v0.40.11 notes, which say on macOS only."
+  ],
+  "suggested_outline": "Cold open on the two-line test: v0.40.11 shipped speech on macOS and the d3 decision models -- and its notes say nothing about the models you already have, which is exactly the point.\nThe mechanism that kills the myth: the updater swaps the app while models live in ~/.ollama, and the one time Ollama did touch models (v0.40.2) it upgraded them in the background with backups kept.\nThe rule and the one pull worth making: update always, re-pull never, pull new only when a feature names a model -- phonon at 113MB for speech, d3 at 3.1GB - 3.2GB for decisions.",
+  "notes": "GitHub prints release times in the viewer's timezone: the v0.40.11 page shows 24 Oct 00:30 while the tag's source assets carry the ISO stamp 2026-10-23T23:15:08Z; the page-printed date is the one quoted verbatim. The docs.ollama.com/install URL is a 404; the per-platform pages (/linux, /macos, /windows, /docker, /faq) are the live install-and-update pages. Thin spots: no official page states outright that updates leave models untouched -- claim 4 is assembled from the documented storage locations plus what each update mechanism replaces -- and the community threads behind the re-download myth returned 403, so the misconception is grounded in Ollama's own v0.40.2 note rather than community measurement. The Linux docs corroborate claim 6 (Update Ollama by running the install script again) and the speech docs corroborate claim 7 (Start Ollama v0.40.9 or later, then download Phonon).\n- 03 checkpoint (unattended): angle confirmed -- the v0.40.11 patch notes decide whether re-pulling your models is worth the evening; slug unchanged.\n- 03 rationale: classic band, one fact one consequence; the viewer already runs Ollama, so the brief targets the update-or-re-pull decision, not an install walkthrough.",
+  "viewer_situation": "You've got Ollama 0.40-point-something on your gaming PC or Mac with a few models already pulled, and every update ping makes you wonder whether tonight is the night you re-download a hundred gigabytes.",
+  "has_process": true,
+  "process_steps": [
+    "check the release notes for the version you are on, at github.com/ollama/ollama/releases",
+    "apply the update: click Restart to update on macOS or Windows, or re-run curl -fsSL https://ollama.com/install.sh | sh on Linux (Docker: pull the ollama/ollama image again)",
+    "run ollama list to confirm every pulled model is still there, untouched",
+    "pull only what the notes actually add, e.g. ollama pull phonon for speech or ollama run d3 for decision models",
+    "re-pull an existing model only if you downgraded below 0.40 or deleted it, never because the app updated"
+  ],
+  "objection": "Absence of a warning is not a guarantee: Ollama has already changed model formats under users once with the v0.40.2 background upgrade, so your models are safe holds only until the next runner swap."
+}

@@ -2,14 +2,14 @@
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
 title: "Ollama v0.40.11: is it worth re-pulling your models?"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T11:11:17Z"
+updated: "2026-10-25T11:57:26Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -38,4 +38,4 @@ blotato_post_id: ""
 - 03 rationale: classic band, one fact one consequence; the viewer already runs Ollama, so the brief targets the update-or-re-pull decision, not an install walkthrough.
 
 ## Build journal
-
+- 2026-10-25T11:57:26Z 03-research ok: 10 sources, 9 claims, validator exit 0
