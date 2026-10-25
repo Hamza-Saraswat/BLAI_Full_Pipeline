@@ -1,0 +1,153 @@
+{
+  "slug": "2026-10-25-ollama-v0-40-11-is-it-worth-re",
+  "topic": "Ollama v0.40.11: is it worth re-pulling your models?",
+  "title": "Ollama v0.40.11: re-pull your models?",
+  "description": "Working description; the package stage overwrites this.",
+  "hashtags": [
+    "#Ollama",
+    "#LocalAI",
+    "#LLM",
+    "#AI"
+  ],
+  "hook_text": "Should you update Ollama? Nothing re-downloads.",
+  "hook_candidates": [
+    "Should you update Ollama? Nothing re-downloads.",
+    "Three moves and Ollama's updated tonight.",
+    "Update pings Ollama. Your models stay put.",
+    "One hundred thirteen megabytes buys Ollama speech.",
+    "Ollama's update never touches your pulled models.",
+    "You run Ollama. The update ping landed. Relax.",
+    "New Ollama, same models, zero re-downloads.",
+    "v0.40.11 ships speech. Your disk stays calm.",
+    "Re-pull after updating Ollama? Don't.",
+    "Ollama updated overnight. Nothing vanished."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,EQUIPS",
+  "hook_pattern": "decision",
+  "target_duration_s": 35,
+  "narration_full": "Should you update Ollama tonight? Nothing re-downloads. Your models stay safe on disk. Updates swap the app, nothing else. One click. Your pulls sit in a folder it never touches. New player, same songs. What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk. Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk. The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can. Update always, re-pull never, and pull new only when a feature names a model.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Should you update Ollama tonight? Nothing re-downloads. Your models stay safe on disk.",
+      "on_screen_text": "Should you update Ollama? | Nothing re-downloads.",
+      "visual_brief": "Frame 1 (t=0): dark terminal backdrop, amber caret, centered two-line hook 'Should you update Ollama?' in bone white over 'Nothing re-downloads.' in amber, all text 64px or taller inside the 900x1160 safe area, tiny menubar icon top-center with an amber update dot. Motion onset at 0.35 s: the update dot pulses once. On 'Nothing re-downloads', the pulse ring snaps off and the phrase gains an amber underline. On 'Your models stay safe on disk', a row of dim file chips labeled '~/.ollama/models' fades in below the text and holds frozen through the cut. Never more than two elements animating at once.",
+      "est_duration_s": 4.1,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Updates swap the app, nothing else. One click. Your pulls sit in a folder it never touches. New player, same songs.",
+      "on_screen_text": "APP: swapped | MODELS: stay put",
+      "visual_brief": "Split-compare on the same dark terminal: left card labeled 'APP', right card labeled 'MODELS', thin amber vertical divider, no text over 7 characters on the minor side. On 'Updates swap the app', the app glyph inside the left card fades out and a refreshed glyph fades in at the same footprint. On 'Your pulls sit in a folder it never touches', the right card's border lights amber and a write-arrow aimed at it gets a slash drawn through it. On 'New player, same songs', a small music-note glyph pops beside the MODELS card. All motion is fade or scale in place; nothing slides.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk.",
+      "on_screen_text": "speech: macOS | phonon: speech model | 113 MB",
+      "visual_brief": "Giant-number scene entered by staged swap, never a dissolve. A caption 'speech: macOS' types in on 'What's new'. On 'replies read aloud', amber audio bars rise from a center baseline and keep looping gently. The caption hard-swaps to 'phonon: speech model' on 'That's phonon'. On 'a hundred and thirteen megabytes', '113 MB' scales in as the giant amber number with an emphasis punch, the text pre-sized to SAFE_W/1.12 so the 1.12 scale stays inside safe width, bars still moving beneath it. Only the bars plus one text element animate at any moment.",
+      "est_duration_s": 9.4,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk.",
+      "on_screen_text": "d3: decision model | 2B params | ≈3 GB",
+      "visual_brief": "Grid scene: one d3 card scales in on 'Meet d3', tagged 'decision model' beneath the name. On 'scores options instead of chatting', three empty option bars appear under the card and fill to uneven widths, no digits anywhere on the bars. On 'The smallest is two billion parameters', a '2B params' chip fades in at the card's corner. On 'It pulls about three gigabytes', a '≈3 GB' badge pops in beside the chip. Bars and badge are the only moving elements; the whole grid sits inside the safe area and nothing enters the caption band.",
+      "est_duration_s": 7.5,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can.",
+      "on_screen_text": "v0.40.2 | backups kept | downgrades re-pull",
+      "visual_brief": "Timeline: a thin horizontal amber line with two nodes, 'v0.40.2' on the left and 'today' on the right. On 'zero point forty point two', the left node lights amber and the file glyph above it duplicates into a faded twin labeled 'backups kept'. On 'Updates never re-pull', a download arrow above the line gets a slash drawn through it. On 'A downgrade can', a small arrow below the line flips to point backward and the download glyph flashes once, then everything holds still for the cut to the close.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Update always, re-pull never, and pull new only when a feature names a model.",
+      "on_screen_text": "Update always. | Re-pull never. | Pull new.",
+      "visual_brief": "Centered-stack that rhymes with frame 1: same typeface, same two-line geometry and amber accent as the hook composition. 'Update always.' rises in place on its spoken phrase; 'Re-pull never.' follows in amber on its phrase; 'Pull new when a feature names one.' fades in last, smaller and dimmed. Only one text block animates at a time. After the final word the frame holds, and in the final 0.5 s a small 'BUILD LOCAL AI' wordmark settles at the top of the safe area. First and last 8 frames fully static.",
+      "est_duration_s": 4.4,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "analogy": {
+    "vehicle": "Updating the music player app on your phone",
+    "mapping": "Updating Ollama swaps the player app; your pulled models are the songs already on storage; you only download again when you want a new album, which is phonon or d3.",
+    "limit": "Songs are inert but models are format-coupled to the engine: v0.40.2 rewrote old models in the background once, backup kept, so the analogy breaks at any future format swap."
+  },
+  "notes_for_review": "Consequence ('the update leaves them alone') is spoken at about second 3, before any feature, per the news-react-so-what order. Spoken numbers spent: a hundred and thirteen megabytes (phonon pull), two billion parameters (smallest d3), about three gigabytes (d3 pull), plus the version string zero point forty point two spoken once; v0.40.11 is kept off-screen because unspoken numbers cannot render. The music-player analogy lands in s02 and its stated limit becomes the catch in s05. At about 2.7 words per second this runs near 40 s, inside the 28-60 band; tighten inter-scene pauses to approach 35.",
+  "tags": [
+    "ollama",
+    "ollama update",
+    "ollama v0.40.11",
+    "ollama tutorial",
+    "ollama vs lm studio",
+    "ollama pull",
+    "ollama models",
+    "update ollama",
+    "ollama mac",
+    "ollama linux",
+    "ollama windows",
+    "local ai",
+    "local llm",
+    "run llm locally",
+    "ollama speech",
+    "ollama phonon",
+    "ollama d3",
+    "ollama new version",
+    "ollama re pull models",
+    "ai on your own pc"
+  ]
+}

@@ -2,14 +2,14 @@
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
 title: "Ollama v0.40.11: is it worth re-pulling your models?"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T11:57:26Z"
+updated: "2026-10-25T12:29:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -41,3 +41,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-25T11:57:26Z 03-research ok: 10 sources, 9 claims, validator exit 0
+- 2026-10-25T12:29:21Z 04-script ok: A beat B 20-18, 0 blockers, eval exit 0, sameness clean

@@ -1,0 +1,43 @@
+{
+  "full": "Should you update oh-lah-mah tonight? Nothing re-downloads. Your models stay safe on disk. Updates swap the app, nothing else. One click. Your pulls sit in a folder it never touches. New player, same songs. What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk. Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk. The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can. Update always, re-pull never, and pull new only when a feature names a model.",
+  "words": 121,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Should you update oh-lah-mah tonight? Nothing re-downloads. Your models stay safe on disk.",
+      "words": 13,
+      "changed": true
+    },
+    {
+      "id": "s02",
+      "text": "Updates swap the app, nothing else. One click. Your pulls sit in a folder it never touches. New player, same songs.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk.",
+      "words": 30,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk.",
+      "words": 24,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can.",
+      "words": 19,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "Update always, re-pull never, and pull new only when a feature names a model.",
+      "words": 14,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
