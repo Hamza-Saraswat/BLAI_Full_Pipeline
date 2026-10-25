@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-10-25T12:31:44Z 05-package ok: seo 100, check_outputs clean after links
 - 2026-10-25T12:32:09Z 05 checkpoint lines added post-commit (unattended rule)
 - 2026-10-25T12:37:11Z build start on gn100-83c4
+- 2026-10-25T12:38:11Z 06-voice ok 58s
