@@ -34,6 +34,8 @@ blotato_post_id: ""
 ## Decisions
 - Picked as 1 of 2: opportunity 94.8 (rank 1), deepest keyword in the set (ollama, autocomplete depth 283); how-to lane, classic band (one fact, one consequence).
 - Rotation caveat: no candidate above 60 sits outside yesterday's lanes, so the best two were taken per the ties-and-empties rule.
+- 03 checkpoint (unattended): angle confirmed -- the v0.40.11 patch notes decide whether re-pulling your models is worth the evening; slug unchanged.
+- 03 rationale: classic band, one fact one consequence; the viewer already runs Ollama, so the brief targets the update-or-re-pull decision, not an install walkthrough.
 
 ## Build journal
 
