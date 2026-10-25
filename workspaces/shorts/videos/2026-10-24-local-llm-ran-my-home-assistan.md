@@ -2,14 +2,14 @@
 slug: 2026-10-24-local-llm-ran-my-home-assistan
 workspace: shorts
 title: "Local LLM ran my Home Assistant: the guardrails that caught it"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-24
-updated: "2026-10-24T11:07:55Z"
+updated: "2026-10-25T13:35:27Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-25T13:35:27Z 2026-10-25T13:35:27Z expired: not from today's picks (2026-10-25); the factory carries no backlog

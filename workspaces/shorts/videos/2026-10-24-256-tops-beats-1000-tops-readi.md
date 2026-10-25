@@ -2,14 +2,14 @@
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
 title: "256 TOPS vs 1000 TOPS: the label isn't the speed"
-status: review
+status: expired
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-24T13:16:27Z"
+updated: "2026-10-25T13:35:27Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -57,3 +57,4 @@ blotato_post_id: ""
 - 2026-10-24T13:16:30Z 07-render ok 39.90s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 270
 - 2026-10-24T13:16:30Z 07-render ok 917s
 - 2026-10-24T13:16:32Z build done, status review
+- 2026-10-25T13:35:27Z 2026-10-25T13:35:27Z expired: not from today's picks (2026-10-25); the factory carries no backlog
