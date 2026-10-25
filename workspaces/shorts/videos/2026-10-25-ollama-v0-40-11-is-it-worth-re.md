@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-25-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-25-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief|2026-10-25-ollama-v0-40-11-is-it-worth-re-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
