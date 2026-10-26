@@ -2,14 +2,14 @@
 slug: 2026-10-26-nanbeige-4-3-33b-trending-on-h
 workspace: shorts
 title: "Nanbeige 4.3 33B on a 24 GB Card: The Memory Math"
-status: building
+status: review
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-26
-updated: "2026-10-26T12:19:10Z"
+updated: "2026-10-26T12:32:54Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-script|Script]] ([[stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-package|Package]]
 - Voice: [[stages/06-voice/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-narration|Narration (normalized at stage 04)]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,5 @@ blotato_post_id: ""
 - 2026-10-26T12:14:41Z 05-package ok: seo 92, searchable title, manifest schema OK, check_outputs 0 failures, no duplicate title; cp3 unattended: title 1 picked (model-name search traffic)
 - 2026-10-26T12:19:10Z build start on gn100-83c4
 - 2026-10-26T12:20:08Z 06-voice ok 56s
+- 2026-10-26T12:32:57Z 07-render ok 36.80s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 279
+- 2026-10-26T12:32:57Z 07-render ok 766s
