@@ -2,14 +2,14 @@
 slug: 2026-10-25-open-webui-v0-12-4-what-actual
 workspace: shorts
 title: "Open WebUI v0.12.4: what actually changed this week"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T11:11:17Z"
+updated: "2026-10-26T13:35:47Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Rotation caveat: no candidate above 60 sits outside yesterday's lanes, so the best two were taken per the ties-and-empties rule.
 
 ## Build journal
-
+- 2026-10-26T13:35:47Z 2026-10-26T13:35:47Z expired: not from today's picks (2026-10-26); the factory carries no backlog
