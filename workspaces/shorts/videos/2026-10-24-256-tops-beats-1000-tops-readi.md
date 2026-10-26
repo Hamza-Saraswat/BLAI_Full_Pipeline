@@ -2,14 +2,14 @@
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
 title: "256 TOPS vs 1000 TOPS: the label isn't the speed"
-status: expired
+status: approved
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-25T13:35:27Z"
+updated: "2026-10-26T02:09:13Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -58,3 +58,4 @@ blotato_post_id: ""
 - 2026-10-24T13:16:30Z 07-render ok 917s
 - 2026-10-24T13:16:32Z build done, status review
 - 2026-10-25T13:35:27Z 2026-10-25T13:35:27Z expired: not from today's picks (2026-10-25); the factory carries no backlog
+- 2026-10-26T02:09:13Z telegram approve (approved_at 2026-10-26T02:09:13Z)
