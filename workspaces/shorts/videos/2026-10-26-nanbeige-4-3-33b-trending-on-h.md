@@ -2,14 +2,14 @@
 slug: 2026-10-26-nanbeige-4-3-33b-trending-on-h
 workspace: shorts
 title: "Nanbeige 4.3 33B: trending on Hugging Face, but will it fit your RAM?"
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-26
-updated: "2026-10-26T11:08:57Z"
+updated: "2026-10-26T11:51:52Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-26-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-26-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-brief|Brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - unattended: confirmed rather than redirected; the ideas note already names the fit gap as the lane, reaction coverage is what competitors already published.
 
 ## Build journal
-
+- 2026-10-26T11:51:52Z 03-research ok: 11 sources (9 tier-1), validator 0 blockers, 10 claims, 8 key numbers

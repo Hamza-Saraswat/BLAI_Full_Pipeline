@@ -12,8 +12,7 @@
       "source_title": "Hugging Face model API: Nanbeige/Nanbeige4.3-33B",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "\"createdAt\":\"2026-10-24T02:49:18.000Z\" ... \"license:apache-2.0\" ... \"id\": \"Nanbeige/Nanbeige4.3-33B\""
+      "accessed": "2026-10-26"
     },
     {
       "claim": "It is a dense model in the standard LlamaForCausalLM layout: 52 hidden layers, 56 attention heads, 8 key-value heads and a 166,912-entry vocabulary, with no mixture-of-experts keys anywhere in config.json.",
@@ -21,8 +20,7 @@
       "source_title": "config.json (Nanbeige4.3-33B)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "\"num_hidden_layers\": 52 ... \"num_attention_heads\": 56 ... \"num_key_value_heads\": 8 ... \"vocab_size\": 166912"
+      "accessed": "2026-10-26"
     },
     {
       "claim": "The model card claims a context length of up to 524,288 tokens (512K).",
@@ -30,8 +28,7 @@
       "source_title": "Nanbeige/Nanbeige4.3-33B . Hugging Face (model card)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "The model supports a context length of up to 524,288 tokens (512K)."
+      "accessed": "2026-10-26"
     },
     {
       "claim": "On 2026-10-26 the model ranked fourth on Hugging Face's list of models sorted by trendingScore, showing 513 likes and 2,787 downloads.",
@@ -39,8 +36,7 @@
       "source_title": "Hugging Face models API sorted by trendingScore (top 15)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "\"id\":\"Nanbeige/Nanbeige4.3-33B\" ... \"likes\":513 ... \"downloads\":2787 (fourth object in the trendingScore-descending response)"
+      "accessed": "2026-10-26"
     },
     {
       "claim": "The file that matters for local use, bartowski's Q4_K_M GGUF, is 20788825216 bytes (19.36 GiB); that conversion repo appeared 2026-10-25T14:22:25.000Z and already shows 18595 downloads.",
@@ -48,8 +44,7 @@
       "source_title": "Hugging Face blobs API: bartowski/Nanbeige_Nanbeige4.3-33B-GGUF",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "\"rfilename\":\"Nanbeige_Nanbeige4.3-33B-Q4_K_M.gguf\",\"blobId\":\"538e99dde50a43f4f53d4ed0c4d6da755847b9e8\",\"size\":20788825216,\"lfs\":{\"sha256\":\"2cef79855ca47ee6571e166db32a07089e34f3cf78e0397b262d124ddb814c37\",\"size\":20788825216,\"pointerSize\":136"
+      "accessed": "2026-10-26"
     },
     {
       "claim": "The original BF16 weights the Nanbeige team uploaded total 66237954048 bytes (61.69 GiB) across 14 safetensors shards, roughly 3.2x the Q4_K_M file.",
@@ -57,8 +52,7 @@
       "source_title": "model.safetensors.index.json (Nanbeige4.3-33B)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "\"total_size\": 66237954048"
+      "accessed": "2026-10-26"
     },
     {
       "claim": "The context bill is separate from the weights: at 128K context an FP16 KV cache costs 26.0 GiB, and the full 512K context needs about 104 GiB for the cache alone.",
@@ -66,8 +60,7 @@
       "source_title": "Nanbeige4.3-33B on a 24 GB GPU: Memory Math and Local Setup (webdiga)",
       "source_quality": "benchmark",
       "confidence": "medium",
-      "accessed": "2026-10-26",
-      "quote": "A full 512K context needs about 104 GiB for the cache alone."
+      "accessed": "2026-10-26"
     },
     {
       "claim": "A 24 GB GPU can run Nanbeige4.3-33B, but only as a 4-bit GGUF with roughly 8K-16K tokens of context, per an analysis built from the config and real quant file sizes rather than a measured run.",
@@ -75,8 +68,7 @@
       "source_title": "Nanbeige4.3-33B on a 24 GB GPU: Memory Math and Local Setup (webdiga)",
       "source_quality": "benchmark",
       "confidence": "medium",
-      "accessed": "2026-10-26",
-      "quote": "Yes, a 24 GB GPU can run Nanbeige4.3-33B, but only as a 4-bit GGUF with a modest context window of roughly 8K–16K tokens."
+      "accessed": "2026-10-26"
     },
     {
       "claim": "Ollama has no Nanbeige4.3-33B tag as of 2026-10-26: searching nanbeige on ollama.com returns 19 models and the newest is a Nanbeige4.2-3B upload from about 3 months ago.",
@@ -84,8 +76,7 @@
       "source_title": "nanbeige . Ollama (model search)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "Show 19 models ... ndavat/Nanbeige4.2-3B 3mo"
+      "accessed": "2026-10-26"
     },
     {
       "claim": "Nanbeige's own table reports Nanbeige4.3-33B at 80.9 on Terminal-Bench 2.12 against 73.0 for Qwen3.8-27B, while Qwen3.8-27B leads SWE-Bench Pro3 at 61.7 to 60.3 and Gemma4-31B leads GPQA Diamond at 91.3.",
@@ -93,8 +84,7 @@
       "source_title": "Nanbeige/Nanbeige4.3-33B . Hugging Face (model card)",
       "source_quality": "primary",
       "confidence": "high",
-      "accessed": "2026-10-26",
-      "quote": "Terminal-Bench 2.12 | **80.9** | 73.0 | 61.8 | 47.2 ... SWE-Bench Pro3 | 60.3 | **61.7** | 36.9 | 51.2 ... GPQA Diamond | 89.5 | 89.2 | 83.5 | **91.3**"
+      "accessed": "2026-10-26"
     }
   ],
   "key_numbers": [
