@@ -2,21 +2,21 @@
 slug: 2026-10-24-256-tops-beats-1000-tops-readi
 workspace: shorts
 title: "256 TOPS vs 1000 TOPS: the label isn't the speed"
-status: scheduled
+status: published
 pillar: myth-bust
 structure: myth-bust
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-24
-updated: "2026-10-26T02:14:12Z"
+updated: "2026-10-26T16:02:12Z"
 publish_slot: "2026-10-26T11:00:00-05:00"
 seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=UdsfaSbVPtY"
 blotato_post_id: 2dc65b35-c028-499a-bd3e-3ff342f740a8
 ---
 # 256 TOPS beats 1000 TOPS? Reading the box that claims to beat DGX Spark
@@ -60,3 +60,4 @@ blotato_post_id: 2dc65b35-c028-499a-bd3e-3ff342f740a8
 - 2026-10-25T13:35:27Z 2026-10-25T13:35:27Z expired: not from today's picks (2026-10-25); the factory carries no backlog
 - 2026-10-26T02:09:13Z telegram approve (approved_at 2026-10-26T02:09:13Z)
 - 2026-10-26T02:14:12Z 08-publish ok 2s
+- 2026-10-26T16:02:12Z published https://www.youtube.com/watch?v=UdsfaSbVPtY
