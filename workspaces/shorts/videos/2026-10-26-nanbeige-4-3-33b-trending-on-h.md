@@ -2,19 +2,19 @@
 slug: 2026-10-26-nanbeige-4-3-33b-trending-on-h
 workspace: shorts
 title: "Nanbeige 4.3 33B on a 24 GB Card: The Memory Math"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-26
-updated: "2026-10-26T12:14:41Z"
+updated: "2026-10-26T12:19:10Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-10-26T11:54:55Z 04-script s1 checkpoint (unattended): structures number-first (A) + worked-example (B); rotation bans myth-bust/news-react; hooks number-shock (A) + situation (B); promise: viewer can say if their box holds it at 4-bit and what context to cap. Value types TEACHES+EQUIPS confirmed.
 - 2026-10-26T12:11:45Z 04-script ok: judge 22-22, B won row-6 tiebreak; validator 0/0, eval gate1_ready, variety clean, ledger entry 51, style signal; soft gates entity_spend+top2 fail with reason (exact token Nanbeige4.3-33B vs spoken form; on screen s1); normalizer scenes_changed 1
 - 2026-10-26T12:14:41Z 05-package ok: seo 92, searchable title, manifest schema OK, check_outputs 0 failures, no duplicate title; cp3 unattended: title 1 picked (model-name search traffic)
+- 2026-10-26T12:19:10Z build start on gn100-83c4
