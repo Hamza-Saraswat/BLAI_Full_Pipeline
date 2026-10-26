@@ -2,14 +2,14 @@
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
 title: "Ollama v0.40.11 update: re-pull models?"
-status: review
+status: approved
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-25T12:50:50Z"
+updated: "2026-10-26T02:09:08Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-10-25T12:50:53Z 07-render ok 40.20s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 272
 - 2026-10-25T12:50:53Z 07-render ok 759s
 - 2026-10-25T12:50:55Z build done, status review
+- 2026-10-26T02:09:08Z telegram approve (approved_at 2026-10-26T02:09:08Z)

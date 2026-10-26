@@ -1,0 +1,457 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-25T12:19:46+00:00",
+  "slug": "draft-A",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/.local-builds/2026-10-25-ollama-v0-40-11-is-it-worth-re/draft-A/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 3
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 5,
+    "entities_total": 13,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.25,
+    "source_domains": [
+      "github.com",
+      "ollama.com"
+    ],
+    "domain_diversity": 2,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.6,
+      "detail": [
+        {
+          "label": "phonon:latest download size (the whole speech feature)",
+          "value": "113MB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "113",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "d3:2b download size",
+          "value": "3.1GB - 3.2GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "3 GB",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "d3:27b download size",
+          "value": "29GB - 30GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "d3 family sizes",
+          "value": "2B, 4B, 9B, and 27B",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "two billion",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "v0.40.11 release time (page-printed date)",
+          "value": "24 Oct 00:30",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 13,
+      "found_count": 3,
+      "score": 0.231,
+      "found": [
+        "Ollama",
+        "macOS",
+        "v0.40.2"
+      ],
+      "missing": [
+        "v0.40.11",
+        "Oct",
+        "v0.40.10",
+        "Semantic Router",
+        "OpenAI-compatible",
+        "v0.40.9",
+        "d3:2b",
+        "Windows",
+        "Linux",
+        "Restart"
+      ],
+      "top2": [
+        "Ollama",
+        "v0.40.11"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "v0.40.11",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "macOS",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Oct",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Semantic Router",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.9",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "d3:2b",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Windows",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Restart",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 16,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Ollama"
+      ],
+      "hook_text": "Should you update Ollama? Nothing re-downloads.",
+      "first_sentence": "Should you update Ollama tonight?"
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.1,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Should you update Ollama tonight? Nothing re-downloads. Your models stay safe on disk."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "glossary:pull"
+          ],
+          "narration": "Updates swap the app, nothing else. Your pulls sit in a folder it never touches. New player, same songs."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.4,
+          "specific": true,
+          "hits": [
+            "num:113MB",
+            "entity:macOS"
+          ],
+          "narration": "What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7.5,
+          "specific": true,
+          "hits": [
+            "num:3.1GB - 3.2GB",
+            "num:2B, 4B, 9B, and 27B"
+          ],
+          "narration": "Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk."
+        },
+        {
+          "id": "s05",
+          "role": "foreshadow",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:v0.40.2"
+          ],
+          "narration": "The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 4.4,
+          "specific": true,
+          "hits": [
+            "glossary:pull"
+          ],
+          "narration": "Update always, re-pull never, and pull new only when a feature names a model."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.9,
+      "words": 122,
+      "sentences": 16,
+      "est_speech_s": 42.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "Should you update Ollama tonight? Nothing re-downloads. Your models stay safe on disk. Updates swap the app, nothing else. Your pulls sit in a folder it never touches. New player, same songs. What's new: speech on macOS, replies read aloud. That's phonon, a speech model. It turns text into audio, and the whole feature is a hundred and thirteen megabytes on disk. Meet d3, a decision model that scores options instead of chatting. The smallest is two billion parameters. It pulls about three gigabytes on disk. The catch: zero point forty point two rewrote old models once, backups kept. Updates never re-pull. A downgrade can. Update always, re-pull never, and pull new only when a feature names a model.",
+    "on_screen": "Should you update Ollama? Nothing re-downloads. | Should you update Ollama? | Nothing re-downloads. | APP: swapped | MODELS: stay put | speech: macOS | phonon: speech model | 113 MB | d3: decision model | 2B params | \u22483 GB | v0.40.2 | backups kept | downgrades re-pull | Update always. | Re-pull never. | Pull new."
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/.local-builds/2026-10-25-ollama-v0-40-11-is-it-worth-re/draft-A/storyboard.json",
+        "scenes": 6,
+        "fk_grade": 4.9,
+        "words": 122,
+        "est_speech_s": 42.1,
+        "blockers": [],
+        "advisories": [
+          "s04: digits in narration: '3,' \u2014 write numbers as words"
+        ],
+        "violations": [
+          "s04: digits in narration: '3,' \u2014 write numbers as words"
+        ],
+        "warnings": []
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 5,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.231,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Ollama",
+          "v0.40.11"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Ollama"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

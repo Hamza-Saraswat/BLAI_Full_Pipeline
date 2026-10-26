@@ -1,0 +1,463 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-25T12:20:37+00:00",
+  "slug": "draft-B",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/.local-builds/2026-10-25-ollama-v0-40-11-is-it-worth-re/draft-B/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 3
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 5,
+    "entities_total": 13,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.25,
+    "source_domains": [
+      "github.com",
+      "ollama.com"
+    ],
+    "domain_diversity": 2,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.4,
+      "detail": [
+        {
+          "label": "phonon:latest download size (the whole speech feature)",
+          "value": "113MB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "113",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "d3:2b download size",
+          "value": "3.1GB - 3.2GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "d3:27b download size",
+          "value": "29GB - 30GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "d3 family sizes",
+          "value": "2B, 4B, 9B, and 27B",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "v0.40.11 release time (page-printed date)",
+          "value": "24 Oct 00:30",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 13,
+      "found_count": 5,
+      "score": 0.385,
+      "found": [
+        "Ollama",
+        "v0.40.11",
+        "v0.40.2",
+        "d3:2b",
+        "Restart"
+      ],
+      "missing": [
+        "macOS",
+        "Oct",
+        "v0.40.10",
+        "Semantic Router",
+        "OpenAI-compatible",
+        "v0.40.9",
+        "Windows",
+        "Linux"
+      ],
+      "top2": [
+        "Ollama",
+        "v0.40.11"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "v0.40.11",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "macOS",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Oct",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Semantic Router",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.40.9",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "d3:2b",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Windows",
+          "tier": 1,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Restart",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 16,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Ollama"
+      ],
+      "hook_text": "Three moves and Ollama's updated tonight.",
+      "first_sentence": "Three moves and Ollama's updated tonight."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "how-to-three-moves",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.3,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:v0.40.11"
+          ],
+          "narration": "Three moves and Ollama's updated tonight. That update ping in your menubar? It never touches your models."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:v0.40.11",
+            "entity:Restart"
+          ],
+          "narration": "Move one: click Restart to update in that menubar. One click. Ollama swaps the app, never your model folder."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:113MB",
+            "entity:Ollama"
+          ],
+          "narration": "Move two: pull phonon, the speech model. It reads text aloud. The download is a hundred and thirteen megabytes on disk."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 5.3,
+          "specific": true,
+          "hits": [
+            "num:3.1GB - 3.2GB",
+            "entity:Ollama",
+            "entity:d3:2b"
+          ],
+          "narration": "Or pull d3, a decision model. It scores options instead of chatting, about a three gigabyte download."
+        },
+        {
+          "id": "s05",
+          "role": "foreshadow",
+          "est_duration_s": 5.0,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:v0.40.2"
+          ],
+          "narration": "One catch: Ollama once rewrote old model formats quietly. Backups kept. Safe until the next swap."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Move three: on a Mac, run phonon and hear the reply out loud. App swapped, models untouched, box talking."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.9,
+      "words": 109,
+      "sentences": 16,
+      "est_speech_s": 37.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves and Ollama's updated tonight. That update ping in your menubar? It never touches your models. Move one: click Restart to update in that menubar. One click. Ollama swaps the app, never your model folder. Move two: pull phonon, the speech model. It reads text aloud. The download is a hundred and thirteen megabytes on disk. Or pull d3, a decision model. It scores options instead of chatting, about a three gigabyte download. One catch: Ollama once rewrote old model formats quietly. Backups kept. Safe until the next swap. Move three: on a Mac, run phonon and hear the reply out loud. App swapped, models untouched, box talking.",
+    "on_screen": "Three moves and Ollama's updated tonight. | Three moves and Ollama's updated tonight. | v0.40.11 available | Restart to update | APP \u2192 v0.40.11 | MODELS: untouched | $ ollama pull phonon | 113 MB | $ ollama pull d3:2b | classify \u00b7 yes/no \u00b7 score | \u2248 3 GB | v0.40.2 | old models \u2192 background rewrite \u2192 backup kept | $ ollama run phonon | AUDIO OUT | UPDATED."
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/.local-builds/2026-10-25-ollama-v0-40-11-is-it-worth-re/draft-B/storyboard.json",
+        "scenes": 6,
+        "fk_grade": 4.9,
+        "words": 109,
+        "est_speech_s": 37.6,
+        "blockers": [],
+        "advisories": [
+          "s04: digits in narration: '3,' \u2014 write numbers as words"
+        ],
+        "violations": [
+          "s04: digits in narration: '3,' \u2014 write numbers as words"
+        ],
+        "warnings": []
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 5,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.385,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Ollama",
+          "v0.40.11"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Ollama"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
