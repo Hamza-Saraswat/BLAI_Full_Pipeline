@@ -1,0 +1,783 @@
+[
+  {
+    "id": "hn-86bde11cd2",
+    "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+    "url": "https://minimaxir.com/2026/10/cheap-llms/",
+    "source": "hn",
+    "published_at": "2026-10-25T21:11:31Z",
+    "signals": {
+      "points": 327,
+      "num_comments": 319,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.819,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI",
+      "Anthropic"
+    ],
+    "summary": "",
+    "why_now": "Measured: 327 points, 319 comments on HN, 14 h ago",
+    "score": 70
+  },
+  {
+    "id": "hn-581b05bb31",
+    "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
+    "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
+    "source": "hn",
+    "published_at": "2026-10-26T03:12:05Z",
+    "signals": {
+      "points": 65,
+      "num_comments": 24,
+      "signal": 0.706,
+      "signal_parts": {
+        "points": 0.734,
+        "comments": 0.642
+      },
+      "decay": 0.8932,
+      "age_h": 7.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "explainer"
+    },
+    "products": [
+      "Microsoft",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 65 points, 24 comments on HN, 8 h ago",
+    "score": 69
+  },
+  {
+    "id": "hn-1dc75a32fc",
+    "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+    "url": "https://lynchlab.net/llm-skin-cancer",
+    "source": "hn",
+    "published_at": "2026-10-25T17:15:38Z",
+    "signals": {
+      "points": 568,
+      "num_comments": 244,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7738,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 568 points, 244 comments on HN, 18 h ago",
+    "score": 66
+  },
+  {
+    "id": "github-8c10b2fbbd",
+    "title": "llama.cpp b11897",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11897",
+    "source": "github",
+    "published_at": "2026-10-26T10:57:07Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11897",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.999,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> tests : refactor test-llama-archs to not link internal libllama symbols (#30880) test-llama-archs included src/llama-arch.h and src/llama-model-saver.h, which prevented building on Windows with shared libraries since the used symbols are not exported from the DLL. - declare llama_arch",
+    "why_now": "Shipped: ggml-org/llama.cpp b11897 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-15e5c6072e",
+    "title": "llama.cpp b11896",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11896",
+    "source": "github",
+    "published_at": "2026-10-26T10:17:02Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11896",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9894,
+      "age_h": 0.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> ci : fix race in webgpu memset (#31162) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/59862664> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11896/llama-b",
+    "why_now": "Shipped: ggml-org/llama.cpp b11896 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-d552db7b12",
+    "title": "llama.cpp b11895",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11895",
+    "source": "github",
+    "published_at": "2026-10-26T09:54:06Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b11895",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9839,
+      "age_h": 1.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> metal : stop overflow from happening in large matrix output offsets (#30072) * Metal : stop overflow from happening in large matrix output offsets Assisted-by: Codex * metal : widen batch offsets and MUL_MAT_ID token indices Assisted-by: Codex --------- Co-authored-by: feni6 <27003709",
+    "why_now": "Shipped: ggml-org/llama.cpp b11895 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "hf-7deb0a3809",
+    "title": "Nanbeige/Nanbeige4.3-33B",
+    "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+    "source": "hf",
+    "published_at": "2026-10-24T02:49:18Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 508,
+      "downloads": 2787,
+      "trendingScore": 506.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.861,
+      "signal_parts": {
+        "trending": 0.819,
+        "likes": 0.902,
+        "downloads": 0.574
+      },
+      "decay": 0.4442,
+      "age_h": 56.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 508 likes, 2.8k downloads, trending score 506, created 2026-10-24",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 508 likes, 2.8k downloads, trending score 506, 2 d ago",
+    "score": 29
+  },
+  {
+    "id": "hn-799f4cfbce",
+    "title": "Ollama adds local text-to-speech, 100x faster than real time on Apple Silicon",
+    "url": "https://ollama.com/blog/speech-models",
+    "source": "hn",
+    "published_at": "2026-10-26T09:34:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9793,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "Apple"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 1 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-b2debd6f5d",
+    "title": "Ask HN: Why Is ChatGPT secretly Chinese?",
+    "url": "https://news.ycombinator.com/item?id=50240555",
+    "source": "hn",
+    "published_at": "2026-10-26T08:01:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9575,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:ChatGPT",
+      "group": "myth-bust"
+    },
+    "products": [
+      "ChatGPT"
+    ],
+    "summary": "I&#x27;ve noticed a weird pattern: ChatGPT will occasionally generate the title of a conversation in the wrong language. For some reason the mistaken language is always Chinese.<p>(I never use Chinese, I don&#x27;t know Chinese, all my conversations are in English.)",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 3 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-44f03fcb0c",
+    "title": "RTX 4000 Pro Blackwell SFF performance hacks",
+    "url": "https://piszczek.pl/blog/rtx-pro-4000-blackwell-sff-120w-qwen-benchmark",
+    "source": "hn",
+    "published_at": "2026-10-26T07:29:18Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9502,
+      "age_h": 3.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Blackwell",
+      "group": "news-react"
+    },
+    "products": [
+      "Blackwell"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-204a54bed5",
+    "title": "Show HN: Radian, an agent puts development workflow on autopilot",
+    "url": "https://getrad.dev",
+    "source": "hn",
+    "published_at": "2026-10-25T16:41:36Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7675,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "I have built an indie hacker project; my main flow was:<p>1. chatting with Claud Code about the general plan<p>2. assigning slices of work to other worker agents like Pi + DeepSeek 4.1 Flash<p>3. building in parallel<p>4. Claud Code reviews when done, runs tests, and merges after I validate<p>It wor",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 18 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-769e974f8c",
+    "title": "Neuron Explorer for Qwen 4B",
+    "url": "https://github.com/lyramakesmusic/neuron-explorer",
+    "source": "hn",
+    "published_at": "2026-10-25T16:12:46Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7621,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-f27e3f2e5b",
+    "title": "Show HN: A Blender addon that makes Claude twice as efficient at using nodes",
+    "url": "https://github.com/carson-katri/geometry-script",
+    "source": "hn",
+    "published_at": "2026-10-25T21:50:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8267,
+      "age_h": 13.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I originally made this addon 4 years ago, but recently discovered that coding agents love it.<p>The addon adds a scripting API for Blender’s node trees, such as Geometry Nodes or Shader Nodes.<p>It generates a function and related types for every node in Blender. Then the agent (or you) can write sc",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 13 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-4f5ba6d717",
+    "title": "Bringing Flame Serving Close to Standalone vLLM",
+    "url": "https://xflops.io/blog/flame-vllm-serving/",
+    "source": "hn",
+    "published_at": "2026-10-26T01:06:01Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8665,
+      "age_h": 9.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 10 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-00e573bc42",
+    "title": "Fine-tuned Qwen on my 16gb GPU to respond without the letter e",
+    "url": "https://kevin-wu.ca/blog/qwn/",
+    "source": "hn",
+    "published_at": "2026-10-25T18:00:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7821,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-7d981394fd",
+    "title": "XHToken/Spark-X2.6-4B-GGUF",
+    "url": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-19T09:49:37Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 147,
+      "downloads": 69669,
+      "trendingScore": 140.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.729,
+      "signal_parts": {
+        "trending": 0.651,
+        "likes": 0.723,
+        "downloads": 0.807
+      },
+      "decay": 0.0869,
+      "age_h": 169.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 147 likes, 69.7k downloads, trending score 140, created 2026-10-19",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 147 likes, 69.7k downloads, trending score 140, 7 d ago",
+    "score": 20
+  },
+  {
+    "id": "hn-62208e9153",
+    "title": "LimonOS new OS no Unix no Linux",
+    "url": "https://news.ycombinator.com/item?id=50234861",
+    "source": "hn",
+    "published_at": "2026-10-25T18:56:21Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 5,
+      "signal": 0.242,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.357
+      },
+      "decay": 0.7927,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Wrote everything myself from scratch in pure C without any Linux or pre-built distros. It&#x27;s a custom monolithic architecture with the Limine bootloader, custom drivers, window manager, and terminal.<p>As for models and agents: I used LLM agents as co-authors for routine tasks, writing tests, an",
+    "why_now": "Changed: 2 points, 5 comments on HN, 16 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-b37da4bf94",
+    "title": "NeuronDump: Open a local LLM as a 3D graph, cut parts, see what breaks",
+    "url": "https://github.com/aymen94/NeuronDump",
+    "source": "hn",
+    "published_at": "2026-10-25T19:45:09Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8021,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 3 points, 0 comments on HN, 15 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-9a885670d2",
+    "title": "Biff 2.0.4: LLM Skills",
+    "url": "https://biffweb.com/p/skills/",
+    "source": "hn",
+    "published_at": "2026-10-26T02:18:09Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8817,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 9 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-eecc2696f8",
+    "title": "Show HN: God - real-time control room for LLM agent societies (EMNLP 2026 demo)",
+    "url": "https://github.com/XiaoLuoLYG/GOD",
+    "source": "hn",
+    "published_at": "2026-10-26T02:11:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8803,
+      "age_h": 8.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 9 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-2453f9c556",
+    "title": "AI Gateway Benchmark: OpenRouter, Vercel, Ramp, Keln",
+    "url": "https://keln.ai/blog/ai-gateway-benchmark-deepseek-v4-1-flash",
+    "source": "hn",
+    "published_at": "2026-10-25T16:53:40Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7697,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:benchmark",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-84769699d6",
+    "title": "Agentic Project Kit - A control harness for LLM-assisted coding via repo-state",
+    "url": "https://github.com/vfi64/agentic-project-kit",
+    "source": "hn",
+    "published_at": "2026-10-26T10:48:11Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9968,
+      "age_h": 0.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-0b590f8fac",
+    "title": "Top Open Source LLM Gateways",
+    "url": "https://medium.com/@hadilbenabdallah/top-5-open-source-llm-gateways-41d6c9ec7438",
+    "source": "hn",
+    "published_at": "2026-10-26T10:15:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9891,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-41799f4b7b",
+    "title": "Bend: A fast language that blocks AI mistakes via proof",
+    "url": "https://github.com/bendlang/bend",
+    "source": "hn",
+    "published_at": "2026-10-25T23:41:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.849,
+      "age_h": 11.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-14ac385a1c",
+    "title": "Pi on a Local Model",
+    "url": "https://billdx.github.io/Pi-Qwen/",
+    "source": "hn",
+    "published_at": "2026-10-25T21:44:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8256,
+      "age_h": 13.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:local model",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-7c5a939845",
+    "title": "An American Answer to China's Open Si Models: A Safe Harbor for Open Weights",
+    "url": "https://manhattan.institute/article/an-american-answer-to-chinas-open-si-models-a-safe-harbor-for-open-weights",
+    "source": "hn",
+    "published_at": "2026-10-25T18:54:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7924,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-53b69458f1",
+    "title": "Red-teaming AI agent monitors with an LLM that fakes tool outputs",
+    "url": "https://www.redwoodresearch.org/blog/simulated-control-evaluations",
+    "source": "hn",
+    "published_at": "2026-10-25T15:41:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7564,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  }
+]
