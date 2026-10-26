@@ -37,3 +37,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-26T11:51:52Z 03-research ok: 11 sources (9 tier-1), validator 0 blockers, 10 claims, 8 key numbers
+- 2026-10-26T11:54:55Z 04-script s1 checkpoint (unattended): structures number-first (A) + worked-example (B); rotation bans myth-bust/news-react; hooks number-shock (A) + situation (B); promise: viewer can say if their box holds it at 4-bit and what context to cap. Value types TEACHES+EQUIPS confirmed.
