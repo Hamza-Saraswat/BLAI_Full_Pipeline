@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 2026-10-26 s03 checkpoint: angle kept -- the 33B trending model judged by what it demands from the viewer's RAM at Q4, not leaderboard claims; slug unchanged.
+- unattended: confirmed rather than redirected; the ideas note already names the fit gap as the lane, reaction coverage is what competitors already published.
 
 ## Build journal
 
