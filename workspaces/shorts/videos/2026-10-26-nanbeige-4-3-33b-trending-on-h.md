@@ -2,14 +2,14 @@
 slug: 2026-10-26-nanbeige-4-3-33b-trending-on-h
 workspace: shorts
 title: "Nanbeige 4.3 33B: trending on Hugging Face, but will it fit your RAM?"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: worked-example
 format: classic
-style_pack: ""
+style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-26
-updated: "2026-10-26T11:51:52Z"
+updated: "2026-10-26T12:11:45Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-26-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-26-ideas]]
 - Research: [[stages/03-research/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-brief|Brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-script|Script]] ([[stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-storyboard|storyboard]])
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -41,3 +41,4 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-26T11:51:52Z 03-research ok: 11 sources (9 tier-1), validator 0 blockers, 10 claims, 8 key numbers
 - 2026-10-26T11:54:55Z 04-script s1 checkpoint (unattended): structures number-first (A) + worked-example (B); rotation bans myth-bust/news-react; hooks number-shock (A) + situation (B); promise: viewer can say if their box holds it at 4-bit and what context to cap. Value types TEACHES+EQUIPS confirmed.
+- 2026-10-26T12:11:45Z 04-script ok: judge 22-22, B won row-6 tiebreak; validator 0/0, eval gate1_ready, variety clean, ledger entry 51, style signal; soft gates entity_spend+top2 fail with reason (exact token Nanbeige4.3-33B vs spoken form; on screen s1); normalizer scenes_changed 1

@@ -1,0 +1,126 @@
+{
+  "slug": "2026-10-26-nanbeige-4-3-33b-trending-on-h",
+  "topic": "Nanbeige 4.3 33B trending on Hugging Face: will it fit your RAM",
+  "title": "Nanbeige 4.3 33B on a 24 GB Card: The Memory Math",
+  "description": "Nanbeige 4.3 33B is trending on Hugging Face, so here is the memory math for the 24 GB card you already own.",
+  "hashtags": [
+    "#Nanbeige43",
+    "#LocalLLM",
+    "#GGUF"
+  ],
+  "tags": [
+    "nanbeige 4.3",
+    "nanbeige 4.3 33b",
+    "nanbeige",
+    "local llm",
+    "run llm locally",
+    "gguf",
+    "q4 km quantization",
+    "kv cache",
+    "lm studio",
+    "ollama",
+    "llama.cpp",
+    "24 gb gpu local ai",
+    "hugging face trending",
+    "local ai news",
+    "build local ai"
+  ],
+  "hook_text": "24 GB card vs 19 GB model",
+  "hook_candidates": [
+    "Nanbeige 4.3: 19 GB on disk",
+    "Nanbeige 4.3 woke up today",
+    "A 33B model, 19 GB on disk",
+    "Half a million tokens. One file.",
+    "Trending #2. Fits a 24 GB card.",
+    "One RAM bank decides this",
+    "24 GB card vs 19 GB model",
+    "You downloaded it. Now count.",
+    "Nanbeige 4.3, day two: 19 GB",
+    "The file is the story, not the bench"
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 36,
+  "narration_full": "You've got a twenty-four gigabyte card. Nanbeige four point three is a nineteen-gigabyte file. Step one: load the file onto your card. It downloads as a G G U F, the one file local models ship in. The model also promises half a million tokens of context. Each token rents working memory, a cache that piles beside the weights. Step two: cap the context window before loading. Your leftovers hold roughly eight to sixteen thousand tokens. Bartowski's build loads in LM Studio tonight. A hundred and twenty-eight gigabytes buys the long conversations. Your card still runs it, and trending never got a vote.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "You've got a twenty-four gigabyte card. Nanbeige four point three is a nineteen-gigabyte file.",
+      "on_screen_text": "24 GB card vs 19 GB model",
+      "visual_brief": "Frame 1: dark background, giant text '24 GB card vs 19 GB model' top center, two empty vertical amber-outlined bars below, left labeled 'your card', right labeled 'the model'. Motion onset at 0.35 s: the left bar fades in and fills amber on 'twenty-four gigabyte card'; the right bar rises-in-place to just below the left bar's rim on 'nineteen-gigabyte file', leaving a thin dark gap that pulses once.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ],
+      "est_duration_s": 4.8
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Step one: load the file onto your card. It downloads as a G G U F, the one file local models ship in.",
+      "on_screen_text": "Step 1: fit the file | GGUF: one file, whole model",
+      "visual_brief": "Centered stack on dark: the line 'Step 1: fit the file' fades in on 'Step one'. A single amber document icon labeled 'GGUF' scales in center-frame on 'G G U F'. On 'the one file local models ship in' the icon settles onto a horizontal card outline at the bottom and the card's memory bar fills amber to about four-fifths, holding there.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ],
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s3",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "The model also promises half a million tokens of context. Each token rents working memory, a cache that piles beside the weights.",
+      "on_screen_text": "context: 524,288 tokens | cache grows per token",
+      "visual_brief": "A horizontal amber timeline labeled 'context' stretches rightward on 'half a million tokens of context', tick marks multiplying toward an end label reading '524,288'. On 'rents working memory' small amber blocks begin stacking upward above the ticks, forming a second growing bar. On 'piles beside the weights' the cache stack rises until it rivals a static 'weights' block drawn at the left.",
+      "sfx": [],
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Step two: cap the context window before loading. Your leftovers hold roughly eight to sixteen thousand tokens. Bartowski's build loads in LM Studio tonight.",
+      "on_screen_text": "Step 2: cap the context | room left: 8K-16K tokens",
+      "visual_brief": "On 'cap the context window' an amber slider fades in and its handle pins near the low end of a track. Giant amber text '8K-16K' scales in center on 'eight to sixteen thousand tokens', with 'tokens of context left' beneath it. On 'Bartowski's build' a lower line 'bartowski / LM Studio' rises-in-place and stays.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "A hundred and twenty-eight gigabytes buys the long conversations. Your card still runs it, and trending never got a vote.",
+      "on_screen_text": "128 GB: long conversations | your card still runs it",
+      "visual_brief": "Rhymes with frame 1: the same two-bar split-compare composition from the hook returns, card bar left, model bar nested inside it. On 'hundred and twenty-eight gigabytes' a much taller amber bar rises-in-place to the right, dwarfing the pair. On 'Your card still runs it' the original card bar pulses once. On 'trending never got a vote' all motion stops, holding the frame-1 layout for the loop.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ],
+      "est_duration_s": 6.9
+    }
+  ],
+  "notes_for_review": "Rounded for the ear: 19.36 GiB to 'nineteen gigabytes', 524,288 tokens to 'half a million' (screen shows the exact 524,288 in the same scene), 8K-16K to 'eight to sixteen thousand tokens'; 24 GB and 128 GB are as the brief states them. Hedged: the 24 GB fit and 8K-16K window come from webdiga's config-math analysis (medium confidence), so no speed or quality claims are made anywhere. No analogy used; the single wry beat is 'rents working memory' in scene 3, aimed at the cache."
+}

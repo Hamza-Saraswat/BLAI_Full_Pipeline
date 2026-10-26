@@ -1,0 +1,514 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-26T12:11:24+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "benchmark": 2
+    },
+    "pct_primary_docs": 0.8,
+    "key_numbers_total": 8,
+    "entities_total": 17,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "huggingface.co",
+      "ollama.com",
+      "webdiga.com"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "Q4_K_M GGUF file size (bartowski conversion, the usual local download)",
+          "value": "20788825216 bytes (19.36 GiB)",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "nineteen",
+          "scene_ids": [
+            "s1"
+          ]
+        },
+        {
+          "label": "Original BF16 weights, all 14 shards (model repo)",
+          "value": "66237954048 bytes (61.69 GiB)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Maximum context length claimed by the model card",
+          "value": "up to 524,288 tokens (512K)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "524,288",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "Main repo downloads (Hugging Face, fetched 2026-10-26)",
+          "value": "2,787 downloads last month",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Main repo likes (Hugging Face trending API, fetched 2026-10-26)",
+          "value": "513 likes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "FP16 KV cache at 128K context (webdiga memory table)",
+          "value": "26.0 GiB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "FP16 KV cache at the full 512K context (webdiga memory table)",
+          "value": "about 104 GiB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3.8-27B downloads, same trending fetch (the incumbent gap)",
+          "value": "7,608,285 downloads",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 17,
+      "found_count": 1,
+      "score": 0.059,
+      "found": [
+        "Nanbeige"
+      ],
+      "missing": [
+        "Nanbeige4.3-33B",
+        "GiB",
+        "Qwen3.8-27B",
+        "Hugging Face",
+        "trendingScore",
+        "SWE-Bench Pro3",
+        "GPQA Diamond",
+        "apache-2.0",
+        "LlamaForCausalLM",
+        "BF16",
+        "Nanbeige4.2-3B",
+        "Gemma4-31B",
+        "Terminal",
+        "FP16 KV",
+        "GiB of Q4",
+        "trendingScore-sorted"
+      ],
+      "top2": [
+        "Nanbeige4.3-33B",
+        "Nanbeige"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Nanbeige4.3-33B",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nanbeige",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GiB",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "trendingScore",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SWE-Bench Pro3",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA Diamond",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "apache-2.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LlamaForCausalLM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nanbeige4.2-3B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Gemma4-31B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Terminal",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP16 KV",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GiB of Q4",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "trendingScore-sorted",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "24 GB card vs 19 GB model",
+      "first_sentence": "You've got a twenty-four gigabyte card."
+    },
+    "positional_labels": {
+      "count": 2,
+      "structure": "worked-example",
+      "labels": [
+        {
+          "sentence_index": 2,
+          "sentence": "Step one: load the file onto your card.",
+          "label": "step",
+          "ordinal": 1,
+          "words": 8,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 6,
+          "sentence": "Step two: cap the context window before loading.",
+          "label": "step",
+          "ordinal": 2,
+          "words": 8,
+          "has_action_verb": true
+        }
+      ]
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 4.8,
+          "specific": true,
+          "hits": [
+            "num:20788825216 bytes (19.36 GiB)",
+            "entity:Nanbeige"
+          ],
+          "narration": "You've got a twenty-four gigabyte card. Nanbeige four point three is a nineteen-gigabyte file."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "glossary:GGUF"
+          ],
+          "narration": "Step one: load the file onto your card. It downloads as a G G U F, the one file local models ship in."
+        },
+        {
+          "id": "s3",
+          "role": "foreshadow",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "num:up to 524,288 tokens (512K)"
+          ],
+          "narration": "The model also promises half a million tokens of context. Each token rents working memory, a cache that piles beside the weights."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "glossary:context window"
+          ],
+          "narration": "Step two: cap the context window before loading. Your leftovers hold roughly eight to sixteen thousand tokens. Bartowski's build loads in LM Studio tonight."
+        },
+        {
+          "id": "s5",
+          "role": "payoff_close",
+          "est_duration_s": 6.9,
+          "specific": false,
+          "hits": [],
+          "narration": "A hundred and twenty-eight gigabytes buys the long conversations. Your card still runs it, and trending never got a vote."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.8,
+      "words": 106,
+      "sentences": 11,
+      "est_speech_s": 36.6,
+      "vo_band_ok": true
+    },
+    "narration_full": "You've got a twenty-four gigabyte card. Nanbeige four point three is a nineteen-gigabyte file. Step one: load the file onto your card. It downloads as a G G U F, the one file local models ship in. The model also promises half a million tokens of context. Each token rents working memory, a cache that piles beside the weights. Step two: cap the context window before loading. Your leftovers hold roughly eight to sixteen thousand tokens. Bartowski's build loads in LM Studio tonight. A hundred and twenty-eight gigabytes buys the long conversations. Your card still runs it, and trending never got a vote.",
+    "on_screen": "24 GB card vs 19 GB model | 24 GB card vs 19 GB model | Step 1: fit the file | GGUF: one file, whole model | context: 524,288 tokens | cache grows per token | Step 2: cap the context | room left: 8K-16K tokens | 128 GB: long conversations | your card still runs it"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 5.8,
+        "words": 106,
+        "est_speech_s": 36.6,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 5.8 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s4: 'LM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-26-nanbeige-4-3-33b-trending-on-h-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.059,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Nanbeige4.3-33B",
+          "Nanbeige"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 2,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [
+          "Step one: load the file onto your card.",
+          "Step two: cap the context window before loading."
+        ],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
