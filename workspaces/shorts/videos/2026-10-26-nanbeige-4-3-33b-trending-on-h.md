@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-10-26T12:11:45Z 04-script ok: judge 22-22, B won row-6 tiebreak; validator 0/0, eval gate1_ready, variety clean, ledger entry 51, style signal; soft gates entity_spend+top2 fail with reason (exact token Nanbeige4.3-33B vs spoken form; on screen s1); normalizer scenes_changed 1
 - 2026-10-26T12:14:41Z 05-package ok: seo 92, searchable title, manifest schema OK, check_outputs 0 failures, no duplicate title; cp3 unattended: title 1 picked (model-name search traffic)
 - 2026-10-26T12:19:10Z build start on gn100-83c4
+- 2026-10-26T12:20:08Z 06-voice ok 56s
