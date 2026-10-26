@@ -2,22 +2,22 @@
 slug: 2026-10-25-ollama-v0-40-11-is-it-worth-re
 workspace: shorts
 title: "Ollama v0.40.11 update: re-pull models?"
-status: approved
+status: scheduled
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-25
-updated: "2026-10-26T02:09:08Z"
-publish_slot: ""
+updated: "2026-10-26T02:14:16Z"
+publish_slot: "2026-10-26T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: c68d7549-a79c-4bc9-9b12-a14b5b534abb
 ---
 # Ollama v0.40.11: is it worth re-pulling your models?
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-package|2026-10-25-ollama-v0-40-11-is-it-worth-re-package]]
 - Voice: [[stages/06-voice/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-narration.txt|2026-10-25-ollama-v0-40-11-is-it-worth-re-narration]] (normalized narration from stage 04; stage 06 proper runs on the Spark)
 - Render: [[stages/07-render/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-25-ollama-v0-40-11-is-it-worth-re-publish]]
 
 ## Decisions
 - Picked as 1 of 2: opportunity 94.8 (rank 1), deepest keyword in the set (ollama, autocomplete depth 283); how-to lane, classic band (one fact, one consequence).
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-10-25T12:50:53Z 07-render ok 759s
 - 2026-10-25T12:50:55Z build done, status review
 - 2026-10-26T02:09:08Z telegram approve (approved_at 2026-10-26T02:09:08Z)
+- 2026-10-26T02:14:16Z 08-publish ok 1s
