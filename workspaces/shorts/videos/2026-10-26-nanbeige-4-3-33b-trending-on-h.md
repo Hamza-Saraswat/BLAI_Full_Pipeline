@@ -2,14 +2,14 @@
 slug: 2026-10-26-nanbeige-4-3-33b-trending-on-h
 workspace: shorts
 title: "Nanbeige 4.3 33B on a 24 GB Card: The Memory Math"
-status: review
+status: expired
 pillar: news-react
 structure: worked-example
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-26
-updated: "2026-10-26T12:32:54Z"
+updated: "2026-10-27T13:35:28Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-26T12:32:57Z 07-render ok 36.80s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 279
 - 2026-10-26T12:32:57Z 07-render ok 766s
 - 2026-10-26T12:32:59Z build done, status review
+- 2026-10-27T13:35:28Z 2026-10-27T13:35:28Z expired: not from today's picks (2026-10-27); the factory carries no backlog

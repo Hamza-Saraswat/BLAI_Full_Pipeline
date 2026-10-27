@@ -2,14 +2,14 @@
 slug: 2026-10-26-rtx-pro-4000-blackwell-runs-qw
 workspace: shorts
 title: "RTX PRO 4000 Blackwell runs Qwen at 120 W: the SFF local AI build"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-10-26
-updated: "2026-10-26T11:08:57Z"
+updated: "2026-10-27T13:35:28Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-27T13:35:28Z 2026-10-27T13:35:28Z expired: not from today's picks (2026-10-27); the factory carries no backlog
