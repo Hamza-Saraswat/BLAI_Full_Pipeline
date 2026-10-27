@@ -35,6 +35,7 @@ blotato_post_id: ""
 - 03-research checkpoint (step 2): angle confirmed (loose-pin consequence angle, not a changelog recap); slug unchanged; depth standard, 10 sources, sequential fetches (FireCrawl 402), validator exit 0.
 
 - 04-script checkpoints (steps 1-2): structures contrarian-take (A) vs how-to-three-moves (B); value types TEACHES+EQUIPS confirmed; promise "pin transformers on purpose and say why the pin matters"; hooks: 10 written, picks #3 (named-contradiction, A) and #7 (tonight, B), two patterns, neither repeating the last two days.
+- 04-script result: B wins the judge tie 18-18 on the row-6 tiebreak; grafts from A (drift mechanism into s03, trade-off into s05); validator 0 blockers; eval 9/9 gates; entity_spend/top2 soft advisories kept for the named reasons; 43 s kept over the sweet window (judge-ordered grafts); s04 split for the scene-length advisory; ledger entry 52 recorded; style pack blueprint recorded.
 - 05-package checkpoint (step 3): three titles written, searchable pick "Pin transformers v5.21 in 3 moves" (keyword depth 32 makes this search-surface); rubric 100/100 (gate 80); description leads with keyword + promise in 128 chars; original_insight names the patch-bump behavior plus the Unsloth floor-and-ceiling solve; check_outputs 0 failures.
 - 05-package result: contains_synthetic_media false (typographic scenes, creator voice); notify_subscribers false; made_for_kids false; publish_slot_hint empty (default 11:00/18:00 CT rotation); no duplicate title in published/.
 
