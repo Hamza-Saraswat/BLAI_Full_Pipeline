@@ -2,19 +2,19 @@
 slug: 2026-10-27-transformers-v5-21-what-actual
 workspace: shorts
 title: Pin transformers v5.21 in 3 moves
-status: ready-to-build
+status: building
 pillar: explainer
 structure: how-to-three-moves
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-27
-updated: "2026-10-27T12:35:51Z"
+updated: "2026-10-27T12:42:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-10-27T11:56:15Z 03-research ok: 10 sources, 10 claims, 7 key numbers, validator 0
 - 2026-10-27T12:34:11Z 04-script ok: B wins 18-18 tie (row 6); validator 0 blockers; eval 9/9; ledger+style recorded
 - 2026-10-27T12:35:51Z 05-package ok: seo 100/100, check_outputs 0 failures
+- 2026-10-27T12:42:10Z build start on gn100-83c4
