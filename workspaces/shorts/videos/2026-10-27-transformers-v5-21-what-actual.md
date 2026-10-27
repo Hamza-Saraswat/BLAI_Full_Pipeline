@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-27-transformers-v5-21-what-actual-brief]]
 - Script: [[stages/04-script/output/2026-10-27-transformers-v5-21-what-actual-script]]
 - Package: [[stages/05-package/output/2026-10-27-transformers-v5-21-what-actual-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-27-transformers-v5-21-what-actual-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,3 +44,5 @@ blotato_post_id: ""
 - 2026-10-27T12:34:11Z 04-script ok: B wins 18-18 tie (row 6); validator 0 blockers; eval 9/9; ledger+style recorded
 - 2026-10-27T12:35:51Z 05-package ok: seo 100/100, check_outputs 0 failures
 - 2026-10-27T12:42:10Z build start on gn100-83c4
+- 2026-10-27T12:44:45Z 06-voice fail 153s (voice QA failed: WER 0.096, 9 mismatch(es): expected '' heard 'hundred'; expected 'moved' heard 'move'; expected 'pushed' heard 'push')
+- 2026-10-27T12:46:24Z 06-voice ok 98s
