@@ -1,0 +1,43 @@
+{
+  "full": "You didn't upgrade, but transformers upgraded itself. Unpinned, pip always pulls the newest version. Everyone assumes a patch bump is safe, and upgrading fixes whatever breaks. The release notes flag breaking changes inside them. One patch raised the minimum: loading big models now demands torch two point eight. Upgrading hits a ceiling. An un-sloth model demanded transformers five point two or newer; unsloth-zoo capped it at five point five. You already pin llama.cpp build tags. Same idea, except a pip pin must satisfy every other package too. A pin delays fixes, so schedule the upgrade. Pin what works tonight: transformers equals five point twenty-one. Upgrade on purpose, never by accident.",
+  "words": 110,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "You didn't upgrade, but transformers upgraded itself. Unpinned, pip always pulls the newest version.",
+      "words": 14,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Everyone assumes a patch bump is safe, and upgrading fixes whatever breaks. The release notes flag breaking changes inside them.",
+      "words": 20,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "One patch raised the minimum: loading big models now demands torch two point eight.",
+      "words": 14,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Upgrading hits a ceiling. An un-sloth model demanded transformers five point two or newer; unsloth-zoo capped it at five point five.",
+      "words": 21,
+      "changed": true
+    },
+    {
+      "id": "s05",
+      "text": "You already pin llama.cpp build tags. Same idea, except a pip pin must satisfy every other package too.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "A pin delays fixes, so schedule the upgrade. Pin what works tonight: transformers equals five point twenty-one. Upgrade on purpose, never by accident.",
+      "words": 23,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

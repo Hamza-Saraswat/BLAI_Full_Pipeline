@@ -1,0 +1,95 @@
+{
+  "slug": "2026-10-27-transformers-v5-21-what-actual",
+  "topic": "transformers v5.21: what actually changed for local pipelines",
+  "title": "Transformers drift: pin your version",
+  "description": "Working description; the package stage overwrites this.",
+  "hashtags": [
+    "#transformers",
+    "#localAI",
+    "#python"
+  ],
+  "hook_text": "You didn't upgrade. Transformers 5.21 did.",
+  "hook_candidates": [
+    "Transformers v5.21 landed. Your pipeline changed silently.",
+    "Three million installs a day. None of them pinned.",
+    "You didn't upgrade. Transformers upgraded itself.",
+    "Your library updates itself. Your code didn't agree.",
+    "Patch releases are safe. This one moved your floors.",
+    "Pin it like llama.cpp. Floats break pipelines.",
+    "Three moves tonight: pin transformers, sleep well.",
+    "Your model won't load. The version did it.",
+    "Unsloth demanded 5.2.0. The cap was 5.5.0.",
+    "New transformers, same requirements file, different behavior."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "classic",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 38,
+  "narration_full": "You didn't upgrade, but transformers upgraded itself. Unpinned, pip always pulls the newest version. Everyone assumes a patch bump is safe, and upgrading fixes whatever breaks. The release notes flag breaking changes inside them. One patch raised the minimum: loading big models now demands torch two point eight. Upgrading hits a ceiling. An Unsloth model demanded transformers five point two or newer; unsloth-zoo capped it at five point five. You already pin llama.cpp build tags. Same idea, except a pip pin must satisfy every other package too. A pin delays fixes, so schedule the upgrade. Pin what works tonight: transformers equals five point twenty-one. Upgrade on purpose, never by accident.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You didn't upgrade, but transformers upgraded itself. Unpinned, pip always pulls the newest version.",
+      "on_screen_text": "You didn't upgrade. Transformers 5.21 did.",
+      "visual_brief": "Frame 1: centered two-line stack, \"You didn't upgrade.\" over \"Transformers did.\", both fully legible, amber on the second line. Motion onset at t=0.30s: the second line scales 1.0 to 1.06 and settles. On \"Transformers upgraded itself\", an amber underline fades in beneath it. On \"Unpinned, pip always pulls\", staged swap (hard cut) to a mono line \"pip install transformers\" with a steady cursor; on \"newest version\" a small tag reading \"newest\" fades in above the line.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Everyone assumes a patch bump is safe, and upgrading fixes whatever breaks. The release notes flag breaking changes inside them.",
+      "on_screen_text": "Patch bump: safe. Upgrade: fixes it.",
+      "visual_brief": "Split-compare, two halves staging the consensus. On \"Everyone assumes\", the left half fades in: \"Patch bump\" over an amber chip \"safe\". On \"if it breaks, you just upgrade\", the right half rises in place: \"Upgrade\" over a chip \"fixes it\". On the final word \"upgrade\", a thin amber strike draws through both chips after both halves are static. One text block animates at a time; strikes are the only second animation.",
+      "est_duration_s": 5.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "One patch raised the minimum: loading big models now demands torch two point eight.",
+      "on_screen_text": "One patch release. torch >= 2.8",
+      "visual_brief": "Giant-number composition. On \"One patch raised the minimum\", a small top label \"one patch release\" fades in. On \"loading big models\", the label hard-cuts to \"model loading\" (staged swap, no dissolve). On \"torch two point eight\", the giant line \"torch >= 2.8\" scales from 0.9 to 1.0 and holds; nothing else moves for the rest of the scene. The digits match the spoken floor.",
+      "est_duration_s": 4.8
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Upgrading hits a ceiling. An Unsloth model demanded transformers five point two or newer; unsloth-zoo capped it at five point five.",
+      "on_screen_text": "model needs >= 5.2.0|zoo caps <= 5.5.0",
+      "visual_brief": "Split-compare, floor versus ceiling. On \"demanded transformers five point two or newer\", the left block fades in: \"model needs\" over \">= 5.2.0\". On \"unsloth-zoo capped it at five point five\", the right block fades in: \"zoo caps\" over \"<= 5.5.0\". On the held beat after the sentence, two short amber arrows rise in place pointing into the gap between the blocks, marking the narrow window. At most two elements animate at once; arrows wait until both blocks are static.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "You already pin llama.cpp build tags. Same idea, except a pip pin must satisfy every other package too.",
+      "on_screen_text": "llama.cpp tag pip pin others",
+      "visual_brief": "Diagram-flow. On \"You already pin llama.cpp build tags\", a left node labeled \"llama.cpp tag\" fades in with a small pin dot holding it. On \"Same idea\", a center node \"pip pin\" rises in place. On \"must satisfy every other package too\", three dim nodes labeled \"others\" around it brighten as one group while thin connectors draw once, showing the pin living inside a solver. Two animation groups maximum, staggered by phrase; no node travels across the frame.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A pin delays fixes, so schedule the upgrade. Pin what works tonight: transformers equals five point twenty-one. Upgrade on purpose, never by accident.",
+      "on_screen_text": "transformers==5.21.0 Upgrade on purpose.",
+      "visual_brief": "Centered-stack. On \"transformers equals five point twenty-one\", a mono requirements-file window fades in carrying the single amber line \"transformers==5.21.0\". On \"A pin delays fixes, so schedule the upgrade\", a small calendar chip reading \"upgrade: scheduled\" fades in below the line. On \"Upgrade on purpose\", hard cut to the payoff stack \"Upgrade on purpose.\" centered, mirroring the frame-1 composition; the wordmark settles in the final half second with no further narration.",
+      "est_duration_s": 9.0
+    }
+  ],
+  "notes_for_review": "After about thirty-five seconds you can pin transformers to an exact version on purpose and say why that pin matters.",
+  "hook_pattern": "named-contradiction"
+}

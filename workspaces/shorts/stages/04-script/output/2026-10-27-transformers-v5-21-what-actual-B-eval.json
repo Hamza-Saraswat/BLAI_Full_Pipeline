@@ -1,0 +1,466 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-27T12:10:20+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-27-transformers-v5-21-what-actual-B-storyboard.json",
+    "research_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-27-transformers-v5-21-what-actual-brief.json",
+    "project_record": null,
+    "ledger_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 7,
+      "docs": 2,
+      "community": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 7,
+    "entities_total": 12,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "github.com",
+      "pypa.io",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 5,
+      "distinct": 4,
+      "score": 0.714,
+      "detail": [
+        {
+          "label": "transformers floor Unsloth error demanded",
+          "value": ">=5.2.0",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "5",
+          "scene_ids": [
+            "s02",
+            "s03",
+            "s04"
+          ]
+        },
+        {
+          "label": "unsloth-zoo transformers ceiling",
+          "value": "<=5.5.0",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "5.5",
+          "scene_ids": [
+            "s03",
+            "s04"
+          ]
+        },
+        {
+          "label": "transformers version bundled in the fresh Unsloth Studio install",
+          "value": "4.57.6",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "5",
+          "scene_ids": [
+            "s02",
+            "s04"
+          ]
+        },
+        {
+          "label": "kernels minimum after v5.20.0",
+          "value": "0.17.2",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "torch floor for distributed checkpointing in v5.20.1",
+          "value": "torch>=2.8",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "2.8",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "huggingface_hub floor pinned by transformers v5",
+          "value": ">=1.0.0",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "daily pip installs of transformers at v5 launch",
+          "value": "3 million times each day",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 12,
+      "found_count": 1,
+      "score": 0.083,
+      "found": [
+        "Unsloth"
+      ],
+      "missing": [
+        "v5.21",
+        "v5.21.0",
+        "Oct",
+        "v5.20.0",
+        "v5.20.1",
+        "Cyril Vallez",
+        "Gemma4",
+        "QuantizedCache",
+        "MoE",
+        "b11926",
+        "Unsloth Studio"
+      ],
+      "top2": [
+        "v5.21",
+        "v5.21.0"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "v5.21",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v5.21.0",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Oct",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v5.20.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v5.20.1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Cyril Vallez",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Gemma4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "QuantizedCache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MoE",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b11926",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth",
+          "tier": 1,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Unsloth Studio",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "3 moves tonight: pin transformers",
+      "first_sentence": "Three moves tonight keep your transformers pipeline fixed."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "how-to-three-moves",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "glossary:pin"
+          ],
+          "narration": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "num:>=5.2.0",
+            "num:4.57.6"
+          ],
+          "narration": "Move one: check the version you actually run. One command prints it; the newest is five twenty-one."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "num:>=5.2.0",
+            "num:<=5.5.0",
+            "num:torch>=2.8",
+            "entity:Unsloth"
+          ],
+          "narration": "Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "num:>=5.2.0",
+            "num:<=5.5.0",
+            "num:4.57.6",
+            "num:>=1.0.0"
+          ],
+          "narration": "Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 5.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Rebuild, rerun the prompt you know. It answers like before, on a version you chose."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.4,
+      "words": 111,
+      "sentences": 12,
+      "est_speech_s": 38.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you. Move one: check the version you actually run. One command prints it; the newest is five twenty-one. Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five. Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it. Rebuild, rerun the prompt you know. It answers like before, on a version you chose.",
+    "on_screen": "3 moves tonight: pin transformers | 3 moves tonight: pin transformers | python -c \"import transformers;\"|print(transformers.__version__)|-> 5.21.0 | floor torch>=2.8 / ceiling <=5.5.0 | transformers==5.21.0 / llama.cpp build tag | known prompt \u2192 answer; transformers, pinned"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/2026-10-27-transformers-v5-21-what-actual-B-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 4.4,
+        "words": 111,
+        "est_speech_s": 38.3,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually', 'you know']",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-10-27-transformers-v5-21-what-actual-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 5,
+        "heard": 4,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.083,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "v5.21",
+          "v5.21.0"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
