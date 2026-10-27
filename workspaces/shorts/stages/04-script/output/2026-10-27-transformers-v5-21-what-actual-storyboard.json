@@ -1,0 +1,84 @@
+{
+  "slug": "2026-10-27-transformers-v5-21-what-actual",
+  "topic": "transformers v5.21: what actually changed for local pipelines",
+  "title": "Transformers pin: three moves, no drift",
+  "description": "Working description; the package stage overwrites this.",
+  "hashtags": [
+    "#transformers",
+    "#localAI",
+    "#python"
+  ],
+  "hook_text": "3 moves tonight: pin transformers",
+  "hook_candidates": [
+    "Transformers v5.21 landed. Your pipeline changed silently.",
+    "Three million installs a day. None of them pinned.",
+    "You didn't upgrade. Transformers upgraded itself.",
+    "Your library updates itself. Your code didn't agree.",
+    "Patch releases are safe. This one moved your floors.",
+    "Pin it like llama.cpp. Floats break pipelines.",
+    "Three moves tonight: pin transformers, sleep well.",
+    "Your model won't load. The version did it.",
+    "Unsloth demanded 5.2.0. The cap was 5.5.0.",
+    "New transformers, same requirements file, different behavior."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "classic",
+  "structure": "how-to-three-moves",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 43,
+  "narration_full": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you. Move one: check the version you actually run. One command prints it; the newest is five twenty-one. Unpinned, pip always pulls the newest version. Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five. Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade. Rebuild, rerun the prompt you know. It answers like before, on a version you chose.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you.",
+      "on_screen_text": "3 moves tonight: pin transformers",
+      "visual_brief": "Frame 1: the five-word line fills a centered three-row stack inside the safe zone, amber on the word \"pin\", fully legible at 64 px-plus height. At t=0.35s an amber rule scales in beneath \"pin\". On \"lock one exact version\" the word \"pin\" gets an emphasis punch, text pre-sized to SAFE_W/1.12. On \"rebuilds pick for you\" the rest of the stack fades dim while \"pin\" stays bright. Entrances are scale and fade only; five words visible at peak.",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Move one: check the version you actually run. One command prints it; the newest is five twenty-one. Unpinned, pip always pulls the newest version.",
+      "on_screen_text": "python -c \"import transformers;\"|print(transformers.__version__)|-> 5.21.0",
+      "visual_brief": "Hard cut to a terminal window in split-compare: command pane major, output pane minor. On \"check the version you actually run\" the command typewrites in, wrapping to two lines at full text height inside the safe box. On \"the newest is five twenty-one\" the minor pane fades in showing 5.21.0 in amber with a steady block cursor; the minor word is six characters. One text block animates at a time, typewriter and fade only, six words visible at peak.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five.",
+      "on_screen_text": "floor torch>=2.8 / ceiling <=5.5.0",
+      "visual_brief": "Hard cut to a two-cell manim grid. On \"pushed the loader\" the left cell fades in: \"floor\" above \"torch>=2.8\" with a small amber up-tick. On \"caps it at five point five\" the right cell scales in: \"ceiling\" above \"<=5.5.0\" with a flat amber bar. Entrances staggered so only one block moves at a time; each number is spoken exactly as its cell lands; four words visible at peak; cells hold static to the scene end.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade.",
+      "on_screen_text": "transformers==5.21.0 / llama.cpp build tag",
+      "visual_brief": "Hard cut to a requirements.txt editor frame. On \"write the pin\" a blank line rises in place; on \"equals equals five twenty-one\" the text transformers==5.21.0 typewrites in amber. On \"llama dot cpp build tag\" a small sharp-cornered chip fades in reading \"llama.cpp build tag\"; on \"pip solves around it\" the chip dims while the pin line stays bright. Fade and typewriter only, five words visible at peak, the spoken digit string matches the typed one.",
+      "est_duration_s": 13.1
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Rebuild, rerun the prompt you know. It answers like before, on a version you chose.",
+      "on_screen_text": "known prompt → answer; transformers, pinned",
+      "visual_brief": "Hard cut to a two-node diagram-flow. On \"rerun the prompt you know\" the \"known prompt\" node fades in left; on \"answers like before\" an amber arrow scales toward the \"answer\" node, which fades in as the arrow lands. On \"a version you chose\" the two-word caption \"transformers, pinned\" fades in beneath, rhyming with frame one's wording, no digits. Final half second: all motion stops and the wordmark settles centered; five words visible at peak; the video ends within a second of the last spoken word.",
+      "est_duration_s": 5.2
+    }
+  ],
+  "notes_for_review": "After about thirty-five seconds you can pin transformers to an exact version in your requirements file, rebuild, rerun a known prompt, and say why the pin matters."
+}
