@@ -26,7 +26,7 @@
   "structure": "how-to-three-moves",
   "value_types": "TEACHES,EQUIPS",
   "target_duration_s": 43,
-  "narration_full": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you. Move one: check the version you actually run. One command prints it; the newest is five twenty-one. Unpinned, pip always pulls the newest version. Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five. Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade. Rebuild, rerun the prompt you know. It answers like before, on a version you chose.",
+  "narration_full": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you. Move one: check the version you actually run. One command prints it; the newest is five twenty-one. Unpinned, pip always pulls the newest version. Move two: read the release notes for moved floors. One patch pushed the loader to torch two point eight. Unsloth's helper package caps it at five point five. Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one in requirements. Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade. Rebuild, rerun the prompt you know. It answers like before, on a version you chose.",
   "music_mood": "steady-build",
   "scenes": [
     {
@@ -36,7 +36,7 @@
       "layout_archetype": "centered-stack",
       "narration": "Three moves tonight keep your transformers pipeline fixed. Pin it, lock one exact version, or rebuilds pick for you.",
       "on_screen_text": "3 moves tonight: pin transformers",
-      "visual_brief": "Frame 1: the five-word line fills a centered three-row stack inside the safe zone, amber on the word \"pin\", fully legible at 64 px-plus height. At t=0.35s an amber rule scales in beneath \"pin\". On \"lock one exact version\" the word \"pin\" gets an emphasis punch, text pre-sized to SAFE_W/1.12. On \"rebuilds pick for you\" the rest of the stack fades dim while \"pin\" stays bright. Entrances are scale and fade only; five words visible at peak.",
+      "visual_brief": "Frame 1: the five-word line fills a centered three-row stack inside the safe zone, amber on the word \"pin\", fully legible at 64 px-plus height. Motion onset at t=0.35s: an amber rule scales in beneath \"pin\". On \"lock one exact version\" the word \"pin\" gets an emphasis punch, text pre-sized to SAFE_W/1.12. On \"rebuilds pick for you\" the rest of the stack fades dim while \"pin\" stays bright. Entrances are scale and fade only; five words visible at peak.",
       "est_duration_s": 6.6
     },
     {
@@ -64,13 +64,23 @@
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one, written in requirements. Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade.",
-      "on_screen_text": "transformers==5.21.0 / llama.cpp build tag",
-      "visual_brief": "Hard cut to a requirements.txt editor frame. On \"write the pin\" a blank line rises in place; on \"equals equals five twenty-one\" the text transformers==5.21.0 typewrites in amber. On \"llama dot cpp build tag\" a small sharp-cornered chip fades in reading \"llama.cpp build tag\"; on \"pip solves around it\" the chip dims while the pin line stays bright. Fade and typewriter only, five words visible at peak, the spoken digit string matches the typed one.",
-      "est_duration_s": 13.1
+      "narration": "Move three: write the pin, rebuild, rerun one prompt. transformers equals equals five twenty-one in requirements.",
+      "on_screen_text": "transformers==5.21.0",
+      "visual_brief": "Hard cut to a requirements.txt editor frame, one line wide. On 'write the pin' a blank amber line rises in place inside the editor. On 'equals equals five twenty-one' the text transformers==5.21.0 typewrites into that line, cursor steady, digits matching the spoken words exactly. On 'rerun one prompt' the editor dims and a small prompt chip fades in beside it; one text block animates at a time, entrances are typewriter and rise only, four words visible at peak.",
+      "est_duration_s": 6.6
     },
     {
       "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Pin it like your llama dot cpp build tag; pip solves around it. A pin delays fixes, so schedule the upgrade.",
+      "on_screen_text": "llama.cpp tag | pip pin",
+      "visual_brief": "Split-compare, two halves. On 'Pin it like your llama dot cpp build tag' the left half fades in: 'llama.cpp tag' over a small numbered tag chip with a pin dot. On 'pip solves around it' the right half rises in place: 'pip pin' over three dim package chips that brighten as one group, connectors drawing once to show the solver working around the locked line. On 'schedule the upgrade' a thin amber calendar tick marks the right chip. Two animation groups maximum, staggered by phrase; no element travels across the frame.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s06",
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "diagram-flow",
