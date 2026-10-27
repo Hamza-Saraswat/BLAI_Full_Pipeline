@@ -2,14 +2,14 @@
 slug: 2026-10-27-transformers-v5-21-what-actual
 workspace: shorts
 title: "transformers v5.21: what actually changed for local pipelines"
-status: idea
+status: researched
 pillar: explainer
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-27
-updated: "2026-10-27T11:09:48Z"
+updated: "2026-10-27T11:56:15Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-27-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-27-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-27-transformers-v5-21-what-actual-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03-research checkpoint (step 2): angle confirmed (loose-pin consequence angle, not a changelog recap); slug unchanged; depth standard, 10 sources, sequential fetches (FireCrawl 402), validator exit 0.
 
 ## Build journal
-
+- 2026-10-27T11:56:15Z 03-research ok: 10 sources, 10 claims, 7 key numbers, validator 0

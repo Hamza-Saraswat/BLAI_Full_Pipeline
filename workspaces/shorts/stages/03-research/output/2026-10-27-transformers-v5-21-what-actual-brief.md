@@ -126,4 +126,11 @@ Locking versions just delays the breakage and hides known security or bug fixes;
 | 10 | https://github.com/ggml-org/llama.cpp/releases | Releases - ggml-org/llama.cpp | primary | web_extract | 2026-10-27 |
 
 ## Notes
+
 Depth ran with web_search + web_extract only (FireCrawl returned HTTP 402; no delegate_task tool exists in this environment, so the three planned subagent briefs were executed sequentially by the lead agent against the same 8-12 source budget, 10 sources fetched). The Unsloth issue is tier 4 (community) but is the strongest concrete case and its verbatim constraint strings are machine-readable facts echoed by pip itself; it never stands alone as a number source without the verbatim quote. Trust call: GitHub release notes outrank the releasebot.io summary that appeared in search; the releasebot page was not fetched and is not cited. Thin spot: no primary HF page plainly instructs users to pin transformers; the pinning norm is demonstrated (Unsloth caps, HF pins hub, llama.cpp tags) rather than preached, so the script should show the discipline, not attribute it to a quoted authority. The vLLM integration page is in Sources for the claim that engines consume the transformers model definition, but it carries no claim because the video does not need it; drop it if the writer wants a tighter brief. Strongest concrete fact early: the release timestamp and the pip default behavior, in that order.
+
+
+## Decisions
+
+- Checkpoint (step 2): angle confirmed as "transformers v5.21 changed how models load in local pipelines; a loose pin lets it silently shift under you, so pin it like you pin llama.cpp" -- the local-pipeline consequence angle, not a changelog recap; slug unchanged. Chosen because the keyword fan-out showed demand around the version bump and every competing title is a release-notes read-through.
+- Depth standard, 10 sources, sequential fetches (FireCrawl 402, no subagent tool in the delegate environment; lead agent ran the three question briefs against the same budget). Two-line note per the unattended rule; validator exit 0 on first pass; audit rows all pass (10 claims, 7 key numbers, 4 process steps, summary distinct from thesis).
