@@ -2,14 +2,14 @@
 slug: 2026-10-27-transformers-v5-21-what-actual
 workspace: shorts
 title: Pin transformers v5.21 in 3 moves
-status: building
+status: review
 pillar: explainer
 structure: how-to-three-moves
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-27
-updated: "2026-10-27T12:42:10Z"
+updated: "2026-10-27T13:00:41Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-27-transformers-v5-21-what-actual-script]]
 - Package: [[stages/05-package/output/2026-10-27-transformers-v5-21-what-actual-package]]
 - Voice: [[stages/06-voice/output/2026-10-27-transformers-v5-21-what-actual-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-27-transformers-v5-21-what-actual-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -46,3 +46,5 @@ blotato_post_id: ""
 - 2026-10-27T12:42:10Z build start on gn100-83c4
 - 2026-10-27T12:44:45Z 06-voice fail 153s (voice QA failed: WER 0.096, 9 mismatch(es): expected '' heard 'hundred'; expected 'moved' heard 'move'; expected 'pushed' heard 'push')
 - 2026-10-27T12:46:24Z 06-voice ok 98s
+- 2026-10-27T13:00:47Z 07-render ok 42.13s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 282
+- 2026-10-27T13:00:47Z 07-render ok 861s
