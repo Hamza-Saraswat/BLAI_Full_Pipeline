@@ -2,14 +2,14 @@
 slug: 2026-10-27-transformers-v5-21-what-actual
 workspace: shorts
 title: Pin transformers v5.21 in 3 moves
-status: review
+status: expired
 pillar: explainer
 structure: how-to-three-moves
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-27
-updated: "2026-10-27T13:00:41Z"
+updated: "2026-10-28T13:35:55Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-27T13:00:47Z 07-render ok 42.13s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 282
 - 2026-10-27T13:00:47Z 07-render ok 861s
 - 2026-10-27T13:00:50Z build done, status review
+- 2026-10-28T13:35:55Z 2026-10-28T13:35:55Z expired: not from today's picks (2026-10-28); the factory carries no backlog

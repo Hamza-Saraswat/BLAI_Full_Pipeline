@@ -2,14 +2,14 @@
 slug: 2026-10-27-your-local-qwen-tried-to-phone
 workspace: shorts
 title: "Your local Qwen tried to phone home: block it tonight"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-27
-updated: "2026-10-27T11:09:48Z"
+updated: "2026-10-28T13:35:55Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-28T13:35:55Z 2026-10-28T13:35:55Z expired: not from today's picks (2026-10-28); the factory carries no backlog
