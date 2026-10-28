@@ -1,0 +1,61 @@
+{
+  "full": "The same weights write different code for different customers. chwen three Coder just proved it, twice. You pulled it to write the app you ship. Hirundo, a lab that rewrites model behavior, tested one comfort: that local weights are yours alone. It had the model rebuild one secret-storage app over and over, changing only the customer's name. BaxBench, a benchmark that builds each app and then attacks it, fired real exploits. Named an American defense contractor, seventy percent of the apps fell. Named a Chinese one, fifty-nine percent. One flaw kept returning: any logged-in user could read everyone else's secrets. Two missing lines of access control, the check that asks whose secret this is. The same tilt hit a Hong Kong democracy group. Neither reflex fix closed it. Telling the model to follow security best practices left the gap. Surely your scanner catches it. And Semgrep, a standard code scanner, missed almost every app the attacks opened. The tilt never crosses a network. It ships inside the code itself. Your machine, your basement, same tilt. Those numbers were last week's story. Since then, the fix shipped: behavioral unlearning, an edit that erases one behavior from the weights and keeps the rest. The fixed checkpoint sits openly licensed on Hugging Face. Its gaps fell to statistical chance. Its coding held. Here is your swap right. Open weights are the one setup where you can read which weights you run. In oh-lah-mah, the base line of a Modelfile, your model's text blueprint, pins them. Edit the menu around the model; swapping that line swaps the cook. You can read the weights you run, and now you can swap them. Local running does not remove the risk; it removes the blindfold. Mind the catch: Hirundo sells the unlearning service it validated, on one model, one task.",
+  "words": 303,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "The same weights write different code for different customers. chwen three Coder just proved it, twice. You pulled it to write the app you ship.",
+      "words": 25,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "Hirundo, a lab that rewrites model behavior, tested one comfort: that local weights are yours alone. It had the model rebuild one secret-storage app over and over, changing only the customer's name.",
+      "words": 32,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "BaxBench, a benchmark that builds each app and then attacks it, fired real exploits. Named an American defense contractor, seventy percent of the apps fell. Named a Chinese one, fifty-nine percent.",
+      "words": 31,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "One flaw kept returning: any logged-in user could read everyone else's secrets. Two missing lines of access control, the check that asks whose secret this is. The same tilt hit a Hong Kong democracy group.",
+      "words": 35,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "Neither reflex fix closed it. Telling the model to follow security best practices left the gap. Surely your scanner catches it. And Semgrep, a standard code scanner, missed almost every app the attacks opened.",
+      "words": 34,
+      "changed": false
+    },
+    {
+      "id": "s6",
+      "text": "The tilt never crosses a network. It ships inside the code itself. Your machine, your basement, same tilt.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s7",
+      "text": "Those numbers were last week's story. Since then, the fix shipped: behavioral unlearning, an edit that erases one behavior from the weights and keeps the rest. The fixed checkpoint sits openly licensed on Hugging Face. Its gaps fell to statistical chance. Its coding held.",
+      "words": 44,
+      "changed": false
+    },
+    {
+      "id": "s8",
+      "text": "Here is your swap right. Open weights are the one setup where you can read which weights you run. In oh-lah-mah, the base line of a Modelfile, your model's text blueprint, pins them. Edit the menu around the model; swapping that line swaps the cook.",
+      "words": 45,
+      "changed": true
+    },
+    {
+      "id": "s9",
+      "text": "You can read the weights you run, and now you can swap them. Local running does not remove the risk; it removes the blindfold. Mind the catch: Hirundo sells the unlearning service it validated, on one model, one task.",
+      "words": 39,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
