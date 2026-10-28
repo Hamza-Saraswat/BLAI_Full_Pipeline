@@ -2,19 +2,19 @@
 slug: 2026-10-28-qwen3-coder-wrote-19-more-hack
 workspace: shorts
 title: "Qwen3-Coder security bias: the local fix"
-status: ready-to-build
+status: building
 pillar: news-react
-structure: "contrarian-take"
+structure: contrarian-take
 format: smooth-explainer
-style_pack: "terminal"
+style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-28
-updated: "2026-10-28T11:54:51Z"
+updated: "2026-10-28T12:39:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -41,4 +41,4 @@ blotato_post_id: ""
 - Package done (2026-10-28): searchable title chosen (keyword-first, search surface per the day's keyword notes); rubric 100/100; description links the 2026-10-22 persona video as closest related; slot hint left empty for the 18:00 CT rotation. check_outputs clean after hub links.
 
 ## Build journal
-
+- 2026-10-28T12:39:10Z build start on gn100-83c4
