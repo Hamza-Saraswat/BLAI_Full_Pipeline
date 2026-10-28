@@ -2,14 +2,14 @@
 slug: 2026-10-28-qwen3-coder-wrote-19-more-hack
 workspace: shorts
 title: "Qwen3-Coder security bias: the local fix"
-status: building
+status: review
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-28
-updated: "2026-10-28T12:39:10Z"
+updated: "2026-10-28T13:20:20Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-28-qwen3-coder-wrote-19-more-hack-script]]
 - Package: [[stages/05-package/output/2026-10-28-qwen3-coder-wrote-19-more-hack-package]]
 - Voice: [[stages/06-voice/output/2026-10-28-qwen3-coder-wrote-19-more-hack-narration|narration sidecars]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-28-qwen3-coder-wrote-19-more-hack-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -43,3 +43,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-28T12:39:10Z build start on gn100-83c4
 - 2026-10-28T12:41:22Z 06-voice ok 130s
+- 2026-10-28T12:53:42Z 07-render fail 737s (07-render: scene s4 did not pass HyperFrames inspect after 5 rounds: t=11.58-12.03s (4 samples) text_box_overflow #hk-tag inside #u1 overflowed right 27.32px "H)
+- 2026-10-28T13:20:24Z 07-render ok 97.83s: 9 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 286
+- 2026-10-28T13:20:24Z 07-render ok 1602s
