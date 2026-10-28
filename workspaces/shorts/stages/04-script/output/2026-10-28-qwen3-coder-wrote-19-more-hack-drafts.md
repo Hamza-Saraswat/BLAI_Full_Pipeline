@@ -56,7 +56,7 @@ Row notes:
 - Row 4: Both clean second person with one dry beat that lands unexplained: A's 'Asking nicely failed too', B's 'Your machine, your basement, same tilt.'
 - Row 5: B's every pivot names what changed and the causal order is locked; A's s2 transition promises 'the fix' then withholds it for three scenes.
 - Row 6: A reruns script 2's myth-bust shape with another aphorism closer; B's contrarian-take is new to the run, though its paradox hook echoes the named-contradiction family.
-- Row 7: Both mint a quotable payoff (A's 'The risk isn't local. The fix is.' — screen-only; B's 'removes the blindfold' — spoken) but neither speaks it last.
+- Row 7: Both mint a quotable payoff (A's 'The risk isn't local. The fix is.' -- screen-only; B's 'removes the blindfold' -- spoken) but neither speaks it last.
 - Row 8: B shows the whose-secret access check concretely enough that a viewer could spot it in any shared app; A shows why scanners fail but leaves the flaw named-not-shown.
 
 ## Winner: draft B (20 to 17)
@@ -64,6 +64,6 @@ Row notes:
 Grafts applied:
 - From A s4 to B s5: Insert the sentence 'Surely your scanner catches it.' directly before B's Semgrep sentence, keeping the existing 'And Semgrep...' intact. Why: A voices the viewer's reflex objection as a dry beat, which B's scanner scene only labels as 'reflex fix'; the insertion adds no spoken numbers, keeps second person, and needs no surrounding rewrite since 'And' reads naturally after a rhetorical aside.
 
-Loser postmortem: A needed its one repeatable line spoken and heard last — 'The risk isn't local. The fix is.' died as on-screen text while the narration ended on a Modelfile instruction. And with myth-bust already shipped three scripts ago, the shape read as a rerun; it needed either a fresh structure or a payoff rhythm that didn't echo the earlier aphorism close.
+Loser postmortem: A needed its one repeatable line spoken and heard last -- 'The risk isn't local. The fix is.' died as on-screen text while the narration ended on a Modelfile instruction. And with myth-bust already shipped three scripts ago, the shape read as a rerun; it needed either a fresh structure or a payoff rhythm that didn't echo the earlier aphorism close.
 
 Full boards and writer packets live under workspaces/shorts/.local-builds/2026-10-28-qwen3-coder-wrote-19-more-hack/ (uncommitted scratch, per stage contract).
