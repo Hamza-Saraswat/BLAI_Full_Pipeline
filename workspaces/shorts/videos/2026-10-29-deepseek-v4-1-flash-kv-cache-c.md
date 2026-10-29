@@ -2,19 +2,19 @@
 slug: 2026-10-29-deepseek-v4-1-flash-kv-cache-c
 workspace: shorts
 title: "DeepSeek V4.1 Flash KV cache, explained"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-29T12:16:45Z"
+updated: "2026-10-29T12:22:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,3 +42,4 @@ blotato_post_id: ""
 - 2026-10-29T11:47:18Z 03-research ok: 9 sources, validator 0
 - 2026-10-29T12:14:04Z 04-script ok: B wins 22-20, gates pass
 - 2026-10-29T12:16:45Z 05-package ok: seo 100, ready-to-build
+- 2026-10-29T12:22:10Z build start on gn100-83c4
