@@ -2,14 +2,14 @@
 slug: 2026-10-28-qwen3-coder-wrote-19-more-hack
 workspace: shorts
 title: "Qwen3-Coder security bias: the local fix"
-status: review
+status: expired
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-28
-updated: "2026-10-28T13:20:20Z"
+updated: "2026-10-29T13:35:28Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-10-28T13:20:24Z 07-render ok 97.83s: 9 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 286
 - 2026-10-28T13:20:24Z 07-render ok 1602s
 - 2026-10-28T13:20:26Z build done, status review
+- 2026-10-29T13:35:28Z 2026-10-29T13:35:28Z expired: not from today's picks (2026-10-29); the factory carries no backlog

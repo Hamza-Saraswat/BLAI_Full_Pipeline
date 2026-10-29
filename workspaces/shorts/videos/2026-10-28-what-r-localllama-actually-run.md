@@ -2,14 +2,14 @@
 slug: 2026-10-28-what-r-localllama-actually-run
 workspace: shorts
 title: "What r/LocalLLaMA actually runs: GLM 5.3 Flash leads the month"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-28
-updated: "2026-10-28T11:09:46Z"
+updated: "2026-10-29T13:35:28Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Picked as #1 (opportunity 90.3, lane comparison, classic): "best local llm" is the deepest search tree of the day (97) and the Aexol r/LocalLLaMA leaderboard is 24 h old. Classic band by fit (one leaderboard, one consequence); beats the three-day soft rule, deviation noted in the ideas note.
 
 ## Build journal
-
+- 2026-10-29T13:35:28Z 2026-10-29T13:35:28Z expired: not from today's picks (2026-10-29); the factory carries no backlog
