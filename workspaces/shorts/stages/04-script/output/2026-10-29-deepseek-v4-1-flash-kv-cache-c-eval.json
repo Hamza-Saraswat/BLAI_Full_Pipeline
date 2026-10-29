@@ -1,0 +1,521 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-10-29T12:08:25+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/.local-builds/2026-10-29-deepseek-v4-1-flash-kv-cache-c/draft-B/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 7,
+      "docs": 3
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 9,
+    "entities_total": 18,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "arxiv.org",
+      "github.com",
+      "githubusercontent.com",
+      "huggingface.co"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 9,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.333,
+      "detail": [
+        {
+          "label": "global KV cache per token (HBM)",
+          "value": "890 bytes per token",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "890",
+          "scene_ids": [
+            "s1"
+          ]
+        },
+        {
+          "label": "global KV reduction vs DeepSeek-V4-Flash",
+          "value": "roughly 1/4",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "one",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "global KV reduction vs DeepSeek-V4-Flash and V1",
+          "value": "approximately 4-fold and 437-fold",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "four hundred thirty-seven",
+          "scene_ids": [
+            "s3"
+          ]
+        },
+        {
+          "label": "persistent (SSD/host RAM) KV reduction vs V4-Flash",
+          "value": "roughly 1/8",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "max context length",
+          "value": "contexts of up to one million tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "active parameters per token",
+          "value": "8B parameters per token during prefill and 16B during decode",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "smallest local quant",
+          "value": "IQ1_M (1.75 bits per weight)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "total download size, IQ1_M build",
+          "value": "231.32 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "rotation fix decode cost",
+          "value": "~6.8% decode throughput (q8/q8, single card)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 18,
+      "found_count": 2,
+      "score": 0.111,
+      "found": [
+        "DeepSeek",
+        "Quantizing the KV"
+      ],
+      "missing": [
+        "DeepSeek-V4",
+        "V4.1",
+        "DeepSeek-V4.1",
+        "IQ1_M",
+        "Strata",
+        "Versus the V1",
+        "HBM",
+        "DeepSeek-V4.1-Flash-1017",
+        "IQ2_XXS",
+        "IQ2_XS",
+        "b11870",
+        "f16",
+        "K and V",
+        "DeepSeek V4.1 Flash",
+        "GB Engram",
+        "V4 FP8"
+      ],
+      "top2": [
+        "DeepSeek",
+        "DeepSeek-V4"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-V4",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4.1",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IQ1_M",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Strata",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Versus the V1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HBM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash-1017",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IQ2_XXS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IQ2_XS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b11870",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "f16",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "K and V",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1 Flash",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Quantizing the KV",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GB Engram",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "V4 FP8",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 14,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:890 bytes per token"
+      ],
+      "hook_text": "890 BYTES PER TOKEN",
+      "first_sentence": "Your flag isn't the trick."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 6.6,
+          "specific": true,
+          "hits": [
+            "num:890 bytes per token",
+            "entity:DeepSeek"
+          ],
+          "narration": "Your flag isn't the trick. The training is. DeepSeek's new cache bill: eight hundred ninety bytes per token."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "glossary:KV cache"
+          ],
+          "narration": "The belief: compression is a switch. Set a flag, shrink the KV cache, the running notes kept per token, to four-bit."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:roughly 1/4",
+            "num:approximately 4-fold and 437-fold",
+            "entity:DeepSeek"
+          ],
+          "narration": "The truth: DeepSeek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus DeepSeek V one."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 10.7,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On DeepSeek, quantizing the key half of that cache once gave confident gibberish on every backend."
+        },
+        {
+          "id": "s5",
+          "role": "payoff_close",
+          "est_duration_s": 3.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Your flag nudges the cache. The training rebuilt it."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 3.9,
+      "words": 118,
+      "sentences": 14,
+      "est_speech_s": 40.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your flag isn't the trick. The training is. DeepSeek's new cache bill: eight hundred ninety bytes per token. The belief: compression is a switch. Set a flag, shrink the KV cache, the running notes kept per token, to four-bit. The truth: DeepSeek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus DeepSeek V one. The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On DeepSeek, quantizing the key half of that cache once gave confident gibberish on every backend. Your flag nudges the cache. The training rebuilt it.",
+    "on_screen": "890 BYTES PER TOKEN | 890 BYTES PER TOKEN | YOUR FLAG ISN'T THE TRICK | THE MYTH | SET A FLAG, GET 4-BIT | NOTES PER TOKEN | TRAINED IN, NOT TOGGLED | LAYERS SHARE ONE PAD | 437x vs V1 | Q8_0 still shrinks notes | DEEPSEEK K: GIBBERISH | FLAG NUDGES | TRAINING REBUILDS"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/.local-builds/2026-10-29-deepseek-v4-1-flash-kv-cache-c/draft-B/storyboard.json",
+        "scenes": 5,
+        "fk_grade": 3.9,
+        "words": 118,
+        "est_speech_s": 40.7,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "s2: 'KV' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 9,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.111,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "DeepSeek-V4"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:890 bytes per token"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

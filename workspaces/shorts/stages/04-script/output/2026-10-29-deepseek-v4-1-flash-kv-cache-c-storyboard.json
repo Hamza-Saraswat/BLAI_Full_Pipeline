@@ -1,0 +1,91 @@
+{
+  "slug": "2026-10-29-deepseek-v4-1-flash-kv-cache-c",
+  "topic": "DeepSeek V4.1 Flash KV cache compression explained for local runners",
+  "title": "KV cache compression isn't a flag",
+  "description": "Working title; the package stage overwrites. DeepSeek V4.1 Flash cuts its KV cache to 890 bytes per token. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#KVCache",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "890 BYTES PER TOKEN",
+  "hook_candidates": [
+    "Eight hundred ninety bytes per token.",
+    "DeepSeek just made context nearly free.",
+    "Your chat memory isn't the model. It's the notes.",
+    "One million tokens. One tiny note each.",
+    "Four hundred thirty-seven times smaller notes.",
+    "Your memory fills. The notes did it.",
+    "DeepSeek's cache shrank four hundred thirty-seven times.",
+    "Stop blaming the model. Blame its notes.",
+    "Eight hundred ninety bytes. A whole context.",
+    "The flag isn't the compression. The model is.",
+    "Your flag isn't the trick. The training is."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 38,
+  "narration_full": "Your flag isn't the trick. The training is. DeepSeek's new cache bill: eight hundred ninety bytes per token. The belief: compression is a switch. Set a flag, shrink the KV cache, the running notes kept per token, to four-bit. The truth: DeepSeek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus DeepSeek V one. The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On DeepSeek, quantizing the key half of that cache once gave confident gibberish on every backend. Your flag nudges the cache. The training rebuilt it.",
+  "analogy": {
+    "vehicle": "The switch vs the blueprint",
+    "mapping": "a runtime cache flag is a switch on the wall; trained-in compression is the building rewired",
+    "limit": "the switch still works a little, so the picture must not imply flags do nothing"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "narration": "Your flag isn't the trick. The training is. DeepSeek's new cache bill: eight hundred ninety bytes per token.",
+      "on_screen_text": "890 BYTES PER TOKEN | YOUR FLAG ISN'T THE TRICK",
+      "visual_brief": "Frame 1: dark signal grid, amber flag outline upper center, text 'YOUR FLAG ISN'T THE TRICK' fully legible at frame 1. Motion onset 0.35s: the flag outline fades out. On 'The training is' a second line rises in place beneath. On 'eight hundred ninety bytes' a giant amber 890 scales up with 'BYTES PER TOKEN' under it. On 'new cache bill' a small tag 'DEEPSEEK V4.1 FLASH' fades in under the number.",
+      "layout_archetype": "giant-number",
+      "est_duration_s": 6.6,
+      "tool": "hyperframes"
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "narration": "The belief: compression is a switch. Set a flag, shrink the KV cache, the running notes kept per token, to four-bit.",
+      "on_screen_text": "THE MYTH | SET A FLAG, GET 4-BIT | NOTES PER TOKEN",
+      "visual_brief": "Frame 1: centered card labeled 'THE MYTH'. Motion onset 0.3s on 'The belief': the card brightens. On 'Set a flag' an amber toggle flips on below the card and 'SET A FLAG, GET 4-BIT' replaces the card. On 'the KV cache' a pad of sticky notes rises in center labeled 'NOTES PER TOKEN'. On 'to four-bit' the pad scales down to quarter size.",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 7.2,
+      "tool": "hyperframes"
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "narration": "The truth: DeepSeek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus DeepSeek V one.",
+      "on_screen_text": "TRAINED IN, NOT TOGGLED | LAYERS SHARE ONE PAD | 437x vs V1",
+      "visual_brief": "Frame 1: three horizontal layer bars stacked. Motion onset 0.35s on 'The truth': header 'TRAINED IN, NOT TOGGLED' fades in. On 'Layers share one set of notes' the three bars converge in place into one shared note pad. On 'four-bit from training' the pad is stamped 'STORED 4-BIT'. On 'four hundred thirty-seven-fold' the stamp and header fade as '437-FOLD VS V1' scales up.",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 11.0,
+      "tool": "hyperframes"
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "narration": "The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On DeepSeek, quantizing the key half of that cache once gave confident gibberish on every backend.",
+      "on_screen_text": "Q8_0 still shrinks notes | DEEPSEEK K: GIBBERISH",
+      "visual_brief": "Frame 1: empty split panels. Motion onset 0.35s on 'The myth still half works': left panel fills with flags '-CTK -CTV Q8_0' fading in over a shrinking note pad, captioned 'Q8_0 still shrinks notes'. On 'On DeepSeek' the right panel rises: a note pad whose glyphs scramble, captioned 'DEEPSEEK K: GIBBERISH'. The left caption fades as the right caption lands.",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 10.7,
+      "tool": "hyperframes"
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "narration": "Your flag nudges the cache. The training rebuilt it.",
+      "on_screen_text": "FLAG NUDGES | TRAINING REBUILDS",
+      "visual_brief": "Frame 1: two short amber rules centered. Motion onset 0.3s on 'Your flag nudges': 'FLAG NUDGES' rises in place by the first rule. On 'The training rebuilt it' 'TRAINING REBUILDS' scales in by the second rule. Both hold as the BUILD LOCAL AI wordmark fades in below and settles; final frame rhymes with frame 1's amber-on-black.",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 3.1,
+      "tool": "hyperframes"
+    }
+  ],
+  "notes_for_review": "Numbers verbatim from the brief: 890 bytes per token, 437-fold vs V1. The gibberish beat states the bug historically: it once gave gibberish, fixed July 2026."
+}

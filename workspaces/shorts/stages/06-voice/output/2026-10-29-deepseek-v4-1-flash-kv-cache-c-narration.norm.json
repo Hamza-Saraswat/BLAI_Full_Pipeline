@@ -1,0 +1,37 @@
+{
+  "full": "Your flag isn't the trick. The training is. deep seek's new cache bill: eight hundred ninety bytes per token. The belief: compression is a switch. Set a flag, shrink the K V cache, the running notes kept per token, to four-bit. The truth: deep seek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus deep seek V one. The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On deep seek, quantizing the key half of that cache once gave confident gibberish on every backend. Your flag nudges the cache. The training rebuilt it.",
+  "words": 117,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "Your flag isn't the trick. The training is. deep seek's new cache bill: eight hundred ninety bytes per token.",
+      "words": 19,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "The belief: compression is a switch. Set a flag, shrink the K V cache, the running notes kept per token, to four-bit.",
+      "words": 22,
+      "changed": true
+    },
+    {
+      "id": "s3",
+      "text": "The truth: deep seek trained it into the weights. No switch involved. Layers share one set of notes, each stored four-bit from training. Per-token cache drops about four hundred thirty-seven-fold versus deep seek V one.",
+      "words": 35,
+      "changed": true
+    },
+    {
+      "id": "s4",
+      "text": "The myth still half works. llama.cpp's cache flags still shrink notes on models you run. On deep seek, quantizing the key half of that cache once gave confident gibberish on every backend.",
+      "words": 32,
+      "changed": true
+    },
+    {
+      "id": "s5",
+      "text": "Your flag nudges the cache. The training rebuilt it.",
+      "words": 9,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
