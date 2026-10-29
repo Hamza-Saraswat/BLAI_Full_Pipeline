@@ -165,3 +165,6 @@ fetched to confirm KV cache is the resource that runs out first (preemption beha
 claim here; they are spillover for the writer, not a load-bearing source. No source fetched this
 run quantifies consumer-GPU or Mac memory limits, so the script must not name a specific card's
 VRAM as a sourced number.
+
+## Decisions
+- 2026-10-29T11:47:00Z - 2026-10-29 research checkpoint (unattended): angle and slug confirmed as picked (KV-cache mechanism angle, not GPU-fit angle; the published 2026-10-19 Short covered fit). 9 sources fetched (4 primary, 5 docs); validator exit 0; 10 claims, 9 key numbers. FireCrawl 402 (no credits) so all fetches ran via web search/extract fallback. No source conflicts; LM Studio KV flags do not exist (kept under unverified) and Ollama library availability unconfirmed, so the script stays on llama.cpp -ctk/-ctv as the only grounded runtime lever.
