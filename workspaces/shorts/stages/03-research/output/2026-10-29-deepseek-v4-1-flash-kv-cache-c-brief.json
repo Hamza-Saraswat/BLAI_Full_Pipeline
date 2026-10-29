@@ -1,0 +1,219 @@
+{
+  "slug": "2026-10-29-deepseek-v4-1-flash-kv-cache-c",
+  "topic": "DeepSeek V4.1 Flash KV cache compression explained for local runners",
+  "generated_at": "2026-10-29T11:42:50Z",
+  "depth": "standard",
+  "thesis": "DeepSeek V4.1 Flash shrinks the KV cache, the memory bill that grows with every token of context, to 890 bytes per token by building the compression into the trained model itself, not into a runtime flag.",
+  "explanation_path": "Start from what the viewer feels: a chat gets long and memory fills, and the culprit is not the model's weights but the running notes attention keeps on every token already read -- that is the KV cache, and by default those notes are stored in f16 precision because the llama.cpp flags that control it (-ctk, -ctv) default to f16. Establish the two levers before naming the model: the runtime lever everyone already has (quantize K and V to q8_0 or q4_0 in llama.cpp or Ollama) and the risk on DeepSeek-style sparse attention, where quantized K produced confident gibberish on every backend until the rotation fix landed (issue 25382). Then bring in the trained-in lever: the model itself was built to share notes across layers (CSA2), store them as 4-bit FP4, and re-derive recent ones instead of persisting them (SWA Bounded Replay), which is why 552B backbone parameters with 8B active per token during prefill can still claim a 1M-token context. Land the payoff in units the viewer owns: 890 bytes per token means 0.89 MB per thousand tokens, 89 MB per hundred thousand, roughly 890 MB at the full million (our arithmetic on the paper's per-token figure). Close on tonight's action: which GGUF quants exist today, the exact flag names, and why the 12 GB claim carries an asterisk. The mechanism is the spine; the flags are the send-off, not a step-by-step.",
+  "claims": [
+    {
+      "claim": "The global KV cache footprint lands at 890 bytes per token in HBM, roughly one quarter of DeepSeek-V4-Flash's.",
+      "source_url": "https://arxiv.org/abs/2609.19969",
+      "source_title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "The compression is a stack of trained-in mechanisms, not one trick: cross-layer KV reuse in CSA2 plus FP4 KV caching.",
+      "source_url": "https://arxiv.org/html/2609.19969v1",
+      "source_title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression (full text)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "Versus the V1 generation the per-token global KV cache shrank approximately 437-fold.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "The model supports contexts of up to one million tokens while activating 8B parameters per token during prefill and 16B during decode, out of a 552B backbone.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "KV cache memory and the bandwidth of moving it, not raw compute alone, are named the primary deployment bottleneck for long-context serving.",
+      "source_url": "https://arxiv.org/abs/2609.19969",
+      "source_title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "llama.cpp exposes two flags, -ctk/--cache-type-k and -ctv/--cache-type-v, that set K and V cache precision independently, both defaulting to f16.",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/tools/cli/README.md",
+      "source_title": "llama.cpp tools/cli README (parameter reference)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "On DeepSeek-V4 architectures, a quantized K cache produced confident gibberish on every backend until the July 2026 rotation fix; the safe pattern during the bug was K at f16, V quantized.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/25382",
+      "source_title": "DeepSeek-V4: quantized K-cache (--cache-type-k q8_0) produces garbage on all backends",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "Ollama exposes KV quantization as one env var, OLLAMA_KV_CACHE_TYPE, applied uniformly to keys and values; per-side control like llama.cpp's is only an open feature request.",
+      "source_url": "https://github.com/ollama/ollama/issues/10794",
+      "source_title": "Support differentiated quantization of the KV cache · Issue #10794",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "Local GGUFs exist today: ISTA-DASLab ships DeepSeek-V4.1-Flash-1017 at IQ1_M (1.75 bits per weight), IQ2_XXS (2.00) and IQ2_XS (2.25), and the 12 GB GPU claim requires the Strata engine with the rest in system memory.",
+      "source_url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+      "source_title": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    },
+    {
+      "claim": "llama.cpp has supported DeepSeek-V4.1, including images, since release b11870 (October 25, 2026).",
+      "source_url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+      "source_title": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-29"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "global KV cache per token (HBM)",
+      "value": "890 bytes per token",
+      "source_url": "https://arxiv.org/abs/2609.19969"
+    },
+    {
+      "label": "global KV reduction vs DeepSeek-V4-Flash",
+      "value": "roughly 1/4",
+      "source_url": "https://arxiv.org/abs/2609.19969"
+    },
+    {
+      "label": "global KV reduction vs DeepSeek-V4-Flash and V1",
+      "value": "approximately 4-fold and 437-fold",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "persistent (SSD/host RAM) KV reduction vs V4-Flash",
+      "value": "roughly 1/8",
+      "source_url": "https://arxiv.org/abs/2609.19969"
+    },
+    {
+      "label": "max context length",
+      "value": "contexts of up to one million tokens",
+      "source_url": "https://arxiv.org/abs/2609.19969"
+    },
+    {
+      "label": "active parameters per token",
+      "value": "8B parameters per token during prefill and 16B during decode",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "smallest local quant",
+      "value": "IQ1_M (1.75 bits per weight)",
+      "source_url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF"
+    },
+    {
+      "label": "total download size, IQ1_M build",
+      "value": "231.32 GB",
+      "source_url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF"
+    },
+    {
+      "label": "rotation fix decode cost",
+      "value": "~6.8% decode throughput (q8/q8, single card)",
+      "source_url": "https://github.com/ggml-org/llama.cpp/issues/25382"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Running notes, not the notebook",
+      "mapping": "the model's weights are a printed reference book (fixed cost, paid once when it loads); the KV cache is the pad of sticky notes that grows one note per token read -- V4.1-Flash writes each note on a quarter of the paper (FP4) and lets whole floors of the building read the same pad (CSA2)",
+      "limit": "the pad never shrinks on its own -- compression makes each note smaller, it does not throw notes away, and layers sharing one pad only works because they were trained that way"
+    },
+    {
+      "vehicle": "Fuel tanker vs saddlebag",
+      "mapping": "weights are the engine; the KV cache is the tanker trailing the car, one barrel added per token -- this model swapped the tanker for a saddlebag of 890 bytes per token",
+      "limit": "fuel burns as you drive, so the tanker lightens; a KV cache only grows with context and every new token must re-read what is already there"
+    },
+    {
+      "vehicle": "Shorthand vs longhand",
+      "mapping": "an f16 KV cache writes every note in longhand; q8_0 or q4_0 writes shorthand, half or a quarter the paper for the same conversation",
+      "limit": "shorthand risks a misread word -- on DeepSeek-V4 the misread was total gibberish (llama.cpp issue 25382) -- and the model's own FP4 works only because it was trained to live with it"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "KV cache compression here just means 4-bit quantization.",
+      "reality": "FP4 alone nearly halves main KV storage versus V4's FP8; the bigger factors are architectural -- cross-layer KV reuse (CSA2) and 2:1 encoder compression -- with SWA Bounded Replay cutting the persistent cache separately (claim 2)."
+    },
+    {
+      "myth": "I can get V4.1-Flash's 890 bytes per token by setting a flag on any model.",
+      "reality": "the number is trained-in from scratch (sparse attention at 64K sequence length, FP4 via quantization-aware training); the runtime flags -ctk/-ctv are a separate, smaller lever on top (claims 1, 2, 6)."
+    },
+    {
+      "myth": "Quantizing the KV cache is a universally safe win on every model.",
+      "reality": "on DeepSeek-V4 architectures a quantized K cache produced confident gibberish on every backend until the July 2026 fix; the model's own FP4 cache survives because it was trained into the weights (claims 2, 7)."
+    },
+    {
+      "myth": "The 1.75-bpw GGUF runs on any 12 GB gaming GPU in llama.cpp.",
+      "reality": "the 12 GB claim requires the Strata engine with the rest of the model in system memory and a 110.60 GB Engram file on disk; the IQ1_M total is 231.32 GB (claim 9)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "KV cache",
+      "definition": "the running notes the model keeps on every token it has already read so it does not recompute them; it grows with context and is what eats your memory on long chats."
+    },
+    {
+      "term": "FP4 (E2M1)",
+      "definition": "a 4-bit number format with one E4M3 scale per 16 channels; a quarter of the bytes of 16-bit storage."
+    },
+    {
+      "term": "CSA2",
+      "definition": "Compressed Sparse Attention 2, V4.1-Flash's attention scheme where layers share one compressed KV store (Full, Reindex or Reuse modes) and each query attends to its top 512 chosen entries."
+    },
+    {
+      "term": "SWA Bounded Replay",
+      "definition": "rebuilding missing sliding-window KV by re-processing only the most recent 128 tokens instead of the whole prefix, trading a little recomputation for never storing those states."
+    },
+    {
+      "term": "GGUF",
+      "definition": "the single-file model format llama.cpp-based tools (Ollama, LM Studio) load and the format quantized weights ship in."
+    },
+    {
+      "term": "bpw (bits per weight)",
+      "definition": "average precision across all tensors in a quantized file; lower bpw means a smaller file and more quality risk."
+    },
+    {
+      "term": "q8_0 / q4_0",
+      "definition": "llama.cpp KV-cache quantization types (8-bit and 4-bit block quantization) accepted by -ctk and -ctv."
+    },
+    {
+      "term": "OLLAMA_KV_CACHE_TYPE",
+      "definition": "Ollama's server-wide environment variable setting one KV quantization type applied uniformly to keys and values."
+    }
+  ],
+  "unverified": [
+    "No fetched page states Ollama's library hosts DeepSeek V4.1 Flash or an official Ollama model page for it.",
+    "No evidence from any fetched page or search result that an LM Studio --kv-q* flag exists; the flag name appears not to exist.",
+    "The NVIDIA NVFP4 quantization card for this model was seen only as a search snippet, not a fetched page.",
+    "Any tokens-per-second, load time or memory figure for V4.1 Flash on consumer hardware: needs a first-party measurement on the Spark before it can be stated.",
+    "The third-party paper alleging periodic long-context retrieval failures in V4/V4.1 (Reddit r/DeepSeek thread): the fetch failed, so it is a lead, not a fact."
+  ],
+  "suggested_outline": "Cold open on the feeling: the chat grows, memory fills, the model slows -- name the culprit as the notes the model keeps per token, not the model.\nThe bill today: what a KV cache is, that llama.cpp stores it f16 by default, and the runtime lever (-ctk/-ctv q8_0) with its DeepSeek-shaped scar tissue (gibberish bug, K-stays-f16 workaround).\nThe trained-in answer: V4.1-Flash shares notes across layers (CSA2), writes them FP4, skips persisting recent ones; 890 bytes per token, 437-fold under V1, 1M-token context, 552B backbone with 8B active in prefill.\nThe catch: weights are still huge -- smallest GGUF today is IQ1_M at 1.75 bpw, 231.32 GB on disk; the 12 GB GPU line needs Strata plus system memory.\nSend-off: two separate levers -- pick your runtime cache type knowingly, and know the model you pull already has the big compression built in.",
+  "notes": "Sources do not conflict. One framing caution for the writer: the 890 MB-at-1M-context figure is arithmetic (890 bytes x 1M), not a number the paper states; if spoken, attribute it as our multiplication. The paper also says FP4 retention is \"only marginal performance degradation\" with no numeric ablation in the fetched text -- keep it qualitative or leave it out. vLLM docs were fetched to confirm KV cache is the resource that runs out first (preemption behavior) but carry no claim here; they are spillover for the writer, not a load-bearing source. No source fetched this run quantifies consumer-GPU or Mac memory limits, so the script must not name a specific card's VRAM as a sourced number.",
+  "viewer_situation": "You run open models at home through Ollama or LM Studio on a gaming PC or a Mac, you have watched a long chat eat your memory, and you have seen the cache-type flags mentioned without anyone explaining what they actually touch.",
+  "has_process": false,
+  "process_steps": [],
+  "objection": "\"890 bytes per token is a lab number from DeepSeek's own paper on their own serving setup, and the 12 GB claim needs a specific engine plus 231 GB on disk -- so nothing here changes what runs on my 24 GB card tonight.\""
+}
