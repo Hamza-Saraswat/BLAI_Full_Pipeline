@@ -2,14 +2,14 @@
 slug: 2026-10-29-deepseek-v4-1-flash-kv-cache-c
 workspace: shorts
 title: "DeepSeek V4.1 Flash KV cache, explained"
-status: building
+status: review
 pillar: explainer
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-29T12:22:10Z"
+updated: "2026-10-29T12:39:45Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-script]]
 - Package: [[stages/05-package/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-package]]
 - Voice: [[stages/06-voice/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-narration|narration sidecars]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -44,3 +44,5 @@ blotato_post_id: ""
 - 2026-10-29T12:16:45Z 05-package ok: seo 100, ready-to-build
 - 2026-10-29T12:22:10Z build start on gn100-83c4
 - 2026-10-29T12:23:09Z 06-voice ok 57s
+- 2026-10-29T12:39:49Z 07-render ok 38.23s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 288
+- 2026-10-29T12:39:49Z 07-render ok 996s
