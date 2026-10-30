@@ -2,14 +2,14 @@
 slug: 2026-10-29-deepseek-v4-1-flash-kv-cache-c
 workspace: shorts
 title: "DeepSeek V4.1 Flash KV cache, explained"
-status: review
+status: approved
 pillar: explainer
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-29T12:39:45Z"
+updated: "2026-10-30T04:16:29Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-10-29T12:39:49Z 07-render ok 38.23s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 288
 - 2026-10-29T12:39:49Z 07-render ok 996s
 - 2026-10-29T12:39:51Z build done, status review
+- 2026-10-30T04:16:29Z telegram approve (approved_at 2026-10-30T04:16:29Z)
