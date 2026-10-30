@@ -2,19 +2,19 @@
 slug: 2026-10-30-mistral-4-beats-chinese-models
 workspace: shorts
 title: "Mistral Large 4 benchmark: card vs claim"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: news-react-so-what
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T12:32:31Z"
+updated: "2026-10-30T12:37:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-10-30T11:41:03Z 03-research ok: 9 sources, validator 0
 - 2026-10-30T12:29:46Z 04-script ok: B wins 20-15, gates pass, halftone
 - 2026-10-30T12:32:31Z 05-package ok: seo 100, ready-to-build
+- 2026-10-30T12:37:10Z build start on gn100-83c4
