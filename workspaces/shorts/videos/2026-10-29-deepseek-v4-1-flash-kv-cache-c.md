@@ -2,22 +2,22 @@
 slug: 2026-10-29-deepseek-v4-1-flash-kv-cache-c
 workspace: shorts
 title: "DeepSeek V4.1 Flash KV cache, explained"
-status: approved
+status: scheduled
 pillar: explainer
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-30T04:16:29Z"
-publish_slot: ""
+updated: "2026-10-30T04:21:16Z"
+publish_slot: "2026-10-30T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: 7708dfc1-cc5e-428e-bb90-d1b0273f096d
 ---
 # DeepSeek V4.1 Flash KV cache compression explained for local runners
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-package]]
 - Voice: [[stages/06-voice/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-narration|narration sidecars]]
 - Render: [[stages/07-render/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-29-deepseek-v4-1-flash-kv-cache-c-publish]]
 
 ## Decisions
 - 2026-10-29 research checkpoint (unattended): angle+slug confirmed as picked; 9 sources (4 primary, 5 docs), validator exit 0, 10 claims, 9 key numbers; FireCrawl 402 so web fallback used; no conflicts; llama.cpp -ctk/-ctv grounded as the only runtime KV lever (Ollama per-side and LM Studio controls unconfirmed).
@@ -48,3 +48,4 @@ blotato_post_id: ""
 - 2026-10-29T12:39:49Z 07-render ok 996s
 - 2026-10-29T12:39:51Z build done, status review
 - 2026-10-30T04:16:29Z telegram approve (approved_at 2026-10-30T04:16:29Z)
+- 2026-10-30T04:21:17Z 08-publish ok 2s
