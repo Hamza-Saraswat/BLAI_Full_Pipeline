@@ -1,0 +1,953 @@
+[
+  {
+    "id": "hn-779b541ff7",
+    "title": "We're releasing the weights of Mistral Large 4",
+    "url": "https://mistral.ai/news/mistral-large-4-oss/",
+    "source": "hn",
+    "published_at": "2026-10-29T14:13:21Z",
+    "signals": {
+      "points": 1512,
+      "num_comments": 399,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7406,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1.5k points, 399 comments on HN, 21 h ago",
+    "score": 78
+  },
+  {
+    "id": "hn-739e0b5535",
+    "title": "LLM Voice",
+    "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+    "source": "hn",
+    "published_at": "2026-10-29T14:57:55Z",
+    "signals": {
+      "points": 492,
+      "num_comments": 258,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7486,
+      "age_h": 20.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 492 points, 258 comments on HN, 20 h ago",
+    "score": 64
+  },
+  {
+    "id": "github-fb0dc09296",
+    "title": "transformers v5.22.0: v5.22.0: Mistral Large 4 (Le Chonk)",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.0",
+    "source": "github",
+    "published_at": "2026-10-29T14:15:39Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.22.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.741,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "## New Models ### Mistral Large 4 (Le Chonk) <img width=\"1329\" height=\"780\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1cff9ca7-19e3-4622-8db6-fb1cfa842579\" /> Mistral Large 4 is Mistral's largest and most capable model to date: a 1 trillion-parameter natively multimodal Mixture-of-",
+    "why_now": "Shipped: huggingface/transformers v5.22.0 released, 21 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-741dc3d8e0",
+    "title": "llama.cpp b12002",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12002",
+    "source": "github",
+    "published_at": "2026-10-30T11:00:32Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12002",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9998,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "DeepSeek",
+      "GGUF",
+      "Mac Studio",
+      "Llama"
+    ],
+    "summary": "<details open> ggml : add batched tensor copy API (#30881) * ggml : add generic batched tensor copy API Assisted-by: pi:llama.cpp/ggml-org/DeepSeek-V4-Flash-Vision-Exp-GGUF (Mac Studio, M2 Ultra, 192GB) * llama : use batched tensor copy API in context io Assisted-by: pi:llama.cpp/ggml-org/DeepSeek-V",
+    "why_now": "Shipped: ggml-org/llama.cpp b12002 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-a224588b49",
+    "title": "llama.cpp b12001",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12001",
+    "source": "github",
+    "published_at": "2026-10-30T07:41:34Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12001",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9531,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Copilot"
+    ],
+    "summary": "<details open> ROCm/HIP: add RDNA4_M family for gfx1170/gfx1171 (#31373) gfx117X is more like RDNA4, with 128b WMMA. But they're not identical. Adjust the defines accordingly to have a new RDNA4_M and use it where it makes sense. Assisted-by: Codex Assisted-by: GitHub Copilot Co-authored-by: Mario L",
+    "why_now": "Shipped: ggml-org/llama.cpp b12001 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-f7d6917a20",
+    "title": "llama.cpp b12000",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12000",
+    "source": "github",
+    "published_at": "2026-10-30T04:25:42Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12000",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9092,
+      "age_h": 6.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "FP8",
+      "Hugging Face",
+      "Qwen",
+      "NVFP4"
+    ],
+    "summary": "<details open> Quant: OCP FP8 E4M3 support (#27512) * WIP OCP FP8 E4M3 support * Fix python type-checker * Materialize input_scales also for FP8 when converting * Fix conversion of https://huggingface.co/RedHatAI/Qwen3.8-27B-NVFP4 1. Per row FP8 wrongly fell to NVFP4 conversion, as NVFP4 checked on ",
+    "why_now": "Shipped: ggml-org/llama.cpp b12000 released (pre-release), 7 h ago",
+    "score": 54
+  },
+  {
+    "id": "github-ff92f5be72",
+    "title": "transformers v5.22.1: Patch release v5.22.1",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.1",
+    "source": "github",
+    "published_at": "2026-10-30T09:36:03Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.22.1",
+      "prerelease": false,
+      "signal": 0.6,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.0
+      },
+      "decay": 0.9797,
+      "age_h": 1.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "# Patch release v5.22.1 We just had to fix the documentation! ** [Fix] Remove WIP doc for Ml4 (https://github.com/huggingface/transformers/pull/50124) from @remi-or",
+    "why_now": "Shipped: huggingface/transformers v5.22.1 released, 1 h ago",
+    "score": 50
+  },
+  {
+    "id": "hf-535d64ec4f",
+    "title": "AtomicChat/LFM3-1.7B-Uncensored-GGUF",
+    "url": "https://huggingface.co/AtomicChat/LFM3-1.7B-Uncensored-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-27T18:33:25Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 134,
+      "downloads": 28364,
+      "trendingScore": 128.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.691,
+      "signal_parts": {
+        "trending": 0.639,
+        "likes": 0.71,
+        "downloads": 0.742
+      },
+      "decay": 0.3942,
+      "age_h": 64.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 134 likes, 28.4k downloads, trending score 128, created 2026-10-27",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 134 likes, 28.4k downloads, trending score 128, 3 d ago",
+    "score": 36
+  },
+  {
+    "id": "hn-d8575c2cee",
+    "title": "Mistral 4 had a release, makes it comparable to Chinese open-weight models",
+    "url": "https://www.reuters.com/world/china/mistral-ceo-says-new-ai-model-beats-chinese-ones-some-areas-2026-10-06/",
+    "source": "hn",
+    "published_at": "2026-10-30T09:27:45Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9778,
+      "age_h": 1.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 2 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-ba73801e14",
+    "title": "Open-weight AI models can exploit the patch gap",
+    "url": "https://epoch.ai/publications/open-weight-models-patch-gap",
+    "source": "hn",
+    "published_at": "2026-10-29T22:32:46Z",
+    "signals": {
+      "points": 13,
+      "num_comments": 8,
+      "signal": 0.455,
+      "signal_parts": {
+        "points": 0.462,
+        "comments": 0.438
+      },
+      "decay": 0.8352,
+      "age_h": 12.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 13 points, 8 comments on HN, 12 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-c55d2f471f",
+    "title": "Cohere's Qwen Story: Looks more like model jaggedness",
+    "url": "https://research.checkpoint.com/2026/coheres-qwen-story-looks-more-like-model-jaggedness/",
+    "source": "hn",
+    "published_at": "2026-10-29T14:14:17Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.7407,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 0 comments on HN, 21 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-3572e07e17",
+    "title": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models",
+    "url": "https://www.reuters.com/technology/deepseek-moonshot-used-openais-gpt-6-astra-train-latest-models-information-2026-10-29/",
+    "source": "hn",
+    "published_at": "2026-10-29T14:07:47Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7396,
+      "age_h": 20.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Moonshot",
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-014576526a",
+    "title": "Mistral-Large-4-1T-A52B",
+    "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+    "source": "hn",
+    "published_at": "2026-10-29T14:13:55Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7407,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-e1765674cd",
+    "title": "What inference engine and KV offload engine do you use and why?",
+    "url": "https://news.ycombinator.com/item?id=50302109",
+    "source": "hn",
+    "published_at": "2026-10-30T10:37:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9942,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:vLLM",
+      "group": "myth-bust"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "I have the question to the guys in inference world, I am building some stuff connected to the inference in my work, and I started wondering, what do actually big guys use in their inference work? Do you prefer standard (and what is standard lol) solutions like vLLM and LMCache, or you additionally a",
+    "why_now": "Changed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-9c3c6b66a8",
+    "title": "Cohere Qwen incident URL samples",
+    "url": "https://huggingface.co/spaces/Vil-Lakera/curl-trace-explorer",
+    "source": "hn",
+    "published_at": "2026-10-30T10:31:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9928,
+      "age_h": 0.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-6637563426",
+    "title": "Qwenputer turns Gated DeltaNet state into exact RAM for a CPU",
+    "url": "https://theainewsreport.com/2026-10-29-qwenputer-deltanet-state-as-exact-ram-explained.html",
+    "source": "hn",
+    "published_at": "2026-10-30T04:58:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9165,
+      "age_h": 6.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-912fb09116",
+    "title": "Show HN: Ollama Mock Server",
+    "url": "https://ollama-mock.kinduff.com/",
+    "source": "hn",
+    "published_at": "2026-10-29T18:17:23Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7854,
+      "age_h": 16.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-ef193e72ec",
+    "title": "LiquidAI/LFM3-1.7B-GGUF",
+    "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-24T00:46:40Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 136,
+      "downloads": 97184,
+      "trendingScore": 132.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.737,
+      "signal_parts": {
+        "trending": 0.643,
+        "likes": 0.712,
+        "downloads": 0.831
+      },
+      "decay": 0.1078,
+      "age_h": 154.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 136 likes, 97.2k downloads, trending score 132, created 2026-10-24",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 136 likes, 97.2k downloads, trending score 132, 6 d ago",
+    "score": 21
+  },
+  {
+    "id": "hn-11a0df629b",
+    "title": "Evil Qwen",
+    "url": "https://ziva.sh/blogs/evil-qwen",
+    "source": "hn",
+    "published_at": "2026-10-29T15:31:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7546,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-55ee699d63",
+    "title": "Ask HN: Why does meta suck at creating a good LLM?",
+    "url": "https://news.ycombinator.com/item?id=50287747",
+    "source": "hn",
+    "published_at": "2026-10-29T12:15:21Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7198,
+      "age_h": 22.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:Meta",
+      "group": "explainer"
+    },
+    "products": [
+      "Meta",
+      "DeepSeek"
+    ],
+    "summary": "My LLM experience is frontier models in a group chat for the best outcome. I recently added muse wonder and removed it after a few hours of use. I&#x27;d even use deepseek flash over muse for literally anything.",
+    "why_now": "Changed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-03ce2c25b1",
+    "title": "Show HN: Fast agentic video editing in the browser (Tella)",
+    "url": "https://news.ycombinator.com/item?id=50291424",
+    "source": "hn",
+    "published_at": "2026-10-29T16:14:33Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.7625,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, today we&#x27;re launching the biggest update to Tella ever (<a href=\"https:&#x2F;&#x2F;tella.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;tella.com&#x2F;</a>).<p>Tella is all-in-one video creation. You can record, edit and publish with one tool. Today we&#x27;re shipping:<p>1. Tella Agent: An",
+    "why_now": "Shipped: 4 points, 2 comments on HN, 19 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-62a0fac542",
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "url": "https://idlemachines.co.uk/essays/streaming-llm-attention-sinks",
+    "source": "hn",
+    "published_at": "2026-10-30T09:09:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9736,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c82d46b3f3",
+    "title": "Show HN: Apgar - Catch agent regressions without an LLM judge",
+    "url": "https://github.com/oimo-ai/apgar",
+    "source": "hn",
+    "published_at": "2026-10-29T17:04:06Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7716,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, We build financial AI agents, and Apgar is the tool we wrote to see whether a harness change made an agent better or worse in production. Our offline evals can&#x27;t cover every kind of question or session real users bring, and the LLM judge we run in Langfuse is too expensive to use on mor",
+    "why_now": "Broke: 3 points, 0 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-934c0a2e62",
+    "title": "Show HN: Wavefunction - a minimal, open-source desktop coding agent for Mac",
+    "url": "https://www.wavefunction.si/",
+    "source": "hn",
+    "published_at": "2026-10-29T15:43:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7569,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:tokens",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "During the dark ages of AI, when Opus 5 was incomprehensible and Codex Ultra was burning all tokens within a day, I decided to give open-source agents and models a try.<p>What I saw was that a lot of the tools I tried were terminal-first, and desktop apps were less common.<p>Additionally, I felt tha",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-286534858e",
+    "title": "Show HN: Nori - A fast Git client for reviewing and landing your agents' work",
+    "url": "https://meetnori.app/",
+    "source": "hn",
+    "published_at": "2026-10-29T12:23:56Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.7213,
+      "age_h": 22.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I&#x27;d like to present Nori, a Git client built with performance and low resource consumption in mind. Nori helps you review your agents&#x27; work and easily rebase, commit, push and PR your worktrees. It&#x27;s available on Mac, Windows and Linux.<p>Nori is free for common Git features (e",
+    "why_now": "Shipped: 1 points, 2 comments on HN, 23 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-e97a6fd5ec",
+    "title": "Show HN: Google translate replacement for language learners",
+    "url": "https://manalect.com/",
+    "source": "hn",
+    "published_at": "2026-10-29T11:16:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.7096,
+      "age_h": 23.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "Hi HN, I&#x27;m Musab and I&#x27;m building Manalect. Find TL;DR at the end.<p>Most language apps fall short for me in two ways:<p>1. They’re not personalized enough. I get taught things I don’t care about, things that are too hard for me, and things I already know. 2. They don’t teach that well. I",
+    "why_now": "Shipped: 1 points, 2 comments on HN, 24 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-d451625f0e",
+    "title": "An attack against an LLM agent is either detected or proven",
+    "url": "https://news.ycombinator.com/item?id=50301510",
+    "source": "hn",
+    "published_at": "2026-10-30T09:23:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9767,
+      "age_h": 1.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-c301292696",
+    "title": "An economy for open weight AI models",
+    "url": "https://twitter.com/bertgodel/status/2115565111624753557",
+    "source": "hn",
+    "published_at": "2026-10-29T17:12:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7733,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-849653a916",
+    "title": "Show HN: MyPrintables, a simple, small, and fast 3D assets manager",
+    "url": "https://news.ycombinator.com/item?id=50288599",
+    "source": "hn",
+    "published_at": "2026-10-29T13:20:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7312,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:self-host",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;liyu1981&#x2F;my-printables\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;liyu1981&#x2F;my-printables</a><p>Self-hosted, Printables-inspired 3D model library. One Go binary embeds the API, React SPA, migrations, and the administrative CLI.<p>Finally I b",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-e1d19b2cbc",
+    "title": "Show HN: Universal Blindspot Detector (AI meta-analysis)",
+    "url": "https://trooperloops.com/upload",
+    "source": "hn",
+    "published_at": "2026-10-29T12:29:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7224,
+      "age_h": 22.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Meta",
+      "group": "news-react"
+    },
+    "products": [
+      "Meta"
+    ],
+    "summary": "This is a rough &quot;blindspot detector&quot; for AI conversations.<p>Basically, the tool reframes conversations and tries to find the smallest moves the user COULD have made to have surfaced unknown assumptions for whatever problem they were solving.<p>The goal is to show the value of using AI as",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-59f554d804",
+    "title": "RecursiveSI/flint",
+    "url": "https://huggingface.co/RecursiveSI/flint",
+    "source": "hf",
+    "published_at": "2026-10-21T14:20:58Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 1249,
+      "downloads": 19015,
+      "trendingScore": 442.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.901,
+      "signal_parts": {
+        "trending": 0.802,
+        "likes": 1.0,
+        "downloads": 0.713
+      },
+      "decay": 0.05,
+      "age_h": 212.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 1.2k likes, 19.0k downloads, trending score 442, created 2026-10-21",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 1.2k likes, 19.0k downloads, trending score 442, 9 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-0043ec56a5",
+    "title": "XHToken/Spark-X2.6-4B",
+    "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
+    "source": "hf",
+    "published_at": "2026-10-19T03:19:51Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 914,
+      "downloads": 12515,
+      "trendingScore": 350.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.879,
+      "signal_parts": {
+        "trending": 0.771,
+        "likes": 0.987,
+        "downloads": 0.683
+      },
+      "decay": 0.05,
+      "age_h": 271.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 914 likes, 12.5k downloads, trending score 350, created 2026-10-19",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 914 likes, 12.5k downloads, trending score 350, 11 d ago",
+    "score": 3
+  }
+]
