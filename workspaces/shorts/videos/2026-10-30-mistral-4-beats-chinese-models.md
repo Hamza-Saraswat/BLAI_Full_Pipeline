@@ -2,14 +2,14 @@
 slug: 2026-10-30-mistral-4-beats-chinese-models
 workspace: shorts
 title: "Mistral 4 beats Chinese models: run the receipt"
-status: idea
+status: researched
 pillar: myth-bust
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T11:08:12Z"
+updated: "2026-10-30T11:41:03Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-30-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-30-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-30-mistral-4-beats-chinese-models-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Why: two radar sources back it (Reuters claim + weights release); lane and band differ from yesterday's picks (explainer/classic, how-to/smooth-explainer).
 
 ## Build journal
-
+- 2026-10-30T11:41:03Z 03-research ok: 9 sources, validator 0
