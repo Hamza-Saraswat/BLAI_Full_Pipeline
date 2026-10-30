@@ -2,21 +2,21 @@
 slug: 2026-10-29-deepseek-v4-1-flash-kv-cache-c
 workspace: shorts
 title: "DeepSeek V4.1 Flash KV cache, explained"
-status: scheduled
+status: published
 pillar: explainer
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-30T04:21:16Z"
+updated: "2026-10-30T23:04:10Z"
 publish_slot: "2026-10-30T18:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=q7pSwTaduw0"
 blotato_post_id: 7708dfc1-cc5e-428e-bb90-d1b0273f096d
 ---
 # DeepSeek V4.1 Flash KV cache compression explained for local runners
@@ -49,3 +49,4 @@ blotato_post_id: 7708dfc1-cc5e-428e-bb90-d1b0273f096d
 - 2026-10-29T12:39:51Z build done, status review
 - 2026-10-30T04:16:29Z telegram approve (approved_at 2026-10-30T04:16:29Z)
 - 2026-10-30T04:21:17Z 08-publish ok 2s
+- 2026-10-30T23:04:10Z published https://www.youtube.com/watch?v=q7pSwTaduw0
