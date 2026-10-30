@@ -1,0 +1,122 @@
+{
+  "slug": "2026-10-30-mistral-4-beats-chinese-models",
+  "topic": "Mistral Large 4 vs the Chinese open-weight leaders: what the model card actually scores, and the memory wall for home PCs",
+  "title": "Mistral Large 4 \"beats Chinese models\"? The card says tied",
+  "description": "Mistral Large 4 open weights landed and the CEO says it beats the Chinese models. We read the model card: coding tied at 48%, cyber ahead at 51%, aggregate index behind at 26, and the smallest quant is 233 GB. You will learn how to check a benchmark claim yourself. (Narration is AI-generated.)",
+  "hashtags": [
+    "#Mistral",
+    "#LocalAI",
+    "#OpenWeights"
+  ],
+  "tags": [
+    "mistral large 4",
+    "mistral large 4 benchmark",
+    "mistral vs chinese models",
+    "mistral large 4 gguf",
+    "glm 5.3",
+    "artificial analysis",
+    "open weights",
+    "open weight models",
+    "local llm",
+    "run llm at home",
+    "llm benchmarks",
+    "model card",
+    "mixture of experts",
+    "quantization gguf",
+    "llm memory requirements",
+    "build local ai"
+  ],
+  "hook_text": "The Mistral headline isn't the receipt",
+  "hook_candidates": [
+    "Mistral or the Chinese models? The card decides.",
+    "The headline isn't the receipt. The card is.",
+    "Two hundred thirty-three gigabytes. Smallest file they ship.",
+    "Mistral claims the win. The card prints a tie.",
+    "Beats the Chinese models. Which benchmark?",
+    "Mistral Large 4 landed open. Your PC is out.",
+    "Forty-eight percent coding. Tied with China's best.",
+    "A French model \"beats\" China. Read the receipt.",
+    "You saw the headline. The card disagrees.",
+    "One claim, three scores, zero benchmarks named."
+  ],
+  "style_pack": "halftone",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 38,
+  "narration_full": "The Mistral headline isn't the receipt. The card is. Twenty-six on the index, one blended score of benchmarks; your gaming PC or Mac saw the headline. Chinese leaders score higher. Mistral Large four landed yesterday: open weights, the downloadable numbers a model is made of. The claim named no models or benchmarks. The card, the page beside the weights, prints forty-eight percent on coding: tied with GLM five point three. Cyber index: fifty-one percent, ahead. The catch: the Artificial Analysis index is somebody's chosen bucket; trading it for one win cherry-picks back. Smallest quant, the tightest squeeze, two hundred thirty-three gigabytes of weights; your gaming PC can't hold it. Tonight, open the card before the headline: which benchmark, which model, whose measurement?",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The Mistral headline isn't the receipt. The card is.",
+      "on_screen_text": "headline ≠ receipt · the card is",
+      "visual_brief": "Frame 1 opens on the finished composition: On \"The Mistral headline isn't the receipt\" a glossy headline strip fades to half brightness; on \"The card is\" a plain paper model card rises-in-place beside it. Two elements max, onset after 0.30s, both centered clear of the bottom safe zone.",
+      "est_duration_s": 3.1
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Twenty-six on the index, one blended score of benchmarks; your gaming PC or Mac saw the headline. Chinese leaders score higher.",
+      "on_screen_text": "26 on the index · Chinese leaders higher",
+      "visual_brief": "On \"Twenty-six\" a giant \"26\" scales in; on \"your gaming PC or Mac saw the headline\" the small headline strip fades behind the digit; on \"Chinese leaders score higher\" a second row rises-in-place above it. Digit held upper-center, out of the right 120 px.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Mistral Large four landed yesterday: open weights, the downloadable numbers a model is made of. The claim named no models or benchmarks.",
+      "on_screen_text": "Mistral Large 4 · no models named · no benchmarks",
+      "visual_brief": "On \"landed yesterday\" a date node rises-in-place on a short horizontal line; on \"open weights\" a downloadable file sheet fades in at the node; on \"named no models or benchmarks\" two empty outline chips fade in, unfilled. Sequential, never more than two moving.",
+      "est_duration_s": 7.6
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The card, the page beside the weights, prints forty-eight percent on coding: tied with GLM five point three. Cyber index: fifty-one percent, ahead.",
+      "on_screen_text": "coding 48% tied | cyber 51% ahead",
+      "visual_brief": "Split panel: on \"forty-eight percent\" the coding bar draws to its mark and a \"tied\" tag fades in; on \"fifty-one percent\" the cyber bar draws past a faint rival line and an \"ahead\" tag fades in. Bars kept above the bottom 450 px.",
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The catch: the Artificial Analysis index is somebody's chosen bucket; trading it for one win cherry-picks back.",
+      "on_screen_text": "one index = somebody's chosen bucket",
+      "visual_brief": "On \"somebody's chosen bucket\" small benchmark chips fade down into a bucket outline; on \"cherry-picks back\" a single chip rises-in-place out of the bucket and holds. Two motions max.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Smallest quant, the tightest squeeze, two hundred thirty-three gigabytes of weights; your gaming PC can't hold it.",
+      "on_screen_text": "smallest file: 233 GB",
+      "visual_brief": "On \"two hundred thirty-three gigabytes\" huge digits scale in, centered high, clear of the bottom and right safe zones; on \"can't hold it\" a small PC tower outline fades in beneath and dims, dwarfed by the digits.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s07",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Tonight, open the card before the headline: which benchmark, which model, whose measurement?",
+      "on_screen_text": "which benchmark · which model · whose measurement",
+      "visual_brief": "Rhyme with frame 1: on \"open the card\" the same paper card rises-in-place at center; on \"which benchmark, which model, whose measurement\" three short check lines rise-in-place one by one beneath it. Card and lines kept off the bottom 450 px.",
+      "est_duration_s": 4.5
+    }
+  ],
+  "notes_for_review": "Numbers are the model card's own (vendor-cited Artificial Analysis harnesses; the independent page confirms the 26). No local tokens/s exists yet: any speed line must stay hedged. 233 GB is the unsloth 1-bit quant size; \"does not fit\" covers 24 GB GPUs and 128 GB Macs, not 256 GB boxes."
+}

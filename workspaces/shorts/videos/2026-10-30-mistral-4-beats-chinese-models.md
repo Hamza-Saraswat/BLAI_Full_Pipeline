@@ -2,14 +2,14 @@
 slug: 2026-10-30-mistral-4-beats-chinese-models
 workspace: shorts
 title: "Mistral 4 beats Chinese models: run the receipt"
-status: researched
+status: scripted
 pillar: myth-bust
-structure: ""
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T11:41:03Z"
+updated: "2026-10-30T12:29:46Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-10-30-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-30-ideas]]
 - Research: [[stages/03-research/output/2026-10-30-mistral-4-beats-chinese-models-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-10-30-mistral-4-beats-chinese-models-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -38,3 +38,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-10-30T11:41:03Z 03-research ok: 9 sources, validator 0
+- 2026-10-30T12:29:46Z 04-script ok: B wins 20-15, gates pass, halftone
