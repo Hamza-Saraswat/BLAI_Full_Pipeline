@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-10-30-mistral-4-beats-chinese-models-brief]]
 - Script: [[stages/04-script/output/2026-10-30-mistral-4-beats-chinese-models-script]]
 - Package: [[stages/05-package/output/2026-10-30-mistral-4-beats-chinese-models-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-10-30-mistral-4-beats-chinese-models-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-10-30T12:29:46Z 04-script ok: B wins 20-15, gates pass, halftone
 - 2026-10-30T12:32:31Z 05-package ok: seo 100, ready-to-build
 - 2026-10-30T12:37:10Z build start on gn100-83c4
+- 2026-10-30T12:38:12Z 06-voice ok 60s
