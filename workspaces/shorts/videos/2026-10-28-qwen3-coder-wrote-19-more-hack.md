@@ -2,22 +2,22 @@
 slug: 2026-10-28-qwen3-coder-wrote-19-more-hack
 workspace: shorts
 title: "Qwen3-Coder security bias: the local fix"
-status: approved
+status: scheduled
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-28
-updated: "2026-10-30T04:17:00Z"
-publish_slot: ""
+updated: "2026-10-30T04:21:12Z"
+publish_slot: "2026-10-30T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
-blotato_post_id: ""
+blotato_post_id: b418be22-4a82-4f03-9678-8c4712b6cb67
 ---
 # Qwen3-Coder wrote 19% more hackable apps for one side
 
@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Package: [[stages/05-package/output/2026-10-28-qwen3-coder-wrote-19-more-hack-package]]
 - Voice: [[stages/06-voice/output/2026-10-28-qwen3-coder-wrote-19-more-hack-narration|narration sidecars]]
 - Render: [[stages/07-render/output/2026-10-28-qwen3-coder-wrote-19-more-hack-render]]
-- Publish: (filled by stage 08)
+- Publish: [[stages/08-publish/output/2026-10-28-qwen3-coder-wrote-19-more-hack-publish]]
 
 ## Decisions
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-10-28T13:20:26Z build done, status review
 - 2026-10-29T13:35:28Z 2026-10-29T13:35:28Z expired: not from today's picks (2026-10-29); the factory carries no backlog
 - 2026-10-30T04:17:00Z telegram approve (approved_at 2026-10-30T04:17:00Z)
+- 2026-10-30T04:21:13Z 08-publish ok 3s
