@@ -2,21 +2,21 @@
 slug: 2026-10-28-qwen3-coder-wrote-19-more-hack
 workspace: shorts
 title: "Qwen3-Coder security bias: the local fix"
-status: scheduled
+status: published
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-28
-updated: "2026-10-30T04:21:12Z"
+updated: "2026-10-30T16:05:10Z"
 publish_slot: "2026-10-30T11:00:00-05:00"
 seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
-youtube_url: ""
+youtube_url: "https://www.youtube.com/watch?v=RieCgS3bJ5Y"
 blotato_post_id: b418be22-4a82-4f03-9678-8c4712b6cb67
 ---
 # Qwen3-Coder wrote 19% more hackable apps for one side
@@ -50,3 +50,4 @@ blotato_post_id: b418be22-4a82-4f03-9678-8c4712b6cb67
 - 2026-10-29T13:35:28Z 2026-10-29T13:35:28Z expired: not from today's picks (2026-10-29); the factory carries no backlog
 - 2026-10-30T04:17:00Z telegram approve (approved_at 2026-10-30T04:17:00Z)
 - 2026-10-30T04:21:13Z 08-publish ok 3s
+- 2026-10-30T16:05:10Z published https://www.youtube.com/watch?v=RieCgS3bJ5Y
