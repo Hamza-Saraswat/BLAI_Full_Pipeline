@@ -2,14 +2,14 @@
 slug: 2026-10-29-ollama-0-40-13-adds-lfm3-liqui
 workspace: shorts
 title: "Ollama 0.40.13 adds LFM3: Liquid AI models now one pull away"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-10-29
-updated: "2026-10-29T11:09:47Z"
+updated: "2026-10-30T13:35:45Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-10-30T13:35:45Z 2026-10-30T13:35:45Z expired: not from today's picks (2026-10-30); the factory carries no backlog
