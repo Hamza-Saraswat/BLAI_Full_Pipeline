@@ -2,14 +2,14 @@
 slug: 2026-10-30-mistral-4-beats-chinese-models
 workspace: shorts
 title: "Mistral Large 4 benchmark: card vs claim"
-status: building
+status: review
 pillar: myth-bust
 structure: news-react-so-what
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T12:37:10Z"
+updated: "2026-10-30T12:55:51Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-30-mistral-4-beats-chinese-models-script]]
 - Package: [[stages/05-package/output/2026-10-30-mistral-4-beats-chinese-models-package]]
 - Voice: [[stages/06-voice/output/2026-10-30-mistral-4-beats-chinese-models-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-30-mistral-4-beats-chinese-models-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,5 @@ blotato_post_id: ""
 - 2026-10-30T12:32:31Z 05-package ok: seo 100, ready-to-build
 - 2026-10-30T12:37:10Z build start on gn100-83c4
 - 2026-10-30T12:38:12Z 06-voice ok 60s
+- 2026-10-30T12:55:58Z 07-render ok 42.13s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 296
+- 2026-10-30T12:55:58Z 07-render ok 1063s
