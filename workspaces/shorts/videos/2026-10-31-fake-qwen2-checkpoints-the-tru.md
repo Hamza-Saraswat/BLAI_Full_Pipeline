@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-31-fake-qwen2-checkpoints-the-tru
 workspace: shorts
-title: "Fake Qwen2 checkpoints: the trust_remote_code crypto-mining trap"
-status: scripted
+title: "Fake Hugging Face models: Qwen2 trap"
+status: ready-to-build
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-31
-updated: "2026-10-31T12:08:08Z"
+updated: "2026-10-31T12:09:35Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-10-31-ideas]]
 - Research: [[stages/03-research/output/2026-10-31-fake-qwen2-checkpoints-the-tru-brief]]
 - Script: [[stages/04-script/output/2026-10-31-fake-qwen2-checkpoints-the-tru-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-10-31-fake-qwen2-checkpoints-the-tru-package]]
+- Voice: [[stages/06-voice/output/2026-10-31-fake-qwen2-checkpoints-the-tru-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -43,6 +43,8 @@ blotato_post_id: ""
 - Style pack: terminal (overrules the rotation script's signal default, which found no topic hints from --topic alone). Why: how-to/CLI topic whose natural visuals are the files page, greps and sha256sum; legal because the previous video's pack was halftone.
 
 - 2026-10-31 script gates: winner B validated 0 blockers / 0 advisories; eval gates all pass (number_spend, hook_concrete via entity Hugging Face, scene_specificity 5/6 with the payoff scene the allowed generic, skeleton, positional_labels, sameness clean against ledger entries 54-55); ledger entry 56 recorded; style pack terminal recorded (writer overrule of the signal default: how-to/CLI topic, previous pack halftone). Judge B over A, 20-18, no grafts; judge's "invented specifics" flags (Pluto, svc.py, Pearl) corrected against the brief, scores unaffected.
+
+- 2026-10-31 package checkpoint (unattended): searchable title picked ("Fake Hugging Face models: Qwen2 trap", 36 chars, keyword first) over two intriguing variants because the ideas gap is a defensive search query (keyword depth 29); description leads with keyword + promise in 126 chars; rubric 100/100 (every row full); contains_synthetic_media false (typographic scenes, creator voice clone, both exempt); no duplicate title vs the 38 published notes. check_outputs clean after hub links filled (Voice link points at the normalized narration stage 04 wrote per its contract).
 
 ## Build journal
 
