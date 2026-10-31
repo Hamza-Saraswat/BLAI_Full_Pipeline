@@ -2,14 +2,14 @@
 slug: 2026-10-31-fake-qwen2-checkpoints-the-tru
 workspace: shorts
 title: "Fake Hugging Face models: Qwen2 trap"
-status: building
+status: review
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-31
-updated: "2026-10-31T12:12:10Z"
+updated: "2026-10-31T12:33:07Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-10-31-fake-qwen2-checkpoints-the-tru-script]]
 - Package: [[stages/05-package/output/2026-10-31-fake-qwen2-checkpoints-the-tru-package]]
 - Voice: [[stages/06-voice/output/2026-10-31-fake-qwen2-checkpoints-the-tru-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-10-31-fake-qwen2-checkpoints-the-tru-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -49,3 +49,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-10-31T12:12:10Z build start on gn100-83c4
 - 2026-10-31T12:15:21Z 06-voice ok 189s
+- 2026-10-31T12:33:11Z 07-render ok 49.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 299
+- 2026-10-31T12:33:11Z 07-render ok 1066s
