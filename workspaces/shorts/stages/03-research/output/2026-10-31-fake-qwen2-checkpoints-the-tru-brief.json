@@ -1,0 +1,233 @@
+{
+  "slug": "2026-10-31-fake-qwen2-checkpoints-the-tru",
+  "topic": "Fake Qwen2-labeled checkpoints on Hugging Face carry crypto-mining malware that runs via trust_remote_code",
+  "generated_at": "2026-10-31T11:40:22Z",
+  "depth": "standard",
+  "thesis": "A fake model repo on Hugging Face needs no poisoned weights or pickle exploit to own your GPU: trust_remote_code=True imports the publisher's Python with your privileges before any weights load, so the defense is a tonight-doable checklist -- vet the org, prefer safetensors, keep the flag off, verify the hash.",
+  "explanation_path": "Start with what the viewer already does: they grab a small \"test\" checkpoint from Hugging Face by name, paste the loading snippet, and click through the trust_remote_code prompt without reading the code, which is the exact behavior the campaign was built around. Establish the event before the mechanism: Pluto Security tracked 31 malicious repositories across seven accounts in two waves since September 2026, and the second wave came back within days of the first takedown. Before any deep technical dive, land the horror detail: the flagship fake qwen2-tiny held a 42-byte model.safetensors with no tensors; everything malicious lived in modeling_evil2.py, a plain Python file the config's auto_map pointed at. Only then explain the mechanism, because the mechanism explains the defense: config.json names a Python file, Transformers imports it at load time, and Python runs a module's top-level statements to define its classes, so a _boot() call sitting next to the class definition executes before any weights load, no pickle needed. Then the platform gap: Hugging Face scans every file smaller than 2 GB with ClamAV and displays pickle imports, but a plain .py file is neither a known malware signature nor a serialized model, so the flagship scanned clean while it collected 28,412 downloads. Then the payoff for the local-AI viewer: the payload runs as their own interpreter, launches the miner from memory as a fake kernel worker named [kworker/u20:1], and leaves a watchdog that restarts it every 120 seconds plus shell hooks that survive reboots. Close with the checklist that maps one-to-one onto the attack: pull from the official org only, glance at the file list before downloading, prefer .safetensors weights (the format built to prevent arbitrary code execution), keep trust_remote_code off unless you have read the .py files it runs, pin the revision you reviewed, and check the machine if you already loaded a suspect model, because the model loading \"successfully\" is not evidence of safety; it is the attack completing.",
+  "claims": [
+    {
+      "claim": "Pluto Security disclosed the campaign on October 29, 2026: 31 malicious repositories across seven Hugging Face accounts, in two waves since September 2026, disguised as small Qwen2 test checkpoints, with the second wave still live eight days after being reported.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The code runs before the model does: trust_remote_code=True imports the repository's Python with the caller's privileges before any weights load, and no malicious weights are needed.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The flagship fake MENXIANGYU/qwen2-tiny contained no actual model: its model.safetensors was just 42 bytes with no tensors, and the payload lived in modeling_evil2.py, which auto_map pointed to.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The fake qwen2-tiny climbed from 7,354 downloads at disclosure to 28,412 downloads by October 28, 2026, while scanning clean on every scanner that ran, including a JFrog report that the payload file was \"not a machine-learning model.\"",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The malware is a GPU crypto-miner paying real money: the operator's wallet had received about 2,276 PRL across 716 transactions (roughly $5,000) and was still active on mining pools after the repositories behind it were removed.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "Hugging Face's malware scanning runs every file smaller than 2 GB through the ClamAV antivirus at each commit, and ClamAV matches known signatures; a plain Python file referenced by auto_map is neither a known signature nor a serialized model, so it scans clean.",
+      "source_url": "https://huggingface.co/docs/hub/security-malware",
+      "source_title": "Malware Scanning - Hugging Face",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The Transformers security policy puts the responsibility on the user: it recommends safetensors as \"developed specifically to prevent arbitrary code execution on your system\" and says to \"always\" verify the content of the modeling files when using trust_remote_code.",
+      "source_url": "https://raw.githubusercontent.com/huggingface/transformers/main/SECURITY.md",
+      "source_title": "Security Policy - huggingface/transformers",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "The miner hides as a fake Linux kernel worker: the payload copies the binary into a memory-backed file descriptor and executes it as [kworker/u20:1], leaving no executable path on disk, while a watchdog restarts a missing miner every 120 seconds.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "A near-identical copy of the fake payload was still live on Hugging Face under the account htt0118 when checked, listing a model size of 0 params and no model card.",
+      "source_url": "https://huggingface.co/htt0118/qwen2-tiny",
+      "source_title": "htt0118/qwen2-tiny - Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    },
+    {
+      "claim": "Vetting the publisher is a real filter: the campaign's fake READMEs were copied word for word from the official Qwen2.5-0.5B model card, so the org name is the tell, not the card text.",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+      "source_title": "Load/Mine: A Hugging Face Malware Campaign Returns After Takedown",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "flagship fake downloads by October 28",
+      "value": "28,412 downloads",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+    },
+    {
+      "label": "fake weights file size",
+      "value": "42 bytes",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+    },
+    {
+      "label": "malicious repositories across seven accounts",
+      "value": "31 malicious repositories",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+    },
+    {
+      "label": "operator wallet received on-chain",
+      "value": "about 2,276 PRL (~$5,000)",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+    },
+    {
+      "label": "watchdog relaunch interval",
+      "value": "every 120 seconds",
+      "source_url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/"
+    },
+    {
+      "label": "Hugging Face malware scan file-size cap",
+      "value": "smaller than 2 GB",
+      "source_url": "https://huggingface.co/docs/hub/security-malware"
+    },
+    {
+      "label": "real Qwen2.5-0.5B parameter count",
+      "value": "0.49B",
+      "source_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B"
+    },
+    {
+      "label": "live htt0118 copy, downloads last month",
+      "value": "98",
+      "source_url": "https://huggingface.co/htt0118/qwen2-tiny"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a memo slipped into a bundle of blueprints",
+      "mapping": "the repo looks like a normal model package (config.json, a README copied word for word from the real card, a weights file), but the malicious logic is a memo (modeling_evil2.py) inserted into the bundle, and trust_remote_code=True is the instruction \"execute any memo in the bundle on arrival\"",
+      "limit": "a memo is passive text a human reads, while the .py file executes automatically with your privileges the moment you load, and it leaves a watchdog and shell hooks behind after you delete the repo"
+    },
+    {
+      "vehicle": "a frozen dinner with a sticky note inside",
+      "mapping": "safetensors is the sealed, see-through meal (the format cannot execute code), while custom code is the sticky note that says \"run me\"",
+      "limit": "the viewer never opens the package to inspect it; they paste a snippet and click through the prompt, and the note runs during loading, not at mealtime"
+    },
+    {
+      "vehicle": "a fake utility worker with a clipboard",
+      "mapping": "the miner disguises itself as a kernel worker ([kworker/u20:1]) the way a scammer dresses as a technician; the process list looks official while the GPU does the attacker's work",
+      "limit": "a real technician works a shift and leaves, while this one is memory-resident, invisible to disk scans, restarted every 120 seconds, and can hand over a reverse shell long after the \"visit\""
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Hugging Face scans everything, so a clean scan means safe.",
+      "reality": "Scanning matches known malware signatures and pickle imports, but a plain Python file referenced by auto_map is neither, so the flagship scanned clean while it collected 28,412 downloads (claim 4, claim 6)."
+    },
+    {
+      "myth": "Safetensors files can carry this malware too.",
+      "reality": "safetensors was built to prevent arbitrary code execution; the fake's model.safetensors was an empty 42-byte decoy, and the malware lived in the .py file the flag runs (claim 3, claim 7)."
+    },
+    {
+      "myth": "I would notice a miner on my machine.",
+      "reality": "The payload launches from memory as a fake kernel worker with no executable path on disk, and the first sign is usually a GPU busier than it should be or a cloud bill (claim 8)."
+    },
+    {
+      "myth": "This kind of attack needs poisoned weights or a pickle exploit.",
+      "reality": "No malicious weights are needed; the permission to run a custom implementation is the whole attack (claim 2)."
+    },
+    {
+      "myth": "A convincing model card means a legit model.",
+      "reality": "The fake READMEs were copied word for word from the official Qwen2.5-0.5B model card, so the org name is the tell, not the card (claim 10)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "trust_remote_code",
+      "definition": "A loading flag that tells Transformers to download and import the model repository's own Python files, which run with your privileges before any weights load."
+    },
+    {
+      "term": "safetensors",
+      "definition": "Hugging Face's weight-serialization format, built specifically to prevent arbitrary code execution, unlike pickle."
+    },
+    {
+      "term": "auto_map",
+      "definition": "The section of a repo's config.json that names which Python module and class Transformers should import to build the model."
+    },
+    {
+      "term": "pickle",
+      "definition": "Python's serialization format and the default for PyTorch .bin weights, which can execute arbitrary code when deserialized."
+    },
+    {
+      "term": "reverse shell",
+      "definition": "A backdoor where the victim machine connects out to the attacker's server and hands over an interactive command shell."
+    },
+    {
+      "term": "memfd_create",
+      "definition": "A Linux syscall that creates an anonymous memory-backed file, letting malware run a binary without writing an executable path to disk."
+    },
+    {
+      "term": "PRL (Pearl)",
+      "definition": "The cryptocurrency this campaign's wallets mined into, visible on public pool dashboards."
+    },
+    {
+      "term": "ClamAV",
+      "definition": "The open-source antivirus whose signature matching Hugging Face runs on every uploaded file under 2 GB."
+    },
+    {
+      "term": "watchdog",
+      "definition": "A separate process that restarts the miner if it is killed; here, every 120 seconds."
+    },
+    {
+      "term": "IoC (Indicator of Compromise)",
+      "definition": "A concrete artifact such as a file path, hash, process name or network address that defenders use to check whether a machine was hit."
+    }
+  ],
+  "unverified": [
+    "The number of confirmed infected machines is unknown; Pluto's counts measure downloads, not confirmed infections or unique victims.",
+    "Whether Hugging Face has removed the still-live second-wave and linked repositories since Pluto's October 28 status table.",
+    "That Ollama or llama.cpp users are unaffected in general; Pluto names the GGUF parser and pickle formats as two other doors for code execution, and this campaign simply did not use them.",
+    "That the operator's wallet keeps growing after Pluto's October 21 on-chain capture.",
+    "Whether any given home machine is clean; that needs a first-party run of Pluto's quick checks (grep for svc.py in shell startup files, look for /tmp/.cch/, look for a process named [kworker/u20:1] carrying mining arguments)."
+  ],
+  "suggested_outline": "Hook: someone downloaded a \"qwen2-tiny\" test model this month, the weights file was 42 bytes, and their GPU started mining Pearl for a stranger.\nThe event: Pluto Security, October 29, 31 fake repos across seven accounts, two waves, back within days of takedown.\nThe tell anyone can check tonight: real org \"Qwen\" versus random-string accounts; the real card lists 0.49B parameters while the fake lists 0 params and no model card.\nThe mechanism in one breath: config.json's auto_map names a .py file, Transformers imports it at load, and a _boot() call runs before any weights, so trust_remote_code=True means \"run this stranger's script as me.\"\nWhy the scanner did not save anyone: ClamAV matches signatures under 2 GB per file, and a plain .py file is neither a signature nor a serialized model, so the flagship scanned clean through 28,412 downloads.\nWhat actually runs: a miner launched from memory as [kworker/u20:1], restarted every 120 seconds by a watchdog, with shell hooks that survive reboots.\nThe tonight checklist: check the org, read the file list, prefer safetensors, keep trust_remote_code off unless you read the code, pin the revision, verify the hash, and run the quick checks if you already loaded one.\nHonest catch: cryptomining is the mildest thing this entry point can deliver; the same mechanism can run anything your loading process is allowed to do.",
+  "notes": "Two near-conflicts, both resolved in Pluto's favor. Wave-one downloads: Pluto's scope table records \"728\" before removal; BleepingComputer says \"more than 700 downloads\" (compatible; Pluto's exact table wins). Download milestones: Business Insider's \"18,012 downloads by October 25\" matches Pluto's Hub-listing series (7,354 at disclosure, 18,012 on October 25, 25,854 on October 27, 28,412 on October 28), so cite Pluto's series. Thin spots: the flagship MENXIANGYU/qwen2-tiny repo page itself is no longer fetchable (Hugging Face has disabled access, per BleepingComputer), so the 42-byte detail rests on Pluto's report alone; the live htt0118 copy is the only fake-repo page first-party fetchable today, showing 0 params and 98 downloads last month. The strongest hook number is the 42-byte weights file inside a repo downloaded 28,412 times.",
+  "viewer_situation": "You download open models from Hugging Face by name, paste the loading snippet, and click through the trust_remote_code prompt without reading the code.",
+  "has_process": true,
+  "process_steps": [
+    "Check the org name against the official publisher (Qwen, not MENXIANGYU or htt0118) before downloading.",
+    "Open the Files page and look for a real weights file and any .py files an auto_map points to.",
+    "Prefer .safetensors weights and keep trust_remote_code off unless you have read the Python it would run.",
+    "Pin the exact revision you reviewed when a model legitimately needs custom code.",
+    "Verify the sha256 of downloaded weight files against a trusted source before loading.",
+    "Run Pluto's quick checks on a suspect machine: grep for svc.py in shell startup files, look for /tmp/.cch/, and look for a process named [kworker/u20:1] carrying mining arguments."
+  ],
+  "objection": "A skeptical engineer says: the checklist only covers the Transformers loading path, because safetensors did not stop this fake (its 42-byte decoy scanned clean, the attack lived in config.json and a .py file), and Ollama and llama.cpp users never type trust_remote_code at all."
+}

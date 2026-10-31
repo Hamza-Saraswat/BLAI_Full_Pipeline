@@ -2,14 +2,14 @@
 slug: 2026-10-31-fake-qwen2-checkpoints-the-tru
 workspace: shorts
 title: "Fake Qwen2 checkpoints: the trust_remote_code crypto-mining trap"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-31
-updated: "2026-10-31T11:09:55Z"
+updated: "2026-10-31T11:45:13Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-10-31-radar]]
 - Ideas: [[stages/02-ideas/output/2026-10-31-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-10-31-fake-qwen2-checkpoints-the-tru-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
