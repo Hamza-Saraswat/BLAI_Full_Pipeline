@@ -1,0 +1,882 @@
+[
+  {
+    "id": "hn-58bdc6b4d6",
+    "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+    "url": "https://github.com/dbreunig/nesformer",
+    "source": "hn",
+    "published_at": "2026-10-30T16:40:22Z",
+    "signals": {
+      "points": 255,
+      "num_comments": 122,
+      "signal": 0.968,
+      "signal_parts": {
+        "points": 0.972,
+        "comments": 0.959
+      },
+      "decay": 0.7672,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 255 points, 122 comments on HN, 18 h ago",
+    "score": 78
+  },
+  {
+    "id": "github-41b54c5aa0",
+    "title": "unsloth v0.1.913-beta: Customize + Performance + UI/UX improvements",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.913-beta",
+    "source": "github",
+    "published_at": "2026-10-30T14:46:03Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.913-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7464,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "DeepSeek"
+    ],
+    "summary": "Make Unsloth your own with custom backgrounds and a improved UI/UX. This release also cuts app update times and speeds up Linux app and Qwen-Image gen when VRAM is limited. Also new: DeepSeek-V4.1-Flash-1017 in Unsloth [Dynamic v3.1](https://unsloth.ai/docs/models/deepseek-v4.1-flash) GGUFs (preview",
+    "why_now": "Shipped: unslothai/unsloth v0.1.913-beta released, 20 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-d7e14f1ee7",
+    "title": "llama.cpp b12020",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
+    "source": "github",
+    "published_at": "2026-10-31T08:07:49Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12020",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9591,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> opencl: add fwht (#31434) Co-authored-by: Li He <lih@qti.qualcomm.com> </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/62071228> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/r",
+    "why_now": "Shipped: ggml-org/llama.cpp b12020 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-1f9be0e48e",
+    "title": "llama.cpp b12019",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12019",
+    "source": "github",
+    "published_at": "2026-10-31T05:19:26Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12019",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.921,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Qwen",
+      "Claude"
+    ],
+    "summary": "<details open> chat : strip the think block in the qwen3-coder with reasoning_format none (#31380) * chat : accept the think block in the qwen3-coder response format with reasoning_format none Assisted-by: Claude Opus 5.5 * chat : define both qwen3-coder think block variants up front </details> **We",
+    "why_now": "Shipped: ggml-org/llama.cpp b12019 released (pre-release), 6 h ago",
+    "score": 54
+  },
+  {
+    "id": "github-e75cb72fc7",
+    "title": "llama.cpp b12018",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12018",
+    "source": "github",
+    "published_at": "2026-10-31T02:21:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12018",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8825,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sycl: fix f32 to q2_0/q4_0/q5_0 rounding in CPY (#31120) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/62012681> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downlo",
+    "why_now": "Shipped: ggml-org/llama.cpp b12018 released (pre-release), 9 h ago",
+    "score": 53
+  },
+  {
+    "id": "hn-a0473096a6",
+    "title": "Tell HN: Claude is using my limits even though it's infra is failing",
+    "url": "https://news.ycombinator.com/item?id=50313539",
+    "source": "hn",
+    "published_at": "2026-10-31T05:52:29Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 5,
+      "signal": 0.305,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.357
+      },
+      "decay": 0.9284,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I am using Claude design, and a lot of times it&#x27;s agent is failing mid-task, with connection errors (not sure is this connection between me and agent, or between agent in Claude infra and relevant LLM model)<p>When these errors happen:<p>1. My limits have been consumed already<p>2. There is no",
+    "why_now": "Broke: 4 points, 5 comments on HN, 5 h ago",
+    "score": 39
+  },
+  {
+    "id": "hn-8891476791",
+    "title": "CrowdStrike: Vapor Panda ran intrusions with DeepSeek-based agents",
+    "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/",
+    "source": "hn",
+    "published_at": "2026-10-30T15:55:11Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7589,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-5759e08cce",
+    "title": "Show HN: Claude Code guards built from my agent's repeated mistakes",
+    "url": "https://github.com/hadiux0295/claude-code-mistake-guards",
+    "source": "hn",
+    "published_at": "2026-10-30T14:24:33Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7426,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-45a4d6e464",
+    "title": "Fake Qwen2 checkpoints on Hugging Face mine crypto via trust_remote_code",
+    "url": "https://pluto.security/blog/hugging-face-malware-campaign-load-mine/",
+    "source": "hn",
+    "published_at": "2026-10-30T13:33:42Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7335,
+      "age_h": 21.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-fc456b5251",
+    "title": "Show HN: AI agent needs process to build a commercial application",
+    "url": "https://nomorehappypath.com/",
+    "source": "hn",
+    "published_at": "2026-10-30T14:49:17Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.747,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I decided to test this claim with my app, NoMoreHappyPath (NMHP), against Claude on a real project.<p>Here is the test:<p>I built Acremuse, a commercial real estate analysis platform, with Claude Desktop and Codex as a reviewer. It is deployed and used today by a couple of investors. Then I wondered",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 20 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-ddebb5b7f1",
+    "title": "PostgreSQL 19 Running Behind Schedule Due to AI/LLM Burden",
+    "url": "https://www.phoronix.com/news/PostgreSQL-19-Late",
+    "source": "hn",
+    "published_at": "2026-10-30T20:06:12Z",
+    "signals": {
+      "points": 11,
+      "num_comments": 0,
+      "signal": 0.305,
+      "signal_parts": {
+        "points": 0.435,
+        "comments": 0.0
+      },
+      "decay": 0.8062,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 11 points, 0 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-db4f8cb3fa",
+    "title": "Show HN: I'm killing AI slop spam with a simple Google script",
+    "url": "https://news.ycombinator.com/item?id=50310650",
+    "source": "hn",
+    "published_at": "2026-10-30T21:53:31Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.8273,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "As a founder, I&#x27;ve been getting an increasing amount of useless unsolicited outreach, all of which is clearly generated using AI. For some reason, Google&#x27;s spam filter doesn&#x27;t flag these emails as spam, so my phone buzzes throughout the day (especially in the morning) when one of thes",
+    "why_now": "Shipped: 4 points, 2 comments on HN, 13 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-ae1a51b2ea",
+    "title": "Show HN: Fastbrowse, Browser agent that picks clicks with a System One model",
+    "url": "https://www.fastbrowse.ai/",
+    "source": "hn",
+    "published_at": "2026-10-30T22:37:34Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.8361,
+      "age_h": 12.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I&#x27;m Furqan founder of Nebula. We&#x27;ve spent a lot of time building, using and breaking browser agents. The main issues we ran into were costs and speed. So we built our own and open sourced it.<p>It&#x27;s pretty simple, give it a task and it drives Chrome faster and cheaper than the",
+    "why_now": "Broke: 3 points, 2 comments on HN, 12 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-803c85a50a",
+    "title": "Where AI agents' social boundaries break: 5 LLMs try to form a government",
+    "url": "https://judgementlabs.app/blog/the-coalition-room",
+    "source": "hn",
+    "published_at": "2026-10-31T00:06:00Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.8541,
+      "age_h": 10.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 2 points, 2 comments on HN, 11 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-c42d0b8ebd",
+    "title": "Language models running locally on hardware that has no business running them",
+    "url": "https://github.com/emrehangorgec/awesome-llm-on-anything",
+    "source": "hn",
+    "published_at": "2026-10-30T18:46:04Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7908,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 16 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-890122f33f",
+    "title": "Show HN: Free OCR Cost Calculator - Estimate multi-provider LLM token costs",
+    "url": "https://ocrbench.app/blog/llm-ocr-cost-calculator/",
+    "source": "hn",
+    "published_at": "2026-10-31T10:38:43Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9946,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Here is a cost calculator i made to estimate ocr cost on the main llm provider, it request the free endpoints of each llm provider and multiply by the input token price.",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 0 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-e2e608ec08",
+    "title": "Show HN: Imza - plan and review focused coding agent",
+    "url": "https://github.com/umutsevdi/imza",
+    "source": "hn",
+    "published_at": "2026-10-31T09:58:23Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.985,
+      "age_h": 1.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi everyone. I&#x27;ve been building Imza for the last three months. It&#x27;s yet another coding agent. I know there are a dozen have been posted here. But I believe this one is different enough to have a place here.<p>It has three explicit modes: plan, build and review. Plan mode allows you to dra",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 1 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-bc7f5e9ec5",
+    "title": "Non-autoregressive NC LLM spits tokens 21x faster than text diffusion",
+    "url": "https://hazyresearch.stanford.edu/blog/2026-10-12-ncm",
+    "source": "hn",
+    "published_at": "2026-10-31T06:31:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.937,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 5 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-a57ebc590a",
+    "title": "I built a honeypot for LLMs, will a agent take the bait?",
+    "url": "https://victorribeiro.com/bots/",
+    "source": "hn",
+    "published_at": "2026-10-30T21:58:45Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8283,
+      "age_h": 13.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 13 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-67e05e36b6",
+    "title": "LlamaIndex's Document Parsing Protocol: 140 rules for a correctly parsed page",
+    "url": "https://www.llamaindex.ai/blog/introducing-the-document-parsing-protocol",
+    "source": "hn",
+    "published_at": "2026-10-30T15:55:41Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.759,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-35ffb899c5",
+    "title": "AWS's Hydro team wants the compiler to catch coding agents' mistakes",
+    "url": "https://thenewstack.io/ai-agents-compiler-guardrails/",
+    "source": "hn",
+    "published_at": "2026-10-30T15:26:37Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7537,
+      "age_h": 19.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hf-a5a50723e0",
+    "title": "maya-research/maya2-native",
+    "url": "https://huggingface.co/maya-research/maya2-native",
+    "source": "hf",
+    "published_at": "2026-10-26T02:58:10Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 126,
+      "downloads": 2853,
+      "trendingScore": 125.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.669,
+      "signal_parts": {
+        "trending": 0.636,
+        "likes": 0.701,
+        "downloads": 0.576
+      },
+      "decay": 0.1574,
+      "age_h": 128.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 126 likes, 2.9k downloads, trending score 125, created 2026-10-26",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 126 likes, 2.9k downloads, trending score 125, 5 d ago",
+    "score": 8
+  },
+  {
+    "id": "hn-32e1e2aaf9",
+    "title": "Real-time zero-knowledge LLM identification from physical telemetry",
+    "url": "https://zenodo.org/records/23806637",
+    "source": "hn",
+    "published_at": "2026-10-31T09:05:11Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9724,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-3747fbb2e7",
+    "title": "Live benchmark of web scraping APIs and residential proxies (2026)",
+    "url": "https://github.com/tianjun588/llm-web-scraping-benchmark",
+    "source": "hn",
+    "published_at": "2026-10-31T07:39:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9526,
+      "age_h": 3.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-cc118bb027",
+    "title": "Anthropomorphize AI, but first learn what 'AI wants' means",
+    "url": "https://blog.kolen.dev/LLM/want",
+    "source": "hn",
+    "published_at": "2026-10-31T01:31:49Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8719,
+      "age_h": 9.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-77ad8eec4d",
+    "title": "Audio8 Open Weight TTS 600M",
+    "url": "https://github.com/Edge0-AI/Audio8_TTS",
+    "source": "hn",
+    "published_at": "2026-10-30T18:33:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7884,
+      "age_h": 16.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-0a6eed13af",
+    "title": "Signet: Cryptographic Enforcement of LLM Transitions",
+    "url": "https://github.com/harishbalasubramanian/signet-ai",
+    "source": "hn",
+    "published_at": "2026-10-30T16:51:07Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7692,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-29c921c35c",
+    "title": "Show HN: NKTg AI - An LLM that decodes text before generating",
+    "url": "https://nktg.org/",
+    "source": "hn",
+    "published_at": "2026-10-30T16:38:55Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.767,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-a74da55594",
+    "title": "One Company's AI Mistake",
+    "url": "https://boostedcode.com/blog/this-companys-ai-mistake/",
+    "source": "hn",
+    "published_at": "2026-10-30T16:09:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7616,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-36a8786fb9",
+    "title": "Local Inference with LLMs",
+    "url": "https://jacquesmattheij.com/local-inference-with-large-language-models/",
+    "source": "hn",
+    "published_at": "2026-10-30T12:16:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.72,
+      "age_h": 22.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:inference",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-6b2ffb44ef",
+    "title": "Can Coding Agents Reuse Past Debugging Experience Without Repeating Mistakes?",
+    "url": "https://twitter.com/AgentMemoryL/status/2115766704504471848",
+    "source": "hn",
+    "published_at": "2026-10-30T11:17:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7099,
+      "age_h": 23.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 24 h ago",
+    "score": 5
+  }
+]
