@@ -2,14 +2,14 @@
 slug: 2026-10-30-your-gguf-never-gets-patched-t
 workspace: shorts
 title: "Your GGUF never gets patched: the open-weight patch gap"
-status: idea
+status: expired
 pillar: enterprise-privacy
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T11:08:14Z"
+updated: "2026-10-31T13:35:25Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Why: Epoch AI report is 12 h old and the angle reframes "open weights are free" as "open weights are unpatched"; different lane and band from yesterday's picks.
 
 ## Build journal
-
+- 2026-10-31T13:35:25Z 2026-10-31T13:35:25Z expired: not from today's picks (2026-10-31); the factory carries no backlog

@@ -2,14 +2,14 @@
 slug: 2026-10-30-mistral-4-beats-chinese-models
 workspace: shorts
 title: "Mistral Large 4 benchmark: card vs claim"
-status: review
+status: expired
 pillar: myth-bust
 structure: news-react-so-what
 format: classic
 style_pack: halftone
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-30
-updated: "2026-10-30T12:55:51Z"
+updated: "2026-10-31T13:35:25Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-10-30T12:55:58Z 07-render ok 42.13s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 296
 - 2026-10-30T12:55:58Z 07-render ok 1063s
 - 2026-10-30T12:56:00Z build done, status review
+- 2026-10-31T13:35:25Z 2026-10-31T13:35:25Z expired: not from today's picks (2026-10-31); the factory carries no backlog
