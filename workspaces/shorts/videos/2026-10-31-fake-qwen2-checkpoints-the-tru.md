@@ -2,19 +2,19 @@
 slug: 2026-10-31-fake-qwen2-checkpoints-the-tru
 workspace: shorts
 title: "Fake Hugging Face models: Qwen2 trap"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-31
-updated: "2026-10-31T12:09:35Z"
+updated: "2026-10-31T12:12:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -47,6 +47,4 @@ blotato_post_id: ""
 - 2026-10-31 package checkpoint (unattended): searchable title picked ("Fake Hugging Face models: Qwen2 trap", 36 chars, keyword first) over two intriguing variants because the ideas gap is a defensive search query (keyword depth 29); description leads with keyword + promise in 126 chars; rubric 100/100 (every row full); contains_synthetic_media false (typographic scenes, creator voice clone, both exempt); no duplicate title vs the 38 published notes. check_outputs clean after hub links filled (Voice link points at the normalized narration stage 04 wrote per its contract).
 
 ## Build journal
-
-
-
+- 2026-10-31T12:12:10Z build start on gn100-83c4
