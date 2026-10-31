@@ -35,5 +35,8 @@ blotato_post_id: ""
 
 - 2026-10-31 ideas checkpoint (unattended): picked rank 3 (opportunity 71.3, depth 29 on "fake huggingface model") as the day's how-to: a live malware campaign with a tonight checklist (checksum, trust_remote_code, source vetting). Lane differs from pick 1 (explainer) and from yesterday (myth-bust, enterprise-privacy); no news-react used. Format classic: one fact, one consequence, act tonight. Unsloth beta (79.3) skipped, two Shorts inside 14 days.
 
+- 2026-10-31 research checkpoint (unattended): angle confirmed for 2026-10-31-fake-qwen2-checkpoints-the-tru.
+- Chosen: a live-campaign how-to (fake Qwen2 checkpoints on Hugging Face mine crypto through trust_remote_code; the video lands a three-part tonight checklist: vet the source, prefer safetensors / flip trust_remote_code off, verify the checksum). Why: matches the pick's classic band (one fact, one consequence, act tonight) and the keyword gap (defensive checklist tied to a named campaign, Pluto Security disclosure ~2026-10-30).
+
 ## Build journal
 
