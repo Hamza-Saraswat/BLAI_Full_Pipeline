@@ -1,0 +1,113 @@
+{
+  "slug": "2026-10-31-fake-qwen2-checkpoints-the-tru",
+  "topic": "Fake Qwen2 checkpoints on Hugging Face mine crypto through the trust_remote_code flag; the tonight checklist that keeps your GPU yours",
+  "title": "Fake Qwen2 checkpoints: 3 checks tonight",
+  "description": "Fake Qwen2 test models on Hugging Face mine crypto the moment you load them with trust_remote_code enabled. Pluto Security tracked 31 malicious repos across seven accounts. You will learn the three checks that catch them tonight: vet the org, open the files page, verify the hash. (Narration is AI-generated.)",
+  "hashtags": [
+    "#HuggingFace",
+    "#LocalAI",
+    "#CyberSecurity"
+  ],
+  "tags": [
+    "fake huggingface model",
+    "hugging face malware",
+    "qwen2",
+    "trust_remote_code",
+    "hugging face model safety",
+    "crypto mining malware",
+    "safetensors",
+    "model checkpoint security",
+    "local llm security",
+    "run llm at home",
+    "gpu crypto miner",
+    "pluto security load mine",
+    "verify sha256 model",
+    "hugging face safetensors",
+    "local model safety",
+    "build local ai"
+  ],
+  "hook_text": "You click trust. The repo runs first.",
+  "hook_candidates": [
+    "Three moves and your GPU stays yours tonight.",
+    "Three checks and no fake model loads tonight.",
+    "You paste the snippet. The repo runs its own code first.",
+    "You click trust. That click runs a stranger's Python.",
+    "The clean scan isn't the proof. The org name is.",
+    "Your scanner isn't the safety. The org name is.",
+    "A fake Qwen2 scanned clean to twenty-eight thousand downloads.",
+    "Hugging Face or Qwen? The org name decides.",
+    "Three moves and no fake model loads tonight.",
+    "You download by name. The repo runs first."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "EQUIPS,TEACHES",
+  "hook_pattern": "situation",
+  "target_duration_s": 44,
+  "narration_full": "You download open models from Hugging Face and click trust. The repo's code runs before the model does. Take qwen-two-tiny. Perfect page. The card was copied from the real Qwen card. The org was a random string. Scanned clean past twenty-eight thousand downloads. The weights file is forty-two bytes, holding no tensors. The config points straight at that Python file. You click trust_remote_code, the flag that runs the repo's Python before weights load. The weights never mattered. A miner hides as a kernel worker, a background process. A watchdog restarts it every two minutes. Your GPU mines Pearl. This ride is Transformers-only; Ollama and llama.cpp never type the flag. Delete the repo, grep startup files for svc.py. The page you trust is the page you verified.",
+  "analogy": {},
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You download open models from Hugging Face and click trust. The repo's code runs before the model does.",
+      "on_screen_text": "You click trust. The repo runs first.",
+      "visual_brief": "Frame 1 opens on the finished composition, caret blinking from 0.30s: Black terminal fades in at 0.30s; frame-one text typewriters in amber over a blinking block cursor; on \"The repo's code runs before the model does.\" a second prompt line prints beneath.",
+      "est_duration_s": 6.2
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Take qwen-two-tiny. Perfect page. The card was copied from the real Qwen card. The org was a random string. Scanned clean past twenty-eight thousand downloads.",
+      "on_screen_text": "MENXIANGYU ≠ Qwen · 28,412 downloads · ClamAV: clean",
+      "visual_brief": "Split-compare rises in place: left a repo card for \"Take qwen2-tiny\" with README lines mirroring the real Qwen card, right the org field stamped amber \"MENXIANGYU\" on \"org MENXIANGYU\"; a download counter settles at 28,412 beside a green ClamAV PASS tag on \"Scanned clean past twenty-eight thousand downloads.\"",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "The weights file is forty-two bytes, holding no tensors. The config points straight at that Python file.",
+      "on_screen_text": "model.safetensors: 42 bytes → auto_map: modeling_evil2.py",
+      "visual_brief": "Diagram-flow, terminal file listing: \"model.safetensors\" scales in tagged \"42 B\" on \"forty-two bytes, holding no tensors\"; an amber arrow draws from config auto_map to \"modeling_evil2.py\" on \"The config points straight at that Python file.\"",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "You click trust_remote_code, the flag that runs the repo's Python before weights load. The weights never mattered.",
+      "on_screen_text": "trust_remote_code=True ⇒ repo Python runs first",
+      "visual_brief": "Timeline with two ticks: \"repo Python runs\" lights amber first on \"the flag that runs the repo's Python before weights load\"; the \"weights load\" tick greys out on \"The weights never mattered.\"",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A miner hides as a kernel worker, a background process. A watchdog restarts it every two minutes. Your GPU mines Pearl. This ride is Transformers-only; Ollama and llama.cpp never type the flag.",
+      "on_screen_text": "[kworker/u20:1] · GPU → PRL",
+      "visual_brief": "Centered-stack process list: one amber line \"[kworker/u20:1]\" fades in among grey system processes on \"A miner hides as a kernel worker\"; a watchdog loop stamp \"120 s\" appears on \"restarts it every two minutes\"; on \"never type the flag,\" the process list dims.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Delete the repo, grep startup files for svc.py. The page you trust is the page you verified.",
+      "on_screen_text": "grep svc.py · ps [kworker]",
+      "visual_brief": "Grid of two checklist cells typewrites in on \"grep startup files for svc.py,\" each cell ticking amber; the grid holds through the payoff line, then wordmark settle.",
+      "est_duration_s": 5.9
+    }
+  ]
+}
