@@ -1,0 +1,204 @@
+{
+  "slug": "2026-11-01-deepseek-launches-a-claude-cod",
+  "topic": "DeepSeek launches a Claude Code rival: the local angle",
+  "generated_at": "2026-11-01T12:40:00Z",
+  "depth": "standard",
+  "thesis": "DeepSeek's Claude Code rival is not a cloud service you sign up for: the thing that launched is an MIT-licensed repo that runs on your own machine, and its brain is whatever model endpoint you point it at, including one on your own hardware.",
+  "explanation_path": "Open on the headline as the viewer met it: Bloomberg, hours old, DeepSeek drops a more autonomous coding agent to challenge Claude Code, from a lab sitting on about 100 billion yuan ($15 billion) of fresh funding. Then land the twist: the new open-source offering in Bloomberg's own sentence is the product -- there is no separate hosted service in the reporting, there is a GitHub repo. Establish what the repo is before why it matters: dsh-superagent is a bundle for DeepSeek Harness, a proactive coding agent for exactly one GitHub repository that listens for allowed people to ask for work, opens a Ticket for each request, works it in its own session and directory, and answers in the original conversation, often with a pull request. Now the idea underneath: DeepSeek's design essay argues the bottleneck has moved from model capability to human attention, because a person can actively follow only 3 to 5 sessions at once, so instead of one chat window the architecture splits into a Router that talks to people and isolated Workers that execute. Show what they claim it buys: in their simulation, p95 task completion of 15.7 minutes against 29.5 minutes for a single session -- and immediately what the claim is worth, since DeepSeek itself says the runs use synthetic load and do not measure single-task execution. Then the local consequence, which is the reason this channel cares: the agent scaffolding runs on your machine as a DeepSeek Harness profile, the harness itself is open source and starts with one npx command on localhost, and the model behind it is a pluggable provider -- DeepSeek's API, a third-party lab, or a self-hosted OpenAI-compatible server you run yourself. Close on the honest catch and the tonight-step: it is research code that its own authors call not production-ready, proactive work is parked in observe mode by default, both presets run with danger-full-access as your OS user, and setup is a guided conversation where your own coding agent reads SETUP.md and configures it with you.",
+  "claims": [
+    {
+      "claim": "Bloomberg reported on 2026-11-01 that DeepSeek released a prototype of a more autonomous coding agent to challenge Claude Code, and described the launch itself as open source.",
+      "source_url": "https://www.livemint.com/companies/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic-11793506699829.html",
+      "source_title": "DeepSeek Drops Enhanced Coding Agent With Aim to Rival Anthropic (Bloomberg via LiveMint)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "dsh-superagent is a proactive coding agent for one GitHub repository, packaged as a bundle for DeepSeek Harness: it opens a work item when an allowed person asks, works it in its own agent session and directory, and answers with a pull request.",
+      "source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "source_title": "GitHub - deepseek-ai/dsh-superagent-prototype: Towards a More Autonomous Agent System",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "The repo's own README fences it hard: research prototype, not an official DeepSeek product, much of the engineering done by coding agents, not production-ready.",
+      "source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "source_title": "GitHub - deepseek-ai/dsh-superagent-prototype: Towards a More Autonomous Agent System",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "In DeepSeek's self-reported simulation the Super-agent reached p95 task completion of 15.7 minutes versus 29.5 minutes for a single-session baseline (about 1.9x faster), but the tests used only synthetic messages and simulated tools and did not measure real coding quality.",
+      "source_url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+      "source_title": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent - MarkTechPost",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "DeepSeek's design essay claims a person can actively follow only 3 to 5 sessions at once, making human attention, not model capability, the bottleneck for multitasking agents.",
+      "source_url": "https://tech.ifeng.com/c/8xg9tbvWnnf",
+      "source_title": "DeepSeek提出Super-agent架构设计：Router与Worker双层架构 (IT之家 via ifeng)",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "It runs on your own machine as a dedicated Harness profile, and the prerequisites are ordinary dev tools, not a datacenter: Node.js 22.19+ or 24+, pnpm, git 2.32+, tmux, Python 3.8+, GitHub CLI 2.48+, plus DSH and a model provider.",
+      "source_url": "https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/SETUP.md",
+      "source_title": "dsh-superagent SETUP.md",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "The model is a pluggable endpoint: DSH's provider settings support a self-hosted server or any custom gateway speaking OpenAI Chat Completions, OpenAI Responses, or Anthropic Messages.",
+      "source_url": "https://deepseek-harness.github.io/deepseek-harness/en/guide/providers",
+      "source_title": "Configure models | DeepSeek Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "The platform it depends on, DeepSeek Harness, is itself open source under MIT with 267.9k stars at fetch, and starts locally with one command that serves a Web UI on your own machine.",
+      "source_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "source_title": "GitHub - deepseek-ai/deepseek-harness: DeepSeek Harness: Everything is a Plugin.",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-01"
+    },
+    {
+      "claim": "The stakes context: DeepSeek has raised about 100 billion yuan ($15 billion) in its latest round, one of China's largest ever, ahead of its IPO, explicitly to compete with Anthropic and OpenAI.",
+      "source_url": "https://www.livemint.com/companies/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic-11793506699829.html",
+      "source_title": "DeepSeek Drops Enhanced Coding Agent With Aim to Rival Anthropic (Bloomberg via LiveMint)",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Super-agent p95 task completion (synthetic simulation)",
+      "value": "15.7 minutes",
+      "source_url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
+    },
+    {
+      "label": "Single-session baseline p95",
+      "value": "29.5 minutes",
+      "source_url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
+    },
+    {
+      "label": "Super-agent p50 task completion",
+      "value": "12.4 minutes",
+      "source_url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
+    },
+    {
+      "label": "Sessions one person can actively follow",
+      "value": "3 to 5 sessions",
+      "source_url": "https://tech.ifeng.com/c/8xg9tbvWnnf"
+    },
+    {
+      "label": "DeepSeek latest fundraise",
+      "value": "about 100 billion yuan ($15 billion)",
+      "source_url": "https://www.livemint.com/companies/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic-11793506699829.html"
+    },
+    {
+      "label": "dsh-superagent repo stars (at fetch 2026-11-01)",
+      "value": "5.3k stars",
+      "source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+    },
+    {
+      "label": "DeepSeek Harness repo stars (at fetch 2026-11-01)",
+      "value": "267.9k stars",
+      "source_url": "https://github.com/deepseek-ai/deepseek-harness"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Shop foreman with isolated bays",
+      "mapping": "The Router is the foreman who takes every incoming request, hands each job to a worker in its own bay with its own tools, and comes back to you only with a finished job, a question, or a failure, because your attention is scarcer than mechanic-hours.",
+      "limit": "A foreman delegates to skilled humans he trusts, while here the foreman and every worker are the same model wearing different tool belts, and the shop keys are your full OS user account (danger-full-access)."
+    },
+    {
+      "vehicle": "Answering service for your repository",
+      "mapping": "It monitors the issue tracker and group chat around the clock so you do not have to, and rings you only when a rule you wrote allows it or a person must act.",
+      "limit": "An answering service only relays messages, while this thing writes code and opens pull requests, so the failure mode is unrequested action, not a missed message."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "DeepSeek launched a hosted Claude Code competitor you sign up for and wait in line to use.",
+      "reality": "The launch Bloomberg reported is the open-source repo itself, an MIT-licensed prototype you clone and run as a profile on your own machine (claims 1, 2, 6)."
+    },
+    {
+      "myth": "This is a local Claude Code killer you download, with the intelligence included.",
+      "reality": "The repo is scaffolding without a brain -- it needs a model provider you configure, and that endpoint can be DeepSeek's API, another lab's, or a self-hosted OpenAI-compatible server of your own (claims 6, 7)."
+    },
+    {
+      "myth": "The numbers prove it is about 1.9x better than a regular agent at coding.",
+      "reality": "The 15.7 vs 29.5 minutes figures come from DeepSeek's own simulation on synthetic messages with simulated tools, and DeepSeek says they do not measure single-task execution ability (claim 4)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "harness",
+      "definition": "The software scaffolding wrapped around a language model that lets it call tools, run commands, and manage multi-step work."
+    },
+    {
+      "term": "Router",
+      "definition": "The long-running front session that talks to people, keeps the global picture, and hands each unit of work to a worker."
+    },
+    {
+      "term": "Worker",
+      "definition": "An isolated agent session that does one Ticket's work in its own directory and reports back to the Router instead of talking to you."
+    },
+    {
+      "term": "Ticket",
+      "definition": "One unit of authorized work the agent opened from a request, run in its own session and directory."
+    },
+    {
+      "term": "observe mode",
+      "definition": "The default setting in which the agent records the proactive work it would have done without actually doing it."
+    },
+    {
+      "term": "model provider",
+      "definition": "The endpoint that actually generates the model's responses; the repo ships without one, so you must configure it."
+    },
+    {
+      "term": "OpenAI-compatible endpoint",
+      "definition": "A server that speaks the same API format as OpenAI's chat endpoint, which is one of the three protocols DSH's custom-provider option accepts."
+    },
+    {
+      "term": "pull request",
+      "definition": "A GitHub proposal to merge a set of code changes into a repository, which a person reviews and merges."
+    },
+    {
+      "term": "p95",
+      "definition": "The time by which 95 percent of tasks were finished in a test run."
+    }
+  ],
+  "unverified": [
+    "Community posts circulate 4,000+ stars in a day for the repo; GitHub showed 5.3k stars at fetch, but the one-day growth rate is not stated by any fetched page.",
+    "Whether a fully local stack, the harness plus a self-hosted OpenAI-compatible model server, completes a Ticket end to end has not been measured; the docs support the configuration, and this session did not run it.",
+    "No first-party number exists in the fetched pages for RAM, CPU, or tokens-per-second cost of running DeepSeek Harness itself on consumer hardware.",
+    "DeepSeek says an internal Super-agent instance has been running continuously, but the fetched reports give no duration or scale numbers.",
+    "A Reddit thread titled as a claim that the super-agent direction is not safe could not be read beyond its title, so community skepticism is unsummarized.",
+    "The Bloomberg original is paywalled; its text was verified only through two syndicated copies carrying the full article.",
+    "A claim that calls through DeepSeek Harness were free until billing starts November 1, Beijing time, appeared only in a search snippet and was never fetched."
+  ],
+  "suggested_outline": "Bloomberg, hours old: DeepSeek drops a coding agent to rival Claude Code, backed by about 100 billion yuan ($15 billion) -- and the open secret is in Bloomberg's own sentence, the offering is open source.\nWhat actually shipped: an MIT research prototype that lives on your machine, listens to one GitHub repo, and farms each allowed request to an isolated worker session, because a person can follow only 3 to 5 sessions at once; DeepSeek's simulation says p95 15.7 minutes versus 29.5 minutes, on synthetic load it admits measures scheduling, not coding.\nThe local consequence: scaffolding without a brain -- the harness starts with one npx command, and you point it at any model provider, including a self-hosted OpenAI-compatible server; the honest catch is research code, observe-by-default, and danger-full-access, and the tonight-step is letting your own coding agent read SETUP.md and set it up with you.",
+  "notes": "The 12.4/15.7/29.5-minute figures originate in DeepSeek's own design essay, posted on WeChat and not directly fetchable this session; they were read through ifeng's report of the essay and independently matched by MarkTechPost, which flags them as self-reported from secondary reports -- treat them as a vendor simulation, not a benchmark. Bloomberg frames the launch as a challenge to Claude Code while the repo README says not an official DeepSeek product; the script should carry both framings rather than pick one. Star counts are point-in-time at fetch. The fully-local configuration (harness plus a local OpenAI-compatible server) is documented in DSH's provider guide but untested here, so any runs-fully-local-tonight line must be hedged as the documented configuration, not a measured result.",
+  "viewer_situation": "You run open models at home on a gaming PC or a Mac, you work with an agent one chat window at a time, and you are wondering whether this week's launch changes anything for the hardware you already own.",
+  "has_process": true,
+  "process_steps": [
+    "Install Node.js and start the harness on your own machine with npx @deepseek-ai/dsh web.",
+    "Open Settings, Models, and add a Custom model API provider with the base URL of the model endpoint you want, including a self-hosted OpenAI-compatible server.",
+    "Clone the dsh-superagent-prototype repository from GitHub.",
+    "Ask your own coding agent: Read SETUP.md in this repository and set up dsh-superagent with me.",
+    "From an account on the allowed list, comment @<agent login> <request> on an issue in the repository and watch a Ticket appear on the panel."
+  ],
+  "objection": "This is a one-commit research prototype whose own README says it is not an official product, whose speed numbers come from a synthetic message simulation that never measured coding quality, and which runs with danger-full-access as your OS user -- it demos an architecture, it does not dethrone Claude Code."
+}
