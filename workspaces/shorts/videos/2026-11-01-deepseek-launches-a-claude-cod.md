@@ -2,14 +2,14 @@
 slug: 2026-11-01-deepseek-launches-a-claude-cod
 workspace: shorts
 title: "DeepSeek coding agent: a repo you run"
-status: building
+status: review
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-01
-updated: "2026-11-01T13:41:10Z"
+updated: "2026-11-01T13:55:40Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-01-deepseek-launches-a-claude-cod-script]]
 - Package: [[stages/05-package/output/2026-11-01-deepseek-launches-a-claude-cod-package]]
 - Voice: [[stages/06-voice/output/2026-11-01-deepseek-launches-a-claude-cod-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-01-deepseek-launches-a-claude-cod-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -42,3 +42,5 @@ blotato_post_id: ""
 - 2026-11-01T13:36:29Z 05-package: searchable title picked (keyword depth 72), seo_score 100, check_outputs 0 failures after artifact links filled. contains_synthetic_media false (typographic scenes, own voice clone). publish_slot_hint empty (11:00/18:00 CT rotation). Cloud half complete; build half left to blai-build.
 - 2026-11-01T13:41:10Z build start on gn100-83c4
 - 2026-11-01T13:42:13Z 06-voice ok 61s
+- 2026-11-01T13:55:45Z 07-render ok 42.33s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 302
+- 2026-11-01T13:55:45Z 07-render ok 809s
