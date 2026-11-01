@@ -2,14 +2,14 @@
 slug: 2026-10-31-fake-qwen2-checkpoints-the-tru
 workspace: shorts
 title: "Fake Hugging Face models: Qwen2 trap"
-status: review
+status: expired
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-10-31
-updated: "2026-10-31T12:33:07Z"
+updated: "2026-11-01T14:35:08Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-10-31T12:33:11Z 07-render ok 49.00s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 299
 - 2026-10-31T12:33:11Z 07-render ok 1066s
 - 2026-10-31T12:33:13Z build done, status review
+- 2026-11-01T14:35:08Z 2026-11-01T14:35:08Z expired: not from today's picks (2026-11-01); the factory carries no backlog

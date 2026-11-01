@@ -2,14 +2,14 @@
 slug: 2026-10-31-nesformer-a-nintendo-inside-1g
 workspace: shorts
 title: "nesformer: a Nintendo inside 1GB of Qwen weights"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-10-31
-updated: "2026-10-31T11:09:55Z"
+updated: "2026-11-01T14:35:08Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - 2026-10-31 ideas checkpoint (unattended): picked rank 1 (opportunity 85.1, autocomplete depth 41 on "tiny llm") over Unsloth beta (79.3) because Unsloth has two Shorts inside 14 days (2026-10-20, 2026-10-16); nesformer is the day's strongest item (HN 255 pts) with a lane rotation clear of yesterday (myth-bust, enterprise-privacy). Format smooth-explainer: the mechanism (weights as a console) carries a worked example the whole way.
 
 ## Build journal
-
+- 2026-11-01T14:35:08Z 2026-11-01T14:35:08Z expired: not from today's picks (2026-11-01); the factory carries no backlog
