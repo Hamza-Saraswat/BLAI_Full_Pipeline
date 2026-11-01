@@ -1,0 +1,798 @@
+[
+  {
+    "id": "hn-f9b8a9efbf",
+    "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+    "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+    "source": "hn",
+    "published_at": "2026-10-31T22:46:12Z",
+    "signals": {
+      "points": 268,
+      "num_comments": 123,
+      "signal": 0.974,
+      "signal_parts": {
+        "points": 0.98,
+        "comments": 0.961
+      },
+      "decay": 0.8258,
+      "age_h": 13.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "comparison"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 268 points, 123 comments on HN, 13 h ago",
+    "score": 83
+  },
+  {
+    "id": "github-bf39f464bc",
+    "title": "llama.cpp b12032",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12032",
+    "source": "github",
+    "published_at": "2026-11-01T09:00:59Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12032",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9575,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sycl: Try PkgConfig for LevelZero includes / libs (#31076) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/62286322> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/down",
+    "why_now": "Shipped: ggml-org/llama.cpp b12032 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-ce5935a79b",
+    "title": "llama.cpp b12031",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12031",
+    "source": "github",
+    "published_at": "2026-11-01T07:41:33Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12031",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9394,
+      "age_h": 4.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> opencl: add initial iq3 support (#31338) * opencl: add iq3_s AOS mv Assisted-by: Codex * opencl: add iq3_s SOA mv and tiled mm Assisted-by: Codex * opencl: add iq3_s noshuffle gemm/gemv for adreno Co-authored-by: Shaofei Qi <shaoqi@qti.qualcomm.com> Assisted-by: Codex * opencl: add iq",
+    "why_now": "Shipped: ggml-org/llama.cpp b12031 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-17dbec4a46",
+    "title": "llama.cpp b12030",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12030",
+    "source": "github",
+    "published_at": "2026-11-01T07:16:14Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12030",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9336,
+      "age_h": 4.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> hexagon : fix DMA transfers with strides > 24 bits (#31442) * hexagon : fix DMA transfers with strides > 24 bits On v75+ the 2D DMA descriptor stores row_size and strides in 24 bits. dma_queue_push sent oversized strides to fallback_2d, which only splits nrows, so strides of 16 MB or ",
+    "why_now": "Shipped: ggml-org/llama.cpp b12030 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-1fe4326766",
+    "title": "DeepSeek launches advanced coding agent to rival Claude Code",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
+    "source": "hn",
+    "published_at": "2026-11-01T09:07:49Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.9591,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 3 h ago",
+    "score": 34
+  },
+  {
+    "id": "hn-76e502c4eb",
+    "title": "DeepSeek open-sources dsh-superagent, a coding agent largely built by agents",
+    "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+    "source": "hn",
+    "published_at": "2026-10-31T13:41:11Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 0,
+      "signal": 0.282,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.0
+      },
+      "decay": 0.7243,
+      "age_h": 22.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 9 points, 0 comments on HN, 22 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-adcd7acb82",
+    "title": "QwenPU: An LLM running inside another LLM's weights",
+    "url": "https://huggingface.co/divagr1925/QwenPU",
+    "source": "hn",
+    "published_at": "2026-11-01T10:15:39Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9748,
+      "age_h": 1.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 2 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-0392967b11",
+    "title": "Six days, 742 turns, one chat window. A pseudonymised DeepSeek thread",
+    "url": "https://github.com/UKA-135/deepseek-long-thread-record",
+    "source": "hn",
+    "published_at": "2026-11-01T09:09:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9595,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-411a440881",
+    "title": "Qwen3.8-Flash Now Available in the EU on Alibaba Cloud",
+    "url": "https://twitter.com/alibaba_cloud/status/2115752786021192084",
+    "source": "hn",
+    "published_at": "2026-10-31T18:03:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7715,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Alibaba"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-659df33aa0",
+    "title": "Show HN: Publishub. An AI copilot for video creators and editors.",
+    "url": "https://www.getpublishub.com",
+    "source": "hn",
+    "published_at": "2026-10-31T17:52:36Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7695,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Copilot",
+      "group": "news-react"
+    },
+    "products": [
+      "Copilot"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-e6e48b4f44",
+    "title": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+    "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-23T09:43:05Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 521,
+      "downloads": 2294642,
+      "trendingScore": 226.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.857,
+      "signal_parts": {
+        "trending": 0.714,
+        "likes": 0.906,
+        "downloads": 1.0
+      },
+      "decay": 0.05,
+      "age_h": 218.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 521 likes, 2.3M downloads, trending score 226, created 2026-10-23",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 521 likes, 2.3M downloads, trending score 226, 9 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-c57285028e",
+    "title": "divagr1925/Qwen3.5-4B-Qwenputer",
+    "url": "https://huggingface.co/divagr1925/Qwen3.5-4B-Qwenputer",
+    "source": "hf",
+    "published_at": "2026-10-19T18:51:39Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 116,
+      "downloads": 885,
+      "trendingScore": 116.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.658,
+      "signal_parts": {
+        "trending": 0.626,
+        "likes": 0.689,
+        "downloads": 0.491
+      },
+      "decay": 0.05,
+      "age_h": 305.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 116 likes, 885 downloads, trending score 116, created 2026-10-19",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 116 likes, 885 downloads, trending score 116, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-d3b4bf3a5a",
+    "title": "Ask HN: Has Google started cleaning their search results from AI slop?",
+    "url": "https://news.ycombinator.com/item?id=50318869",
+    "source": "hn",
+    "published_at": "2026-10-31T18:50:25Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.7802,
+      "age_h": 17.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "Hey everyone,<p>I&#x27;m maintaining a couple personal pet projects and I&#x27;ve recently noticed in google search console that on both projects impressions and clicks went from 500-700 impressions &#x2F; 10-15 clicks daily to almost zero in one day. First I thought that I broke something (e.g. add",
+    "why_now": "Broke: 3 points, 2 comments on HN, 17 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-e1a067c8c9",
+    "title": "Anthropic pushes for opt-out model for Australian content",
+    "url": "https://www.theguardian.com/technology/2026/oct/02/anthropic-ai-opt-out-australia-copyright-abc-cannibalisation-of-news",
+    "source": "hn",
+    "published_at": "2026-10-31T22:42:51Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8251,
+      "age_h": 13.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Anthropic",
+      "group": "news-react"
+    },
+    "products": [
+      "Anthropic"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 13 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-9c3750ea1d",
+    "title": "GAAC: Lossless KV Cache Compression for Faster LLM Inference",
+    "url": "https://arxiv.org/abs/2610.38210",
+    "source": "hn",
+    "published_at": "2026-10-31T15:34:12Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7442,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 2 points, 2 comments on HN, 20 h ago",
+    "score": 13
+  },
+  {
+    "id": "hf-73e8678c87",
+    "title": "sensenova/SenseNova-Loop-9B-Preview",
+    "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+    "source": "hf",
+    "published_at": "2026-10-28T15:34:40Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 124,
+      "downloads": 927,
+      "trendingScore": 124.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.667,
+      "signal_parts": {
+        "trending": 0.635,
+        "likes": 0.699,
+        "downloads": 0.495
+      },
+      "decay": 0.2632,
+      "age_h": 92.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 124 likes, 927 downloads, trending score 124, created 2026-10-28",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 124 likes, 927 downloads, trending score 124, 4 d ago",
+    "score": 13
+  },
+  {
+    "id": "hn-970ba09708",
+    "title": "Show HN: Reducing LLM Context Complexity from O(N^2) to O(k)",
+    "url": "https://github.com/samamatariq3527/Deferred-Cognitive-Architecture",
+    "source": "hn",
+    "published_at": "2026-10-31T16:34:19Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7551,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-f484f82bfb",
+    "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+    "url": "https://arxiv.org/abs/2610.29820",
+    "source": "hn",
+    "published_at": "2026-10-31T16:30:16Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7544,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 3 points, 0 comments on HN, 20 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-698c27c3a3",
+    "title": "Do you still need embeddings for semantic search? - my little experiment",
+    "url": "https://internals.laxmena.com/p/can-an-llm-and-a-keyword-index-replace",
+    "source": "hn",
+    "published_at": "2026-11-01T03:47:22Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8879,
+      "age_h": 8.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 8 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-5f966b42db",
+    "title": "The LLM Engineer's Schedule",
+    "url": "https://kwojcicki.github.io/blog/LLM-ENGINEER-SCHEDULE",
+    "source": "hn",
+    "published_at": "2026-10-31T16:54:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7587,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-cac686ba9b",
+    "title": "Show HN: Rust crawler for SEO and content audits, with optional LLM review",
+    "url": "https://crawler.siteone.io/",
+    "source": "hn",
+    "published_at": "2026-11-01T09:52:30Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9694,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-50b74ad187",
+    "title": "Show HN: Hey Spark - open-source voice assistant for your laptop, any LLM brain",
+    "url": "https://github.com/contextuai/hey-spark",
+    "source": "hn",
+    "published_at": "2026-10-31T18:09:19Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7726,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-d78488692f",
+    "title": "GPUCost - Cloud GPU Prices Normalized by VRAM and LLM VRAM Sizer",
+    "url": "https://gpu-cost-r34p.vercel.app/",
+    "source": "hn",
+    "published_at": "2026-10-31T16:31:00Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7545,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-5681c75870",
+    "title": "Ask HN: How are the other sciences using AI?",
+    "url": "https://news.ycombinator.com/item?id=50317158",
+    "source": "hn",
+    "published_at": "2026-10-31T15:38:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.745,
+      "age_h": 20.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "I understand CS and mathematics. But I&#x27;ve heard it claimed that a lot of the other sciences are using LLMs every day as well. Can anybody explain these workflows?",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-5c53aafd62",
+    "title": "Gandalf: Extending SSD Lifespan for LLM KV Cache Offloading",
+    "url": "https://arxiv.org/abs/2610.30791",
+    "source": "hn",
+    "published_at": "2026-10-31T15:32:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.744,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-ae166ac714",
+    "title": "What would happen if the internet went down?",
+    "url": "https://www.channelnewsasia.com/commentary/ai-cybersecurity-attack-php-6506261",
+    "source": "hn",
+    "published_at": "2026-10-31T14:47:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.736,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-bf55134aca",
+    "title": "LiquidAI/d1-2B",
+    "url": "https://huggingface.co/LiquidAI/d1-2B",
+    "source": "hf",
+    "published_at": "2026-10-24T19:30:34Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 134,
+      "downloads": 4256,
+      "trendingScore": 134.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.678,
+      "signal_parts": {
+        "trending": 0.645,
+        "likes": 0.71,
+        "downloads": 0.605
+      },
+      "decay": 0.0696,
+      "age_h": 184.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 134 likes, 4.3k downloads, trending score 134, created 2026-10-24",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 134 likes, 4.3k downloads, trending score 134, 8 d ago",
+    "score": 4
+  }
+]
