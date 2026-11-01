@@ -1,0 +1,111 @@
+{
+  "slug": "2026-11-01-deepseek-launches-a-claude-cod",
+  "topic": "DeepSeek's Claude Code rival is an MIT repo you run locally",
+  "title": "DeepSeek's Claude Code Rival Is A Repo You Run",
+  "description": "DeepSeek's Claude Code rival is not a hosted app: it is an MIT-licensed repo that runs on your own machine with the model endpoint of your choice. You'll learn what dsh-superagent actually is, what the router-worker split buys, and the catches. Subscribe for daily local AI shorts. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#ClaudeCode",
+    "#LocalAI"
+  ],
+  "hook_text": "It's a repo, and it's yours",
+  "hook_candidates": [
+    "You think DeepSeek launched an app. It's a repo, and it's yours.",
+    "One npx command. DeepSeek's rival agent wakes up on localhost.",
+    "DeepSeek's Claude Code rival runs on the box you already own.",
+    "Fifteen point seven minutes. The fine print says: simulated.",
+    "Five thousand three hundred stars for scaffolding without a brain.",
+    "Three to five sessions. That's the wall this router is built around.",
+    "Worth cloning tonight? Real agent scaffolding, rough and yours.",
+    "DeepSeek shipped a Claude Code rival with no model inside.",
+    "A router, spare sessions, one repo: DeepSeek's answer to attention.",
+    "DeepSeek's 'Super-Agent' watches one repo and answers with pull requests."
+  ],
+  "style_pack": "blueprint",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,REFRAMES",
+  "hook_pattern": "wrong-diagnosis",
+  "target_duration_s": 38,
+  "narration_full": "You think DeepSeek launched an app. It's a repo, and it's yours. Bloomberg's own sentence calls it the new open-source offering. The thing itself is dsh-superagent, an MIT repo you run on your gaming PC. It's a profile of DeepSeek Harness, the scaffolding that lets a model call tools. No brain included: you pick the model provider, even your own self-hosted server. A Router talks to people; Workers each take one Ticket in its own directory. DeepSeek's reason: you can follow only three to five sessions. DeepSeek's fifteen point seven minute figure is a synthetic simulation, not a benchmark. The repo fences itself: research prototype, not a product, with danger-full-access to your user account. Worth cloning, not worth marrying.",
+  "analogy": {
+    "vehicle": "none used",
+    "mapping": "writer chose the plain mechanism over both brief candidates"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You think DeepSeek launched an app. It's a repo, and it's yours.",
+      "on_screen_text": "You think it's an app | It's a repo",
+      "visual_brief": "Frame 1: a drafted app-store card outline centered under the fully legible hook line, blueprint guides and dimension ticks around it. Onset 0.4s: the card scales down and fades while 'It's a repo' rises in place; by the sentence end a GitHub-style file tree draws itself in thin guide lines where the card was.",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Bloomberg's own sentence calls it the new open-source offering. The thing itself is dsh-superagent, an MIT repo you run on your gaming PC.",
+      "on_screen_text": "Bloomberg: the new open-source offering",
+      "visual_brief": "Left half: a clipped article card with the quoted phrase underlined as the narrator says it, underline drawing on 'open-source offering'. Right half: on 'dsh-superagent' a repo card rises in place with the MIT badge stamping on 'MIT repo', then a small desktop tower outline fades in beneath on 'gaming PC'. Hard cut between halves, no cross-dissolve.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "It's a profile of DeepSeek Harness, the scaffolding that lets a model call tools. No brain included: you pick the model provider, even your own self-hosted server.",
+      "on_screen_text": "Harness profile | no brain included",
+      "visual_brief": "A harness outline drafts itself around an empty brain slot on 'scaffolding'; the slot pulses once, empty, on 'No brain included'. On 'you pick' a plug socket rises in place with three sockets labeled API, lab, self-hosted; on 'self-hosted server' a home server box fades in beside the socket and a cable line draws from socket to box.",
+      "est_duration_s": 9.3
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "A Router talks to people; Workers each take one Ticket in its own directory. DeepSeek's reason: you can follow only three to five sessions.",
+      "on_screen_text": "Router -> Workers | 3-5 sessions",
+      "visual_brief": "Top node labeled Router lights up on 'talks to people' with two speech ticks. On 'one Ticket' three worker cells fade in below in a grid, each drawing its own folder icon and taking a ticket card. On 'three to five sessions' a small meter beside the grid fills three of five slots, the last two hatched out.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "DeepSeek's fifteen point seven minute figure is a synthetic simulation, not a benchmark.",
+      "on_screen_text": "15.7 min | synthetic simulation",
+      "visual_brief": "The digits 15.7 scale up to fill the safe area on 'fifteen point seven', sized for the safe box. On 'synthetic' a stamped tag fades in over the corner of the digits; on 'not a benchmark' the word benchmark appears struck through by a single drawn line. One motion at a time, no element slides from an edge.",
+      "est_duration_s": 4.5,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The repo fences itself: research prototype, not a product, with danger-full-access to your user account. Worth cloning, not worth marrying.",
+      "on_screen_text": "research prototype | full account access",
+      "visual_brief": "A README warning banner rises in place on 'research prototype' with a hazard tick on 'danger-full-access'; the banner holds one beat, then the wordmark settles into the same guide-line frame as frame 1 for the loop anchor. Final 0.5s is the settle only, nothing else moves.",
+      "est_duration_s": 6.9
+    }
+  ],
+  "notes_for_review": "The fifteen point seven and twenty-nine point five minute figures are a vendor simulation on synthetic messages; this draft spends only the p95 and words it as a simulation, never a benchmark. 'Runs on your gaming PC' is the documented profile configuration, not a measured run. The dsh-superagent name and MIT license are verbatim from the repo. No analogy used; the plain router-worker mechanism carries the teach."
+}

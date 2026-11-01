@@ -1,0 +1,548 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-01T13:34:37+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-01-deepseek-launches-a-claude-cod-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-01-deepseek-launches-a-claude-cod-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "docs": 4,
+      "primary": 5
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 7,
+    "entities_total": 21,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.438,
+    "source_domains": [
+      "github.com",
+      "github.io",
+      "githubusercontent.com",
+      "ifeng.com",
+      "livemint.com",
+      "marktechpost.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 7,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.286,
+      "detail": [
+        {
+          "label": "Super-agent p95 task completion (synthetic simulation)",
+          "value": "15.7 minutes",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "15.7",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "Single-session baseline p95",
+          "value": "29.5 minutes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Super-agent p50 task completion",
+          "value": "12.4 minutes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Sessions one person can actively follow",
+          "value": "3 to 5 sessions",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "3",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "DeepSeek latest fundraise",
+          "value": "about 100 billion yuan ($15 billion)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "dsh-superagent repo stars (at fetch 2026-11-01)",
+          "value": "5.3k stars",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DeepSeek Harness repo stars (at fetch 2026-11-01)",
+          "value": "267.9k stars",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 21,
+      "found_count": 5,
+      "score": 0.238,
+      "found": [
+        "DeepSeek",
+        "DSH",
+        "Harness",
+        "MIT",
+        "Bloomberg"
+      ],
+      "missing": [
+        "GitHub",
+        "Anthropic",
+        "GitHub CLI 2.48",
+        "OpenAI Chat Completions",
+        "OpenAI Responses",
+        "Anthropic Messages",
+        "Web UI",
+        "README",
+        "CLI 2.48",
+        "Node",
+        "Python",
+        "Claude Code",
+        "Anthropic and OpenAI",
+        "p95",
+        "IPO",
+        "Super"
+      ],
+      "top2": [
+        "DeepSeek",
+        "DSH"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "DSH",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Harness",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GitHub",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Anthropic",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "GitHub CLI 2.48",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI Chat Completions",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI Responses",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Anthropic Messages",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Web UI",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "README",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CLI 2.48",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Node",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Python",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Code",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Bloomberg",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Anthropic and OpenAI",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "p95",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IPO",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Super",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DeepSeek"
+      ],
+      "hook_text": "It's a repo, and it's yours",
+      "first_sentence": "You think DeepSeek launched an app."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "You think DeepSeek launched an app. It's a repo, and it's yours."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:DSH",
+            "entity:MIT",
+            "entity:Bloomberg"
+          ],
+          "narration": "Bloomberg's own sentence calls it the new open-source offering. The thing itself is dsh-superagent, an MIT repo you run on your gaming PC."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.3,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek",
+            "entity:Harness"
+          ],
+          "narration": "It's a profile of DeepSeek Harness, the scaffolding that lets a model call tools. No brain included: you pick the model provider, even your own self-hosted server."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:3 to 5 sessions",
+            "entity:DeepSeek"
+          ],
+          "narration": "A Router talks to people; Workers each take one Ticket in its own directory. DeepSeek's reason: you can follow only three to five sessions."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "num:15.7 minutes",
+            "entity:DeepSeek"
+          ],
+          "narration": "DeepSeek's fifteen point seven minute figure is a synthetic simulation, not a benchmark."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 6.9,
+          "specific": false,
+          "hits": [],
+          "narration": "The repo fences itself: research prototype, not a product, with danger-full-access to your user account. Worth cloning, not worth marrying."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.8,
+      "words": 124,
+      "sentences": 11,
+      "est_speech_s": 42.8,
+      "vo_band_ok": true
+    },
+    "narration_full": "You think DeepSeek launched an app. It's a repo, and it's yours. Bloomberg's own sentence calls it the new open-source offering. The thing itself is dsh-superagent, an MIT repo you run on your gaming PC. It's a profile of DeepSeek Harness, the scaffolding that lets a model call tools. No brain included: you pick the model provider, even your own self-hosted server. A Router talks to people; Workers each take one Ticket in its own directory. DeepSeek's reason: you can follow only three to five sessions. DeepSeek's fifteen point seven minute figure is a synthetic simulation, not a benchmark. The repo fences itself: research prototype, not a product, with danger-full-access to your user account. Worth cloning, not worth marrying.",
+    "on_screen": "It's a repo, and it's yours | You think it's an app | It's a repo | Bloomberg: the new open-source offering | Harness profile | no brain included | Router -> Workers | 3-5 sessions | 15.7 min | synthetic simulation | research prototype | full account access"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-01-deepseek-launches-a-claude-cod-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 6.8,
+        "words": 124,
+        "est_speech_s": 42.8,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 46 chars \u2014 mobile truncates ~40",
+          "FK grade 6.8 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s02: 'MIT' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-01-deepseek-launches-a-claude-cod-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 7,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.238,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "DSH"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DeepSeek"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
