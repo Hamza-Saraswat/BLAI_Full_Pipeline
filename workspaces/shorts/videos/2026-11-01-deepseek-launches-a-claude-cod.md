@@ -2,14 +2,14 @@
 slug: 2026-11-01-deepseek-launches-a-claude-cod
 workspace: shorts
 title: "DeepSeek launches a Claude Code rival: the local angle"
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-01
-updated: "2026-11-01T12:08:37Z"
+updated: "2026-11-01T12:52:13Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-01-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-01-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-01-deepseek-launches-a-claude-cod-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - No conflict with rotation: at most one news-react today; lane differs from yesterday's picks (how-to, explainer).
 
 ## Build journal
-
+- 2026-11-01T12:52:13Z 03-research: 11 fetched sources (9 cache files), 9 claims, 7 key numbers, validator 0. Research corrected the premise: the launched thing IS the MIT-licensed dsh-superagent repo (Bloomberg story was the repo open-sourcing, not a hosted product); thesis is local-first. Angle confirmed, slug unchanged.
