@@ -2,14 +2,14 @@
 slug: 2026-11-01-deepseek-launches-a-claude-cod
 workspace: shorts
 title: "DeepSeek coding agent: a repo you run"
-status: review
+status: expired
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-01
-updated: "2026-11-01T13:55:40Z"
+updated: "2026-11-02T14:35:38Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-11-01T13:55:45Z 07-render ok 42.33s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 302
 - 2026-11-01T13:55:45Z 07-render ok 809s
 - 2026-11-01T13:55:47Z build done, status review
+- 2026-11-02T14:35:38Z 2026-11-02T14:35:38Z expired: not from today's picks (2026-11-02); the factory carries no backlog
