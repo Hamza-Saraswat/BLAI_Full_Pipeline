@@ -1,0 +1,246 @@
+[
+ {
+  "title": "vLLM v0.33 lands: what changes on one GPU",
+  "keyword": "vllm v0.33",
+  "lane": "news-react",
+  "why_now": "v0.33.0rc3 shipped 2 h before the sweep",
+  "radar_items": [
+   "github-vllm"
+  ],
+  "value_types": [
+   "TEACHES",
+   "EQUIPS"
+  ],
+  "band": "classic",
+  "angle": "The default local serving stack just moved; here is the one change that matters on a single card.",
+  "autocomplete": {
+   "depth_score": 4
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "llama.cpp ships four builds in a day",
+  "keyword": "llama.cpp build",
+  "lane": "news-react",
+  "why_now": "b12034 and b12038 landed 4 h apart",
+  "radar_items": [
+   "github-llamacpp-12038",
+   "github-llamacpp-12034"
+  ],
+  "value_types": [
+   "TEACHES",
+   "EQUIPS"
+  ],
+  "band": "classic",
+  "angle": "Local inference moves daily; what a 4-hour build gap means for your tokens/s.",
+  "autocomplete": {
+   "depth_score": 9
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "NVIDIA Flare: the DGX Spark gets its own inference engine",
+  "keyword": "nvidia flare dgx spark",
+  "lane": "news-react",
+  "why_now": "NVIDIA/spark-local-inference repo surfaced 11 h ago",
+  "radar_items": [
+   "hn-flare"
+  ],
+  "value_types": [
+   "EQUIPS",
+   "TEACHES"
+  ],
+  "band": "classic",
+  "angle": "The box this channel builds on now has a first-party serving option.",
+  "autocomplete": {
+   "depth_score": 7
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Run a 124B MoE on one DGX Spark: NVIDIA's three moves",
+  "keyword": "dgx spark moe",
+  "lane": "how-to",
+  "why_now": "NVIDIA blog: 3 ways to boost MoE inference on one Spark",
+  "radar_items": [
+   "hn-nvidia-moe-blog"
+  ],
+  "value_types": [
+   "EQUIPS",
+   "TEACHES"
+  ],
+  "band": "smooth-explainer",
+  "angle": "Three concrete moves that fit a 124B MoE on the box everyone says is too small.",
+  "autocomplete": {
+   "depth_score": 14
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "DeepSeek V4.1 Flash GGUF: 30k downloads in 5 days",
+  "keyword": "deepseek v4.1 flash gguf",
+  "lane": "news-react",
+  "why_now": "AtomicChat GGUF at 30.3k downloads, trending 156",
+  "radar_items": [
+   "hf-atomicchat-gguf",
+   "hf-obliteratus"
+  ],
+  "value_types": [
+   "TEACHES",
+   "EQUIPS"
+  ],
+  "band": "classic",
+  "angle": "The quants people are actually pulling, and what runs on consumer VRAM.",
+  "autocomplete": {
+   "depth_score": 0
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Fire up an open-weight Claude Code on your own box",
+  "keyword": "open weight claude code alternative",
+  "lane": "how-to",
+  "why_now": "Ask HN thread with 11 comments in a day",
+  "radar_items": [
+   "hn-claude-code-alt"
+  ],
+  "value_types": [
+   "EQUIPS",
+   "TEACHES"
+  ],
+  "band": "smooth-explainer",
+  "angle": "Three moves from nothing to a local coding agent that owns your repo.",
+  "autocomplete": {
+   "depth_score": 2
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Sweet-search: local code search cuts agent bills 5-33%",
+  "keyword": "local code search agent",
+  "lane": "how-to",
+  "why_now": "Show HN 20 h ago with a number in the title",
+  "radar_items": [
+   "hn-sweet-search"
+  ],
+  "value_types": [
+   "EQUIPS",
+   "PROVES"
+  ],
+  "band": "classic",
+  "angle": "Move the search local and the per-run bill drops; the 5-33% claim is the thing to test.",
+  "autocomplete": {
+   "depth_score": 0
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Avartha: open-weight voice AI claims it beats OpenAI",
+  "keyword": "avartha voice ai",
+  "lane": "comparison",
+  "why_now": "Launch post 14 h ago",
+  "radar_items": [
+   "hn-avartha"
+  ],
+  "value_types": [
+   "REFRAMES",
+   "TEACHES"
+  ],
+  "band": "classic",
+  "angle": "Open weights vs the big three on voice latency, where local should win on paper.",
+  "autocomplete": {
+   "depth_score": 12
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Your RTX 3090 is still an AI workhorse",
+  "keyword": "rtx 3090 ai",
+  "lane": "myth-bust",
+  "why_now": "trustmebro builder ran the whole 13M-opinion job on one 3090",
+  "radar_items": [
+   "hn-trustmebro"
+  ],
+  "value_types": [
+   "REFRAMES",
+   "EQUIPS"
+  ],
+  "band": "smooth-explainer",
+  "angle": "Everyone says you need a 4090 or a datacenter; a 3090 just did a datacenter-looking job.",
+  "autocomplete": {
+   "depth_score": 25
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Can a software startup survive local LLMs? The HN verdict",
+  "keyword": "single gpu llm startup",
+  "lane": "explainer",
+  "why_now": "31 points, 39 comments on HN in 13 h",
+  "radar_items": [
+   "hn-startup-survive"
+  ],
+  "value_types": [
+   "REFRAMES",
+   "TEACHES"
+  ],
+  "band": "classic",
+  "angle": "One thread, one question, and what it means for anyone building on their own GPU.",
+  "autocomplete": {
+   "depth_score": 12
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ },
+ {
+  "title": "Mind maps without the subscription: local models vs Claude",
+  "keyword": "mind map ai model",
+  "lane": "comparison",
+  "why_now": "Ask HW thread 3 h ago",
+  "radar_items": [
+   "hn-mindmap"
+  ],
+  "value_types": [
+   "EQUIPS",
+   "TEACHES"
+  ],
+  "band": "classic",
+  "angle": "A buyer asks which frontier model to rent; the local answer may already be installed.",
+  "autocomplete": {
+   "depth_score": 8
+  },
+  "competition": null,
+  "vidiq": null,
+  "trend_slope": null,
+  "named_product": true
+ }
+]
