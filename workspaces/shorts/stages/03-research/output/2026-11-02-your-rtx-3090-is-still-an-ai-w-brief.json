@@ -1,0 +1,206 @@
+{
+  "slug": "2026-11-02-your-rtx-3090-is-still-an-ai-w",
+  "topic": "Your RTX 3090 is still an AI workhorse",
+  "generated_at": "2026-11-02T12:37:36Z",
+  "depth": "standard",
+  "thesis": "The RTX 3090's 24 GB of GDDR6X still fits the same models a 4090 fits, so for local AI the card you already own is still the workhorse, not the bottleneck.",
+  "explanation_path": "Open on the viewer's card and the verdict they keep hearing, then establish the one fact that verdict ignores: whether a model runs locally is decided by memory capacity first, and the 3090's 24 GB of GDDR6X is the same capacity as a 4090's. With that rule in place, land the concrete case: a builder really did process 13,576,547 opinions from Reddit and Hacker News into a ranked product site, using a 26B MoE model on NVLinked 3090 cards with vLLM in a basement. Then make the rule tangible with measured speeds: a 27B model at Q4_K_M occupies 15.65 GiB and generates 39.878 tokens per second on a single card, while a 70B model squeezes 23 GB into the same 24 GB and crawls at 5.2 tok/s, which is the honest shape of the ceiling. Only after the payoff, name why the myth exists: the 5090 raises capacity to 32 GB of GDDR7, the 4090 adds native FP8 hardware the 3090 lacks and is roughly 30% faster on FP16 inference, and the 3090 draws 350 W doing it. Close on the reframe: the upgrade conversations measure speed the viewer mostly cannot feel, while the capacity that decides what fits has not moved against them, and the marquee job that proved it ran on cards from 2020.",
+  "claims": [
+    {
+      "claim": "trustmebro.reviews ranks 47,699 products, places and tools from 13,576,547 verbatim opinions.",
+      "source_url": "https://www.trustmebro.reviews/",
+      "source_title": "trustmebro.reviews -- what Reddit actually recommends",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "The site's builder says the opinion extractions were run with Gemma 4 26B MoE on pairs of NVLinked 3090 cards using vLLM, in a basement.",
+      "source_url": "https://news.ycombinator.com/item?id=50333280",
+      "source_title": "Show HN: 13M opinions on 48k products extracted from Reddit and HN | Hacker News",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "NVIDIA's own spec table lists the RTX 3090's standard memory config as 24 GB GDDR6X on a 384-bit interface.",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+      "source_title": "3090 & 3090 Ti Graphics Cards | NVIDIA GeForce",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "NVIDIA rates the RTX 3090's graphics card power at 350 W and its required system power at 750 W.",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+      "source_title": "3090 & 3090 Ti Graphics Cards | NVIDIA GeForce",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "On a single RTX 3090, Qwen3.6 27B at Q4_K_M quantization occupies 15.65 GiB and generates 39.878 tokens/s in llama-bench at the default 4K context.",
+      "source_url": "https://ahelpme.com/ai/llamacpp-ai/llama-bench-the-qwen3-6-27b-and-nvidia-rtx-3090/",
+      "source_title": "llama-bench the Qwen 3.6 27B and NVIDIA RTX 3090",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "LLaMA 3 70B at 4-bit GGUF Q4_K_M on an RTX 3090 generates 5.2 tok/s single-stream, with model weights alone consuming 23 GB of the card's 24 GB.",
+      "source_url": "https://gigagpu.com/llama-3-70b-on-rtx-3090-benchmark/",
+      "source_title": "LLaMA 3 70B on RTX 3090: Performance Benchmark & Cost",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "The RTX 3090's memory bandwidth is 936 GB/s (GDDR6X) against about 1,008 GB/s for the RTX 4090.",
+      "source_url": "https://gigagpu.com/rtx-3090-vs-rtx-4090-ai/",
+      "source_title": "RTX 3090 vs RTX 4090 for AI: Which to Pick in 2026",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "The RTX 4090's 4th-gen Tensor Cores have native FP8 that the 3090 lacks, capping the Ampere card at FP16, BF16 and INT8 accelerated paths, and the 4090 is roughly 30% faster on FP16 LLM inference.",
+      "source_url": "https://gigagpu.com/rtx-3090-vs-rtx-4090-ai/",
+      "source_title": "RTX 3090 vs RTX 4090 for AI: Which to Pick in 2026",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "NVIDIA's RTX 5090 page lists 32 GB of GDDR7 memory at a starting price of $1999, and its RTX 4090 page lists 24 GB of G6X memory starting at $1599.00.",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+      "source_title": "GeForce RTX 5090 Graphics Cards | NVIDIA",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-02"
+    },
+    {
+      "claim": "RTX 3090 cards traded around $1100 on eBay as of Q2 2026, per the hardware list of a benchmark build.",
+      "source_url": "https://ahelpme.com/ai/llamacpp-ai/llama-bench-the-qwen3-6-27b-and-nvidia-rtx-3090/",
+      "source_title": "llama-bench the Qwen 3.6 27B and NVIDIA RTX 3090",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-11-02"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "opinions extracted and ranked",
+      "value": "13,576,547 verbatim opinions",
+      "source_url": "https://www.trustmebro.reviews/"
+    },
+    {
+      "label": "products, places and tools covered",
+      "value": "47,699 products",
+      "source_url": "https://www.trustmebro.reviews/"
+    },
+    {
+      "label": "RTX 3090 memory",
+      "value": "24 GB GDDR6X",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/"
+    },
+    {
+      "label": "27B model generation speed, one card",
+      "value": "39.878 tokens/s (Qwen3.6 27B Q4_K_M, single RTX 3090, 4K context)",
+      "source_url": "https://ahelpme.com/ai/llamacpp-ai/llama-bench-the-qwen3-6-27b-and-nvidia-rtx-3090/"
+    },
+    {
+      "label": "70B model generation speed, one card",
+      "value": "5.2 tok/s (LLaMA 3 70B, 4-bit GGUF Q4_K_M)",
+      "source_url": "https://gigagpu.com/llama-3-70b-on-rtx-3090-benchmark/"
+    },
+    {
+      "label": "RTX 3090 graphics card power",
+      "value": "350 W",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/"
+    },
+    {
+      "label": "RTX 5090 memory",
+      "value": "32 GB GDDR7",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"
+    },
+    {
+      "label": "bandwidth, 3090 vs 4090",
+      "value": "936 GB/s (GDDR6X)",
+      "source_url": "https://gigagpu.com/rtx-3090-vs-rtx-4090-ai/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "an older heavy-duty pickup truck next to this year's sports trim",
+      "mapping": "the truck bed (24 GB GDDR6X) is the same size as the newer truck's bed, so it hauls the same loads (same model sizes fit); it just burns more fuel per trip (350 W) and lacks the new turbo modes (FP8 hardware)",
+      "limit": "the load itself grows past the bed (32 GB cards, FP8-native models), or the job is paid by the hour at scale, where the roughly 30% speed gap compounds into real money"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "You need a 4090 or 5090 for serious local AI.",
+      "reality": "The 3090's 24 GB GDDR6X is the same capacity as a 4090's 24 GB of G6X, so the models that fit one fit the other (claim 3, claim 9)."
+    },
+    {
+      "myth": "A 2020 card is too slow to be usable.",
+      "reality": "A 27B model runs at 39.878 tokens per second on a single 3090; the true wall is 70B-class models, which squeeze 23 GB of weights into 24 GB and drop to 5.2 tok/s (claim 5, claim 6)."
+    },
+    {
+      "myth": "The 13M-opinion job proves one 3090 can do anything.",
+      "reality": "The builder says it ran on pairs of NVLinked 3090 cards, not one (claim 2)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "VRAM",
+      "definition": "The memory sitting on the graphics card itself, which must hold the whole model for fast local inference."
+    },
+    {
+      "term": "GDDR6X",
+      "definition": "The type of memory chips on the RTX 3090; the generation number describes speed, not quantity."
+    },
+    {
+      "term": "Quantization (Q4_K_M)",
+      "definition": "Shrinking a model's weights to fewer bits so it fits in less memory, at some quality cost; Q4_K_M is a common 4-bit scheme."
+    },
+    {
+      "term": "Tokens per second (tok/s)",
+      "definition": "How many word-pieces the card generates each second; reading speed is roughly 5 to 10 tokens per second."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The working memory a model builds up as context grows, which eats into VRAM on top of the model weights."
+    },
+    {
+      "term": "MoE (Mixture of Experts)",
+      "definition": "A model design that stores many specialist sections but activates only a few per token, so big total size can run cheaply."
+    },
+    {
+      "term": "vLLM",
+      "definition": "An open-source engine for serving language models, known for high throughput on NVIDIA cards."
+    },
+    {
+      "term": "NVLink",
+      "definition": "NVIDIA's direct cable between two GPUs, faster than routing through the CPU, used to pool cards."
+    },
+    {
+      "term": "Memory bandwidth (GB/s)",
+      "definition": "How fast the card can read its own memory; token generation is usually limited by this, not raw compute."
+    },
+    {
+      "term": "FP8",
+      "definition": "An 8-bit number format with dedicated hardware on newer cards; Ampere cards like the 3090 have no FP8 units and fall back to FP16/BF16/INT8."
+    }
+  ],
+  "unverified": [
+    "How long the 13M-opinion extraction took and what it cost in electricity; no fetched page states runtime, hours, or dollars.",
+    "Whether a single RTX 3090 could have run the extraction job alone; the only statement says pairs of NVLinked cards.",
+    "That builders at large consider the 3090 obsolete for AI is community sentiment repeated in discussions, not a claim any fetched page documents.",
+    "Any figure for today's street price of a used 3090 beyond one benchmark page's \"around $1100 in ebay.com (Q2 2026)\"."
+  ],
+  "suggested_outline": "A builder just turned 13,576,547 Reddit and Hacker News opinions into a ranked product site, and the card that did the reading was a 3090 -- the one everyone told you was obsolete.\nWhat actually decides what runs locally is memory capacity: the 3090's 24 GB of GDDR6X is the same 24 GB a 4090 carries, and measured today a 27B model fits in 15.65 GiB and answers at 39.878 tokens per second.\nThe honest catch and the reframe: 70B-class models cram 23 GB into that 24 GB and crawl at 5.2 tok/s, the card drinks 350 W and has no FP8 while a 4090 is about 30% faster -- but obsolete meant not enough memory, and your memory was never the problem.",
+  "notes": "Two NVIDIA URLs 404ed this run and are not cited: /en-us/geforce/graphics-cards/rtx-3090/ and the /specifications/ subpath; the 30-series family page carries the full spec table instead. Conflict: the Show HN title claims 48k products while the site's own homepage counter says 47,699; prefer the site's own number (primary) and treat 48k as rounding. The 3090's 936 GB/s bandwidth is not printed on NVIDIA's marketing page; the benchmark page states it as \"936.2 GB/s (according to the official documents from NVIDIA)\" and the comparison page as 936 GB/s, so the comparison page is cited. The angle's \"single 3090\" framing is not supported: the builder's own words are \"pairs of NVLinked 3090 cards\", and the script must keep that qualifier.",
+  "viewer_situation": "You've got an RTX 3090 sitting in your tower and every AI video since 2023 has told you it's obsolete.",
+  "has_process": false,
+  "objection": "A 4090 is roughly 30% faster on FP16, carries native FP8 hardware the 3090 will never get, and the marquee job you're citing ran on pairs of NVLinked 3090s, not one card."
+}

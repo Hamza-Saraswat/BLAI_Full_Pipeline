@@ -2,7 +2,7 @@
 slug: 2026-11-02-your-rtx-3090-is-still-an-ai-w
 workspace: shorts
 title: Your RTX 3090 is still an AI workhorse
-status: idea
+status: researched
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-02-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-02-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-02-your-rtx-3090-is-still-an-ai-w-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03 checkpoint (unattended): angle confirmed as picked -- myth-bust lane, smooth-explainer, REFRAMES+EQUIPS; no redirect needed, slug unchanged.
+- 03 numbers: HN title says 48k products, site counter says 47,699; kept the site's own primary number. The angle's "single 3090" is not supported (builder: pairs of NVLinked 3090s); scripts must keep the pairs qualifier.
 
 ## Build journal
 
