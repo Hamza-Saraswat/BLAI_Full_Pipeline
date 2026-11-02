@@ -2,18 +2,18 @@
 slug: 2026-11-02-your-rtx-3090-is-still-an-ai-w
 workspace: shorts
 title: Your RTX 3090 is still an AI workhorse
-status: building
+status: blocked
 pillar: myth-bust
 structure: story-first
 format: smooth-explainer
 style_pack: signal
 value_types: "REFRAMES,EQUIPS"
 created: 2026-11-02
-updated: "2026-11-02T13:25:10Z"
+updated: "2026-11-02T13:33:33Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.060, 6 mismatch(es): expected 'thirty nineties' heard 'three thousand ninety s'; expected 'and a half' heard 'five'; expected 'thirty nineties a' heard 'three thousand ninety sa'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -43,3 +43,6 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-02T13:25:10Z build start on gn100-83c4
+- 2026-11-02T13:30:16Z 06-voice fail 304s (voice QA failed: WER 0.096, 9 mismatch(es): expected 'thirty nineties' heard 'three thousand ninety s'; expected 'and a half' heard 'five'; expected 'thirty nin)
+- 2026-11-02T13:33:33Z 06-voice fail 196s (voice QA failed: WER 0.060, 6 mismatch(es): expected 'thirty nineties' heard 'three thousand ninety s'; expected 'and a half' heard 'five'; expected 'thirty nin)
+- 2026-11-02T13:33:33Z blocked at 06-voice
