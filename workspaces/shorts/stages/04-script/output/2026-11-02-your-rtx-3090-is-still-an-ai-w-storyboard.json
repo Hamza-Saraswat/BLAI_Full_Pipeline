@@ -1,0 +1,164 @@
+{
+  "slug": "2026-11-02-your-rtx-3090-is-still-an-ai-w",
+  "topic": "Your RTX 3090 is still an AI workhorse",
+  "title": "RTX 3090 Still Runs Local AI: The One Spec That Decides What Fits",
+  "description": "Your RTX 3090 is still an AI workhorse for local AI, and a basement project proves it. A builder turned thirteen and a half million Reddit and Hacker News opinions into a site called Trust Me Bro Reviews, ranked products with the shills filtered out, using pairs of NVLinked RTX 3090s running a Gemma mixture-of-experts model with vLLM. Everyone assumed 2020 cards were obsolete, but the spec that decides what runs is VRAM capacity, and the 3090's 24 GB of GDDR6X matches an RTX 4090 exactly. You'll learn why memory capacity decides which models fit on your card, where the honest wall sits as giant models crawl at about five tokens a second, and why the catches (FP8 hardware, power draw, and the pairs qualifier) don't change the verdict. If a 3090 sits in your tower, watch this before you upgrade. Subscribe to Build Local AI for more. (Narration is AI-generated.)",
+  "hashtags": [
+    "#RTX3090",
+    "#LocalAI",
+    "#LLM"
+  ],
+  "hook_text": "A basement. Pairs of 3090s.",
+  "hook_candidates": [
+    "13,576,547 opinions. One old GPU.",
+    "A basement. Pairs of 3090s. One ranked half the internet.",
+    "Your 3090 matches a 4090 at the one spec that decides what runs.",
+    "2020 called. Its GPU still runs 2026 models.",
+    "Thirteen million Reddit opinions, ranked by a six-year-old card.",
+    "The cheapest 24 GB card is still the one you own.",
+    "Everyone called it obsolete. Then it shipped a product.",
+    "One spec decides what your PC can run. Yours is fine.",
+    "RTX 3090: too old for AI, or exactly enough?",
+    "Seventy-billion models say no. Twenty-four gigabytes says yes."
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "story-first",
+  "value_types": "REFRAMES,EQUIPS",
+  "music_mood": "steady-build",
+  "target_duration_s": 95,
+  "narration_full": "A guy in a basement ranked half the internet's product advice. The cards are pairs of thirty nineties from twenty twenty. The same card sits in your tower. His site is called Trust Me Bro Reviews. It reads Reddit and Hacker News opinions, filters out the shills and fake praise, and ranks what people actually love. Thirteen and a half million opinions became a ranked list of products, places and tools. His cards are RTX thirty nineties, a generation the internet loves to bury. Every AI video lately has called that card obsolete, too old and too slow for local models. The comments said buy a newer card or go home. Here is what actually ran in that basement. Pairs of thirty nineties, joined by NVLink, a direct cable that links one card straight to another. vLLM, an open-source serving engine, fed a Gemma mixture-of-experts model, many specialists with a few awake per word. What decides what runs on your card is VRAM, the memory on the card itself. If a model fits inside it, the model runs. Your thirty ninety carries twenty-four gigabytes of memory. The newer card carries the same. The honest wall is real. A seventy-billion-parameter LLaMA squeezes into that memory, then crawls slower than reading speed. Tokens are word-pieces, the chunks a model speaks in. His giant job also ran on pairs, never one card. The newer card is faster, with built-in hardware for a compact number format yours will never get. Picture an old pickup: same bed as the new truck, same loads, more fuel, no turbo. It breaks when the load outgrows the bed. One spec decides what fits, and on that spec your card still matches. Obsolete meant not enough memory, and yours never had that problem. It's old, not obsolete.",
+  "analogy": {
+    "vehicle": "an old heavy-duty pickup next to this year's sports-trim truck",
+    "mapping": "the pickup bed is the card's memory capacity, identical in size to the new truck's bed, so it hauls the same loads; the extra fuel is the higher power draw; the missing turbo is the newer FP8 hardware",
+    "limit": "the analogy breaks when the load grows past the bed, meaning models that need more memory than any 3090 or 4090 carries, or when the job is paid by the hour at scale and the speed gap compounds"
+  },
+  "notes_for_review": "'Thirteen and a half million opinions' rounds the exact 13,576,547, and 'about five tokens a second' rounds 5.2 tok/s; both exact digits appear on screen only in their own scenes. The pairs qualifier holds wherever the basement job is cited: scene four reveals the NVLinked pairs, scene six repeats it, and the single-card lesson is framed purely as memory capacity, never as one card doing his job. The pickup analogy's limit is spoken inside scene seven itself: it breaks when the load outgrows the bed. No other brief quantities (product count, wattage, bandwidth, the speed-gap percentage) are spoken or shown anywhere.",
+  "scenes": [
+    {
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A guy in a basement ranked half the internet's product advice. The cards are pairs of thirty nineties from twenty twenty. The same card sits in your tower.",
+      "on_screen_text": "A basement. Pairs of 3090s.",
+      "visual_brief": "Frame 1: centered stack on near-black, the text 'A basement. Pairs of 3090s.' in large off-white type with a thin amber underline, composed inside the 900x1160 safe area. At 0.35 s the amber underline rises-in-place beneath the text. On 'half the internet's product advice' the phrase 'Pairs of 3090s' scales to 1.12 for emphasis, sized to fit the safe area at peak. On 'your tower' a small amber tower-PC outline fades in below the stack.",
+      "est_duration_s": 9.7,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ],
+      "id": "s01"
+    },
+    {
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "His site is called Trust Me Bro Reviews. It reads Reddit and Hacker News opinions, filters out the shills and fake praise, and ranks what people actually love. Thirteen and a half million opinions became a ranked list of products, places and tools.",
+      "on_screen_text": "Trust Me Bro Reviews | Reddit + Hacker News | 13,576,547 opinions ranked",
+      "visual_brief": "Near-black canvas, amber the only accent. On 'Trust Me Bro Reviews' the wordmark fades in at center. On 'Reddit and Hacker News' two labeled chips rise-in-place flanking it. On 'filters out the shills' a thin amber filter line fades in under the chips while gray specks above it vanish. On 'ranks what people actually love' a short ranked-list block fades in beneath. On 'Thirteen and a half million opinions' the layout yields to the giant amber number '13,576,547' scaling in, sized to fit the safe area at peak, with 'opinions ranked' below.",
+      "est_duration_s": 14.8,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "id": "s02"
+    },
+    {
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "His cards are RTX thirty nineties, a generation the internet loves to bury. Every AI video lately has called that card obsolete, too old and too slow for local models. The comments said buy a newer card or go home.",
+      "on_screen_text": "RTX 3090 | obsolete? | too old | too slow",
+      "visual_brief": "Split-compare on dark. On 'RTX 3090s' a flat GPU card silhouette labeled 'RTX 3090' fades into the left panel. On 'a generation the internet loves to bury' a faint amber crack texture fades across the silhouette, then clears. On 'obsolete' the right panel rises-in-place carrying 'obsolete?' in amber. On 'too old and too slow' two gray tags reading 'too old' and 'too slow' fade in stacked at right. On 'buy a newer card or go home' both tags scale once to 1.12, sized to fit the safe area at peak, then settle.",
+      "est_duration_s": 13.8,
+      "id": "s03"
+    },
+    {
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Here is what actually ran in that basement. Pairs of thirty nineties, joined by NVLink, a direct cable that links one card straight to another. vLLM, an open-source serving engine, fed a Gemma mixture-of-experts model, many specialists with a few awake per word.",
+      "on_screen_text": "3090 + 3090 | NVLink | vLLM | Gemma MoE",
+      "visual_brief": "Manim diagram on a dark grid, amber accent only. On 'what actually ran in that basement' a thin basement-outline frame fades in around the stage. On 'Pairs of 3090s' two card rectangles labeled '3090' rise-in-place side by side. On 'NVLink' an amber bridge fades in connecting the cards edge to edge. On 'vLLM' a rounded box labeled 'vLLM' fades in above with two thin arrows fading in down toward the cards. On 'mixture-of-experts model' a cell grid labeled 'Gemma MoE' fades in at right, a few cells pulsing amber on 'awake per word'.",
+      "est_duration_s": 14.8,
+      "id": "s04"
+    },
+    {
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "What decides what runs on your card is VRAM, the memory on the card itself. If a model fits inside it, the model runs. Your thirty ninety carries twenty-four gigabytes of memory. The newer card carries the same.",
+      "on_screen_text": "3090: 24 GB | 4090: 24 GB | same capacity",
+      "visual_brief": "Two-bar capacity chart with its baseline above the caption band. On 'VRAM, the memory on the card itself' the left bar outline labeled '3090' fades in. On 'If a model fits inside it' a small model cube fades into the bar and a play glyph pulses once. On 'twenty-four gigabytes of memory' amber fill rises-in-place to a tick labeled '24 GB'. On 'A 4090 carries the same capacity' a second bar labeled '4090' rises-in-place, its amber fill stopping at the identical height. On 'same capacity' a thin amber hairline fades in joining both bar tops.",
+      "est_duration_s": 13.1,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "id": "s05"
+    },
+    {
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The honest wall is real. A seventy-billion-parameter LLaMA squeezes into that memory, then crawls slower than reading speed. Tokens are word-pieces, the chunks a model speaks in. His giant job also ran on pairs, never one card.",
+      "on_screen_text": "giant models: slower than reading",
+      "visual_brief": "On 'The honest wall is real' a thin amber wall-line rises-in-place behind the stage. On 'biggest open models squeeze into that memory' a dense slab of gray weight-shards fades in, packing a bar outline to the brim. On 'crawl at about five tokens a second' the slab dims and the giant amber readout '5.2 tok/s' scales in at center, sized to fit the safe area at peak. On 'slower than reading speed' the caption 'slower than reading' fades in beneath the readout. On 'pairs, never one card' two small linked card icons fade in at lower left, echoing the earlier pair diagram.",
+      "est_duration_s": 12.8,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ],
+      "id": "s06"
+    },
+    {
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "The newer card is faster, with built-in hardware for a compact number format yours will never get. Picture an old pickup: same bed as the new truck, same loads, more fuel, no turbo. It breaks when the load outgrows the bed.",
+      "on_screen_text": "FP8: newer hardware | same bed | more fuel | no turbo",
+      "visual_brief": "On 'FP8' a small chip badge labeled 'FP8: newer hardware' fades in at top center. On 'old pickup' a flat pickup silhouette rises-in-place at left. On 'the new truck' a sleeker truck silhouette fades in at right. On 'same bed' both cargo beds pulse amber via a single scale to 1.12, sized to fit the safe area at peak. On 'more fuel' a small gauge fades in over the pickup, needle high. On 'no turbo' a grayed turbo badge fades in crossed by a thin amber slash. On 'load outgrows the bed' an oversize crate fades in, visibly wider than the bed.",
+      "est_duration_s": 14.1,
+      "id": "s07"
+    },
+    {
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "One spec decides what fits, and on that spec your card still matches. Obsolete meant not enough memory, and yours never had that problem. It's old, not obsolete.",
+      "on_screen_text": "old, not obsolete | Build Local AI",
+      "visual_brief": "Centered stack on near-black, rhyming with frame 1's composition. On 'One spec decides what fits' a small amber tick fades in left of center. On 'Obsolete was never about age' the line 'not obsolete' fades in at center in off-white. On 'It's just old' the line 'just old.' rises-in-place beneath it, the period in amber. In the final half second a small 'Build Local AI' wordmark fades in below the stack and settles; the last frame mirrors the hook's centered stack as the loop anchor.",
+      "est_duration_s": 9.7,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ],
+      "id": "s08"
+    }
+  ],
+  "hook_pattern": "case",
+  "tags": [
+    "rtx 3090",
+    "rtx 3090 ai",
+    "rtx 3090 llm",
+    "rtx 3090 local ai",
+    "rtx 3090 vram",
+    "24gb gpu ai",
+    "local llm",
+    "local ai",
+    "llama.cpp",
+    "vllm",
+    "run llm at home",
+    "old gpu ai"
+  ]
+}
