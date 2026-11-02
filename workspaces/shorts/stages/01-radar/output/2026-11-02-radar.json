@@ -1,0 +1,755 @@
+[
+  {
+    "id": "github-08bbe0e482",
+    "title": "vllm v0.33.0rc3: v0.33.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+    "source": "github",
+    "published_at": "2026-11-02T10:10:05Z",
+    "signals": {
+      "repo": "vllm-project/vllm",
+      "tag": "v0.33.0rc3",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9737,
+      "age_h": 1.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "# v0.33.0 ## Highlights This release features 927 commits from 389 contributors (122 new)! * **New models**: Reflection Beam-1.0 (501B MoE, 23B active) with its DFlash2 drafter (#62074), Yandex AliceAI-Foundation-80B-A3B (#57963), Recursive Flint (40B MoE, 2.5B active) (#62938), Muse Spark Open (#61",
+    "why_now": "Shipped: vllm-project/vllm v0.33.0rc3 released, 2 h ago",
+    "score": 73
+  },
+  {
+    "id": "github-ad1112a901",
+    "title": "llama.cpp b12038",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12038",
+    "source": "github",
+    "published_at": "2026-11-02T11:31:50Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12038",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.993,
+      "age_h": 0.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> ggml : fix clang-cl build with AVX512 BF16 (#31276) * Correctly gate immintrin.h inclusion when building with clang-cl and avx512bf16 * ggml : explicit vector casts for clang-cl </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/at",
+    "why_now": "Shipped: ggml-org/llama.cpp b12038 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-e89d6e622c",
+    "title": "llama.cpp b12034",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12034",
+    "source": "github",
+    "published_at": "2026-11-02T08:02:51Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12034",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9443,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> webgpu : fix CI by keeping scratch alloc sizes monotonic in batch length (#31422) * webgpu: keep scratch alloc sizes monotonic in the batch length The flash attention vec path and the MMVQ path append a scratch area after dst, but get_alloc_size only accounted for it when the current ",
+    "why_now": "Shipped: ggml-org/llama.cpp b12034 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-1b6e5d6b3a",
+    "title": "In LLM era, can software startup survive?",
+    "url": "https://news.ycombinator.com/item?id=50331001",
+    "source": "hn",
+    "published_at": "2026-11-01T23:28:46Z",
+    "signals": {
+      "points": 31,
+      "num_comments": 39,
+      "signal": 0.646,
+      "signal_parts": {
+        "points": 0.607,
+        "comments": 0.735
+      },
+      "decay": 0.8344,
+      "age_h": 12.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Nowadays, vibe coding is everywhere. Turning an idea into software is just matter of tokens. I was joking the other day. Creating a tax return softwar is much faster than purchasing Turbotax at Costco.<p>Large companies still have compute resources and customer bases. For startup, users are expectin",
+    "why_now": "Measured: 31 points, 39 comments on HN, 13 h ago",
+    "score": 46
+  },
+  {
+    "id": "hn-c5a32393e7",
+    "title": "Show HN: 13M opinions on 48k products extracted from Reddit and HN",
+    "url": "https://www.trustmebro.reviews/r/hackernews",
+    "source": "hn",
+    "published_at": "2026-11-02T04:53:05Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 0,
+      "signal": 0.269,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.0
+      },
+      "decay": 0.9021,
+      "age_h": 7.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Gemma",
+      "group": "how-to"
+    },
+    "products": [
+      "Gemma",
+      "RTX 3090",
+      "vLLM",
+      "Claude"
+    ],
+    "summary": "I made this a couple of months ago. Extractions were done with Gemma 4 26B MoE running on pairs of NVLinked 3090 cards with vLLM, in my basement. Seasoned with a Claude vibe-coded frontend.<p>The travel opinions on a map are pretty neat: <a href=\"https:&#x2F;&#x2F;www.trustmebro.reviews&#x2F;c&#x2F;",
+    "why_now": "Shipped: 8 points, 0 comments on HN, 7 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-882a9d0488",
+    "title": "Ask HN: What mistakes did AI make in your codebase?",
+    "url": "https://news.ycombinator.com/item?id=50328797",
+    "source": "hn",
+    "published_at": "2026-11-01T19:25:25Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7869,
+      "age_h": 16.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Gemini",
+      "group": "myth-bust"
+    },
+    "products": [
+      "Gemini"
+    ],
+    "summary": "In the past few weeks I&#x27;ve beeing working with frontier AI - Opus 5.5, Astra, Sol 6.1, Fable 5.1 and Gemini Argon.<p>AI has become really good at coding in some sense, that&#x27;s undeniable, and there are people that say you don&#x27;t really need to review their code anymore.<p>But I keep get",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 17 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-648bddf7df",
+    "title": "Ask HN: What is a good open-weight alternative to Claude Code?",
+    "url": "https://news.ycombinator.com/item?id=50325635",
+    "source": "hn",
+    "published_at": "2026-11-01T13:43:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 11,
+      "signal": 0.234,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.495
+      },
+      "decay": 0.7248,
+      "age_h": 22.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "explainer"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I spin up a Claude code session for everything, including non coding related tasks. I love the terminal interface. What is a good alternative to try?",
+    "why_now": "Shipped: 1 points, 11 comments on HN, 22 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-d7512d9d19",
+    "title": "Flare, Nvidia's DGX Spark Inference Engine",
+    "url": "https://github.com/NVIDIA/spark-local-inference",
+    "source": "hn",
+    "published_at": "2026-11-02T01:11:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8553,
+      "age_h": 10.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 11 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-97372818bf",
+    "title": "Show HN: Sweet-search - local code search for agents (5-33% cheaper runs)",
+    "url": "https://github.com/mrsladoje/sweet-search",
+    "source": "hn",
+    "published_at": "2026-11-01T15:36:02Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7447,
+      "age_h": 20.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hi everyone :)<p>After almost a year of fighting windmills, I am proud to say I built sweet-search, a local code search tool for Claude Code, Codex and Opencode.<p>It delivers 5-33% cheaper agentic runs with Sol 6.1 and Opus 5.5 with Claude Code, Codex and Opencode, with pooled solved tasks equal vs",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 20 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-bd9335440f",
+    "title": "Ask HW: Best frontier AI model for mind map generation?",
+    "url": "https://news.ycombinator.com/item?id=50334714",
+    "source": "hn",
+    "published_at": "2026-11-02T09:30:12Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9644,
+      "age_h": 2.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Mistral",
+      "ChatGPT",
+      "Grok"
+    ],
+    "summary": "For my children, I need to generate mindmaps from image taken from books.<p>I want to use a frontier model (i.e. Claude, Mistral, ChatGPT, Grok...) but I want the most effective in terms of cost and quality.<p>I was not impressed so much by Mapify or NotebookLM.<p>Do you have some skills &#x2F; sugg",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 3 h ago",
+    "score": 25
+  },
+  {
+    "id": "hf-629b5f0dde",
+    "title": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+    "url": "https://huggingface.co/AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+    "source": "hf",
+    "published_at": "2026-10-28T04:48:45Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 171,
+      "downloads": 30284,
+      "trendingScore": 156.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.706,
+      "signal_parts": {
+        "trending": 0.665,
+        "likes": 0.745,
+        "downloads": 0.747
+      },
+      "decay": 0.1593,
+      "age_h": 127.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 171 likes, 30.3k downloads, trending score 156, created 2026-10-28",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 171 likes, 30.3k downloads, trending score 156, 5 d ago",
+    "score": 24
+  },
+  {
+    "id": "hn-0001524b78",
+    "title": "EraseAI Firewall - stop secrets and PII before they reach Public LLMs",
+    "url": "https://news.ycombinator.com/item?id=50326183",
+    "source": "hn",
+    "published_at": "2026-11-01T14:45:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7357,
+      "age_h": 21.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT",
+      "Claude",
+      "Gemini"
+    ],
+    "summary": "Hi HN -- we built a Chrome extension that checks what you&#x27;re about to send to ChatGPT, Claude, Gemini or Replit, and stops it if it contains an API key, password, card number, email or similar.<p>It hooks the send button (and Enter), checks the prompt on your device, and if it finds something,",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-6828f08ad7",
+    "title": "Tell HN: Mistrap Pro includes DeepSeek v4.1 Flash 1017",
+    "url": "https://docs.mistral.ai/models/deepseek-v4-flash-1017",
+    "source": "hn",
+    "published_at": "2026-11-01T12:58:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.717,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 23 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-779b5e1bbc",
+    "title": "Show HN: Mistake Trainer - Spaced repetition from your own Lichess games",
+    "url": "https://mistake-trainer.pages.dev/",
+    "source": "hn",
+    "published_at": "2026-11-02T11:08:27Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9874,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I’m an 1800 player on Lichess and struggle making the same types of mistakes over and over again. Lichess has a nice feature called “Learn from your mistakes” available after you request a computer analysis. I wanted something a little more so I built Mistake Trainer with Claude Code.<p>It expands “",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 1 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-c2853730e5",
+    "title": "Optimizing 124B MoE inference on a single Nvidia DGX Spark",
+    "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/",
+    "source": "hn",
+    "published_at": "2026-11-02T04:13:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8935,
+      "age_h": 7.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA",
+      "DGX Spark"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-26a5df98cd",
+    "title": "When DeepSeek super agent goes quiet: diagnose one boundary at a time",
+    "url": "https://super-agent.io/deepseek-super-agent/troubleshooting/",
+    "source": "hn",
+    "published_at": "2026-11-01T17:30:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7655,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d207cf4111",
+    "title": "Avartha: Fastest open-weight frontier voice AI beats OpenAI, Google, and xAI",
+    "url": "https://avartha.ai/blog/introducing-avartha/",
+    "source": "hn",
+    "published_at": "2026-11-01T22:28:27Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.8224,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "comparison"
+    },
+    "products": [
+      "OpenAI",
+      "Google",
+      "xAI"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 5 points, 1 comments on HN, 14 h ago",
+    "score": 18
+  },
+  {
+    "id": "hf-63a60d5375",
+    "title": "microsoft/Mage-VL-Cowork",
+    "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+    "source": "hf",
+    "published_at": "2026-10-30T12:13:24Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 129,
+      "downloads": 1152,
+      "trendingScore": 127.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.671,
+      "signal_parts": {
+        "trending": 0.638,
+        "likes": 0.705,
+        "downloads": 0.51
+      },
+      "decay": 0.3546,
+      "age_h": 71.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 129 likes, 1.2k downloads, trending score 127, created 2026-10-30",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 129 likes, 1.2k downloads, trending score 127, 3 d ago",
+    "score": 18
+  },
+  {
+    "id": "hf-5bb8115efd",
+    "title": "OBLITERATUS/DeepSeek-V4.1-Flash-1017-obliterated",
+    "url": "https://huggingface.co/OBLITERATUS/DeepSeek-V4.1-Flash-1017-obliterated",
+    "source": "hf",
+    "published_at": "2026-10-23T08:59:53Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 194,
+      "downloads": 1095,
+      "trendingScore": 172.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.721,
+      "signal_parts": {
+        "trending": 0.678,
+        "likes": 0.763,
+        "downloads": 0.507
+      },
+      "decay": 0.05,
+      "age_h": 243.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 194 likes, 1.1k downloads, trending score 172, created 2026-10-23",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 194 likes, 1.1k downloads, trending score 172, 10 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-acff0fd268",
+    "title": "Show HN: HackerBlogs - the 9,434 blogs HN people keep sharing",
+    "url": "https://hackerblogs.app",
+    "source": "hn",
+    "published_at": "2026-11-02T08:16:05Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9473,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "After Karpathy&#x27;s HackerTube, I wanted the same thing for blogs. I had agents went through every link in HN stories and comments, about 10.7M links from 518k accounts. It kept the sites that at least 15 different people shared, then filtered out news sites, company sites and the like.<p>Each blo",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-3ceeae5ade",
+    "title": "Show HN: Zero-knowledge zero-overhead LLM routing mesh using pure web primitives",
+    "url": "https://bringYourOwnBrain.org",
+    "source": "hn",
+    "published_at": "2026-11-02T09:45:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.968,
+      "age_h": 2.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 2 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-f14f5f4099",
+    "title": "Exploring Super-Agent Design: Towards a More Autonomous Agent System",
+    "url": "https://twitter.com/DeepSeekHarness/status/2116857257245987236",
+    "source": "hn",
+    "published_at": "2026-11-02T09:13:14Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9604,
+      "age_h": 2.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 3 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-99207b9ecd",
+    "title": "Sell a developer problem that LLM's can't solve?",
+    "url": "https://news.ycombinator.com/item?id=50326374",
+    "source": "hn",
+    "published_at": "2026-11-01T15:08:56Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 3,
+      "signal": 0.168,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.276
+      },
+      "decay": 0.7398,
+      "age_h": 20.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Is there a service or site you can sell a problem set (reasonably main stream), that no LLM can currently solve?<p>It seems it possibly high value to a lab, and useful to have solved for the customer.",
+    "why_now": "Discussed: 1 points, 3 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-cdd0d91793",
+    "title": "Show HN: Corollary, LaTeX Editor for Mac with On-Device Apple Foundation Models",
+    "url": "https://calvinyz.github.io/corollary/",
+    "source": "hn",
+    "published_at": "2026-11-01T21:45:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8139,
+      "age_h": 14.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple",
+      "OpenAI"
+    ],
+    "summary": "A few days ago, I got OpenAI&#x27;s email that Prism will be officially shutting down on January 1. Having written my last paper in it, I was quite disappointed since I&#x27;ve never really enjoyed typing LaTeX by hand for long periods. Also, when I updated my macOS recently, I started playing aroun",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-2d7f88e32e",
+    "title": "Uniichat: Use a single LLM chat forever",
+    "url": "https://github.com/VictorTaelin/uniichat",
+    "source": "hn",
+    "published_at": "2026-11-01T13:43:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7248,
+      "age_h": 22.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  }
+]
