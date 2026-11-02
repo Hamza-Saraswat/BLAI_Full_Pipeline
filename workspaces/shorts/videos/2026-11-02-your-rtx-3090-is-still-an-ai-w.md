@@ -2,19 +2,19 @@
 slug: 2026-11-02-your-rtx-3090-is-still-an-ai-w
 workspace: shorts
 title: Your RTX 3090 is still an AI workhorse
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: story-first
 format: smooth-explainer
 style_pack: signal
 value_types: "REFRAMES,EQUIPS"
 created: 2026-11-02
-updated: "2026-11-02T12:08:39Z"
+updated: "2026-11-02T13:25:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - 05 package (unattended): title #2 (intriguing, feed surface) chosen over the searchable variant because Shorts discovery is feed-first and the claim is the reframe; hook text not restated. Rubric 100/100 (every row full); check_outputs 0 failures after the Artifacts links were filled. Voice link points at the normalize output stage 04 wrote; the Spark's voice run will add the voice.md beside it.
 
 ## Build journal
-
+- 2026-11-02T13:25:10Z build start on gn100-83c4
