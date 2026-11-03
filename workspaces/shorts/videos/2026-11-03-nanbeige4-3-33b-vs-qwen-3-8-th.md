@@ -2,14 +2,14 @@
 slug: 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th
 workspace: shorts
 title: "Nanbeige4.3-33B vs Qwen 3.8: the 33B coder test"
-status: researched
+status: scripted
 pillar: comparison
-structure: ""
+structure: comparison-ladder
 format: classic
-style_pack: ""
+style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-03
-updated: "2026-11-03T12:55:54Z"
+updated: "2026-11-03T13:17:39Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-03-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-03-ideas]]
 - Research: [[stages/03-research/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -34,6 +34,9 @@ blotato_post_id: ""
 ## Decisions
 - 03 checkpoint: confirmed angle and slug, no redirect; standard depth, 3-question fan-out, 13 sources fetched.
 - 03 research: kept 61.7 as Qwen's SWE-Bench Pro (62.5 belongs to Flash-Next); downloads corrected 17.8k -> 16,976; 80.9 flagged self-reported in thesis and Unverified.
+- 04 structures: comparison-ladder (A) vs number-first (B); A won 23-20, no grafts; both cleared rotation vs story-first and myth-bust.
+- 04 gates: validator 0 blockers; eval hard gates all pass on both boards after fixes (roles normalized, SWE lexicon entry added, A cut to 5 numbers, B hook lifted over the 2s floor and hook_text given frame-1 digits); sameness clean vs 5 entries; soft advisories entity_spend and top2 kept (classic band spends numbers over entity name-drops).
+- 04 style pack: halftone (signal refused as previous; benchmark face-off fit).
 
 ## Build journal
 

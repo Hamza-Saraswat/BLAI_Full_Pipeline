@@ -1,0 +1,86 @@
+{
+  "slug": "2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th",
+  "topic": "Nanbeige4.3-33B vs Qwen 3.8: the self-reported coding claim and what fits one card",
+  "title": "The 33B coder test: claim vs card",
+  "description": "Working description; stage 05 overwrites.",
+  "hashtags": [
+    "#localai",
+    "#llm"
+  ],
+  "hook_text": "Nanbeige or Qwen, one number decides.",
+  "hook_candidates": [
+    "Nanbeige or Qwen, one number decides.",
+    "Eighty point nine versus seventy-three.",
+    "Eighty point nine. The challenger graded itself.",
+    "The new 33B claims Qwen's coding crown.",
+    "You run Qwen. A 33B wants your card.",
+    "One table, two winners, your twenty-four gigabytes.",
+    "Sixty point three versus sixty-one point seven. Qwen wins.",
+    "Ten days old, ninety-nine quants, one loud claim.",
+    "Which 33B coder earns your download tonight?",
+    "The 33B that says it beats Qwen at code."
+  ],
+  "style_pack": "halftone",
+  "script_format": "classic",
+  "structure": "comparison-ladder",
+  "value_types": [
+    "TEACHES",
+    "EQUIPS"
+  ],
+  "target_duration_s": 35,
+  "narration_full": "Nanbeige or Qwen, one number decides. You already run Qwen on your twenty-four gigabyte card. Its own card claims eighty point nine on Terminal-Bench, which scores real terminal tasks. Qwen, same table: seventy-three. Every number, self-reported. Same table, next row. SWE-Bench Pro, software engineering benchmarks, scores fixing real GitHub issues. Nanbeige posts sixty point three. Qwen posts sixty-one point seven. It bolded that one too. Now what fits. Nanbeige's quant, a compressed copy of the weights, is twenty point seven nine gigabytes on disk. Qwen's four-bit build runs smaller. The rule: one real coding task, both quants, same settings. Keep whichever your terminal crowns.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Nanbeige or Qwen, one number decides. You already run Qwen on your twenty-four gigabyte card.",
+      "on_screen_text": "Nanbeige or Qwen, one number decides.",
+      "visual_brief": "Frame 1 opens on the finished composition: both model names set in halftone type side by side, the numeral one large behind them; motion onset at zero point three seconds as the numeral one scales in on 'one number decides'. Nothing slides from the edge.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Its own card claims eighty point nine on Terminal-Bench, which scores real terminal tasks. Qwen, same table: seventy-three. Every number, self-reported.",
+      "on_screen_text": "Terminal-Bench: 80.9 vs 73.0",
+      "visual_brief": "Two bars scale in on 'eighty point nine', the challenger's taller; a small self-reported tag fades in beneath on 'self-reported'.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Same table, next row. SWE-Bench Pro, software engineering benchmarks, scores fixing real GitHub issues. Nanbeige posts sixty point three. Qwen posts sixty-one point seven. It bolded that one too.",
+      "on_screen_text": "SWE-Bench Pro: 60.3 vs 61.7",
+      "visual_brief": "A table grid fades in; the lower row rises in place on 'next row'; the sixty-one point seven cell scales slightly as a bold outline appears on 'bolded that one too'.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Now what fits. Nanbeige's quant, a compressed copy of the weights, is twenty point seven nine gigabytes on disk. Qwen's four-bit build runs smaller.",
+      "on_screen_text": "The quant fits: 20.79 GB",
+      "visual_brief": "Two file icons scale to relative size on 'twenty point seven nine gigabytes'; a fit line fades in above the smaller one on 'runs smaller'.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The rule: one real coding task, both quants, same settings. Keep whichever your terminal crowns.",
+      "on_screen_text": "One task. Both quants. Keep the winner.",
+      "visual_brief": "The table and bars fade out on 'The rule'; a single centered line rises in place on 'Keep whichever your terminal crowns' and holds; last frame rhymes with frame one.",
+      "est_duration_s": 5.2
+    }
+  ],
+  "notes_for_review": "80.9/73.0/60.3/61.7 hedged as the card's own table; 16-19GB range cut in the gate fix round (numbers cap 5); hook scene trimmed to 18 words for the 7s hook cap."
+}

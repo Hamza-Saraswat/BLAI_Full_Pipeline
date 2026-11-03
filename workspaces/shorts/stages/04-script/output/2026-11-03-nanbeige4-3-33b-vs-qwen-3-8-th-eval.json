@@ -1,0 +1,595 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-03T13:17:22+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 7,
+      "benchmark": 2,
+      "community": 1
+    },
+    "pct_primary_docs": 0.7,
+    "key_numbers_total": 8,
+    "entities_total": 27,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.444,
+    "source_domains": [
+      "artificialanalysis.ai",
+      "huggingface.co",
+      "kingy.ai",
+      "substack.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "Nanbeige4.3-33B downloads, last month (HF sidebar)",
+          "value": "16,976",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Terminal-Bench 2.1, Nanbeige4.3-33B (self-reported)",
+          "value": "80.9",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "80.9",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Terminal-Bench 2.1, Qwen3.8-27B (self-reported by both cards)",
+          "value": "73.0",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "73",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "SWE-Bench Pro, Nanbeige4.3-33B (self-reported)",
+          "value": "60.3",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "60.3",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "SWE-Bench Pro, Qwen3.8-27B (self-reported by both cards)",
+          "value": "61.7",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "BF16 safetensors storage, Nanbeige4.3-33B (14 shards)",
+          "value": "66,259,989,086 bytes",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Q4_K_M GGUF file size, Nanbeige4.3-33B (bartowski)",
+          "value": "20.79GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "20.79 GB",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Qwen3.8-27B 4-bit total memory requirement (unsloth docs)",
+          "value": "16-19GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 27,
+      "found_count": 2,
+      "score": 0.074,
+      "found": [
+        "Qwen",
+        "Nanbeige"
+      ],
+      "missing": [
+        "Qwen3.8-27B",
+        "Nanbeige4.3",
+        "Nanbeige4.3-33B",
+        "BF16",
+        "Apache",
+        "A95B MoE",
+        "FP8",
+        "Flash",
+        "Hugging Face",
+        "Claude Code",
+        "v2.4.6",
+        "vLLM",
+        "LiveCodeBench",
+        "bf16 66.24GB",
+        "Q8_0 35.20GB",
+        "Q6_K 29.02GB",
+        "IQ4_XS 18.64GB",
+        "b11845",
+        "Artificial Analysis",
+        "Intelligence Index 20",
+        "RTX",
+        "MacBook Pro",
+        "DGX Spark",
+        "SVG",
+        "Alibaba Apache 2.0"
+      ],
+      "top2": [
+        "Qwen3.8-27B",
+        "Nanbeige4.3"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 5,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nanbeige4.3",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nanbeige4.3-33B",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Nanbeige",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "A95B MoE",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "FP8",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Flash",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Code",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v2.4.6",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LiveCodeBench",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "bf16 66.24GB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q8_0 35.20GB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q6_K 29.02GB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IQ4_XS 18.64GB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b11845",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Artificial Analysis",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Intelligence Index 20",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RTX",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MacBook Pro",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SVG",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Alibaba Apache 2.0",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 15,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Qwen",
+        "entity:Nanbeige"
+      ],
+      "hook_text": "Nanbeige or Qwen, one number decides.",
+      "first_sentence": "Nanbeige or Qwen, one number decides."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "comparison-ladder",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "entity:Qwen",
+            "entity:Nanbeige"
+          ],
+          "narration": "Nanbeige or Qwen, one number decides. You already run Qwen on your twenty-four gigabyte card."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "num:80.9",
+            "num:73.0",
+            "entity:Qwen"
+          ],
+          "narration": "Its own card claims eighty point nine on Terminal-Bench, which scores real terminal tasks. Qwen, same table: seventy-three. Every number, self-reported."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "num:60.3",
+            "entity:Qwen",
+            "entity:Nanbeige"
+          ],
+          "narration": "Same table, next row. SWE-Bench Pro, software engineering benchmarks, scores fixing real GitHub issues. Nanbeige posts sixty point three. Qwen posts sixty-one point seven. It bolded that one too."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:20.79GB",
+            "entity:Qwen",
+            "entity:Nanbeige"
+          ],
+          "narration": "Now what fits. Nanbeige's quant, a compressed copy of the weights, is twenty point seven nine gigabytes on disk. Qwen's four-bit build runs smaller."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 5.2,
+          "specific": false,
+          "hits": [],
+          "narration": "The rule: one real coding task, both quants, same settings. Keep whichever your terminal crowns."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.0,
+      "words": 111,
+      "sentences": 15,
+      "est_speech_s": 38.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Nanbeige or Qwen, one number decides. You already run Qwen on your twenty-four gigabyte card. Its own card claims eighty point nine on Terminal-Bench, which scores real terminal tasks. Qwen, same table: seventy-three. Every number, self-reported. Same table, next row. SWE-Bench Pro, software engineering benchmarks, scores fixing real GitHub issues. Nanbeige posts sixty point three. Qwen posts sixty-one point seven. It bolded that one too. Now what fits. Nanbeige's quant, a compressed copy of the weights, is twenty point seven nine gigabytes on disk. Qwen's four-bit build runs smaller. The rule: one real coding task, both quants, same settings. Keep whichever your terminal crowns.",
+    "on_screen": "Nanbeige or Qwen, one number decides. | Nanbeige or Qwen, one number decides. | Terminal-Bench: 80.9 vs 73.0 | SWE-Bench Pro: 60.3 vs 61.7 | The quant fits: 20.79 GB | One task. Both quants. Keep the winner."
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 5.0,
+        "words": 111,
+        "est_speech_s": 38.3,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s03: acronym 'SWE' has no spoken form \u2014 rewrite it or add an entry to skills/script-gates/tts_lexicon.json"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s03: acronym 'SWE' has no spoken form \u2014 rewrite it or add an entry to skills/script-gates/tts_lexicon.json"
+        ],
+        "warnings": [
+          "FK grade 5.0 \u2014 target <=5"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 4,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.074,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen3.8-27B",
+          "Nanbeige4.3"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Qwen",
+          "entity:Nanbeige"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "comparison-ladder",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
