@@ -2,14 +2,14 @@
 slug: 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th
 workspace: shorts
 title: "Qwen 3.8 vs Nanbeige4.3: 33B coder test"
-status: building
+status: review
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-03
-updated: "2026-11-03T13:20:01Z"
+updated: "2026-11-03T13:40:23Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-script]]
 - Package: [[stages/05-package/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-package]]
 - Voice: [[stages/06-voice/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-narration]] (normalized narration sidecar from stage 04; stage 06 owns the rest)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -42,3 +42,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-03T13:20:01Z build start on gn100-83c4
 - 2026-11-03T13:21:48Z 06-voice ok 105s
+- 2026-11-03T13:40:26Z 07-render ok 40.73s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 311
+- 2026-11-03T13:40:26Z 07-render ok 1116s
