@@ -2,19 +2,19 @@
 slug: 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th
 workspace: shorts
 title: "Qwen 3.8 vs Nanbeige4.3: 33B coder test"
-status: ready-to-build
+status: building
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-03
-updated: "2026-11-03T13:19:25Z"
+updated: "2026-11-03T13:20:01Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -40,4 +40,4 @@ blotato_post_id: ""
 - 05 package: searchable title (qwen 3.8 pool, depth 253); rubric 100; synthetic media false; check_outputs clean after filling Package and Voice artifact links.
 
 ## Build journal
-
+- 2026-11-03T13:20:01Z build start on gn100-83c4
