@@ -2,14 +2,14 @@
 slug: 2026-11-02-run-a-124b-moe-on-one-dgx-spar
 workspace: shorts
 title: "Run a 124B MoE on one DGX Spark: NVIDIA's three moves"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-02
-updated: "2026-11-02T12:08:39Z"
+updated: "2026-11-03T14:35:12Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-03T14:35:12Z 2026-11-03T14:35:12Z expired: not from today's picks (2026-11-03); the factory carries no backlog
