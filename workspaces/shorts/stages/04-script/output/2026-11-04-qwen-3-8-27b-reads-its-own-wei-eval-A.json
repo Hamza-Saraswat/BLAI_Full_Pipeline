@@ -1,0 +1,660 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-04T12:59:43+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-A.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 2,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.909,
+    "key_numbers_total": 15,
+    "entities_total": 31,
+    "misconceptions_total": 5,
+    "unverified_ratio": 0.353,
+    "source_domains": [
+      "github.com",
+      "huggingface.co",
+      "ollama.com",
+      "simonwillison.net",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 15,
+      "spent": 1,
+      "distinct": 1,
+      "score": 0.067,
+      "detail": [
+        {
+          "label": "parameters in the toy network that was read (not Qwen's own)",
+          "value": "17,253 parameters in total",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Seventeen thousand",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "games identified correctly (Breakout, Pong, Pac-Man; missed Freeway)",
+          "value": "3 of 4",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Simon's local model file size (Q4_K_M GGUF)",
+          "value": "17GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Pac-Man run duration",
+          "value": "46m 12s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Pac-Man reasoning tokens",
+          "value": "43,506 reasoning tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "input tokens per weight prompt",
+          "value": "104,838 input tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Breakout confidence",
+          "value": "88%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "exact Qwen3.8-27B parameter count (BF16)",
+          "value": "27,781,427,952",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "native context window",
+          "value": "262,144 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama default 27B tag download size",
+          "value": "18GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "minimum system memory (LM Studio catalog)",
+          "value": "16GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "4-bit quant total-memory band (Unsloth)",
+          "value": "16-19GB VRAM",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "measured decode speed, RTX 3090 24GB, WSL CUDA, MTP on (benchmark tier)",
+          "value": "~42.9 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "cloud comparison: Kimi K3.1 Pro Breakout run",
+          "value": "9m 41s and 19,493 reasoning tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "HN traction for the source post (why-now)",
+          "value": "649 points, 189 comments",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 31,
+      "found_count": 1,
+      "score": 0.032,
+      "found": [
+        "Pac-Man"
+      ],
+      "missing": [
+        "Qwen",
+        "Simon",
+        "Weight",
+        "LM Studio",
+        "BF16",
+        "Simon Willison",
+        "Kimi K3.1 Pro",
+        "Apache-2.0",
+        "RikiyaT",
+        "exp1_which_game",
+        "Apache",
+        "Sparks",
+        "Freeway",
+        "Atari",
+        "Breakout",
+        "RTX",
+        "Unsloth",
+        "Ollama",
+        "BF16 CLIP",
+        "Qwen3.8 27B",
+        "CUDA",
+        "DeltaNet",
+        "Older",
+        "DeltaNet CUDA",
+        "WSL CUDA",
+        "b10450",
+        "MTP",
+        "GB' VRAM",
+        "DGX Spark",
+        "for-4"
+      ],
+      "top2": [
+        "Qwen",
+        "Simon"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "Qwen",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Simon",
+          "tier": 0,
+          "claim_count": 3,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Weight",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Pac-Man",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Simon Willison",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Kimi K3.1 Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache-2.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RikiyaT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "exp1_which_game",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Sparks",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Freeway",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Atari",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Breakout",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RTX",
+          "tier": 1,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "BF16 CLIP",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8 27B",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CUDA",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeltaNet",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Older",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeltaNet CUDA",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "WSL CUDA",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b10450",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MTP",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB' VRAM",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DGX Spark",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "for-4",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "Your laptop model reads another mind",
+      "first_sentence": "Your laptop model can read another network's mind."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 3,
+      "ratio": 0.6,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:17,253 parameters in total"
+          ],
+          "narration": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "glossary:weight"
+          ],
+          "narration": "Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land."
+        },
+        {
+          "id": "s03",
+          "role": "foreshadow",
+          "est_duration_s": 5.5,
+          "specific": false,
+          "hits": [],
+          "narration": "One number alone says nothing. Together they are clues: rows become cells, cells become a grid."
+        },
+        {
+          "id": "s04",
+          "role": "foreshadow",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "entity:Pac-Man"
+          ],
+          "narration": "Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 5.5,
+          "specific": false,
+          "hits": [],
+          "narration": "The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.2,
+      "words": 98,
+      "sentences": 12,
+      "est_speech_s": 33.8,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game. Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land. One number alone says nothing. Together they are clues: rows become cells, cells become a grid. Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own. The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits.",
+    "on_screen": "Your laptop model reads another mind | your laptop model reads another mind | a whole network, pasted as text | rows become cells | Pac-Man. Not its own weights. | tonight: read a mind"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-A.json",
+        "scenes": 5,
+        "fk_grade": 4.2,
+        "words": 98,
+        "est_speech_s": 33.8,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "s01: 7s scene with ~1 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "number_spend",
+      "hook_concrete",
+      "scene_specificity"
+    ],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 1,
+        "heard": 1,
+        "total": 15,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band",
+        "reason": "the viewer hears 1 distinct number (1 of 15 brief rows matched); the band is 2-5"
+      },
+      "entity_spend": {
+        "score": 0.032,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen",
+          "Simon"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": []
+      },
+      "scene_specificity": {
+        "specific": 3,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

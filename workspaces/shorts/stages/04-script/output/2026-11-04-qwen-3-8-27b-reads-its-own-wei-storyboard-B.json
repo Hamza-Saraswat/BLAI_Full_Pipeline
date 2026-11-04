@@ -1,0 +1,113 @@
+{
+  "slug": "did-it-read-its-own-weights",
+  "topic": "Myth-bust: the viral 'a local model read its own weights' claim, measured against what the weight-reading test actually did",
+  "title": "A model read raw weights. Not its own.",
+  "description": "Your feed said a local model read its own weights. The test: a twenty-seven-billion-parameter model on a laptop was handed the raw weights of a toy network with seventeen thousand two hundred fifty-three parameters, and it named the game that toy plays, three of four times, in forty-six minutes and twelve seconds. Real weight reading, yes. Reading itself, no. Try it tonight: ollama run qwen3.8:27b, give it a long context, and use the prompt from RikiyaT/lm_understand-logs.",
+  "hashtags": [
+    "#qwen38",
+    "#localLLM",
+    "#LocalAI"
+  ],
+  "hook_text": "17,253 numbers. it named the game",
+  "hook_candidates": [
+    "Your laptop model can read another network's mind.",
+    "Seventeen thousand numbers. It named the game.",
+    "Forty-six minutes. Your laptop read a neural net.",
+    "Seventeen gigabytes. It reads weights, not words.",
+    "Qwen 3.8 read raw weights and guessed the game.",
+    "Three of four games. From numbers alone.",
+    "You downloaded a model. It reads other minds.",
+    "Seventeen thousand weights in. Pac-Man out.",
+    "Your model file can read its own kind.",
+    "No calculator. It still named the game."
+  ],
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": [
+    "TEACHES",
+    "EQUIPS"
+  ],
+  "target_duration_s": 36.1,
+  "narration_full": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+  "analogy": null,
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights.",
+      "on_screen_text": "Seventeen thousand numbers. It named the game.",
+      "visual_brief": "Frame 1: the hook text fully legible, centered, amber as the only accent. On \"It named the game,\" an emphasis punch (scale 1.12, text pre-sized to SAFE_W / 1.12) lands on \"named the game.\" On \"its own weights,\" a dim secondary line \"its own weights?\" fades in below. Motion onset no earlier than frame 9; at most one text block animating.",
+      "est_duration_s": 5.2
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters.",
+      "on_screen_text": "17,253 params. Not its own 27B.",
+      "visual_brief": "Hard cut. On \"seventeen thousand two hundred fifty-three parameters,\" a short amber bar labeled \"17,253 params (toy)\" rises in place. On \"twenty-seven billion,\" a tall dim bar labeled \"its own 27B\" grows beside it, dwarfing the first. Two elements animating at once, nothing else moves; the size gap is the whole point.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s03",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible.",
+      "on_screen_text": "3 of 4 right · 46m 12s",
+      "visual_brief": "On \"three of four games right,\" a stat chip \"3 of 4 right\" fades in left of center. On \"forty-six minutes and twelve seconds,\" a second chip \"46m 12s\" fades in beside it. Only one text block animates at a time; both chips stay inside the safe area; the screen text is spoken in this scene.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s04",
+      "role": "foreshadow",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward.",
+      "on_screen_text": "Read numbers it was handed. Not itself.",
+      "visual_brief": "On \"numbers handed to it,\" an arrow flows from a small stack labeled \"toy weights\" into the model's context window. On \"looked inward,\" a second arrow looping from the model back into itself appears, then gets struck through. The diagram itself states the limit: weights flow in from outside; no self-reading path exists. Hard cut in, fade accents only.",
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+      "on_screen_text": "read real weights tonight",
+      "visual_brief": "On \"ollama run,\" the command \"ollama run qwen3.8:27b\" typewrites into a sharp-cornered terminal window; the line fits at 64 px inside the safe box. On \"prompt from RikiyaT's,\" \"RikiyaT/lm_understand-logs\" fades beneath it. On \"Real weights, on a laptop,\" both lines dim and a small ghost of \"Seventeen thousand numbers. It named the game.\" remains as the loop anchor; the wordmark settles in the final half second, last frame rhyming with frame 1. Nothing is spoken after the payoff.",
+      "est_duration_s": 4.8
+    }
+  ],
+  "notes_for_review": "Myth-bust shape: hook states the measurement number at second 0, the breaker (17,253-parameter toy, not its own 27 billion) completes by about second 7, truth-instead in s04, and the 'myth is still right' beat is the payoff itself (real weights, on a laptop). Four key numbers spent: 17,253 parameters, 27 billion, 3 of 4, 46m 12s; the spoken command tag echoes the 27B figure rather than adding a new number. One new number per sentence, every sentence at or under 20 words, no positional labels, no em dashes. s04 is the single scene without a number or named entity (the allowed one). Known advisory: hook first sentence is 3 words against the 5-12 advisory band; it is the assigned mandatory hook, kept verbatim. The command tag 'qwen3.8:27b' is spoken as words per voice rule 4 and shown exactly on screen; renderer should keep the terminal line at 64 px so it fits without a continuation. Analogy is null on purpose: none of the signature vehicles fit weight-reading, so the plain mechanism (numbers handed in, no inward path) carries s04.",
+  "tags": [
+    "qwen 3.8",
+    "qwen 3.8 27b",
+    "qwen 3.8 local",
+    "run qwen 3.8 locally",
+    "local llm",
+    "llm weights",
+    "weight reading",
+    "llama.cpp",
+    "ollama",
+    "lm studio",
+    "gguf",
+    "q4_k_m",
+    "local ai",
+    "build local ai",
+    "run models locally",
+    "ai on your own hardware",
+    "neural network weights",
+    "interpretability",
+    "machine learning",
+    "open weights",
+    "qwen",
+    "local llm guide",
+    "how to run llm locally"
+  ]
+}
