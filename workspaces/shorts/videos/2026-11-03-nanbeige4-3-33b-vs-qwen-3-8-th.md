@@ -2,14 +2,14 @@
 slug: 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th
 workspace: shorts
 title: "Qwen 3.8 vs Nanbeige4.3: 33B coder test"
-status: review
+status: expired
 pillar: comparison
 structure: comparison-ladder
 format: classic
 style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-03
-updated: "2026-11-03T13:40:23Z"
+updated: "2026-11-04T14:35:41Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-11-03T13:40:26Z 07-render ok 40.73s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 311
 - 2026-11-03T13:40:26Z 07-render ok 1116s
 - 2026-11-03T13:40:29Z build done, status review
+- 2026-11-04T14:35:41Z 2026-11-04T14:35:41Z expired: not from today's picks (2026-11-04); the factory carries no backlog

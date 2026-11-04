@@ -2,14 +2,14 @@
 slug: 2026-11-03-astra-edits-qwen-3-5-weights-m
 workspace: shorts
 title: "Astra edits Qwen 3.5 weights: math score 6x"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-03
-updated: "2026-11-03T12:10:22Z"
+updated: "2026-11-04T14:35:41Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-04T14:35:41Z 2026-11-04T14:35:41Z expired: not from today's picks (2026-11-04); the factory carries no backlog
