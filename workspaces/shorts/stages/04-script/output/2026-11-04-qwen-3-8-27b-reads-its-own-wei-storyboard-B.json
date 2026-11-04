@@ -29,7 +29,7 @@
     "EQUIPS"
   ],
   "target_duration_s": 36.8,
-  "narration_full": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+  "narration_full": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. The prompts are waiting in RikiyaT's repo. Your laptop can read real weights tonight.",
   "analogy": null,
   "music_mood": "curious-tech",
   "scenes": [
@@ -78,7 +78,7 @@
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "giant-number",
-      "narration": "Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+      "narration": "The prompts are waiting in RikiyaT's repo. Your laptop can read real weights tonight.",
       "on_screen_text": "read real weights tonight",
       "visual_brief": "On \"ollama run,\" the command \"ollama run qwen3.8:27b\" typewrites into a sharp-cornered terminal window; the line fits at 64 px inside the safe box. On \"prompt from RikiyaT's,\" \"RikiyaT/lm_understand-logs\" fades beneath it. On \"Real weights, on a laptop,\" both lines dim and a small ghost of \"Seventeen thousand numbers. It named the game.\" remains as the loop anchor; the wordmark settles in the final half second, last frame rhyming with frame 1. Nothing is spoken after the payoff.",
       "est_duration_s": 4.8
