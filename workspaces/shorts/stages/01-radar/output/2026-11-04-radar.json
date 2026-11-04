@@ -1,0 +1,1212 @@
+[
+  {
+    "id": "hn-6857dc224a",
+    "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+    "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+    "source": "hn",
+    "published_at": "2026-11-03T17:40:00Z",
+    "signals": {
+      "points": 649,
+      "num_comments": 189,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7672,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 649 points, 189 comments on HN, 18 h ago",
+    "score": 80
+  },
+  {
+    "id": "hn-435a4449f9",
+    "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+    "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+    "source": "hn",
+    "published_at": "2026-11-03T12:21:17Z",
+    "signals": {
+      "points": 994,
+      "num_comments": 203,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.7106,
+      "age_h": 23.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 994 points, 203 comments on HN, 24 h ago",
+    "score": 75
+  },
+  {
+    "id": "github-3d412eba20",
+    "title": "unsloth v0.1.914-beta: Glass Theme, Personalize & Faster Generation",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.914-beta",
+    "source": "github",
+    "published_at": "2026-11-03T14:19:42Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.914-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7311,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth"
+    ],
+    "summary": "Unsloth now has Glass themes and more customization options for backgrounds, greetings and chats. This release also brings faster generation, more multi-GPU training options and CPU training in Unsloth. <img width=\"800\" alt=\"unsloth glass theme\" src=\"https://github.com/user-attachments/assets/bc3867",
+    "why_now": "Shipped: unslothai/unsloth v0.1.914-beta released, 22 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-87d9325f64",
+    "title": "open-webui v0.13.0",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.0",
+    "source": "github",
+    "published_at": "2026-11-03T12:23:16Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.13.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7109,
+      "age_h": 23.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 📑 **Tabbed workspace.** The Tabs button at the top of a chat now opens a workspace for files, multiple terminal sessions, artifacts, previews, voice calls and comments. Add tabs from the + menu, drag to reorder them, and create and save new files directly into the selected terminal. Keep",
+    "why_now": "Shipped: open-webui/open-webui v0.13.0 released, 24 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-60d8889df7",
+    "title": "llama.cpp b12102",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12102",
+    "source": "github",
+    "published_at": "2026-11-04T09:12:53Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12102",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9603,
+      "age_h": 2.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> ggml: bound views by the bytes their strides reach (#31584) * ggml: bound views by the bytes their strides reach A view was checked against its source with the size of a contiguous tensor of the same shape, computed before its strides were set. Views whose rows overlap failed that che",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12102 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-ff35a25f31",
+    "title": "llama.cpp b12101",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12101",
+    "source": "github",
+    "published_at": "2026-11-04T08:32:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12101",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9512,
+      "age_h": 3.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "GGUF"
+    ],
+    "summary": "<details open> ggml : write host-buffer tensor data directly in gguf writer (#31144) The gguf writer staged each tensor into a temporary vector before writing it. For host-buffer tensors the data pointer is directly writable, so skip the staging copy and write it straight to the file. This avoids th",
+    "why_now": "Shipped: ggml-org/llama.cpp b12101 released (pre-release), 3 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-65fae33733",
+    "title": "llama.cpp b12100",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12100",
+    "source": "github",
+    "published_at": "2026-11-04T07:59:47Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12100",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9436,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> common : fix -hf tag matching inside longer quant names (#31620) * common : fix -hf tag matching inside longer quant names \":F16\" picked a BF16 file when the repo had both, since \"BF16\" contains \"F16\". The same applied to \":Q4_XS\" vs \"IQ4_XS\". The tag now has to start at a token bound",
+    "why_now": "Shipped: ggml-org/llama.cpp b12100 released (pre-release), 4 h ago",
+    "score": 55
+  },
+  {
+    "id": "hn-27a269c748",
+    "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+    "url": "https://uncracked.city",
+    "source": "hn",
+    "published_at": "2026-11-03T21:20:03Z",
+    "signals": {
+      "points": 78,
+      "num_comments": 33,
+      "signal": 0.747,
+      "signal_parts": {
+        "points": 0.766,
+        "comments": 0.703
+      },
+      "decay": 0.8089,
+      "age_h": 14.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "To give you some context on the project. I&#x27;m a solo founder and I use AI heavily in my work. The idea came from wanting players to discover cities. Each city has its own history, so every case is set in a real city with real public places. The crime and the people are on other hand invented. Th",
+    "why_now": "Shipped: 78 points, 33 comments on HN, 15 h ago",
+    "score": 51
+  },
+  {
+    "id": "github-8dcb4cd4ad",
+    "title": "ollama v0.40.15-rc0: v0.40.15",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.15-rc0",
+    "source": "github",
+    "published_at": "2026-11-03T22:52:31Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.15-rc0",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8271,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "MLX",
+      "CUDA"
+    ],
+    "summary": "## What's Changed * mlx: load bundled CUDA libraries in-process on Linux by @dhiltgen in https://github.com/ollama/ollama/pull/19433 * model: add MiMo V2.6 model support by @dhiltgen in https://github.com/ollama/ollama/pull/19400 **Full Changelog**: https://github.com/ollama/ollama/compare/v0.40.14.",
+    "why_now": "Shipped: ollama/ollama v0.40.15-rc0 released (pre-release), 13 h ago",
+    "score": 50
+  },
+  {
+    "id": "hf-fa4141eac5",
+    "title": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF",
+    "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF",
+    "source": "hf",
+    "published_at": "2026-11-02T13:52:10Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 137,
+      "downloads": 73282,
+      "trendingScore": 127.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.725,
+      "signal_parts": {
+        "trending": 0.638,
+        "likes": 0.713,
+        "downloads": 0.811
+      },
+      "decay": 0.5136,
+      "age_h": 46.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 137 likes, 73.3k downloads, trending score 127, created 2026-11-02",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 137 likes, 73.3k downloads, trending score 127, 46 h ago",
+    "score": 43
+  },
+  {
+    "id": "hn-a7e6ecc1f5",
+    "title": "Revolut swaps Claude for GLM open-weight model, cutting AI coding bill by 90%",
+    "url": "https://dealroom.co/news/169124-revolut-swaps-claude-code-for-a-chinese-open-weight-model-cutting-its-ai/",
+    "source": "hn",
+    "published_at": "2026-11-03T20:57:15Z",
+    "signals": {
+      "points": 11,
+      "num_comments": 1,
+      "signal": 0.346,
+      "signal_parts": {
+        "points": 0.435,
+        "comments": 0.138
+      },
+      "decay": 0.8045,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 11 points, 1 comments on HN, 15 h ago",
+    "score": 39
+  },
+  {
+    "id": "hn-1bd0aa89ae",
+    "title": "Mistral Large 4 on AlphaXiv",
+    "url": "https://www.alphaxiv.org/abs/2611.mistral-large-4",
+    "source": "hn",
+    "published_at": "2026-11-04T06:57:06Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9295,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 5 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-73592673ec",
+    "title": "DeepSeek Flash v4.1 Explained Through Harry Potter",
+    "url": "https://statsig.substack.com/p/deepseek-flash-v41-explained-through",
+    "source": "hn",
+    "published_at": "2026-11-03T23:14:20Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.8315,
+      "age_h": 12.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "explainer"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 13 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-071a7aa3d9",
+    "title": "Running quantum circuits inside llama.cpp",
+    "url": "https://github.com/dakk/qullama",
+    "source": "hn",
+    "published_at": "2026-11-04T10:45:06Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9819,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 1 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-d8afc2e251",
+    "title": "Over 500k words in a single DeepSeek thread",
+    "url": "https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.23686384",
+    "source": "hn",
+    "published_at": "2026-11-04T07:27:22Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9363,
+      "age_h": 4.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 5 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-f7a6818237",
+    "title": "MIT researchers edit Qwen weights with GPT-6 Astra to boost math",
+    "url": "https://venturebeat.com/technology/like-gene-editing-for-neural-networks-mit-researchers-used-gpt-6-astra-to-edit-qwens-open-weights-directly-boosting-math-performance",
+    "source": "hn",
+    "published_at": "2026-11-04T06:18:38Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9209,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 6 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-e2dff6563e",
+    "title": "Custom Voices with Qwen3-TTS",
+    "url": "https://lucumr.pocoo.org/2026/10/29/qwen3-custom-voices/",
+    "source": "hn",
+    "published_at": "2026-11-03T15:50:11Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7472,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-f01c12e008",
+    "title": "Ask HN: How to Keep the Edge as an Engineer?",
+    "url": "https://news.ycombinator.com/item?id=50362698",
+    "source": "hn",
+    "published_at": "2026-11-04T08:16:29Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.9474,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "Hi, for the past few months I&#x27;ve been thinking a lot about my work as a software engineer and how I&#x27;ll be able to provide benefits to companies I work for in the coming years, given the fast pace of progress of LLMs<p>Every time I think I found an edge that will help me stay I relevant, AI",
+    "why_now": "Discussed: 5 points, 2 comments on HN, 4 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-8fd91a213d",
+    "title": "More daily API calls than Google searches, now applied to LLM inference",
+    "url": "https://inference.alchemy.com",
+    "source": "hn",
+    "published_at": "2026-11-03T21:50:48Z",
+    "signals": {
+      "points": 10,
+      "num_comments": 1,
+      "signal": 0.336,
+      "signal_parts": {
+        "points": 0.42,
+        "comments": 0.138
+      },
+      "decay": 0.815,
+      "age_h": 14.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 10 points, 1 comments on HN, 14 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-161b87e4f8",
+    "title": "The Qwen weight edits are fixing the repetition and works on non math as well",
+    "url": "https://www.hedwigai.com/blog/weight-edit-math-or-loops",
+    "source": "hn",
+    "published_at": "2026-11-03T14:38:50Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7345,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-0ffe76c965",
+    "title": "Desktop app from the llama.cpp team (Mac OS and Windows)",
+    "url": "https://llama.app/models",
+    "source": "hn",
+    "published_at": "2026-11-04T12:00:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 1.0,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-fb6dd17e24",
+    "title": "Ask HN: Advice on local efficient analogical retrieval?",
+    "url": "https://news.ycombinator.com/item?id=50361973",
+    "source": "hn",
+    "published_at": "2026-11-04T06:09:55Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.919,
+      "age_h": 5.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "So.. I&#x27;ve been running my own archive of conversations, voice recordings, documents, and etc for AI agents (mostly Claude Code) for past 6 month.<p>Currently, when i ask or it answers something it runs hook that checks previous conversations, lists up potential related conversations.<p>The inte",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-3a7900d895",
+    "title": "DeepSeek Harness' new Creator Mode creates plugins from prompts",
+    "url": "https://mashable.com/tech/deepseek-creator-mode-plugins",
+    "source": "hn",
+    "published_at": "2026-11-04T03:40:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8866,
+      "age_h": 8.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-f3f7a1fc3d",
+    "title": "Show HN: AIStoreHub - 1-Click CLI to Configure MCP Servers in Cursor and Claude",
+    "url": "https://pypi.org/project/aistorehub/",
+    "source": "hn",
+    "published_at": "2026-11-03T17:33:25Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.766,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "We built this CLI (pip install aistorehub) to eliminate JSON syntax errors and missing $PATH binary crashes when adding Model Context Protocol servers to Cursor, Claude Desktop, and Windsurf.<p>Website &amp; Registry: <a href=\"https:&#x2F;&#x2F;aistorehub.in\" rel=\"nofollow\">https:&#x2F;&#x2F;aistore",
+    "why_now": "Broke: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d8cd669f88",
+    "title": "Ask HN: What is the best non mainstream programming language or stack in 2026?",
+    "url": "https://news.ycombinator.com/item?id=50360263",
+    "source": "hn",
+    "published_at": "2026-11-04T00:51:12Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.8511,
+      "age_h": 11.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Out of curiosity I started developing in lisp, mindblown. Basically big language like Java, Javascript, C#, Python have a lot of momentum compared to more niche, academic languages like LISP, SmallTalk, Erlang, Haskell.<p>What is your experience with these languages in the era of LLM, where you now",
+    "why_now": "Measured: 4 points, 3 comments on HN, 11 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-d6424a9f02",
+    "title": "Show HN: Agent Trace, let agents query Codex and CC chat histories",
+    "url": "https://github.com/wcook04/agent-trace-mechanism",
+    "source": "hn",
+    "published_at": "2026-11-03T15:20:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7419,
+      "age_h": 20.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "summary": "Hi HN, I&#x27;m Will. There are a few tools like this already, and my main ask is whether people would be interested in the interface (screenshot in README).<p>I use ChatGPT on the web to prompt codex because there are separate usage limits. I also prompt Claude Code the same way. It has better sear",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-25862b3be9",
+    "title": "Ask HN: Do you have any kind of sandboxing for those who run LLMs locally?",
+    "url": "https://news.ycombinator.com/item?id=50351285",
+    "source": "hn",
+    "published_at": "2026-11-03T12:38:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7136,
+      "age_h": 23.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "I have the project of running a LLM locally on a Windows. Since no one can tell for sure what&#x27;s going on I was thinking of sandboxie https:&#x2F;&#x2F;sandboxie-plus.com&#x2F; or better open sandbox https:&#x2F;&#x2F;open-sandbox.ai&#x2F; around a llama.cpp or whatever.<p>Even if it&#x27;s also",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-ee97970cc8",
+    "title": "What Qwen is thinking when it gets stuck saying \"Wait\"",
+    "url": "https://alisorcorp.github.io/inside-a-reasoning-loop/",
+    "source": "hn",
+    "published_at": "2026-11-03T12:28:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7118,
+      "age_h": 23.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 24 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-ac985b8170",
+    "title": "Ask HN: Is it worth reading The Art of Computer Programming now?",
+    "url": "https://news.ycombinator.com/item?id=50362846",
+    "source": "hn",
+    "published_at": "2026-11-04T08:36:25Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.952,
+      "age_h": 3.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:prompt",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "Just interested in peoples thoughts. It&#x27;s been a long term ambition of mine, but now I&#x27;m now wondering if it will just be a waste of time.<p>I will probably never really need an in depth understanding of algorithms given I can just prompt &quot;make this efficient&quot;. But if you don&#x2",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 3 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-a5ec05628e",
+    "title": "Ask HN: Best local LLM options under 2500 USD?",
+    "url": "https://news.ycombinator.com/item?id=50355440",
+    "source": "hn",
+    "published_at": "2026-11-03T17:51:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 5,
+      "signal": 0.192,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.357
+      },
+      "decay": 0.7694,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Let’s say you have about 2500$ to spend on hardware, and want to start with local LLMs.<p>What would be the best deal?",
+    "why_now": "Discussed: 1 points, 5 comments on HN, 18 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-42c43637b3",
+    "title": "How reliable are confidence scores from language models?",
+    "url": "https://www.davidhartel.com/blog/llm-confidence",
+    "source": "hn",
+    "published_at": "2026-11-03T17:32:02Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7657,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 18 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-20b573c488",
+    "title": "Revolut Cuts A.I. Coding Costs 90% with a Chinese Open-Weight Model",
+    "url": "https://www.trendingtopics.eu/revolut-glm-open-weight-coding-costs/",
+    "source": "hn",
+    "published_at": "2026-11-03T17:03:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7605,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-028f23734b",
+    "title": "Open models can do 90% of work at a twentieth of the cost of a frontier LLM",
+    "url": "https://www.theregister.com/ai-and-ml/2026/11/03/open-models-can-do-90-of-agentic-work-at-a-twentieth-of-the-cost-of-a-frontier-llm-gartner/5307132",
+    "source": "hn",
+    "published_at": "2026-11-03T15:41:51Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7457,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 20 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-2079327922",
+    "title": "Show HN: Evalship - find the flaws in your LLM evals",
+    "url": "https://evalship.com/",
+    "source": "hn",
+    "published_at": "2026-11-04T10:03:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.972,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 2 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-451f60a412",
+    "title": "What's an LLM?",
+    "url": "https://engineerofwealth.com/comics/2",
+    "source": "hn",
+    "published_at": "2026-11-03T16:42:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 2,
+      "signal": 0.151,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.219
+      },
+      "decay": 0.7566,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 2 comments on HN, 19 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-418567507c",
+    "title": "Musings on LLM-Assisted Coding",
+    "url": "https://www.jacky.wtf/essays/2026/indie-dev-llm/",
+    "source": "hn",
+    "published_at": "2026-11-03T20:38:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8008,
+      "age_h": 15.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-46a6c2049b",
+    "title": "The Inference Stack Behind OCRia",
+    "url": "https://www.llamaindex.ai/blog/the-inference-stack-behind-ocria",
+    "source": "hn",
+    "published_at": "2026-11-03T18:14:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7736,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:inference",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-03b73e41ca",
+    "title": "Show HN: Replacing Turn-Based LLM Agents with SQLite and System One Models",
+    "url": "https://github.com/DevLoops-ai/unified-brain",
+    "source": "hn",
+    "published_at": "2026-11-03T17:58:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7706,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-7208fc82ed",
+    "title": "Show HN: A 3KB LLM inference engine in C",
+    "url": "https://github.com/utsav1033/bytesized",
+    "source": "hn",
+    "published_at": "2026-11-03T17:48:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7688,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-090670b61b",
+    "title": "Show HN: Watch an LLM program a neural net's weights instead of training it",
+    "url": "https://github.com/lusob/model-booster",
+    "source": "hn",
+    "published_at": "2026-11-03T17:39:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7671,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-ec66acdc28",
+    "title": "Show HN: I built Knemora - An Open-source AI Second brain",
+    "url": "https://github.com/federicolaterra/knemora",
+    "source": "hn",
+    "published_at": "2026-11-03T15:58:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7486,
+      "age_h": 20.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, my name is Federico. I’m an Italian graphic designer and full stack developer.<p>In recent months, there has been a lot of talk about the &quot;second brain&quot; articles and YouTube videos; everyone is still discussing it, but I see a significant difference between that and what the concept",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-c55904e21a",
+    "title": "baidu/Unlimited-OCR-2",
+    "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+    "source": "hf",
+    "published_at": "2026-10-26T03:57:46Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 598,
+      "downloads": 230232,
+      "trendingScore": 244.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.825,
+      "signal_parts": {
+        "trending": 0.724,
+        "likes": 0.926,
+        "downloads": 0.894
+      },
+      "decay": 0.05,
+      "age_h": 224.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 598 likes, 230.2k downloads, trending score 244, created 2026-10-26",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 598 likes, 230.2k downloads, trending score 244, 9 d ago",
+    "score": 3
+  }
+]
