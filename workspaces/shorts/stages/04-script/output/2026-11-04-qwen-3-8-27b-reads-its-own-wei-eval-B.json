@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-04T12:59:43+00:00",
+  "generated_at": "2026-11-04T13:04:27+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-B.json",
@@ -42,8 +42,8 @@
           "label": "parameters in the toy network that was read (not Qwen's own)",
           "value": "17,253 parameters in total",
           "spent": true,
-          "matched_in": "both",
-          "matched_token": "Seventeen thousand",
+          "matched_in": "narration",
+          "matched_token": "seventeen thousand",
           "scene_ids": [
             "s01",
             "s02"
@@ -169,15 +169,15 @@
     },
     "entity_spend": {
       "total": 31,
-      "found_count": 3,
-      "score": 0.097,
+      "found_count": 4,
+      "score": 0.129,
       "found": [
+        "Qwen",
         "Weight",
         "Pac-Man",
         "RikiyaT"
       ],
       "missing": [
-        "Qwen",
         "Simon",
         "LM Studio",
         "BF16",
@@ -216,8 +216,11 @@
           "name": "Qwen",
           "tier": 0,
           "claim_count": 4,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
         },
         {
           "name": "Simon",
@@ -438,7 +441,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 12,
+      "sentences": 11,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -446,11 +449,10 @@
     "hook": {
       "concrete": true,
       "via": [
-        "digit",
-        "number:17,253 parameters in total"
+        "entity:Qwen"
       ],
-      "hook_text": "17,253 numbers. it named the game",
-      "first_sentence": "Seventeen thousand raw weights arrived."
+      "hook_text": "your feed: Qwen read its own weights",
+      "first_sentence": "Your feed said Qwen read its own weights."
     },
     "positional_labels": {
       "count": 0,
@@ -465,17 +467,18 @@
         {
           "id": "s01",
           "role": "hook",
-          "est_duration_s": 5.2,
+          "est_duration_s": 5.5,
           "specific": true,
           "hits": [
-            "num:17,253 parameters in total"
+            "num:17,253 parameters in total",
+            "entity:Qwen"
           ],
-          "narration": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights."
+          "narration": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers."
         },
         {
           "id": "s02",
           "role": "foreshadow",
-          "est_duration_s": 7.2,
+          "est_duration_s": 7.6,
           "specific": true,
           "hits": [
             "num:17,253 parameters in total"
@@ -517,14 +520,14 @@
       ]
     },
     "language": {
-      "fk_grade": 5.3,
-      "words": 112,
-      "sentences": 12,
-      "est_speech_s": 38.6,
+      "fk_grade": 5.6,
+      "words": 111,
+      "sentences": 11,
+      "est_speech_s": 38.3,
       "vo_band_ok": true
     },
-    "narration_full": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
-    "on_screen": "17,253 numbers. it named the game | Seventeen thousand numbers. It named the game. | 17,253 params. Not its own 27B. | 3 of 4 right \u00b7 46m 12s | Read numbers it was handed. Not itself. | read real weights tonight"
+    "narration_full": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+    "on_screen": "your feed: Qwen read its own weights | Qwen read its own weights? | 17,253 params. Not its own 27B. | 3 of 4 right \u00b7 46m 12s | Read numbers it was handed. Not itself. | read real weights tonight"
   },
   "validators": {
     "storyboard": {
@@ -532,14 +535,14 @@
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-B.json",
         "scenes": 5,
-        "fk_grade": 5.3,
-        "words": 112,
-        "est_speech_s": 38.6,
+        "fk_grade": 5.6,
+        "words": 111,
+        "est_speech_s": 38.3,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
-          "FK grade 5.3 \u2014 target <=5",
+          "FK grade 5.6 \u2014 target <=5",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence"
         ]
       }
@@ -595,10 +598,8 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "sameness"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
@@ -614,7 +615,7 @@
         "mode": "band"
       },
       "entity_spend": {
-        "score": 0.097,
+        "score": 0.129,
         "need": 0.5,
         "advisory": true
       },
@@ -629,8 +630,7 @@
       "hook_concrete": {
         "concrete": true,
         "via": [
-          "digit",
-          "number:17,253 parameters in total"
+          "entity:Qwen"
         ]
       },
       "scene_specificity": {
@@ -662,20 +662,12 @@
       },
       "sameness": {
         "checked": true,
-        "ok": false,
+        "ok": true,
         "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
         "comparisons": 5,
-        "violations": [
-          {
-            "rule": "hook_pattern",
-            "detail": "hook pattern 'number-shock' repeats 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th",
-            "against": [
-              "2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th"
-            ]
-          }
-        ],
+        "violations": [],
         "advisories": [],
-        "reason": "hook pattern 'number-shock' repeats 2026-11-03-nanbeige4-3-33b-vs-qwen-3-8-th"
+        "reason": null
       },
       "validator": {
         "blockers": 0

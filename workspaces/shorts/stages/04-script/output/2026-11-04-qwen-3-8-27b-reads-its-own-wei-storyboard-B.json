@@ -8,7 +8,7 @@
     "#localLLM",
     "#LocalAI"
   ],
-  "hook_text": "17,253 numbers. it named the game",
+  "hook_text": "your feed: Qwen read its own weights",
   "hook_candidates": [
     "Your laptop model can read another network's mind.",
     "Seventeen thousand numbers. It named the game.",
@@ -28,8 +28,8 @@
     "TEACHES",
     "EQUIPS"
   ],
-  "target_duration_s": 36.1,
-  "narration_full": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
+  "target_duration_s": 36.8,
+  "narration_full": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers. Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters. Given that toy's raw weights, it named three of four games right. The full run took forty-six minutes and twelve seconds. It guessed Pac-Man on the obscure one, and the trace is almost incomprehensible. Weight reading is real: it answered questions about numbers handed to it, the toy's raw weights. It never once looked inward. Your laptop can read real weights tonight. The prompts are waiting in RikiyaT's repo.",
   "analogy": null,
   "music_mood": "curious-tech",
   "scenes": [
@@ -38,10 +38,10 @@
       "role": "hook",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "Seventeen thousand raw weights arrived. It named the game. Your feed said it read its own weights.",
-      "on_screen_text": "Seventeen thousand numbers. It named the game.",
+      "narration": "Your feed said Qwen read its own weights. It named a game from seventeen thousand numbers.",
+      "on_screen_text": "Qwen read its own weights?",
       "visual_brief": "Frame 1: the hook text fully legible, centered, amber as the only accent. On \"It named the game,\" an emphasis punch (scale 1.12, text pre-sized to SAFE_W / 1.12) lands on \"named the game.\" On \"its own weights,\" a dim secondary line \"its own weights?\" fades in below. Motion onset no earlier than frame 9; at most one text block animating.",
-      "est_duration_s": 5.2
+      "est_duration_s": 5.5
     },
     {
       "id": "s02",
@@ -51,7 +51,7 @@
       "narration": "Those seventeen thousand two hundred fifty-three parameters are a toy network, built for the test. Not the model's own twenty-seven billion parameters.",
       "on_screen_text": "17,253 params. Not its own 27B.",
       "visual_brief": "Hard cut. On \"seventeen thousand two hundred fifty-three parameters,\" a short amber bar labeled \"17,253 params (toy)\" rises in place. On \"twenty-seven billion,\" a tall dim bar labeled \"its own 27B\" grows beside it, dwarfing the first. Two elements animating at once, nothing else moves; the size gap is the whole point.",
-      "est_duration_s": 7.2
+      "est_duration_s": 7.6
     },
     {
       "id": "s03",

@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-04T12:59:43+00:00",
+  "generated_at": "2026-11-04T13:06:15+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-A.json",
@@ -34,35 +34,39 @@
   "board_metrics": {
     "number_spend": {
       "total": 15,
-      "spent": 1,
-      "distinct": 1,
-      "score": 0.067,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.2,
       "detail": [
         {
           "label": "parameters in the toy network that was read (not Qwen's own)",
           "value": "17,253 parameters in total",
           "spent": true,
           "matched_in": "narration",
-          "matched_token": "Seventeen thousand",
+          "matched_token": "seventeen thousand",
           "scene_ids": [
-            "s01"
+            "s02"
           ]
         },
         {
           "label": "games identified correctly (Breakout, Pong, Pac-Man; missed Freeway)",
           "value": "3 of 4",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three",
+          "scene_ids": [
+            "s02"
+          ]
         },
         {
           "label": "Simon's local model file size (Q4_K_M GGUF)",
           "value": "17GB",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "seventeen gigabytes",
+          "scene_ids": [
+            "s05"
+          ]
         },
         {
           "label": "Pac-Man run duration",
@@ -164,14 +168,14 @@
     },
     "entity_spend": {
       "total": 31,
-      "found_count": 1,
-      "score": 0.032,
+      "found_count": 3,
+      "score": 0.097,
       "found": [
+        "Qwen",
+        "Simon",
         "Pac-Man"
       ],
       "missing": [
-        "Qwen",
-        "Simon",
         "Weight",
         "LM Studio",
         "BF16",
@@ -205,21 +209,26 @@
         "Qwen",
         "Simon"
       ],
-      "top2_present": false,
+      "top2_present": true,
       "entities": [
         {
           "name": "Qwen",
           "tier": 0,
           "claim_count": 4,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
         },
         {
           "name": "Simon",
           "tier": 0,
           "claim_count": 3,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
         },
         {
           "name": "Weight",
@@ -430,16 +439,18 @@
       ]
     },
     "skeleton": {
-      "sentences": 12,
+      "sentences": 11,
       "hits": 0,
       "density": 0.0,
       "offenders": []
     },
     "hook": {
-      "concrete": false,
-      "via": [],
-      "hook_text": "Your laptop model reads another mind",
-      "first_sentence": "Your laptop model can read another network's mind."
+      "concrete": true,
+      "via": [
+        "entity:Qwen"
+      ],
+      "hook_text": "Qwen just read a stranger's mind",
+      "first_sentence": "Qwen, the model on your laptop, can read another network's mind."
     },
     "positional_labels": {
       "count": 0,
@@ -448,28 +459,30 @@
     },
     "scene_specificity": {
       "total": 5,
-      "specific_count": 3,
-      "ratio": 0.6,
+      "specific_count": 4,
+      "ratio": 0.8,
       "scenes": [
         {
           "id": "s01",
           "role": "hook",
-          "est_duration_s": 6.9,
+          "est_duration_s": 6.6,
           "specific": true,
           "hits": [
-            "num:17,253 parameters in total"
+            "entity:Qwen"
           ],
-          "narration": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game."
+          "narration": "Qwen, the model on your laptop, can read another network's mind. A pasted network, and it names the game."
         },
         {
           "id": "s02",
           "role": "foreshadow",
-          "est_duration_s": 7.6,
+          "est_duration_s": 7.9,
           "specific": true,
           "hits": [
-            "glossary:weight"
+            "num:17,253 parameters in total",
+            "num:3 of 4",
+            "entity:Simon"
           ],
-          "narration": "Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land."
+          "narration": "Those weights are a toy network: seventeen thousand two hundred fifty-three parameters, pasted as text. Simon's run went three of four games right."
         },
         {
           "id": "s03",
@@ -492,22 +505,24 @@
         {
           "id": "s05",
           "role": "payoff_close",
-          "est_duration_s": 5.5,
-          "specific": false,
-          "hits": [],
-          "narration": "The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits."
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:17GB"
+          ],
+          "narration": "The repo has the prompts waiting. Tonight your machine reads a mind, seventeen gigabytes of download, and knows its limits."
         }
       ]
     },
     "language": {
-      "fk_grade": 4.2,
-      "words": 98,
-      "sentences": 12,
-      "est_speech_s": 33.8,
+      "fk_grade": 5.0,
+      "words": 103,
+      "sentences": 11,
+      "est_speech_s": 35.5,
       "vo_band_ok": true
     },
-    "narration_full": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game. Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land. One number alone says nothing. Together they are clues: rows become cells, cells become a grid. Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own. The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits.",
-    "on_screen": "Your laptop model reads another mind | your laptop model reads another mind | a whole network, pasted as text | rows become cells | Pac-Man. Not its own weights. | tonight: read a mind"
+    "narration_full": "Qwen, the model on your laptop, can read another network's mind. A pasted network, and it names the game. Those weights are a toy network: seventeen thousand two hundred fifty-three parameters, pasted as text. Simon's run went three of four games right. One number alone says nothing. Together they are clues: rows become cells, cells become a grid. Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own. The repo has the prompts waiting. Tonight your machine reads a mind, seventeen gigabytes of download, and knows its limits.",
+    "on_screen": "Qwen just read a stranger's mind | Qwen just read a stranger's mind | a whole network, pasted as text | rows become cells | Pac-Man. Not its own weights. | tonight: read a mind"
   },
   "validators": {
     "storyboard": {
@@ -515,14 +530,16 @@
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-11-04-qwen-3-8-27b-reads-its-own-wei-storyboard-A.json",
         "scenes": 5,
-        "fk_grade": 4.2,
-        "words": 98,
-        "est_speech_s": 33.8,
+        "fk_grade": 5.0,
+        "words": 103,
+        "est_speech_s": 35.5,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
           "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 5.0 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
           "s01: 7s scene with ~1 visual beats in brief \u2014 need a change every ~3s"
         ]
       }
@@ -578,29 +595,23 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "number_spend",
-      "hook_concrete",
-      "scene_specificity"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
-      "entity_spend",
-      "top2"
+      "entity_spend"
     ],
     "detail": {
       "number_spend": {
-        "spent": 1,
-        "heard": 1,
+        "spent": 3,
+        "heard": 3,
         "total": 15,
         "need": 2,
         "min": 2,
         "max": 5,
-        "mode": "band",
-        "reason": "the viewer hears 1 distinct number (1 of 15 brief rows matched); the band is 2-5"
+        "mode": "band"
       },
       "entity_spend": {
-        "score": 0.032,
+        "score": 0.097,
         "need": 0.5,
         "advisory": true
       },
@@ -609,15 +620,17 @@
           "Qwen",
           "Simon"
         ],
-        "present": false,
+        "present": true,
         "advisory": true
       },
       "hook_concrete": {
-        "concrete": false,
-        "via": []
+        "concrete": true,
+        "via": [
+          "entity:Qwen"
+        ]
       },
       "scene_specificity": {
-        "specific": 3,
+        "specific": 4,
         "need": 4,
         "total": 5
       },

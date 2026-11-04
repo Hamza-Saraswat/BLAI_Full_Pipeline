@@ -8,7 +8,7 @@
     "#localLLM",
     "#LocalAI"
   ],
-  "hook_text": "Your laptop model reads another mind",
+  "hook_text": "Qwen just read a stranger's mind",
   "hook_candidates": [
     "Your laptop model can read another network's mind.",
     "Seventeen thousand numbers. It named the game.",
@@ -28,8 +28,8 @@
     "TEACHES",
     "EQUIPS"
   ],
-  "target_duration_s": 33.4,
-  "narration_full": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game. Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land. One number alone says nothing. Together they are clues: rows become cells, cells become a grid. Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own. The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits.",
+  "target_duration_s": 34.8,
+  "narration_full": "Qwen, the model on your laptop, can read another network's mind. A pasted network, and it names the game. Those weights are a toy network: seventeen thousand two hundred fifty-three parameters, pasted as text. Simon's run went three of four games right. One number alone says nothing. Together they are clues: rows become cells, cells become a grid. Asked what it does, the model answers: Pac-Man. That is a big model reading a small network's weights. It never read its own. The repo has the prompts waiting. Tonight your machine reads a mind, seventeen gigabytes of download, and knows its limits.",
   "analogy": null,
   "music_mood": "curious-tech",
   "scenes": [
@@ -38,20 +38,20 @@
       "role": "hook",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "Your laptop model can read another network's mind. Seventeen thousand two hundred fifty-three parameters, and it names the game.",
-      "on_screen_text": "your laptop model reads another mind",
+      "narration": "Qwen, the model on your laptop, can read another network's mind. A pasted network, and it names the game.",
+      "on_screen_text": "Qwen just read a stranger's mind",
       "visual_brief": "Frame 1: the hook sentence centered and fully legible, exactly as spoken. On the narration phrase \"Seventeen thousand two hundred fifty-three\", the figure \"17,253\" rises in beneath the sentence with a short emphasis punch; nothing else moves. Motion onset at 0.30s: the grid tiles rise-in-place on 'another network's mind'.",
-      "est_duration_s": 6.9
+      "est_duration_s": 6.6
     },
     {
       "id": "s02",
       "role": "foreshadow",
       "tool": "hyperframes",
       "layout_archetype": "split-compare",
-      "narration": "Those parameters are not its own. You paste a toy network's weights, its numbers, into the chat as text. The numbers land.",
+      "narration": "Those weights are a toy network: seventeen thousand two hundred fifty-three parameters, pasted as text. Simon's run went three of four games right.",
       "on_screen_text": "a whole network, pasted as text",
       "visual_brief": "Hard cut to a terminal-style chat window. On \"You paste\", a wall of small digits streams into the input box; the stream keeps flowing through \"as text\". On \"The numbers land\", the stream stops and the full wall of digits sits still inside the window.",
-      "est_duration_s": 7.6
+      "est_duration_s": 7.9
     },
     {
       "id": "s03",
@@ -78,10 +78,10 @@
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "giant-number",
-      "narration": "The repo has the prompts waiting. Tonight your machine reads a mind, and knows its limits.",
+      "narration": "The repo has the prompts waiting. Tonight your machine reads a mind, seventeen gigabytes of download, and knows its limits.",
       "on_screen_text": "tonight: read a mind",
       "visual_brief": "On \"ollama run qwen three point eight\", the command \"ollama run qwen3.8:27b\" types into a terminal block; on \"long context\" the words \"long context\" appear beside it; on \"RikiyaT's repo\" the slug \"RikiyaT/lm_understand-logs\" fades in below. On \"reads the small mind\", the view returns to the centered composition of frame 1 showing the recall line \"17,253 parameters → Pac-Man\", then the wordmark settles.",
-      "est_duration_s": 5.5
+      "est_duration_s": 6.9
     }
   ],
   "notes_for_review": "Worked example carried as the Pac-Man run; turns named by what changes: the numbers land (s02), rows become cells (s03), the answer names the game (s04). Correction delivered twice: s02 \"not its own\" and s04 \"It never read its own\". Analogy is null on purpose: no signature vehicle fits weight-reading, and the mechanism is stated plainly instead. Key numbers spent: two (seventeen thousand two hundred fifty-three parameters; twenty-seven-billion-parameter tag), one per sentence. The 17,253 figure is spoken only in s01; its reappearance on the final frame is the deliberate loop-anchor recall. Repo slug is on screen; narration says \"RikiyaT's repo\". One generic scene allowed and used (s03); all others carry a number or named entity. Total 110 words, est 37.9 s, inside the classic sweet band. Payoff sentence is last; nothing follows it.",
