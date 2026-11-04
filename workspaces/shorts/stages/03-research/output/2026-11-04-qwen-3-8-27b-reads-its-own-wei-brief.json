@@ -1,0 +1,264 @@
+{
+  "slug": "2026-11-04-qwen-3-8-27b-reads-its-own-wei",
+  "topic": "Qwen 3.8 27B reads its own weights on a laptop",
+  "generated_at": "2026-11-04T12:44:24Z",
+  "depth": "standard",
+  "thesis": "A 27B open-weights model you can run tonight on a 17 GB download can be handed thousands of raw weight numbers and infer what the tiny network they belong to was trained to do -- not magic, not its own weights, but real weight-reading you can reproduce locally.",
+  "explanation_path": "Start with what a weight is: one number among millions that decides how strongly a signal passes; the model is nothing but these numbers, so reading them is reading the machine. Establish that a laptop-class 27B model is now a 17 GB download, not a lab cluster -- a dense vision-language model with 64 layers and a 262,144-token context that fits tonight's hardware. Then the event: Simon Willison pasted the raw floating-point weights of a tiny game-playing network into the prompt -- no tools allowed -- and the model reasoned for three quarters of an hour before naming the right game, three times out of four. Walk one identification in detail, because the mechanics are the payoff: every large weight in a row is a clue about one grid cell's job, and the model mutters through them for tens of thousands of reasoning tokens. Before the audience overclaims, land the two limits: the network read was a 17,253-parameter toy, not the model's own 27 billion; and it failed the one game too obscure to guess. Close on how to run the experiment tonight and what honest expectation looks like: hours, not seconds; partial credit, not omniscience; and the same test had a cloud frontier model only slightly faster.",
+  "claims": [
+    {
+      "claim": "Simon Willison ran the no-tools 'which game is this network?' weight-reading test on Qwen 3.8 27B running locally on his laptop, and it correctly identified 3 of the 4 game networks from raw weights alone.",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source_title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "What the model read was a tiny 17,253-parameter policy network described in the prompt text -- 'A policy network (multilayer perceptron) with 500 inputs, two hidden layers of 32 units with tanh activations, and 5 outputs ... 17,253 parameters in total' -- not Qwen's own weights.",
+      "source_url": "https://gist.github.com/simonw/387d3a7927f165b1986bb6c2099d0f53",
+      "source_title": "Qwen-weights.md (Simon Willison transcript gist)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "The Pac-Man identification succeeded after 46m 12s and 43,506 reasoning tokens, with the model answering 'Game: A simplified Pac-Man-style gridworld' at 72% self-reported confidence.",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source_title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "Qwen 3.8 27B is officially a 27B-parameter dense vision-language model (exact count 27,781,427,952 BF16 parameters) with a native context length of 262,144 tokens, released under Apache-2.0 with weights live since 2026-08-14.",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "source_title": "Qwen/Qwen3.8-27B model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "The local run used LM Studio with the model loaded at a long context window because 'the default 8192 context failed with errors', via the llm CLI's -f fragment option with LMSTUDIO_TIMEOUT=900.",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source_title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "The four prompts come from the companion repo of the Sparks of Weight-Space Programming paper, RikiyaT/lm_understand-logs, whose exp1_which_game folder holds the four game prompt.txt files Simon used.",
+      "source_url": "https://github.com/RikiyaT/lm_understand-logs",
+      "source_title": "RikiyaT/lm_understand-logs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "Ollama ships Qwen3.8 27B as its default tag -- an 18GB download with a 256K context window -- whose language-model blob is Q4_K_M, 27.3B parameters, 17GB, plus an uncompressed BF16 CLIP vision projector (461M parameters, 931MB).",
+      "source_url": "https://ollama.com/library/qwen3.8:27b",
+      "source_title": "qwen3.8:27b - Ollama",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "LM Studio's catalog rates the model 'laptop size' with minimum system memory of 16GB, and Unsloth's requirement table puts 4-bit quants on 16-19GB of total memory (RTX 5080, 4090, or a 24GB Mac).",
+      "source_url": "https://unsloth.ai/docs/models/qwen3.8",
+      "source_title": "Qwen3.8 - How to Run Locally - Unsloth Documentation",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "After a broken DeltaNet CUDA path in older llama.cpp builds produced garbage output at full speed, an updated build (about b10450 with matching shared libraries) runs the model clean at ~42.9 tok/s on an RTX 3090 24GB under WSL CUDA with MTP speculative decoding.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/27164",
+      "source_title": "Discussion #27164: My issues and what I had to do to get Qwen3.8-27B to work with Llama.cpp",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "On failure and limits, Qwen missed Freeway (an obscure 1981 Atari game), guessing 'A simplified Pac-Man-like grid game' instead, and Simon notes the traces are 'almost incomprehensible' and that 'a sufficiently experienced human being armed with a notepad and a pencil could get there with enough effort'.",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source_title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    },
+    {
+      "claim": "The same Breakout prompt was answered correctly by the cloud frontier model Kimi K3.1 Pro after 9m 41s and 19,493 reasoning tokens -- the local 27B needed 52m 25s for its 88%-confidence answer.",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source_title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-04"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "parameters in the toy network that was read (not Qwen's own)",
+      "value": "17,253 parameters in total",
+      "source_url": "https://gist.github.com/simonw/387d3a7927f165b1986bb6c2099d0f53"
+    },
+    {
+      "label": "games identified correctly (Breakout, Pong, Pac-Man; missed Freeway)",
+      "value": "3 of 4",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "Simon's local model file size (Q4_K_M GGUF)",
+      "value": "17GB",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "Pac-Man run duration",
+      "value": "46m 12s",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "Pac-Man reasoning tokens",
+      "value": "43,506 reasoning tokens",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "input tokens per weight prompt",
+      "value": "104,838 input tokens",
+      "source_url": "https://gist.github.com/simonw/387d3a7927f165b1986bb6c2099d0f53"
+    },
+    {
+      "label": "Breakout confidence",
+      "value": "88%",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "exact Qwen3.8-27B parameter count (BF16)",
+      "value": "27,781,427,952",
+      "source_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B"
+    },
+    {
+      "label": "native context window",
+      "value": "262,144 tokens",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "label": "Ollama default 27B tag download size",
+      "value": "18GB",
+      "source_url": "https://ollama.com/library/qwen3.8:27b"
+    },
+    {
+      "label": "minimum system memory (LM Studio catalog)",
+      "value": "16GB",
+      "source_url": "https://lmstudio.ai/models/qwen/qwen3.8-27b"
+    },
+    {
+      "label": "4-bit quant total-memory band (Unsloth)",
+      "value": "16-19GB VRAM",
+      "source_url": "https://unsloth.ai/docs/models/qwen3.8"
+    },
+    {
+      "label": "measured decode speed, RTX 3090 24GB, WSL CUDA, MTP on (benchmark tier)",
+      "value": "~42.9 tok/s",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/27164"
+    },
+    {
+      "label": "cloud comparison: Kimi K3.1 Pro Breakout run",
+      "value": "9m 41s and 19,493 reasoning tokens",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "label": "HN traction for the source post (why-now)",
+      "value": "649 points, 189 comments",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "identifying a song from the raw WAV sample values instead of listening to it",
+      "mapping": "the model reads thousands of bare decimals like -2.107, 1.169, 0.513 and infers 'paddle on the bottom row, ball above' -- structure from noise, no labels",
+      "limit": "breaks because Qwen only recognizes games it already knows: the obscure Freeway 'waveform' got identified as Pac-Man"
+    },
+    {
+      "vehicle": "a detective reading a suspect's diary written in pure arithmetic",
+      "mapping": "each weight row is a clue about one grid cell's job (agent / ghost / pellet / wall), and 43,506 reasoning tokens is the detective muttering line by line",
+      "limit": "breaks at cost: one hunch takes 46 minutes to over an hour on a laptop, and the diary pages are 'almost incomprehensible' even to skim"
+    },
+    {
+      "vehicle": "reading assembly to guess the program",
+      "mapping": "weights are the machine code of a neural net and the model is the reverse engineer, but with no disassembler -- just eyes on the numbers",
+      "limit": "breaks because the target was a 17,253-parameter toy, not a real model: reverse-engineering a 27B model this way is not what happened and is not plausible at this speed"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Qwen read its own weights",
+      "reality": "It read the weights of a tiny 17,253-parameter game-playing policy network pasted into the prompt; it never touched its own 27 billion parameters (claim 2)"
+    },
+    {
+      "myth": "Local AI is now superhuman at reading neural nets",
+      "reality": "It went 3-for-4 on famous games and Simon expects 'a sufficiently experienced human being armed with a notepad and a pencil could get there with enough effort' (claim 10)"
+    },
+    {
+      "myth": "It answers instantly like a magic trick",
+      "reality": "Each run took 46 minutes to 1h 16m of reasoning on roughly 104,838 input tokens, a long context window (the default 8192 failed) and a bumped timeout (claims 3, 5)"
+    },
+    {
+      "myth": "If it loads and streams at full speed, the model is working",
+      "reality": "Older llama.cpp CUDA builds ran this model at full speed and 'roughly 19 GB' VRAM while emitting pure garbage through a broken DeltaNet path; and one DGX Spark user's identical symptoms came from a corrupted GGUF (claim 9)"
+    },
+    {
+      "myth": "A 27B model needs a lab or 27GB-plus of pro hardware",
+      "reality": "The default Ollama tag is an 18GB download (17GB Q4_K_M model blob), LM Studio lists minimum system memory 16GB, and Unsloth puts 4-bit on 16-19GB (claims 7, 8)"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "weight",
+      "definition": "One number among millions that decides how strongly a signal passes through the network; the model is nothing but these numbers."
+    },
+    {
+      "term": "policy network",
+      "definition": "The small network that was read: 500 grid inputs, two hidden layers of 32 units, 5 action outputs, trained with PPO reinforcement learning to play a grid game."
+    },
+    {
+      "term": "reasoning tokens",
+      "definition": "Tokens the model generates internally while thinking before its final answer; 43,506 to 69,787 per run here."
+    },
+    {
+      "term": "Weight-Space Programming",
+      "definition": "The paper's term for LLMs analyzing and modifying raw neural network weights directly, using reasoning instead of training loops."
+    },
+    {
+      "term": "GGUF / Q4_K_M",
+      "definition": "The single-file quantized weight format runtimes load, and the 4-bit quantization scheme that makes a 27B model a 17GB download."
+    },
+    {
+      "term": "context window",
+      "definition": "How much text the model can hold at once; the weight prompts need about 104,838 tokens of it, and the default 8192 failed with errors."
+    },
+    {
+      "term": "thinking mode",
+      "definition": "Qwen 3.8's default behavior of generating visible reasoning before answering, tunable via reasoning_effort."
+    }
+  ],
+  "unverified": [
+    "The paper's own headline numbers (GPT-6 Astra raising MATH-500 from 7.9% to 48.1% and IFEval by 3x by editing 0.016% of Qwen3.5-0.8B's weights) are quoted from Simon's post quoting the abstract; the paper itself was not fetched this run.",
+    "Real tokens-per-second on our own DGX Spark or a laptop for this model is not publicly measured; willitrunai's 13.8 tok/s (range 10.4-16.2) for a DGX Spark is a bandwidth-formula estimate flagged EST. with no public result, and no first-party Spark number exists yet.",
+    "How much of the weight-reading ability survives 4-bit quantization is unmeasured; no fetched page benchmarks introspection quality per quant.",
+    "Simon's laptop hardware (which Mac or chip, RAM) is not stated in the post or the gists.",
+    "The exact context length Simon set in LM Studio is not stated; only that the default 8192 failed with errors.",
+    "The first llama.cpp build that shipped the fixed DeltaNet CUDA path is not pinned; the thread only names broken commit 221f0f6 and working approximately-b10450 (ece963f41)."
+  ],
+  "suggested_outline": "Hook: your laptop model can read another network's mind -- thousands of raw weight numbers in, the right game out, three times out of four\nWhat a weight is: one number among millions that decides how strongly a signal passes; the model is nothing but these numbers\nTonight's hardware reality: a 27B vision-language model is an 18GB download, 16GB floor, 17GB Q4_K_M file -- no lab cluster\nThe event: Simon Willison pasted the raw weights of a tiny game network into the prompt, no tools allowed, and asked which game it plays\nThe mechanics, walked slow: every large weight row is a clue about one grid cell's job; the model mutters through them for 43,506 reasoning tokens\nThe score: Pac-Man right in 46m 12s at 72%, Breakout right at 88%, Pong right, Freeway wrong -- obscure games beat it\nThe honest limit: it read a 17,253-parameter toy, not its own 27 billion; a cloud frontier model did the same job in 9m 41s; a patient human with a notepad could too\nRun it tonight: ollama run qwen3.8:27b or LM Studio, long context (default 8192 fails), grab the prompt from RikiyaT/lm_understand-logs, expect hours and partial credit\nClose: weights are readable -- slowly, partially, on your own machine; that is the door this opens",
+  "notes": "The angle's 'reads its own weights' framing is technically false and the brief corrects it deliberately (misconception 1): the model read a 17,253-parameter toy network described in the prompt, never its own parameters. The script should keep the hook and pay off the correction honestly. Cross-check: willitrunai's 38.5 tok/s RTX 3090 estimate is consistent with the discussion's measured ~42.9 tok/s with MTP on. Conflict note: Ollama's page says 18GB download / 17GB model blob while Simon says 'just 17GB' for his Q4_K_M file; both are kept verbatim, they describe the same quant at different scopes (with/without projector).",
+  "viewer_situation": "You have a gaming PC or a Mac with 16GB-plus of memory and you have run a local model before, but you treat its weights as an opaque file you download and never look inside.",
+  "has_process": true,
+  "process_steps": [
+    "Install a runtime (Ollama or LM Studio) and download the model: ollama run qwen3.8:27b (18GB download) or load the Q4_K_M GGUF in LM Studio",
+    "Raise the context window well past the default 8192 tokens -- the weight prompt is about 104,838 input tokens",
+    "Grab a raw-weights prompt file from the RikiyaT/lm_understand-logs repo (exp1_which_game folder)",
+    "Paste the prompt as one single-shot message with no tools enabled",
+    "Leave it alone for about an hour while it reasons, then read the answer and its confidence"
+  ],
+  "objection": "This is one anecdote on a 17,253-parameter toy network with self-reported confidence and zero tool use; it does not scale to real models and proves nothing about the model understanding its own weights."
+}
