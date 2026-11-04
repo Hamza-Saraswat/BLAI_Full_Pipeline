@@ -2,18 +2,18 @@
 slug: 2026-11-04-qwen-3-8-27b-reads-its-own-wei
 workspace: shorts
 title: Qwen 3.8 27B reads weights. Not its own.
-status: building
+status: blocked
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-04
-updated: "2026-11-04T13:15:53Z"
+updated: "2026-11-04T13:20:38Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.045, 4 mismatch(es): expected 'thousand' heard 'zero'; expected 'thousand' heard ''; expected \\"rikiyat's\\" heard \\"ricky ateez's\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -40,3 +40,6 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-04T13:15:53Z build start on gn100-83c4
+- 2026-11-04T13:18:42Z 06-voice fail 166s (voice QA failed: WER 0.054, 4 mismatch(es): expected 'thousand' heard 'zero'; expected 'thousand' heard ''; expected 'waiting' heard 'weighting')
+- 2026-11-04T13:20:38Z 06-voice fail 116s (voice QA failed: WER 0.045, 4 mismatch(es): expected 'thousand' heard 'zero'; expected 'thousand' heard ''; expected "rikiyat's" heard "ricky ateez's")
+- 2026-11-04T13:20:38Z blocked at 06-voice
