@@ -2,19 +2,19 @@
 slug: 2026-11-04-qwen-3-8-27b-reads-its-own-wei
 workspace: shorts
 title: Qwen 3.8 27B reads weights. Not its own.
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-04
-updated: "2026-11-04T13:15:11Z"
+updated: "2026-11-04T13:15:53Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 - 2026-11-04 package: checkpoint picked the intriguing title "Qwen 3.8 27B reads weights. Not its own." (searchable variant kept for search surface); rubric 90/100, every row full. check_outputs 0 failures after linking the package artifact (and the stage-04 normalized narration that already sits in 06-voice/output/). Hub to ready-to-build; stages 06-08 are the Spark build job's.
 
 ## Build journal
-
+- 2026-11-04T13:15:53Z build start on gn100-83c4
