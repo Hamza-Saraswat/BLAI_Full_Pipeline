@@ -2,11 +2,11 @@
 slug: 2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh
 workspace: shorts
 title: "Kimi K3.1 Pro: 1.56 TB of weights and what you can actually run"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: contrarian-take
 format: smooth-explainer
-style_pack: ""
+style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-05
 updated: "2026-11-05T12:08:02Z"
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-05-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-05-ideas]]
 - Research: [[stages/03-research/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -35,6 +35,7 @@ blotato_post_id: ""
 
 - Picked (rank 1, opportunity 93.0): deepest keyword in the run ("kimi k3", autocomplete 275); no prior Kimi coverage; weights 3 d old with a 1.56 TB MXFP4 angle no competing title covers. Band smooth-explainer on fit (sizing math needs a worked example), overriding the no-band-three-days rule per selection-rules.md.
 - Research (stage 03, 2026-11-05): angle confirmed as the sizing math against real machines plus the community-quant path; slug unchanged. Brief: 12 sources, 10 claims (7 primary), 8 key numbers; validator exit 0. Conflict kept, not averaged: Terminal-Bench 4.0 is 65.7 on Moonshot's card vs 67% at Artificial Analysis (different harness settings). Caveat: the Unsloth quant ladder is for Kimi K3, the same 2.8T/104B base, so it is precedent, not product; every K3.1-Pro-specific quant size stays Unverified.
+- Script (stage 04, 2026-11-05): structures worked-example vs contrarian-take (number-first withdrawn pre-judge: its structural number-shock hook failed sameness vs 2026-11-03; re-assigned and re-drafted blind, same kimi-k3 seat). Judge: B wins 18-16 (21-16 corrected -- the judge missed B's spoken analogy-limit clause); graft of A's MXFP4-composition sentences applied. Winner: contrarian-take, silicon pack, 12 scenes, 314 words, 108 s, hook "Kimi K three point one Pro: free download, can't run." Gates: validator 0 blockers; eval_short 9/9 pass; sameness clean; variety recorded (ledger 61st entry); normalizer 3 scenes adjusted. Ledger's auto-classifier tagged the hook "price" (fires on "free"); the true pattern is named-contradiction -- cosmetic, rotation still sees a repeat-free window.
 
 ## Build journal
 

@@ -1,0 +1,79 @@
+{
+  "full": "Kimi K three point one Pro: free download, can't run. You've seen the claim behind every open-weights drop: the model is free, so anyone can run it. And the download really is free, sitting on Hugging Face right now. Here's what free weighs: one point five six terabytes of weights. That's storage, space on a drive. The big expert weights ship four-bit, a compression the model was trained to expect. Everything outside them ships bigger, so the total on Moonshot's page looks like this. Moonshot built it as a mixture-of-experts model, hundreds of specialist networks with a receptionist that wakes only the few each word needs. And the receptionist re-picks every word, not once per thought. Speed comes from the activated parameters, the few that wake. The memory bill comes from all of them. Now hold that against your hardware. A top gaming card carries twenty-four gigabytes of video memory. That's about one part in sixty of the download. NVIDIA's D G X Spark, a desktop box built for serious local models, holds less than a tenth. The biggest Mac Studio Apple sells still holds only about a third. So the honest version is smaller. The download is free. The memory to hold it is not. No machine you own comes close, not NVIDIA's D G X Spark, not Apple's Mac Studio. A community quant, a third-party re-encode at fewer bits, is the usual escape. None exists for this model yet. The previous model's smallest squeeze was five hundred ninety-four gigabytes of weights. That's bigger than any Mac, and it agrees with the original about four fifths of the time. There's disk offload, streaming experts from a fast drive as each word needs them. It works. It crawls. Until a quant exists, renting it from Moonshot's A P I costs less than the drive you'd buy just to hold it. The weights are free. The machine that runs them isn't.",
+  "words": 320,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "Kimi K three point one Pro: free download, can't run.",
+      "words": 10,
+      "changed": false
+    },
+    {
+      "id": "s2",
+      "text": "You've seen the claim behind every open-weights drop: the model is free, so anyone can run it. And the download really is free, sitting on Hugging Face right now.",
+      "words": 29,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "Here's what free weighs: one point five six terabytes of weights. That's storage, space on a drive. The big expert weights ship four-bit, a compression the model was trained to expect. Everything outside them ships bigger, so the total on Moonshot's page looks like this.",
+      "words": 45,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "Moonshot built it as a mixture-of-experts model, hundreds of specialist networks with a receptionist that wakes only the few each word needs. And the receptionist re-picks every word, not once per thought.",
+      "words": 32,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "Speed comes from the activated parameters, the few that wake. The memory bill comes from all of them.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s6",
+      "text": "Now hold that against your hardware. A top gaming card carries twenty-four gigabytes of video memory. That's about one part in sixty of the download.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s7",
+      "text": "NVIDIA's D G X Spark, a desktop box built for serious local models, holds less than a tenth. The biggest Mac Studio Apple sells still holds only about a third.",
+      "words": 30,
+      "changed": true
+    },
+    {
+      "id": "s8",
+      "text": "So the honest version is smaller. The download is free. The memory to hold it is not. No machine you own comes close, not NVIDIA's D G X Spark, not Apple's Mac Studio.",
+      "words": 33,
+      "changed": true
+    },
+    {
+      "id": "s9",
+      "text": "A community quant, a third-party re-encode at fewer bits, is the usual escape. None exists for this model yet.",
+      "words": 19,
+      "changed": false
+    },
+    {
+      "id": "s10",
+      "text": "The previous model's smallest squeeze was five hundred ninety-four gigabytes of weights. That's bigger than any Mac, and it agrees with the original about four fifths of the time.",
+      "words": 29,
+      "changed": false
+    },
+    {
+      "id": "s11",
+      "text": "There's disk offload, streaming experts from a fast drive as each word needs them. It works. It crawls.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s12",
+      "text": "Until a quant exists, renting it from Moonshot's A P I costs less than the drive you'd buy just to hold it. The weights are free. The machine that runs them isn't.",
+      "words": 32,
+      "changed": true
+    }
+  ],
+  "source": "normalize_narration.py"
+}
