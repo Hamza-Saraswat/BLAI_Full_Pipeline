@@ -2,14 +2,14 @@
 slug: 2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh
 workspace: shorts
 title: "Kimi K3.1 Pro: what can you run tonight?"
-status: building
+status: review
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-05
-updated: "2026-11-05T13:36:10Z"
+updated: "2026-11-05T14:19:44Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-script]]
 - Package: [[stages/05-package/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-package]]
 - Voice: [[stages/06-voice/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-narration]] (normalized narration sidecar from stage 04; stage 06 owns the rest)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-05T13:36:10Z build start on gn100-83c4
 - 2026-11-05T13:38:24Z 06-voice ok 132s
+- 2026-11-05T14:12:06Z 07-render fail 2019s (07-render: scene s10 did not pass HyperFrames inspect after 5 rounds: t=5.68s content_overlap #tag-mac inside span.accent "BIGGEST MAC" — Two text blocks overla)
+- 2026-11-05T14:19:47Z 07-render ok 101.73s: 12 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 321
+- 2026-11-05T14:19:47Z 07-render ok 461s
