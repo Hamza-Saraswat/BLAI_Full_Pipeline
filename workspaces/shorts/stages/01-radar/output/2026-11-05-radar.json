@@ -1,0 +1,1288 @@
+[
+  {
+    "id": "hn-0f35e299c9",
+    "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+    "url": "https://www.ricursive.com/ripple",
+    "source": "hn",
+    "published_at": "2026-11-04T18:53:29Z",
+    "signals": {
+      "points": 305,
+      "num_comments": 109,
+      "signal": 0.981,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.937
+      },
+      "decay": 0.781,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 305 points, 109 comments on HN, 17 h ago",
+    "score": 65
+  },
+  {
+    "id": "github-6e5fa02b6c",
+    "title": "unsloth v0.1.915-beta: Improved Customization + Glass + Browser Use",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.915-beta",
+    "source": "github",
+    "published_at": "2026-11-04T17:54:37Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.915-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.77,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen",
+      "GGUF",
+      "MLX",
+      "FP8"
+    ],
+    "summary": "This release introduces **Qwen3.8-Flash-Next**, polishes the Glass themes (now in Beta), adds a Composer position slider and lets models interact with files in the built-in browser. It also brings lower idle memory usage, preserved chat context when switching GGUF models, faster MLX loading and FP8 ",
+    "why_now": "Shipped: unslothai/unsloth v0.1.915-beta released, 18 h ago",
+    "score": 61
+  },
+  {
+    "id": "github-8ceb3da473",
+    "title": "llama.cpp b12125",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12125",
+    "source": "github",
+    "published_at": "2026-11-05T07:29:28Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12125",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9368,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Claude"
+    ],
+    "summary": "<details open> opencl: enable f32 and q5_k multi column GEMV by default for Adreno X2 (#31694) * opencl: use the small-N f32 GEMV by default on X2E Assisted-by: Claude Opus 5.5 Co-authored-by: Shaofei Qi <shaoqi@qti.qualcomm.com> * opencl: use the q5_K multi-column verify GEMV by default on X2E Assi",
+    "why_now": "Shipped: ggml-org/llama.cpp b12125 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-2262e4e9be",
+    "title": "llama.cpp b12124",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12124",
+    "source": "github",
+    "published_at": "2026-11-05T07:08:03Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12124",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.932,
+      "age_h": 4.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> opencl: support non-contig sigmoid (#31687) Co-authored-by: Li He <lih@qti.qualcomm.com> </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/63927117> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/gg",
+    "why_now": "Shipped: ggml-org/llama.cpp b12124 released (pre-release), 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-3676da1f79",
+    "title": "llama.cpp b12123",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12123",
+    "source": "github",
+    "published_at": "2026-11-05T06:43:57Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12123",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9266,
+      "age_h": 5.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> opencl: add DSV4_HC_PRE and DSV4_HC_POST (#31623) * opencl: add DSV4_HC_PRE and DSV4_HC_POST Co-authored-by: Shafei Qi <shaoqi@qti.qualcomm.com> * opencl: improve dsv4_hc_post Co-authored-by: Shaofei Qi <shaoqi@qti.qualcomm.com> --------- Co-authored-by: Li He <lih@qti.qualcomm.com> <",
+    "why_now": "Shipped: ggml-org/llama.cpp b12123 released (pre-release), 5 h ago",
+    "score": 54
+  },
+  {
+    "id": "hn-2b5f926b26",
+    "title": "Launch HN: Kino AI (YC S23) - AI media manager and video editor",
+    "url": "https://news.ycombinator.com/item?id=50368804",
+    "source": "hn",
+    "published_at": "2026-11-04T17:31:53Z",
+    "signals": {
+      "points": 90,
+      "num_comments": 34,
+      "signal": 0.766,
+      "signal_parts": {
+        "points": 0.79,
+        "comments": 0.709
+      },
+      "decay": 0.7658,
+      "age_h": 18.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! I&#x27;m Luke from Kino (<a href=\"https:&#x2F;&#x2F;kino.ai\">https:&#x2F;&#x2F;kino.ai</a>). Kino lets you make great videos with your agents and your teammates. Storage of footage and assets, a rich video editor, and review links for teammates are all bundled into one. Your colleagues and Co",
+    "why_now": "Shipped: 90 points, 34 comments on HN, 18 h ago",
+    "score": 50
+  },
+  {
+    "id": "hn-3c2eb939a9",
+    "title": "Show HN: GPUWorks - A 40 MB GPU cluster manager for vLLM/SGLang, no K8s needed",
+    "url": "https://github.com/flitai-io/gpuworks",
+    "source": "hn",
+    "published_at": "2026-11-04T16:09:54Z",
+    "signals": {
+      "points": 25,
+      "num_comments": 4,
+      "signal": 0.496,
+      "signal_parts": {
+        "points": 0.571,
+        "comments": 0.321
+      },
+      "decay": 0.7508,
+      "age_h": 19.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "SGLang"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 25 points, 4 comments on HN, 20 h ago",
+    "score": 47
+  },
+  {
+    "id": "github-9d264ca67f",
+    "title": "ollama v0.40.15-rc1: v0.40.15",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.15-rc1",
+    "source": "github",
+    "published_at": "2026-11-03T22:52:31Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.15-rc1",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.585,
+      "age_h": 37.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "MLX",
+      "CUDA"
+    ],
+    "summary": "## What's Changed * mlx: load bundled CUDA libraries in-process on Linux by @dhiltgen in https://github.com/ollama/ollama/pull/19433 * model: add MiMo V2.6 model support by @dhiltgen in https://github.com/ollama/ollama/pull/19400 **Full Changelog**: https://github.com/ollama/ollama/compare/v0.40.14.",
+    "why_now": "Shipped: ollama/ollama v0.40.15-rc1 released (pre-release), 37 h ago",
+    "score": 40
+  },
+  {
+    "id": "hf-7838c87736",
+    "title": "moonshotai/Kimi-K3.1-Pro",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "source": "hf",
+    "published_at": "2026-11-02T04:13:51Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 735,
+      "downloads": 11658,
+      "trendingScore": 698.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.909,
+      "signal_parts": {
+        "trending": 0.862,
+        "likes": 0.955,
+        "downloads": 0.678
+      },
+      "decay": 0.316,
+      "age_h": 79.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Kimi",
+      "group": "how-to"
+    },
+    "products": [
+      "Kimi",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 735 likes, 11.7k downloads, trending score 698, created 2026-11-02",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 735 likes, 11.7k downloads, trending score 698, 3 d ago",
+    "score": 37
+  },
+  {
+    "id": "hn-f106f87bae",
+    "title": "Show HN: Gauge - Open-Source CLI to recursively improve your docs",
+    "url": "https://github.com/gauge-sh/gauge-cli",
+    "source": "hn",
+    "published_at": "2026-11-04T20:31:30Z",
+    "signals": {
+      "points": 34,
+      "num_comments": 4,
+      "signal": 0.532,
+      "signal_parts": {
+        "points": 0.623,
+        "comments": 0.321
+      },
+      "decay": 0.7996,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Hi HN, I’m Evan from Gauge. We’re open-sourcing our CLI to recursively improve your docs for coding agents. The CLI includes a local execution backend, so you don&#x27;t need an account to try it. Explainer video here: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;zhLUlIKB1Mg\" rel=\"nofollow\">https:&#x2F;",
+    "why_now": "Shipped: 34 points, 4 comments on HN, 15 h ago",
+    "score": 36
+  },
+  {
+    "id": "hn-9e4393d2bb",
+    "title": "JustFit: Run Qwen 27B Fast with its full 256K context on a 24 GB Mac",
+    "url": "https://github.com/YuhuaBillChen/justfit-llm",
+    "source": "hn",
+    "published_at": "2026-11-05T05:57:03Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.9162,
+      "age_h": 6.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 0 comments on HN, 6 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-1e3361db40",
+    "title": "Ask HN: Is AI good enough for math exercises?",
+    "url": "https://news.ycombinator.com/item?id=50366147",
+    "source": "hn",
+    "published_at": "2026-11-04T14:38:54Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 4,
+      "signal": 0.266,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.321
+      },
+      "decay": 0.7346,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Gemini",
+      "group": "how-to"
+    },
+    "products": [
+      "Gemini",
+      "MacBook",
+      "Apple M5",
+      "Qwen"
+    ],
+    "summary": "Hi, I need to brush-up and deepen my math knowledge at undergrad level.<p>I plan to work from books (Tao&#x27;s <i>Analysis</i>, Spivak etc.) and ask an AI to correct my solutions to exercises (not do the teaching). I have access to Gemini Pro and a Macbook M5 so maybe a Qwen version should run loca",
+    "why_now": "Discussed: 3 points, 4 comments on HN, 21 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-2865a667fa",
+    "title": "DeepSeek alone now accounts for 53% of all token volume on Openrouter",
+    "url": "https://dirac.run/labs-market-share",
+    "source": "hn",
+    "published_at": "2026-11-04T20:26:56Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 3,
+      "signal": 0.218,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.276
+      },
+      "decay": 0.7988,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 3 comments on HN, 16 h ago",
+    "score": 30
+  },
+  {
+    "id": "hf-d204a59506",
+    "title": "ccore/Qwen3.5-4B-GLB-3D-Coder",
+    "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder",
+    "source": "hf",
+    "published_at": "2026-11-01T22:30:01Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 161,
+      "downloads": 12206,
+      "trendingScore": 140.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.694,
+      "signal_parts": {
+        "trending": 0.651,
+        "likes": 0.736,
+        "downloads": 0.681
+      },
+      "decay": 0.2909,
+      "age_h": 85.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 161 likes, 12.2k downloads, trending score 140, created 2026-11-01",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 161 likes, 12.2k downloads, trending score 140, 4 d ago",
+    "score": 30
+  },
+  {
+    "id": "hn-99b5ce943b",
+    "title": "DeepSeek Harness [video]",
+    "url": "https://www.youtube.com/watch?v=VKmUC5ukfqU",
+    "source": "hn",
+    "published_at": "2026-11-05T10:50:35Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9833,
+      "age_h": 1.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 1 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-84a771cab1",
+    "title": "Kinference: Open-source inference control plane for vLLM",
+    "url": "https://vllm.ai/blog/2026-11-04-introducing-kinference",
+    "source": "hn",
+    "published_at": "2026-11-05T10:21:08Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9764,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-e3b28f6b5f",
+    "title": "Mistakes Claude Makes with Hardware in the Loop",
+    "url": "https://groundrun.io/blog/mistakes-claude-makes-with-hardware-in-the-loop/",
+    "source": "hn",
+    "published_at": "2026-11-05T08:06:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9451,
+      "age_h": 3.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-8017029a75",
+    "title": "Show HN: Rivermark, a superfast AI graphic design canvas",
+    "url": "https://rivermark.ai/",
+    "source": "hn",
+    "published_at": "2026-11-04T12:13:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7094,
+      "age_h": 23.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:ChatGPT",
+      "group": "news-react"
+    },
+    "products": [
+      "ChatGPT"
+    ],
+    "summary": "Hi HN,<p>Agents can nowadays design UI very competently, but the wider question of graphic design is largely unsolved.<p>On one side, you have image models like ChatGPT images, which are high-quality but recognizable and barely editable. On the other hand, you can use LLMs and accept results that, w",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 24 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-d2f78c9b08",
+    "title": "Kimi K3.1 Pro's open weights: 1.56 TB, MXFP4, and a $20M revenue license line",
+    "url": "https://theainewsreport.com/2026-11-04-kimi-k3-1-pro-open-weights-license-hardware-explained.html",
+    "source": "hn",
+    "published_at": "2026-11-05T02:32:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8722,
+      "age_h": 9.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Kimi",
+      "group": "how-to"
+    },
+    "products": [
+      "Kimi",
+      "MXFP4"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 9 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-e3033b2e16",
+    "title": "Show HN: You all are sleeping on this, DSH just shipped this",
+    "url": "https://github.com/Atri10/executor",
+    "source": "hn",
+    "published_at": "2026-11-04T16:58:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7596,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Good to see engineers at Deepseek worked on similar idea at harness level, mine is harness independent.<p>Stop vibe coding, go for SPEC driven dev. Here are some cool technical facts about executor<p>- 828 tests, all passing, about 266 s with coverage - 100% branch coverage (2,965 statements, 1,300",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-a309468f15",
+    "title": "Asus Ascent GX10 vs. DGX Spark: GB10 Boxes Compared",
+    "url": "https://www.spheron.network/blog/dgx-spark-alternatives-dell-asus-hp-lenovo-gb10-compared-2026/",
+    "source": "hn",
+    "published_at": "2026-11-04T13:29:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7224,
+      "age_h": 22.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:DGX Spark",
+      "group": "comparison"
+    },
+    "products": [
+      "DGX Spark",
+      "GB10"
+    ],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-952510f20e",
+    "title": "Where Claude's usage limits went: from SSE to protobuf frames",
+    "url": "https://claude-monitor.com/claude-usage-limits-sse-to-protobuf",
+    "source": "hn",
+    "published_at": "2026-11-04T13:00:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7173,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-c0be1bf6b9",
+    "title": "Show HN: Aggregate Finance, your financial data in a spreadsheet you own",
+    "url": "https://app.aggregatefi.com/",
+    "source": "hn",
+    "published_at": "2026-11-04T21:45:08Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.8139,
+      "age_h": 14.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "I started building Aggregate Finance a couple of years ago because I was manually updating a Google Sheet to track my credit card statements, monthly recurring transactions, and spending habits. This seemed perfect for automation as I was having to log in to six separate banking apps to pull this in",
+    "why_now": "Shipped: 4 points, 3 comments on HN, 14 h ago",
+    "score": 19
+  },
+  {
+    "id": "hn-3f9cd03dda",
+    "title": "Ask HN: Have you changed your setup in the age of AI and mass vulnerabilities?",
+    "url": "https://news.ycombinator.com/item?id=50373223",
+    "source": "hn",
+    "published_at": "2026-11-05T00:09:05Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.8426,
+      "age_h": 11.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "I&#x27;m curious if given all the recent advancements in LLMs but also news about hacks, vulnerabilities and exploits anyone has changed substantially their setup (OS, devices, tools, security policies, etc.)<p>Have you reduced your surface of attack? Searched for more isolated environments? Started",
+    "why_now": "Broke: 3 points, 2 comments on HN, 12 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-5d47a582ce",
+    "title": "A painting went missing 20 years ago. Police tracked it down with the help of AI",
+    "url": "https://www.bbc.com/future/article/20261027-this-painting-went-missing-20-years-ago-police-tracked-it-down-with-the-help-of-ai",
+    "source": "hn",
+    "published_at": "2026-11-04T22:00:23Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.8169,
+      "age_h": 14.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 14 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-001695f552",
+    "title": "Verne V0.5: U.S. Open-Weight SOTA Robotics Foundation Model",
+    "url": "https://vernerobotics.com/research/verne-v0-5",
+    "source": "hn",
+    "published_at": "2026-11-04T20:47:24Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.8027,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 6 points, 0 comments on HN, 15 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-62737095f0",
+    "title": "I got banned from Lobsters for writing like an LLM",
+    "url": "https://en.andros.dev/blog/94a77341/i-got-banned-from-lobsters-for-writing-like-an-llm/",
+    "source": "hn",
+    "published_at": "2026-11-04T14:37:01Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 0,
+      "signal": 0.255,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.0
+      },
+      "decay": 0.7342,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 7 points, 0 comments on HN, 21 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-071197b09e",
+    "title": "Show HN: Chronosphere, a tool for understanding large PRs",
+    "url": "https://getchronosphere.com/",
+    "source": "hn",
+    "published_at": "2026-11-04T21:48:18Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.8146,
+      "age_h": 14.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Hello HN, I wrote a blog post a while back about not sending me your giant PRs (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49305558\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49305558</a>). Well, I kept getting huge PRs sent to me, so I&#x27;ve been embraced the AI and le",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 14 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-caf549559c",
+    "title": "KVGuard: A KV Cache Safety Checker for LLM Serving Systems",
+    "url": "https://arxiv.org/abs/2611.06138",
+    "source": "hn",
+    "published_at": "2026-11-05T10:22:21Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9767,
+      "age_h": 1.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 2 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-7fafa24024",
+    "title": "Show HN: An Open Source Superhuman Email Client Clone",
+    "url": "https://github.com/michaelmagan/OpenHuman",
+    "source": "hn",
+    "published_at": "2026-11-04T15:22:44Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7424,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:local model",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I&#x27;m a long-time Superhuman user, and a few weeks ago I cloned it as a native Mac app.<p>It&#x27;s keyboard-first, with split inboxes, reminders, and a built-in calendar. It&#x27;s local-first, including the AI features that use local models shipped in macOS 27, with the option to use Cla",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 21 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-100ab79e0b",
+    "title": "Go vs. Python for an LLM Gateway: What We Measured",
+    "url": "https://blog.ai-process.dev/2026/10/26/go-vs-python-llm-gateway/",
+    "source": "hn",
+    "published_at": "2026-11-04T18:06:08Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7721,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "comparison"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-adcfe49b33",
+    "title": "Show HN: Swarm World - local LLM creatures living in a little tile world",
+    "url": "https://swarm-world.4rc4de.com/public/app/",
+    "source": "hn",
+    "published_at": "2026-11-04T14:09:29Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7294,
+      "age_h": 21.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "This is a hobby project: a small tile world where every creature is a local language model. A creature only knows what its body senses, written out as text (&quot;You see: a boulder 4 steps northwest; a campfire (burning) 5 steps east ... Others: Loam 2 steps southeast, carrying a stone knife&quot;)",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 22 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-764fc197d7",
+    "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+    "url": "https://www.linum.ai/field-notes/pjit-21k",
+    "source": "hn",
+    "published_at": "2026-11-04T16:45:11Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7573,
+      "age_h": 19.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative proce",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-031c0ad864",
+    "title": "An example of LLM overengineering in the wild",
+    "url": "https://github.com/SecondCityOsD/greasemonkey-for-UXP-browsers/commit/5a36b28392d847a919c9897c56d408acac632d1c",
+    "source": "hn",
+    "published_at": "2026-11-04T12:58:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7171,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 23 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-b61cd87cd5",
+    "title": "LLM pricing agents can converge to different price regimes",
+    "url": "https://arxiv.org/abs/2610.21711",
+    "source": "hn",
+    "published_at": "2026-11-05T11:54:26Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9985,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-32616fbec0",
+    "title": "AXI: Host-side state kept an LLM job exact for 1,500 steps pre-registered tests",
+    "url": "https://zenodo.org/records/23958737",
+    "source": "hn",
+    "published_at": "2026-11-05T07:39:38Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9391,
+      "age_h": 4.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-e942d8d761",
+    "title": "Open-source LLM Firewall with reversible PII scrubbing and FinOps routing",
+    "url": "https://github.com/67spp/sentinsentinel-ai-gateway",
+    "source": "hn",
+    "published_at": "2026-11-04T18:30:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7767,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b4d884abf2",
+    "title": "Ripple-65B Preview: Ricursive Intelligence's Open-Weight American SOTA Model",
+    "url": "https://twitter.com/RicursiveAI/status/2118046765857546733",
+    "source": "hn",
+    "published_at": "2026-11-04T18:30:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7767,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-4b12eb7035",
+    "title": "LLMs replayed 50 years of EPA glyphosate decisions. None was more lenient",
+    "url": "https://reckoningscience.org/regulation-by-ai-replaying-epas-glyphosate-decisions/",
+    "source": "hn",
+    "published_at": "2026-11-04T16:36:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7556,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-c5056fc375",
+    "title": "Twenty Percent of all 'ok' web responses AI gets are not okay",
+    "url": "https://www.unite.ai/20-percent-of-all-ok-web-responses-ai-gets-are-not-okay/",
+    "source": "hn",
+    "published_at": "2026-11-04T14:32:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7334,
+      "age_h": 21.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-4f9c453dc6",
+    "title": "I Wrote a Book: The Art and Science of LLM Jailbreaking",
+    "url": "https://leanpub.com/theartandscienceofllmjailbreaking",
+    "source": "hn",
+    "published_at": "2026-11-04T13:58:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7274,
+      "age_h": 22.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-d443fbf222",
+    "title": "PrunaAI/P-H3-Image-Comfy",
+    "url": "https://huggingface.co/PrunaAI/P-H3-Image-Comfy",
+    "source": "hf",
+    "published_at": "2026-10-28T11:26:05Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 170,
+      "downloads": 218534,
+      "trendingScore": 146.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.773,
+      "signal_parts": {
+        "trending": 0.657,
+        "likes": 0.744,
+        "downloads": 0.89
+      },
+      "decay": 0.062,
+      "age_h": 192.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 170 likes, 218.5k downloads, trending score 146, created 2026-10-28",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 170 likes, 218.5k downloads, trending score 146, 8 d ago",
+    "score": 4
+  },
+  {
+    "id": "hf-ecdedeaeaa",
+    "title": "PrunaAI/P-H3-Image",
+    "url": "https://huggingface.co/PrunaAI/P-H3-Image",
+    "source": "hf",
+    "published_at": "2026-10-27T09:16:58Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 118,
+      "downloads": 444,
+      "trendingScore": 115.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.659,
+      "signal_parts": {
+        "trending": 0.625,
+        "likes": 0.692,
+        "downloads": 0.441
+      },
+      "decay": 0.05,
+      "age_h": 218.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 118 likes, 444 downloads, trending score 115, created 2026-10-27",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 118 likes, 444 downloads, trending score 115, 9 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-11144fe593",
+    "title": "LiquidAI/LFM3-1.7B",
+    "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+    "source": "hf",
+    "published_at": "2026-10-23T21:35:42Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 1499,
+      "downloads": 60681,
+      "trendingScore": 270.5,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.869,
+      "signal_parts": {
+        "trending": 0.737,
+        "likes": 1.0,
+        "downloads": 0.797
+      },
+      "decay": 0.05,
+      "age_h": 302.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 1.5k likes, 60.7k downloads, trending score 270, created 2026-10-23",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 1.5k likes, 60.7k downloads, trending score 270, 13 d ago",
+    "score": 3
+  }
+]
