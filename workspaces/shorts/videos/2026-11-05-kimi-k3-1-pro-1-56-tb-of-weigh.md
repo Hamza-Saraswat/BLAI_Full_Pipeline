@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-brief]]
 - Script: [[stages/04-script/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-script]]
 - Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh-narration]] (normalized narration sidecar from stage 04; stage 06 owns the rest)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
