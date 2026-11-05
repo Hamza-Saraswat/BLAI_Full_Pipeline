@@ -2,14 +2,14 @@
 slug: 2026-11-04-that-viral-astra-edits-qwen-we
 workspace: shorts
 title: That viral Astra edits Qwen weights claim is misleading
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-04
-updated: "2026-11-04T12:07:22Z"
+updated: "2026-11-05T14:35:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Zero news-react today; lanes differ from yesterday and from pick 1; value types REFRAMES,TEACHES.
 
 ## Build journal
-
+- 2026-11-05T14:35:21Z 2026-11-05T14:35:21Z expired: not from today's picks (2026-11-05); the factory carries no backlog
