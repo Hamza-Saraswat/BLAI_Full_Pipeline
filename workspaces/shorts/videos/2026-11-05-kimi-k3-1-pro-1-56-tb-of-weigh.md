@@ -2,19 +2,19 @@
 slug: 2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh
 workspace: shorts
 title: "Kimi K3.1 Pro: what can you run tonight?"
-status: ready-to-build
+status: building
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-05
-updated: "2026-11-05T12:08:02Z"
+updated: "2026-11-05T13:36:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,4 +39,4 @@ blotato_post_id: ""
 - Package (stage 05, 2026-11-05): searchable title "Kimi K3.1 Pro: what can you run tonight?" (keyword at char 0, 40 visible) over two intriguing variants; the pick matches the search-heavy surface (autocomplete depth 275). Rubric 100, all eight rows. Description 426 bytes, keyword+promise in the first 145; related line points at "8 DGX Sparks, 1 TB". No duplicate title in published/. Synthetic media false; original insight: the storage-vs-memory walk no competitor title does.
 
 ## Build journal
-
+- 2026-11-05T13:36:10Z build start on gn100-83c4
