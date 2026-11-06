@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-06-offline-ai-on-a-usb-stick-loca-brief]]
 - Script: [[stages/04-script/output/2026-11-06-offline-ai-on-a-usb-stick-loca-script]]
 - Package: [[stages/05-package/output/2026-11-06-offline-ai-on-a-usb-stick-loca-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-06-offline-ai-on-a-usb-stick-loca-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-11-06 stage 03: checkpoint confirmed the angle (HN offline-survival-assistant story becomes a copy-tonight USB build: 2.02 GB no-install llamafile model plus Kiwix offline Wikipedia).
 - 2026-11-06 stage 03: brief validated (validator exit 0) on 8 fetched sources (6 primary, 2 docs); strongest hook 91 GB full English Wikipedia ZIM; known gaps parked under Unverified (on-hardware speed, current ZIM sizes, the "95% accurate" thread claim).
 - 2026-11-06T13:31:10Z build start on gn100-83c4
+- 2026-11-06T13:33:41Z 06-voice ok 149s
