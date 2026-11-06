@@ -31,7 +31,7 @@ Commands and ZIM picks in the pinned comment.
 | Title type and complement | 10/10 | tagged searchable (product-query traffic); hook text "3 MOVES. NETWORK OFF. TONIGHT." shares no phrase with the title |
 | Description | 20/20 | first 137 chars carry "Offline AI on a USB stick: llamafile and Kiwix" + promise; unique text; channel line present; ~600 bytes |
 | Hashtags | 5/5 | 3, product-first, no spaces |
-| Tags list | 5/5 | 18 lowercase phrases, ~230 chars, primary keyword + variants + misspelling-adjacent forms |
+| Tags list | 5/5 | 15 lowercase phrases, 237 chars, primary keyword + variants + adjacent forms |
 | Frame 1 | 15/15 | hook fully legible frame 1 in terminal pack (typed headline), inside the 900x1160 safe area |
 | Shorts physics | 10/10 | vertical 1080x1920 @30fps, ~39 s, hook in first 2 s, payoff by second 4 |
 | Compliance | 15/15 | synthetic-media false (typographic scenes + creator's own cloned voice); made-for-kids false; original_insight specific; no YMYL persona |
@@ -55,7 +55,7 @@ Total: 100/100. Frame-1 and physics rows are scored from the validated storyboar
   ],
   "description": "Offline AI on a USB stick: llamafile and Kiwix pack a local LLM plus all of offline Wikipedia onto one drive, no internet needed. You download two files, copy them to a stick, and any computer answers with the network off.\n\nWe open the kit live: a 2.02 GB llamafile (a model and its engine in one program, no install) and a Wikipedia ZIM (Kiwix's offline archive format). The catch, honestly: Windows blocks single executables above 4 GB, and a small model paraphrases, so it shows the passage it read.\n\nRelated: the DGX Spark handbook for running big local models at home.\nhttps://youtube.com/@BuildLocalAI\n\nCommands and ZIM picks in the pinned comment.\n\n#llamafile #kiwix #offlineai",
   "hashtags": ["#llamafile", "#kiwix", "#offlineai"],
-  "tags": ["llamafile", "kiwix offline wikipedia", "offline ai", "usb stick ai", "local llm", "zim file", "kiwix reader", "llama 3.2 3b", "q4_k_m gguf", "run llm without internet", "offline wikipedia zim", "portable ai usb stick", "mozilla llamafile", "ai without wifi", "private local ai", "llamafile windows 4gb", "offline ai kit", "kiwix mini wikipedia"],
+  "tags": ["llamafile", "kiwix offline wikipedia", "offline ai", "usb stick ai", "local llm", "zim file", "kiwix reader", "llama 3.2 3b", "run llm without internet", "offline wikipedia zim", "portable ai usb stick", "mozilla llamafile", "ai without wifi", "private local ai", "offline ai kit"],
   "category_id": "28",
   "default_language": "en",
   "privacy_status": "public",
