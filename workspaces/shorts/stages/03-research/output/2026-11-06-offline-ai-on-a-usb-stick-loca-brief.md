@@ -124,7 +124,7 @@ A 3-billion-parameter model on CPU is slow and weak, the stick's read speed thro
 | # | URL | Title | Tier | Fetched via | Accessed |
 |---|-----|-------|------|-------------|----------|
 | 1 | https://www.brangus.io/survival-llm | Survival LLM | primary | web_extract | 2026-11-06 |
-| 2 | https://news.ycombinator.com/item?id=50264853 | Survival LLM: AI assistant and emergency library that runs on your own computer | Hacker News | community | web_extract | 2026-11-06 |
+| 2 | https://news.ycombinator.com/item?id=50264853 | Survival LLM: AI assistant and emergency library that runs on your own computer (Hacker News) | community | web_extract | 2026-11-06 |
 | 3 | https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/ | What is the size of Wikipedia? (Kiwix Hub) | docs | web_extract | 2026-11-06 |
 | 4 | https://github.com/mozilla-ai/llamafile | mozilla-ai/llamafile: Distribute and run LLMs with a single file. | primary | web_extract | 2026-11-06 |
 | 5 | https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF | bartowski/Llama-3.2-3B-Instruct-GGUF | primary | web_extract | 2026-11-06 |

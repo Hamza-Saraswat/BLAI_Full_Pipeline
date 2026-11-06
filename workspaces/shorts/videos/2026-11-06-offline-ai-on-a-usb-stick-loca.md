@@ -2,14 +2,14 @@
 slug: 2026-11-06-offline-ai-on-a-usb-stick-loca
 workspace: shorts
 title: "Offline AI on a USB stick: local LLM plus Kiwix, no network"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-06
-updated: "2026-11-06T12:11:52Z"
+updated: "2026-11-06T12:46:59Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-06-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-06-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-06-offline-ai-on-a-usb-stick-loca-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,4 +37,7 @@ blotato_post_id: ""
 - Radar was thin (reddit/youtube/firecrawl down or keyless); pool is HN+GitHub+HF, so scores run conservative this morning.
 
 ## Build journal
+
+- 2026-11-06 stage 03: checkpoint confirmed the angle (HN offline-survival-assistant story becomes a copy-tonight USB build: 2.02 GB no-install llamafile model plus Kiwix offline Wikipedia).
+- 2026-11-06 stage 03: brief validated (validator exit 0) on 8 fetched sources (6 primary, 2 docs); strongest hook 91 GB full English Wikipedia ZIM; known gaps parked under Unverified (on-hardware speed, current ZIM sizes, the "95% accurate" thread claim).
 
