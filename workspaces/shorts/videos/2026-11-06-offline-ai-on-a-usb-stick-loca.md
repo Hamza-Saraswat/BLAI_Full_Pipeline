@@ -2,14 +2,14 @@
 slug: 2026-11-06-offline-ai-on-a-usb-stick-loca
 workspace: shorts
 title: "Offline AI on a USB Stick: llamafile + Kiwix, No WiFi"
-status: building
+status: review
 pillar: how-to
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-06
-updated: "2026-11-06T13:31:10Z"
+updated: "2026-11-06T13:52:01Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-06-offline-ai-on-a-usb-stick-loca-script]]
 - Package: [[stages/05-package/output/2026-11-06-offline-ai-on-a-usb-stick-loca-package]]
 - Voice: [[stages/06-voice/output/2026-11-06-offline-ai-on-a-usb-stick-loca-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-06-offline-ai-on-a-usb-stick-loca-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -48,3 +48,6 @@ blotato_post_id: ""
 - 2026-11-06 stage 03: brief validated (validator exit 0) on 8 fetched sources (6 primary, 2 docs); strongest hook 91 GB full English Wikipedia ZIM; known gaps parked under Unverified (on-hardware speed, current ZIM sizes, the "95% accurate" thread claim).
 - 2026-11-06T13:31:10Z build start on gn100-83c4
 - 2026-11-06T13:33:41Z 06-voice ok 149s
+- 2026-11-06T13:46:58Z 07-render fail 794s (07-render: scene s04 did not pass HyperFrames inspect after 5 rounds: t=8.41-10.22s (14 samples) content_overlap span.accent.glow-amber inside #cursor "ONE KIT")
+- 2026-11-06T13:52:06Z 07-render ok 39.40s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 323
+- 2026-11-06T13:52:06Z 07-render ok 307s
