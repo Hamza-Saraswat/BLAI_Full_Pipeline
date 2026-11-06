@@ -1,0 +1,886 @@
+[
+  {
+    "id": "github-c511798d2a",
+    "title": "llama.cpp b12167",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12167",
+    "source": "github",
+    "published_at": "2026-11-06T09:45:44Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12167",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9679,
+      "age_h": 2.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> CUDA: fix Maxwell build (#31787) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/64429723> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12167/llama-b12167-b",
+    "why_now": "Shipped: ggml-org/llama.cpp b12167 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-9540dfee2a",
+    "title": "llama.cpp b12144",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12144",
+    "source": "github",
+    "published_at": "2026-11-06T03:45:50Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12144",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8876,
+      "age_h": 8.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Llama"
+    ],
+    "summary": "<details open> CUDA: linearize MoE data layout for MMQ/MMF (#31047) * CUDA: linearize MoE data layout for MMQ/MMF * Apply MMQ tile size optimization more generally * Fix F16 performance regression </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cp",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12144 released (pre-release), 8 h ago",
+    "score": 53
+  },
+  {
+    "id": "github-e589e3bc7c",
+    "title": "llama.cpp b12143",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12143",
+    "source": "github",
+    "published_at": "2026-11-06T02:48:02Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12143",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8753,
+      "age_h": 9.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> vulkan: FWHT kernels for block widths above 512 (#29772) * vulkan: add F16 input to the FWHT The Vulkan FWHT accepts F32 input only. This adds an F16 source variant of the shader, for both the subgroup and the shared-memory paths, so the kernel reads an F16 source directly instead of ",
+    "why_now": "Shipped: ggml-org/llama.cpp b12143 released (pre-release), 9 h ago",
+    "score": 52
+  },
+  {
+    "id": "hn-f0e2e8b691",
+    "title": "Launch HN: Rivet (YC W23) - Scale and Orchestrate Agents on S3",
+    "url": "https://github.com/rivet-dev/rivet",
+    "source": "hn",
+    "published_at": "2026-11-05T17:17:42Z",
+    "signals": {
+      "points": 103,
+      "num_comments": 53,
+      "signal": 0.808,
+      "signal_parts": {
+        "points": 0.814,
+        "comments": 0.795
+      },
+      "decay": 0.763,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, this is Nathan and Nicholas from Rivet (<a href=\"https:&#x2F;&#x2F;rivet.dev\">https:&#x2F;&#x2F;rivet.dev</a>) - a fast, high-density, and scalable orchestrator for agentic workloads using the actor model. Rather than running a heavyweight sandbox per agent, each agent gets a lightweight act",
+    "why_now": "Shipped: 103 points, 53 comments on HN, 19 h ago",
+    "score": 52
+  },
+  {
+    "id": "github-699ab745e0",
+    "title": "ollama v0.40.15",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.15",
+    "source": "github",
+    "published_at": "2026-11-03T22:52:31Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.15",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.4135,
+      "age_h": 61.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "## MiMo V2.6 Xiaomi MiMo's [mimo-v2.6](https://ollama.com/library/mimo-v2.6), a 9B model built for code and agent workflows, is now supported in Ollama. ```sh ollama run mimo-v2.6 ``` ## AutoTrust decision models [AutoTrust](https://ollama.com/library/autotrust-jev) decision models read text and ret",
+    "why_now": "Shipped: ollama/ollama v0.40.15 released, 3 d ago",
+    "score": 40
+  },
+  {
+    "id": "hn-22f873f5ee",
+    "title": "Offline survival assistant - local LLM and Kiwix, runs from a USB stick",
+    "url": "https://github.com/sdalberto/ia-da-sobrevivencia/blob/main/README.en.md",
+    "source": "hn",
+    "published_at": "2026-11-05T15:25:36Z",
+    "signals": {
+      "points": 28,
+      "num_comments": 16,
+      "signal": 0.582,
+      "signal_parts": {
+        "points": 0.59,
+        "comments": 0.565
+      },
+      "decay": 0.7427,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 28 points, 16 comments on HN, 21 h ago",
+    "score": 37
+  },
+  {
+    "id": "hn-76fa838b4f",
+    "title": "Ask HN: Local AI Models for Coding and General Tasks?",
+    "url": "https://news.ycombinator.com/item?id=50381045",
+    "source": "hn",
+    "published_at": "2026-11-05T16:21:50Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.7529,
+      "age_h": 19.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Gemma",
+      "group": "explainer"
+    },
+    "products": [
+      "Gemma",
+      "Qwen",
+      "AMD"
+    ],
+    "summary": "Hi,<p>I&#x27;m looking at Gemma and Qwen as a local AI. I wanted to try it out for coding but also some other basic tasks. My system has an AMD based GPU with 12GB VRAM. What are some considerations or other options that I should look at?",
+    "why_now": "Discussed: 4 points, 2 comments on HN, 20 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-357a441926",
+    "title": "Show HN: Thinker - Trim context and cache knowledge to extend agent usage limits",
+    "url": "https://thinker.sh/how-it-works",
+    "source": "hn",
+    "published_at": "2026-11-05T19:22:23Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.7863,
+      "age_h": 16.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I’ve been doing a lot of solo development lately and found myself hitting Claude token limits halfway through the week constantly. Even with a Max plan, I’d have to switch over to Codex or Cursor, and it would be a bit difficult to get used to the nuances of each harness.<p>It’s still a problem for",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 17 h ago",
+    "score": 31
+  },
+  {
+    "id": "hn-927cb40042",
+    "title": "Mistral Studio adds managed agents, workflows and apps",
+    "url": "https://mistral.ai/news/build-with-studio/",
+    "source": "hn",
+    "published_at": "2026-11-05T15:55:34Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7481,
+      "age_h": 20.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Changed: 4 points, 0 comments on HN, 20 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-a8c0afd787",
+    "title": "Show HN: Teach a speech model (en) a name by saying it once, on your Mac",
+    "url": "https://detailkeeper.com/",
+    "source": "hn",
+    "published_at": "2026-11-05T20:06:33Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7947,
+      "age_h": 15.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "I wanted to see if a speech model could spell a name better if it heard it, not just read it.<p>Most STT tools handle custom words as text (keyterm list, fixing transcript after with llm, etc).<p>So I trained an adapter to try it, specifically a LoRA on Qwen3-ASR 1.7b (see benchmark). This LoRA tran",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 16 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-9d0ab3a38c",
+    "title": "Show HN: Synaps - Turn your agents into autonomous daemons",
+    "url": "https://github.com/HaseebKhalid1507/SynapsCLI",
+    "source": "hn",
+    "published_at": "2026-11-05T13:57:13Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7271,
+      "age_h": 22.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Anthropic",
+      "group": "news-react"
+    },
+    "products": [
+      "Anthropic",
+      "Claude"
+    ],
+    "summary": "Waddup gangsters.<p>I was browsing reddit, and I saw anthropic add a rule to claude code preventing people from making their own games. Users don&#x27;t even have an option to turn that off. It&#x27;s nuts if you ask me. You should be able to control 100% of what get&#x27;s sent to the LLM. I also d",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 22 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-7139b8c586",
+    "title": "Ask HN: Are you building an AI company brain?",
+    "url": "https://news.ycombinator.com/item?id=50379710",
+    "source": "hn",
+    "published_at": "2026-11-05T14:44:58Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 5,
+      "signal": 0.346,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.357
+      },
+      "decay": 0.7355,
+      "age_h": 21.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey guys, the CTO requested me to start working towards building a &quot;AI company brain&quot;, some sort of entity that keeps the context of what&#x27;s going on in the company so different roles can use AI agents&#x2F;interfaces in order to do things like:<p>- draft emails or presentations.<p>- p",
+    "why_now": "Discussed: 6 points, 5 comments on HN, 21 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-cfb6003e08",
+    "title": "The architecture of open-weight LLMs: MoE, hybrid layers, ternary weights",
+    "url": "https://www.silasdata.com/llm-playground-inside-architectures/",
+    "source": "hn",
+    "published_at": "2026-11-05T14:16:45Z",
+    "signals": {
+      "points": 16,
+      "num_comments": 0,
+      "signal": 0.348,
+      "signal_parts": {
+        "points": 0.496,
+        "comments": 0.0
+      },
+      "decay": 0.7305,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 16 points, 0 comments on HN, 22 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-e62a44a56b",
+    "title": "Teaching Qwen Why",
+    "url": "https://www.lesswrong.com/posts/35yw2qGK7naFLAvcq/teaching-qwen-why-1",
+    "source": "hn",
+    "published_at": "2026-11-06T00:33:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8475,
+      "age_h": 11.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 11 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-a04eb3500b",
+    "title": "VibeSys on Trainium: Agents Build/Tune Qwen3.8 Serving Engines on AWS Trainium2",
+    "url": "https://syfi.cs.washington.edu/blog/2026-11-04-vibesys-trainium/",
+    "source": "hn",
+    "published_at": "2026-11-05T22:36:28Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8239,
+      "age_h": 13.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 13 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-4f10128782",
+    "title": "Show HN: Umbel - Remote-control agent CLIs over tmux",
+    "url": "https://github.com/jahala/umbel",
+    "source": "hn",
+    "published_at": "2026-11-05T19:18:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7855,
+      "age_h": 16.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Been using this in all my sessions the last months. Opus 5.5 (over MCP) spawns Deepseek flash agents - and codex for audits etc. Very curious to hear what the HN crowd thinks&#x2F;makes of it.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-a01adcdd21",
+    "title": "Inkling 2 Small: highest-scoring open weights model developed outside China",
+    "url": "https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it",
+    "source": "hn",
+    "published_at": "2026-11-06T06:18:29Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9208,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 6 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-346e9f42b7",
+    "title": "Show HN: Sanctuary - Offline LLM Running on Apple Silicon Metal (iOS)",
+    "url": "https://testflight.apple.com/join/Z51G6g5G",
+    "source": "hn",
+    "published_at": "2026-11-05T17:44:36Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.768,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 18 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-d74e3107f7",
+    "title": "Show HN: Magertron - AI Orchestrator for agents' tools, APIs, LLMs and streams",
+    "url": "https://magertron.com/#install",
+    "source": "hn",
+    "published_at": "2026-11-05T18:13:57Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7734,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 18 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-53cc8a6d5e",
+    "title": "Stop running everything through LLMs: How I fixed my research agent",
+    "url": "https://www.tinyfish.ai/blog/inside-tinyresearch",
+    "source": "hn",
+    "published_at": "2026-11-06T08:04:58Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9447,
+      "age_h": 3.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-672e89c670",
+    "title": "Hard to Fool: A bounded LLM research loop for quantitative finance",
+    "url": "https://arxiv.org/abs/2611.06607",
+    "source": "hn",
+    "published_at": "2026-11-05T15:10:41Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7401,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-ed3650de42",
+    "title": "Run local LLMs on multiple Android, iOS phones",
+    "url": "https://github.com/orailnoor/cross-platform-llm-client",
+    "source": "hn",
+    "published_at": "2026-11-06T05:44:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9132,
+      "age_h": 6.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 6 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-c7dfbf28e6",
+    "title": "Show HN: LLMBrake - Per-customer dollar caps for OpenAI/Anthropic API calls",
+    "url": "https://github.com/llmbrake/llmbrake",
+    "source": "hn",
+    "published_at": "2026-11-05T23:40:38Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8367,
+      "age_h": 12.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI",
+      "Anthropic"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-e06bb96615",
+    "title": "Show HN: I made a game where you have to think of answers others wouldn't give",
+    "url": "https://downtheline.io/",
+    "source": "hn",
+    "published_at": "2026-11-06T00:13:29Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8434,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Basically you try to give the rarest (deepest cut) answers to prompts. You score more points the rarer the answer. And each prompt has one &quot;golden ticket&quot; which is basically an answer I think is funny (and it earns you a whopping 100 pts!).<p>Yes, this is a daily game (sorry)! I&#x27;m sti",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 12 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-e85c04c3f2",
+    "title": "Code Matters: Reflections on Rust in the LLM Age - Bryan Cantrill - Rust NYC [video]",
+    "url": "https://www.youtube.com/watch?v=5D7QPOIZ7gY",
+    "source": "hn",
+    "published_at": "2026-11-05T17:13:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7623,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-2961c15743",
+    "title": "Code Matters: Reflections on Rust in the LLM Age",
+    "url": "https://speakerdeck.com/bcantrill/code-matters",
+    "source": "hn",
+    "published_at": "2026-11-05T17:08:23Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7613,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f3ce408c18",
+    "title": "Show HN: Zero-axiom Lean 4 proof that Yang-Mills on R^4 is a \"round square\"",
+    "url": "https://zenodo.org/records/23918639/files/RoundSquare.lean?download=1",
+    "source": "hn",
+    "published_at": "2026-11-04T21:20:31Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.572,
+      "age_h": 38.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "On October 26, OpenAI announced a claimed &quot;bare existence&quot; proof in Balaban&#x27;s RG programme on pure R^4--but notably stopped right before claiming the mass gap Δ &gt; 0. It turns out there is a rigorous mathematical reason why no compute cluster can bridge that gap on flat infinite spa",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 39 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-80e54002d5",
+    "title": "Show HN: Phone Link for macOS - Use Your Android Phone on macOS",
+    "url": "https://github.com/nnnlog/phone-link",
+    "source": "hn",
+    "published_at": "2026-11-06T08:12:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9465,
+      "age_h": 3.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft"
+    ],
+    "summary": "English isn’t my first language, sorry for grammar mistakes.<p>I usually use Windows and Android, and these two platforms can be linked via Microsoft&#x27;s &quot;Link to Windows&quot;, or &quot;Phone Link&quot; program. So, you can easily use some features such as notifications, messages, screen mi",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-d9e9c02194",
+    "title": "TieredQ: Space Efficient Vector Quantization (Beating RaBitQ and TurboQuant)",
+    "url": "https://github.com/SeanPedersen/TieredQ",
+    "source": "hn",
+    "published_at": "2026-11-06T05:22:43Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9085,
+      "age_h": 6.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 7 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-7cc73b7b5d",
+    "title": "Show HN: Cerea - yet another self-hosted LLM chat front end",
+    "url": "https://github.com/paoloviviani/Cerea",
+    "source": "hn",
+    "published_at": "2026-11-05T21:11:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8073,
+      "age_h": 14.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "Here is Cerea, a self-hostable, open-source (Apache 2.0) chat+agent frontend for LLMs. It works alone with any OpenAI-compatible inference provider, but it&#x27;s way better when coupled with the model gateway I&#x27;m also developing, Pystino (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;paoloviviani",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b03dd9fb86",
+    "title": "Show HN: Penthera, offline pentest security scanner (open-source, rule-based)",
+    "url": "https://github.com/danoszz/penthera",
+    "source": "hn",
+    "published_at": "2026-11-05T14:37:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7343,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "local non-AI security for your app&#x2F;site! For years I had a long .txt file with hundreds of manual security checks I ran before pushing a (client) app&#x2F;site to live; I am really a rookie compared to the real cyber experts, but just covering the basics has saved us many times from malicious a",
+    "why_now": "Broke: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  }
+]
