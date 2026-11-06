@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-06-offline-ai-on-a-usb-stick-loca
 workspace: shorts
-title: "Offline AI on a USB stick: local LLM plus Kiwix, no network"
-status: scripted
+title: "Offline AI on a USB Stick: llamafile + Kiwix, No WiFi"
+status: ready-to-build
 pillar: how-to
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-06
-updated: "2026-11-06T13:22:58Z"
+updated: "2026-11-06T13:28:22Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-06-ideas]]
 - Research: [[stages/03-research/output/2026-11-06-offline-ai-on-a-usb-stick-loca-brief]]
 - Script: [[stages/04-script/output/2026-11-06-offline-ai-on-a-usb-stick-loca-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-11-06-offline-ai-on-a-usb-stick-loca-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -37,6 +37,8 @@ blotato_post_id: ""
 - Radar was thin (reddit/youtube/firecrawl down or keyless); pool is HN+GitHub+HF, so scores run conservative this morning.
 
 ## Build journal
+
+- 2026-11-06 stage 05 cp3: three titles (1 searchable, 2 intriguing, product named); picked the searchable "Offline AI on a USB Stick: llamafile + Kiwix, No WiFi" (search-heavy product-query traffic). Rubric 100/100. contains_synthetic_media false (typographic scenes + creator's cloned voice); original_insight: the Windows 4 GB executable cap is what makes the two-file split the copyable build, which neither source frames as a kit.
 
 - 2026-11-06 stage 04 cp1: draft A how-to-three-moves (has_process true, neither of last two shipped structures), draft B number-first; value types TEACHES,EQUIPS locked; promise "copy a two-file offline AI kit onto a USB stick tonight and get answers with the network off".
 - 2026-11-06 stage 04 cp2: 10 hooks scored; A got the tonight pattern (cand 8), B the number-shock pattern (cand 1 tightened) -- forced divergence per finding 12.
