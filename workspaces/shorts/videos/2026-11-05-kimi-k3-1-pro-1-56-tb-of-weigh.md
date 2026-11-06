@@ -2,14 +2,14 @@
 slug: 2026-11-05-kimi-k3-1-pro-1-56-tb-of-weigh
 workspace: shorts
 title: "Kimi K3.1 Pro: what can you run tonight?"
-status: review
+status: expired
 pillar: news-react
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-05
-updated: "2026-11-05T14:19:44Z"
+updated: "2026-11-06T14:35:44Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-11-05T14:19:47Z 07-render ok 101.73s: 12 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 321
 - 2026-11-05T14:19:47Z 07-render ok 461s
 - 2026-11-05T14:19:50Z build done, status review
+- 2026-11-06T14:35:44Z 2026-11-06T14:35:44Z expired: not from today's picks (2026-11-06); the factory carries no backlog

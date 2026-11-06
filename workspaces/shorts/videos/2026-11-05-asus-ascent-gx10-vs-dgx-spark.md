@@ -2,14 +2,14 @@
 slug: 2026-11-05-asus-ascent-gx10-vs-dgx-spark
 workspace: shorts
 title: "Asus Ascent GX10 vs DGX Spark: same GB10, different box"
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-05
-updated: "2026-11-05T12:08:02Z"
+updated: "2026-11-06T14:35:44Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Picked (rank 2, opportunity 91.0): "dgx spark" keyword depth 262; GB10-alternative boxes never covered by the channel; Spheron comparison 23 h old. Band classic on fit (two named things, one decision), overriding the no-band-three-days rule per selection-rules.md.
 
 ## Build journal
-
+- 2026-11-06T14:35:44Z 2026-11-06T14:35:44Z expired: not from today's picks (2026-11-06); the factory carries no backlog
