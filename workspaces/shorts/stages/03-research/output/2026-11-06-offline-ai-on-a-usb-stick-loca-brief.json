@@ -1,0 +1,219 @@
+{
+  "slug": "2026-11-06-offline-ai-on-a-usb-stick-loca",
+  "topic": "Offline AI on a USB stick: local LLM plus Kiwix, no network",
+  "generated_at": "2026-11-06T12:39:21Z",
+  "depth": "standard",
+  "thesis": "A USB stick can hold a whole offline AI kit tonight: one 2.02 GB model file that runs on any computer with no install, next to all of English Wikipedia compressed by Kiwix, answering with zero network.",
+  "explanation_path": "Start where the network is gone: a blackout, a plane, a cabin with no signal, and every chatbot the viewer has ever used dies at once. Establish that an offline answer machine has two halves, a brain and a library, and neither actually needs the internet. The brain is a model file: a small model such as Llama 3.2 3B compressed with Q4_K_M quantization is a single 2.02 GB file, and llamafile bolts the engine and the weights into one executable that runs on Windows, Mac or Linux with no installation, which is exactly what makes a USB stick viable as the delivery vehicle. The library is the half most viewers have never heard of: Kiwix has spent two decades turning whole websites into ZIM archives, and that compression is what fits roughly 6.5 million articles into 91 GB with images, 46 GB without, 12 GB as introductions only. Assemble the kit on screen: model file, ZIM archive, and the portable Kiwix reader, all copied to one stick and opened on any machine. Land the honest catches while the payoff is still showing: Windows refuses single executables above 4 GB, so bigger models must travel as separate weights plus a small launcher; a small model paraphrases rather than quotes and can invent a citation, which is why Survival LLM highlights the passage it read; and the whole category was just stress-tested by a free offline assistant whose launch thread argued loudly about exactly this hallucination risk.",
+  "claims": [
+    {
+      "claim": "Survival LLM is a free, open-source AI assistant and emergency library that runs entirely on the user's own computer, carrying about 930,000 Wikipedia articles plus FEMA, CDC and military references.",
+      "source_url": "https://www.brangus.io/survival-llm",
+      "source_title": "Survival LLM",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "The Survival LLM library is a 9 GB download for everything (19 GB once installed), or 1.3 GB (3 GB installed) without Wikipedia and iFixit.",
+      "source_url": "https://www.brangus.io/survival-llm",
+      "source_title": "Survival LLM",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "Mozilla's llamafile combines llama.cpp with Cosmopolitan Libc into a single-file executable that runs locally on most operating systems and CPU architectures, with no installation.",
+      "source_url": "https://github.com/mozilla-ai/llamafile",
+      "source_title": "mozilla-ai/llamafile: Distribute and run LLMs with a single file.",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "A Llama-3.2-3B-Instruct model at the Q4_K_M quantization is a 2.02GB file.",
+      "source_url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF",
+      "source_title": "bartowski/Llama-3.2-3B-Instruct-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "As of October 2022, the Full English Wikipedia ZIM with images used 91GB of storage (ca. 6.5 million articles), 46 GB without images, and 12 GB for the mini version.",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/",
+      "source_title": "What is the size of Wikipedia? (Kiwix Hub)",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "A 128GB microSD card able to hold the full English Wikipedia ZIM cost less than USD 20 at Kiwix's October 2022 sizing.",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/",
+      "source_title": "What is the size of Wikipedia? (Kiwix Hub)",
+      "source_quality": "docs",
+      "confidence": "medium",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "Only executables under 4GB can run on Windows, so any llamafile above 4GB will not work and larger models must load external weights.",
+      "source_url": "https://github.com/mozilla-ai/llamafile",
+      "source_title": "mozilla-ai/llamafile: Distribute and run LLMs with a single file.",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "PrivacyTools confirms the USB-stick workflow end to end: copy one llamafile to a USB drive, run it on any machine, and the model never touches the internet.",
+      "source_url": "https://privacytools.io/app/llamafile",
+      "source_title": "llamafile Review: Private AI in 2026 - PrivacyTools.io",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "Kiwix Reader is a browser-like application that opens ZIM files, and the mini Wikipedia ZIM saves about 95% of the space of the full version.",
+      "source_url": "https://get.kiwix.org/applications/kiwix-reader/",
+      "source_title": "Kiwix Reader (get.kiwix.org)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-06"
+    },
+    {
+      "claim": "The Survival LLM launch drew 546 points and 204 comments on Hacker News, with top criticisms being hallucinated sources and comparisons to plain Kiwix.",
+      "source_url": "https://news.ycombinator.com/item?id=50264853",
+      "source_title": "Survival LLM: AI assistant and emergency library that runs on your own computer | Hacker News",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Llama-3.2-3B-Instruct Q4_K_M model file",
+      "value": "2.02GB",
+      "source_url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF"
+    },
+    {
+      "label": "Full English Wikipedia ZIM with images (October 2022)",
+      "value": "91GB",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/"
+    },
+    {
+      "label": "English Wikipedia ZIM without images (nopic)",
+      "value": "46 GB",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/"
+    },
+    {
+      "label": "English Wikipedia mini ZIM (introductions only)",
+      "value": "12 GB",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/"
+    },
+    {
+      "label": "Storage card that holds the full encyclopedia",
+      "value": "less than USD 20",
+      "source_url": "https://hub.kiwix.org/weblog/2022/10/what-is-the-size-of-wikipedia/"
+    },
+    {
+      "label": "Survival LLM full library download",
+      "value": "9 GB (19 GB once installed)",
+      "source_url": "https://www.brangus.io/survival-llm"
+    },
+    {
+      "label": "Windows single-executable cap for llamafile",
+      "value": "4GB",
+      "source_url": "https://github.com/mozilla-ai/llamafile"
+    },
+    {
+      "label": "Wikipedia articles inside Survival LLM",
+      "value": "about 930,000",
+      "source_url": "https://www.brangus.io/survival-llm"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A glovebox survival kit",
+      "mapping": "the USB stick is the glovebox, the llamafile is the friend who explains what to do, the ZIM library is the stack of official manuals",
+      "limit": "a glovebox kit holds fixed supplies, while the model writes new sentences and can misstate what the manual says"
+    },
+    {
+      "vehicle": "A librarian plus the whole library in your pocket",
+      "mapping": "the model is the librarian who answers in plain words, the ZIM is the actual stacks, Kiwix is the reading room",
+      "limit": "a librarian quotes the book exactly, an LLM paraphrases and can invent a citation"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Running your own AI needs a beefy GPU or a hardware upgrade.",
+      "reality": "A 3-billion-parameter model at Q4_K_M is a 2.02GB file that llamafile runs on ordinary CPUs with no install and no GPU."
+    },
+    {
+      "myth": "Without internet there is no Wikipedia.",
+      "reality": "Kiwix has shipped the whole English encyclopedia as an offline ZIM for years, 91GB with images at the last official sizing."
+    },
+    {
+      "myth": "An offline assistant that cites sources is as trustworthy as the library it carries.",
+      "reality": "Survival LLM's own page says the small models make mistakes more often, and its launch thread's loudest criticism was hallucinated sources, so the app shows the exact passage to check."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "local LLM",
+      "definition": "A model file you run on your own machine, where no request ever leaves the computer."
+    },
+    {
+      "term": "llamafile",
+      "definition": "Mozilla's single executable that bundles a model and the llama.cpp engine into one file."
+    },
+    {
+      "term": "llama.cpp",
+      "definition": "The open-source engine that runs model files on ordinary processors and GPUs."
+    },
+    {
+      "term": "Cosmopolitan Libc",
+      "definition": "A library that compiles one program to run unchanged on Windows, macOS and Linux."
+    },
+    {
+      "term": "GGUF",
+      "definition": "The file format model weights are distributed in, the thing you actually download."
+    },
+    {
+      "term": "quantization",
+      "definition": "Shrinking model weights to fewer bits so the file takes a fraction of the memory, at some cost in quality."
+    },
+    {
+      "term": "Q4_K_M",
+      "definition": "A popular 4-bit quantization setting that keeps quality high while cutting file size sharply."
+    },
+    {
+      "term": "Kiwix",
+      "definition": "Free open-source software that reads whole websites offline."
+    },
+    {
+      "term": "ZIM file",
+      "definition": "The compressed archive format Kiwix reads, one file per website."
+    },
+    {
+      "term": "RAG (retrieval-augmented generation)",
+      "definition": "The model first searches a document collection, then answers from what it found and shows the sources."
+    }
+  ],
+  "unverified": [
+    "Tokens per second and load time when running a 3B model from a USB stick on the viewer's own hardware; no first-party measurement exists yet.",
+    "Current 2026 Wikipedia ZIM sizes; the 91GB, 46 GB and 12 GB figures are Kiwix's October 2022 sizing.",
+    "The claim that Survival LLM's retrieval answers are \"95% accurate\", which appeared only in a commenter's paraphrase on Hacker News.",
+    "Whether USB 2.0 versus 3.0 stick speed is the real bottleneck for model load time; no fetched page measured it."
+  ],
+  "suggested_outline": "Hook with the two sizes: all of English Wikipedia with images is 91 GB and the AI brain is a 2.02 GB file, so both halves fit on one cheap stick.\nBuild it on screen: copy a llamafile, a mini or nopic Wikipedia ZIM, and the portable Kiwix Reader onto the stick, then open them on any machine with no install.\nPull the plug and give the honest catch: it still answers offline, but Windows blocks single files above 4 GB, and a small model can invent a citation, so make it show the passage it read.",
+  "notes": "The Wikipedia ZIM sizes are Kiwix's October 2022 figures, four years old at access; the script should present them as scale, not a live catalog number. The Hacker News thread is the only community-tier source and backs sentiment and criticism, not numbers used in Key numbers. Survival LLM itself installs to a computer rather than running stick-native, but its 0.4.0 update (October 29, 2026) added moving the library to an external drive, which is the bridge from that story to this USB build. The llamafile Windows 4 GB cap is the practical reason this build pairs a sub-4 GB model with separate ZIM files. FireCrawl had no credits this run; every source was fetched with web_extract.",
+  "viewer_situation": "You've got a spare USB stick and a gaming PC or Mac, and you've downloaded a model before, but every AI you use today stops working the moment the network does.",
+  "has_process": true,
+  "process_steps": [
+    "Download a small model as a llamafile (or the llamafile launcher plus a GGUF file).",
+    "Download a Wikipedia ZIM from the Kiwix catalog (mini at 12 GB, nopic at 46 GB, or the full version).",
+    "Download the portable Kiwix Reader build.",
+    "Copy the model file, the ZIM and Kiwix onto one USB stick.",
+    "Plug the stick into any computer and open the llamafile and Kiwix without installing anything.",
+    "Disconnect the network and test questions against both halves."
+  ],
+  "objection": "A 3-billion-parameter model on CPU is slow and weak, the stick's read speed throttles load time, and the LLM cannot actually search the ZIM, so this is two disconnected tools sharing one stick rather than a real offline assistant."
+}
