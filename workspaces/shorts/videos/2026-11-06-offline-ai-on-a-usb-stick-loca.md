@@ -2,19 +2,19 @@
 slug: 2026-11-06-offline-ai-on-a-usb-stick-loca
 workspace: shorts
 title: "Offline AI on a USB Stick: llamafile + Kiwix, No WiFi"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-06
-updated: "2026-11-06T13:28:22Z"
+updated: "2026-11-06T13:31:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -46,4 +46,4 @@ blotato_post_id: ""
 
 - 2026-11-06 stage 03: checkpoint confirmed the angle (HN offline-survival-assistant story becomes a copy-tonight USB build: 2.02 GB no-install llamafile model plus Kiwix offline Wikipedia).
 - 2026-11-06 stage 03: brief validated (validator exit 0) on 8 fetched sources (6 primary, 2 docs); strongest hook 91 GB full English Wikipedia ZIM; known gaps parked under Unverified (on-hardware speed, current ZIM sizes, the "95% accurate" thread claim).
-
+- 2026-11-06T13:31:10Z build start on gn100-83c4
