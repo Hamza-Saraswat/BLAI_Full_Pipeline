@@ -1,0 +1,37 @@
+{
+  "full": "There is no stable llama.cpp. There never was. You are waiting anyway; the maintainer: not at the moment. You downloaded a build weeks ago and cannot say which number. Nothing pings you; your copy drifts. Today stamped six releases; three inside one hour, eleven eleven to eleven fifty-eight. Each build is one named change: a Vulkan fix, a WebGPU kernel, a server scheduling fix. Each ships forty prebuilt downloads. Never measured? Then pinning costs nothing you can see. No upstream speed number exists, so yours comes from llama-bench, the tool that counts your tokens per second. Tonight: check, re-pin, re-run llama-bench. Old row, new row: the update is a number, not a vibe.",
+  "words": 113,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "There is no stable llama.cpp. There never was. You are waiting anyway; the maintainer: not at the moment.",
+      "words": 18,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "You downloaded a build weeks ago and cannot say which number. Nothing pings you; your copy drifts. Today stamped six releases; three inside one hour, eleven eleven to eleven fifty-eight.",
+      "words": 30,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Each build is one named change: a Vulkan fix, a WebGPU kernel, a server scheduling fix. Each ships forty prebuilt downloads.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Never measured? Then pinning costs nothing you can see. No upstream speed number exists, so yours comes from llama-bench, the tool that counts your tokens per second.",
+      "words": 27,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "Tonight: check, re-pin, re-run llama-bench. Old row, new row: the update is a number, not a vibe.",
+      "words": 17,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

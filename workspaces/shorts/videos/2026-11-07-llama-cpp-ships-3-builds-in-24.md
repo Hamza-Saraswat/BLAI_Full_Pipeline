@@ -2,14 +2,14 @@
 slug: 2026-11-07-llama-cpp-ships-3-builds-in-24
 workspace: shorts
 title: "llama.cpp ships 3 builds in 24 hours: re-pin yours"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: myth-bust
 format: classic
-style_pack: ""
+style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-07
-updated: "2026-11-07T12:43:11Z"
+updated: "2026-11-07T13:17:47Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-07-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-07-ideas]]
 - Research: [[stages/03-research/output/2026-11-07-llama-cpp-ships-3-builds-in-24-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-07-llama-cpp-ships-3-builds-in-24-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,3 +37,4 @@ blotato_post_id: ""
 ## Build journal
 - [2026-11-07T12:07:43Z] ideas stage: kept as a pick (opportunity 73.4).
 - 2026-11-07T12:43:11Z 03-research ok: 10 claims, 7 key numbers, T1=9, validator 0. Checkpoint: angle confirmed, no redirect.
+- 2026-11-07T13:17:47Z 04-script ok: B (myth-bust) beat A (news-react-so-what) 20:16; 2 grafts; gates all pass; style signal.

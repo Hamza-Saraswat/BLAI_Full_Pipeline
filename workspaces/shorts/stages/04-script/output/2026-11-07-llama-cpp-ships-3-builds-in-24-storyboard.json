@@ -1,0 +1,102 @@
+{
+ "slug": "2026-11-07-llama-cpp-ships-3-builds-in-24",
+ "topic": "llama.cpp shipped b12186, b12187 and b12188 inside one day -- re-pin and re-measure",
+ "title": "llama.cpp has no stable release",
+ "description": "llama.cpp ships continuously: three builds landed inside one hour. Working description; the package stage writes the final one.",
+ "hashtags": [
+  "#llamacpp",
+  "#localai",
+  "#llambench"
+ ],
+ "hook_text": "No stable llama.cpp. 3 shipped anyway.",
+ "hook_candidates": [
+  "Three llama.cpp releases in one hour. Yours is older.",
+  "There is no stable llama.cpp. There never was.",
+  "llama.cpp shipped six builds before you finished lunch.",
+  "Your llama.cpp build has a birthday. It was weeks ago.",
+  "No stable llama.cpp release exists. The maintainer said so.",
+  "Six llama.cpp builds before noon. Count yours.",
+  "Your llama.cpp is three releases behind as of breakfast.",
+  "One hour, three llama.cpp releases, zero pings to you.",
+  "Waiting for stable llama.cpp? The answer was not atm.",
+  "Re-pin llama.cpp tonight or drift quietly behind."
+ ],
+ "style_pack": "signal",
+ "script_format": "classic",
+ "structure": "myth-bust",
+ "value_types": "TEACHES,EQUIPS",
+ "target_duration_s": 39,
+ "narration_full": "There is no stable llama.cpp. There never was. You are waiting anyway; the maintainer: not at the moment. You downloaded a build weeks ago and cannot say which number. Nothing pings you; your copy drifts. Today stamped six releases; three inside one hour, eleven eleven to eleven fifty-eight. Each build is one named change: a Vulkan fix, a WebGPU kernel, a server scheduling fix. Each ships forty prebuilt downloads. Never measured? Then pinning costs nothing you can see. No upstream speed number exists, so yours comes from llama-bench, the tool that counts your tokens per second. Tonight: check, re-pin, re-run llama-bench. Old row, new row: the update is a number, not a vibe.",
+ "music_mood": "curious-tech",
+ "scenes": [
+  {
+   "id": "s01",
+   "role": "hook",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "There is no stable llama.cpp. There never was. You are waiting anyway; the maintainer: not at the moment.",
+   "on_screen_text": "No stable llama.cpp. There never was.",
+   "visual_brief": "Frame one opens with 'No stable llama.cpp. There never was.' already legible, giant and centered, amber on dark. On 'the maintainer, asked directly' the line 'not at the moment.' fades in beneath it and scale-settles. One element animating at a time, onset after 0.30s, first and last eight frames hold still.",
+   "est_duration_s": 6.2
+  },
+  {
+   "id": "s02",
+   "role": "explain",
+   "tool": "manim",
+   "layout_archetype": "timeline",
+   "narration": "You downloaded a build weeks ago and cannot say which number. Nothing pings you; your copy drifts. Today stamped six releases; three inside one hour, eleven eleven to eleven fifty-eight.",
+   "on_screen_text": "Nov 7: 6 releases, 3 in one hour",
+   "visual_brief": "A thin horizontal line is static from frame one, centered high. On 'weeks ago' a single dim dot rises in place on the left end. On 'three releases in one hour' three bright dots rise in place clustered between labels 11:11 and 11:58. Nothing enters from an edge; at most two dots animate together.",
+   "est_duration_s": 10.3
+  },
+  {
+   "id": "s03",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "grid",
+   "narration": "Each build is one named change: a Vulkan fix, a WebGPU kernel, a server scheduling fix. Each ships forty prebuilt downloads.",
+   "on_screen_text": "1 named change per build",
+   "visual_brief": "On 'a Vulkan fix' the first of three tiles rises in place, then one tile per phrase: Vulkan fix, WebGPU kernel, server scheduling fix. On 'forty prebuilt downloads' a small counter fades in below the tiles settling at 40. Tiles never animate simultaneously with the counter.",
+   "est_duration_s": 7.2
+  },
+  {
+   "id": "s04",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "split-compare",
+   "narration": "Never measured? Then pinning costs nothing you can see. No upstream speed number exists, so yours comes from llama-bench, the tool that counts your tokens per second.",
+   "on_screen_text": "No upstream speed number exists",
+   "visual_brief": "On 'pinning costs nothing you can see' a left panel fades in with that phrase set small. On 'llama-bench' a right panel rises in place showing one plain bench row labeled tokens per second. The two panels never move at the same time; both sit above the caption band.",
+   "est_duration_s": 9.3
+  },
+  {
+   "id": "s05",
+   "role": "payoff_close",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Tonight: check, re-pin, re-run llama-bench. Old row, new row: the update is a number, not a vibe.",
+   "on_screen_text": "old row vs new row",
+   "visual_brief": "On 're-pin' three short centered lines stack in place: check, re-pin, rerun. On 'old row, new row' two simple table rows rise beneath them. On 'a number, not a vibe' everything holds static through the final eight frames to the cut.",
+   "est_duration_s": 5.9
+  }
+ ],
+ "notes_for_review": "Confirm the break starts by second 4: 'the maintainer' begins near 3.4s of scene one, quote lands near 4.5s; tighten scene one if the review counts the quote itself as the payoff. Check TTS reads 're-pin' and 'llama-bench' cleanly. Verify timestamps are spoken as words and no build tags appear anywhere. Total 110 words, estimated 37.8s against a 35s target, ratio about 1.08.",
+ "tags": [
+  "llama.cpp",
+  "llama cpp",
+  "llamacpp",
+  "llama.cpp update",
+  "llama.cpp build",
+  "llama.cpp release",
+  "re-pin llama.cpp",
+  "llama-bench",
+  "llama server",
+  "local llm",
+  "run llm locally",
+  "local ai",
+  "gguf",
+  "vulkan backend",
+  "update llama.cpp",
+  "llama.cpp latest version"
+ ]
+}
