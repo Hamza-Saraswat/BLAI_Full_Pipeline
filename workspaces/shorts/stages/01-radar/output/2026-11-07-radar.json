@@ -1,0 +1,924 @@
+[
+  {
+    "id": "hn-ef2a83f7f3",
+    "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+    "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+    "source": "hn",
+    "published_at": "2026-11-06T19:48:51Z",
+    "signals": {
+      "points": 501,
+      "num_comments": 118,
+      "signal": 0.986,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.953
+      },
+      "decay": 0.7914,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 501 points, 118 comments on HN, 16 h ago",
+    "score": 66
+  },
+  {
+    "id": "github-8874b65acd",
+    "title": "unsloth v0.1.916-beta: Large Performance Fixes",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+    "source": "github",
+    "published_at": "2026-11-06T14:43:33Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.916-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7354,
+      "age_h": 21.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth"
+    ],
+    "summary": "This release brings large performance fixes across Unsloth: faster typing and search in long chats, faster image/video loads, two-GPU image/video gen. It also adds separate browsers for each chat, floating browser window. ## Highlights - **Large performance fixes** with more Glass theme optimization",
+    "why_now": "Shipped: unslothai/unsloth v0.1.916-beta released, 21 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-0ad1843ef0",
+    "title": "llama.cpp b12188",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12188",
+    "source": "github",
+    "published_at": "2026-11-07T11:58:44Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12188",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9995,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> server: visit parent slots before child slots (#30779) * server: visit parent slots before child slots A parent slot wakes its waiting child slots once it finishes the shared prompt prefix, while slots are visited in id order. When a child task lands on a lower slot id than its parent",
+    "why_now": "Shipped: ggml-org/llama.cpp b12188 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-9f2e42f855",
+    "title": "llama.cpp b12187",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12187",
+    "source": "github",
+    "published_at": "2026-11-07T11:42:33Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12187",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9956,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> webgpu : Implement group norm kernel (#31490) * Only run webgpu CI on my fork * Add webgpu only workflow * Add WebGPU group_norm kernel * clean up * resolve merge conflicts * parameterize data type; clean up cmake changes * add nullptr check * clean up webkit experiments * more cleanu",
+    "why_now": "Shipped: ggml-org/llama.cpp b12187 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-ced1940606",
+    "title": "llama.cpp b12186",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12186",
+    "source": "github",
+    "published_at": "2026-11-07T11:11:18Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12186",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9882,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> vulkan: Add 'readonly' to decodeBuf declarations. (#31833) In a future driver version I hope to be able to get some perf gain out of this. </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/64826498> **macOS/iOS:** - [",
+    "why_now": "Shipped: ggml-org/llama.cpp b12186 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-6f38341c3b",
+    "title": "TensorRT-LLM v1.4.0rc3",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc3",
+    "source": "github",
+    "published_at": "2026-11-06T21:38:32Z",
+    "signals": {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "tag": "v1.4.0rc3",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8126,
+      "age_h": 14.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:TensorRT",
+      "group": "how-to"
+    },
+    "products": [
+      "TensorRT",
+      "GLM",
+      "NVFP4",
+      "Kimi",
+      "CUDA",
+      "DeepSeek"
+    ],
+    "summary": "## Highlights - Known Issues - DSA models, including GLM-5.2, may produce incorrect output when using an NVFP4 KV cache. - Kimi K3 DSpark with MegaMoE CuTe DSL TEP and CUDA graphs may hang during GB300 warmup. - DeepSeek-V4-Pro initialization may run out of GPU memory when MPI workers are reused aft",
+    "why_now": "Shipped: NVIDIA/TensorRT-LLM v1.4.0rc3 released (pre-release), 14 h ago",
+    "score": 50
+  },
+  {
+    "id": "hn-ca87749f7e",
+    "title": "Arete-27B: Qwen3.8-27B, post-trained to reinforce Western values",
+    "url": "https://nousresearch.com/arete",
+    "source": "hn",
+    "published_at": "2026-11-07T07:14:41Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 12,
+      "signal": 0.373,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.511
+      },
+      "decay": 0.9335,
+      "age_h": 4.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 12 comments on HN, 5 h ago",
+    "score": 45
+  },
+  {
+    "id": "github-23884ddf6d",
+    "title": "transformers v5.22.2: Patch release v5.22.2",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.2",
+    "source": "github",
+    "published_at": "2026-11-06T15:43:27Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.22.2",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7461,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "topic:transformer",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "# Patch release v5.22.2 Some in between patch for security and distributed fixes. See the included commits :hugs: - [Distributed] Set device_id only for NCCL (#50281) by @michaelbenayoun and @3outeille - Harden our Jinja sandboxing (#50431) by @Rocketknight1 **Full Changelog**: https://github.com/hu",
+    "why_now": "Shipped with a known break: huggingface/transformers v5.22.2 released, 20 h ago",
+    "score": 44
+  },
+  {
+    "id": "hn-51396ab0f1",
+    "title": "Promethevs: Full DeepSeek-v4.1-Flash-1017, locally, on 12GB of VRAM",
+    "url": "https://github.com/Magnvs7/Promethevs",
+    "source": "hn",
+    "published_at": "2026-11-06T16:14:47Z",
+    "signals": {
+      "points": 13,
+      "num_comments": 5,
+      "signal": 0.431,
+      "signal_parts": {
+        "points": 0.462,
+        "comments": 0.357
+      },
+      "decay": 0.7517,
+      "age_h": 19.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 13 points, 5 comments on HN, 20 h ago",
+    "score": 43
+  },
+  {
+    "id": "hf-55ffe1fba5",
+    "title": "NousResearch/Arete-27B",
+    "url": "https://huggingface.co/NousResearch/Arete-27B",
+    "source": "hf",
+    "published_at": "2026-11-06T19:31:28Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 134,
+      "downloads": 989,
+      "trendingScore": 131.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.676,
+      "signal_parts": {
+        "trending": 0.642,
+        "likes": 0.71,
+        "downloads": 0.499
+      },
+      "decay": 0.7881,
+      "age_h": 16.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 134 likes, 989 downloads, trending score 131, created 2026-11-06",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 134 likes, 989 downloads, trending score 131, 16 h ago",
+    "score": 41
+  },
+  {
+    "id": "hn-add023bd20",
+    "title": "Show HN: Agents infer Lego mechanisms from sources, then animate them",
+    "url": "https://github.com/anteloc/ldraw-mecha/tree/v0.5.0",
+    "source": "hn",
+    "published_at": "2026-11-06T19:41:20Z",
+    "signals": {
+      "points": 28,
+      "num_comments": 1,
+      "signal": 0.454,
+      "signal_parts": {
+        "points": 0.59,
+        "comments": 0.138
+      },
+      "decay": 0.79,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi there :)<p>Around a month ago, I released LDraw Nova, an agentic toolset for assembling LEGO CAD models by generating LDraw source code files.<p>For more details, here&#x27;s the Show HN post:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49937916\">https:&#x2F;&#x2F;news.ycombina",
+    "why_now": "Shipped: 28 points, 1 comments on HN, 16 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-1f16d7515a",
+    "title": "Show HN: Infinity - Git-style branching for AI chats",
+    "url": "https://infinitychat.app/",
+    "source": "hn",
+    "published_at": "2026-11-06T16:19:42Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.7526,
+      "age_h": 19.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:ChatGPT",
+      "group": "how-to"
+    },
+    "products": [
+      "ChatGPT",
+      "Claude",
+      "Ollama"
+    ],
+    "summary": "Hello HN, I&#x27;m Nik. I built Infinity for myself because I tend to love to rabbit-hole on various subjects.<p>I usually have 3-4 windows open for ChatGPT desktop + Claude + Ollama. Typically, I&#x27;d ask a question, see something interesting in the answer, and then keep expanding on it. The ment",
+    "why_now": "Shipped: 4 points, 1 comments on HN, 20 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-228bb4ccc7",
+    "title": "Tessera, an open 27B tuned Qwen coding model that thinks in compressed CJK",
+    "url": "https://huggingface.co/ZelligeAI/Tessera-27B-B-CJK-RL",
+    "source": "hn",
+    "published_at": "2026-11-06T23:16:42Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.832,
+      "age_h": 12.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 13 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-0cb8c0c1ba",
+    "title": "DeepSeek Super Agent Just Killed All Agent Harnesses [video]",
+    "url": "https://www.youtube.com/watch?v=3DklR44DHnM",
+    "source": "hn",
+    "published_at": "2026-11-06T12:30:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7123,
+      "age_h": 23.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 23 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-70f6a90d02",
+    "title": "Swapping LLMs in Under Two Seconds: A Sleep Mode for Llama.cpp",
+    "url": "https://zaage.it/writing/llama-sleep/",
+    "source": "hn",
+    "published_at": "2026-11-06T22:59:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8286,
+      "age_h": 13.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 13 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-4c35a47638",
+    "title": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+    "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+    "source": "hf",
+    "published_at": "2026-10-30T10:21:29Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 270,
+      "downloads": 1369,
+      "trendingScore": 238.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.766,
+      "signal_parts": {
+        "trending": 0.72,
+        "likes": 0.811,
+        "downloads": 0.523
+      },
+      "decay": 0.061,
+      "age_h": 193.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 270 likes, 1.4k downloads, trending score 238, created 2026-10-30",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 270 likes, 1.4k downloads, trending score 238, 8 d ago",
+    "score": 19
+  },
+  {
+    "id": "hn-a56a6b0659",
+    "title": "Show HN: Botel - always reachable agents you pay for only while they're working",
+    "url": "https://botel.dev",
+    "source": "hn",
+    "published_at": "2026-11-06T15:46:21Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.7466,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I built a pay-as-you-go two star hotel for bots that you’re only charged for while it’s active. Typically wakes in under a second, runs on a vm, and costs very little while it’s paused.<p>In my free time I’ve been building a firecracker based vm orchestration platform. In order to dogfood the thing",
+    "why_now": "Shipped: 4 points, 3 comments on HN, 20 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-9a9967eba9",
+    "title": "I Spent $1000 Making LLMs Play Competitive Pokémon",
+    "url": "https://blog.doubleword.ai/llms-play-pokemon",
+    "source": "hn",
+    "published_at": "2026-11-06T15:16:14Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 1,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.138
+      },
+      "decay": 0.7412,
+      "age_h": 20.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 1 comments on HN, 21 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-1ff43472fc",
+    "title": "Could Avoiding AI Become a Constitutional Right?",
+    "url": "https://read.misalignedmag.com/could-avoiding-ai-become-a-constitutional-right-9b037a874465",
+    "source": "hn",
+    "published_at": "2026-11-06T14:30:13Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.733,
+      "age_h": 21.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 2 comments on HN, 22 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-53d157b74b",
+    "title": "Ask HN: Is anyone running multi/always-on agents that don't cost a fortune?",
+    "url": "https://news.ycombinator.com/item?id=50391647",
+    "source": "hn",
+    "published_at": "2026-11-06T12:40:14Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 3,
+      "signal": 0.303,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.276
+      },
+      "decay": 0.7139,
+      "age_h": 23.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Yesterday a few interesting links appeared on hacker news about always-on [1] and multi-agent setups [2].<p>Some of those points resonate with what we&#x27;re experiencing with our current approach of running agents and sub-agents locally.<p>- We are delegating complex and long running tasks to agen",
+    "why_now": "Discussed: 5 points, 3 comments on HN, 23 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-2531152230",
+    "title": "I tried to connect every GPU on the planet together (kinda)",
+    "url": "https://news.ycombinator.com/item?id=50394231",
+    "source": "hn",
+    "published_at": "2026-11-06T16:10:48Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 2,
+      "signal": 0.263,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.219
+      },
+      "decay": 0.751,
+      "age_h": 19.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:gpu",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Nowadays, unless you’re training a frontier model from scratch, finding spare GPU capacity for training and post-training on some cloud is manageable.<p>But a lot of the time, I’m just too lazy to move my work or even go through the signup processes and deal with their limits and regions and shit. S",
+    "why_now": "Discussed: 4 points, 2 comments on HN, 20 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-fe83b77e82",
+    "title": "Show HN: Grid - A Hold'em arena where your AI agent plays your strategy (Beta)",
+    "url": "https://penguinbase.com/game-install?game=192471728&ref=hn",
+    "source": "hn",
+    "published_at": "2026-11-06T13:57:16Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.7272,
+      "age_h": 22.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, my friend&#x27;s team and I have been building a game called GRID, a dog poker game with an AI twist.<p>Under the cute dog graphics, GRID is an arena where LLMs compete, with no-limit hold’em as the medium. You duke it out as a strategist, vibe coder, and bot maker.<p>Why: models get compared",
+    "why_now": "Shipped: 4 points, 3 comments on HN, 22 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-2859cbe3b5",
+    "title": "Ask HN: Engineers Focus Using AI",
+    "url": "https://news.ycombinator.com/item?id=50390444",
+    "source": "hn",
+    "published_at": "2026-11-06T10:10:01Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.6885,
+      "age_h": 25.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Now that engineers are developing most of the code using AI at a rapid pace, I am curious if distractions from other non-technical people have increased? And is it easy to answer their requests while your coding agent is working?",
+    "why_now": "Discussed: 3 points, 2 comments on HN, 26 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-f6d629b86c",
+    "title": "Show HN: KeepPlain - ask your coding agent why a line of code exists",
+    "url": "https://keepplain.com",
+    "source": "hn",
+    "published_at": "2026-11-06T13:22:34Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7212,
+      "age_h": 22.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "My code is written by agents now. Git blame shows me the commit and my own name, but the reason for the code is in a session I closed weeks ago.<p>KeepPlain saves your agent sessions. It uses git blame to find the session that corresponds to a file, line, or commit. Then it shows the original reques",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 23 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-22af4ddb2d",
+    "title": "Show HN: Self-Annotating Stock Charts",
+    "url": "https://portfoliogenius.ai/features/ai-annotated-charts",
+    "source": "hn",
+    "published_at": "2026-11-06T16:56:10Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7592,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Most stock charts work in a similar way - they give you a bunch of tools to draw lines and patterns on a chart. This is fine, and I assume that advanced traders enjoy drawing on the chart. But it&#x27;s also annoying, and seems arbitrary sometimes.<p>So I created stock charts that annotate themselve",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-68694f5a49",
+    "title": "VFlash: Enabling System-1 VLMs for Physical AI",
+    "url": "https://research.nvidia.com/labs/lpr/vflash/",
+    "source": "hn",
+    "published_at": "2026-11-06T21:04:04Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8059,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-f6414d11e2",
+    "title": "Show HN: Jev vs. OpenAI Decision vs. Small Financial World Models: FinBench [video]",
+    "url": "https://www.youtube.com/watch?v=UN1LIF01uHQ",
+    "source": "hn",
+    "published_at": "2026-11-06T16:54:21Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7589,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "how-to"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "Guys - OpenAI Decisions, Jev, World Models are interesting.<p>We ran some tests for the C-suite to decide between OpenAI Decisions vs. their own existing models vs. training their proprietary Financial World Model. Sharing the results of our sample tests.<p>If you like a walkthrough with video of re",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-bb7265f807",
+    "title": "OMLX: Use a second Mac to speed up local LLM prefill 2.9x",
+    "url": "https://github.com/jundot/omlx/releases/tag/v0.7.4.dev1",
+    "source": "hn",
+    "published_at": "2026-11-07T10:15:17Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.975,
+      "age_h": 1.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-08d32c8500",
+    "title": "Turns with an LLM: coherence isn't the same as accuracy",
+    "url": "https://zenodo.org/records/23686384",
+    "source": "hn",
+    "published_at": "2026-11-06T23:02:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8292,
+      "age_h": 13.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-8c0dad407e",
+    "title": "Show HN: AJX - Find out where AI agents get stuck using your product",
+    "url": "https://ajx.dev/",
+    "source": "hn",
+    "published_at": "2026-11-06T22:31:02Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8229,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN. I made AJX (Agent Journey Experience). It is a CLI and skill bundle that you run to test what your product feels like to use from the point of view of an agent, and you get back a list of &quot;asks&quot; that would improve your product from an agentic usability perspective: so that agents sp",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-2f04e6216a",
+    "title": "Ask HN: Are AI-written reviews a safety risk? Evidence from ICLR2027 scores",
+    "url": "https://news.ycombinator.com/item?id=50398781",
+    "source": "hn",
+    "published_at": "2026-11-06T21:29:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8109,
+      "age_h": 14.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "There are two things I noticed. First, it seems that interpretability research got the lowest scores. And that the highest scored paper (444 with highest confidence) is the &quot;Context Language Models&quot; paper which lets models modify their context. This seems to support OpenAI latest findings.",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-7366ec388a",
+    "title": "CLI proxy that reduces LLM token consumption by 60-90% on dev commands",
+    "url": "https://github.com/rtk-ai/rtk",
+    "source": "hn",
+    "published_at": "2026-11-06T19:00:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7823,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  }
+]
