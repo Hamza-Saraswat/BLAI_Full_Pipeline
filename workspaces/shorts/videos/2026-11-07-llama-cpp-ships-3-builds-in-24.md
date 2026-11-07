@@ -2,14 +2,14 @@
 slug: 2026-11-07-llama-cpp-ships-3-builds-in-24
 workspace: shorts
 title: "llama.cpp update: 3 builds in one hour"
-status: building
+status: review
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-07
-updated: "2026-11-07T13:20:10Z"
+updated: "2026-11-07T13:34:27Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-07-llama-cpp-ships-3-builds-in-24-script]]
 - Package: [[stages/05-package/output/2026-11-07-llama-cpp-ships-3-builds-in-24-package]]
 - Voice: [[stages/06-voice/output/2026-11-07-llama-cpp-ships-3-builds-in-24-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-07-llama-cpp-ships-3-builds-in-24-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 2026-11-07T13:19:13Z 05-package ok: searchable title picked (keyword depth 16), rubric 100/100, check_outputs clean. Checkpoint: searchable over intriguing per search-heavy surface.
 - 2026-11-07T13:20:10Z build start on gn100-83c4
 - 2026-11-07T13:21:11Z 06-voice ok 58s
+- 2026-11-07T13:34:30Z 07-render ok 40.07s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 327
+- 2026-11-07T13:34:30Z 07-render ok 797s
