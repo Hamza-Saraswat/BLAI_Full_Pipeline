@@ -40,3 +40,4 @@ blotato_post_id: ""
 - 2026-11-07T13:17:47Z 04-script ok: B (myth-bust) beat A (news-react-so-what) 20:16; 2 grafts; gates all pass; style signal.
 - 2026-11-07T13:19:13Z 05-package ok: searchable title picked (keyword depth 16), rubric 100/100, check_outputs clean. Checkpoint: searchable over intriguing per search-heavy surface.
 - 2026-11-07T13:20:10Z build start on gn100-83c4
+- 2026-11-07T13:21:11Z 06-voice ok 58s
