@@ -1,0 +1,194 @@
+{
+  "slug": "2026-11-07-llama-cpp-ships-3-builds-in-24",
+  "topic": "llama.cpp shipped b12186, b12187 and b12188 inside one day -- re-pin and re-measure",
+  "generated_at": "2026-11-07T12:38:13Z",
+  "depth": "standard",
+  "thesis": "Because llama.cpp ships continuously and maintains no stable release -- b12186, b12187 and b12188 landed between 07 Nov 11:11 and 07 Nov 11:58 -- a build pinned yesterday is already three releases stale, and the move is to re-pin and re-measure with llama-bench.",
+  "explanation_path": "Start with what the viewer actually has: one downloaded or compiled llama.cpp with a build number in it, frozen at the day they got it. Establish that upstream does not share that freeze: the maintainer says there is no stable release and the project develops too fast to pick one, so builds stream out as numbered tags cut from master. Then land the event: on the morning of 07 Nov 2026 the releases page stamped b12186 at 11:11, b12187 at 11:42 and b12188 at 11:58 -- three releases inside one hour, and the sixth build of that day -- and each one is a single named change (Vulkan, WebGPU, llama-server), which is what continuous delivery looks like. Explain why stale costs something: fixes and kernels land in these small builds, official docs treat clone and rebuild as the normal update path, and the releases page hands you 40 prebuilt artifacts so re-pinning is a download, not an ordeal. Close with the discipline that makes it repeatable: llama-bench reports average tokens per second and records the build number in every result row, so re-pin then re-measure, and next time you can say how much the update was worth rather than guessing.",
+  "claims": [
+    {
+      "claim": "llama.cpp published builds b12186, b12187 and b12188 on 07 Nov 2026 at 11:11, 11:42 and 11:58 -- 3 releases inside one hour.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases",
+      "source_title": "Releases - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "Build b12186 is a Vulkan fix -- vulkan: Add 'readonly' to decodeBuf declarations (PR #31833) -- with a possible future performance payoff.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12186",
+      "source_title": "Release b12186 - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "Build b12187 adds a WebGPU compute kernel -- webgpu : Implement group norm kernel (PR #31490).",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12187",
+      "source_title": "Release b12187 - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "Build b12188 changes llama-server scheduling -- server: visit parent slots before child slots (PR #30779) -- so cached prompt prefixes wake their children into the same batch.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12188",
+      "source_title": "Release b12188 - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "Six builds were published on 07 Nov 2026 alone: b12183 (09:17), b12184 (09:47), b12185 (10:52), b12186 (11:11), b12187 (11:42), b12188 (11:58).",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases",
+      "source_title": "Releases - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "Every build ships 40 prebuilt download artifacts (the page renders Assets40), covering Windows, macOS, Linux and Android across CPU, CUDA, Vulkan, ROCm, SYCL and OpenVINO backends.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12186",
+      "source_title": "Release b12186 - ggml-org/llama.cpp",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "The official update path is clone, configure and rebuild: cmake -B build then cmake --build build --config Release, with -j 8 running 8 compile jobs in parallel.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md",
+      "source_title": "llama.cpp/docs/build.md at master",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "There is no stable llama.cpp release: asked directly, maintainer ggerganov answered \"Not atm.\", because the project develops too fast to choose one.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/16111",
+      "source_title": "Release Cycle of llama.cpp - Discussion #16111",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "llama-bench measures prompt processing and text generation and reports average tokens per second (t/s), repeating each test 5 times by default and stamping every result row with the build number it ran on.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md",
+      "source_title": "llama.cpp/tools/llama-bench/README.md at master",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    },
+    {
+      "claim": "The b-numbered GitHub releases are the nightly/development stream: official release.md says stable releases reach users through llama-install.sh, package managers, or building from the tag -- not through GitHub releases.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/release.md",
+      "source_title": "llama.cpp/docs/release.md at master",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "b12186 published",
+      "value": "07 Nov 11:11",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases"
+    },
+    {
+      "label": "b12187 published",
+      "value": "07 Nov 11:42",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12187"
+    },
+    {
+      "label": "b12188 published",
+      "value": "07 Nov 11:58",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12188"
+    },
+    {
+      "label": "releases on 07 Nov 2026, countable on the index (b12183-b12188)",
+      "value": "6 builds",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases"
+    },
+    {
+      "label": "prebuilt artifacts per release",
+      "value": "Assets40",
+      "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12186"
+    },
+    {
+      "label": "llama-bench repetitions per test (default)",
+      "value": "5",
+      "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md"
+    },
+    {
+      "label": "commits on llama.cpp master",
+      "value": "12,187 Commits",
+      "source_url": "https://github.com/ggml-org/llama.cpp"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Phone OS updates",
+      "mapping": "Your build number is an OS version, and llama.cpp pushes updates the way phones push security patches: small, frequent, easy to install.",
+      "limit": "Phones have a stable channel and you can skip versions; llama.cpp has no stable release at all, so skipping means drifting."
+    },
+    {
+      "vehicle": "Milk freshness date",
+      "mapping": "A build number is a freshness stamp, and yesterday's pin is already past it.",
+      "limit": "Old milk is unsafe while an old llama.cpp build still runs fine -- it is just missing fixes and speed, not spoiled."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "There is a stable llama.cpp version I should wait for.",
+      "reality": "The maintainer's own answer is \"Not atm.\" -- the project develops too fast to pick one, so the b-number stream is the product (claim 8)."
+    },
+    {
+      "myth": "Three builds in one hour means rushed, trivial junk.",
+      "reality": "Each build is one merged, named change aimed at a specific backend or tool -- a Vulkan fix, a WebGPU kernel, a llama-server scheduling improvement (claims 2, 3, 4)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "build number",
+      "definition": "llama.cpp's version stamp (the b in b12188); every binary reports it and llama-bench records it with each result."
+    },
+    {
+      "term": "prebuilt binary",
+      "definition": "A ready-to-run download of a build for your operating system and GPU backend, so you re-pin without compiling."
+    },
+    {
+      "term": "backend",
+      "definition": "The part of llama.cpp that talks to specific hardware -- CUDA for NVIDIA, Vulkan for many GPUs, Metal on Mac -- which is why each release ships many separate downloads."
+    },
+    {
+      "term": "Vulkan",
+      "definition": "A cross-platform GPU API llama.cpp uses as a backend that works on many graphics cards, not just one vendor."
+    },
+    {
+      "term": "llama-bench",
+      "definition": "llama.cpp's built-in benchmark tool; it reports average tokens per second for prompt processing and generation."
+    },
+    {
+      "term": "tokens per second (t/s)",
+      "definition": "How fast the model reads a prompt or writes text; the number to compare before and after a re-pin."
+    }
+  ],
+  "unverified": [
+    "No performance delta from re-pinning to b12188 is published anywhere upstream; any \"x% faster\" claim must come from the viewer's own llama-bench run.",
+    "The b12186 Vulkan change's performance payoff is a hope, not a number -- the release note itself says \"In a future driver version I hope to be able to get some perf gain out of this.\"",
+    "Which build a typical viewer pinned \"yesterday\" is unknowable; the three-releases-stale framing assumes a pin older than b12185.",
+    "Community claims that frequent llama.cpp rebuilds recover meaningful speed were not fetched this session and stay out of the claims."
+  ],
+  "suggested_outline": "While you were having breakfast llama.cpp shipped three builds -- b12186 at 11:11, b12187 at 11:42, b12188 at 11:58 -- and if you pinned yesterday, you are already behind; show the timestamps on the releases page.\nWhat actually landed, one line each: a Vulkan fix, a WebGPU kernel, a llama-server scheduling change -- and the maintainer's own words that there is no stable release to wait for, plus the detail that these b-builds are the dev stream by design.\nThe move: check your build number, re-pin by grabbing one of the 40 prebuilt artifacts (or git pull and rebuild with cmake), then re-run llama-bench so the build number and your new tokens-per-second land in the same table -- that comparison, not the download, is the point.",
+  "notes": "Conflict: discussion #9276 (Sep 2024) describes llama.cpp as \"rolling releases instead of semantic versioning\", while the current docs/release.md says the project uses semantic versioning (MAJOR.MINOR.PATCH) and that GitHub releases carry only nightly/development builds -- we follow release.md, and the distinction actually serves the video: the b-numbered builds the viewer downloads are the dev stream by design. Thin spot: no upstream performance number accompanies any of the three builds, so the payoff beat must be the viewer's own llama-bench comparison, never a quoted percentage. Dedupe: the 2026-09-19 Short covered three builds in two hours; this brief's core is the 07 Nov 2026 event (b12186-b12188, six builds in one morning) plus the re-pin/re-measure discipline.",
+  "viewer_situation": "You run a llama.cpp build you downloaded or compiled weeks ago on your gaming PC or Mac, and you could not say which build number it is.",
+  "has_process": true,
+  "process_steps": [
+    "Check the build number your install reports, for example in a llama-bench run (its results record a build_number).",
+    "Compare that number with the newest tag on the llama.cpp releases page.",
+    "Download the prebuilt package for your operating system and backend from the latest release, or git pull and rebuild with cmake -B build and cmake --build build --config Release.",
+    "Swap in the new binaries and keep the old folder so you can roll back.",
+    "Re-run llama-bench with the same model and settings you used before.",
+    "Compare the old and new average tokens per second, noting both build numbers."
+  ],
+  "objection": "Three builds in an hour is just CI churn -- nothing that lands that fast changes my tokens per second, so rebuilding is ceremony without payoff."
+}
