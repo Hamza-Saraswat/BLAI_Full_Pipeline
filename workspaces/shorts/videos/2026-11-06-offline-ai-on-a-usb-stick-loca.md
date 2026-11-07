@@ -2,14 +2,14 @@
 slug: 2026-11-06-offline-ai-on-a-usb-stick-loca
 workspace: shorts
 title: "Offline AI on a USB Stick: llamafile + Kiwix, No WiFi"
-status: review
+status: expired
 pillar: how-to
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-06
-updated: "2026-11-06T13:52:01Z"
+updated: "2026-11-07T14:35:18Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -52,3 +52,4 @@ blotato_post_id: ""
 - 2026-11-06T13:52:06Z 07-render ok 39.40s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 323
 - 2026-11-06T13:52:06Z 07-render ok 307s
 - 2026-11-06T13:52:08Z build done, status review
+- 2026-11-07T14:35:18Z 2026-11-07T14:35:18Z expired: not from today's picks (2026-11-07); the factory carries no backlog

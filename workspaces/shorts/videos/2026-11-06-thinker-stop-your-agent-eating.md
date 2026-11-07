@@ -2,14 +2,14 @@
 slug: 2026-11-06-thinker-stop-your-agent-eating
 workspace: shorts
 title: "Thinker: stop your agent eating its context window"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-06
-updated: "2026-11-06T12:11:52Z"
+updated: "2026-11-07T14:35:18Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Bands repeat yesterday (classic + smooth-explainer) because formats.json has two bands; fit wins, standing exception.
 
 ## Build journal
-
+- 2026-11-07T14:35:18Z 2026-11-07T14:35:18Z expired: not from today's picks (2026-11-07); the factory carries no backlog
