@@ -1,0 +1,181 @@
+{
+  "slug": "2026-11-08-aivim-a-vim-ai-editor-running",
+  "topic": "AIVim: a Vim AI editor running on Ollama",
+  "generated_at": "2026-11-08T12:54:43Z",
+  "depth": "standard",
+  "thesis": "AIVim turns the terminal editor you already know into the front end for the model already running on your box: install one package, point it at Ollama's OpenAI-compatible endpoint, and edit with AI that never leaves the machine.",
+  "explanation_path": "Start from what the viewer already has: a terminal, a Vim habit, and models served by Ollama on the same machine. Establish the gap first: the big AI editors are cloud products, and bolting an AI plugin onto real Vim or Neovim is its own project. Then introduce AIVim on its own terms: a terminal editor built on Textual with Vim keys (motions, Visual mode, counts, the core command set), plus AI actions bound to function keys. Show that it speaks the OpenAI Chat Completions protocol, which is the same protocol Ollama exposes at http://localhost:11434/v1, so the wiring is one URL plus a model name, with no key that matters and no account. Walk the install: a venv or pipx, the aivim[terminal-syntax] extra, and aivim --connect or a settings file to name the local endpoint. Then the payoff, live blocks: write a plain-English instruction, finish with a blank line, and the model streams a Bash block into the buffer while you keep typing; review before it lands, because generated commands are syntax-checked and never executed. Close on the honest limit: this implements a subset of Vim, not its runtime, macros or plugins, and the project is one maintainer's days-old revamp rather than a proven tool; the value is the pattern, an editor and a model both yours, talking over one localhost socket.",
+  "claims": [
+    {
+      "claim": "AIVim is an open-source, Vim-inspired AI editor whose author posted it to Hacker News on 2026-11-07 recommending it in an isolated Python environment with Ollama or a hosted API.",
+      "source_url": "https://news.ycombinator.com/item?id=50405893",
+      "source_title": "Show HN: AIVim -- an open-source, Vim-inspired AI editor",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "AIVim is licensed GPL-3.0-only; the repository carries 134 commits and 31 tags, and the README was refreshed on 2026-11-07 with capability tours.",
+      "source_url": "https://github.com/danimoya/AIVim-Editor",
+      "source_title": "GitHub - danimoya/AIVim-Editor: AI-enhanced Vim-like text editor",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "AIVim 2.1.2 requires Python 3.9+, installs with pipx install 'aivim[terminal-syntax]==2.1.2', bundles no model weights, and connects a provider with aivim --connect.",
+      "source_url": "https://github.com/danimoya/AIVim-Editor",
+      "source_title": "GitHub - danimoya/AIVim-Editor README (Get started)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "AIVim's provider table lists Ollama by name under Local server / Olares / Ollama: configure the OpenAI-compatible API URL and model ID; the local-server provider has no automatic fallback to a paid cloud provider.",
+      "source_url": "https://github.com/danimoya/AIVim-Editor",
+      "source_title": "GitHub - danimoya/AIVim-Editor README (Bring your own model)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "Ollama exposes the OpenAI Chat Completions API locally at base_url http://localhost:11434/v1, where the api_key value is required by the client but ignored by Ollama.",
+      "source_url": "https://docs.ollama.com/api/openai-compatibility",
+      "source_title": "OpenAI compatibility - Ollama docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "AIVim implements Vim-style modal input including h/j/k/l, w/b/e, gg/G, Insert mode, Visual selection, counts, and commands like :w, :wq and :q, but full Vim runtime and plugin compatibility remains outside the release; F4 switches to standard typing.",
+      "source_url": "https://github.com/danimoya/AIVim-Editor",
+      "source_title": "GitHub - danimoya/AIVim-Editor README (Vim keys, live blocks, and recovery)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "Live blocks work by entering an instruction finished with a blank line; the queue stays ordered while you type, review is the default, auto-replace is an explicit choice, and each accepted block is one undoable edit.",
+      "source_url": "https://github.com/danimoya/AIVim-Editor",
+      "source_title": "GitHub - danimoya/AIVim-Editor README (Write in blocks / Vim keys)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    },
+    {
+      "claim": "Generated Bash is syntax-checked and never executed, in both the demos and the recorders; generated Python is parsed, not executed.",
+      "source_url": "https://pypi.org/project/aivim/",
+      "source_title": "aivim 2.1.2 on PyPI (See live blocks become Bash / One thought, several files)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Python version required (aivim 2.1.2)",
+      "value": "3.9+",
+      "source_url": "https://github.com/danimoya/AIVim-Editor"
+    },
+    {
+      "label": "cells left for editing on an 80x24 terminal (two permanent rows)",
+      "value": "80x22",
+      "source_url": "https://github.com/danimoya/AIVim-Editor"
+    },
+    {
+      "label": "selection/context budget per AI request",
+      "value": "50 KiB",
+      "source_url": "https://github.com/danimoya/AIVim-Editor"
+    },
+    {
+      "label": "instruction limit per AI request",
+      "value": "8 KiB",
+      "source_url": "https://github.com/danimoya/AIVim-Editor"
+    },
+    {
+      "label": "Ollama local OpenAI-compatible base URL",
+      "value": "http://localhost:11434/v1",
+      "source_url": "https://docs.ollama.com/api/openai-compatibility"
+    },
+    {
+      "label": "current release on PyPI (released 07 Nov 2026)",
+      "value": "2.1.2",
+      "source_url": "https://github.com/danimoya/AIVim-Editor/releases/tag/v2.1.2"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "a stick shift with a copilot",
+      "mapping": "You keep the wheel and the clutch pedal (Vim motions, every keystroke yours); the copilot (local model) suggests the next move while you keep driving, and nothing shifts gears without your hand (review-before-accept, no auto-execution).",
+      "limit": "Breaks when pushed on autonomy: a copilot only whispers, while AIVim's Live auto-replace mode completes blocks as they arrive once you explicitly enable it, so the 'nothing without your hand' framing only holds in the default review mode."
+    },
+    {
+      "vehicle": "an electrician running a new circuit to a panel already in the garage",
+      "mapping": "Ollama is the panel already on the wall with capacity to spare; AIVim is the new outlet, and the OpenAI-compatible endpoint is the short run of wire between them; the job is one URL, not a new service.",
+      "limit": "Breaks on effort: wiring a circuit takes hours and a permit, while pointing an editor at localhost is one line of config; the analogy overstates the work and the risk."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "AIVim is a plugin you drop into your existing Vim or Neovim.",
+      "reality": "It is a standalone terminal editor built on the Textual framework, with Vim-style keys implemented inside it; Neovim embedding remains an evaluated prototype and the older editor survives as aivim --classic."
+    },
+    {
+      "myth": "It needs an API key and an account before it will talk to a model.",
+      "reality": "For a local server the OpenAI-compatible URL and model ID are enough; Ollama ignores the api_key value locally, and the local-server provider has no automatic cloud fallback."
+    },
+    {
+      "myth": "Live blocks let the AI run your shell.",
+      "reality": "Generated Bash is syntax-checked and never executed; review is the default, auto-replace is an explicit choice, and each accepted block is one undoable edit."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "AIVim",
+      "definition": "An open-source (GPL-3.0-only) terminal editor with Vim-style keys and built-in AI actions, installed as the Python package aivim."
+    },
+    {
+      "term": "Ollama",
+      "definition": "A tool for running large language models locally, which exposes an OpenAI-compatible API on your machine at http://localhost:11434/v1."
+    },
+    {
+      "term": "OpenAI-compatible endpoint",
+      "definition": "A server that speaks the OpenAI Chat Completions protocol, so any client written for OpenAI's API can talk to it by changing the base URL."
+    },
+    {
+      "term": "Live blocks",
+      "definition": "AIVim's mode where a plain-language instruction, finished with a blank line, is answered by the model streaming code into your buffer while you keep typing."
+    },
+    {
+      "term": "Textual",
+      "definition": "A Python framework for building terminal user interfaces, which AIVim's workspace is built on."
+    },
+    {
+      "term": "pipx",
+      "definition": "A tool that installs Python command-line applications into isolated environments, so one command gets you the editor without touching system Python."
+    },
+    {
+      "term": "Syntax-checked",
+      "definition": "Parsed for correctness without being run, which is what AIVim does to generated Bash and Python before you ever accept it."
+    }
+  ],
+  "unverified": [
+    "How fast AIVim feels with a specific model on specific hardware (tokens per second) is for our own hardware to measure, not a source's claim.",
+    "That a 7B-class model produces good Bash live blocks in practice; the repo's demos use a real local model but do not name the model or hardware per demo.",
+    "That AIVim has any meaningful user base or adoption; the repo showed 0 stars, 0 forks and 1 watcher, and the HN post had 1 point with no comments at fetch time.",
+    "That the workflow is stable day to day; the project shipped 1.0.0, 2.1.1 and 2.1.2 all on 2026-11-07, so it is days old in its current form.",
+    "Any head-to-head against Neovim AI plugin stacks such as codecompanion.nvim or Continue; nothing fetched compares them directly."
+  ],
+  "suggested_outline": "Hook: you do not need a cloud AI editor; your terminal plus the model already on your box is enough.\nName what the viewer has: a Vim habit, a terminal, and Ollama serving models at localhost 11434.\nThe gap: big AI editors are cloud products; plugin-ing AI into real Vim is its own project; AIVim is a standalone terminal editor that implements the Vim core (motions, modes, counts) and adds AI on function keys.\nThe wiring: it speaks the OpenAI Chat Completions protocol; Ollama exposes the same protocol at http://localhost:11434/v1; one URL plus a model name, no key that matters, no account.\nThe three moves: pipx install aivim, aivim --connect to name the endpoint, open a file and type.\nThe payoff: write a plain-English instruction, finish with a blank line, and watch Bash stream into the buffer while you keep typing; review before accept; generated commands are never executed.\nThe honest catch: subset of Vim, not the runtime or plugins; a days-old revamp by one maintainer with no adoption numbers; the pattern is the value, an editor and a model both yours.",
+  "notes": "Sources are unusually concentrated: six of eight claims cite the same repository (README plus release page), which is also the primary source; PyPI mirrors it and Ollama's docs ground the endpoint. There is no independent review of this tool anywhere yet; that fact is recorded under Unverified. The changelog shows the project pivoted to the Textual terminal workspace as 1.0 Alpha 1 on 2026-11-07 with 2.1.1 and 2.1.2 the same day, matching the Show HN 'just revamped' framing; the 0.5.x line is the older browser-based era. FireCrawl was out of credits (402), so search ran on the keyless free tier and fetches used the agent's web fetch; no Reddit or forum signal was available.",
+  "viewer_situation": "You keep a terminal open, you know your Vim motions, and you already run models locally with Ollama on the same machine.",
+  "has_process": true,
+  "process_steps": [
+    "Install the editor into an isolated environment with pipx install 'aivim[terminal-syntax]'",
+    "Run aivim --connect and point the OpenAI-compatible API URL at your local server, then pick the model ID",
+    "Open a file (aivim demo.sh) and type as usual with Vim motions or F4 for standard typing",
+    "Press F9, write a plain-English instruction, and finish it with a blank line to submit",
+    "Review the streamed block, then accept it with F8 or reject it; each accepted block is one undoable edit"
+  ],
+  "objection": "It is a subset of Vim from a days-old single-maintainer project with zero stars, so why not keep real Vim and bolt on an Ollama plugin that gets the same AI without learning a new editor?"
+}
