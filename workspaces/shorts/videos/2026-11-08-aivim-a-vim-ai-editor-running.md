@@ -38,4 +38,3 @@ blotato_post_id: ""
 ## Build journal
 - 03-research ok: 8 claims, 6 key numbers, 8 sources; FireCrawl 402 so keyless tier + web fetch.
 - 04-script ok: worked-example beat news-react 21-18 (kimi-k3 writers + judge); validator 0/0; eval all gates pass (entity_spend advisory); sameness 5 comparisons ok; ledger entry 64; pack sketch.
-- 2026-11-08T12:57:49Z 03-research ok: 8 claims, 6 key numbers, 8 sources (FireCrawl 402, keyless tier + web fetch). Unattended checkpoint: angle confirmed as picked.
