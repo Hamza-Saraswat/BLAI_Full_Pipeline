@@ -2,14 +2,14 @@
 slug: 2026-11-08-aivim-a-vim-ai-editor-running
 workspace: shorts
 title: "AIVim on Ollama: a local AI editor"
-status: building
+status: review
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: sketch
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-08
-updated: "2026-11-08T13:30:10Z"
+updated: "2026-11-08T13:43:05Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-script|script]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-storyboard|storyboard]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-drafts|drafts]]
 - Package: [[stages/05-package/output/2026-11-08-aivim-a-vim-ai-editor-running-package|package]]
 - Voice: [[stages/06-voice/output/2026-11-08-aivim-a-vim-ai-editor-running-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-08-aivim-a-vim-ai-editor-running-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 05-package ok: searchable title picked (search surface, depth 16); rubric 100/100; check_outputs clean after hub link.
 - 2026-11-08T13:30:10Z build start on gn100-83c4
 - 2026-11-08T13:31:12Z 06-voice ok 60s
+- 2026-11-08T13:43:09Z 07-render ok 40.97s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 330
+- 2026-11-08T13:43:09Z 07-render ok 715s
