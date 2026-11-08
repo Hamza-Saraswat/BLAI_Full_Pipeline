@@ -1,0 +1,486 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-08T13:14:33+00:00",
+  "slug": "draft-A",
+  "inputs": {
+    "storyboard_path": "2026-11-08-aivim-a-vim-ai-editor-running-storyboard-draft-A.json",
+    "research_path": "../../03-research/output/2026-11-08-aivim-a-vim-ai-editor-running-brief.json",
+    "project_record": null,
+    "ledger_path": "output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 8,
+    "claims_by_quality": {
+      "community": 1,
+      "primary": 7
+    },
+    "pct_primary_docs": 0.875,
+    "key_numbers_total": 6,
+    "entities_total": 16,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.385,
+    "source_domains": [
+      "github.com",
+      "ollama.com",
+      "pypi.org",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.333,
+      "detail": [
+        {
+          "label": "Python version required (aivim 2.1.2)",
+          "value": "3.9+",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three point nine",
+          "scene_ids": [
+            "s2"
+          ]
+        },
+        {
+          "label": "cells left for editing on an 80x24 terminal (two permanent rows)",
+          "value": "80x22",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "selection/context budget per AI request",
+          "value": "50 KiB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "50",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "instruction limit per AI request",
+          "value": "8 KiB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama local OpenAI-compatible base URL",
+          "value": "http://localhost:11434/v1",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "current release on PyPI (released 07 Nov 2026)",
+          "value": "2.1.2",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 16,
+      "found_count": 3,
+      "score": 0.188,
+      "found": [
+        "Ollama",
+        "Python",
+        "localhost:11434"
+      ],
+      "missing": [
+        "Generated Bash",
+        "OpenAI-compatible API URL",
+        "OpenAI Chat Completions",
+        "GPL-3.0-only",
+        "README",
+        "Olares",
+        "Insert",
+        "Visual",
+        "Vim-inspired AI",
+        "Hacker News",
+        "Neovim",
+        "OpenAI-compatible URL",
+        "Textual"
+      ],
+      "top2": [
+        "Ollama",
+        "Python"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Python",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Generated Bash",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible API URL",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI Chat Completions",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPL-3.0-only",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "README",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "localhost:11434",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Olares",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Insert",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Visual",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Vim-inspired AI",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hacker News",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Neovim",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible URL",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Textual",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Ollama"
+      ],
+      "hook_text": "Ollama's already running. This editor uses it.",
+      "first_sentence": "Your Ollama models are already running."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 3.8,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "Your Ollama models are already running. This editor finally uses them."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:3.9+",
+            "entity:Python"
+          ],
+          "narration": "Tonight you install AIVim, a terminal editor with Vim motions. It wants Python three point nine or newer."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:localhost:11434"
+          ],
+          "narration": "aivim --connect points it at localhost, port eleven four three four, the plug every AI tool speaks. The editor now knows where the model lives."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "glossary:AIVim"
+          ],
+          "narration": "Open a file in AIVim, type list the biggest logs here, then a blank line. Bash streams in while you keep typing."
+        },
+        {
+          "id": "s5",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:50 KiB"
+          ],
+          "narration": "Requests carry up to fifty kilobytes of your file. The reply gets checked, not run; you review before it stays."
+        },
+        {
+          "id": "s6",
+          "role": "payoff_close",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "glossary:AIVim"
+          ],
+          "narration": "AIVim is a Vim subset, days old. But editor, model, the whole conversation stays on your machine."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.1,
+      "words": 113,
+      "sentences": 12,
+      "est_speech_s": 39.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your Ollama models are already running. This editor finally uses them. Tonight you install AIVim, a terminal editor with Vim motions. It wants Python three point nine or newer. aivim --connect points it at localhost, port eleven four three four, the plug every AI tool speaks. The editor now knows where the model lives. Open a file in AIVim, type list the biggest logs here, then a blank line. Bash streams in while you keep typing. Requests carry up to fifty kilobytes of your file. The reply gets checked, not run; you review before it stays. AIVim is a Vim subset, days old. But editor, model, the whole conversation stays on your machine.",
+    "on_screen": "Ollama's already running. This editor uses it. | Your Ollama is running | This editor uses it | pipx install aivim | h j k l | aivim --connect -> localhost:11434/v1 | list the biggest logs here | ls -S *.log | 50 KiB context | checked not run | editor + model + conversation | on your machine"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "2026-11-08-aivim-a-vim-ai-editor-running-storyboard-draft-A.json",
+        "scenes": 6,
+        "fk_grade": 6.1,
+        "words": 113,
+        "est_speech_s": 39.0,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "target 39s outside the 32-38s evidence band",
+          "FK grade 6.1 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "../../03-research/output/2026-11-08-aivim-a-vim-ai-editor-running-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 6,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.188,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Ollama",
+          "Python"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Ollama"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "output/script-ledger.json",
+        "comparisons": 0,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

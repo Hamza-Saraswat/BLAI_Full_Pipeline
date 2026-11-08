@@ -1,0 +1,114 @@
+{
+  "slug": "2026-11-08-aivim-a-vim-ai-editor-running",
+  "topic": "AIVim: a Vim AI editor running on Ollama",
+  "title": "AIVim: Your Ollama Becomes the Editor",
+  "description": "Working description, replaced by stage 05. AIVim wired to a local Ollama server.",
+  "hashtags": [
+    "#AIVim",
+    "#Ollama",
+    "#Vim"
+  ],
+  "tags": [
+    "aivim",
+    "aivim ollama",
+    "aivim editor",
+    "ai vim editor",
+    "vim ai editor",
+    "ollama editor",
+    "ollama coding",
+    "local ai editor",
+    "terminal ai editor",
+    "edit with local llm",
+    "ollama openai compatible",
+    "localhost 11434",
+    "vim motions",
+    "pipx install aivim",
+    "run ai locally",
+    "offline ai editor"
+  ],
+  "hook_text": "Vim-style AI editor, on your model",
+  "hook_candidates": [
+    "Your Ollama models are already running. This editor finally uses them.",
+    "A Vim-style AI editor just shipped, and it runs on the model you already have.",
+    "One URL, and your Ollama model edits code with you.",
+    "Three moves tonight: a Vim editor that thinks with your model.",
+    "Zero stars. One maintainer. Your editor still runs local AI tonight.",
+    "Vim keys, local model, no cloud account. AIVim just shipped.",
+    "Your editor's AI brain is already installed. It's called Ollama.",
+    "Fifty kilobytes of context, and the model never leaves your machine.",
+    "localhost 11434 is the only account this AI editor needs.",
+    "Stop pasting code into a chat tab. Edit with the model instead."
+  ],
+  "style_pack": "sketch",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 38,
+  "narration_full": "AIVim just shipped: a Vim-style editor running your Ollama model. Yesterday its author posted AIVim, a Vim-style terminal editor, to Hacker News. Your Ollama becomes the brain of a real editor, not a chat tab. It wants Python three point nine or newer. It speaks the OpenAI-compatible plug, the one every AI tool uses. Ollama serves that plug at localhost, port eleven four three four. The catch: a Vim subset, so your plugins stay home. And it is days old. One person's project, unproven. Tonight, pipx install aivim and aim it at your Ollama. Then try one live block: plain English in, and code streams back while you keep typing.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "narration": "AIVim just shipped: a Vim-style editor running your Ollama model.",
+      "on_screen_text": "AIVim: Vim keys, local model",
+      "visual_brief": "Frame 1 fully legible: chalk hook text centered on dark slate in two stacked lines. Motion onset at 0.30 s: a wobbly amber circle starts drawing around the words 'on your model', completing as the narration phrase 'the model you already have' lands. Only the circle animates.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 3.4,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "narration": "Yesterday its author posted AIVim, a Vim-style terminal editor, to Hacker News. Your Ollama becomes the brain of a real editor, not a chat tab.",
+      "on_screen_text": "AIVim on Hacker News | not a chat tab",
+      "visual_brief": "Split-compare. Left: a chalk speech bubble labeled chat tab fades in on 'posted AIVim', then a wobbly cross strikes it on 'not a chat tab'. Right: a hand-drawn terminal window with a small brain glyph rises in place on 'brain of a real editor'. Sequential, at most two elements moving.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "narration": "It wants Python three point nine or newer. It speaks the OpenAI-compatible plug, the one every AI tool uses. Ollama serves that plug at localhost, port eleven four three four.",
+      "on_screen_text": "Python 3.9+ | aivim -> localhost:11434/v1 -> Ollama",
+      "visual_brief": "Grid of two rows. Top row on 'Python three point nine or newer': a chalk badge reading 3.9+ draws beside a terminal sketch. Bottom row on 'the plug every AI tool speaks': three chalk boxes aivim, localhost:11434/v1, Ollama with wobbly arrows drawing left to right; the middle label appears exactly on 'port eleven four three four'. One row at a time.",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "est_duration_s": 10.3,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "narration": "The catch: a Vim subset, so your plugins stay home. And it is days old. One person's project, unproven.",
+      "on_screen_text": "Vim subset | days old | unproven",
+      "visual_brief": "Centered-stack. A chalk puzzle piece with a plugin label fades in on 'your plugins stay home', then a wobbly cross strikes it. On 'days old' a small calendar sketch draws with two ticks. On 'unproven' the word unproven is circled in amber and the frame settles. At most two elements moving, sequenced.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 6.6
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "narration": "Tonight, pipx install aivim and aim it at your Ollama. Then try one live block: plain English in, and code streams back while you keep typing.",
+      "on_screen_text": "pipx install aivim | one live block",
+      "visual_brief": "Timeline of three chalk ticks rising in sequence: install aivim on 'pipx install aivim', connect on 'aim it at your Ollama', live block on 'try one live block'. A wobbly amber underline draws beneath live block as the narration phrase 'code streams back while you keep typing' closes the video. Motion onset at 0.30 s.",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "est_duration_s": 9.0
+    }
+  ],
+  "notes_for_review": "Draft B. Hook assigned by pattern; see drafts note for the 10-candidate scoring."
+}

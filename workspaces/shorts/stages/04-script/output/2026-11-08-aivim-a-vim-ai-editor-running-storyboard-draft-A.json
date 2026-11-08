@@ -1,0 +1,142 @@
+{
+  "slug": "2026-11-08-aivim-a-vim-ai-editor-running",
+  "topic": "AIVim: a Vim AI editor running on Ollama",
+  "title": "AIVim: Plug Your Editor Into Ollama",
+  "description": "Working description, replaced by stage 05. AIVim wired to a local Ollama server.",
+  "hashtags": [
+    "#AIVim",
+    "#Ollama",
+    "#Vim"
+  ],
+  "tags": [
+    "aivim",
+    "aivim ollama",
+    "aivim editor",
+    "ai vim editor",
+    "vim ai editor",
+    "ollama editor",
+    "ollama coding",
+    "local ai editor",
+    "terminal ai editor",
+    "edit with local llm",
+    "ollama openai compatible",
+    "localhost 11434",
+    "vim motions",
+    "pipx install aivim",
+    "run ai locally",
+    "offline ai editor"
+  ],
+  "hook_text": "Ollama's already running. This editor uses it.",
+  "hook_candidates": [
+    "Your Ollama models are already running. This editor finally uses them.",
+    "A Vim-style AI editor just shipped, and it runs on the model you already have.",
+    "One URL, and your Ollama model edits code with you.",
+    "Three moves tonight: a Vim editor that thinks with your model.",
+    "Zero stars. One maintainer. Your editor still runs local AI tonight.",
+    "Vim keys, local model, no cloud account. AIVim just shipped.",
+    "Your editor's AI brain is already installed. It's called Ollama.",
+    "Fifty kilobytes of context, and the model never leaves your machine.",
+    "localhost 11434 is the only account this AI editor needs.",
+    "Stop pasting code into a chat tab. Edit with the model instead."
+  ],
+  "style_pack": "sketch",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 39,
+  "narration_full": "Your Ollama models are already running. This editor finally uses them. Tonight you install AIVim, a terminal editor with Vim motions. It wants Python three point nine or newer. aivim --connect points it at localhost, port eleven four three four, the plug every AI tool speaks. The editor now knows where the model lives. Open a file in AIVim, type list the biggest logs here, then a blank line. Bash streams in while you keep typing. Requests carry up to fifty kilobytes of your file. The reply gets checked, not run; you review before it stays. AIVim is a Vim subset, days old. But editor, model, the whole conversation stays on your machine.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "narration": "Your Ollama models are already running. This editor finally uses them.",
+      "on_screen_text": "Your Ollama is running | This editor uses it",
+      "visual_brief": "Frame 1 fully legible: chalk hook line centered on dark slate, small wobbly server-rack sketch below with one amber LED dot blinking within 0.5 s. On the narration phrase 'This editor finally uses them' the second text line rises in place beneath and a hand-drawn arrow draws from it toward the rack. Motion onset at 0.30 s, one element at a time.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 3.8,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "narration": "Tonight you install AIVim, a terminal editor with Vim motions. It wants Python three point nine or newer.",
+      "on_screen_text": "pipx install aivim | h j k l",
+      "visual_brief": "Split-compare. Left pane: the command 'pipx install aivim' types itself keystroke by keystroke, anchored to 'Tonight you install AIVim'. Right pane: a chalk terminal window rises in place titled aivim with the letters h j k l circled, anchored to 'your Vim motions'. Fade and rise-in-place only, sequenced.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 6.2,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "narration": "aivim --connect points it at localhost, port eleven four three four, the plug every AI tool speaks. The editor now knows where the model lives.",
+      "on_screen_text": "aivim --connect -> localhost:11434/v1",
+      "visual_brief": "Diagram-flow. Two hand-drawn boxes labeled aivim and Ollama, present from 0.30 s. On 'points it at localhost' a wobbly chalk arrow draws from editor to server. On 'port eleven four three four' the label localhost:11434/v1 fades in on the wire. On 'Now the editor knows where the model lives' a chalk circle closes around the whole link. One animation at a time.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 8.6,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "narration": "Open a file in AIVim, type list the biggest logs here, then a blank line. Bash streams in while you keep typing.",
+      "on_screen_text": "list the biggest logs here | ls -S *.log",
+      "visual_brief": "Split-compare. Top half: the instruction 'list the biggest logs here' types in with a blank chalk line drawn under it, anchored to 'then a blank line'. Bottom half: the Bash 'ls -S *.log' streams token by token into the buffer, anchored to 'Bash streams in', while the top cursor keeps blinking for 'while you keep typing'. Exactly two elements animate.",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "est_duration_s": 7.6,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "role": "explain",
+      "narration": "Requests carry up to fifty kilobytes of your file. The reply gets checked, not run; you review before it stays.",
+      "on_screen_text": "50 KiB context | checked not run",
+      "visual_brief": "Centered-stack checklist on slate. On 'fifty kilobytes of your file' a chalk tag reading 50 KiB fades in beside a file sketch. On 'gets checked, not run' a check mark draws beside checked and a cross beside not run, in amber. On 'you review before it stays' a wobbly circle closes around you review. Sequenced draw-on reveals, never more than two moving.",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "est_duration_s": 6.9,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "role": "payoff_close",
+      "narration": "AIVim is a Vim subset, days old. But editor, model, the whole conversation stays on your machine.",
+      "on_screen_text": "editor + model + conversation | on your machine",
+      "visual_brief": "Diagram-flow payoff. On 'a Vim subset' a small plain chalk caption fades in at the corner, unadorned. On 'editor, model' two chalk circles rise in place inside one big hand-drawn machine outline, joined by a wobbly double arrow. On 'stay on your machine' a crossed-out cloud sketch draws outside the box and the frame holds still for the wordmark settle.",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "est_duration_s": 5.9
+    }
+  ],
+  "notes_for_review": "Draft A. Hook assigned by pattern; see drafts note for the 10-candidate scoring."
+}
