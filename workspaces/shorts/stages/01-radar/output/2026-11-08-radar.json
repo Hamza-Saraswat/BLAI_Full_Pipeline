@@ -1,0 +1,752 @@
+[
+  {
+    "id": "github-59d941db7c",
+    "title": "open-webui v0.13.2",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.2",
+    "source": "github",
+    "published_at": "2026-11-08T11:53:42Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.13.2",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9982,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Fixed - 🔓 **Chat over plain HTTP.** Opening Open WebUI over plain HTTP at a LAN or Docker address now loads new and existing chats instead of staying on a spinner with \"crypto.randomUUID is not a function\". [#33919](https://github.com/open-webui/open-webui/issues/33919) - 📝 **Comments and Markdo",
+    "why_now": "Shipped with a known break: open-webui/open-webui v0.13.2 released, 0 h ago",
+    "score": 74
+  },
+  {
+    "id": "github-6f3e6a8bcc",
+    "title": "open-webui v0.13.1",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.1",
+    "source": "github",
+    "published_at": "2026-11-08T11:07:53Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.13.1",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9873,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI",
+      "Claude"
+    ],
+    "summary": "### Added - 🦾 **Coding agents as models.** On an Open Terminal that offers agents, coding agents such as Claude Code, Codex and Pi now appear in the model picker. You can chat with them or call them by voice, choose their reasoning effort and service tier, and approve their tool requests in the chat",
+    "why_now": "Shipped: open-webui/open-webui v0.13.1 released, 1 h ago",
+    "score": 74
+  },
+  {
+    "id": "hn-152675bb70",
+    "title": "MaxxBench - \"Nice DeepSWE score. But is it true?\"",
+    "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+    "source": "hn",
+    "published_at": "2026-11-07T17:19:00Z",
+    "signals": {
+      "points": 332,
+      "num_comments": 86,
+      "signal": 0.967,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.89
+      },
+      "decay": 0.7633,
+      "age_h": 18.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 332 points, 86 comments on HN, 19 h ago",
+    "score": 63
+  },
+  {
+    "id": "hn-5e9d3fd0e5",
+    "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+    "url": "https://github.com/synchopate/llama-modchip",
+    "source": "hn",
+    "published_at": "2026-11-08T10:22:04Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 1,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.138
+      },
+      "decay": 0.9764,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Llama",
+      "group": "how-to"
+    },
+    "products": [
+      "Llama",
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 1 comments on HN, 2 h ago",
+    "score": 38
+  },
+  {
+    "id": "hn-73417b7668",
+    "title": "DeepSeek Harness - Creator Mode",
+    "url": "https://www.reddit.com/r/DeepSeek/s/sxg7aAM6rS",
+    "source": "hn",
+    "published_at": "2026-11-08T05:53:20Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9153,
+      "age_h": 6.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 6 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-efacc81b39",
+    "title": "Show HN: Jacq, a DSL that compiles model and kernel descriptions to CUDA",
+    "url": "https://github.com/ImpossibleComputing/jacq",
+    "source": "hn",
+    "published_at": "2026-11-07T17:58:49Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7707,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:CUDA",
+      "group": "news-react"
+    },
+    "products": [
+      "CUDA"
+    ],
+    "summary": "I was working (with agents) on testing out various attention algorithm ideas I had, and I found that the existing infrastructure&#x2F;libraries made it more difficult than it should be.<p>So I created Jacq, a DSL and compiler. A jacq file describes a model’s configuration, weights, layers, and pipel",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 18 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-80a6f24cb0",
+    "title": "Qwen3.8-27B MTP Q4S head on Q6 quant is faster than q6, f16 slower = acceptance",
+    "url": "https://github.com/alainnothere/llama.cpp/commit/77b124a7ab56e0f1c33c025344a9c63465a9a87f",
+    "source": "hn",
+    "published_at": "2026-11-08T00:18:20Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8444,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 1 comments on HN, 12 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-19689cdd2d",
+    "title": "In less than $1, DeepSeek v4.1 Flash 1017 built a Mac App",
+    "url": "https://twitter.com/1littlecoder/status/2118985666008953038",
+    "source": "hn",
+    "published_at": "2026-11-07T18:40:07Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7784,
+      "age_h": 17.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 17 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-ed933b5298",
+    "title": "TokiRecur - llama.cpp LLM launcher with KV-cache recycling",
+    "url": "https://github.com/lhadzic377-netizen/TokiRecur",
+    "source": "hn",
+    "published_at": "2026-11-07T18:08:43Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7725,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 18 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-437a12af21",
+    "title": "Show HN: LLM weight editing tool made by a 15-year-old",
+    "url": "https://github.com/Miyamoto-Renya/LaplacesScissors",
+    "source": "hn",
+    "published_at": "2026-11-08T02:37:10Z",
+    "signals": {
+      "points": 11,
+      "num_comments": 0,
+      "signal": 0.305,
+      "signal_parts": {
+        "points": 0.435,
+        "comments": 0.0
+      },
+      "decay": 0.8731,
+      "age_h": 9.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [],
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 11 points, 0 comments on HN, 9 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-2b61466035",
+    "title": "VindexLLM - Windows Vulkan GPU GGUF LLM inference engine written in Delphi 12",
+    "url": "https://github.com/tinyBigGAMES/VindexLLM",
+    "source": "hn",
+    "published_at": "2026-11-08T05:25:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9092,
+      "age_h": 6.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 7 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-9b2fdd2048",
+    "title": "Ask HN: If LLM reverse engineering is deemed illegal, is that precedent for OSS?",
+    "url": "https://news.ycombinator.com/item?id=50409438",
+    "source": "hn",
+    "published_at": "2026-11-08T00:37:05Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 9,
+      "signal": 0.308,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.459
+      },
+      "decay": 0.8482,
+      "age_h": 11.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "With the efforts to clamp down on LLM-assisted reverse engineering - I am wondering;<p>If LLM assisted reverse engineering is deemed illegal by the courts, is that precedent for a class action that asserts OSS licenses are violated by labs that trained LLMs on that code?<p>There are two modalities f",
+    "why_now": "Discussed: 3 points, 9 comments on HN, 11 h ago",
+    "score": 22
+  },
+  {
+    "id": "hf-03b6bd9ca2",
+    "title": "RikiyaT/Qwen3.5-0.8B-weight-space-programming",
+    "url": "https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming",
+    "source": "hf",
+    "published_at": "2026-11-02T22:12:58Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 123,
+      "downloads": 3140,
+      "trendingScore": 121.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.665,
+      "signal_parts": {
+        "trending": 0.632,
+        "likes": 0.698,
+        "downloads": 0.583
+      },
+      "decay": 0.1448,
+      "age_h": 133.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 123 likes, 3.1k downloads, trending score 121, created 2026-11-02",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 123 likes, 3.1k downloads, trending score 121, 6 d ago",
+    "score": 22
+  },
+  {
+    "id": "hn-0fab7eafec",
+    "title": "Show HN: AIVim - an open-source, Vim-inspired AI editor",
+    "url": "https://news.ycombinator.com/item?id=50405893",
+    "source": "hn",
+    "published_at": "2026-11-07T16:39:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7561,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "I thought it would be cool to have a modern, Vim-inspired editor with AI, so I built AIVim. Just revamped it. Try it in an isolated Python environment with Ollama or a hosted API. Fast token generation makes the interaction feel responsive.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 19 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-5107aa20ee",
+    "title": "Ask HN: LLM-Resistant Publishing Strategies",
+    "url": "https://news.ycombinator.com/item?id=50411036",
+    "source": "hn",
+    "published_at": "2026-11-08T06:57:42Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 4,
+      "signal": 0.231,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.321
+      },
+      "decay": 0.9296,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "As has been discussed at length, LLM companies carried out the most egregious theft of labor [0] and intellectual property [1] in human history.<p>I am one among the many (artists, musicians, writers, developers), who continue to be appaled at tech billionaires profiting from this [2]. As such, I ha",
+    "why_now": "Discussed: 2 points, 4 comments on HN, 5 h ago",
+    "score": 18
+  },
+  {
+    "id": "hf-b501c2c996",
+    "title": "autotrust/Qwen3.8-Flash-Next-E384-FP4-V2",
+    "url": "https://huggingface.co/autotrust/Qwen3.8-Flash-Next-E384-FP4-V2",
+    "source": "hf",
+    "published_at": "2026-10-26T23:15:24Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 2370,
+      "downloads": 42718,
+      "trendingScore": 146.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.828,
+      "signal_parts": {
+        "trending": 0.657,
+        "likes": 1.0,
+        "downloads": 0.772
+      },
+      "decay": 0.05,
+      "age_h": 300.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "FP4",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 2.4k likes, 42.7k downloads, trending score 146, created 2026-10-26",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 2.4k likes, 42.7k downloads, trending score 146, 13 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-4eb4da4f51",
+    "title": "L Coding is the new Vibe Coding",
+    "url": "https://news.ycombinator.com/item?id=50408002",
+    "source": "hn",
+    "published_at": "2026-11-07T20:59:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 9,
+      "signal": 0.223,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.459
+      },
+      "decay": 0.805,
+      "age_h": 15.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "The term &#x27;vibe-coding&#x27;, to some, implies non-seriousness. It implies fickleness. It implies slop.<p>LLM generated code is becoming less sloppy. It is relied upon by serious and real software engineers.<p>I have a proposal for the new terminology.<p>L Code Code generated by an LLM<p>L Coder",
+    "why_now": "Discussed: 1 points, 9 comments on HN, 15 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-307c03cce0",
+    "title": "Show HN: Conductor sold to Meta. Rebuilding the app (3 days, $170) (MIT)",
+    "url": "https://github.com/jahala/conducted/",
+    "source": "hn",
+    "published_at": "2026-11-07T20:51:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.8033,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Meta",
+      "group": "news-react"
+    },
+    "products": [
+      "Meta"
+    ],
+    "summary": "Re: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50369503#50370152\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50369503#50370152</a><p>---<p>Still more to do, and lots of kinks to be worked out, but Conductor 0.92.1’s own frontend can run on this project’s Rust shell and sid",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 15 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-ca23668fd8",
+    "title": "Interleaf: An experimental tool for LLM assisted knowledge exploration",
+    "url": "https://news.ycombinator.com/item?id=50410733",
+    "source": "hn",
+    "published_at": "2026-11-08T05:43:41Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9132,
+      "age_h": 6.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 6 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-d4ee84ab12",
+    "title": "Uncensored LLMs in agent loops: 31 models, 5 tasks, most fail half the time",
+    "url": "https://openuncensored.com/blog/uncensored-models-in-agent-loops",
+    "source": "hn",
+    "published_at": "2026-11-08T01:24:17Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8579,
+      "age_h": 10.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 1 comments on HN, 11 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-82b6e4b7ec",
+    "title": "Show HN: NLP capabilities of Opus, Astra, Argon measured by Codenames skills",
+    "url": "https://wordspies.com/hn",
+    "source": "hn",
+    "published_at": "2026-11-07T21:57:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8162,
+      "age_h": 14.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hello Show HN,<p>I&#x27;m a college student, and I enjoy playing word games like Codenames, but it can be hard sometimes to find enough people to play when everyone is available, so I made an app that allows you to fill any seat with an AI teammate and also play against AI. This way it allows for pe",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-bcb907f4dc",
+    "title": "Analyzing Software Vulnerabilities faster and orders of magnitudes cheaper",
+    "url": "https://news.ycombinator.com/item?id=50412336",
+    "source": "hn",
+    "published_at": "2026-11-08T11:27:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.992,
+      "age_h": 0.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "product:Anthropic",
+      "group": "myth-bust"
+    },
+    "products": [
+      "Anthropic"
+    ],
+    "summary": "Since Anthropic announced Mythos, Software security has came into lime light. Multiple famous products have seen orders of magnitudes of novel attacks that have discovered, which can expose data, corrupt systems or just make the life of Information Security and SRE teams a hell.<p>But an interesting",
+    "why_now": "Broke: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-846a4942dc",
+    "title": "Show HN: stardelt.io - a self-hosted lakehouse on k8s (pre-alpha)",
+    "url": "https://stardelt.io/",
+    "source": "hn",
+    "published_at": "2026-11-08T09:50:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9691,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:self-host",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "I am pretty honest: there are a ton of vibecoded projects around, and I made another one... great huh?<p>I&#x27;m working as a data platform engineer in Germany. My day job is basically spinning up &amp; running lakehouse platforms on US hyperscalers for SMB and some DAX companies. I mean, data engi",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-7d3f63884d",
+    "title": "Is \"GPU-hour per user\" a sane way to price LLM inference?",
+    "url": "https://www.mirastacklabs.ai/",
+    "source": "hn",
+    "published_at": "2026-11-08T04:15:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8941,
+      "age_h": 7.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-ca1322b9a6",
+    "title": "Building trust, an LLM thought experiment",
+    "url": "https://lucaskostka.com/posts/building-trust-llm-thought-experiment",
+    "source": "hn",
+    "published_at": "2026-11-08T01:27:23Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8585,
+      "age_h": 10.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 11 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-60d039a330",
+    "title": "Ask HN: How do you manage your AI agents' context across clients and projects?",
+    "url": "https://news.ycombinator.com/item?id=50403153",
+    "source": "hn",
+    "published_at": "2026-11-07T10:01:48Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.6871,
+      "age_h": 26.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "I work with AI agents every day (coding agents, chat assistants) across several client projects. What costs me the most isn&#x27;t the work itself, it&#x27;s the context: re-explaining past decisions, rules that apply to one client but not another, remembering what an agent did last week and why. An",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 26 h ago",
+    "score": 5
+  }
+]
