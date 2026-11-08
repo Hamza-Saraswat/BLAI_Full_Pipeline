@@ -2,19 +2,19 @@
 slug: 2026-11-08-aivim-a-vim-ai-editor-running
 workspace: shorts
 title: "AIVim on Ollama: a local AI editor"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: sketch
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-08
-updated: "2026-11-08T13:25:00Z"
+updated: "2026-11-08T13:30:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - 03-research ok: 8 claims, 6 key numbers, 8 sources; FireCrawl 402 so keyless tier + web fetch.
 - 04-script ok: worked-example beat news-react 21-18 (kimi-k3 writers + judge); validator 0/0; eval all gates pass (entity_spend advisory); sameness 5 comparisons ok; ledger entry 64; pack sketch.
 - 05-package ok: searchable title picked (search surface, depth 16); rubric 100/100; check_outputs clean after hub link.
+- 2026-11-08T13:30:10Z build start on gn100-83c4
