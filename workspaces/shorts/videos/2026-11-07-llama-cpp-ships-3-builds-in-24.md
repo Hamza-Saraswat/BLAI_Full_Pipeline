@@ -2,14 +2,14 @@
 slug: 2026-11-07-llama-cpp-ships-3-builds-in-24
 workspace: shorts
 title: "llama.cpp update: 3 builds in one hour"
-status: review
+status: expired
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-07
-updated: "2026-11-07T13:34:27Z"
+updated: "2026-11-08T14:35:45Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-07T13:34:30Z 07-render ok 40.07s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 327
 - 2026-11-07T13:34:30Z 07-render ok 797s
 - 2026-11-07T13:34:33Z build done, status review
+- 2026-11-08T14:35:45Z 2026-11-08T14:35:45Z expired: not from today's picks (2026-11-08); the factory carries no backlog
