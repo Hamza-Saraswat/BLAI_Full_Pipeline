@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-08-aivim-a-vim-ai-editor-running
 workspace: shorts
-title: "AIVim: a Vim AI editor running on Ollama"
-status: scripted
+title: "AIVim on Ollama: a local AI editor"
+status: ready-to-build
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: sketch
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-08
-updated: "2026-11-08T13:23:14Z"
+updated: "2026-11-08T13:25:00Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-08-ideas]]
 - Research: [[stages/03-research/output/2026-11-08-aivim-a-vim-ai-editor-running-brief|brief]]
 - Script: [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-script|script]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-storyboard|storyboard]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-drafts|drafts]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-11-08-aivim-a-vim-ai-editor-running-package|package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -38,3 +38,4 @@ blotato_post_id: ""
 ## Build journal
 - 03-research ok: 8 claims, 6 key numbers, 8 sources; FireCrawl 402 so keyless tier + web fetch.
 - 04-script ok: worked-example beat news-react 21-18 (kimi-k3 writers + judge); validator 0/0; eval all gates pass (entity_spend advisory); sameness 5 comparisons ok; ledger entry 64; pack sketch.
+- 05-package ok: searchable title picked (search surface, depth 16); rubric 100/100; check_outputs clean after hub link.
