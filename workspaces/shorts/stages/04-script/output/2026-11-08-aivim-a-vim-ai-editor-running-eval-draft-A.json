@@ -1,12 +1,12 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-08T13:14:33+00:00",
-  "slug": "draft-A",
+  "generated_at": "2026-11-08T13:22:02+00:00",
+  "slug": "draft-A-final",
   "inputs": {
     "storyboard_path": "2026-11-08-aivim-a-vim-ai-editor-running-storyboard-draft-A.json",
     "research_path": "../../03-research/output/2026-11-08-aivim-a-vim-ai-editor-running-brief.json",
     "project_record": null,
-    "ledger_path": "output/script-ledger.json"
+    "ledger_path": "script-ledger.json"
   },
   "research_metrics": {
     "claims_total": 8,
@@ -472,8 +472,8 @@
       "sameness": {
         "checked": true,
         "ok": true,
-        "ledger": "output/script-ledger.json",
-        "comparisons": 0,
+        "ledger": "script-ledger.json",
+        "comparisons": 5,
         "violations": [],
         "advisories": [],
         "reason": null

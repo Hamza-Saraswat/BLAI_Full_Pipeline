@@ -2,14 +2,14 @@
 slug: 2026-11-08-aivim-a-vim-ai-editor-running
 workspace: shorts
 title: "AIVim: a Vim AI editor running on Ollama"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: worked-example
 format: classic
-style_pack: ""
+style_pack: sketch
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-08
-updated: "2026-11-08T12:57:45Z"
+updated: "2026-11-08T13:23:14Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-08-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-08-ideas]]
 - Research: [[stages/03-research/output/2026-11-08-aivim-a-vim-ai-editor-running-brief|brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-script|script]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-storyboard|storyboard]] · [[stages/04-script/output/2026-11-08-aivim-a-vim-ai-editor-running-drafts|drafts]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -36,4 +36,6 @@ blotato_post_id: ""
 - Lane how-to/classic keeps the day off yesterday's lanes (myth-bust, news-react); zero news-react today, so no second OWUI news Short.
 
 ## Build journal
+- 03-research ok: 8 claims, 6 key numbers, 8 sources; FireCrawl 402 so keyless tier + web fetch.
+- 04-script ok: worked-example beat news-react 21-18 (kimi-k3 writers + judge); validator 0/0; eval all gates pass (entity_spend advisory); sameness 5 comparisons ok; ledger entry 64; pack sketch.
 - 2026-11-08T12:57:49Z 03-research ok: 8 claims, 6 key numbers, 8 sources (FireCrawl 402, keyless tier + web fetch). Unattended checkpoint: angle confirmed as picked.
