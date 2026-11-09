@@ -2,14 +2,14 @@
 slug: 2026-11-09-open-webui-v0-13-3-agents-in-a
 workspace: shorts
 title: "Open WebUI v0.13.3: agents in automations"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: news-react-so-what
 format: smooth-explainer
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-09
-updated: "2026-11-09T12:45:21Z"
+updated: "2026-11-09T13:19:17Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-09-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-09-ideas]]
 - Research: [[stages/03-research/output/2026-11-09-open-webui-v0-13-3-agents-in-a-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-script]] · [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-storyboard|storyboard]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,6 +37,9 @@ blotato_post_id: ""
 
 - Research checkpoint (unattended): angle confirmed as picked, slug unchanged, no swap; sources gathered.
 - Brief: 10 sources fetched (4 primary, 6 docs), 9 claims, 7 key numbers, 6 process steps from docs; validator exit 0. Reddit lead excluded from numbers per tier rules.
+
+- Script checkpoints (unattended): structures A how-to-three-moves / B news-react-so-what, both rotation-clear; hooks: 10 scored, picks "tonight" (A) and "situation" (B).
+- Judge: B wins 19-17; graft of A's Open WebUI appositive into B s01. Validator 0 blockers, eval all-pass, variety ok, normalizer clean. Writer A retry: first call hit the 32k token cap on reasoning; one retry with a plan-budget line in the packet succeeded (memory rule applied).
 
 ## Build journal
 

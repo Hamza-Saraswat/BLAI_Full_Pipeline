@@ -1,0 +1,119 @@
+{
+  "slug": "2026-11-09-open-webui-v0-13-3-agents-in-a",
+  "topic": "Open WebUI v0.13.3 agents in automations",
+  "title": "Open WebUI v0.13.3: Your Coding Agent Now Runs on a Schedule",
+  "description": "Open WebUI v0.13.3 lets scheduled automations drive a coding agent in the terminal and folder you choose. Working title; the package stage writes the final description.",
+  "hashtags": [
+    "#openwebui",
+    "#localai",
+    "#codingagent"
+  ],
+  "hook_text": "your coding agent gets a calendar",
+  "hook_candidates": [
+    "Three moves and your coding agent runs on a schedule tonight.",
+    "Open WebUI just handed your coding agent a calendar.",
+    "Your coding agent now runs while you sleep. Here is the setup.",
+    "One hundred fifty-eight thousand stars, and today it got a clock.",
+    "v0.13.3: automations now pick the terminal, folder, and agent.",
+    "You typed every agent run you ever made. Not anymore.",
+    "A scheduled automation can now drive a coding agent in your project folder.",
+    "Your agent waits for you to type. Give it a calendar instead.",
+    "Open WebUI v0.13.3 turns agents into night-shift workers.",
+    "Unattended agent runs, three settings, zero new servers."
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 133.0,
+  "narration_full": "Open WebUI, the self-hosted interface in front of your models, just handed your coding agent a calendar. That is an AI that edits code in a folder by itself. While you sleep, it can run your test suite, change nothing, and report what failed. Yesterday's release notes say it plainly: scheduled prompts can now run coding agents. GitHub shows about one hundred fifty eight thousand stars on the project. All week, the changelog has been turning chat prompts into clock-driven errands. Open WebUI calls that an automation: a saved prompt with a clock on it. The server fires it whether your browser is open or closed. Until now, every agent run started because you sat there typing. Now the run starts itself. You know the old loop: the fix appears in a chat window and dies there. A terminal, one connected workspace with a real folder, lets the agent read and write files. But every tool call waited for your Allow click, with you as full-time bouncer. So what did yesterday actually add? The automation editor now saves the terminal, the working folder and the agent alongside the schedule. On a terminal that offers them, the picker lists Claude Code, Codex and Pi. Before firing, it checks that the terminal and agent are still available. Results land as a real chat, plus a run history marked success or error. Now the honest catch. Unattended runs execute with full tool approval; nobody is there to click Allow. A scheduled prompt is also a thin spec. Treat it like a night-shift junior developer: it only knows what the ticket and the folder say. The docs' own answer: a throwaway folder, and a prompt that says what not to touch. Keep the first errand read-only, just like that test run. Tonight, the setup is short. Connect a terminal under Settings, Admin, Integrations. Or install Tether, the desktop app that ties in your own machine, no ports to open. Create an automation, pick the terminal, the folder and the agent. Set it to daily, hit Run now once, and read the chat it creates. Leave it enabled only when the output is something you can judge in seconds. Do that tonight and tomorrow starts differently. The calendar fires, the agent works, and the failing test is already waiting in a chat.",
+  "analogy": {
+    "vehicle": "A cron job with hands",
+    "mapping": "the schedule is cron, the agent is the hands, the folder is the cage",
+    "limit": "cron runs one fixed command; an agent reads the folder and decides, so it can surprise you"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Open WebUI, the self-hosted interface in front of your models, just handed your coding agent a calendar. That is an AI that edits code in a folder by itself. While you sleep, it can run your test suite, change nothing, and report what failed.",
+      "on_screen_text": "your coding agent gets a calendar",
+      "visual_brief": "Frame 1: a sharp-cornered terminal window centered on black, holding one monospace line \"your coding agent gets a calendar\" with a block cursor. Motion onset 0.35 s: on \"a calendar\" the cursor types a second line \"schedule: daily\". On \"edits code in a folder by itself\" a folder glyph with file icons appears inside the window. On \"change nothing\" a line hard-prints \"files changed: 0\". On \"report what failed\" a red FAIL row prints, hard cut, no fade.",
+      "est_duration_s": 15.2
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Yesterday's release notes say it plainly: scheduled prompts can now run coding agents. GitHub shows about one hundred fifty eight thousand stars on the project. All week, the changelog has been turning chat prompts into clock-driven errands.",
+      "on_screen_text": "v0.13.3 · 2026-11-08 · 158.2k stars",
+      "visual_brief": "A monospace timeline across a black field with square tick marks. First motion at 0.40 s. On \"Yesterday's release notes\" the right tick types \"v0.13.3 2026-11-08\". On \"one hundred fifty eight thousand stars\" a counter under the tick hard-sets to \"158.2k stars\". On \"clock-driven errands\" three small square clock glyphs type in along the line, left to right, then hold.",
+      "est_duration_s": 12.8
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Open WebUI calls that an automation: a saved prompt with a clock on it. The server fires it whether your browser is open or closed. Until now, every agent run started because you sat there typing. Now the run starts itself.",
+      "on_screen_text": "same prompt, now with a clock",
+      "visual_brief": "Split screen with a hard vertical divider, no rounded corners. First motion at 0.40 s. On \"a saved prompt with a clock on it\" the same typed prompt appears in both panes, and the right pane gains a square clock glyph. On \"whether your browser is open or closed\" the left browser frame cuts to black while the right prints \"run started\". On \"you sat there typing\" the left cursor blinks idle. On \"starts itself\" the right pane types new chat lines with no cursor present.",
+      "est_duration_s": 14.1
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "You know the old loop: the fix appears in a chat window and dies there. A terminal, one connected workspace with a real folder, lets the agent read and write files. But every tool call waited for your Allow click, with you as full-time bouncer.",
+      "on_screen_text": "chat talks; a terminal touches files",
+      "visual_brief": "Manim diagram, monospace labels, square-cornered boxes on black. First motion at 0.40 s. On \"the fix appears in a chat window\" a box labeled CHAT fills with text lines, then greys out on \"dies there\". On \"one connected workspace with a real folder\" a TERMINAL box appears with a folder node, and straight arrows draw from CHAT to TERMINAL to the folder on \"read and write files\". On \"Allow click\" a small ALLOW button flashes between the boxes; on \"full-time bouncer\" it turns into a barrier glyph.",
+      "est_duration_s": 15.5
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "So what did yesterday actually add? The automation editor now saves the terminal, the working folder and the agent alongside the schedule. On a terminal that offers them, the picker lists Claude Code, Codex and Pi. Before firing, it checks that the terminal and agent are still available. Results land as a real chat, plus a run history marked success or error.",
+      "on_screen_text": "terminal + folder + agent, saved with schedule",
+      "visual_brief": "A grid of four sharp-cornered tiles: TERMINAL, FOLDER, AGENT, SCHEDULE. First motion at 0.40 s. On \"saves the terminal, the working folder and the agent\" the first three tiles highlight in sequence and straight lines pull them into SCHEDULE. On \"Claude Code, Codex and Pi\" the AGENT tile types the three names as rows. On \"checks that the terminal and agent are still available\" a preflight line types \"terminal: ok\" then \"agent: ok\". On \"success or error\" a run-history list prints two rows tagged SUCCESS and ERROR.",
+      "est_duration_s": 21.4
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Now the honest catch. Unattended runs execute with full tool approval; nobody is there to click Allow. A scheduled prompt is also a thin spec. Treat it like a night-shift junior developer: it only knows what the ticket and the folder say. The docs' own answer: a throwaway folder, and a prompt that says what not to touch. Keep the first errand read-only, just like that test run.",
+      "on_screen_text": "full tool approval, nobody clicks Allow",
+      "visual_brief": "One centered sharp-cornered terminal window. First motion at 0.40 s. On \"full tool approval\" the window types \"approval: FULL\" and the ALLOW button from the earlier scene appears greyed with a straight strike. On \"thin spec\" a one-line prompt sits beside a tall file tree. On \"night-shift junior developer\" a card types \"ticket in, code out, nothing carried overnight\". On \"a throwaway folder\" a line types \"workspace: /tmp/scratch\". On \"what not to touch\" the prompt appends \"DO NOT TOUCH src/\". On \"read-only\" it appends \"run tests, change nothing\".",
+      "est_duration_s": 23.4
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Tonight, the setup is short. Connect a terminal under Settings, Admin, Integrations. Or install Tether, the desktop app that ties in your own machine, no ports to open. Create an automation, pick the terminal, the folder and the agent. Set it to daily, hit Run now once, and read the chat it creates. Leave it enabled only when the output is something you can judge in seconds.",
+      "on_screen_text": "connect, create, run now, read the chat",
+      "visual_brief": "A vertical flow of four square nodes joined by straight lines, typewriter labels. First motion at 0.40 s. On \"Connect a terminal\" the node types \"Settings > Admin > Integrations\" and the URL \"http://localhost:\\\" breaks to \"8000\" with a backslash. On \"install Tether\" a side tag prints \"or: Tether app -- no ports\". On \"Create an automation\" the node types \"User Menu > Automations > New\". On \"daily, hit Run now\" the next node types \"Daily 09:00\" beside a RUN NOW keycap. On \"read the chat it creates\" the last node shows a transcript line \"FAIL: test_login\".",
+      "est_duration_s": 23.1
+    },
+    {
+      "id": "s08",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Do that tonight and tomorrow starts differently. The calendar fires, the agent works, and the failing test is already waiting in a chat.",
+      "on_screen_text": "tomorrow, the failure is already named",
+      "visual_brief": "A centered sharp-cornered terminal window on black, opening on a square clock glyph reading 09:00. First motion at 0.45 s: on \"The calendar fires\" the clock hand snaps and a fresh chat types line by line, \"ran test suite\", \"changed no files\", \"1 failing test -- error output attached\". On \"already waiting in a chat\" the typing stops and the block cursor blinks twice, then the frame holds static for the outro. No fade.",
+      "est_duration_s": 7.9
+    }
+  ],
+  "notes_for_review": "Graft applied per judge: A's appositive definition of Open WebUI in s01. All other text is writer B's blind output."
+}

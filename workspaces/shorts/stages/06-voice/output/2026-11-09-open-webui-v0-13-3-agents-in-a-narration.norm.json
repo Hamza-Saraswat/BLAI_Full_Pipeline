@@ -1,0 +1,55 @@
+{
+  "full": "Open WebUI, the self-hosted interface in front of your models, just handed your coding agent a calendar. That is an AI that edits code in a folder by itself. While you sleep, it can run your test suite, change nothing, and report what failed. Yesterday's release notes say it plainly: scheduled prompts can now run coding agents. GitHub shows about one hundred fifty eight thousand stars on the project. All week, the changelog has been turning chat prompts into clock-driven errands. Open WebUI calls that an automation: a saved prompt with a clock on it. The server fires it whether your browser is open or closed. Until now, every agent run started because you sat there typing. Now the run starts itself. You know the old loop: the fix appears in a chat window and dies there. A terminal, one connected workspace with a real folder, lets the agent read and write files. But every tool call waited for your Allow click, with you as full-time bouncer. So what did yesterday actually add? The automation editor now saves the terminal, the working folder and the agent alongside the schedule. On a terminal that offers them, the picker lists Claude Code, Codex and Pi. Before firing, it checks that the terminal and agent are still available. Results land as a real chat, plus a run history marked success or error. Now the honest catch. Unattended runs execute with full tool approval; nobody is there to click Allow. A scheduled prompt is also a thin spec. Treat it like a night-shift junior developer: it only knows what the ticket and the folder say. The docs' own answer: a throwaway folder, and a prompt that says what not to touch. Keep the first errand read-only, just like that test run. Tonight, the setup is short. Connect a terminal under Settings, Admin, Integrations. Or install Tether, the desktop app that ties in your own machine, no ports to open. Create an automation, pick the terminal, the folder and the agent. Set it to daily, hit Run now once, and read the chat it creates. Leave it enabled only when the output is something you can judge in seconds. Do that tonight and tomorrow starts differently. The calendar fires, the agent works, and the failing test is already waiting in a chat.",
+  "words": 387,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Open WebUI, the self-hosted interface in front of your models, just handed your coding agent a calendar. That is an AI that edits code in a folder by itself. While you sleep, it can run your test suite, change nothing, and report what failed.",
+      "words": 44,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Yesterday's release notes say it plainly: scheduled prompts can now run coding agents. GitHub shows about one hundred fifty eight thousand stars on the project. All week, the changelog has been turning chat prompts into clock-driven errands.",
+      "words": 37,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Open WebUI calls that an automation: a saved prompt with a clock on it. The server fires it whether your browser is open or closed. Until now, every agent run started because you sat there typing. Now the run starts itself.",
+      "words": 41,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "You know the old loop: the fix appears in a chat window and dies there. A terminal, one connected workspace with a real folder, lets the agent read and write files. But every tool call waited for your Allow click, with you as full-time bouncer.",
+      "words": 45,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "So what did yesterday actually add? The automation editor now saves the terminal, the working folder and the agent alongside the schedule. On a terminal that offers them, the picker lists Claude Code, Codex and Pi. Before firing, it checks that the terminal and agent are still available. Results land as a real chat, plus a run history marked success or error.",
+      "words": 62,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "Now the honest catch. Unattended runs execute with full tool approval; nobody is there to click Allow. A scheduled prompt is also a thin spec. Treat it like a night-shift junior developer: it only knows what the ticket and the folder say. The docs' own answer: a throwaway folder, and a prompt that says what not to touch. Keep the first errand read-only, just like that test run.",
+      "words": 68,
+      "changed": false
+    },
+    {
+      "id": "s07",
+      "text": "Tonight, the setup is short. Connect a terminal under Settings, Admin, Integrations. Or install Tether, the desktop app that ties in your own machine, no ports to open. Create an automation, pick the terminal, the folder and the agent. Set it to daily, hit Run now once, and read the chat it creates. Leave it enabled only when the output is something you can judge in seconds.",
+      "words": 67,
+      "changed": false
+    },
+    {
+      "id": "s08",
+      "text": "Do that tonight and tomorrow starts differently. The calendar fires, the agent works, and the failing test is already waiting in a chat.",
+      "words": 23,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
