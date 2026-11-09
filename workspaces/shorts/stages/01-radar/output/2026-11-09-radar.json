@@ -1,0 +1,906 @@
+[
+  {
+    "id": "github-5f1c02eab6",
+    "title": "open-webui v0.13.3",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.3",
+    "source": "github",
+    "published_at": "2026-11-08T23:48:24Z",
+    "signals": {
+      "repo": "open-webui/open-webui",
+      "tag": "v0.13.3",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.8384,
+      "age_h": 12.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Open WebUI",
+      "group": "how-to"
+    },
+    "products": [
+      "Open WebUI"
+    ],
+    "summary": "### Added - 🦾 **Agents in automations.** The automation editor now lets you choose a terminal and working folder, then select a coding agent available there. Scheduled runs use that saved terminal and folder, and check that the terminal and agent are still available before starting. Agent automation",
+    "why_now": "Shipped: open-webui/open-webui v0.13.3 released, 12 h ago",
+    "score": 65
+  },
+  {
+    "id": "hn-285f830566",
+    "title": "Show HN: Flide: Make Jev-like decision models up to 9.5x faster",
+    "url": "https://github.com/OmniJev/Flide",
+    "source": "hn",
+    "published_at": "2026-11-09T04:43:12Z",
+    "signals": {
+      "points": 51,
+      "num_comments": 10,
+      "signal": 0.628,
+      "signal_parts": {
+        "points": 0.692,
+        "comments": 0.478
+      },
+      "decay": 0.9,
+      "age_h": 7.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "SGLang"
+    ],
+    "summary": "Decision models need their own inference engine.<p>So we developed Flide, a high-performance and exact inference engine for Jev-like decision models.<p>Flide achieves up to a 9.5x speedup over vLLM and SGLang.<p>It now supports 30+ popular local Jev-like decision models.<p>Start to make your decisio",
+    "why_now": "Shipped: 51 points, 10 comments on HN, 7 h ago",
+    "score": 63
+  },
+  {
+    "id": "github-fcbe6a2149",
+    "title": "llama.cpp b12220",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12220",
+    "source": "github",
+    "published_at": "2026-11-09T12:00:55Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12220",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 1.0,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> metal : make ggml_tri select instead of scaling by the comparison (#30711) * metal: make ggml_tri select instead of scaling by the comparison The kernel multiplied by the 0/1 comparison, which turns a +-inf outside the triangle into NaN, while the CPU kernel writes a plain zero there.",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12220 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-54ebcd727b",
+    "title": "llama.cpp b12219",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12219",
+    "source": "github",
+    "published_at": "2026-11-09T11:42:26Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12219",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9956,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> opencl : include climits (#31935) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/65327769> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12219/llama-b12219-",
+    "why_now": "Shipped: ggml-org/llama.cpp b12219 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-ad8a1276ae",
+    "title": "llama.cpp b12212",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12212",
+    "source": "github",
+    "published_at": "2026-11-09T08:49:08Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12212",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9549,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> ggml-zdnn: fix release binary not detecting backend lib (#31905) Signed-off-by: Aaron Teo <aaron.teo1@ibm.com> </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/65269046> **macOS/iOS:** - [macOS Apple Silicon (arm64)]",
+    "why_now": "Shipped: ggml-org/llama.cpp b12212 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "hf-233409616a",
+    "title": "tencent/Qwen3.8-27B-DSpine-b16",
+    "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+    "source": "hf",
+    "published_at": "2026-11-07T14:20:29Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 126,
+      "downloads": 1464,
+      "trendingScore": 125.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.669,
+      "signal_parts": {
+        "trending": 0.636,
+        "likes": 0.701,
+        "downloads": 0.528
+      },
+      "decay": 0.5171,
+      "age_h": 45.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hn"
+      ],
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 126 likes, 1.5k downloads, trending score 125, created 2026-11-07",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 126 likes, 1.5k downloads, trending score 125, 46 h ago",
+    "score": 46
+  },
+  {
+    "id": "hn-d515f1fe1a",
+    "title": "Can DeepSeek Challenge OpenAI, Anthropic in AI Agents",
+    "url": "https://www.scmp.com/tech/big-tech/article/3373757/can-deepseek-challenge-openai-anthropic-ai-agents-harness-adoption-takes",
+    "source": "hn",
+    "published_at": "2026-11-09T11:07:48Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9873,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "OpenAI",
+      "Anthropic"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 1 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-ca0643c842",
+    "title": "Claude Opus 5.5 Beats GPT-6 Astra in the Newest EDA Benchmark Leaderboard",
+    "url": "https://deepsense.ai/blog/eda-benchmark-leaderboard-october-28th-2026/",
+    "source": "hn",
+    "published_at": "2026-11-09T08:50:59Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9553,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Claude",
+      "group": "comparison"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 3 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-8f33aca4cd",
+    "title": "DeepSeek Harness: Growing Together with Our Plugin Community",
+    "url": "https://twitter.com/DeepSeekHarness/status/2119431663642153128",
+    "source": "hn",
+    "published_at": "2026-11-08T15:19:16Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7417,
+      "age_h": 20.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-396c217a9a",
+    "title": "Show HN: Cross-device passkey auth on Android 9, synced with Bitwarden",
+    "url": "https://rsnel.github.io/passkeychain/",
+    "source": "hn",
+    "published_at": "2026-11-08T14:16:27Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7306,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I saw a colleague log in to a website on my laptop by scanning a FIDO QR code. I wanted to do the same, but couldn&#x27;t find a way to use the passkeys stored in Bitwarden on my phone to log in.<p>So I asked Claude to build me an app. Claude found the task too daunting and only wanted to create a s",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 22 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-99e5dc75b2",
+    "title": "Show HN: Dependency free RSS reader (vibecoded with DeepSeek)",
+    "url": "https://github.com/bipinKrishnan/rss_feed",
+    "source": "hn",
+    "published_at": "2026-11-09T07:16:05Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9338,
+      "age_h": 4.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 5 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-7d644b9dae",
+    "title": "Tricking DeepSeek into Not Hacking Your Website",
+    "url": "https://utkusen.substack.com/p/tricking-deepseek-into-not-hacking",
+    "source": "hn",
+    "published_at": "2026-11-08T17:51:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7693,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-f0d0fdbb93",
+    "title": "Show HN: Control Layer Demo for AI Coding Agents",
+    "url": "https://github.com/MintCoderpro/mintigate-demo",
+    "source": "hn",
+    "published_at": "2026-11-09T08:43:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9537,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Letting coding agents (such as Claude Code) work autonomously on repos on a daily-basis, brings a high level of uncertainty. For those who won&#x27;t let the agent decide alone whether it can create&#x2F;modify or delete any folder on their repos; I wanted to be able to trace actions performed and b",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-a7db672d27",
+    "title": "Show HN: LLM-cost-watch - Ask Claude why your LLM bill jumped",
+    "url": "https://github.com/rohith0707/llm-cost-watch",
+    "source": "hn",
+    "published_at": "2026-11-08T18:39:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7783,
+      "age_h": 17.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "explainer"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-4790b9b566",
+    "title": "Scantist/GLM-5.3-SLIM-GGUF",
+    "url": "https://huggingface.co/Scantist/GLM-5.3-SLIM-GGUF",
+    "source": "hf",
+    "published_at": "2026-11-02T13:11:14Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 1293,
+      "downloads": 7884,
+      "trendingScore": 183.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.843,
+      "signal_parts": {
+        "trending": 0.686,
+        "likes": 1.0,
+        "downloads": 0.649
+      },
+      "decay": 0.0899,
+      "age_h": 166.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GLM",
+      "group": "how-to"
+    },
+    "products": [
+      "GLM",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 1.3k likes, 7.9k downloads, trending score 183, created 2026-11-02",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 1.3k likes, 7.9k downloads, trending score 183, 7 d ago",
+    "score": 21
+  },
+  {
+    "id": "hn-ec873a0ef6",
+    "title": "Canada's AI translation tool keeps making hilarious mistakes",
+    "url": "https://www.blogto.com/tech/2026/11/canada-ai-translation-tool-making-mistakes/",
+    "source": "hn",
+    "published_at": "2026-11-08T18:52:42Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.7808,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 0 comments on HN, 17 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-651b3b17c7",
+    "title": "Pay per pre-configured GPU hour or per token for open-source LLM inference?",
+    "url": "https://news.ycombinator.com/item?id=50420874",
+    "source": "hn",
+    "published_at": "2026-11-09T03:52:55Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8892,
+      "age_h": 8.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Is it worth paying for a pre-configured GPU for open-source LLM inference instead of using a traditional pay-per-token provider? The biggest advantage seems to be having no usage limits",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 8 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-307fbb10a0",
+    "title": "Show HN: Velork - Design and Code, Together",
+    "url": "https://velork.com",
+    "source": "hn",
+    "published_at": "2026-11-08T15:31:19Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 6,
+      "signal": 0.201,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.388
+      },
+      "decay": 0.7439,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! :)<p>I’ve been working as a fullstack freelancer for over 4 years now. I always wanted some kind of IDE where I could take designs, turn them into code, and not be restricted to using auto layout and all that stuff.<p>Back at the beginning of 2020, before LLMs and AI were a thing, I was sitti",
+    "why_now": "Shipped: 1 points, 6 comments on HN, 20 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-5aa2811f45",
+    "title": "Hours of YouTube and 85 handtyped pages of notes on LLM Inference - Start here",
+    "url": "https://github.com/samir-sarwar/samir-vllm",
+    "source": "hn",
+    "published_at": "2026-11-09T11:36:55Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9943,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 0 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-14bf5e0f88",
+    "title": "Show HN: My first project, an AI-powered financial news analyzer",
+    "url": "https://github.com/lamarcol/NotBot",
+    "source": "hn",
+    "published_at": "2026-11-08T22:34:06Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8235,
+      "age_h": 13.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;m 17, and I started NotBot a few months ago to see whether I could turn an idea into a working project. My main interest is economics, not becoming a programmer, but I enjoy experimenting with code.<p>A few months ago, I had the idea of creating a program that would analyze the most recent ne",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 13 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-0a63c0e181",
+    "title": "I made an open-web protocol for local LLM storage sharing",
+    "url": "https://joshuadd79.github.io/bring-your-own-brain/",
+    "source": "hn",
+    "published_at": "2026-11-08T14:38:57Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7345,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-7e2d3dbc4f",
+    "title": "Show HN: Lipwise",
+    "url": "https://getlipwise.com/",
+    "source": "hn",
+    "published_at": "2026-11-08T14:19:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.731,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, my name is Nenad, my longer text submission with more information got flagged even though I wrote it, I guess I fail the touring test. Anyway, Lipwise is a narration app with an LLM in the pipeline capable of fixing mistakes and doing transformations, and the best thing is even with a medioc",
+    "why_now": "Broke: 2 points, 0 comments on HN, 22 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-04dc18b5ed",
+    "title": "Ava - On-device 1.2B LLM WhatsApp sales agent on Android ($0 cost)",
+    "url": "https://play.google.com/store/apps/details?id=com.dyagnosys.ava&hl=en_US",
+    "source": "hn",
+    "published_at": "2026-11-09T11:07:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9873,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-9866e80629",
+    "title": "Asset flips and vibes: fifteen years of videogames as a preview of the LLM era",
+    "url": "https://www.hypertesto.me/en/blog/2026/10/asset-flips-and-vibes",
+    "source": "hn",
+    "published_at": "2026-11-09T09:01:40Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9578,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-4b99de59e9",
+    "title": "Asahi Linux forbids using AI to contribute",
+    "url": "https://asahilinux.org/llm-policy/",
+    "source": "hn",
+    "published_at": "2026-11-09T07:36:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9384,
+      "age_h": 4.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-9928173748",
+    "title": "Agents don't suggest the use of LLMs for problems where they should",
+    "url": "https://arbustoemchamas.substack.com/p/i-naively-tried-vibe-coding-a-memory",
+    "source": "hn",
+    "published_at": "2026-11-09T01:37:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8608,
+      "age_h": 10.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 10 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-29baad7152",
+    "title": "Offline context-aware dictation without screenshots, LLMs or fine-tuning",
+    "url": "https://morethanamachine.com/posts/handy-context/",
+    "source": "hn",
+    "published_at": "2026-11-08T20:47:19Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8026,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:fine-tun",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-2f5f207f35",
+    "title": "What Should We Learn? What LLMs Taught Me: Understanding Isn't Producing",
+    "url": "https://dennysora.me/en/thoughts/what-should-we-learn-in-the-ai-era/",
+    "source": "hn",
+    "published_at": "2026-11-08T18:25:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7758,
+      "age_h": 17.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-b4d80c5677",
+    "title": "High level API for local LLMs in Node",
+    "url": "https://github.com/CREATORS-INDUSTRIES/llm",
+    "source": "hn",
+    "published_at": "2026-11-08T12:42:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7143,
+      "age_h": 23.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-90979e534f",
+    "title": "Show HN: aiport - A self-improving local LLM gateway for the erratic vibe coder",
+    "url": "https://github.com/harelix/aiport",
+    "source": "hn",
+    "published_at": "2026-11-08T11:44:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7043,
+      "age_h": 24.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 24 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-73e8678c87",
+    "title": "sensenova/SenseNova-Loop-9B-Preview",
+    "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+    "source": "hf",
+    "published_at": "2026-10-28T15:34:40Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 282,
+      "downloads": 3870,
+      "trendingScore": 115.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.721,
+      "signal_parts": {
+        "trending": 0.625,
+        "likes": 0.817,
+        "downloads": 0.598
+      },
+      "decay": 0.05,
+      "age_h": 284.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 282 likes, 3.9k downloads, trending score 115, created 2026-10-28",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 282 likes, 3.9k downloads, trending score 115, 12 d ago",
+    "score": 3
+  }
+]
