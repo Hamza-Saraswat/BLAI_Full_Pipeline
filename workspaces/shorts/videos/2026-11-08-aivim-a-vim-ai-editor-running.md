@@ -2,14 +2,14 @@
 slug: 2026-11-08-aivim-a-vim-ai-editor-running
 workspace: shorts
 title: "AIVim on Ollama: a local AI editor"
-status: review
+status: expired
 pillar: how-to
 structure: worked-example
 format: classic
 style_pack: sketch
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-08
-updated: "2026-11-08T13:43:05Z"
+updated: "2026-11-09T14:35:19Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-08T13:43:09Z 07-render ok 40.97s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 330
 - 2026-11-08T13:43:09Z 07-render ok 715s
 - 2026-11-08T13:43:11Z build done, status review
+- 2026-11-09T14:35:19Z 2026-11-09T14:35:19Z expired: not from today's picks (2026-11-09); the factory carries no backlog

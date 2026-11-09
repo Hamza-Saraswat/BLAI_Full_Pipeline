@@ -2,14 +2,14 @@
 slug: 2026-11-08-tokirecur-stop-paying-llama-cp
 workspace: shorts
 title: "TokiRecur: stop paying llama.cpp's KV-cache prefill tax"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-08
-updated: "2026-11-08T12:11:22Z"
+updated: "2026-11-09T14:35:19Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - smooth-explainer band: the KV-cache-as-tax mechanism needs a worked example carried the whole way; fits the selection rules' band table.
 
 ## Build journal
-
+- 2026-11-09T14:35:19Z 2026-11-09T14:35:19Z expired: not from today's picks (2026-11-09); the factory carries no backlog
