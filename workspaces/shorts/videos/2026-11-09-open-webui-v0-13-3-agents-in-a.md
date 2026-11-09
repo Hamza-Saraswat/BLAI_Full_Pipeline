@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-09-open-webui-v0-13-3-agents-in-a
 workspace: shorts
-title: "Open WebUI v0.13.3: agents in automations"
-status: scripted
+title: "Open WebUI: schedule a coding agent"
+status: ready-to-build
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-09
-updated: "2026-11-09T13:19:17Z"
+updated: "2026-11-09T13:21:19Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-09-ideas]]
 - Research: [[stages/03-research/output/2026-11-09-open-webui-v0-13-3-agents-in-a-brief]]
 - Script: [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-script]] · [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-storyboard|storyboard]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-09-open-webui-v0-13-3-agents-in-a-package]]
+- Voice: [[stages/06-voice/output/2026-11-09-open-webui-v0-13-3-agents-in-a-narration|narration.txt]] (normalized in stage 04; stage 06 itself not run)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -40,6 +40,9 @@ blotato_post_id: ""
 
 - Script checkpoints (unattended): structures A how-to-three-moves / B news-react-so-what, both rotation-clear; hooks: 10 scored, picks "tonight" (A) and "situation" (B).
 - Judge: B wins 19-17; graft of A's Open WebUI appositive into B s01. Validator 0 blockers, eval all-pass, variety ok, normalizer clean. Writer A retry: first call hit the 32k token cap on reasoning; one retry with a plan-budget line in the packet succeeded (memory rule applied).
+
+- Package checkpoint (unattended): title 1 (searchable) chosen -- "open webui self hosted" depth 21 search surface, zero published Open WebUI titles; description leads keyword+promise; rubric 100/100.
+- Audit: check_outputs initially flagged Package+Voice hub links; both filled (voice link points at the stage-04 normalized narration sidecar, stage 06 not run). Limits verified in code: title 35 chars keyword first, desc 609 bytes, 3 hashtags, 12 tags 191 chars, no duplicate title vs published/.
 
 ## Build journal
 
