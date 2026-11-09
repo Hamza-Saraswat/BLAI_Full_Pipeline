@@ -2,19 +2,19 @@
 slug: 2026-11-09-open-webui-v0-13-3-agents-in-a
 workspace: shorts
 title: "Open WebUI: schedule a coding agent"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-09
-updated: "2026-11-09T13:21:19Z"
+updated: "2026-11-09T13:24:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,4 +45,4 @@ blotato_post_id: ""
 - Audit: check_outputs initially flagged Package+Voice hub links; both filled (voice link points at the stage-04 normalized narration sidecar, stage 06 not run). Limits verified in code: title 35 chars keyword first, desc 609 bytes, 3 hashtags, 12 tags 191 chars, no duplicate title vs published/.
 
 ## Build journal
-
+- 2026-11-09T13:24:10Z build start on gn100-83c4
