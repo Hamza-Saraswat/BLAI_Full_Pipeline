@@ -2,14 +2,14 @@
 slug: 2026-11-09-open-webui-v0-13-3-agents-in-a
 workspace: shorts
 title: "Open WebUI: schedule a coding agent"
-status: building
+status: review
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-09
-updated: "2026-11-09T13:24:10Z"
+updated: "2026-11-09T13:54:53Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-script]] · [[stages/04-script/output/2026-11-09-open-webui-v0-13-3-agents-in-a-storyboard|storyboard]]
 - Package: [[stages/05-package/output/2026-11-09-open-webui-v0-13-3-agents-in-a-package]]
 - Voice: [[stages/06-voice/output/2026-11-09-open-webui-v0-13-3-agents-in-a-narration|narration.txt]] (normalized in stage 04; stage 06 itself not run)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-09-open-webui-v0-13-3-agents-in-a-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-09T13:24:10Z build start on gn100-83c4
 - 2026-11-09T13:26:41Z 06-voice ok 149s
+- 2026-11-09T13:54:56Z 07-render ok 115.97s: 8 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 334
+- 2026-11-09T13:54:56Z 07-render ok 1692s
