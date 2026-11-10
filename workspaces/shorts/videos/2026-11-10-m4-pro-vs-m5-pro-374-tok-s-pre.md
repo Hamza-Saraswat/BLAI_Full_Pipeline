@@ -2,19 +2,19 @@
 slug: 2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre
 workspace: shorts
 title: "M5 Pro vs M4 Pro: 374 tok/s prefill explained"
-status: ready-to-build
+status: building
 pillar: comparison
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-10
-updated: "2026-11-10T13:12:28Z"
+updated: "2026-11-10T13:13:10Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-10T13:13:10Z build start on gn100-83c4
 
 ## Decisions
 - Picked: comparison lane, classic band, opportunity 65.4 (only candidate above 60; rotation exception applies, no other candidate scored above 60).
