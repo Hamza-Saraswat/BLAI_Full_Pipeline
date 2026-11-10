@@ -1,0 +1,116 @@
+{
+  "slug": "2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre",
+  "topic": "M4 Pro vs M5 Pro MacBook local LLM inference: MoEShift 374 tok/s prefill",
+  "title": "374 tok/s Prefill on M5 Pro: A First-Word Upgrade",
+  "description": "MoEShift's author benchmarked the same 125B MoE model on 24 GB M4 Pro and M5 Pro MacBooks: prefill ran 199 versus 374 tok/s, while decode reached only 13.14 tok/s.",
+  "hashtags": [
+    "#shorts",
+    "#AppleSilicon",
+    "#LocalLLM",
+    "#MacBookPro"
+  ],
+  "hook_text": "374 tok/s. None is the answer.",
+  "hook_candidates": [
+    "M4 Pro or M5 Pro? One number decides.",
+    "Three hundred seventy four tokens a second, and not one is the answer.",
+    "Your Mac reads the prompt fast. Writing the answer is the slow part.",
+    "A 125 billion parameter model on a 24 GB Mac, at 8.5 GB of RAM.",
+    "Same model, same quant, same memory. Double the speed.",
+    "The new MacBook's SSD just doubled your prefill.",
+    "199 versus 374. The chip didn't get twice as fast.",
+    "You paste a long document. The cursor blinks. That's prefill.",
+    "The wait before the first word is the benchmark nobody runs.",
+    "Faster storage, not a faster GPU, moved this number."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "number-first",
+  "value_types": "TEACHES,PROVES",
+  "target_duration_s": 32,
+  "narration_full": "Three hundred seventy four tokens a second. None of them is the answer. Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it. MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second. His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs. Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
+  "analogy": {
+    "vehicle": "",
+    "mapping": "",
+    "limit": ""
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "renderer": "manim",
+      "role": "hook",
+      "tool": "manim",
+      "narration": "Three hundred seventy four tokens a second. None of them is the answer.",
+      "on_screen_text": "374 tok/s, all prefill",
+      "visual_brief": "Frame 1: giant digits '374 tok/s' centered on dark silicon background, fully legible; on 'and not one', caption 'all prefill, no answer' fades in below; scale-settle of the digits within 0.5 s, first and last 8 frames stable.",
+      "est_duration_s": 4.5,
+      "layout_archetype": "giant-number"
+    },
+    {
+      "id": "s02",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it.",
+      "on_screen_text": "Prefill: the wait before word one",
+      "visual_brief": "On 'reads your whole prompt', a long document fades in with a pulsing caret at its end; on 'blinking cursor' the caption fades in beneath it.",
+      "est_duration_s": 6.9,
+      "layout_archetype": "diagram-flow"
+    },
+    {
+      "id": "s03",
+      "renderer": "manim",
+      "role": "explain",
+      "tool": "manim",
+      "narration": "MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second.",
+      "on_screen_text": "M4 Pro: 199 tok/s prefill",
+      "visual_brief": "On 'one hundred ninety nine', a single bar rises in place labeled '199 tok/s' under an 'M4 Pro' tag, sitting short against conspicuous empty headroom.",
+      "est_duration_s": 7.2,
+      "layout_archetype": "split-compare"
+    },
+    {
+      "id": "s04",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs.",
+      "on_screen_text": "307 vs 273 GB/s",
+      "visual_brief": "On 'streaming in the experts', an SSD icon fades in at left and small blocks labeled 'experts' drift from it toward a RAM pool icon at right; a dimmed 'GPU' label stays static.",
+      "est_duration_s": 6.9,
+      "layout_archetype": "diagram-flow"
+    },
+    {
+      "id": "s05",
+      "renderer": "hyperframes",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "narration": "Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
+      "on_screen_text": "Decode: 13.14 tok/s",
+      "visual_brief": "On 'thirteen point one four' the decode number card fades in; on 'A first-word upgrade' a hard cut swaps to a plain card reading 'A first-word upgrade, not a chat-speed upgrade', held static to the end.",
+      "est_duration_s": 6.9,
+      "layout_archetype": "centered-stack"
+    }
+  ],
+  "notes_for_review": "Check that prefill/decode labels stay attached to all three spoken tok/s numbers, that every benchmark is framed as the author's own run, and that no number beyond 374, 199, and 13.14 is spoken.",
+  "tags": [
+    "m5 pro",
+    "m4 pro",
+    "macbook pro",
+    "local llm",
+    "moeshift",
+    "qwen 3.8 flash next",
+    "apple silicon",
+    "local ai",
+    "llama.cpp",
+    "lm studio",
+    "prefill speed",
+    "tokens per second",
+    "moe model",
+    "expert streaming",
+    "unified memory",
+    "mac mini",
+    "ai benchmark",
+    "on-device ai",
+    "run llm locally"
+  ]
+}

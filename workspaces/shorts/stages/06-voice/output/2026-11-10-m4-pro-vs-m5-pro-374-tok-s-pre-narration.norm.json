@@ -1,0 +1,37 @@
+{
+  "full": "Three hundred seventy four tokens a second. None of them is the answer. Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it. MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second. His explanation: not the GPU, not even memory bandwidth, but a faster S S D streaming in the experts each token needs. Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
+  "words": 96,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Three hundred seventy four tokens a second. None of them is the answer.",
+      "words": 13,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it.",
+      "words": 20,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second.",
+      "words": 21,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "His explanation: not the GPU, not even memory bandwidth, but a faster S S D streaming in the experts each token needs.",
+      "words": 22,
+      "changed": true
+    },
+    {
+      "id": "s05",
+      "text": "Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
+      "words": 20,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
