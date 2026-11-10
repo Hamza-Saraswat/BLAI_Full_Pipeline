@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-10T12:59:54+00:00",
+  "generated_at": "2026-11-10T13:02:41+00:00",
   "slug": "draft-B",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-storyboard-draft-B.json",
@@ -36,9 +36,9 @@
   "board_metrics": {
     "number_spend": {
       "total": 9,
-      "spent": 3,
-      "distinct": 3,
-      "score": 0.333,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.444,
       "detail": [
         {
           "label": "M5 Pro long-prompt prefill (6,060 input tokens, Qwen 3.8 Flash Next IQ3 XXS, 24GB)",
@@ -113,10 +113,12 @@
         {
           "label": "M4 Pro memory bandwidth",
           "value": "273GB/s",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "273 GB/s",
+          "scene_ids": [
+            "s04"
+          ]
         }
       ]
     },
@@ -304,8 +306,8 @@
     },
     "scene_specificity": {
       "total": 5,
-      "specific_count": 3,
-      "ratio": 0.6,
+      "specific_count": 4,
+      "ratio": 0.8,
       "scenes": [
         {
           "id": "s01",
@@ -340,8 +342,10 @@
           "id": "s04",
           "role": "explain",
           "est_duration_s": 6.9,
-          "specific": false,
-          "hits": [],
+          "specific": true,
+          "hits": [
+            "num:273GB/s"
+          ],
           "narration": "His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs."
         },
         {
@@ -364,7 +368,7 @@
       "vo_band_ok": true
     },
     "narration_full": "Three hundred seventy four tokens a second. None of them is the answer. Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it. MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second. His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs. Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
-    "on_screen": "374 tok/s. None is the answer. | 374 tok/s, all prefill | Prefill: the wait before word one | M4 Pro: 199 tok/s prefill | Author's claim: SSD, not GPU | Decode: 13.14 tok/s"
+    "on_screen": "374 tok/s. None is the answer. | 374 tok/s, all prefill | Prefill: the wait before word one | M4 Pro: 199 tok/s prefill | 307 vs 273 GB/s | Decode: 13.14 tok/s"
   },
   "validators": {
     "storyboard": {
@@ -440,18 +444,16 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "scene_specificity"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
     ],
     "detail": {
       "number_spend": {
-        "spent": 3,
-        "heard": 3,
+        "spent": 4,
+        "heard": 4,
         "total": 9,
         "need": 2,
         "min": 2,
@@ -479,7 +481,7 @@
         ]
       },
       "scene_specificity": {
-        "specific": 3,
+        "specific": 4,
         "need": 4,
         "total": 5
       },
