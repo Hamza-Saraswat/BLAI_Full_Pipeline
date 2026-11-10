@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre
 workspace: shorts
-title: "M4 Pro vs M5 Pro: 374 tok/s prefill with MoEShift"
-status: scripted
+title: "M5 Pro vs M4 Pro: 374 tok/s prefill explained"
+status: ready-to-build
 pillar: comparison
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-10
-updated: "2026-11-10T13:10:58Z"
+updated: "2026-11-10T13:12:28Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-10-ideas]]
 - Research: [[stages/03-research/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-brief]]
 - Script: [[stages/04-script/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-package]]
+- Voice: [[stages/06-voice/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-narration]] (normalized; full stage on Spark)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -41,3 +41,4 @@ blotato_post_id: ""
 - Why: MoEShift's 374 tok/s prefill on a 24 GB M5 Pro is the window's only fresh two-things-one-decision number; PROVES locked because the brief will carry the cited benchmark.
 - Research: MoEShift angle confirmed (runtime streaming a 125B MoE from SSD, 8.5GB peak RAM); headline pair 199 vs 374 tok/s prefill is the author's own HN benchmark, kept tier community/medium with honest-catch framing; no independent replication found, unverified lists it.
 - Script: number-first beat number-shock 374 hook; B won 22-20 (one number per beat, SSD-streaming mechanism shown, catchline last); silicon pack; validator and eval gates all green; ledger and style recorded.
+- Package: searchable title "M5 Pro vs M4 Pro: 374 tok/s prefill explained", seo 90 (title 44 chars cost row-1 half credit); description leads with M5 Pro + 374 tok/s + first-word framing; related video MLX-two-Macs; compliance flags all false; ready for the Spark build.
