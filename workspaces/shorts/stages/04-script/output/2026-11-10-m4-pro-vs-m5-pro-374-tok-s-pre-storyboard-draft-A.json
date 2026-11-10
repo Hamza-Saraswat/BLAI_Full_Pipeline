@@ -1,0 +1,138 @@
+{
+  "slug": "2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre",
+  "topic": "M4 Pro vs M5 Pro MacBook local LLM inference: MoEShift 374 tok/s prefill",
+  "title": "M4 Pro vs M5 Pro: One Number Decides (374 tok/s Prefill)",
+  "description": "MoEShift's author benchmarked the same 125B MoE model on 24 GB M4 Pro and M5 Pro MacBooks: 199 vs 374 tok/s prefill, and the gap is the wait before the first word.",
+  "hashtags": [
+    "#shorts",
+    "#AppleSilicon",
+    "#LocalLLM",
+    "#M5Pro"
+  ],
+  "hook_text": "M4 Pro or M5 Pro? One number.",
+  "hook_candidates": [
+    "M4 Pro or M5 Pro? One number decides.",
+    "Three hundred seventy four tokens a second, and not one is the answer.",
+    "Your Mac reads the prompt fast. Writing the answer is the slow part.",
+    "A 125 billion parameter model on a 24 GB Mac, at 8.5 GB of RAM.",
+    "Same model, same quant, same memory. Double the speed.",
+    "The new MacBook's SSD just doubled your prefill.",
+    "199 versus 374. The chip didn't get twice as fast.",
+    "You paste a long document. The cursor blinks. That's prefill.",
+    "The wait before the first word is the benchmark nobody runs.",
+    "Faster storage, not a faster GPU, moved this number."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,PROVES",
+  "target_duration_s": 36,
+  "narration_full": "M four Pro or M five Pro? One number decides. Three hundred seventy four tokens a second, your tiebreaker. Prefill: your pasted document, read before the first word appears. The runtime's own benchmark: eighty three point nine seconds on M four Pro. M five Pro: fifty five point one. Prefill made the gap: one hundred ninety nine on M four Pro, three hundred seventy four on M five Pro. Its author credits the SSD, not the GPU. The same giant model fits either chip. The catch: answers still type out in no hurry. First-word upgrade, not chat-speed. Long documents make the M five Pro your chip; short prompts run fine on either.",
+  "analogy": {
+    "vehicle": "",
+    "mapping": "",
+    "limit": ""
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "renderer": "hyperframes",
+      "role": "hook",
+      "tool": "hyperframes",
+      "narration": "M four Pro or M five Pro? One number decides. Three hundred seventy four tokens a second, your tiebreaker.",
+      "on_screen_text": "M4 Pro or M5 Pro? 374 tok/s",
+      "visual_brief": "Frame 1: two chip cards 'M4 Pro' and 'M5 Pro' side by side on dark silicon background, both fully legible; on 'One number decides', the digits '374' scale in between them; motion onset at 0.30 s, cards hold stable first and last 8 frames.",
+      "est_duration_s": 6.6,
+      "layout_archetype": "giant-number"
+    },
+    {
+      "id": "s02",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "Prefill: your pasted document, read before the first word appears.",
+      "on_screen_text": "Prefill: read before the answer",
+      "visual_brief": "On 'your pasted document', a page icon rises in place at left and its text streams into a block at right where a cursor waits; only the stream animates while the caption fades in, ending static.",
+      "est_duration_s": 3.4,
+      "layout_archetype": "diagram-flow"
+    },
+    {
+      "id": "s03",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "The runtime's own benchmark: eighty three point nine seconds on M four Pro. M five Pro: fifty five point one.",
+      "on_screen_text": "83.9 s vs 55.1 s",
+      "visual_brief": "On 'eighty three point nine seconds', a long horizontal wait bar labeled M4 Pro 83.9 s rises in place; on 'fifty five point one', a shorter M5 Pro 55.1 s bar rises beside it; both hold static.",
+      "est_duration_s": 6.9,
+      "layout_archetype": "split-compare"
+    },
+    {
+      "id": "s04",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "Prefill made the gap: one hundred ninety nine on M four Pro, three hundred seventy four on M five Pro.",
+      "on_screen_text": "199 vs 374 tok/s",
+      "visual_brief": "Hard cut from the wait bars to two speed bars flipped in meaning: on 'one hundred ninety nine' a short M4 Pro bar scales in labeled 199 tok/s, and on 'three hundred seventy four' a long M5 Pro bar scales in labeled 374 tok/s.",
+      "est_duration_s": 6.9,
+      "layout_archetype": "timeline"
+    },
+    {
+      "id": "s05",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "Its author credits the SSD, not the GPU. The same giant model fits either chip.",
+      "on_screen_text": "SSD, not GPU",
+      "visual_brief": "On 'credits the SSD', an SSD chip icon streams small expert blocks along a dotted path into two identical laptop silhouettes that both glow to show the same model fits; the caption fades in beneath, two elements moving at most.",
+      "est_duration_s": 5.2,
+      "layout_archetype": "diagram-flow"
+    },
+    {
+      "id": "s06",
+      "renderer": "hyperframes",
+      "role": "explain",
+      "tool": "hyperframes",
+      "narration": "The catch: answers still type out in no hurry. First-word upgrade, not chat-speed.",
+      "on_screen_text": "First-word upgrade, not chat-speed",
+      "visual_brief": "On 'answers still type out in no hurry', a single answer line types itself out slowly one token at a time under the static caption, deliberately unhurried, then freezes.",
+      "est_duration_s": 4.5,
+      "layout_archetype": "grid"
+    },
+    {
+      "id": "s07",
+      "renderer": "hyperframes",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "narration": "Long documents make the M five Pro your chip; short prompts run fine on either.",
+      "on_screen_text": "Long docs: M5 Pro",
+      "visual_brief": "On 'The M5 Pro is your chip', the decision line rises in place center screen with the M5 Pro card from the hook beside it; everything holds static through the final word.",
+      "est_duration_s": 5.2,
+      "layout_archetype": "centered-stack"
+    }
+  ],
+  "notes_for_review": "Check the ladder rungs (wait cost 83.9 vs 55.1 s, speed 199 vs 374 tok/s, fits is a qualitative tie), the hedged attribution (runtime's own benchmark, SSD claim credited to its author), and that the decode catch lands without spending a fourth key number; warm-run detail omitted for time.",
+  "tags": [
+    "m5 pro",
+    "m4 pro",
+    "macbook pro",
+    "local llm",
+    "moeshift",
+    "qwen 3.8 flash next",
+    "apple silicon",
+    "local ai",
+    "llama.cpp",
+    "lm studio",
+    "prefill speed",
+    "tokens per second",
+    "moe model",
+    "expert streaming",
+    "unified memory",
+    "mac mini",
+    "ai benchmark",
+    "on-device ai",
+    "run llm locally"
+  ]
+}

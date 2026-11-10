@@ -1,0 +1,522 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-10T12:59:54+00:00",
+  "slug": "draft-B",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-storyboard-draft-B.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "community": 3,
+      "primary": 5,
+      "docs": 1,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.6,
+    "key_numbers_total": 9,
+    "entities_total": 18,
+    "misconceptions_total": 5,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "apple.com",
+      "github.com",
+      "github.io",
+      "huggingface.co",
+      "redis.io",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 9,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.333,
+      "detail": [
+        {
+          "label": "M5 Pro long-prompt prefill (6,060 input tokens, Qwen 3.8 Flash Next IQ3 XXS, 24GB)",
+          "value": "374 tok/s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Three hundred seventy four",
+          "scene_ids": [
+            "s01"
+          ]
+        },
+        {
+          "label": "M4 Pro long-prompt prefill (same setup)",
+          "value": "199 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "199",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "Prefill gap M4 Pro to M5 Pro (author-stated)",
+          "value": "+88%",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Long-prompt total inference time (M4 Pro vs M5 Pro)",
+          "value": "83.9 vs 55.1 seconds",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Decode, long prompt (M4 Pro vs M5 Pro)",
+          "value": "9.57 vs 13.14 tok/s",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "13.14",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "Qwen3.8-Flash-Next parameters",
+          "value": "125B with 6B activated",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Qwen3.8-Flash-Next context window",
+          "value": "262,144 natively and extensible up to 1,000,000 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "M5 Pro memory bandwidth",
+          "value": "307GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "M4 Pro memory bandwidth",
+          "value": "273GB/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 18,
+      "found_count": 1,
+      "score": 0.056,
+      "found": [
+        "M4 Pro"
+      ],
+      "missing": [
+        "M5 Pro",
+        "Apple",
+        "Apple Silicon",
+        "Davide Troiani",
+        "M5 Pro MacBook Pro",
+        "M4 Pro MacBook Pro",
+        "M5 Pro GPU",
+        "Neural Accelerator",
+        "macOS",
+        "Qwen3.8-Flash-Next",
+        "MLX",
+        "Mac",
+        "GGUF",
+        "Qwen",
+        "Macs",
+        "Flash Next IQ3 XXS",
+        "GB MacBook Pro"
+      ],
+      "top2": [
+        "M5 Pro",
+        "Apple"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "M5 Pro",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apple",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M4 Pro",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Apple Silicon",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Davide Troiani",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Pro MacBook Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M4 Pro MacBook Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Pro GPU",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Neural Accelerator",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "macOS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-Flash-Next",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MLX",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GGUF",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Macs",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Flash Next IQ3 XXS",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB MacBook Pro",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 9,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:374 tok/s"
+      ],
+      "hook_text": "374 tok/s. None is the answer.",
+      "first_sentence": "Three hundred seventy four tokens a second."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "number-first",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 3,
+      "ratio": 0.6,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 4.5,
+          "specific": true,
+          "hits": [
+            "num:374 tok/s"
+          ],
+          "narration": "Three hundred seventy four tokens a second. None of them is the answer."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": false,
+          "hits": [],
+          "narration": "Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "num:199 tok/s",
+            "entity:M4 Pro"
+          ],
+          "narration": "MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 6.9,
+          "specific": false,
+          "hits": [],
+          "narration": "His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "num:9.57 vs 13.14 tok/s"
+          ],
+          "narration": "Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.4,
+      "words": 96,
+      "sentences": 9,
+      "est_speech_s": 33.1,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three hundred seventy four tokens a second. None of them is the answer. Prefill reads your whole prompt before answering. You know that blinking cursor; everyone says only the newest chip fixes it. MoEShift's author ran both chips himself, same model, same quant. M four Pro prefill: one hundred ninety nine tokens a second. His explanation: not the GPU, not even memory bandwidth, but a faster SSD streaming in the experts each token needs. Decode, the actual writing, only reaches thirteen point one four tokens a second. A first-word upgrade, not a chat-speed upgrade.",
+    "on_screen": "374 tok/s. None is the answer. | 374 tok/s, all prefill | Prefill: the wait before word one | M4 Pro: 199 tok/s prefill | Author's claim: SSD, not GPU | Decode: 13.14 tok/s"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-storyboard-draft-B.json",
+        "scenes": 5,
+        "fk_grade": 6.4,
+        "words": 96,
+        "est_speech_s": 33.1,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 6.4 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['you know']",
+          "s03: 7s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s04: 'SSD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "scene_specificity"
+    ],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 9,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.056,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "M5 Pro",
+          "Apple"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:374 tok/s"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 3,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 1,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "number-first",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
