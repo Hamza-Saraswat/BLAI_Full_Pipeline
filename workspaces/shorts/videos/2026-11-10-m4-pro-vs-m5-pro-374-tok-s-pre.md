@@ -2,18 +2,18 @@
 slug: 2026-11-10-m4-pro-vs-m5-pro-374-tok-s-pre
 workspace: shorts
 title: "M5 Pro vs M4 Pro: 374 tok/s prefill explained"
-status: building
+status: blocked
 pillar: comparison
 structure: number-first
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-10
-updated: "2026-11-10T13:13:10Z"
+updated: "2026-11-10T13:16:46Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.043, 2 mismatch(es): expected \\"moeshift's\\" heard \\"moeschiff's\\"; expected 'point one four' heard 'fourteen'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -35,6 +35,9 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-10T13:13:10Z build start on gn100-83c4
+- 2026-11-10T13:15:19Z 06-voice fail 126s (voice QA failed: WER 0.032, 1 mismatch(es): expected 'point one four' heard 'fourteen')
+- 2026-11-10T13:16:46Z 06-voice fail 87s (voice QA failed: WER 0.043, 2 mismatch(es): expected "moeshift's" heard "moeschiff's"; expected 'point one four' heard 'fourteen')
+- 2026-11-10T13:16:46Z blocked at 06-voice
 
 ## Decisions
 - Picked: comparison lane, classic band, opportunity 65.4 (only candidate above 60; rotation exception applies, no other candidate scored above 60).
