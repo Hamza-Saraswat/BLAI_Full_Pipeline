@@ -2,14 +2,14 @@
 slug: 2026-11-09-open-webui-v0-13-3-agents-in-a
 workspace: shorts
 title: "Open WebUI: schedule a coding agent"
-status: review
+status: expired
 pillar: how-to
 structure: news-react-so-what
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-09
-updated: "2026-11-09T13:54:53Z"
+updated: "2026-11-10T14:35:53Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-11-09T13:54:56Z 07-render ok 115.97s: 8 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 334
 - 2026-11-09T13:54:56Z 07-render ok 1692s
 - 2026-11-09T13:54:58Z build done, status review
+- 2026-11-10T14:35:53Z 2026-11-10T14:35:53Z expired: not from today's picks (2026-11-10); the factory carries no backlog
