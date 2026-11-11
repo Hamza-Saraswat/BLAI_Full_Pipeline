@@ -1,0 +1,239 @@
+{
+  "slug": "2026-11-11-minimax-h3-image-in-comfyui-lo",
+  "topic": "MiniMax H3-Image in ComfyUI: local image gen today",
+  "generated_at": "2026-11-11T12:38:13Z",
+  "depth": "standard",
+  "thesis": "MiniMax's H3-Image open-weight image model went from API-only to running in ComfyUI on your own GPU in three days, and tonight the whole thing is four files into three folders.",
+  "explanation_path": "Start with what the viewer already does: typing a prompt into a chatbot and getting a picture back from somebody else's server. Establish what changed on 2026-11-08: MiniMax put the H3-Image weights on Hugging Face under a community license anyone can download. Before the how, land what the model is: one checkpoint that both generates from text and edits existing pictures, at about 16 megapixels natively (4096 x 4096), in 6 steps with no negative prompt -- because the numbers are the reason anyone cares. Then the practical machine-check moment: this is a 33.1B-parameter model whose full checkpoint is 68.65 GB and whose text encoder alone is 66.7 GB in BF16, which is why nobody runs it raw; the Comfy-Org INT8 repack is the version that fits a gaming PC, four files totalling about 54.79 GB. Only then walk the install: update ComfyUI (the core nodes merged 2026-11-10 and the templates want 0.45.0+), pull the four files into diffusion_models / text_encoders / vae, open the built-in MiniMax-H3-Image: Text to Image template, start at 4 MP on purpose so smaller cards do not choke, and raise the resolution when the GPU has room. Close on the honest boundary: the license gates companies over 1 Million USD revenue, the prompt expander is an extra 7.34 GB download switched off by default, and the VRAM floor is not officially stated anywhere.",
+  "claims": [
+    {
+      "claim": "MiniMax released H3-Image as an open-weight model for download, in one checkpoint covering both text-to-image and image editing.",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "source_title": "MiniMax-H3-Image model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The diffusion transformer is 33.1B parameters, distilled to a 6-step sampler with no classifier-free guidance.",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "source_title": "MiniMax-H3-Image model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The Comfy-Org repack needs exactly four files totalling 54.79 GB (21 GB + 25.28 GB + 7.34 GB + 1.17 GB) placed in three folders under ComfyUI/models.",
+      "source_url": "https://docs.comfy.org/tutorials/image/minimax/minimax-h3-image",
+      "source_title": "MiniMax H3 Image tutorial (ComfyUI docs)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The Comfy-Org repository published the repackage on 2026-11-08 and logged 351,803 downloads in its first month, versus 142,989 on MiniMax's own repo.",
+      "source_url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+      "source_title": "MiniMax H3 Image (Comfy-Org README)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "Native support merged into ComfyUI core on 2026-11-10 as feat: Support MiniMax-H3-image (CORE-708), and the docs templates require ComfyUI 0.45.0+ and template pack 0.11.104+.",
+      "source_url": "https://github.com/Comfy-Org/ComfyUI",
+      "source_title": "Comfy-Org/ComfyUI GitHub repository",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The text-to-image template deliberately opens at 4 MP, below the model's native 16 MP, so low-VRAM machines do not run out of memory.",
+      "source_url": "https://docs.comfy.org/tutorials/image/minimax/minimax-h3-image",
+      "source_title": "MiniMax H3 Image tutorial (ComfyUI docs)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The BF16 checkpoint is 68.65 GB and its required text encoder another 66.7 GB, which is why the INT8 repack exists.",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "source_title": "MiniMax-H3-Image model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "The license requires separate written authorization from MiniMax if your annualized revenue exceeds 1 Million USD or you provide hosted services to third parties.",
+      "source_url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+      "source_title": "MiniMax H3 Image (Comfy-Org README)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "MiniMax's announcement claims a 4K (4096 x 4096) image in under 10 seconds, at up to 5x the speed of mainstream alternatives.",
+      "source_url": "https://www.minimax.io/blog/minimax-h3-image",
+      "source_title": "Bringing 4K Image Generation into the 10-Second Era",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-11"
+    },
+    {
+      "claim": "A third-party quantized variant (PrunaAI P-H3-Image) lists From 21 GB of VRAM peaking at 8 MP, against 143 GB of weights for MiniMax-H3; it is a modified model, not the Comfy-Org path.",
+      "source_url": "https://huggingface.co/PrunaAI/P-H3-Image-Comfy",
+      "source_title": "PrunaAI/P-H3-Image-Comfy model card",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "Comfy-Org repo downloads, first month",
+      "value": "351,803",
+      "source_url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image"
+    },
+    {
+      "label": "DiT size, INT8 Comfy-Org repack",
+      "value": "21 GB",
+      "source_url": "https://docs.comfy.org/tutorials/image/minimax/minimax-h3-image"
+    },
+    {
+      "label": "Full four-file download total",
+      "value": "54.79 GB (21 GB + 25.28 GB + 7.34 GB + 1.17 GB)",
+      "source_url": "https://docs.comfy.org/tutorials/image/minimax/minimax-h3-image"
+    },
+    {
+      "label": "Diffusion transformer parameters",
+      "value": "33.1B parameters",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "label": "Native output resolution",
+      "value": "4096 x 4096 (about 16 MP)",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "label": "Sampling steps (fixed)",
+      "value": "6 steps",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "label": "BF16 checkpoint size",
+      "value": "68.65 GB",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "label": "MiniMax-claimed 4K generation time",
+      "value": "under 10 seconds",
+      "source_url": "https://www.minimax.io/blog/minimax-h3-image"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Downloading a game and its HD texture pack, not installing a mod",
+      "mapping": "The model is a AAA game engine; Comfy-Org's INT8 files are the official compressed download; the four files land in named folders exactly like a game's /models directories; ComfyUI itself is the launcher that must be updated first.",
+      "limit": "the viewer starts imagining paid DLC or always-online checks -- everything here is free and offline once downloaded; the only gate is a license clause for million-dollar companies."
+    },
+    {
+      "vehicle": "A studio camera that shoots 16 MP in one shot versus a phone app that upscales a 1 MP snapshot",
+      "mapping": "H3-Image renders native 16 MP in a single pass, where most local models output 1-4 MP and get upscaled afterwards.",
+      "limit": "the viewer expects photography physics like lenses and exposure -- generation has no optics, and 16 MP costs real compute per image, not just a bigger sensor."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "You need to install a custom node pack from some third party to run MiniMax H3-Image in ComfyUI.",
+      "reality": "Support merged into ComfyUI core on 2026-11-10 (feat: Support MiniMax-H3-image (CORE-708)), and the Comfy-Org docs point at built-in template workflows; update ComfyUI instead of hunting custom nodes. (claim 5)"
+    },
+    {
+      "myth": "The download is one model file.",
+      "reality": "Four files go into three different folders (diffusion model 21 GB, text encoder 25.28 GB, optional prompt expander 7.34 GB, VAE 1.17 GB), and the expander is optional. (claim 3)"
+    },
+    {
+      "myth": "The famous runs-on-an-RTX-3060 / 42.5 GB claims apply to H3-Image.",
+      "reality": "Those numbers come from Comfy-Org's August day-0 blog about the MiniMax H3 video model's memory optimization (from 123.6 GB in full precision to 42.5 GB), not the image model; no official H3-Image VRAM floor exists. (claim 10, Unverified)"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "open weights",
+      "definition": "The numbered files that make a model work are published for anyone to download and run on their own machine, not just through the company's website."
+    },
+    {
+      "term": "Hugging Face",
+      "definition": "The website where AI models are hosted for download, like an app store for model files."
+    },
+    {
+      "term": "checkpoint",
+      "definition": "The model file itself; the trained weights that turn text into images."
+    },
+    {
+      "term": "diffusion model / DiT",
+      "definition": "The image-generating core of the system; it refines a field of static noise into a picture step by step."
+    },
+    {
+      "term": "text encoder",
+      "definition": "The model part that reads your prompt first and turns it into numbers the image generator understands."
+    },
+    {
+      "term": "VAE",
+      "definition": "The decoder that translates the model's internal compressed image into the actual PNG you can open."
+    },
+    {
+      "term": "ComfyUI",
+      "definition": "A free, node-based app for running image and video models locally, where you wire boxes together instead of typing into a single box."
+    },
+    {
+      "term": "INT8 quantization",
+      "definition": "A shrink-wrapped version of the model that stores numbers more roughly (8-bit instead of 16-bit) so it fits in less memory, at a small quality cost."
+    },
+    {
+      "term": "VRAM",
+      "definition": "The memory sitting on your graphics card; models must fit inside it to run fast."
+    },
+    {
+      "term": "steps",
+      "definition": "How many denoising passes the model takes; H3-Image is fixed at 6, which is few."
+    },
+    {
+      "term": "classifier-free guidance (CFG)",
+      "definition": "A common second pass that checks the image against your prompt; H3-Image skips it (guidance fixed at 1), so there is no negative prompt."
+    },
+    {
+      "term": "megapixel (MP)",
+      "definition": "A measure of image size; 16 MP is roughly a 4096 x 4096 canvas, several times the pixel count of a typical 1080p wallpaper."
+    },
+    {
+      "term": "prompt expander",
+      "definition": "An optional small language model that rewrites your short prompt into the detailed paragraph the image model reads best."
+    },
+    {
+      "term": "template workflow",
+      "definition": "A ready-made wiring diagram that ships inside ComfyUI; you open it and press run instead of building the graph yourself."
+    },
+    {
+      "term": "community license",
+      "definition": "A free-to-use license with conditions; here, companies above 1 Million USD a year must ask MiniMax for written permission."
+    }
+  ],
+  "unverified": [
+    "No official minimum VRAM or system-RAM requirement for MiniMax-H3-Image has been published by MiniMax or Comfy-Org; any specific GB floor for running it locally is community folklore until measured or stated.",
+    "Community posts report H3-family models running on cards as small as 8-12 GB with heavy quantization, but none of those numbers are confirmed by a tier 1-3 page for H3-Image specifically.",
+    "The under 10 seconds 4K generation time is MiniMax's own API-side claim with no published hardware or method; local speed on a viewer's GPU is unknown and will differ.",
+    "Whether the just-merged core support (2026-11-10) has shipped in a stable ComfyUI release, or only in nightly builds, is not stated on any fetched page; the docs warn template nodes may lag stable releases.",
+    "Reddit and X reception threads (r/LocalLLaMA, r/comfyui) could not be fetched this run (403 blocks), so community sentiment is ungrounded."
+  ],
+  "suggested_outline": "Hook: three days ago this model did not exist outside MiniMax's servers; last night ComfyUI itself learned to run it -- and the Comfy-Org download page already shows 351,803 pulls.\nName what the viewer has: a gaming PC with a decent GPU and ComfyUI curiosity; this is the first open-weight image model that natively shoots about 16 MP in 6 steps.\nExplain the three cooperating parts with the game-install analogy: ComfyUI is the launcher (update it first, core support merged 2026-11-10), the four files are the game (21 GB DiT + 25.28 GB text encoder + 7.34 GB expander + 1.17 GB VAE into three named folders), the template is the saved game (open and run).\nThe payoff run: open the built-in Text to Image template, notice it starts at 4 MP on purpose, write a prompt, raise resolution when the GPU has room.\nHonest catch: no official VRAM floor exists, the RTX 3060 stories are about the H3 video model, and the license gates million-dollar companies -- measure on your own card before promising viewers a number.",
+  "notes": "Conflicts and thin spots. The RTX 3060 / 42.5 GB / 66% memory-reduction claims in the Comfy day-0 blog (blog.comfy.org) describe the MiniMax H3 video model launched in August, not H3-Image; do not attribute them to the image model on screen. The 21 GB VRAM peak figure belongs to PrunaAI's modified P-H3-Image quant (8 steps, 8 MP, up to 8 references), not the Comfy-Org INT8 path this video teaches; kept as claim 10 with that framing. Downloads on the two HF repos will keep moving after this run; the quoted 351,803 and 142,989 are the values printed on the pages fetched 2026-11-11 and MiniMax's own blog says weights were released with the announcement. Kingy.ai's file sizes cover the H3 video files, not H3-Image; its value here is the explicit statement that no minimum-VRAM matrix has been published. The HN item URL given as a seed returned an empty body this run; the Algolia API search confirms an H3-Image story posted 2026-11-10 at 4 points with 0 comments, which matches the radar seed. Reddit and X reception threads were blocked (403) and are ungrounded.",
+  "viewer_situation": "You have a gaming PC or Mac with a decent GPU, you have used ChatGPT to make pictures, and you have heard people run image models themselves in ComfyUI but never tried a brand-new one this early.",
+  "has_process": true,
+  "process_steps": [
+    "Update ComfyUI to the latest version (0.45.0+; core MiniMax-H3-Image support merged 2026-11-10).",
+    "Download the four files from the Comfy-Org Hugging Face repos: the 21 GB INT8 diffusion model, the 25.28 GB INT8 text encoder, the 7.34 GB prompt expander, and the 1.17 GB VAE.",
+    "Place them in ComfyUI/models/diffusion_models, ComfyUI/models/text_encoders (two files), and ComfyUI/models/vae.",
+    "Open the built-in MiniMax-H3-Image: Text to Image template from the workflow template library.",
+    "Run once at the template's default 4 MP canvas, then raise resolution with the selector when the GPU has headroom."
+  ],
+  "objection": "A skeptical engineer says the four-file package is still 54.79 GB, no official VRAM floor is published, the merged core support is hours old, and a 12 GB card may simply choke on a 33.1B-parameter DiT no matter how good the INT8 repack is."
+}
