@@ -2,14 +2,14 @@
 slug: 2026-11-10-qwen3-5-weight-edits-change-th
 workspace: shorts
 title: "Qwen3.5 weight edits: change the model, skip retraining"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-10
-updated: "2026-11-10T12:09:37Z"
+updated: "2026-11-11T14:35:25Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,7 +34,7 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-11T14:35:25Z 2026-11-11T14:35:25Z expired: not from today's picks (2026-11-11); the factory carries no backlog
 
 ## Decisions
 - Picked: explainer lane, smooth-explainer band, opportunity 57.1 (best remaining after the 30-day duplicate discard of llama.cpp).
