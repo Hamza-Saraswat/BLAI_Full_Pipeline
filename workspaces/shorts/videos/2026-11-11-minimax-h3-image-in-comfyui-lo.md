@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-11-minimax-h3-image-in-comfyui-lo-brief]]
 - Script: [[stages/04-script/output/2026-11-11-minimax-h3-image-in-comfyui-lo-script]]
 - Package: [[stages/05-package/output/2026-11-11-minimax-h3-image-in-comfyui-lo-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-11-minimax-h3-image-in-comfyui-lo-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-11T13:13:03Z 04-script ok: draft A how-to-three-moves beat draft B contrarian-take 19-17; validator 0/0, eval 9/9, normalizer 2 scenes changed; 1 graft (RTX 3060 correction from B); ledger entry 67 recorded; style pack terminal
 - 2026-11-11T13:14:56Z 05-package ok: seo 100/100, title searchable 35 chars, check_outputs 0 failures, manifest schema PASS; status ready-to-build; produce half ends here, build.py --once takes it from here
 - 2026-11-11T13:20:10Z build start on gn100-83c4
+- 2026-11-11T13:22:34Z 06-voice ok 142s
