@@ -1,0 +1,925 @@
+[
+  {
+    "id": "hn-2855a6dd0b",
+    "title": "Show HN: Black Ops II statically recompiled to native ARM64 macOS",
+    "url": "https://github.com/adrbn/bo2-mac",
+    "source": "hn",
+    "published_at": "2026-11-11T04:56:47Z",
+    "signals": {
+      "points": 40,
+      "num_comments": 5,
+      "signal": 0.563,
+      "signal_parts": {
+        "points": 0.651,
+        "comments": 0.357
+      },
+      "decay": 0.9029,
+      "age_h": 7.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:MacBook",
+      "group": "news-react"
+    },
+    "products": [
+      "MacBook",
+      "Claude"
+    ],
+    "summary": "I grew up with Black Ops 2 and wanted to see if I could make it work on my 2020 MacBook Pro. So I used Claude Opus 5.5 to create a tool that converts your copy of the game (from Steam) to a native ARM64 Mac app, with almost 60fps in all areas. The whole game is statically recompilated ahead-of-time",
+    "why_now": "Shipped: 40 points, 5 comments on HN, 7 h ago",
+    "score": 58
+  },
+  {
+    "id": "hn-d9db01930d",
+    "title": "Qwen4-Max is now in Preview",
+    "url": "https://twitter.com/Alibaba_Qwen/status/2120335993643684315",
+    "source": "hn",
+    "published_at": "2026-11-11T02:33:25Z",
+    "signals": {
+      "points": 43,
+      "num_comments": 3,
+      "signal": 0.547,
+      "signal_parts": {
+        "points": 0.663,
+        "comments": 0.276
+      },
+      "decay": 0.8723,
+      "age_h": 9.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 43 points, 3 comments on HN, 9 h ago",
+    "score": 56
+  },
+  {
+    "id": "hn-09cfa387d8",
+    "title": "How do you keep up quality when you vibe-code?",
+    "url": "https://news.ycombinator.com/item?id=50444380",
+    "source": "hn",
+    "published_at": "2026-11-10T18:41:15Z",
+    "signals": {
+      "points": 31,
+      "num_comments": 27,
+      "signal": 0.624,
+      "signal_parts": {
+        "points": 0.607,
+        "comments": 0.664
+      },
+      "decay": 0.7786,
+      "age_h": 17.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "explainer"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I&#x27;m having a really hard time working with claude. In the past when I wrote all the code manually, it was always carefully reviewed and architected, with all possible flows carefully mapped out. Now, my code is mostly AI written which has led to things going out of control. Since it&#x27;s easy",
+    "why_now": "Discussed: 31 points, 27 comments on HN, 17 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-afaf0c6432",
+    "title": "llama.cpp b12283",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12283",
+    "source": "github",
+    "published_at": "2026-11-11T06:17:37Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12283",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9207,
+      "age_h": 5.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "myth-bust"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> sycl : fixed sycl CLAMP to actually support strided view (#31784) Modify `ggml_sycl_op_clamp` to use the unary helper function `ggml_sycl_detail::ggml_sycl_op_unary` to handle non-contigous or strided views. The fix uses a pattern that matches other stride-safe unary ops, and is a sim",
+    "why_now": "Shipped: ggml-org/llama.cpp b12283 released (pre-release), 6 h ago",
+    "score": 54
+  },
+  {
+    "id": "github-82264a3a12",
+    "title": "llama.cpp b12282",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12282",
+    "source": "github",
+    "published_at": "2026-11-11T03:31:06Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12282",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8845,
+      "age_h": 8.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> chat : fix Muse Spark ignoring response_format json_schema (#32017) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/66115272> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/rele",
+    "why_now": "Shipped: ggml-org/llama.cpp b12282 released (pre-release), 8 h ago",
+    "score": 53
+  },
+  {
+    "id": "github-e61f19551a",
+    "title": "llama.cpp b12277",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12277",
+    "source": "github",
+    "published_at": "2026-11-11T03:11:17Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12277",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8803,
+      "age_h": 8.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> mtmd: fix string format, rename to mtmd_format (#32040) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/66110290> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/downloa",
+    "why_now": "Shipped: ggml-org/llama.cpp b12277 released (pre-release), 9 h ago",
+    "score": 52
+  },
+  {
+    "id": "github-e9d10d6fe9",
+    "title": "ollama v0.40.17-rc0: v0.40.17",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
+    "source": "github",
+    "published_at": "2026-11-10T22:25:00Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.17-rc0",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8217,
+      "age_h": 13.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama",
+      "ChatGPT"
+    ],
+    "summary": "## What's Changed * Improve ChatGPT CLI restore and graceful restart by @hoyyeva in https://github.com/ollama/ollama/pull/19583 * cmd/launch: use thinking metadata for OpenCode settings by @hoyyeva in https://github.com/ollama/ollama/pull/19409 * llm: use mmap for Vulkan integrated GPUs by @dhiltgen",
+    "why_now": "Shipped: ollama/ollama v0.40.17-rc0 released (pre-release), 14 h ago",
+    "score": 50
+  },
+  {
+    "id": "hn-adce6242b0",
+    "title": "Qwen 4 Max Preview",
+    "url": "https://www.qwencloud.com/benefits/tokenplan",
+    "source": "hn",
+    "published_at": "2026-11-11T09:08:56Z",
+    "signals": {
+      "points": 13,
+      "num_comments": 4,
+      "signal": 0.42,
+      "signal_parts": {
+        "points": 0.462,
+        "comments": 0.321
+      },
+      "decay": 0.9594,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 13 points, 4 comments on HN, 3 h ago",
+    "score": 49
+  },
+  {
+    "id": "hf-14e5a7f70a",
+    "title": "Comfy-Org/MiniMax-H3-Image",
+    "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+    "source": "hf",
+    "published_at": "2026-11-08T20:37:23Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 209,
+      "downloads": 351803,
+      "trendingScore": 209.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.814,
+      "signal_parts": {
+        "trending": 0.703,
+        "likes": 0.774,
+        "downloads": 0.924
+      },
+      "decay": 0.4003,
+      "age_h": 63.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:MiniMax",
+      "group": "how-to"
+    },
+    "products": [
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 209 likes, 351.8k downloads, trending score 209, created 2026-11-08",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 209 likes, 351.8k downloads, trending score 209, 3 d ago",
+    "score": 40
+  },
+  {
+    "id": "hn-1f1dbabb56",
+    "title": "MiniMax H3-Image Released, an Open-Weight Image Model Built on H3",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+    "source": "hn",
+    "published_at": "2026-11-10T15:29:36Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7435,
+      "age_h": 20.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hf"
+      ],
+      "relevance": "product:MiniMax",
+      "group": "how-to"
+    },
+    "products": [
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 21 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-58ad1fd2c2",
+    "title": "Australia considers criminal charges for AI companies that fail to prevent harm",
+    "url": "https://www.abc.net.au/news/2026-11-11/australia-considers-criminal-charges-for-ai-companies/107368676",
+    "source": "hn",
+    "published_at": "2026-11-11T00:27:27Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 5,
+      "signal": 0.39,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.357
+      },
+      "decay": 0.8463,
+      "age_h": 11.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 9 points, 5 comments on HN, 12 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-9c66210f6a",
+    "title": "The Surprising Effectiveness of Deleting Weights in LLM Post-Training",
+    "url": "https://arxiv.org/abs/2611.10866",
+    "source": "hn",
+    "published_at": "2026-11-10T22:44:49Z",
+    "signals": {
+      "points": 25,
+      "num_comments": 0,
+      "signal": 0.4,
+      "signal_parts": {
+        "points": 0.571,
+        "comments": 0.0
+      },
+      "decay": 0.8256,
+      "age_h": 13.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 25 points, 0 comments on HN, 13 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-2c9e8526b0",
+    "title": "Show HN: Warmctl - Fast cold starts for vLLM inference",
+    "url": "https://github.com/TensorRails/warmctl",
+    "source": "hn",
+    "published_at": "2026-11-10T22:28:15Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8223,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 14 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-90d74a15d7",
+    "title": "Show HN: AI Vision Index, private tests of how well 36 AI models see",
+    "url": "https://aivisionindex.com/",
+    "source": "hn",
+    "published_at": "2026-11-10T12:46:55Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.715,
+      "age_h": 23.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I wanted to know for my work which model is best at vision tasks (using both llms like claude and smaller models like YOLO - smaller specialist models are still not finished testing). I found that none of the public benchmarks were reliable: datasets were available (so they could have been used for",
+    "why_now": "Shipped: 2 points, 2 comments on HN, 23 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-5b0f802014",
+    "title": "Serving open-weight models at scale with vLLM",
+    "url": "https://ngrok.com/blog/vllm",
+    "source": "hn",
+    "published_at": "2026-11-10T12:27:12Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7116,
+      "age_h": 23.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 24 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-dbee795b31",
+    "title": "Show HN: Zeus - Claude Code for AI voice agents",
+    "url": "https://thunderphone.com/blog/introducing-zeus",
+    "source": "hn",
+    "published_at": "2026-11-10T20:20:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7973,
+      "age_h": 15.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Claude",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hey, Alex here, I&#x27;m one of the founders. We&#x27;ve built phone agents for enterprise customers for two years and kept seeing the same failure: agents that mishear callers and then do something confidently wrong.<p>We&#x27;re announcing two things in this launch. #1 is the stack: instead of one",
+    "why_now": "Broke: 2 points, 0 comments on HN, 16 h ago",
+    "score": 24
+  },
+  {
+    "id": "hf-2250172890",
+    "title": "Zyphra/ZONOS3-Mini",
+    "url": "https://huggingface.co/Zyphra/ZONOS3-Mini",
+    "source": "hf",
+    "published_at": "2026-11-09T05:03:57Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 107,
+      "downloads": 4170,
+      "trendingScore": 106.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.646,
+      "signal_parts": {
+        "trending": 0.615,
+        "likes": 0.678,
+        "downloads": 0.603
+      },
+      "decay": 0.4522,
+      "age_h": 55.0,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 107 likes, 4.2k downloads, trending score 106, created 2026-11-09",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 107 likes, 4.2k downloads, trending score 106, 2 d ago",
+    "score": 22
+  },
+  {
+    "id": "hn-41a3cad87c",
+    "title": "Compress any LLM 3x in one click, near-lossless, in under 50 MB RAM",
+    "url": "https://github.com/NeuraCryption/SPECTRA",
+    "source": "hn",
+    "published_at": "2026-11-11T07:39:12Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.9389,
+      "age_h": 4.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 5 points, 0 comments on HN, 4 h ago",
+    "score": 18
+  },
+  {
+    "id": "hn-2e96573353",
+    "title": "Show HN: Rystic - Stateful Local Simulators of Slack, GitHub and Linear",
+    "url": "https://www.rystic.ai",
+    "source": "hn",
+    "published_at": "2026-11-11T00:44:10Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8497,
+      "age_h": 11.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, we&#x27;re Zach and Evan, founders of Rystic (<a href=\"https:&#x2F;&#x2F;www.rystic.ai\">https:&#x2F;&#x2F;www.rystic.ai</a>). As LLMs have progressed, producing code has become fast and cheap but verification has not. At my previous company I noticed that whenever I could test a service local",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 11 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-a43bb8bf0d",
+    "title": "Tesla K80 / Kepler: 3× faster",
+    "url": "https://github.com/larfus303/llama-cpp-kepler-k80-nc-dequantize",
+    "source": "hn",
+    "published_at": "2026-11-10T23:12:38Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8312,
+      "age_h": 12.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Measured: 4 points, 0 comments on HN, 13 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-fc1e96366f",
+    "title": "LLM inference, visually explained: why a 13B model reads 26 GB per token",
+    "url": "https://www.youtube.com/watch?v=R3meYJU7wEg",
+    "source": "hn",
+    "published_at": "2026-11-10T22:47:35Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8262,
+      "age_h": 13.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 13 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-ef2d9d8dc6",
+    "title": "Anthropic Road Show Video",
+    "url": "https://www.netroadshow.com/custom/IPO/Anthropic/retail/roadshow.html",
+    "source": "hn",
+    "published_at": "2026-11-11T11:55:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9987,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Anthropic",
+      "group": "news-react"
+    },
+    "products": [
+      "Anthropic"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 0 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-59511dc1b4",
+    "title": "Cutting LLM Token Costs with Currents News API and TypeSafe Jev Pre-Filtering",
+    "url": "https://currentsapi.services/en/blog/cut-llm-token-costs-typesafe-jev-prefiltering",
+    "source": "hn",
+    "published_at": "2026-11-11T08:17:35Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9476,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c1b7168e1a",
+    "title": "Show HN: PeepNote - Local desktop notes for saving and reusing LLM responses",
+    "url": "https://github.com/OddlyGoods/peep-note",
+    "source": "hn",
+    "published_at": "2026-11-11T00:14:18Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8436,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-7b1a335cf7",
+    "title": "In open-weight AI, America is the one playing catch-up",
+    "url": "https://village.dev/blog/in-open-weight-ai-america-is-the-one-playing-catch-up/",
+    "source": "hn",
+    "published_at": "2026-11-10T20:53:09Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8037,
+      "age_h": 15.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-a443cb7389",
+    "title": "Show HN: Cloakroom - Keeps secrets away from agents",
+    "url": "https://github.com/shanjeevrajendran/cloakroom",
+    "source": "hn",
+    "published_at": "2026-11-10T20:39:46Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8011,
+      "age_h": 15.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "Cloakroom is an open-source privacy tool that masks secrets and sensitive data from AI agents. It swaps real values for placeholders, then swaps them back to the originals locally.<p>I was trying to build a full on local LLM setup on my machine, but the local models were not up to the mark (at least",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-5c712fefea",
+    "title": "Robo-Fuckers - An LLM Bromance",
+    "url": "https://willmcgugan.com/blog/robo-fuckers/",
+    "source": "hn",
+    "published_at": "2026-11-11T11:55:01Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9986,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-053455a651",
+    "title": "Controlling your AI agents from a game handheld",
+    "url": "https://blog.codepipes.com/llms/ai-agents-handheld.html",
+    "source": "hn",
+    "published_at": "2026-11-11T03:11:30Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8803,
+      "age_h": 8.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-e188ff1a12",
+    "title": "Show HN: Socialize/Presence multiplayer interaction on blog posts",
+    "url": "https://namar0x0309.com/blog/2026/05/the-kind-of-ai-adoption-i-actually-believe-in/",
+    "source": "hn",
+    "published_at": "2026-11-10T23:21:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8329,
+      "age_h": 12.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "&quot;It&#x27;s not who I am underneath, but what I do that defines me.&quot; - Batman Begins<p>Or, more appropriately:<p>It&#x27;s not what AI &#x2F; LLM &#x2F; harness I use underneath, but what I do with it that defines me.<p>I&#x27;m kinda tired of hearing about AI. After all, it&#x27;s just a t",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 13 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-65a8a74cbd",
+    "title": "Satori - Offline Android voice notes with on-device STT and local LLMs",
+    "url": "https://github.com/TinkeringDao/satori",
+    "source": "hn",
+    "published_at": "2026-11-10T21:04:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8059,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:on-device",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-753031e219",
+    "title": "My Keynote at SeaGL and LLM-Gen-AI-Assisted Reverse Engineering",
+    "url": "https://sfconservancy.org/blog/2026/nov/05/foss-in-the-age-of-llm-gen-ai-assisted-reverse-eng/",
+    "source": "hn",
+    "published_at": "2026-11-10T19:28:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7876,
+      "age_h": 16.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-42e5625ffe",
+    "title": "Show HN: VoxaDub - Open-source AI video dubbing with speaker-aware voices",
+    "url": "https://github.com/kadirb4rut/voxadub",
+    "source": "hn",
+    "published_at": "2026-11-10T12:06:21Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.708,
+      "age_h": 23.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN,<p>I have been working on a project called VoxaDub: an open source local-first AI dubbing tool which can translate videos into other languages while preserving the original voices of the speakers.<p>A major issue when translating is ensuring the translation matches with the length of speech in",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 24 h ago",
+    "score": 5
+  }
+]
