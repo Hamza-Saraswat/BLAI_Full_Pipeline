@@ -1,0 +1,597 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-11T13:12:07+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": ".local-builds/2026-11-11-minimax-h3-image-in-comfyui-lo/draft-A/storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-11-minimax-h3-image-in-comfyui-lo-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 15,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "comfy.org",
+      "github.com",
+      "huggingface.co",
+      "minimax.io"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.375,
+      "detail": [
+        {
+          "label": "Comfy-Org repo downloads, first month",
+          "value": "351,803",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DiT size, INT8 Comfy-Org repack",
+          "value": "21 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Full four-file download total",
+          "value": "54.79 GB (21 GB + 25.28 GB + 7.34 GB + 1.17 GB)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "54.79",
+          "scene_ids": [
+            "s05",
+            "s06"
+          ]
+        },
+        {
+          "label": "Diffusion transformer parameters",
+          "value": "33.1B parameters",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Native output resolution",
+          "value": "4096 x 4096 (about 16 MP)",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "16",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "Sampling steps (fixed)",
+          "value": "6 steps",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "6",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "BF16 checkpoint size",
+          "value": "68.65 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "MiniMax-claimed 4K generation time",
+          "value": "under 10 seconds",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 15,
+      "found_count": 7,
+      "score": 0.467,
+      "found": [
+        "MiniMax",
+        "H3-Image",
+        "Comfy-Org",
+        "ComfyUI",
+        "MiniMax-H3",
+        "Support",
+        "MiniMax H3"
+      ],
+      "missing": [
+        "Support MiniMax-H3-image",
+        "CORE-708",
+        "Million USD",
+        "PrunaAI P-H3-Image",
+        "MiniMax H3-Image",
+        "runs-on-an-RTX-3060",
+        "Unverified",
+        "Comfy-Org August"
+      ],
+      "top2": [
+        "MiniMax",
+        "H3-Image"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "MiniMax",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "H3-Image",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Comfy-Org",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "ComfyUI",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "MiniMax-H3",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Support",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Support MiniMax-H3-image",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CORE-708",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Million USD",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "PrunaAI P-H3-Image",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MiniMax H3",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "MiniMax H3-Image",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "runs-on-an-RTX-3060",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unverified",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Comfy-Org August",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 35,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "entity:MiniMax",
+        "entity:MiniMax H3"
+      ],
+      "hook_text": "MiniMax H3 runs tonight",
+      "first_sentence": "MiniMax's new image model runs on your own GPU tonight, in three moves."
+    },
+    "positional_labels": {
+      "count": 3,
+      "structure": "how-to-three-moves",
+      "labels": [
+        {
+          "sentence_index": 8,
+          "sentence": "Step one: install the ComfyUI update, the latest one.",
+          "label": "step",
+          "ordinal": 1,
+          "words": 9,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 12,
+          "sentence": "Step two: pull the four files into three folders.",
+          "label": "step",
+          "ordinal": 2,
+          "words": 9,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 21,
+          "sentence": "Step three: open the template and press run.",
+          "label": "step",
+          "ordinal": 3,
+          "words": 8,
+          "has_action_verb": true
+        }
+      ]
+    },
+    "scene_specificity": {
+      "total": 11,
+      "specific_count": 9,
+      "ratio": 0.818,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "entity:MiniMax",
+            "entity:MiniMax H3"
+          ],
+          "narration": "MiniMax's new image model runs on your own GPU tonight, in three moves. Three days ago MiniMax published the weights. No server between your prompt and the picture."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "glossary:checkpoint"
+          ],
+          "narration": "Here's what you're installing. The weights are just model files. One checkpoint, one of those files, does both jobs: writes pictures from text, edits photos you already have."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 7.9,
+          "specific": true,
+          "hits": [
+            "num:4096 x 4096 (about 16 MP)",
+            "num:6 steps"
+          ],
+          "narration": "It renders natively at sixteen megapixels, poster sharp. And it's distilled to six sampling steps, six denoising passes, no negative prompt to babysit."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 11.7,
+          "specific": true,
+          "hits": [
+            "entity:ComfyUI",
+            "entity:Support"
+          ],
+          "narration": "Step one: install the ComfyUI update, the latest one. ComfyUI is the free app where you wire boxes into workflows. Its core merged H three Image support yesterday. No custom nodes, no third-party packs."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:54.79 GB (21 GB + 25.28 GB + 7.34 GB + 1.17 GB)",
+            "entity:Comfy-Org"
+          ],
+          "narration": "Step two: pull the four files into three folders. They live on the Comfy-Org page at Hugging Face, the app store for model files. Together they cost about fifty-five gigabytes of disk."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:54.79 GB (21 GB + 25.28 GB + 7.34 GB + 1.17 GB)"
+          ],
+          "narration": "That's the real price of tonight, so start the download and go make dinner. A cup of coffee pours while the bar crawls. When it finishes, each file has a named home."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 13.8,
+          "specific": true,
+          "hits": [
+            "glossary:text encoder",
+            "glossary:VAE"
+          ],
+          "narration": "The diffusion model, the core that refines noise into a picture, goes in diffusion models. The text encoder, which reads your prompt into numbers, goes in text encoders. The VAE, the decoder that finally makes your PNG, goes in vae."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "entity:MiniMax",
+            "entity:H3-Image",
+            "entity:ComfyUI",
+            "entity:MiniMax-H3"
+          ],
+          "narration": "Step three: open the template and press run. Templates are ready-made workflows that ship inside ComfyUI. Open MiniMax H three Image Text to Image; the graph is already wired."
+        },
+        {
+          "id": "s09",
+          "role": "foreshadow",
+          "est_duration_s": 14.1,
+          "specific": true,
+          "hits": [
+            "entity:MiniMax"
+          ],
+          "narration": "It starts small on purpose. Nobody has published a VRAM floor yet; VRAM is your graphics card's memory. The R T X thirty sixty stories are about MiniMax's video model from August, not this one. Watch it on the first pass."
+        },
+        {
+          "id": "s10",
+          "role": "foreshadow",
+          "est_duration_s": 4.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Headroom? Raise the resolution selector. Choking? Shrink the canvas, keep the model."
+        },
+        {
+          "id": "s11",
+          "role": "payoff_close",
+          "est_duration_s": 8.6,
+          "specific": false,
+          "hits": [],
+          "narration": "There's your picture, rendered by your own GPU. No server, no queue, no per-image bill. Big companies need written permission; you just needed disk space."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.7,
+      "words": 329,
+      "sentences": 35,
+      "est_speech_s": 113.4,
+      "vo_band_ok": true
+    },
+    "narration_full": "MiniMax's new image model runs on your own GPU tonight, in three moves. Three days ago MiniMax published the weights. No server between your prompt and the picture. Here's what you're installing. The weights are just model files. One checkpoint, one of those files, does both jobs: writes pictures from text, edits photos you already have. It renders natively at sixteen megapixels, poster sharp. And it's distilled to six sampling steps, six denoising passes, no negative prompt to babysit. Step one: install the ComfyUI update, the latest one. ComfyUI is the free app where you wire boxes into workflows. Its core merged H three Image support yesterday. No custom nodes, no third-party packs. Step two: pull the four files into three folders. They live on the Comfy-Org page at Hugging Face, the app store for model files. Together they cost about fifty-five gigabytes of disk. That's the real price of tonight, so start the download and go make dinner. A cup of coffee pours while the bar crawls. When it finishes, each file has a named home. The diffusion model, the core that refines noise into a picture, goes in diffusion models. The text encoder, which reads your prompt into numbers, goes in text encoders. The VAE, the decoder that finally makes your PNG, goes in vae. Step three: open the template and press run. Templates are ready-made workflows that ship inside ComfyUI. Open MiniMax H three Image Text to Image; the graph is already wired. It starts small on purpose. Nobody has published a VRAM floor yet; VRAM is your graphics card's memory. The R T X thirty sixty stories are about MiniMax's video model from August, not this one. Watch it on the first pass. Headroom? Raise the resolution selector. Choking? Shrink the canvas, keep the model. There's your picture, rendered by your own GPU. No server, no queue, no per-image bill. Big companies need written permission; you just needed disk space.",
+    "on_screen": "MiniMax H3 runs tonight | MiniMax H3 runs tonight | weights published | no server in the middle | 1 checkpoint: generate + edit | 16 MP native | 6 steps, no negative prompt | Step 1: update ComfyUI | core support: merged | no custom nodes | Step 2: 4 files, 3 folders | Comfy-Org on Hugging Face | 54.79 GB total | 54.79 GB | start download, go make dinner | diffusion_models: DiT | text_encoders: encoder | vae: VAE | Step 3: open template, run | MiniMax-H3-Image: Text to Image | starts small on purpose | VRAM floor: unpublished | headroom: raise resolution | choking: shrink canvas | rendered locally | no server, no queue, no bill | license: written permission"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": ".local-builds/2026-11-11-minimax-h3-image-in-comfyui-lo/draft-A/storyboard.json",
+        "scenes": 11,
+        "fk_grade": 5.7,
+        "words": 329,
+        "est_speech_s": 113.4,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 5.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s07: 'VAE' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s07: 'PNG' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 'VRAM' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s09: 'VRAM' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-11-minimax-h3-image-in-comfyui-lo-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.467,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "MiniMax",
+          "H3-Image"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "entity:MiniMax",
+          "entity:MiniMax H3"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 9,
+        "need": 9,
+        "total": 11
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 3,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [
+          "Step one: install the ComfyUI update, the latest one.",
+          "Step two: pull the four files into three folders.",
+          "Step three: open the template and press run."
+        ],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

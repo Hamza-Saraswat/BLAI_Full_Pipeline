@@ -1,0 +1,203 @@
+{
+  "slug": "2026-11-11-minimax-h3-image-in-comfyui-lo",
+  "topic": "Running MiniMax H3-Image locally in ComfyUI on your own GPU",
+  "title": "MiniMax H3 in ComfyUI: three moves",
+  "description": "MiniMax H3-Image now runs locally in ComfyUI. In this Short: the four files, the three folders, the built-in template, and the real disk cost. You'll learn how to install MiniMax H3-Image in ComfyUI tonight. Links in the description. (Narration is AI-generated.)",
+  "hashtags": [
+    "#MiniMaxH3",
+    "#ComfyUI",
+    "#LocalAI"
+  ],
+  "hook_text": "MiniMax H3 runs tonight",
+  "hook_candidates": [
+    "MiniMax H3 runs tonight",
+    "Think it's too big? It isn't.",
+    "Three moves to local image gen",
+    "Your GPU can draw this",
+    "351,803 downloads in three days",
+    "Not a datacenter. One folder.",
+    "Four files, fifty-five gigabytes, tonight",
+    "ComfyUI just made this one-click",
+    "Stop paying per image",
+    "Local image gen grew up this week"
+  ],
+  "style_pack": "terminal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 112,
+  "narration_full": "MiniMax's new image model runs on your own GPU tonight, in three moves. Three days ago MiniMax published the weights. No server between your prompt and the picture. Here's what you're installing. The weights are just model files. One checkpoint, one of those files, does both jobs: writes pictures from text, edits photos you already have. It renders natively at sixteen megapixels, poster sharp. And it's distilled to six sampling steps, six denoising passes, no negative prompt to babysit. Step one: install the ComfyUI update, the latest one. ComfyUI is the free app where you wire boxes into workflows. Its core merged H three Image support yesterday. No custom nodes, no third-party packs. Step two: pull the four files into three folders. They live on the Comfy-Org page at Hugging Face, the app store for model files. Together they cost about fifty-five gigabytes of disk. That's the real price of tonight, so start the download and go make dinner. A cup of coffee pours while the bar crawls. When it finishes, each file has a named home. The diffusion model, the core that refines noise into a picture, goes in diffusion models. The text encoder, which reads your prompt into numbers, goes in text encoders. The VAE, the decoder that finally makes your PNG, goes in vae. Step three: open the template and press run. Templates are ready-made workflows that ship inside ComfyUI. Open MiniMax H three Image Text to Image; the graph is already wired. It starts small on purpose. Nobody has published a VRAM floor yet; VRAM is your graphics card's memory. The R T X thirty sixty stories are about MiniMax's video model from August, not this one. Watch it on the first pass. Headroom? Raise the resolution selector. Choking? Shrink the canvas, keep the model. There's your picture, rendered by your own GPU. No server, no queue, no per-image bill. Big companies need written permission; you just needed disk space.",
+  "analogy": null,
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "MiniMax's new image model runs on your own GPU tonight, in three moves. Three days ago MiniMax published the weights. No server between your prompt and the picture.",
+      "on_screen_text": "MiniMax H3 runs tonight | weights published | no server in the middle",
+      "visual_brief": "Frame 1: hook text 'MiniMax H3 runs tonight' fully legible, dark backdrop, motion onset at 0.30 s as the title fades in. On 'published the weights', a small chip 'weights published' rises beneath it. On 'No server between', the chip swaps to 'no server in the middle'. One element moves at a time.",
+      "est_duration_s": 9.7,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Here's what you're installing. The weights are just model files. One checkpoint, one of those files, does both jobs: writes pictures from text, edits photos you already have.",
+      "on_screen_text": "1 checkpoint: generate + edit",
+      "visual_brief": "On 'what you're installing', a header fades in over dark. On 'just model files', a file icon fades in beside it. On 'does both jobs', two cards rise side by side: left 'type text, get picture', right 'your photo, edited'.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "It renders natively at sixteen megapixels, poster sharp. And it's distilled to six sampling steps, six denoising passes, no negative prompt to babysit.",
+      "on_screen_text": "16 MP native | 6 steps, no negative prompt",
+      "visual_brief": "On 'sixteen megapixels', a giant '16 MP' scales in at center. On 'six sampling steps', a chip '6 steps, no negative prompt' rises below it. The scale-in is the only motion on that beat.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "whoosh"
+        }
+      ],
+      "est_duration_s": 7.9
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Step one: install the ComfyUI update, the latest one. ComfyUI is the free app where you wire boxes into workflows. Its core merged H three Image support yesterday. No custom nodes, no third-party packs.",
+      "on_screen_text": "Step 1: update ComfyUI | core support: merged | no custom nodes",
+      "visual_brief": "On 'update ComfyUI', a mock app menu bar fades in with the Update button glowing. On 'merged H three Image support', a short timeline rises: 'update' to 'core merged' to 'ready'. On 'No custom nodes', a crossed-out puzzle-piece chip fades in.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Step two: pull the four files into three folders. They live on the Comfy-Org page at Hugging Face, the app store for model files. Together they cost about fifty-five gigabytes of disk.",
+      "on_screen_text": "Step 2: 4 files, 3 folders | Comfy-Org on Hugging Face | 54.79 GB total",
+      "visual_brief": "On 'Comfy-Org page', a mock repo header fades in. On 'fifty-five gigabytes', a giant '54.79 GB' scales in with four small file chips beneath, the scale-in the only motion.",
+      "est_duration_s": 11.0,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "That's the real price of tonight, so start the download and go make dinner. A cup of coffee pours while the bar crawls. When it finishes, each file has a named home.",
+      "on_screen_text": "54.79 GB | start download, go make dinner",
+      "visual_brief": "On 'start the download', a thin download bar begins crawling under the number. On 'go make dinner', a small coffee cup glyph rises beside the bar. On 'a named home', the header 'ComfyUI/models/' fades in above.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ],
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The diffusion model, the core that refines noise into a picture, goes in diffusion models. The text encoder, which reads your prompt into numbers, goes in text encoders. The VAE, the decoder that finally makes your PNG, goes in vae.",
+      "on_screen_text": "diffusion_models: DiT | text_encoders: encoder | vae: VAE",
+      "visual_brief": "On 'a named home' (header from prior beat), three folder cards fade in as a grid under 'ComfyUI/models/'. On 'refines noise into a picture', a DiT chip rises into the first folder. On 'reads your prompt into numbers', an encoder chip rises into the second. On 'makes your PNG', a VAE chip rises into the third. One chip animates at a time.",
+      "est_duration_s": 13.8,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Step three: open the template and press run. Templates are ready-made workflows that ship inside ComfyUI. Open MiniMax H three Image Text to Image; the graph is already wired.",
+      "on_screen_text": "Step 3: open template, run | MiniMax-H3-Image: Text to Image",
+      "visual_brief": "On 'open the template', a mock template library fades in with the row 'MiniMax-H3-Image: Text to Image' highlighted. On 'ready-made workflows', a small caption rises. On 'the graph is already wired', a compact node graph fades in beside the row.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s09",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "It starts small on purpose. Nobody has published a VRAM floor yet; VRAM is your graphics card's memory. The R T X thirty sixty stories are about MiniMax's video model from August, not this one. Watch it on the first pass.",
+      "on_screen_text": "starts small on purpose | VRAM floor: unpublished",
+      "visual_brief": "On 'starts small on purpose', a small square canvas badge rises at center. On 'Nobody has published a VRAM floor', a muted badge 'VRAM floor: unpublished' fades in beside it. On 'the first pass', a thin memory bar rises under both.",
+      "est_duration_s": 14.1
+    },
+    {
+      "id": "s10",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Headroom? Raise the resolution selector. Choking? Shrink the canvas, keep the model.",
+      "on_screen_text": "headroom: raise resolution | choking: shrink canvas",
+      "visual_brief": "On 'Headroom', a left card fades in: 'headroom: raise resolution'. On 'Choking', a right card fades in: 'choking: shrink canvas'. The two cards swap emphasis as each is named.",
+      "est_duration_s": 4.1
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "There's your picture, rendered by your own GPU. No server, no queue, no per-image bill. Big companies need written permission; you just needed disk space.",
+      "on_screen_text": "rendered locally | no server, no queue, no bill | license: written permission",
+      "visual_brief": "On 'There's your picture', a framed generated image scales in gently with the caption 'rendered locally'. On 'No server, no queue', a chip row fades in below. On 'Big companies', a small-print chip fades in last. Wordmark settle on the final beat.",
+      "est_duration_s": 8.6,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Numbers spent: 54.79 GB (spoken about fifty-five), 6 steps, 16 MP; downloads, parameters and versions cut to hold the smooth cap of three. No signature analogy: plain appositives carry the terms. VRAM floor hedged verbatim from Unverified. RTX 3060 folklore omitted.",
+  "tags": [
+    "miniMax h3 image",
+    "comfyui minimax h3",
+    "comfyui tutorial",
+    "minimax h3 comfyui",
+    "local image generation",
+    "comfyui workflow",
+    "minimax image model",
+    "open weights image model",
+    "ai image generation local",
+    "run ai models locally",
+    "comfyui custom nodes",
+    "minimax h3 install",
+    "comfyui setup",
+    "local ai gpu",
+    "int8 quantization",
+    "text to image local",
+    "comfyui models folder",
+    "hugging face comfyui",
+    "best local image model",
+    "minimax h3 vram"
+  ]
+}
