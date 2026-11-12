@@ -1,0 +1,102 @@
+{
+  "slug": "2026-11-12-deepseek-coder-v2-lite-on-a-6g",
+  "topic": "DeepSeek-Coder-V2-Lite sub-5GB rebuild running on a 6GB GPU",
+  "title": "DeepSeek-Coder-V2-Lite on a 6GB GPU: 65 tok/s",
+  "description": "Working description; the package stage overwrites this. A rebuilt sub-5GB GGUF fits DeepSeek-Coder-V2-Lite entirely in 6GB of VRAM.",
+  "hashtags": [
+    "#DeepSeekCoder",
+    "#LocalAI",
+    "#Ollama"
+  ],
+  "tags": [
+    "deepseek coder v2 lite",
+    "deepseek coder",
+    "deepseek local",
+    "6gb gpu ai",
+    "run llm on 6gb vram",
+    "gguf quantization",
+    "ollama gguf",
+    "ollama modelfile",
+    "local coding assistant",
+    "continue dev ollama",
+    "local ai coding",
+    "rtx 4050 llm",
+    "llama.cpp 6gb",
+    "small vram llm",
+    "mixture of experts explained",
+    "local llm coding box"
+  ],
+  "hook_text": "Your GPU isn't too small",
+  "hook_candidates": [
+    "Sixty-five tokens a second from a card you shelved.",
+    "Your old GPU isn't too small for DeepSeek.",
+    "Your old card can still code with DeepSeek.",
+    "A sixteen-billion model on your six-gig card.",
+    "Six gigabytes of VRAM runs a sixteen-billion-parameter coder.",
+    "Sixty-five tokens a second, no cloud tab involved.",
+    "That old card isn't done coding. Quantize smarter.",
+    "Stop paying for a coding tab. Your card quit retirement.",
+    "DeepSeek codes on six gigabytes of VRAM. Fully.",
+    "Your browser tab codes slower than your old GPU can."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,PROVES",
+  "target_duration_s": 39,
+  "narration_full": "Your old GPU isn't too small for DeepSeek. The rebuilt file: four point eight three gigabytes of weights. One author ran every layer on a six-gigabyte laptop card. The speed: sixty-five to seventy-six tokens a second. The belief it breaks: big models need big cards. DeepSeek Coder V two Lite does store sixteen billion parameters. Two point four billion wake per word. Mixture of experts: many specialists, few called per word. Memory pays them all. The rebuild rounds weights down and cuts the ten least-called experts. The myth survives: nobody re-measured the pruned file's accuracy, and that speed is one self-reported run. Your card wasn't too small; the file was too big.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your old GPU isn't too small for DeepSeek. The rebuilt file: four point eight three gigabytes of weights.",
+      "on_screen_text": "Your GPU isn't too small | then: 4.83 GB",
+      "visual_brief": "Silicon style, dark board, amber traces. Frame 1 composition finished and legible: GPU slab, centered text 'Your GPU isn't too small'. Motion onset at 0.4 s: an amber trace pulses across the slab. On 'four point eight three gigabytes' a file chip labeled 4.83 GB scales in place beside the slab and a thin VRAM bar fills to that mark. Max two moving elements.",
+      "est_duration_s": 6.3
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "One author ran every layer on a six-gigabyte laptop card. The speed: sixty-five to seventy-six tokens a second. The belief it breaks: big models need big cards.",
+      "on_screen_text": "6 GB, all on the card | 65.6-76.3 tok/s | one author's run",
+      "visual_brief": "Split-compare. Left: laptop GPU slab marked 6 GB; on 'every layer' all layer tiles light amber and caption 'all on the card' rises. Right: on 'sixty-five to seventy-six' a counter rises to 65.6-76.3 tok/s, small caption 'one author's run'. On 'the belief it breaks', both sides fade fully out, then 'big models need big cards' rises alone, centered.",
+      "est_duration_s": 9.4
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "DeepSeek Coder V two Lite does store sixteen billion parameters. Two point four billion wake per word. Mixture of experts: many specialists, few called per word. Memory pays them all.",
+      "on_screen_text": "16B stored | 2.4B awake per word",
+      "visual_brief": "Diagram-flow. A slab of small expert tiles labeled '16B stored'. On 'two point four billion wake per word' a router dot hops token to token, lighting only a few tiles per hop; '2.4B awake' fades in. On 'memory pays for them all' an amber outline wraps the whole slab, dark tiles included, and the caption 'memory pays for all' scales in as the earlier caption fades.",
+      "est_duration_s": 10.1
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The rebuild rounds weights down and cuts the ten least-called experts.",
+      "on_screen_text": "MAPLE rebuild: 4.50 GB | -10 experts per layer",
+      "visual_brief": "Grid of expert tiles on dark silicon. On 'rounds weights down' the long decimal labels on each tile shorten to a few digits, fading in place. On 'cuts the ten least-called experts' the ten dimmest tiles in a row go dark and rise slightly away; caption '-10 experts per layer' fades in. Two moving elements max, no edge motion.",
+      "est_duration_s": 3.8
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The myth survives: nobody re-measured the pruned file's accuracy, and that speed is one self-reported run. Your card wasn't too small; the file was too big.",
+      "on_screen_text": "your 6 GB card | the 4.83 GB file",
+      "visual_brief": "Centered-stack. On 'the myth survives' line one rises: 'accuracy: never re-measured'. On 'one self-reported run' line two rises beneath it: 'speed: one self-reported run'. Both fade. On 'your card wasn't too small' that line rises alone; on 'the file was too big' it fades and the payoff line rises larger in amber. Then the channel wordmark settles below, visual only, as narration ends.",
+      "est_duration_s": 9.0
+    }
+  ],
+  "notes_for_review": "Speed figure is one author's self-reported run on an RTX 4050 6GB laptop GPU; pruned container accuracy was never re-measured. Both are hedged in narration."
+}
