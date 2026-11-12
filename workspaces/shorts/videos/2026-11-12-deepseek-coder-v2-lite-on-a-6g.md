@@ -2,14 +2,14 @@
 slug: 2026-11-12-deepseek-coder-v2-lite-on-a-6g
 workspace: shorts
 title: DeepSeek Coder V2 Lite on a 6GB GPU
-status: building
+status: review
 pillar: comparison
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-12
-updated: "2026-11-12T13:30:10Z"
+updated: "2026-11-12T13:53:59Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-script|script]] · [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-storyboard.json|storyboard]] · [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-drafts|drafts]]
 - Package: [[stages/05-package/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-package|package]]
 - Voice: [[stages/06-voice/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-narration|narration.txt]] (normalized; stage 06 fills audio)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -45,3 +45,6 @@ blotato_post_id: ""
 - 2026-11-12T13:26:44Z decision: searchable title over intriguing; product-query search surface; variants avoid the hook wording
 - 2026-11-12T13:30:10Z build start on gn100-83c4
 - 2026-11-12T13:31:10Z 06-voice ok 57s
+- 2026-11-12T13:36:17Z 07-render fail 303s (07-render: scene s1 did not pass safe_zone_check after 5 rounds)
+- 2026-11-12T13:54:06Z 07-render ok 39.23s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 347
+- 2026-11-12T13:54:06Z 07-render ok 1068s
