@@ -1,0 +1,202 @@
+{
+  "slug": "2026-11-12-deepseek-coder-v2-lite-on-a-6g",
+  "topic": "DeepSeek-Coder-V2-Lite on a 6GB GPU: 65 tok/s",
+  "generated_at": "2026-11-12T12:50:00Z",
+  "depth": "standard",
+  "thesis": "A community rebuild squeezes the 16B-parameter DeepSeek-Coder-V2-Lite into a 4.50 GB file that fits entirely in 6GB of VRAM and generates at 65.6 - 76.3 Tokens/Second, turning an old gaming card into a local coding box.",
+  "explanation_path": "Start with what the viewer's card actually has: 6GB of VRAM, with the desktop already eating a slice of it. Establish that this model is a mixture of experts before any speed number lands: 16B parameters stored, 2.4B consulted per token, and the catch that memory follows the stored number, not the active one. Show the wall: official quantized files run 8.57 GB to 16.0 GB, so pieces get offloaded to the CPU over PCIe and generation drops to 4.5 - 10.0 tokens per second, which is why the viewer wrote the card off. Then the move: quantization alone cannot get under 6GB at usable quality, so the MAPLE rebuild additionally drops the 10 least-used experts per layer, producing a container the card can hold entirely, at which point the same class of card generates at 65.6 - 76.3 Tokens/Second. Prove the model was worth saving with the paper's 81.1% HumanEval Python tie with Llama3-Instruct 70B, then hand over the tonight path: download the GGUF, point an Ollama Modelfile at it, ollama create, and wire it into Continue as the autocomplete model. Close on the honest catch: one self-reported run on one RTX 4050 laptop, and the pruned container has never been re-benchmarked.",
+  "claims": [
+    {
+      "claim": "DeepSeek-Coder-V2-Lite is a Mixture-of-Experts model with 16B total parameters, 2.4B active parameters per token, and a 128k context length.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "source_title": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "The Lite-Instruct model scores 81.1% on HumanEval Python, tying Llama3-Instruct 70B (81.1%), and 68.8% on MBPP+, for a 65.6% multi-language average.",
+      "source_url": "https://arxiv.org/html/2406.11931v1",
+      "source_title": "DeepSeek-Coder-V2 paper (HTML v1), Table 3",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "Standard GGUF quants of this model do not fit 6GB: the recommended Q4_K_M file is 10.36GB, and even the smallest bartowski file, IQ2_XS at 5.96GB, is labeled very low quality.",
+      "source_url": "https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+      "source_title": "Llamacpp imatrix Quantizations of DeepSeek-Coder-V2-Lite-Instruct",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "The MAPLE Sub-5GB rebuild reports a 4.50 GB container running 100% in-VRAM on an RTX 4050 6GB Laptop GPU with 0 layers offloaded to the CPU, generating at 65.6 - 76.3 Tokens/Second.",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF",
+      "source_title": "DeepSeek-Coder-V2-Lite-Instruct MAPLE (Sub-5GB GGUF)",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "The same page measures the offloaded alternative: splitting the model's 27 MoE layers across PCIe Gen 4 x8 throttles generation to 4.5 - 10.0 tokens per second.",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF",
+      "source_title": "DeepSeek-Coder-V2-Lite-Instruct MAPLE (Sub-5GB GGUF)",
+      "source_quality": "benchmark",
+      "confidence": "medium",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "The actual file in the MAPLE repo, DeepSeek-Coder-V2-Lite-MAPLE-Sub5GB.gguf, is 4.83 GB, not the 4.50 GB the model card headline states, though still under the 5GB target.",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF/tree/main",
+      "source_title": "Files in AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "Ollama's official library ships deepseek-coder-v2 with the 16b model at 8.9GB and a 160K context window, runnable with one command.",
+      "source_url": "https://ollama.com/library/deepseek-coder-v2",
+      "source_title": "deepseek-coder-v2, Ollama model library",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "Ollama can import any GGUF directly: a Modelfile with the line FROM ./ollama-model.gguf, then ollama create with that Modelfile.",
+      "source_url": "https://docs.ollama.com/modelfile",
+      "source_title": "Modelfile Reference, Ollama Docs",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "Continue's autocomplete can run on a local Ollama model: add it to the config with the autocomplete role.",
+      "source_url": "https://docs.continue.dev/customize/deep-dives/autocomplete",
+      "source_title": "Continue Autocomplete Setup and Configuration Guide",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    },
+    {
+      "claim": "The code is MIT licensed and the model weights carry the DeepSeek Model License, which supports commercial use.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "source_title": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-12"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "total parameters",
+      "value": "16B",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+    },
+    {
+      "label": "active parameters per token",
+      "value": "2.4B",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+    },
+    {
+      "label": "context length",
+      "value": "128k",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+    },
+    {
+      "label": "MAPLE container size (card claim)",
+      "value": "4.50 GB",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF"
+    },
+    {
+      "label": "MAPLE GGUF actual file size",
+      "value": "4.83 GB",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF/tree/main"
+    },
+    {
+      "label": "generation speed, RTX 4050 6GB, 100% in-VRAM",
+      "value": "65.6 - 76.3 Tokens/Second",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF"
+    },
+    {
+      "label": "generation speed, official quants, hybrid CPU offload",
+      "value": "4.5 - 10.0 tokens per second",
+      "source_url": "https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF"
+    },
+    {
+      "label": "HumanEval Python, DS-Coder-V2-Lite-Instruct",
+      "value": "81.1%",
+      "source_url": "https://arxiv.org/html/2406.11931v1"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Workshop on call",
+      "mapping": "A workshop with 64 specialists on payroll; only 6 (plus 2 all-rounders) touch any given job, but all 64 must be present to be callable. Stored parameters are the payroll (VRAM), active parameters are who actually touches the job; MAPLE retires the 10 least-called specialists so the payroll fits the building.",
+      "limit": "A retired specialist was the only one who knew a rare task, which is exactly the accuracy cost nobody re-measured."
+    },
+    {
+      "vehicle": "Compressed moving truck",
+      "mapping": "Quantization is packing everything into a smaller truck by using rougher boxes; expert pruning is leaving the least-used furniture behind entirely. Both shrink the load (file size) so it fits one truck (6GB VRAM) instead of shuttling back and forth (PCIe offload).",
+      "limit": "The rougher boxes or the left-behind furniture turn out to be things you needed, and quality drops in ways the packing list cannot show."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "A model with 16B parameters needs a 16GB+ card.",
+      "reality": "All 16B do sit in memory, but a 4.50 GB pruned container holds the whole model on a 6GB card with 0 layers offloaded (claims 3, 4, 6)."
+    },
+    {
+      "myth": "Only 2.4B active parameters means it cannot really code.",
+      "reality": "The paper puts Lite-Instruct at 81.1% on HumanEval Python, tied with Llama3-Instruct 70B at 81.1% (claim 2)."
+    },
+    {
+      "myth": "Offloading a few layers to the CPU is a small tax.",
+      "reality": "The measured cost is a fall from 65.6 - 76.3 Tokens/Second in-VRAM to 4.5 - 10.0 tokens per second across PCIe (claims 4, 5)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "mixture of experts",
+      "definition": "A model design that stores many specialist sub-networks and routes each token through only a few of them."
+    },
+    {
+      "term": "active parameters",
+      "definition": "The portion of a model's weights actually consulted to produce one token."
+    },
+    {
+      "term": "quantization",
+      "definition": "Storing model weights at lower numeric precision to shrink the file, trading some quality for size."
+    },
+    {
+      "term": "GGUF",
+      "definition": "The single-file format that llama.cpp-based tools such as Ollama and LM Studio load local models from."
+    },
+    {
+      "term": "tokens per second",
+      "definition": "How many chunks of text a model generates each second; the number that decides whether local feels usable."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The working memory a model keeps of everything it has read so far, which grows as context grows."
+    }
+  ],
+  "unverified": [
+    "The 65.6 - 76.3 Tokens/Second figure is one author's self-reported run on one RTX 4050 laptop GPU and no independent benchmark has reproduced it.",
+    "No HumanEval or MBPP score exists for the pruned MAPLE container, so the accuracy cost of dropping 10 of 64 routed experts per layer is unknown.",
+    "Generation speed on other 6GB-class cards (GTX 1060 6GB, RTX 2060 6GB, RTX 3050 6GB) has not been measured in any page fetched for this brief.",
+    "Tab-autocomplete latency for this container, the time to first token on a single completion, has not been measured anywhere fetched."
+  ],
+  "suggested_outline": "An old 6GB card runs a 16B-parameter coding model at 65.6 - 76.3 Tokens/Second, and the trick is what got deleted, not overclocking.\nMeet the model: 16B parameters stored, only 2.4B awake per token, 128k context, free for commercial use.\nWhy your card chokes: every expert lives in VRAM, official quants run 8.57 GB to 16.0 GB, the spill crosses PCIe and generation collapses to 4.5 - 10.0 tokens per second.\nThe fix: quantization alone cannot get there, so the rebuild also retires the 10 least-used experts per layer and the whole model plus its KV cache stays on the GPU.\nProof the model was worth saving: 81.1% on HumanEval Python, level with Llama3-Instruct 70B.\nDo it tonight: download the GGUF, write a one-line Modelfile, ollama create, ollama run, then give Continue the autocomplete role.\nThe honest catch: one self-reported laptop run, the pruned model was never re-scored, and your card may differ.",
+  "notes": "Source conflict on size: the MAPLE model card headline says the container is 4.50 GB but the repo file tree lists DeepSeek-Coder-V2-Lite-MAPLE-Sub5GB.gguf at 4.83 GB; trust the file tree, since it reflects the artifact actually downloaded, and both values stay under the 5GB target and under the roughly 5,340 MB of usable VRAM the card claims after the desktop takes its share. All speed numbers (65.6 - 76.3 Tokens/Second in-VRAM, 4.5 - 10.0 tokens per second offloaded) come from the MAPLE author's own measurements on a single RTX 4050 6GB Laptop GPU with method and nvidia-smi output shown; treat them as one benchmark, not a guarantee, which is why confidence is medium and the reproduction gap is listed under Unverified. The paper was submitted 17 Jun 2024 (arXiv abstract page, fetched this run), matching the Ollama library page showing the model updated about 2 years ago. The ggml-org GGUF repo URL 404'd this session, so bartowski's repo serves as the official-quant size reference.",
+  "viewer_situation": "Your PC has an aging 6GB graphics card you already decided is too small for real AI, so coding help means a browser tab to a cloud chat bot.",
+  "has_process": true,
+  "process_steps": [
+    "Download DeepSeek-Coder-V2-Lite-MAPLE-Sub5GB.gguf (4.83 GB) from the Hugging Face repo.",
+    "Install Ollama and save a one-line Modelfile whose FROM line points at the downloaded .gguf file.",
+    "Run ollama create to build the local model from that Modelfile.",
+    "Run ollama run to chat with the model and watch VRAM usage to confirm it stays on the GPU.",
+    "Install the Continue extension in VS Code and add the model to its config with the autocomplete role."
+  ],
+  "objection": "One author's self-reported run on one laptop GPU is not a promise about your card, and dropping 10 experts per layer plausibly costs coding accuracy that nobody re-measured."
+}
