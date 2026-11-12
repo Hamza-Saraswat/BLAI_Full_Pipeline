@@ -1,0 +1,37 @@
+{
+  "full": "Your old GPU isn't too small for deep seek. The rebuilt file: four point eight three gigabytes of weights. One author ran every layer on a six-gigabyte laptop card. The speed: sixty-five to seventy-six tokens a second. The belief it breaks: big models need big cards. deep seek Coder V two Lite does store sixteen billion parameters. Two point four billion wake per word. Mixture of experts: many specialists, few called per word. Memory pays them all. The rebuild rounds weights down and cuts the ten least-called experts. The myth survives: nobody re-measured the pruned file's accuracy, and that speed is one self-reported run. Your card wasn't too small; the file was too big.",
+  "words": 114,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "Your old GPU isn't too small for deep seek. The rebuilt file: four point eight three gigabytes of weights.",
+      "words": 19,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "One author ran every layer on a six-gigabyte laptop card. The speed: sixty-five to seventy-six tokens a second. The belief it breaks: big models need big cards.",
+      "words": 27,
+      "changed": false
+    },
+    {
+      "id": "s3",
+      "text": "deep seek Coder V two Lite does store sixteen billion parameters. Two point four billion wake per word. Mixture of experts: many specialists, few called per word. Memory pays them all.",
+      "words": 31,
+      "changed": true
+    },
+    {
+      "id": "s4",
+      "text": "The rebuild rounds weights down and cuts the ten least-called experts.",
+      "words": 11,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "The myth survives: nobody re-measured the pruned file's accuracy, and that speed is one self-reported run. Your card wasn't too small; the file was too big.",
+      "words": 26,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
