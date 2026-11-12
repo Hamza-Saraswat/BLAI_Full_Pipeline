@@ -2,14 +2,14 @@
 slug: 2026-11-11-minimax-h3-image-in-comfyui-lo
 workspace: shorts
 title: Install MiniMax H3-Image in ComfyUI
-status: review
+status: expired
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-11
-updated: "2026-11-11T14:08:29Z"
+updated: "2026-11-12T14:35:00Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-11-11T14:08:53Z 07-render ok 110.50s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 345
 - 2026-11-11T14:08:53Z 07-render ok 2124s
 - 2026-11-11T14:09:01Z build done, status review
+- 2026-11-12T14:35:00Z 2026-11-12T14:35:00Z expired: not from today's picks (2026-11-12); the factory carries no backlog

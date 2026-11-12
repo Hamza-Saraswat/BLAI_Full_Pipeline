@@ -2,14 +2,14 @@
 slug: 2026-11-11-qwen4-max-preview-no-weights-n
 workspace: shorts
 title: "Qwen4-Max preview: no weights, nothing to run"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-11
-updated: "2026-11-11T12:10:35Z"
+updated: "2026-11-12T14:35:00Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-12T14:35:00Z 2026-11-12T14:35:00Z expired: not from today's picks (2026-11-12); the factory carries no backlog
