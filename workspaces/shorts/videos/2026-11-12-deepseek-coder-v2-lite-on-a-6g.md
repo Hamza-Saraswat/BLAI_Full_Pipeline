@@ -2,14 +2,14 @@
 slug: 2026-11-12-deepseek-coder-v2-lite-on-a-6g
 workspace: shorts
 title: "DeepSeek-Coder-V2-Lite on a 6GB GPU: 65 tok/s"
-status: idea
+status: researched
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-11-12
-updated: "2026-11-12T12:08:22Z"
+updated: "2026-11-12T12:51:50Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-12-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-12-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -37,4 +37,5 @@ blotato_post_id: ""
 - Top scorer llama.cpp (98.1) discarded: same product and angle as the 2026-11-07 Short, inside the 30-day window.
 
 ## Build journal
-
+- 2026-11-12T12:51:50Z 03-research ok: 11 sources, 10 claims, validator exit 0
+- 2026-11-12T12:51:50Z decision: angle confirmed as picked (sub-5GB GGUF on 6GB GPU); no redirect, no swap in picks
