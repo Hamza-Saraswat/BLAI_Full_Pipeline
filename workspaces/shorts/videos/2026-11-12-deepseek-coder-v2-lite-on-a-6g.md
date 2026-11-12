@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-12T13:26:44Z 05-package ok: searchable title (35c, kw first), desc 677B, rubric 100/100, check_outputs clean, manifest parses
 - 2026-11-12T13:26:44Z decision: searchable title over intriguing; product-query search surface; variants avoid the hook wording
 - 2026-11-12T13:30:10Z build start on gn100-83c4
+- 2026-11-12T13:31:10Z 06-voice ok 57s
