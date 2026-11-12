@@ -2,19 +2,19 @@
 slug: 2026-11-12-deepseek-coder-v2-lite-on-a-6g
 workspace: shorts
 title: DeepSeek Coder V2 Lite on a 6GB GPU
-status: ready-to-build
+status: building
 pillar: comparison
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-12
-updated: "2026-11-12T13:26:44Z"
+updated: "2026-11-12T13:30:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-11-12T13:24:24Z decision: hooks 2 and 3 picked from 10; avoided number-shock/tonight patterns used by the last two shipped scripts
 - 2026-11-12T13:26:44Z 05-package ok: searchable title (35c, kw first), desc 677B, rubric 100/100, check_outputs clean, manifest parses
 - 2026-11-12T13:26:44Z decision: searchable title over intriguing; product-query search surface; variants avoid the hook wording
+- 2026-11-12T13:30:10Z build start on gn100-83c4
