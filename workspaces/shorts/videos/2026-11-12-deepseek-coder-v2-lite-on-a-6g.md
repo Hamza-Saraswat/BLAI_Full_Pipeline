@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-12-deepseek-coder-v2-lite-on-a-6g
 workspace: shorts
-title: "DeepSeek-Coder-V2-Lite on a 6GB GPU: 65 tok/s"
-status: scripted
+title: DeepSeek Coder V2 Lite on a 6GB GPU
+status: ready-to-build
 pillar: comparison
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-12
-updated: "2026-11-12T13:24:24Z"
+updated: "2026-11-12T13:26:44Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-12-ideas]]
 - Research: [[stages/03-research/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-brief]]
 - Script: [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-script|script]] · [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-storyboard.json|storyboard]] · [[stages/04-script/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-drafts|drafts]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-package|package]]
+- Voice: [[stages/06-voice/output/2026-11-12-deepseek-coder-v2-lite-on-a-6g-narration|narration.txt]] (normalized; stage 06 fills audio)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 2026-11-12T12:51:50Z decision: angle confirmed as picked (sub-5GB GGUF on 6GB GPU); no redirect, no swap in picks
 - 2026-11-12T13:24:24Z 04-script ok: B (myth-bust) 23/24 over A (worked-example) 19/24; validator 0/0; eval gates pass (entity_spend soft advisory kept); variety ok 5 comparisons
 - 2026-11-12T13:24:24Z decision: hooks 2 and 3 picked from 10; avoided number-shock/tonight patterns used by the last two shipped scripts
+- 2026-11-12T13:26:44Z 05-package ok: searchable title (35c, kw first), desc 677B, rubric 100/100, check_outputs clean, manifest parses
+- 2026-11-12T13:26:44Z decision: searchable title over intriguing; product-query search surface; variants avoid the hook wording
