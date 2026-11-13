@@ -45,7 +45,7 @@ GitHub Packages downloads:
 | Last 30 days | 399,743 |
 | Downloads | 2,397,301 |
 | Analytics install events (30 days) | 35,078 |
-| Downloads / install events (30 days) | 11.4x |
+| Downloads / install events (30 days) | 11.4× |
 
 Analytics:
 
@@ -53,6 +53,6 @@ Analytics:
 | Installs | 34,821 | 81,871 | 341,567 |
 | Installs (--HEAD) | 257 | 716 | 3,274 |
 | Installs on Request | 19,145 | 54,459 | 286,573 |
-| Installs on Request (--HEAD) | 253 | 709 | 2,665 |
+| Installs on Request (--HEAD) | 253 | 709 | 3,265 |
 | Build Errors (--HEAD) | 347 |  |  |
 | Build Errors | 68 |  |  |
