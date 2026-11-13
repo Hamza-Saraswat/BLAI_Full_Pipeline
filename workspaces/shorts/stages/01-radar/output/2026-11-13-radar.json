@@ -1,0 +1,896 @@
+[
+  {
+    "id": "github-c1bbc4a3ea",
+    "title": "llama.cpp v1.0.0",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0",
+    "source": "github",
+    "published_at": "2026-11-13T10:20:19Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "v1.0.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9761,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [
+        "hn"
+      ],
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "## Overview New version has been released. > [!NOTE] > More info at 3PM CET ## Assets **Nightly build:** [b12359](https://github.com/ggml-org/llama.cpp/releases/tag/b12359) ## More info - [Releases and versioning of `ggml-org` projects](https://github.com/ggml-org/ggml/discussions/1579) ## Changelog",
+    "why_now": "Shipped: ggml-org/llama.cpp v1.0.0 released, 2 h ago",
+    "score": 78
+  },
+  {
+    "id": "github-d84ecafc53",
+    "title": "llama.cpp b12359",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12359",
+    "source": "github",
+    "published_at": "2026-11-13T10:21:06Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12359",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9763,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> examples : remove explict version from test-cmake (#32191) This commit removes the llama version test-cmake and instead uses the version that is supplied by CMAKE_PREFIX_PATH. The motivation for this is to avoid issues when bumping major versions. </details> **Website:** - <https://ll",
+    "why_now": "Shipped: ggml-org/llama.cpp b12359 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-c63e64fc08",
+    "title": "llama.cpp b12360",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12360",
+    "source": "github",
+    "published_at": "2026-11-13T10:02:27Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12360",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9719,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA"
+    ],
+    "summary": "<details open> CUDA: split the PAD_REFLECT_1D grid to stay within the HIP grid limit (#32179) The kernel launches one block per row and 256-wide tile, so the {2, 16777217} test case asks for 16777217 blocks of 256 threads. HIP refuses a grid dimension above 2^32 threads and the ROCm jobs fail with \"",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12360 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "hn-217499e0c2",
+    "title": "Show HN: Kapso - Iterative learning from enterprise data",
+    "url": "https://news.ycombinator.com/item?id=50471281",
+    "source": "hn",
+    "published_at": "2026-11-12T17:51:23Z",
+    "signals": {
+      "points": 47,
+      "num_comments": 11,
+      "signal": 0.623,
+      "signal_parts": {
+        "points": 0.678,
+        "comments": 0.495
+      },
+      "decay": 0.7694,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Meta",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Meta"
+    ],
+    "summary": "Hey HN! We&#x27;re Alireza and Majid building Leeroo (<a href=\"https:&#x2F;&#x2F;leeroo.com&#x2F;\">https:&#x2F;&#x2F;leeroo.com&#x2F;</a>). Previously we’ve built AI systems for products with millions of users, including at LinkedIn and Meta. We’re now focusing on building AI systems for enterprise",
+    "why_now": "Shipped: 47 points, 11 comments on HN, 18 h ago",
+    "score": 41
+  },
+  {
+    "id": "hn-cb7c9a827e",
+    "title": "Ask HN: Why use Jev/decision models at all?",
+    "url": "https://news.ycombinator.com/item?id=50470591",
+    "source": "hn",
+    "published_at": "2026-11-12T17:07:57Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 8,
+      "signal": 0.37,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.438
+      },
+      "decay": 0.7614,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Honest question. Jev seems to cost 10x as much as Deepseek and I can easily just put the same payload to Deepseek and add &quot;follow this strict format ...&quot;. What am I missing?",
+    "why_now": "Measured: 6 points, 8 comments on HN, 19 h ago",
+    "score": 39
+  },
+  {
+    "id": "hn-2fea93e3b0",
+    "title": "CyberGate - vLLM plugin to unlock cybersecurity without weight edits",
+    "url": "https://github.com/kncshw/cybergate",
+    "source": "hn",
+    "published_at": "2026-11-13T00:52:32Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 0,
+      "signal": 0.255,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.0
+      },
+      "decay": 0.8514,
+      "age_h": 11.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 7 points, 0 comments on HN, 11 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-41d31b530c",
+    "title": "Compress any LLM 3x in one click, near-lossless, vLLM successor",
+    "url": "https://ecosistemastartup.com/spectra-comprime-llms-3x-en-menos-de-50-mb-de-ram/",
+    "source": "hn",
+    "published_at": "2026-11-12T16:53:48Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 2,
+      "signal": 0.285,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.219
+      },
+      "decay": 0.7588,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Measured: 5 points, 2 comments on HN, 19 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-f7b4f66f92",
+    "title": "Llama.cpp: 6.5x faster prompt processing on Arm with a NEON kernel",
+    "url": "https://github.com/hardwiredagent/silicon-forge-arm-neon-study",
+    "source": "hn",
+    "published_at": "2026-11-13T10:28:36Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9781,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 2 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-582f347047",
+    "title": "Dear DeepSeek engineer",
+    "url": "https://critisticuffs.org/texts/dear-deepseek-engineer",
+    "source": "hn",
+    "published_at": "2026-11-13T09:58:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9709,
+      "age_h": 2.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 2 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-63660eaecf",
+    "title": "Show HN: Chap - Meeting notes from live captions (no bot) with any LLM or agent",
+    "url": "https://chatpanel.net/",
+    "source": "hn",
+    "published_at": "2026-11-13T06:31:06Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9237,
+      "age_h": 5.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google",
+      "Claude",
+      "Apple"
+    ],
+    "summary": "Chap is an AI Agent that is botless in capturing meeting notes (zoom, google meet, teams, webex) and a linked notebook (AI note taking), on any model or agent (claude code, codex and any CLI agents(opencode, hermes etc.), works with even apple intelligence models or webllm or local&#x2F;remote model",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 5 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-466f567ad7",
+    "title": "What do you think about Microsoft future? // Microsoft products down",
+    "url": "https://news.ycombinator.com/item?id=50481829",
+    "source": "hn",
+    "published_at": "2026-11-13T11:09:40Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 3,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.276
+      },
+      "decay": 0.9878,
+      "age_h": 0.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft"
+    ],
+    "summary": "The outage in the microsoft tech and still down. I and still confused, microsoft layed of people and suddendly things went down lol",
+    "why_now": "Broke: 4 points, 3 comments on HN, 1 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-c96e3ca670",
+    "title": "Qwen3.8 re-educated with a more Western worldview",
+    "url": "https://www.theregister.com/ai-and-ml/2026/11/13/alibabas-qwen38-re-educated-with-a-more-western-worldview/5309555",
+    "source": "hn",
+    "published_at": "2026-11-13T03:57:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8902,
+      "age_h": 8.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-7d9ca88b6a",
+    "title": "Doubling LLM token rates in ComfyUI",
+    "url": "https://blog.comfy.org/p/doubling-llm-token-rates-in-comfyui",
+    "source": "hn",
+    "published_at": "2026-11-13T02:52:50Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8765,
+      "age_h": 9.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:ComfyUI",
+      "group": "how-to"
+    },
+    "products": [
+      "ComfyUI"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-460e82877c",
+    "title": "Grow your Llama army, win the territory",
+    "url": "https://warlama.com/",
+    "source": "hn",
+    "published_at": "2026-11-12T19:50:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7918,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Llama",
+      "group": "how-to"
+    },
+    "products": [
+      "Llama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-7b815f26a5",
+    "title": "A lawyer used AI to write a report, but billed full time. What should I do?",
+    "url": "https://news.ycombinator.com/item?id=50468434",
+    "source": "hn",
+    "published_at": "2026-11-12T14:59:34Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 7,
+      "signal": 0.322,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.414
+      },
+      "decay": 0.7382,
+      "age_h": 21.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "This is not a request for legal advice, and therefore the country matters little here. I write because I am interested in hearing opinions on the moral implications of something that is bound to happen more and more often.<p>Context: A lawyer wrote a report for me. Not only was it was of poor qualit",
+    "why_now": "Discussed: 4 points, 7 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-96e39978a7",
+    "title": "Show HN: Wonderchat - A Zendesk alternative that doesn't charge per seat",
+    "url": "https://wonderchat.io/",
+    "source": "hn",
+    "published_at": "2026-11-13T06:59:21Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 2,
+      "signal": 0.236,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.219
+      },
+      "decay": 0.93,
+      "age_h": 5.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, I’m Vera, co-founder of Wonderchat.<p>We started as an AI website agent that answers customer questions from a company’s website and docs. Over time, customers kept asking for the rest of the support stack around it, so we built a helpdesk: live chat, a unified inbox for email and SMS, and a",
+    "why_now": "Shipped: 3 points, 2 comments on HN, 5 h ago",
+    "score": 19
+  },
+  {
+    "id": "hf-7838c87736",
+    "title": "moonshotai/Kimi-K3.1-Pro",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "source": "hf",
+    "published_at": "2026-11-02T04:13:51Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1996,
+      "downloads": 40953,
+      "trendingScore": 191.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.846,
+      "signal_parts": {
+        "trending": 0.692,
+        "likes": 1.0,
+        "downloads": 0.769
+      },
+      "decay": 0.05,
+      "age_h": 271.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Kimi",
+      "group": "how-to"
+    },
+    "products": [
+      "Kimi",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 2.0k likes, 41.0k downloads, trending score 191, created 2026-11-02",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 2.0k likes, 41.0k downloads, trending score 191, 11 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-22592c6fe3",
+    "title": "I let an LLM use my TUI like a user. It found multiple UX bugs",
+    "url": "https://github.com/con-dog/clingon",
+    "source": "hn",
+    "published_at": "2026-11-13T06:05:02Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.9179,
+      "age_h": 5.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 4 points, 0 comments on HN, 6 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-8b51d81350",
+    "title": "Octen-WebGR, a 4B model that memorized 200M URLs (open weights, live demo)",
+    "url": "https://huggingface.co/Octen/Octen-WebGR-4B",
+    "source": "hn",
+    "published_at": "2026-11-13T03:45:25Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.8876,
+      "age_h": 8.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 8 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-de47c18e2b",
+    "title": "The day Microsoft went dark",
+    "url": "https://onlytech.boo/incident/the-day-microsoft-went-dark-mwenfrl1",
+    "source": "hn",
+    "published_at": "2026-11-13T07:27:31Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9364,
+      "age_h": 4.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Microsoft",
+      "group": "news-react"
+    },
+    "products": [
+      "Microsoft"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 5 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-99bfc179a4",
+    "title": "Running 800B-parameter LLMs on consumer hardware with InferSSD",
+    "url": "https://wici.ai/article/running-800b-models-with-inferssd",
+    "source": "hn",
+    "published_at": "2026-11-12T17:43:16Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.7679,
+      "age_h": 18.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 0 comments on HN, 18 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-7b8473c753",
+    "title": "Show HN: AgentLeak - open-source privacy testing for multi-agent LLM systems",
+    "url": "https://github.com/Privatris/AgentLeak",
+    "source": "hn",
+    "published_at": "2026-11-13T01:36:36Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8605,
+      "age_h": 10.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 10 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-43f4406892",
+    "title": "Show HN: SayStreet - Voice shopping for blind users; the LLM never touches money",
+    "url": "https://github.com/saystreet/demo",
+    "source": "hn",
+    "published_at": "2026-11-13T00:35:25Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8479,
+      "age_h": 11.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 11 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-d349443315",
+    "title": "LLMs can learn (some) multi-step reasoning on filler tokens",
+    "url": "https://www.lesswrong.com/posts/EHkwCDAmhWPAWEziM/llms-can-learn-some-multi-step-reasoning-on-filler-tokens-2",
+    "source": "hn",
+    "published_at": "2026-11-12T22:13:42Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8195,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:tokens",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-5d6cb9a534",
+    "title": "We tracked AI key theft over 35 days. Here's what we learned",
+    "url": "https://infertrail.com/blog/llm-api-key-honeypot/",
+    "source": "hn",
+    "published_at": "2026-11-12T19:52:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.792,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-a5174793f9",
+    "title": "Show HN: ReadyStack.dev - Bit-for-bit reproducible OSS containers",
+    "url": "https://news.ycombinator.com/item?id=50469853",
+    "source": "hn",
+    "published_at": "2026-11-12T16:20:15Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7527,
+      "age_h": 19.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "<a href=\"https:&#x2F;&#x2F;readystack.dev\" rel=\"nofollow\">https:&#x2F;&#x2F;readystack.dev</a><p>If you are like me, coding LLMs made open source more important not less. A few months ago I wanted to see how far I could get using minimal LLM cost (local on two 3090s and one subscription) to automate",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-bce94443fd",
+    "title": "DistDebug-Bench: Can LLM Agents Diagnose Bugs in Distributed Systems?",
+    "url": "https://distdebug.com/",
+    "source": "hn",
+    "published_at": "2026-11-13T05:19:29Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9079,
+      "age_h": 6.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 7 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-f4ba9db136",
+    "title": "Runway releases a 27B open-weight model for controlling real robots",
+    "url": "https://runway.com/news/company-news/praxis-1-is-now-available",
+    "source": "hn",
+    "published_at": "2026-11-13T00:21:38Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8451,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 12 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-6b3f490c24",
+    "title": "Air-LLM: Broadcasting AI Weights for Edge LLM Inference via RF Computing",
+    "url": "https://arxiv.org/abs/2610.00465",
+    "source": "hn",
+    "published_at": "2026-11-12T18:16:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.774,
+      "age_h": 17.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-eb5c2d384d",
+    "title": "Improving Fuzzy Robustness in LLM Safety with Automated Red Teaming",
+    "url": "https://alignment.openai.com/fuzzy-robustness/",
+    "source": "hn",
+    "published_at": "2026-11-12T18:13:02Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7734,
+      "age_h": 17.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hf-6ae9721362",
+    "title": "thinkingmachines/Inkling-2-Small",
+    "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+    "source": "hf",
+    "published_at": "2026-11-04T19:51:05Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 173,
+      "downloads": 1064,
+      "trendingScore": 171.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.712,
+      "signal_parts": {
+        "trending": 0.677,
+        "likes": 0.747,
+        "downloads": 0.505
+      },
+      "decay": 0.05,
+      "age_h": 208.2,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 173 likes, 1.1k downloads, trending score 171, created 2026-11-04",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 173 likes, 1.1k downloads, trending score 171, 9 d ago",
+    "score": 3
+  }
+]
