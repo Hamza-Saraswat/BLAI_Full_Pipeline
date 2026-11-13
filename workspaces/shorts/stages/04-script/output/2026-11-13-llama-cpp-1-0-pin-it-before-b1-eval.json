@@ -1,0 +1,440 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-13T13:39:22+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 8,
+      "docs": 1
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 5,
+    "entities_total": 13,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.357,
+    "source_domains": [
+      "brew.sh",
+      "github.com",
+      "llama.app"
+    ],
+    "domain_diversity": 3,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.4,
+      "detail": [
+        {
+          "label": "v1.0.0 source tag created (release page asset timestamp)",
+          "value": "2026-11-13T10:20:13Z",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "b12360 pre-release source tag created",
+          "value": "2026-11-13T09:15:25Z",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "issue #32197 (build 12360 abort) opened",
+          "value": "2026-11-13T10:51:13Z",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "deprecated public API functions removed in v1.0.0",
+          "value": "35 deprecated functions",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "35",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Homebrew --HEAD build errors in 30 days (vs 68 on stable)",
+          "value": "347",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "347",
+          "scene_ids": [
+            "s03"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 13,
+      "found_count": 1,
+      "score": 0.077,
+      "found": [
+        "v1.0.0"
+      ],
+      "missing": [
+        "b1b770d",
+        "b12359",
+        "b12360",
+        "OFF",
+        "Assets",
+        "CPU-only Intel",
+        "Hugging Face",
+        "DeepSeek-V4.1-Flash-1017-UD-Q4_K_XL",
+        "AMX",
+        "NUM",
+        "vX.Y.Z",
+        "b9726"
+      ],
+      "top2": [
+        "v1.0.0",
+        "b1b770d"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "v1.0.0",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "b1b770d",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b12359",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b12360",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OFF",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Assets",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "CPU-only Intel",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Hugging Face",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash-1017-UD-Q4_K_XL",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AMX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NUM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vX.Y.Z",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b9726",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "You're not on llama.cpp 1.0",
+      "first_sentence": "You're not on llama.cpp one point oh."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 5,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 7.0,
+          "specific": true,
+          "hits": [
+            "glossary:llama.cpp",
+            "glossary:nightly build"
+          ],
+          "narration": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "glossary:llama.cpp"
+          ],
+          "narration": "This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:347"
+          ],
+          "narration": "Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors."
+        },
+        {
+          "id": "s04",
+          "role": "foreshadow",
+          "est_duration_s": 7.3,
+          "specific": true,
+          "hits": [
+            "num:35 deprecated functions"
+          ],
+          "narration": "The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 8.0,
+          "specific": true,
+          "hits": [
+            "entity:v1.0.0"
+          ],
+          "narration": "Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.1,
+      "words": 115,
+      "sentences": 12,
+      "est_speech_s": 39.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk. This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report. Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors. The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling. Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that.",
+    "on_screen": "You're not on llama.cpp 1.0 | You're not on llama.cpp 1.0 | stable tag \u2192 +1 commit \u2192 crash report | --HEAD: 347 errors | 35 deprecated functions removed | $ check your build / $ pin v1.0.0"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 5.1,
+        "words": 115,
+        "est_speech_s": 39.7,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "title 46 chars \u2014 mobile truncates ~40",
+          "FK grade 5.1 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 5,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.077,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "v1.0.0",
+          "b1b770d"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "full": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk. This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report. Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors. The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling. Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that.",
+  "words": 109,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk.",
+      "words": 19,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors.",
+      "words": 23,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling.",
+      "words": 20,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that.",
+      "words": 22,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

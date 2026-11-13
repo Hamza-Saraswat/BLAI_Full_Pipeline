@@ -2,11 +2,11 @@
 slug: 2026-11-13-llama-cpp-1-0-pin-it-before-b1
 workspace: shorts
 title: "llama.cpp 1.0: pin it before b12360 breaks you"
-status: researched
+status: scripted
 pillar: news-react
-structure: ""
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-13
 updated: "2026-11-13T12:07:34Z"
@@ -25,13 +25,17 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-13-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-13-ideas]]
 - Research: [[stages/03-research/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 04 script checkpoint 1 (unattended): structures news-react-so-what + number-first, both rotation-clear (last 2: myth-bust, how-to-three-moves); value types TEACHES + EQUIPS confirmed; promise "tell which build you run and pin the v1.0.0 tag on purpose".
+- 04 script checkpoint 2 (unattended): 10 hooks scored, picks 1 (wrong-diagnosis -> A) and 2 (number-shock -> B), different patterns per finding 12.
+- 04 gates: winner validator 0 blockers / 0 advisories; eval all hard gates pass, number_spend 2/5 heard; sameness clean (5 comparisons). Soft advisories kept with reason: entity_spend 0.077 and top2 missing b1b770d -- a commit hash is unreadable in 37 s and the viewer-facing fact is the tag; normalizer scenes_changed 0. Judge A 20-17, no grafts.
+- 04 style pack: rotation script said halftone (LRU tie-break); overruled to terminal on topic fit (llama.cpp is terminal's named row; previous pack silicon, no repeat). Recorded terminal.
 - 03 research: angle confirmed as picked ("pin the tag, don't ride master"); unattended proceed. Fan-out delegate fetched 11 sources (GitHub releases v1.0.0/b12359/b12360, bump PR #32190, issue #32197, Homebrew formula, dist/versioning docs); validator exit 0 on attempt 2 (outline as newline string). 9 claims, all with fetched URLs.
 
 ## Build journal

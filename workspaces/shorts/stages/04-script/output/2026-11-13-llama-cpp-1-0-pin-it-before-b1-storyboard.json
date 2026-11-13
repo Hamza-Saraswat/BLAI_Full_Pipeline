@@ -1,0 +1,106 @@
+{
+ "slug": "2026-11-13-llama-cpp-1-0-pin-it-before-b1",
+ "topic": "llama.cpp v1.0.0 stable tag vs the b-number nightlies: pin the tag instead of riding master",
+ "title": "llama.cpp 1.0 shipped and master already moved",
+ "description": "working value; the package stage overwrites",
+ "hashtags": [
+  "#llamacpp",
+  "#localai"
+ ],
+ "hook_text": "You're not on llama.cpp 1.0",
+ "hook_candidates": [
+  "You're not on llama.cpp one point oh. You're on a nightly build. (wrong-diagnosis, pick A)",
+  "Three hundred forty-seven build errors this month. The stable formula had sixty-eight. (number-shock, pick B)",
+  "llama.cpp just hit one point oh. The crash report landed before lunch. (named-contradiction)",
+  "Your llama.cpp update breaks itself. The track you poured does. (wrong-diagnosis)",
+  "One point oh shipped this morning. The tag is not what you're running. (named-contradiction)",
+  "Thirty-one minutes. That's how long llama.cpp one point oh stayed unbroken. (number-shock)",
+  "Ride master, get master's bugs. Tonight, pin the tag instead. (tonight)",
+  "A certified release and a collapsed scaffold, same morning. Pin the certified one. (case)",
+  "Version one point oh or build twelve thousand three sixty? One is tested. (decision)",
+  "Your build number starts with b. That letter is the whole story. (wrong-diagnosis)"
+ ],
+ "style_pack": "terminal",
+ "script_format": "classic",
+ "structure": "news-react-so-what",
+ "value_types": [
+  "TEACHES",
+  "EQUIPS"
+ ],
+ "target_duration_s": 37.0,
+ "narration_full": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk. This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report. Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors. The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling. Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that.",
+ "analogy": {},
+ "music_mood": "steady-build",
+ "scenes": [
+  {
+   "id": "s01",
+   "role": "hook",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "You're not on llama.cpp one point oh. You're on a nightly build, a daily cut of the development trunk.",
+   "on_screen_text": "You're not on llama.cpp 1.0",
+   "visual_brief": "Frame 1: terminal window, hook line 'You're not on llama.cpp 1.0' already set, amber cursor blinking; second line types on 'nightly build'",
+   "est_duration_s": 7.0
+  },
+  {
+   "id": "s02",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "timeline",
+   "narration": "This morning llama.cpp shipped its first stable tag, a snapshot frozen at one commit. One commit past it, the next nightly had a crash report.",
+   "on_screen_text": "stable tag \u2192 +1 commit \u2192 crash report",
+   "visual_brief": "Node \"stable tag\" fades in on \"first stable tag\"; \"+1 commit\" rises on \"One commit past it\"; \"crash report\" scales in on \"crash report\"",
+   "est_duration_s": 9.0
+  },
+  {
+   "id": "s03",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "split-compare",
+   "narration": "Homebrew tracked thirty days of build errors. The newest-code track logged three hundred forty-seven build errors. The stable formula logged sixty-eight build errors.",
+   "on_screen_text": "--HEAD: 347 errors",
+   "visual_brief": "Split panel; \"347\" scales on \"three hundred forty-seven build errors\", \"68\" fades on \"sixty-eight\"; caption fades on \"thirty days\"",
+   "est_duration_s": 8.3
+  },
+  {
+   "id": "s04",
+   "role": "foreshadow",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "The tag has teeth. It removed thirty-five deprecated functions, old calls marked for deletion. Code built on them stops compiling.",
+   "on_screen_text": "35 deprecated functions removed",
+   "visual_brief": "Giant \"35\" scales in on \"thirty-five deprecated functions\"; caption fades beneath on \"marked for deletion\"",
+   "est_duration_s": 7.3
+  },
+  {
+   "id": "s05",
+   "role": "payoff_close",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Tonight, check your build. A b number means you didn't choose it, so pin the tag and choose every move after that.",
+   "on_screen_text": "$ check your build / $ pin v1.0.0",
+   "visual_brief": "Command one types on \"check your build\"; command two types on \"one point oh\"; wordmark settle",
+   "est_duration_s": 8.0
+  }
+ ],
+ "hook_pattern": "wrong-diagnosis",
+ "notes_for_review": "one-commit-past claim rests on the release page commit counter; crash is one open issue on CPU-only AMX, unreproduced; Homebrew stable still 0.9.0 so the Mac pin is the source archive; wps 2.9 provisional",
+ "tags": [
+  "llama.cpp",
+  "llama cpp",
+  "llama.cpp 1.0",
+  "llama.cpp tutorial",
+  "local ai",
+  "local llm",
+  "run llm locally",
+  "homebrew llama.cpp",
+  "llama.cpp install",
+  "pin version",
+  "nightly build",
+  "stable release",
+  "llama-server",
+  "ai on your own machine",
+  "build local ai",
+  "llama cpp update"
+ ]
+}
