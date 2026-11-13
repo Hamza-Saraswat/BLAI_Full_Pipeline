@@ -2,14 +2,14 @@
 slug: 2026-11-12-deepseek-coder-v2-lite-on-a-6g
 workspace: shorts
 title: DeepSeek Coder V2 Lite on a 6GB GPU
-status: review
+status: expired
 pillar: comparison
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,PROVES"
 created: 2026-11-12
-updated: "2026-11-12T13:53:59Z"
+updated: "2026-11-13T14:35:26Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-11-12T13:54:06Z 07-render ok 39.23s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 347
 - 2026-11-12T13:54:06Z 07-render ok 1068s
 - 2026-11-12T13:54:08Z build done, status review
+- 2026-11-13T14:35:26Z 2026-11-13T14:35:26Z expired: not from today's picks (2026-11-13); the factory carries no backlog

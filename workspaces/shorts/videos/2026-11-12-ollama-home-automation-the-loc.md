@@ -2,14 +2,14 @@
 slug: 2026-11-12-ollama-home-automation-the-loc
 workspace: shorts
 title: "Ollama home automation: the local voice loop"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,REFRAMES"
 created: 2026-11-12
-updated: "2026-11-12T12:08:22Z"
+updated: "2026-11-13T14:35:26Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Lane explainer + band smooth-explainer: the pipeline needs following end to end; both bands ran yesterday but formats.json has only two, fit wins (selection-rules soft constraint, noted).
 
 ## Build journal
-
+- 2026-11-13T14:35:26Z 2026-11-13T14:35:26Z expired: not from today's picks (2026-11-13); the factory carries no backlog
