@@ -2,14 +2,14 @@
 slug: 2026-11-13-llama-cpp-1-0-pin-it-before-b1
 workspace: shorts
 title: "llama.cpp 1.0: pin the tag, not master"
-status: building
+status: review
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-13
-updated: "2026-11-13T13:43:56Z"
+updated: "2026-11-13T13:55:00Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-script]]
 - Package: [[stages/05-package/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-package]]
 - Voice: [[stages/06-voice/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-narration]] (normalized narration from stage 04; stage 06 fills audio)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -43,3 +43,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-13T13:43:56Z build start on gn100-83c4
 - 2026-11-13T13:45:39Z 06-voice ok 55s
+- 2026-11-13T13:55:05Z 07-render ok 34.70s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 350
+- 2026-11-13T13:55:05Z 07-render ok 544s
