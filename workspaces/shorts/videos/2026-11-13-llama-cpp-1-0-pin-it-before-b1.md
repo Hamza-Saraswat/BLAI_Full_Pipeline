@@ -2,7 +2,7 @@
 slug: 2026-11-13-llama-cpp-1-0-pin-it-before-b1
 workspace: shorts
 title: "llama.cpp 1.0: pin it before b12360 breaks you"
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-13-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-13-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-13-llama-cpp-1-0-pin-it-before-b1-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03 research: angle confirmed as picked ("pin the tag, don't ride master"); unattended proceed. Fan-out delegate fetched 11 sources (GitHub releases v1.0.0/b12359/b12360, bump PR #32190, issue #32197, Homebrew formula, dist/versioning docs); validator exit 0 on attempt 2 (outline as newline string). 9 claims, all with fetched URLs.
 
 ## Build journal
 
