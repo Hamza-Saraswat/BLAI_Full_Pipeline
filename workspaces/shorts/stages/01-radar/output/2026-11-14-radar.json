@@ -1,0 +1,1156 @@
+[
+  {
+    "id": "hn-10c60fc60c",
+    "title": "Unsloth Qwen3.8-27B Quantizations - Dynamic v3.1 Update",
+    "url": "https://unsloth.ai/docs/models/qwen3.8",
+    "source": "hn",
+    "published_at": "2026-11-14T00:06:04Z",
+    "signals": {
+      "points": 161,
+      "num_comments": 50,
+      "signal": 0.859,
+      "signal_parts": {
+        "points": 0.891,
+        "comments": 0.784
+      },
+      "decay": 0.8419,
+      "age_h": 11.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Changed: 161 points, 50 comments on HN, 12 h ago",
+    "score": 76
+  },
+  {
+    "id": "hn-3d3e0a33fa",
+    "title": "Show HN: Isometric SF - A pixel-art map of the SF Bay Area",
+    "url": "https://isometricsf.com/",
+    "source": "hn",
+    "published_at": "2026-11-13T17:58:37Z",
+    "signals": {
+      "points": 217,
+      "num_comments": 70,
+      "signal": 0.915,
+      "signal_parts": {
+        "points": 0.943,
+        "comments": 0.85
+      },
+      "decay": 0.7706,
+      "age_h": 18.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "Technical Write-up: <a href=\"https:&#x2F;&#x2F;www.justinchavez.com&#x2F;blog&#x2F;isometric-sf-how&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.justinchavez.com&#x2F;blog&#x2F;isometric-sf-how&#x2F;</a><p>Hi HN! Showcasing this fun project. I took 1300 square miles of the SF Bay Area from Google Pho",
+    "why_now": "Shipped: 217 points, 70 comments on HN, 18 h ago",
+    "score": 60
+  },
+  {
+    "id": "hn-d510e06f33",
+    "title": "DeepSeek Ultrafast",
+    "url": "https://github.com/basetenlabs/deepseek-ultrafast",
+    "source": "hn",
+    "published_at": "2026-11-13T17:39:03Z",
+    "signals": {
+      "points": 56,
+      "num_comments": 10,
+      "signal": 0.639,
+      "signal_parts": {
+        "points": 0.708,
+        "comments": 0.478
+      },
+      "decay": 0.767,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 56 points, 10 comments on HN, 18 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-b0d0752c41",
+    "title": "llama.cpp b12377",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12377",
+    "source": "github",
+    "published_at": "2026-11-14T09:46:55Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12377",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9682,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> spec + model: refactor DFlash based speculative decoding methods (#32016) * dflash : move the DSpark markov head and backbone graphs to dspark.cpp Move-only: build_dspark_markov_head, graph_dsv4, graph_dsv41 and graph_mistral_large4 move verbatim. build_inp_target_features and build_d",
+    "why_now": "Shipped: ggml-org/llama.cpp b12377 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-7a41a7a8c0",
+    "title": "llama.cpp b12376",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12376",
+    "source": "github",
+    "published_at": "2026-11-14T08:42:49Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12376",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9534,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "NVFP4"
+    ],
+    "summary": "<details open> Hexagon: add support for IQ2_XXS and NVFP4 (#31954) * ggml-hexagon: IQ2_XXS and NVFP4 tiled repack layouts * ggml-hexagon: IQ2_XXS HVX matmul kernel * ggml-hexagon: NVFP4 HVX matmul kernel * ggml-hexagon: NVFP4 per-tensor scale * ggml-hexagon: HMX paths for IQ2_XXS and NVFP4 * ggml-he",
+    "why_now": "Shipped: ggml-org/llama.cpp b12376 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "hn-4d0c29e8f5",
+    "title": "Ask HN: What are the most useful, concrete AI skills to independently learn?",
+    "url": "https://news.ycombinator.com/item?id=50494696",
+    "source": "hn",
+    "published_at": "2026-11-14T06:56:42Z",
+    "signals": {
+      "points": 46,
+      "num_comments": 38,
+      "signal": 0.691,
+      "signal_parts": {
+        "points": 0.675,
+        "comments": 0.73
+      },
+      "decay": 0.9293,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Specifically, what are the most useful, concrete skills to learn as an individual to take economic advantage of the advances in LLMs, agents and associated new technological capabilities?<p>What is accessible to learn just from the internet and experimentation, without a degree program, assuming a p",
+    "why_now": "Discussed: 46 points, 38 comments on HN, 5 h ago",
+    "score": 55
+  },
+  {
+    "id": "github-3ce11ff77d",
+    "title": "llama.cpp b12375",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12375",
+    "source": "github",
+    "published_at": "2026-11-14T04:14:54Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12375",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8938,
+      "age_h": 7.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Mistral",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> chat : remove mistral workaround (#32230) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/67449481> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12375/llama",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12375 released (pre-release), 8 h ago",
+    "score": 53
+  },
+  {
+    "id": "hn-58eb76e91c",
+    "title": "Show HN: Light control for MacBook charger status light (open-source)",
+    "url": "https://github.com/Getterbetter/ember/releases/tag/v1.0.1",
+    "source": "hn",
+    "published_at": "2026-11-14T00:44:58Z",
+    "signals": {
+      "points": 16,
+      "num_comments": 10,
+      "signal": 0.491,
+      "signal_parts": {
+        "points": 0.496,
+        "comments": 0.478
+      },
+      "decay": 0.8498,
+      "age_h": 11.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:MacBook",
+      "group": "news-react"
+    },
+    "products": [
+      "MacBook"
+    ],
+    "summary": "For anyone who wants to control their MacBook charger light. For me, my MacBook lives in my bedroom most nights on charge and the light is quite bright. Config allows on&#x2F;off automation with time, focus status, or persistently on&#x2F;off. Open to features &#x2F; suggestions via Github",
+    "why_now": "Shipped: 16 points, 10 comments on HN, 11 h ago",
+    "score": 50
+  },
+  {
+    "id": "hn-40e78db660",
+    "title": "Llama.cpp hits v1.0 with a native app for macOS",
+    "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+    "source": "hn",
+    "published_at": "2026-11-14T02:05:37Z",
+    "signals": {
+      "points": 22,
+      "num_comments": 3,
+      "signal": 0.467,
+      "signal_parts": {
+        "points": 0.549,
+        "comments": 0.276
+      },
+      "decay": 0.8664,
+      "age_h": 9.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "also_seen_in": [],
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 20 points, 2 comments on HN, 22 h ago",
+    "score": 49
+  },
+  {
+    "id": "hn-6d2d05a329",
+    "title": "DeepSeek V4 Pro 0813",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+    "source": "hn",
+    "published_at": "2026-11-14T00:50:33Z",
+    "signals": {
+      "points": 24,
+      "num_comments": 1,
+      "signal": 0.436,
+      "signal_parts": {
+        "points": 0.564,
+        "comments": 0.138
+      },
+      "decay": 0.8509,
+      "age_h": 11.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 24 points, 1 comments on HN, 11 h ago",
+    "score": 47
+  },
+  {
+    "id": "hn-3e742eedff",
+    "title": "My process to get 6-11X speedup running Qwen3.6 on my RTX 4090, full repo.",
+    "url": "https://github.com/me-farza/lightreason/tree/main",
+    "source": "hn",
+    "published_at": "2026-11-13T18:40:37Z",
+    "signals": {
+      "points": 17,
+      "num_comments": 8,
+      "signal": 0.486,
+      "signal_parts": {
+        "points": 0.506,
+        "comments": 0.438
+      },
+      "decay": 0.7784,
+      "age_h": 17.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "RTX 4090"
+    ],
+    "summary": "",
+    "why_now": "Measured: 17 points, 8 comments on HN, 17 h ago",
+    "score": 47
+  },
+  {
+    "id": "hn-2b5330c4df",
+    "title": "Ex-OpenAI researcher finds Blackwell signatures in open-weight models",
+    "url": "https://twitter.com/willdepue/status/2120992457630326841",
+    "source": "hn",
+    "published_at": "2026-11-14T06:50:21Z",
+    "signals": {
+      "points": 13,
+      "num_comments": 1,
+      "signal": 0.365,
+      "signal_parts": {
+        "points": 0.462,
+        "comments": 0.138
+      },
+      "decay": 0.9279,
+      "age_h": 5.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI",
+      "Blackwell"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 13 points, 1 comments on HN, 5 h ago",
+    "score": 44
+  },
+  {
+    "id": "github-c7267c9dcb",
+    "title": "transformers v5.23.0: Release v5.23.0",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0",
+    "source": "github",
+    "published_at": "2026-11-13T14:10:57Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.23.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7295,
+      "age_h": 21.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:transformer",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "# Release v5.23.0 ## New Model additions ### Inkling2 <img width=\"1200\" height=\"675\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9115e142-1be3-4f79-a51d-ea0e5c25b152\" /> Inkling 2 Small is a multimodal model from Thinking Machines Lab that accepts text and image inputs and generates ",
+    "why_now": "Shipped: huggingface/transformers v5.23.0 released, 22 h ago",
+    "score": 43
+  },
+  {
+    "id": "hf-68431e57dc",
+    "title": "Edge0/Edge0-145B-NVFP4",
+    "url": "https://huggingface.co/Edge0/Edge0-145B-NVFP4",
+    "source": "hf",
+    "published_at": "2026-11-11T05:22:51Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 238,
+      "downloads": 33819,
+      "trendingScore": 210.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.748,
+      "signal_parts": {
+        "trending": 0.704,
+        "likes": 0.793,
+        "downloads": 0.755
+      },
+      "decay": 0.3212,
+      "age_h": 78.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:NVFP4",
+      "group": "how-to"
+    },
+    "products": [
+      "NVFP4",
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 238 likes, 33.8k downloads, trending score 210, created 2026-11-11",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 238 likes, 33.8k downloads, trending score 210, 3 d ago",
+    "score": 33
+  },
+  {
+    "id": "hn-1c96c3a76a",
+    "title": "LM Studio vs. Ollama on Linux: same model files, measured on an RTX 3090",
+    "url": "https://homebrewserver.club/lm-studio-vs-ollama.html",
+    "source": "hn",
+    "published_at": "2026-11-13T18:08:58Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7725,
+      "age_h": 17.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:LM Studio",
+      "group": "comparison"
+    },
+    "products": [
+      "LM Studio",
+      "Ollama",
+      "RTX 3090"
+    ],
+    "summary": "",
+    "why_now": "Measured: 3 points, 0 comments on HN, 18 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-5d32b3df04",
+    "title": "ModelMesh - Native macOS app to shard models across Macs via Llama-RPC",
+    "url": "https://modelmesh.app/",
+    "source": "hn",
+    "published_at": "2026-11-13T14:47:45Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.736,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Llama",
+      "group": "how-to"
+    },
+    "products": [
+      "Llama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-c616cddc53",
+    "title": "Sonnet teaches Qwen to not lie !",
+    "url": "https://harlyn1.github.io/weight-space-advising-logs/",
+    "source": "hn",
+    "published_at": "2026-11-13T23:27:55Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8342,
+      "age_h": 12.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 13 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-c5ec6ec82f",
+    "title": "Not Everything Needs an LLM",
+    "url": "https://posthog.com/newsletter/decision-models",
+    "source": "hn",
+    "published_at": "2026-11-14T06:25:03Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 3,
+      "signal": 0.303,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.276
+      },
+      "decay": 0.9223,
+      "age_h": 5.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 3 comments on HN, 6 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-9543caf702",
+    "title": "Show HN: Clozemaster MCP server that turns class notes into cloze sentences",
+    "url": "https://www.youtube.com/watch?v=mN1eZl0hKTQ",
+    "source": "hn",
+    "published_at": "2026-11-13T14:48:00Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7361,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Saluton HN!<p>I&#x27;m Alex - an eng at Clozemaster - a language learning app where you learn vocab by filling in the missing word in real sentences.<p>We just shipped an MCP connector for Claude. Basically it lets Claude create collections in your account and add sentences to them. The demo is me s",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-24c17d54ca",
+    "title": "Competitively-priced EU-hosted DeepSeek: v4.1 Flash is now on Verda Inference",
+    "url": "https://verda.com/blog/deepseek-v4-1-flash",
+    "source": "hn",
+    "published_at": "2026-11-13T14:31:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7331,
+      "age_h": 21.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Changed: 2 points, 0 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-de26774a0c",
+    "title": "Show HN: Langfuse AI Gateway, open source rust gateway to trace every LLM call",
+    "url": "https://github.com/langfuse/langfuse/tree/main/ai-gateway",
+    "source": "hn",
+    "published_at": "2026-11-13T15:10:20Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 1,
+      "signal": 0.324,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.138
+      },
+      "decay": 0.74,
+      "age_h": 20.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, this is Max, Marc and Clemens, co-founders of Langfuse, the open source tool for agent &amp; observability &amp; evals (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;langfuse&#x2F;langfuse\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;langfuse&#x2F;langfuse</a>).<p>It’s been a minute since o",
+    "why_now": "Shipped: 9 points, 1 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-029f655a28",
+    "title": "Show HN: JackAI Experimenting Local Models on iPhone",
+    "url": "https://apps.apple.com/us/app/jackai-your-offline-assistant/id6833283331",
+    "source": "hn",
+    "published_at": "2026-11-13T14:47:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7359,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "Hello HN!<p>I&#x27;ve spent the last few months building solutions for friends and small businesses and creating mobile applications using Claude Code and Codex. Didn&#x27;t get as much traction as I would have hoped for.<p>Last week I spent a bit more time on running models locally on my iPhone. I",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-7e8ec09429",
+    "title": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
+    "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
+    "source": "hf",
+    "published_at": "2026-11-03T16:13:25Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 278,
+      "downloads": 96251,
+      "trendingScore": 209.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.767,
+      "signal_parts": {
+        "trending": 0.703,
+        "likes": 0.815,
+        "downloads": 0.831
+      },
+      "decay": 0.05,
+      "age_h": 259.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 278 likes, 96.3k downloads, trending score 209, created 2026-11-03",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 278 likes, 96.3k downloads, trending score 209, 11 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-597bb9a3e4",
+    "title": "Backdooring LLMs - Do you trust your AI provider?",
+    "url": "https://pgaleone.eu/ai/2026/11/14/backdooring-llms-and-trust/",
+    "source": "hn",
+    "published_at": "2026-11-14T09:20:54Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9621,
+      "age_h": 2.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 3 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-25bc6a6f6c",
+    "title": "Eliminating Nondeterminism in LLM Inference with Integer-Only Arithmetic",
+    "url": "https://nathan.rs/posts/detllm/",
+    "source": "hn",
+    "published_at": "2026-11-13T16:32:18Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7548,
+      "age_h": 19.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-5539e4974b",
+    "title": "AI Company Employees Should Unionize",
+    "url": "https://www.astralcodexten.com/p/ai-company-employees-should-unionize",
+    "source": "hn",
+    "published_at": "2026-11-12T23:19:32Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.5887,
+      "age_h": 36.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "also_seen_in": [],
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 0 comments on HN, 37 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-a5992eeb04",
+    "title": "Australian companies face 'AI washing' claims after wave of job cuts, offshoring",
+    "url": "https://www.reuters.com/business/world-at-work/australian-companies-face-ai-washing-claims-after-wave-job-cuts-offshoring-2026-11-11/",
+    "source": "hn",
+    "published_at": "2026-11-12T18:48:32Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 0,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.0
+      },
+      "decay": 0.5515,
+      "age_h": 41.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 0 comments on HN, 41 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-4d4568a780",
+    "title": "Agent Distraction",
+    "url": "https://developers.googleblog.com/agent-distraction/",
+    "source": "hn",
+    "published_at": "2026-11-14T03:47:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8879,
+      "age_h": 8.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 8 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-428761f104",
+    "title": "Show HN: Feedback/AMA MeditionBench; LLMs for mediation and conflict resolution",
+    "url": "https://news.ycombinator.com/item?id=50491841",
+    "source": "hn",
+    "published_at": "2026-11-13T23:50:03Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8386,
+      "age_h": 12.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I am the founder of Human Assisted Intelligence and I believe AI can be used to reduce polarization and improve the way people communicate and reach agreement.<p>At <a href=\"https:&#x2F;&#x2F;mediationbench.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;mediationbench.com&#x2F;</a>, there are many fron",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-8f48ce2e7d",
+    "title": "We Dislike LLM Output, Not Because of Comprehension",
+    "url": "https://ycao.net/posts/llm-comprehension-acceptance",
+    "source": "hn",
+    "published_at": "2026-11-13T23:45:46Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8378,
+      "age_h": 12.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-1b75955a0a",
+    "title": "Cooperation Between Autonomous LLM Agents in the Prisoner's Dilemma",
+    "url": "https://www.researchgate.net/publication/417439900_Cooperation_Between_Autonomous_LLM_Agents_in_the_Repeated_Prisoner%27s_Dilemma_Exploitation_Cheap_Talk_and_Reputation",
+    "source": "hn",
+    "published_at": "2026-11-13T20:46:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8025,
+      "age_h": 15.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 15 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-a739561580",
+    "title": "Rogue AI Deployments Are Probably Coming [video]",
+    "url": "https://www.youtube.com/shorts/Pnn5ZrQ7fFo",
+    "source": "hn",
+    "published_at": "2026-11-13T18:19:42Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7745,
+      "age_h": 17.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 18 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-e1b26aec50",
+    "title": "Using LLMs outside of reflection is an anti-pattern",
+    "url": "https://news.ycombinator.com/item?id=50489240",
+    "source": "hn",
+    "published_at": "2026-11-13T20:32:40Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7997,
+      "age_h": 15.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Google",
+      "group": "news-react"
+    },
+    "products": [
+      "Google"
+    ],
+    "summary": "LLMs have a great deal of value in that they are the world&#x27;s most advanced rubber duck.[1]<p>They contain all of the references[2] from Google + the ability to somewhat encourage self-evaluation and reflection. However in terms of patterns&#x2F;anti-patterns, the use of LLMs to create code with",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-1cd17d1870",
+    "title": "LLM's Play Zachtronics' SpaceChem",
+    "url": "https://spacechem.wincon.dev/",
+    "source": "hn",
+    "published_at": "2026-11-13T19:59:58Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7934,
+      "age_h": 16.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-624e149503",
+    "title": "Show HN: Open-source firmware for 2011 Bowers and Wilkins Zeppelin Air",
+    "url": "https://github.com/pawlowskialex/zd1",
+    "source": "hn",
+    "published_at": "2026-11-13T15:46:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7466,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "Just wanted to share something I&#x27;ve built.<p>It&#x27;s fully reverse engineered, running on an old 2.4 Linux kernel I found on Nokia HD-1, but with a modern all-Rust userspace. Support Airplay 2 and Snapcast. The Airplay 2 implementation synchronizes with real Apple devices down to 1ms in the m",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-374e04fddd",
+    "title": "Show HN: Agent-plan a CLI that automatically commits your agent's plans",
+    "url": "https://github.com/ghmeier/agent-plan",
+    "source": "hn",
+    "published_at": "2026-11-13T15:23:59Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7425,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "After spending quite a bit of time using various coding agents and a workflow that uses markdown-based research&#x2F;plan&#x2F;handoff documents to hold context across sessions, I kept on running into an this question of how and where to store the generated markdown. The contents are usually useful",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-c48d6b383a",
+    "title": "Im 17, Built a Swift-native LLM inference engine for Apple Silicon",
+    "url": "https://github.com/torinriley/alpaca",
+    "source": "hn",
+    "published_at": "2026-11-13T14:02:26Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.728,
+      "age_h": 22.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-0d4c8a205a",
+    "title": "Never Twice dont let the AI agent do mistake again",
+    "url": "https://clawhub.ai/cognicore-dev/skills/never-twice",
+    "source": "hn",
+    "published_at": "2026-11-13T13:23:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7213,
+      "age_h": 22.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-792a3855a8",
+    "title": "Ask HN: How do you upgrade the models you run in production?",
+    "url": "https://news.ycombinator.com/item?id=50482881",
+    "source": "hn",
+    "published_at": "2026-11-13T12:59:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.717,
+      "age_h": 23.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:ai",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "Hi! I&#x27;m an AI engineer at a Series D company. We use LLMs for basically everything: customer responses, classification, routing, clustering, etc. While most of my focus is on developing new features, writing evals for them and monitoring quality in production, I can&#x27;t help but look for opp",
+    "why_now": "Changed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-b519a56d58",
+    "title": "The Complete Guide to LLM Evaluation",
+    "url": "https://machinelearningmastery.com/the-complete-guide-to-llm-evaluation/",
+    "source": "hn",
+    "published_at": "2026-11-13T12:02:40Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7073,
+      "age_h": 24.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 24 h ago",
+    "score": 5
+  }
+]
