@@ -1,0 +1,156 @@
+{
+  "slug": "2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f",
+  "topic": "DeepSeek V4 Pro 0813 vs V4.1 Flash: which one you pull for local hardware",
+  "title": "DeepSeek V4.1 Flash vs V4 Pro 0813: Which Fits Your Machine Tonight",
+  "description": "Two DeepSeek flagships are sitting on Hugging Face, and the louder one is not the one your machine can hold: the smallest published V4 Pro 0813 file is 850 GB, while the smallest V4.1 Flash 1017 file is 233 GB. DeepSeek's own benchmark table even puts the smaller Flash ahead of the Pro on coding-agent work. You'll learn how mixture-of-experts memory math really works, what SSD streaming buys a home machine, and a one-line rule for picking tonight's download. Subscribe for weekly local-model picks, and drop your setup in the comments. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#DeepSeekV4",
+    "#LocalAI"
+  ],
+  "hook_text": "Pro or Flash? One number decides",
+  "hook_candidates": [
+    "Pro or Flash? One number decides.",
+    "Eight hundred fifty gigabytes. Two hundred thirty-three. Pick.",
+    "The bigger DeepSeek is the wrong pull tonight.",
+    "The small DeepSeek beat the big one.",
+    "One is eight hundred fifty gigabytes. Guess which fits.",
+    "Same family, same week, one runs tonight.",
+    "You've got one hundred twenty-eight gigabytes. One of these fits.",
+    "DeepSeek shipped a giant. You can't hold it.",
+    "The flagships are on the shelf. Your drive decides.",
+    "Big model, small drive. The drive wins."
+  ],
+  "style_pack": "halftone",
+  "script_format": "smooth-explainer",
+  "structure": "comparison-ladder",
+  "value_types": "EQUIPS,REFRAMES",
+  "target_duration_s": 107,
+  "narration_full": "Tonight it's DeepSeek Pro or Flash, and one number decides. You're picking between two DeepSeek downloads tonight. The Pro's smallest published file is eight hundred fifty gigabytes on disk. The Flash's smallest is two hundred thirty-three gigabytes on your drive. Both are quantized, stored at lower precision to shrink the file. One file each. Both ship as a single-file build you can run tonight. Unsloth publishes them on Hugging Face, fully open weights. Each is a mixture of experts, a model that wakes only a slice of itself per word. Those active parameters, the slice that does the work, stay small. Every expert still has to sit on your drive or in your memory. So what fits tonight? Drive streaming, pulling parts of the model from your fast drive into memory when they are needed, is the trick. On Unsloth's numbers, a big Spark-class machine holds the Flash. Nothing published yet holds the Pro. Picture a master carpenter with a rolling tool chest. The daily tools ride inside; the rare ones fetch from the store across the street, your drive. Except a router inside the model picks per word, and the fetch costs seconds instead of a trip across town. Here's the twist. On DeepSeek's own table, the Flash scores ninety point six on the terminal bench, ahead of the Pro. The smaller pull is the quality pick for coding and agents, not the compromise. The Pro still leads the world-knowledge rows, where its bigger backbone earns its keep. And if you ever rent these in DeepSeek's cloud, the Flash is the cheaper seat there too. So tonight: count your free memory. Grab the Unsloth single-file build that fits. Run it in llama dot cpp or Unsloth Desktop. Let your drive hold the overflow. Set reasoning effort to trade speed against depth. The rule to keep: your free memory picks the model. Tonight, it picks the Flash.",
+  "analogy": {
+    "vehicle": "a master carpenter with a rolling tool chest",
+    "mapping": "the Flash keeps its constantly used tools in the chest (your memory) while the rarely used ones fetch from the store across the street (your drive)",
+    "limit": "a router inside the model picks per word, not the carpenter, and the fetch costs seconds instead of a trip across town"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Tonight it's DeepSeek Pro or Flash, and one number decides.",
+      "on_screen_text": "Pro or Flash? One number decides",
+      "visual_brief": "Frame 1, fully legible: 1080x1920 halftone canvas split vertically into 'Pro' (left) and 'Flash' (right) columns flanking a thin divider, hook text 'Pro or Flash? One number decides' centered near y700 inside the safe area, all type 64 px or larger. First 8 frames hold still; motion onset at 0.35 s the divider scales up to bold amber while the hook text rises in place a few pixels (two elements max). On the phrase 'One number decides' the word 'number' gains an amber underline. No digits on screen, caption band y1260-1470 stays empty, nothing meaningful in the bottom 450 px or right 120 px.",
+      "est_duration_s": 3.4
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You're picking between two DeepSeek downloads tonight. The Pro's smallest published file is eight hundred fifty gigabytes on disk. The Flash's smallest is two hundred thirty-three gigabytes on your drive.",
+      "on_screen_text": "Pro: smallest file 850 GB | Flash: smallest file 233 GB",
+      "visual_brief": "Dark halftone field with a small drive icon top center. As narration says 'eight hundred fifty gigabytes', '850 GB' fades in giant under a 'Pro' label at center, well above 64 px. Roughly three seconds in, on 'two hundred thirty-three gigabytes', '850 GB' scales down and settles left while '233 GB' rises in place at center under a 'Flash' label in amber, glowing softly on the word 'smallest'. Both numbers stay up as the rung lands, giving a visual change about every 3 s. One text block animates at a time; everything sits above y1200; caption band clear.",
+      "est_duration_s": 10.3
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Both are quantized, stored at lower precision to shrink the file. One file each. Both ship as a single-file build you can run tonight. Unsloth publishes them on Hugging Face, fully open weights.",
+      "on_screen_text": "Quantized: lower precision, smaller file | One file, runs tonight | GGUF from Unsloth on Hugging Face",
+      "visual_brief": "Centered stack inside the safe area: a single document icon labeled 'GGUF' in amber mid-frame. On 'quantized, stored at lower precision', a small precision-dial glyph fades in above the icon and the beat text reads 'Quantized: lower precision, smaller file'. On 'single-file build you can run tonight', the icon scales up slightly and the text swaps to 'One file, runs tonight'. On 'Unsloth publishes them on Hugging Face', the beat becomes 'GGUF from Unsloth on Hugging Face' as small Unsloth and Hugging Face wordmarks rise in place below the icon. Amber only on the GGUF label; nothing below y1200.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Each is a mixture of experts, a model that wakes only a slice of itself per word. Those active parameters, the slice that does the work, stay small. Every expert still has to sit on your drive or in your memory.",
+      "on_screen_text": "Mixture of experts | Active slice per word | Every expert still sits somewhere",
+      "visual_brief": "Diagram: a 4x3 grid of rounded expert tiles right of center, one amber router node left, connected by thin static lines. On 'wakes only a slice of itself per word', two tiles brighten amber per pulse while the rest stay dim, the pulse repeating about every 1.5 s. Beat text 'Mixture of experts' sits top center from the opening phrase, swaps to 'Active slice per word' as narration says 'active parameters', then to 'Every expert still sits somewhere' on the final sentence while all tiles glow at once to show the total that must be stored. Tiles never slide, they only fade or brighten; max two elements animating per beat.",
+      "est_duration_s": 14.1
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "So what fits tonight? Drive streaming, pulling parts of the model from your fast drive into memory when they are needed, is the trick. On Unsloth's numbers, a big Spark-class machine holds the Flash. Nothing published yet holds the Pro.",
+      "on_screen_text": "SSD STREAMING | Flash: fits tonight | Pro: no published fit",
+      "visual_brief": "Two columns return: 'Flash' left, 'Pro' right, beat text 'SSD STREAMING' top center. On 'pulling parts of the model from your fast drive into memory', small blocks rise in place from a drive icon at the bottom of the Flash column into a RAM bracket above it, cycling while the definition lands. On 'holds the Flash', an amber check scales in under the Flash column with beat text 'Flash: fits tonight'. On 'Nothing published yet holds the Pro', the Pro column dims and a hollow outline fades in with 'Pro: no published fit'. Only the check and the outline animate in that beat; caption band stays clear.",
+      "est_duration_s": 13.8
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Picture a master carpenter with a rolling tool chest. The daily tools ride inside; the rare ones fetch from the store across the street, your drive. Except a router inside the model picks per word, and the fetch costs seconds instead of a trip across town.",
+      "on_screen_text": "Rolling chest: daily tools | Rare tools fetch from the drive | Router picks per word",
+      "visual_brief": "Halftone illustration center frame: a carpenter's rolling tool chest, top drawer open. On 'The daily tools ride inside', three small tools rise in place from the drawer. On 'the rare ones fetch from the store across the street, your drive', a tiny shopfront icon fades in beside a pre-drawn dotted arc, no sliding. On 'a router inside the model picks per word', the chest cross-fades into the amber router node from the previous scene and the beat text becomes 'Router picks per word'. On 'costs seconds', a small clock hand ticks once. At most two elements move per beat; the illustration stays out of the caption band.",
+      "est_duration_s": 15.9
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Here's the twist. On DeepSeek's own table, the Flash scores ninety point six on the terminal bench, ahead of the Pro. The smaller pull is the quality pick for coding and agents, not the compromise.",
+      "on_screen_text": "DeepSeek's own table | Terminal-Bench: Flash 90.6 | Quality pick, not compromise",
+      "visual_brief": "A table header fades in top center: 'DeepSeek's own table' with 'Terminal-Bench' beneath it. On 'ninety point six', '90.6' scales up giant in amber beside a tall Flash bar; a shorter Pro bar rises in place next to it carrying no digits, since only 90.6 is spoken. On 'ahead of the Pro' the Flash bar brightens. On 'the quality pick for coding and agents', a small code-bracket glyph fades beside the Flash bar and the beat text swaps to 'Quality pick, not compromise'. Bars enter by rise-in-place only, one text block at a time, everything above the caption band.",
+      "est_duration_s": 12.1
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The Pro still leads the world-knowledge rows, where its bigger backbone earns its keep. And if you ever rent these in DeepSeek's cloud, the Flash is the cheaper seat there too.",
+      "on_screen_text": "Knowledge rows: Pro leads | Coding rows: Flash leads | Cloud: Flash costs less",
+      "visual_brief": "Split table in the safe area: rows labeled 'Knowledge' and 'Coding', columns 'Pro' and 'Flash'. On 'The Pro still leads the world-knowledge rows', an amber dot fades into the Pro cell of the Knowledge row. On 'the Flash is the cheaper seat', a second amber dot fades into the Flash cell of the Coding row while a small cloud icon rises in place above the table with beat text 'Cloud: Flash costs less'. Only one element animates at a time, never more than two amber dots on screen, all type 64 px minimum.",
+      "est_duration_s": 10.7
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "So tonight: count your free memory. Grab the Unsloth single-file build that fits. Run it in llama dot cpp or Unsloth Desktop. Let your drive hold the overflow. Set reasoning effort to trade speed against depth.",
+      "on_screen_text": "Count free memory | Pull the Unsloth GGUF that fits | llama.cpp + Unsloth Desktop | Drive holds overflow | Set reasoning effort",
+      "visual_brief": "Horizontal timeline across the midline of the safe area with five ticks revealed left to right as narration lands each phrase. Each tick rises in place on its phrase: 'Count free memory', 'Pull the Unsloth GGUF that fits', 'llama.cpp + Unsloth Desktop', 'Drive holds overflow' (a small drive icon under this tick), 'Set reasoning effort'. The active label is the only text block showing; earlier labels swap out so no more than eight words are ever visible. Amber marks only the active tick; ticks never slide in from the edge.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The rule to keep: your free memory picks the model. Tonight, it picks the Flash.",
+      "on_screen_text": "Your memory picks the model | Tonight: Flash",
+      "visual_brief": "The two-column composition from frame 1 returns, rhyming with the hook: 'Pro' column dim, 'Flash' column lit amber. On 'your free memory picks the model', the beat text 'Your memory picks the model' rises in place center frame. On 'Tonight, it picks the Flash', the text swaps to 'Tonight: Flash' as an amber check scales in beneath the Flash column. Final 0.5 s: all elements hold still while a small wordmark fades in top center and settles, so the last frame mirrors the first frame's split layout. Caption band empty throughout; last 15 frames static.",
+      "est_duration_s": 5.2
+    }
+  ],
+  "notes_for_review": "Number budget: exactly three spoken numbers (850 GB, 233 GB, 90.6); every on-screen digit is spoken in the same scene and beat. Because of this, (1) the Pro's Terminal-Bench 2.1 score of 87.9 appears only as an unlabeled shorter bar, and (2) the bench version digit '2.1' is omitted from screen text since it cannot be spoken; verify that showing 'Terminal-Bench' without the version is acceptable rather than misleading. 'Big Spark-class machine' stands in for Unsloth's 128GB+ RAM figure, which was outside the spoken-number budget. 'Nothing published yet holds the Pro' hedges against Unsloth's still-filling Pro GGUF repo. No tokens-per-second, MLX, or Ollama-local claims are made, per the unverified list. TTS check: 'llama dot cpp' should read as llama.cpp; adjust spelling if the voice mangles 'cpp'. All scenes avoid ALL-CAPS narration tokens (GGUF/SSD appear on screen only), no em dashes, no hype words, and only one 'not X' antithesis (s07).",
+  "tags": [
+    "deepseek v4 pro",
+    "deepseek v4.1 flash",
+    "deepseek v4 pro vs flash",
+    "deepseek local",
+    "run deepseek locally",
+    "unsloth gguf",
+    "llama.cpp deepseek",
+    "deepseek coding model",
+    "dgx spark models",
+    "128gb local ai",
+    "local llm 2026",
+    "deepseek benchmark",
+    "best local coding model",
+    "gguf quantization",
+    "deepseek flash 1017"
+  ]
+}

@@ -2,14 +2,14 @@
 slug: 2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f
 workspace: shorts
 title: "DeepSeek V4 Pro 0813 vs V4.1 Flash: which one do you pull?"
-status: researched
+status: scripted
 pillar: comparison
-structure: ""
+structure: comparison-ladder
 format: smooth-explainer
-style_pack: ""
+style_pack: halftone
 value_types: "EQUIPS,REFRAMES"
 created: 2026-11-14
-updated: "2026-11-14T12:48:58Z"
+updated: "2026-11-14T13:21:58Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,3 +37,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-14T12:48:58Z 03-research ok: brief 11 sources, validator 0; unattended checkpoint: angle+slug confirmed as picked (no redirect)
+- 2026-11-14T13:21:58Z 04-script ok: draft A comparison-ladder won 23/24; 0 blockers, 9/9 gates, variety ok; no grafts
