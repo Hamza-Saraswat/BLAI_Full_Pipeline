@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-brief]]
 - Script: [[stages/04-script/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-script]]
 - Package: [[stages/05-package/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -40,3 +40,4 @@ blotato_post_id: ""
 - 2026-11-14T13:21:58Z 04-script ok: draft A comparison-ladder won 23/24; 0 blockers, 9/9 gates, variety ok; no grafts
 - 2026-11-14T13:24:02Z 05-package ok: searchable title 40 chars, rubric 100/100, manifest valid; unattended checkpoint: title 1 picked (search surface, keyword at char 0)
 - 2026-11-14T13:27:10Z build start on gn100-83c4
+- 2026-11-14T13:29:24Z 06-voice ok 132s
