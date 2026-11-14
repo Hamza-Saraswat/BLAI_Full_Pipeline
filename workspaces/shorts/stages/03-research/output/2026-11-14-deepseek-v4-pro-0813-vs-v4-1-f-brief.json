@@ -1,0 +1,219 @@
+{
+  "slug": "2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f",
+  "topic": "DeepSeek V4 Pro 0813 vs V4.1 Flash: which one you pull for local hardware",
+  "generated_at": "2026-11-14T12:41:38Z",
+  "depth": "standard",
+  "thesis": "For running DeepSeek at home tonight, pull V4.1 Flash, not V4 Pro: the 552B Flash beats the 1.6T Pro on the coding-agent benchmarks local users actually run, and its 233 GB smallest download fits a 128 GB machine with SSD streaming, while the Pro's smallest published file is 850 GB.",
+  "explanation_path": "The viewer already knows how to download a model, so the video names both candidates immediately and puts the deciding gap on screen: DeepSeek-V4-Pro-0813 against DeepSeek-V4.1-Flash-1017, with their smallest real downloads, 850 GB and 233 GB. Parameters alone would predict a blowout, so the video unpacks mixture-of-experts: total parameters are everything the model knows, active parameters are what any single token touches, and the catch for hardware is that every expert still has to sit on your disk or in your memory. That makes the memory story concrete: SSD offloading is what lets a 128 GB machine hold the 233 GB Flash, and nothing published lets it hold the Pro. Quality arrives as the twist rather than the concession: DeepSeek's own tables put the Flash ahead of the Pro on Terminal-Bench 2.1 and DeepSWE v1.1, and Artificial Analysis ranks Flash 1017 near the top of its Intelligence Index while the Pro sits mid-pack, so the smaller pull is the better coding and agent model, not the budget one. The Pro's territory shows up in the world-knowledge rows of the same tables, where its larger backbone still leads, and that is where the video can be honest about what the Flash gives up. API prices close the loop for anyone comparing against the cloud: DeepSeek's own pricing page charges $0.3 in / $1.2 out per million tokens for the Flash at peak against $1.32 / $3.96 for the Pro. The payoff is the pick and the pull: check free memory, choose the quant that fits, download the Unsloth GGUF, run it in llama.cpp or Unsloth Desktop with the Engram offloaded to SSD, and set reasoning effort to trade speed against depth.",
+  "claims": [
+    {
+      "claim": "DeepSeek-V4-Pro-0813 is the official release of DeepSeek-V4-Pro, superseding the preview version, with weights on Hugging Face under the MIT License.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "source_title": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "DeepSeek V4 Pro 0813 has 1.6T parameters (49B active) and a context window of 1M tokens.",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+      "source_title": "DeepSeek V4 Pro 0813 Models - Artificial Analysis",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "DeepSeek-V4.1-Flash is a multimodal Mixture-of-Experts model with 552B backbone parameters plus a 196B-parameter Engram memory, activating 8B parameters per token during prefill and 16B during decode, with contexts of up to one million tokens, under the MIT License.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "On DeepSeek's own comparison table, DeepSeek-V4.1-Flash outscores DeepSeek-V4-Pro on Terminal-Bench 2.1, 90.6 vs 87.9 Pass@1, and on DeepSWE v1.1, 74.2 vs 62.7 Resolved.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "On the Artificial Analysis Intelligence Index, DeepSeek V4.1 Flash 1017 (Max) scores 33, well above the comparable-model median of 23.",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+      "source_title": "DeepSeek V4.1 Flash 1017 Models - Artificial Analysis",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "On the same Artificial Analysis Intelligence Index, DeepSeek V4 Pro 0813 (Max) scores 23.",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+      "source_title": "DeepSeek V4 Pro 0813 Models - Artificial Analysis",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "The smallest DeepSeek-V4-Pro-0813 GGUF quant Unsloth has published is UD-Q4_K_XL at 850 GB, and Unsloth states the model needs substantially more memory than the Flash family.",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-V4-Pro-0813-GGUF",
+      "source_title": "unsloth/DeepSeek-V4-Pro-0813-GGUF",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "The smallest DeepSeek-V4.1-Flash-1017 GGUF quant from Unsloth is UD-IQ1_S at 233 GB, which Unsloth says runs on a 128GB+ RAM device, with 3-bit on 256GB and full precision on 320GB.",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+      "source_title": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "On DeepSeek's official pricing page, deepseek-flash (model version DeepSeek-V4.1-Flash-1017) peak pricing is $0.3 per 1M input tokens (cache miss) and $1.2 per 1M output tokens, while deepseek-v4-pro peak pricing is $1.32 and $3.96, and off-peak rates are half of peak.",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "source_title": "Models & Pricing | DeepSeek API Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-14"
+    },
+    {
+      "claim": "DeepSeek-V4-Pro-0813 hit Hacker News on the morning of 2026-11-14: a thread posted at 2026-11-14T00:50:33Z linking the Hugging Face model card had 24 points by 11:58 UTC in the Algolia record.",
+      "source_url": "https://hn.algolia.com/api/v1/search_by_date?query=deepseek&tags=story&numericFilters=created_at_i%3E1794489600&hitsPerPage=30",
+      "source_title": "HN Algolia search API (DeepSeek stories, 2026-11-14)",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-11-14"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "V4 Pro 0813 total / active parameters",
+      "value": "1.6T parameters (49B active)",
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-pro"
+    },
+    {
+      "label": "V4.1-Flash backbone parameters",
+      "value": "552B backbone parameters",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "V4.1-Flash activated parameters per token (prefill / decode)",
+      "value": "8B / 16B",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "V4.1-Flash global KV cache footprint per token",
+      "value": "890 bytes per token",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "label": "Smallest V4.1-Flash-1017 GGUF (UD-IQ1_S, Unsloth)",
+      "value": "233 GB",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF"
+    },
+    {
+      "label": "Smallest V4-Pro-0813 GGUF published (UD-Q4_K_XL, Unsloth)",
+      "value": "850 GB",
+      "source_url": "https://huggingface.co/unsloth/DeepSeek-V4-Pro-0813-GGUF"
+    },
+    {
+      "label": "deepseek-flash (V4.1-Flash-1017) peak API price, input (cache miss) / output per 1M tokens",
+      "value": "$0.3 / $1.2",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    {
+      "label": "deepseek-v4-pro peak API price, input (cache miss) / output per 1M tokens",
+      "value": "$1.32 / $3.96",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Workshop vs rolling tool chest",
+      "mapping": "The Pro is a full cabinet-making workshop, every specialist machine installed on site (850 GB before you start); the Flash is a master carpenter whose rolling chest (233 GB) holds the tools used constantly while the rare ones get fetched from the hardware store across the street (your SSD).",
+      "limit": "Breaks when: experts are not chosen consciously the way a carpenter picks a tool; a router inside the model decides per token, and the fetch from SSD costs seconds of speed, not a drive across town."
+    },
+    {
+      "vehicle": "Iceberg",
+      "mapping": "The 8B / 16B active parameters are the tip you see working on each token; the whole 552B backbone plus the 196B Engram is the mass that still has to be in RAM or streamed from disk.",
+      "limit": "Breaks when: it suggests the submerged mass is dead weight; every expert takes its turn depending on the question, so the whole iceberg matters to quality."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "The model with more parameters is automatically the better pull, so 1.6T beats 552B.",
+      "reality": "DeepSeek's own table scores the 552B-backbone Flash above the 1.6T Pro on Terminal-Bench 2.1 (90.6 vs 87.9) and DeepSWE v1.1 (74.2 vs 62.7) (claim 4)."
+    },
+    {
+      "myth": "If only 8B / 16B parameters are active per token, you only need enough memory for that.",
+      "reality": "All 552B backbone parameters plus the 196B Engram must be on your disk and in RAM or streamed from SSD, so even the smallest Flash file is 233 GB (claims 3, 8)."
+    },
+    {
+      "myth": "The Pro 0813 weights dropped this morning.",
+      "reality": "Artificial Analysis dates the V4 Pro 0813 release to August 2026; what happened on 2026-11-14 is a Hacker News thread about the model, not a new weight drop (claims 2, 10)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Mixture-of-Experts (MoE)",
+      "definition": "A model architecture that keeps many specialist sub-networks (experts) and routes each token through only a few of them."
+    },
+    {
+      "term": "Active parameters",
+      "definition": "The subset of a model's weights that actually processes any single token, as opposed to the total stored on disk."
+    },
+    {
+      "term": "Quantization",
+      "definition": "Storing model weights at lower numeric precision to shrink the file, trading some accuracy for size."
+    },
+    {
+      "term": "GGUF",
+      "definition": "The single-file model format that runtimes like llama.cpp, LM Studio and Ollama load."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The memory a model keeps of everything it has already read in a conversation so it does not recompute it."
+    },
+    {
+      "term": "Tokens per second",
+      "definition": "How fast a model generates text on your hardware."
+    },
+    {
+      "term": "SSD offloading / SSD streaming",
+      "definition": "Keeping parts of the model on your fast drive and reading them into memory only when needed."
+    },
+    {
+      "term": "Engram",
+      "definition": "DeepSeek's name for the V4.1-Flash's conditional memory module, 196B parameters accessed sparsely by lookup."
+    },
+    {
+      "term": "DSpark speculative decoding",
+      "definition": "A small draft model guesses several tokens ahead and the big model verifies them in one pass, speeding up generation."
+    },
+    {
+      "term": "Context window",
+      "definition": "How much text the model can consider at once; both of these models accept up to one million tokens."
+    }
+  ],
+  "unverified": [
+    "Community threads report tokens-per-second figures for these models on unnamed hardware (for example 83.2 tokens/s for V4 Pro 0813), but no fetched page shows a measurement method, so treat any local speed claim as untested.",
+    "No fetched page gives a first-party tokens-per-second number for either model on a 128 GB DGX Spark; a measurement from our own hardware should replace this line before the script cites one.",
+    "Whether a native Apple-Silicon MLX build of V4.1-Flash-1017 exists was not confirmed by any fetched page, so Mac viewers should verify before assuming a non-GGUF path.",
+    "Ollama's listing for deepseek-v4.1-flash appeared in search with cloud tags only and was not fetched as a page, so whether Ollama can pull these weights locally is unconfirmed.",
+    "Whether DeepSeek shipped anything new on 2026-11-14 is unconfirmed; the day's event in fetched sources is the Hacker News thread, and Artificial Analysis dates the V4 Pro 0813 release to August 2026."
+  ],
+  "suggested_outline": "Open on the size gap that decides the night: the smallest DeepSeek-V4-Pro-0813 download is 850 GB, the smallest DeepSeek-V4.1-Flash-1017 download is 233 GB, and only one of them runs on a 128 GB machine.\nLand the twist with DeepSeek's own table: the 552B Flash outscores the 1.6T Pro on Terminal-Bench 2.1 (90.6 vs 87.9) and DeepSWE v1.1 (74.2 vs 62.7), so the small model is the quality pick for coding and agents, not the compromise.\nWalk the pull: count free memory, grab the Unsloth GGUF that fits, run it in llama.cpp or Unsloth Desktop with SSD offload, then close on who still needs the Pro and what the API costs ($0.3 / $1.2 vs $1.32 / $3.96 per 1M tokens at peak).",
+  "notes": "Naming trap: the Flash to pull today is DeepSeek-V4.1-Flash-1017, the October update; DeepSeek's pricing page lists MODEL VERSION DeepSeek-V4.1-Flash-1017 for deepseek-flash, and the base V4.1-Flash card's frontier-table column DS-V4.1-Flash is the earlier September model. The 1017 card's own gains (DeepSWE v1.1 77.0, Terminal-Bench 4.0 42.3) were read on the Unsloth 1017 page and only strengthen the pick. Conflicts: parameter counts differ by source (1.6T / 49B in DeepSeek's base-model table and Artificial Analysis, 1.57T / 48B from Unsloth, 1.7T on the Hugging Face sidebar, likely counting the DSpark draft module); the brief trusts DeepSeek's own table via the verbatim Artificial Analysis sentence. The 2026-11-14 HN thread showed 24 points in the Algolia record but 22 points on the page when fetched; points move, cite the thread, not the count. The task framing said the Pro 0813 open-weight drop happened about 11 hours before 2026-11-14; fetched pages date the weights to August 2026, so the video should frame 2026-11-14 as the day the HN discussion put the model back in front of local-AI people, not as release day. Unsloth could not reproduce a rival quantizer's recovery claims (GSQ-RCO IQ1_M claims 98.7% recovery, Unsloth measured 97.24 with p-value 0.0013), so avoid any quant-quality percentages beyond Unsloth's own tables. The Pro GGUF repository is still filling (Quants are uploaded to this repository as they finish converting), so a smaller Pro quant than 850 GB may appear and soften the memory argument; Terminal-Bench 2.1 and 4.0 are different harnesses and their scores must never be mixed in one comparison.",
+  "viewer_situation": "You've got a gaming PC, a Mac, or a 128 GB DGX Spark, you've downloaded a model before, and tonight you're deciding which of DeepSeek's two open-weight flagships to pull.",
+  "has_process": true,
+  "process_steps": [
+    "Count your free memory (unified RAM on a Mac or the Spark, system RAM plus VRAM on a gaming PC) before choosing anything.",
+    "Pick the model that fits that number: DeepSeek-V4.1-Flash-1017 if you have 128 GB or more, V4 Pro 0813 only if you can hold an 850 GB model.",
+    "Download the matching GGUF from Unsloth's Hugging Face repository, choosing the quant size that fits (UD-IQ1_S at 233 GB is the smallest Flash file).",
+    "Run it in llama.cpp or Unsloth Desktop, letting SSD offloading hold the parts that do not fit in RAM.",
+    "Set reasoning effort to trade speed against depth (a 1-100 setting on Flash, low / high / max on Pro)."
+  ],
+  "objection": "\"Benchmarks on DeepSeek's own card favor their new Flash because the comparison runs were tuned for it; the Pro still wins the knowledge rows, so run both quants on your own box for a night before you crown the small one.\""
+}
