@@ -2,14 +2,14 @@
 slug: 2026-11-13-cybergate-give-vllm-security-s
 workspace: shorts
 title: "CyberGate: give vLLM security skills, no retraining"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-13
-updated: "2026-11-13T12:07:34Z"
+updated: "2026-11-14T14:35:53Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-14T14:35:53Z 2026-11-14T14:35:53Z expired: not from today's picks (2026-11-14); the factory carries no backlog

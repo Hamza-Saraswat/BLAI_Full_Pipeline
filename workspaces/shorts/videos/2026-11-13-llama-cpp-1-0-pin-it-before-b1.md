@@ -2,14 +2,14 @@
 slug: 2026-11-13-llama-cpp-1-0-pin-it-before-b1
 workspace: shorts
 title: "llama.cpp 1.0: pin the tag, not master"
-status: review
+status: expired
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-13
-updated: "2026-11-13T13:55:00Z"
+updated: "2026-11-14T14:35:53Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-11-13T13:55:05Z 07-render ok 34.70s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 350
 - 2026-11-13T13:55:05Z 07-render ok 544s
 - 2026-11-13T13:55:34Z build done, status review
+- 2026-11-14T14:35:53Z 2026-11-14T14:35:53Z expired: not from today's picks (2026-11-14); the factory carries no backlog
