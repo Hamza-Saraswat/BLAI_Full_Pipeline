@@ -2,14 +2,14 @@
 slug: 2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f
 workspace: shorts
 title: "DeepSeek V4 Pro vs V4.1 Flash: what fits"
-status: building
+status: review
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,REFRAMES"
 created: 2026-11-14
-updated: "2026-11-14T13:27:10Z"
+updated: "2026-11-14T14:10:04Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-script]]
 - Package: [[stages/05-package/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-package]]
 - Voice: [[stages/06-voice/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,6 @@ blotato_post_id: ""
 - 2026-11-14T13:24:02Z 05-package ok: searchable title 40 chars, rubric 100/100, manifest valid; unattended checkpoint: title 1 picked (search surface, keyword at char 0)
 - 2026-11-14T13:27:10Z build start on gn100-83c4
 - 2026-11-14T13:29:24Z 06-voice ok 132s
+- 2026-11-14T13:55:57Z 07-render fail 1590s (07-render: scene s07 did not pass HyperFrames inspect after 5 rounds: t=6.44-9.78s (21 samples) container_overflow #capA inside #panel overflowed bottom 66.78px)
+- 2026-11-14T14:10:09Z 07-render ok 100.43s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 354
+- 2026-11-14T14:10:09Z 07-render ok 852s
