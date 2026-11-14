@@ -2,19 +2,19 @@
 slug: 2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f
 workspace: shorts
 title: "DeepSeek V4 Pro vs V4.1 Flash: what fits"
-status: ready-to-build
+status: building
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,REFRAMES"
 created: 2026-11-14
-updated: "2026-11-14T13:24:02Z"
+updated: "2026-11-14T13:27:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 - 2026-11-14T12:48:58Z 03-research ok: brief 11 sources, validator 0; unattended checkpoint: angle+slug confirmed as picked (no redirect)
 - 2026-11-14T13:21:58Z 04-script ok: draft A comparison-ladder won 23/24; 0 blockers, 9/9 gates, variety ok; no grafts
 - 2026-11-14T13:24:02Z 05-package ok: searchable title 40 chars, rubric 100/100, manifest valid; unattended checkpoint: title 1 picked (search surface, keyword at char 0)
+- 2026-11-14T13:27:10Z build start on gn100-83c4
