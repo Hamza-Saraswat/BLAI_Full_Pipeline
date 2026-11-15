@@ -1,8 +1,8 @@
 ---
 slug: 2026-11-15-8x-v100-runs-80-of-deepseek-v4
 workspace: shorts
-title: "8x V100 runs 80% of DeepSeek v4.1 Flash"
-status: scripted
+title: "2018 V100s Run 80% of DeepSeek"
+status: ready-to-build
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
@@ -11,7 +11,7 @@ value_types: "REFRAMES,PROVES"
 created: 2026-11-15
 updated: "2026-11-15T13:20:00Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-15-ideas]]
 - Research: [[stages/03-research/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-brief]]
 - Script: [[stages/04-script/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-package]]
+- Voice: [[stages/06-voice/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -40,6 +40,9 @@ blotato_post_id: ""
 - 2026-11-15 script hooks: 10 written and scored; picks 2 (case, draft A) and 5 (situation, draft B), two different patterns. Unattended proceed.
 - 2026-11-15 script judge: 16-16 tie, B wins the difference row (A's myth-bust repeats Nov 12 and its close echoes Nov 12/13 endings). No grafts. Writers and judge on kimi-k3, three llm_call.py processes, ~30K tokens total.
 - 2026-11-15 script gates: validator 0 blockers / 4 advisories (3 scenes 17-20 s single-render, split candidates for the build; keyword tags are stage 05's); eval all 9 pass, sameness 5 comparisons 0 violations; normalizer scenes_changed 1; variety check ok; ledger entry recorded; style pack signal recorded.
+
+- 2026-11-15 package: title picked "2018 V100s Run 80% of DeepSeek" (intriguing, feed surface; complements, not repeats, the hook text). Rubric 100/100, every row scored. Unattended proceed.
+- 2026-11-15 package: check_outputs exit 0 after hub links filled (Package, Voice-narration sidecars). Slot hint empty (publish.py picks 11:00/18:00 CT). Stages 06-08 left for the Spark build job.
 
 ## Build journal
 
