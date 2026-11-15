@@ -1,0 +1,123 @@
+{
+ "slug": "2026-11-15-8x-v100-runs-80-of-deepseek-v4",
+ "topic": "V100s are not dead: a cited 80%-of-model measurement from an 8-card lawyer server",
+ "title": "How Eight Used V100s Run 80% of DeepSeek v4.1 Flash at High Precision",
+ "description": "Reported by Tom's Hardware: a lawyer's eight used 2018 Tesla V100s, 256 GB of memory total, run DeepSeek V4.1 Flash, estimated at 269 GB, by keeping every expert at 2-bit and promoting the 5,949 most-used to NVFP4. About 80% of decode routes land on the high-precision experts, and fidelity against Nvidia's own NVFP4 build improved. Builder's own measurements; R580 is the last driver branch for these cards.",
+ "hashtags": [
+  "#DeepSeekV41Flash",
+  "#V100",
+  "#LocalAI"
+ ],
+ "hook_text": "8x V100 meets DeepSeek v4.1 Flash",
+ "style_pack": "signal",
+ "script_format": "smooth-explainer",
+ "structure": "worked-example",
+ "value_types": [
+  "explainer",
+  "measurement",
+  "myth-bust"
+ ],
+ "target_duration_s": 103,
+ "narration_full": "You buy eight used data center cards. Then DeepSeek V four point one Flash arrives, bigger than all eight. Everyone told you cards this old are scrap. One lawyer's server disagrees. Picture a lawyer who can't send case files to the cloud. His answer: eight used Tesla V one hundred cards, two hundred fifty-six gigabytes of memory in one home server. The model he wants is huge. At official precision, by his estimate, it needs two hundred sixty-nine gigabytes of model. The cards hold less than that before anything else loads. The rescue is the model's own design. It's a mixture-of-experts model, where a router wakes only a few specialists per word instead of using every parameter. So most of those gigabytes sleep most of the time. He stores every expert at two bit, the cheapest storage that works. Then the busiest get promoted to N V F P four, a sharper four-bit format, until the cards are full. Think of a workshop: every tool hangs on the wall. The few you grab all day get the good steel. His own files picked the favorites. The result: about eighty percent of its decoding, the word-by-word writing, lands on the sharpened experts. He checked it against Nvidia's own four-bit build of the same model. His box picks the same next word more often, and its answers change less. So much for scrap. The catches are honest ones. A second request at the same time shrinks the promoted set, so the solo numbers are the best case. And by his account, Nvidia's R five eighty driver branch is the last that ever supports these cards. Eight bargain-bin cards, a careful headcount, and the biggest model he owns runs at high precision all day. The model never had to fit. Only the parts in daily use had to fit well.",
+ "analogy": "Workshop: every tool hangs on the wall at 2-bit, and the handful you reach for all day gets the full-quality version on the bench. Limit: which tools count as most-used was counted from his own mix of documents, and a second concurrent request shrinks the high-precision set.",
+ "music_mood": "steady-build",
+ "scenes": [
+  {
+   "id": "s1",
+   "role": "hook",
+   "tool": "hyperframes",
+   "layout_archetype": "split-compare",
+   "narration": "You buy eight used data center cards. Then DeepSeek V four point one Flash arrives, bigger than all eight.",
+   "on_screen_text": "8 used cards, 2018 | then the model arrives",
+   "visual_brief": "Dark navy bg, cream Inter type. On \"You buy eight used data center cards,\" eight small amber GPU-card outlines fade in at left in two columns, tagged 2018. On \"DeepSeek V four point one Flash arrives,\" a large cream rectangle scales up at right, clearly wider than the whole card group. On \"are scrap,\" the cards dim to half brightness. On \"One lawyer's server disagrees,\" the leftmost card rises in place and returns to full amber. Frame 1: hook text centered, large bold type, amber digits, dark navy field.",
+   "est_duration_s": 6.6
+  },
+  {
+   "id": "s2",
+   "role": "foreshadow",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Everyone told you cards this old are scrap. One lawyer's server disagrees. Picture a lawyer who can't send case files to the cloud. His answer: eight used Tesla V one hundred cards, two hundred fifty-six gigabytes of memory in one home server.",
+   "on_screen_text": "a lawyer's offline server | 8 cards, 256 GB total",
+   "visual_brief": "Navy bg. On \"Picture a lawyer,\" a cream outline of an office door with a briefcase icon fades in center. On \"can't send case files to the cloud,\" a small cloud icon fades in with an amber X over it. On \"eight used Tesla V one hundred cards,\" the door crossfades to eight amber card tiles stacking into a tower. On \"two hundred fifty-six gigabytes,\" a cream 256 GB label scales in beneath the tower.",
+   "est_duration_s": 14.5
+  },
+  {
+   "id": "s3",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "The model he wants is huge. At official precision, by his estimate, it needs two hundred sixty-nine gigabytes of model. The cards hold less than that before anything else loads.",
+   "on_screen_text": "DeepSeek v4.1 Flash: 269 GB | the cards hold 256 GB",
+   "visual_brief": "Navy bg. On \"The model he wants is huge,\" a giant cream 269 GB scales in, filling most of the frame. On \"by his estimate,\" a small cream caption fades in beneath reading his estimate. On \"The cards hold less,\" an amber bar rises from the bottom labeled 256 GB, stopping visibly short of a faint cream bar showing the model's width; the gap between them pulses once before the scene ends.",
+   "est_duration_s": 10.3,
+   "render_notes": "No counting animation on the number; single scale-in only."
+  },
+  {
+   "id": "s4",
+   "role": "explain",
+   "tool": "manim",
+   "layout_archetype": "diagram-flow",
+   "narration": "The rescue is the model's own design. It's a mixture-of-experts model, where a router wakes only a few specialists per word instead of using every parameter. So most of those gigabytes sleep most of the time.",
+   "on_screen_text": "router picks a few experts | rest stay asleep",
+   "visual_brief": "Navy bg. On \"mixture-of-experts model,\" a cream dot labeled router fades in at center, ringed by dozens of faint cream expert dots. On \"wakes only a few specialists per word,\" amber lines grow from the router to three dots that brighten, then hand off to a different three in a slow loop. On \"most of those gigabytes sleep,\" every non-lit dot fades to near-black, leaving the router pulsing gently with its small active set.",
+   "est_duration_s": 12.4,
+   "render_notes": "Keep the routing handoff looping so motion never fully stops."
+  },
+  {
+   "id": "s5",
+   "role": "explain",
+   "tool": "manim",
+   "layout_archetype": "grid",
+   "narration": "He stores every expert at two bit, the cheapest storage that works. Then the busiest get promoted to N V F P four, a sharper four-bit format, until the cards are full. Think of a workshop: every tool hangs on the wall. The few you grab all day get the good steel. His own files picked the favorites.",
+   "on_screen_text": "every expert stays 2-bit | 5,949 of 15,360 go NVFP4",
+   "visual_brief": "Navy bg. On \"stores every expert at two bit,\" a tight grid of dim cream squares fades in inside a card outline. On \"busiest get promoted,\" a scattered subset of squares scales up and turns amber. On \"until the cards are full,\" the card outline glows once at capacity. On \"Think of a workshop,\" the grid crossfades to a pegboard silhouette: rows of dim hanging tools, three amber tools resting on a bench. On \"His own files picked the favorites,\" a small document icon fades in beside the amber tools.",
+   "est_duration_s": 20.0,
+   "render_notes": "Crossfade between grid and pegboard; nothing slides in from an edge."
+  },
+  {
+   "id": "s6",
+   "role": "explain",
+   "tool": "hyperframes",
+   "layout_archetype": "giant-number",
+   "narration": "The result: about eighty percent of its decoding, the word-by-word writing, lands on the sharpened experts. He checked it against Nvidia's own four-bit build of the same model. His box picks the same next word more often, and its answers change less. So much for scrap.",
+   "on_screen_text": "80% of decode on NVFP4 | same next token, more often",
+   "visual_brief": "Navy bg. On \"about eighty percent,\" a giant amber 80% scales in center. On \"lands on the sharpened experts,\" small cream dots fade in beneath and settle onto an amber platform. On \"Nvidia's own four-bit build,\" two unlabeled cream bars rise in place side by side; on \"more often,\" the right bar eases taller. On \"answers change less,\" a short row of cream checkmarks fades in. On \"So much for scrap,\" the 80% gives one soft pulse.",
+   "est_duration_s": 15.9
+  },
+  {
+   "id": "s7",
+   "role": "explain",
+   "tool": "manim",
+   "layout_archetype": "split-compare",
+   "narration": "The catches are honest ones. A second request at the same time shrinks the promoted set, so the solo numbers are the best case. And by his account, Nvidia's R five eighty driver branch is the last that ever supports these cards.",
+   "on_screen_text": "2nd request: smaller promoted set | R580 = last Volta driver",
+   "visual_brief": "Navy bg. On \"A second request at the same time,\" the amber cluster from the grid scene fades in at left, then splits into two smaller amber clusters on \"shrinks the promoted set,\" each clearly reduced. On \"best case,\" a small cream tag fades in reading 1 request, measured. On \"R five eighty driver branch is the last,\" the right side fades in with a cream road segment ending at an amber stop marker labeled R580, the word Volta beneath it.",
+   "est_duration_s": 14.5
+  },
+  {
+   "id": "s8",
+   "role": "payoff_close",
+   "tool": "hyperframes",
+   "layout_archetype": "centered-stack",
+   "narration": "Eight bargain-bin cards, a careful headcount, and the biggest model he owns runs at high precision all day. The model never had to fit. Only the parts in daily use had to fit well.",
+   "on_screen_text": "the model never had to fit | only the busy parts fit well",
+   "visual_brief": "Navy bg. On \"Eight bargain-bin cards,\" the eight amber card tiles fade back in, stacked as the server tower. On \"runs at high precision all day,\" a small cream 80% fades in above the tower. On \"The model never had to fit,\" the giant cream model rectangle from the hook fades in behind, heavily dimmed. On \"Only the parts in daily use had to fit well,\" everything else fades out, leaving one centered cream line of payoff text that scales up gently.",
+   "est_duration_s": 11.7
+  }
+ ],
+ "notes_for_review": "Spoken number budget spent on exactly the three assigned: 256 GB (s2), 269 GB with 'by his estimate' hedge (s3), 80% (s6). The 5,949 of 15,360 expert counts appear on screen only, per the assignment's required beat, without spending a spoken number. Builder identity unverified, hedged as 'a lawyer'; fidelity phrased as his own checks against Nvidia's NVFP4 build with no extra digits. One wry beat: 'So much for scrap' in s6, aimed at the cards. Workshop analogy used once with its limit clause inside s5; the concurrency shrink carries into s7 alongside the R580 end-of-support fact. No positional labels; each turn is named by what changed (cards, wall, design, promotion, result, catches). Payoff is the final spoken sentence; nothing follows it.",
+ "hook_candidates": [
+  "Eight V100s, 2018. Eighty percent of DeepSeek.",
+  "A lawyer's basement server runs DeepSeek on 2018 cards.",
+  "Eight cards from 2018 run DeepSeek v4.1 Flash.",
+  "Your old GPUs are dead. His eight V100s disagree.",
+  "You bought used data center cards. The model is bigger.",
+  "Two hundred fifty-six gigabytes of 2018 memory, one huge model.",
+  "A lawyer runs DeepSeek daily on borrowed-time GPUs.",
+  "Eight V100s meet a model that will not fit.",
+  "You were told 2018 cards can't run modern AI.",
+  "Eighty percent of the work, on eight old cards."
+ ],
+ "hook_pattern": "situation"
+}
