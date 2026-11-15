@@ -2,19 +2,19 @@
 slug: 2026-11-15-8x-v100-runs-80-of-deepseek-v4
 workspace: shorts
 title: "2018 V100s Run 80% of DeepSeek"
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "REFRAMES,PROVES"
 created: 2026-11-15
-updated: "2026-11-15T13:20:00Z"
+updated: "2026-11-15T13:21:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,4 +45,4 @@ blotato_post_id: ""
 - 2026-11-15 package: check_outputs exit 0 after hub links filled (Package, Voice-narration sidecars). Slot hint empty (publish.py picks 11:00/18:00 CT). Stages 06-08 left for the Spark build job.
 
 ## Build journal
-
+- 2026-11-15T13:21:10Z build start on gn100-83c4
