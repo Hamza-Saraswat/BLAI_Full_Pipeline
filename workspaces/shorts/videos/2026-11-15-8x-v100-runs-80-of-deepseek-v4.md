@@ -2,14 +2,14 @@
 slug: 2026-11-15-8x-v100-runs-80-of-deepseek-v4
 workspace: shorts
 title: "2018 V100s Run 80% of DeepSeek"
-status: building
+status: review
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "REFRAMES,PROVES"
 created: 2026-11-15
-updated: "2026-11-15T13:21:10Z"
+updated: "2026-11-15T13:47:35Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-script]]
 - Package: [[stages/05-package/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-package]]
 - Voice: [[stages/06-voice/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-15-8x-v100-runs-80-of-deepseek-v4-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-15T13:21:10Z build start on gn100-83c4
 - 2026-11-15T13:23:10Z 06-voice ok 118s
+- 2026-11-15T13:26:46Z 07-render fail 212s (07-render: scene s1 did not pass HyperFrames inspect after 5 rounds: t=2.55-6.32s (49 samples) text_box_overflow div.line.hook-line inside div.line.hook-line ov)
+- 2026-11-15T13:47:39Z 07-render ok 98.07s: 8 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 356
+- 2026-11-15T13:47:39Z 07-render ok 1252s
