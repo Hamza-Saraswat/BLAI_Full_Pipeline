@@ -2,14 +2,14 @@
 slug: 2026-11-14-transformers-v5-23-check-your
 workspace: shorts
 title: "transformers v5.23: check your pins before pip install -U"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-14
-updated: "2026-11-14T12:06:38Z"
+updated: "2026-11-15T14:35:16Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Band complement to pick 1 (classic vs smooth-explainer); no band runs three days straight.
 
 ## Build journal
-
+- 2026-11-15T14:35:16Z 2026-11-15T14:35:16Z expired: not from today's picks (2026-11-15); the factory carries no backlog

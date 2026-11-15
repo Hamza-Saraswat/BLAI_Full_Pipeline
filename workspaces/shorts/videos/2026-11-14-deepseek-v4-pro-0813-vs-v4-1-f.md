@@ -2,14 +2,14 @@
 slug: 2026-11-14-deepseek-v4-pro-0813-vs-v4-1-f
 workspace: shorts
 title: "DeepSeek V4 Pro vs V4.1 Flash: what fits"
-status: review
+status: expired
 pillar: comparison
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "EQUIPS,REFRAMES"
 created: 2026-11-14
-updated: "2026-11-14T14:10:04Z"
+updated: "2026-11-15T14:35:16Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-11-14T14:10:09Z 07-render ok 100.43s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 354
 - 2026-11-14T14:10:09Z 07-render ok 852s
 - 2026-11-14T14:10:17Z build done, status review
+- 2026-11-15T14:35:16Z 2026-11-15T14:35:16Z expired: not from today's picks (2026-11-15); the factory carries no backlog
