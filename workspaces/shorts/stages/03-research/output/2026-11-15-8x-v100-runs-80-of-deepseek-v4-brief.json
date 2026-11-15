@@ -1,0 +1,144 @@
+{
+  "slug": "2026-11-15-8x-v100-runs-80-of-deepseek-v4",
+  "topic": "V100s are not dead -- a cited 80%-of-model measurement from an 8-card lawyer server",
+  "generated_at": "2026-11-15T12:38:36Z",
+  "depth": "standard",
+  "thesis": "Eight used 2018-era V100s still run DeepSeek V4.1 Flash well enough for daily legal work, because the model only needs its most-used experts at high precision -- about 80% of the work now lands on NVFP4 experts -- while the rest stay at 2-bit and the whole thing fits in 256 GiB of VRAM.",
+  "explanation_path": "Start with the assumption the video attacks: that a GPU from 2018 with no modern quantization support is scrap. Establish what the builder actually has: eight Tesla V100-SXM2-32GB cards, 32GB of HBM2 each at 900 GB/s, 256 GiB total, bought used at about $2,400 per four-GPU board. Then establish what the model demands: DeepSeek V4.1 Flash is a Mixture-of-Experts model whose 384 routed experts per layer across 40 layers total 15,360 experts, about 269 GiB at official precision by his estimate -- more than the cards hold. The trick, understood before any speed number: MoE means only some experts work on each token, so he keeps every expert on the cards at 2-bit and swaps the most-used ones up until the cards are full -- 5,949 experts, about 38.7%, at precisely NVFP4, and between 80% and 86% of decode routes land on those NVFP4 experts. Fidelity against Nvidia's own NVFP4 build of the same model: same next token 95.1% of the time (up from 92.2%), KL divergence 0.079 nats (down from 0.196), and multiple-choice answers that change dropped from 79 to 8 across 513 questions. The cost is speed: code output fell from 160-215 tokens per second to 150-180. Close on the honest catch: the V100s are on borrowed time -- R580 is the last Nvidia driver branch to support Volta -- and NVFP4 is a Blackwell-native format the V100 does not accelerate in hardware, so this is a hand-ported labor of love that proves the memory-bandwidth floor, not a turnkey recipe.",
+  "claims": [
+    {
+      "claim": "A lawyer's server of eight used Tesla V100-SXM2-32GB GPUs (256 GiB VRAM total) runs DeepSeek V4.1 Flash with about 38.7%, or 5,949, of the model's 15,360 experts at NVFP4 precision and the rest at 2-bit, and between 80% and 86% of decode routes land on the NVFP4 experts.",
+      "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu",
+      "source_title": "Lawyer upgrades eight-V100 private AI server to run 80% of DeepSeek V4.1 Flash at 4-bit NVFP4 precision | Tom's Hardware",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "The near-NVFP4 build raised fidelity against Nvidia's own NVFP4 reference build of the same model: same next token went up to 95.1% from 92.2%, KL divergence fell to 0.079 nats from 0.196, and across 513 multiple-choice questions the changed answers fell from 79 to 8, with accuracy about the same.",
+      "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu",
+      "source_title": "Lawyer upgrades eight-V100 private AI server to run 80% of DeepSeek V4.1 Flash at 4-bit NVFP4 precision | Tom's Hardware",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "The precision upgrade cost speed: code output fell to 150-180 tokens per second, from 160-215, and the new build's Hugging Face package is about 556GB while the 2-bit weights were 248.8GB.",
+      "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu",
+      "source_title": "Lawyer upgrades eight-V100 private AI server to run 80% of DeepSeek V4.1 Flash at 4-bit NVFP4 precision | Tom's Hardware",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "The eight Tesla V100-SXM2-32GB cards each have 32GB of HBM2 at 900 GB/s and connect over SXM2 boards with NVLink inside each four-card board for 128GB per board, while the two boards only communicate over PCIe; the four-GPU boards cost about $2,400 apiece when bought.",
+      "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-builds-private-ai-server-with-eight-used-nvidia-v100-gpus-up-to-215-tokens-per-second-to-keep-legal-files-offline-costing-about-usd2-400-per-four-gpu-board",
+      "source_title": "Lawyer builds private AI server with eight used Nvidia V100 GPUs | Tom's Hardware",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "NVIDIA's official NVFP4 quantization of DeepSeek V4.1 Flash is a 552B-backbone Mixture-of-Experts model (16B active during decode) whose checkpoint is approximately 400 GiB and whose converted routed experts span 384 experts across 40 layers, matching the layout the lawyer's build exploits.",
+      "source_url": "https://huggingface.co/nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+      "source_title": "nvidia/DeepSeek-V4.1-Flash-1017-NVFP4 model card | Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "NVFP4 is Nvidia's 4-bit floating point format introduced with the Blackwell architecture, using an E2M1 value with a shared FP8 scale per 16-value block plus a second-level FP32 scale per tensor, and it cuts model memory roughly 3.5x relative to FP16.",
+      "source_url": "https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/",
+      "source_title": "Introducing NVFP4 for Efficient and Accurate Low-Precision Inference | NVIDIA Technical Blog",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "NVIDIA's R580 release notes list the NVIDIA V100 (Volta) among the supported GPUs for the Release 580 family of data center drivers for Linux, the branch NVIDIA and press describe as the last to support Maxwell, Pascal, and Volta.",
+      "source_url": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-580-126-09/index.html",
+      "source_title": "Version 580.126.09(Linux) :: NVIDIA Data Center GPU Driver Documentation",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "Phoronix reported that NVIDIA's deprecation schedule states \"The release 580 series will be the last to support GPUs based on the Maxwell, Pascal, and Volta architectures.\", confirming the V100 is on a legacy driver branch with no successor.",
+      "source_url": "https://www.phoronix.com/news/NVIDIA-580-Linux-Driver-Last-HW",
+      "source_title": "NVIDIA Confirms 580 Linux Driver Is The Last For Maxwell / Pascal / Volta | Phoronix",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "The Tesla V100 specification page lists 32/16 GB HBM2 capacity at 900 GB/s bandwidth, NVLink at 300 GB/s bi-directional, PCIe at 32 GB/s, and 300 WATTS max consumption for the NVLink version.",
+      "source_url": "https://www.nvidia.com/en-gb/data-center/tesla-v100/",
+      "source_title": "NVIDIA Tesla V100 specifications | NVIDIA",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    },
+    {
+      "claim": "DeepSeek's own model card describes DeepSeek-V4.1-Flash-1017 as a natively multimodal Mixture-of-Experts model with support for contexts of up to one million tokens and a recommended context window of 1M tokens.",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source_title": "deepseek-ai/DeepSeek-V4.1-Flash-1017 model card | Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-15"
+    }
+  ],
+  "key_numbers": [
+    { "label": "share of decode routes landing on NVFP4 experts (one request at a time)", "value": "80% to 86%", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "experts kept at NVFP4 in the 8x V100 build", "value": "5,949 experts (about 38.7%)", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "total VRAM across eight 32GB V100s", "value": "256 GiB", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "code output before / after the precision upgrade", "value": "160-215 tokens per second to 150-180 tokens per second", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "same-next-token fidelity vs NVIDIA's NVFP4 reference", "value": "95.1% (up from 92.2%)", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "changed multiple-choice answers across 513 questions", "value": "79 to 8", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu" },
+    { "label": "cost per four-GPU SXM2 board when bought", "value": "about $2,400", "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-builds-private-ai-server-with-eight-used-nvidia-v100-gpus-up-to-215-tokens-per-second-to-keep-legal-files-offline-costing-about-usd2-400-per-four-gpu-board" },
+    { "label": "per-card memory bandwidth of the V100 (32GB HBM2)", "value": "900 GB/s", "source_url": "https://www.nvidia.com/en-gb/data-center/tesla-v100/" }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A workshop where every tool hangs on the wall at 2-bit, but the handful of tools you actually reach for all day get the full-quality version on the bench.",
+      "mapping": "All 15,360 experts stay resident at 2-bit; the 5,949 most-used ones get promoted to NVFP4 so that 80-86% of actual work runs at high precision.",
+      "limit": "Breaks when the viewer assumes the choice is permanent: which experts are 'most-used' was counted from a mix of four kinds of text, and adding a second concurrent request shrinks the NVFP4 set (6,215 / 5,949 / 5,663 experts for one / two / three slots), pushing one to two points of calls back to 2-bit."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "V100s are dead for AI in 2026; nothing modern runs on them.",
+      "reality": "A production legal server runs DeepSeek V4.1 Flash daily on eight of them at 150-180 tokens per second for code and 93.5-105.5 tokens per second for legal writing (claim 1), though the R580 driver branch is the last to support Volta (claims 7 and 8)."
+    },
+    {
+      "myth": "You need to fit the whole model at high precision or the quality collapses.",
+      "reality": "The build keeps every expert at 2-bit and promotes only the most-used 38.7% to NVFP4; fidelity to NVIDIA's full NVFP4 reference actually improved, with same next token at 95.1% and changed multiple-choice answers down from 79 to 8 (claim 2)."
+    }
+  ],
+  "glossary": [
+    { "term": "expert", "definition": "One of the specialized sub-networks inside a Mixture-of-Experts model that gets routed only some of the work; DeepSeek V4.1 Flash has 384 per layer across 40 layers, 15,360 in all." },
+    { "term": "Mixture-of-Experts (MoE)", "definition": "A model design where a router picks a few experts per token instead of using every parameter, so memory cost is huge but per-token compute is small." },
+    { "term": "NVFP4", "definition": "NVIDIA's 4-bit floating point format from the Blackwell era: an E2M1 value with a shared FP8 scale per 16-value block plus an FP32 scale per tensor, cutting memory roughly 3.5x versus FP16." },
+    { "term": "2-bit quantization", "definition": "Compressing model weights to two bits each, which slashes memory about 8x versus 16-bit at the cost of precision; the fallback tier for this build's less-used experts." },
+    { "term": "decode route", "definition": "One call to an expert while the model writes output tokens; the share of routes landing on NVFP4 experts is the build's headline 80-86% figure." },
+    { "term": "same next token", "definition": "A fidelity check: how often a build picks the identical next token as a reference build of the same model; higher means closer behavior, not higher accuracy." },
+    { "term": "KL divergence", "definition": "A distance measure between two probability distributions, here how far the build's next-token probabilities sit from the reference's, measured in nats; lower is closer." },
+    { "term": "R580", "definition": "NVIDIA's Release 580 driver family for Linux, the last branch to support Maxwell, Pascal, and Volta GPUs including the V100." },
+    { "term": "tokens per second", "definition": "How fast a model emits output tokens, the everyday speed number for local inference." },
+    { "term": "SXM2", "definition": "NVIDIA's mezzanine socket for data center GPUs; the builder's V100s plug into SXM2 boards with NVLink inside each four-card board instead of PCIe slots." },
+    { "term": "Engram tables", "definition": "DeepSeek V4.1's conditional-memory lookup tables, about 110GB of which stay in system RAM in the lawyer's build rather than on the GPUs." }
+  ],
+  "unverified": [
+    "The builder's identity as Nick Mermiges, founder of PLI Labs and proprietarylegal.ai, is reported by Tom's Hardware from Reddit comments and was not independently confirmed.",
+    "The builder's claim that the V100s are on \"borrowed time\" after R580 suggests a specific end-of-support date for Volta that no fetched page states.",
+    "That the V100's Tensor Cores lack any hardware support for FP4 formats, leaving the NVFP4 math to custom kernels, is plausible from the format's Blackwell introduction but was not stated on a fetched page.",
+    "Used V100 SXM2 32GB cards now selling on eBay for about $900, more than double the roughly $400 apiece from the post, is a market observation from the first article not re-checked this run.",
+    "The builder's estimate that 50% to 60% of his LLM workflows can run on the box instead of frontier models is his own figure and no independent page corroborates it.",
+    "Whether the two-request setup he now runs preserves the fidelity numbers measured on the single-request build is untested; the tests ran on the build's first release.",
+    "That current-generation consumer hardware (for example a 2-card RTX 5090 setup or a DGX Spark) could match the 8x V100 throughput at lower power is an expectation, not a fetched measurement."
+  ],
+  "suggested_outline": "The 80% number on screen first: eight V100s from 2018 and the share of work now running at high precision.\nName the machine: a lawyer's private server, eight used Tesla V100s, 256 GiB of VRAM, built so case files never leave the office.\nThe myth being busted: everyone counts V100s out -- no modern quantization support, last driver branch coming -- yet daily legal work runs on them today.\nThe mechanism in one idea: Mixture-of-Experts means only some experts work per token, so promote the most-used 5,949 of 15,360 to NVFP4 and leave the rest at 2-bit.\nThe payoff numbers: 80-86% of decode routes on NVFP4 experts, same next token 95.1%, changed answers on 513 questions down from 79 to 8.\nThe honest catch: speed dropped (code 160-215 down to 150-180 tokens per second), R580 is the last Volta driver branch, and NVFP4 is a Blackwell format ported by hand to Volta.\nWhat the viewer takes home: old data center cards are priced by their memory bandwidth, not their age -- 900 GB/s per card still moves a modern MoE if you quantize where it counts.",
+  "notes": "Numbers come from Tom's Hardware' reporting on the builder's own measurements (Nov. 5 for 2-bit, Nov. 12 for near-NVFP4; greedy decoding, thinking off, one request at a time), so they are self-reported bench numbers relayed by tech press (tier 2) rather than an independent lab run; treat the 80% figure as a builder measurement, not a vendor spec. Two conflict notes. First, parameter framing differs: NVIDIA's model card says 552B total backbone with 16B active during decode plus 196B Engram conditional memory, while Tom's Hardware' first article says the model is compressed to mostly 2 bits with weights totaling 248.8GB and the second article estimates about 269 GiB at official precision; the card's approximately 400 GiB NVFP4 checkpoint is the authoritative size for the reference build the builder measures against. Second, the V100 spec page lists 900 GB/s per card for the NVLink version (1134 GB/s for V100S PCIe), matching the article's per-card figure. The Reddit thread (r/homelab, u/TumbleweedNew6515) is the true primary source but was not fetchable this run (403 from reddit.com and old.reddit.com); every number above is grounded in the two Tom's Hardware articles instead. FireCrawl unavailable (402 payment required), so discovery used web_search and acquisition used web_extract plus direct curl; the browser tool was down (chrome-not-running).",
+  "viewer_situation": "You've been told your old GPUs are useless for modern AI, but you keep seeing used data center cards go for the price of a gaming GPU.",
+  "has_process": false,
+  "objection": "A single new GPU with native FP4 support would beat eight power-hungry 2018 cards on performance per watt, and the R580 driver branch is the end of the line anyway."
+}
