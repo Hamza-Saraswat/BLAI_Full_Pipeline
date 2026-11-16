@@ -1,0 +1,647 @@
+[
+  {
+    "id": "hn-8468cd1c94",
+    "title": "Qwen4-Max",
+    "url": "https://qwen.ai/blog?id=qwen4-max",
+    "source": "hn",
+    "published_at": "2026-11-16T02:14:44Z",
+    "signals": {
+      "points": 595,
+      "num_comments": 250,
+      "signal": 1.0,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 1.0
+      },
+      "decay": 0.8682,
+      "age_h": 9.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 595 points, 250 comments on HN, 10 h ago",
+    "score": 89
+  },
+  {
+    "id": "github-9363dd9aec",
+    "title": "llama.cpp b12435",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12435",
+    "source": "github",
+    "published_at": "2026-11-16T11:38:54Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12435",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9945,
+      "age_h": 0.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> vulkan: make the radix top-k tie selection deterministic (#31931) * vulkan: make the radix top-k tie selection deterministic The radix select gathers the elements above the threshold and the ties with an atomic counter, so with more ties than remaining slots the kept columns depend on",
+    "why_now": "Shipped: ggml-org/llama.cpp b12435 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-99b9fe96ec",
+    "title": "llama.cpp b12433",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12433",
+    "source": "github",
+    "published_at": "2026-11-16T11:16:33Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12433",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9891,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "AMD"
+    ],
+    "summary": "<details open> cuda : fix MUL_MAT_ID abort with odd src0 columns on AMD (#32385) On AMD devices MUL_MAT_ID with an F32, F16 or BF16 src0 and at most 8 tokens always used MMVF. MMVF reads src0 in pairs of values and asserts an even ne[0], so a rank 1 LoRA on MoE expert weights (lora_b has ne[0] == 1)",
+    "why_now": "Shipped: ggml-org/llama.cpp b12433 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-d4b2d0218a",
+    "title": "llama.cpp b12432",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12432",
+    "source": "github",
+    "published_at": "2026-11-16T10:42:01Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12432",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9809,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> kv-cells: avoid an O(n_cells) scan per sequence removal (#32380) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/68072857> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/release",
+    "why_now": "Shipped: ggml-org/llama.cpp b12432 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "hn-507e1677a1",
+    "title": "Qwen4 Max: Intelligence, Performance and Price Analysis",
+    "url": "https://artificialanalysis.ai/models/qwen4-max",
+    "source": "hn",
+    "published_at": "2026-11-16T05:37:04Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 3,
+      "signal": 0.253,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.276
+      },
+      "decay": 0.9115,
+      "age_h": 6.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Changed: 3 points, 3 comments on HN, 6 h ago",
+    "score": 35
+  },
+  {
+    "id": "hn-46c90c28e7",
+    "title": "Show HN: Claudette - Mistral models in Claude Code",
+    "url": "https://github.com/raed667/claudette",
+    "source": "hn",
+    "published_at": "2026-11-15T16:38:41Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.7558,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral",
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 19 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-58ea50c2ec",
+    "title": "DeepSeek Chat Demo: A static chat app powered by the DeepSeek API",
+    "url": "https://github.com/deepseek-ai/chat-demo",
+    "source": "hn",
+    "published_at": "2026-11-15T19:41:25Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7898,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-897757444d",
+    "title": "Ask HN: Which open source LLM works best locally, and on what hardware?",
+    "url": "https://news.ycombinator.com/item?id=50508142",
+    "source": "hn",
+    "published_at": "2026-11-15T16:23:54Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 18,
+      "signal": 0.373,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.587
+      },
+      "decay": 0.7531,
+      "age_h": 19.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 18 comments on HN, 20 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-33ada4bcdc",
+    "title": "The efficient frontier of LLM inference",
+    "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/#quantization",
+    "source": "hn",
+    "published_at": "2026-11-15T23:55:50Z",
+    "signals": {
+      "points": 10,
+      "num_comments": 0,
+      "signal": 0.294,
+      "signal_parts": {
+        "points": 0.42,
+        "comments": 0.0
+      },
+      "decay": 0.8396,
+      "age_h": 12.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 10 points, 0 comments on HN, 12 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-91ca4f64d9",
+    "title": "Uncensored DeepSeek and GLM APIs with 1M context and no prompt logging",
+    "url": "https://bf16.ai/",
+    "source": "hn",
+    "published_at": "2026-11-15T18:55:21Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7811,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 17 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-79103b1748",
+    "title": "Irrigator: Local AI agent orchestration with recovery and spending limits",
+    "url": "https://irrigator.dev/",
+    "source": "hn",
+    "published_at": "2026-11-16T08:22:15Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9485,
+      "age_h": 3.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:local ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 4 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-22179b9ff4",
+    "title": "Show HN: OpenButterfly - Tracking the environmental impact of the AI ecosystem",
+    "url": "https://openbutterfly.com",
+    "source": "hn",
+    "published_at": "2026-11-16T05:06:56Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9049,
+      "age_h": 6.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I built OpenButterfly to help people understand the environmental impact of the AI ecosystem.<p>Openbutterfly tracks major AI companies (AI labs, cloud providers, chip makers and data center operators) and maps data center sites with their local grid carbon and water stress. Every disclosed figure l",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 7 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-84a0e66b80",
+    "title": "The Future of Hardware",
+    "url": "https://news.ycombinator.com/item?id=50510802",
+    "source": "hn",
+    "published_at": "2026-11-15T21:11:16Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.807,
+      "age_h": 14.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:prompt",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Will we be able to build what we prompt LLMs at home. What will we be using, 3d printers or something completely new where we can build a prototype in a couple of hours all through one interface.",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 15 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-75e310c708",
+    "title": "Show HN: A local-first AI agent for the desktop, no Electron, any LLM endpoint",
+    "url": "https://github.com/Scronkfinkle/byob",
+    "source": "hn",
+    "published_at": "2026-11-15T14:52:06Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7367,
+      "age_h": 21.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey folks. Most all the apps I see for agent harnesses are typescript based, and involve either electron or some form of IPC to function as a desktop app.<p>In the age of LLM&#x27;s, I thought it would be cool to build out a prototype of what a modern desktop application would like for this, without",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 21 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-1de0691f34",
+    "title": "Editing one row of an LLM's output layer to stop it overthinking",
+    "url": "https://think-graft.vercel.app/",
+    "source": "hn",
+    "published_at": "2026-11-15T17:07:12Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.761,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-443bf88c85",
+    "title": "Show HN: Skillroll - pure Markdown evals for any skill using a Dungeon Master",
+    "url": "https://github.com/hagaiw/skillroll",
+    "source": "hn",
+    "published_at": "2026-11-15T17:01:21Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7599,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Maintaining agentic skills alway felt like a chore due to how hard it was to test them.<p>Writing evals is just too complex to do for every small skill, So I wrote Skillroll - an eval framework that can test any skill using only an eval.md<p>How? instead of setting up an intricate eval environment,",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-5a271c4fb3",
+    "title": "Apfel-LLM: Drop",
+    "url": "https://github.com/NixOS/nixpkgs/pull/588623",
+    "source": "hn",
+    "published_at": "2026-11-15T15:51:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7472,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-8e5ced40ce",
+    "title": "Show HN: New Model- NCM Model - Are Memory Hungry LLMs Dead",
+    "url": "https://codedynasty.dev/posts/ncm_model-are_memory-hungry_LLMs_dead",
+    "source": "hn",
+    "published_at": "2026-11-15T16:28:12Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7539,
+      "age_h": 19.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:memory bandwidth",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "The biggest bottleneck of running top open models locally is memory bandwidth and sadly the ram costs are off the roof, if there&#x27;s still a roof, sam altman wants your pc ram for his data centre btw.<p>A fascinating new research paper out of Stanford University proposed an architecture called Ne",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 20 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-1dea34cd24",
+    "title": "Show HN: IronSurf - Browser in full Rust with cookie containers and userscripts",
+    "url": "https://github.com/h4sh5/ironsurf",
+    "source": "hn",
+    "published_at": "2026-11-16T09:56:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9701,
+      "age_h": 2.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "This is a browser I am building using AI Agents.<p>Components: Boa for JS, Stylo for CSS, Blitz for HTML DOM. Slint for the UI.<p>It is still very experimental but notable features implemented so far include:<p><pre><code> tabs multi-account containers (like the firefox extension) userscripts dev to",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-2c3591a9ab",
+    "title": "Show HN: New Book",
+    "url": "https://github.com/metereindustries/qeg",
+    "source": "hn",
+    "published_at": "2026-11-16T05:04:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9045,
+      "age_h": 7.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I just published a new book that has important implications in model quantization. Enjoy responsibly! :-)",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 7 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-7a416ae896",
+    "title": "LLM Releases, Token Limits, and Pricing Since GPT 3.5",
+    "url": "https://www.metemorris.com/posts/tokenomics/",
+    "source": "hn",
+    "published_at": "2026-11-15T21:18:47Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8085,
+      "age_h": 14.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-a5bc4cd661",
+    "title": "Daptin Plus an LLM Router",
+    "url": "https://github.com/daptin/daptin/wiki/Walkthrough-LLM-Router",
+    "source": "hn",
+    "published_at": "2026-11-15T16:39:12Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7559,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-f7aab94f41",
+    "title": "A Straight Line Predicts How Fast My Laptop Generates LLM Tokens",
+    "url": "https://bryananthonio.com/blog/straight-line-predicts-how-fast-my-laptop-generates-llm-tokens/",
+    "source": "hn",
+    "published_at": "2026-11-15T15:03:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7387,
+      "age_h": 21.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 21 h ago",
+    "score": 5
+  }
+]
