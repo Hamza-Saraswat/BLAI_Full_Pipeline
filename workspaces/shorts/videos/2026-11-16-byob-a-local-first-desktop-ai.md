@@ -40,3 +40,4 @@ blotato_post_id: ""
 
 - 05 package (unattended): titles = 1 searchable + 2 intriguing, picked intriguing "byob: a desktop AI agent with no brain" (38 chars, keyword in first 40, complements the frame-1 hook rather than repeating it); description leads with local-first desktop AI agent + Ollama + no bundled model, names the Airlock sandbox Short as closest related. Rubric 90/100 all rows scored; compliance contains_synthetic_media false (typographic terminal scenes + creator voice clone); no duplicate title vs published/. check_outputs: 2 fails before the hub Artifacts/Voice links were set, clean after.
 - 2026-11-16T13:27:30Z build start on gn100-83c4
+- 2026-11-16T13:28:37Z 06-voice ok 63s
