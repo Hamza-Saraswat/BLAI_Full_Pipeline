@@ -1,8 +1,8 @@
 ---
 slug: 2026-11-16-byob-a-local-first-desktop-ai
 workspace: shorts
-title: "byob: a local-first desktop AI agent, no Electron"
-status: scripted
+title: "byob: a desktop AI agent with no brain"
+status: ready-to-build
 pillar: how-to
 structure: "myth-bust"
 format: classic
@@ -11,7 +11,7 @@ value_types: "TEACHES,EQUIPS"
 created: 2026-11-16
 updated: "2026-11-16T12:10:13Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 90
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-16-ideas]]
 - Research: [[stages/03-research/output/2026-11-16-byob-a-local-first-desktop-ai-brief|Brief]]
 - Script: [[stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-script|Script]] + [[stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-storyboard|Storyboard]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-16-byob-a-local-first-desktop-ai-package|Package]]
+- Voice: [[stages/06-voice/output/2026-11-16-byob-a-local-first-desktop-ai-narration.txt|Narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -38,3 +38,4 @@ blotato_post_id: ""
 
 ## Build journal
 
+- 05 package (unattended): titles = 1 searchable + 2 intriguing, picked intriguing "byob: a desktop AI agent with no brain" (38 chars, keyword in first 40, complements the frame-1 hook rather than repeating it); description leads with local-first desktop AI agent + Ollama + no bundled model, names the Airlock sandbox Short as closest related. Rubric 90/100 all rows scored; compliance contains_synthetic_media false (typographic terminal scenes + creator voice clone); no duplicate title vs published/. check_outputs: 2 fails before the hub Artifacts/Voice links were set, clean after.

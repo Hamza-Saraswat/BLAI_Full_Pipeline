@@ -1,0 +1,37 @@
+{
+  "full": "byob: bring your own brain. The desktop agent ships without one. Your oh-lah-mah stays the brain. You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's A P I shape. Yours is already listening. Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship. Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection. A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight.",
+  "words": 125,
+  "scenes": [
+    {
+      "id": "s1",
+      "text": "byob: bring your own brain. The desktop agent ships without one. Your oh-lah-mah stays the brain.",
+      "words": 16,
+      "changed": true
+    },
+    {
+      "id": "s2",
+      "text": "You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's A P I shape. Yours is already listening.",
+      "words": 33,
+      "changed": true
+    },
+    {
+      "id": "s3",
+      "text": "Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship.",
+      "words": 30,
+      "changed": false
+    },
+    {
+      "id": "s4",
+      "text": "Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s5",
+      "text": "A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight.",
+      "words": 21,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}
