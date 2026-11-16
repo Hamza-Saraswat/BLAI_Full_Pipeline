@@ -2,14 +2,14 @@
 slug: 2026-11-15-8x-v100-runs-80-of-deepseek-v4
 workspace: shorts
 title: "2018 V100s Run 80% of DeepSeek"
-status: review
+status: expired
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: signal
 value_types: "REFRAMES,PROVES"
 created: 2026-11-15
-updated: "2026-11-15T13:47:35Z"
+updated: "2026-11-16T14:35:51Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-11-15T13:47:39Z 07-render ok 98.07s: 8 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 356
 - 2026-11-15T13:47:39Z 07-render ok 1252s
 - 2026-11-15T13:47:41Z build done, status review
+- 2026-11-16T14:35:51Z 2026-11-16T14:35:51Z expired: not from today's picks (2026-11-16); the factory carries no backlog

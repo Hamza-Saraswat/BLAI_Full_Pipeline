@@ -2,14 +2,14 @@
 slug: 2026-11-15-qwen-3-8-flash-next-the-day-on
 workspace: shorts
 title: "Qwen 3.8 Flash Next: the day-one local numbers"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-15
-updated: "2026-11-15T12:08:03Z"
+updated: "2026-11-16T14:35:51Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-16T14:35:51Z 2026-11-16T14:35:51Z expired: not from today's picks (2026-11-16); the factory carries no backlog
