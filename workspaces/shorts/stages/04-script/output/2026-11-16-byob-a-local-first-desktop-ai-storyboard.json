@@ -1,0 +1,92 @@
+{
+  "slug": "2026-11-16-byob-a-local-first-desktop-ai",
+  "topic": "byob: a local-first desktop AI agent, no Electron",
+  "title": "byob: the desktop agent with no brain",
+  "description": "byob is a local-first desktop AI agent with no Electron. Point it at the OpenAI-compatible endpoint you already run (llama-server, Ollama, LM Studio, vLLM) and your local model gets hands: files, commands, spreadsheets. Working description; the package stage overwrites it.",
+  "hashtags": [
+    "#byob",
+    "#localai",
+    "#ollama",
+    "#llamacpp",
+    "#lmstudio",
+    "#aiagent",
+    "#localLLM",
+    "#rustlang",
+    "#desktopAI",
+    "#buildlocalai"
+  ],
+  "hook_text": "byob. No brain. 13 MB.",
+  "hook_candidates": [
+    "Three moves tonight, and your Ollama model builds a spreadsheet.",
+    "byob: bring your own brain. The desktop agent ships without one.",
+    "Your Ollama server finally gets hands. Thirteen megabytes of hands.",
+    "The desktop AI agent that refuses to ship a model.",
+    "A local AI agent that starts by finding your server.",
+    "Sixty megabytes, no Electron, no account. Bring your own brain.",
+    "Point a desktop agent at localhost. It already speaks your server's language.",
+    "Your local model can't touch your files. byob changes that tonight.",
+    "No Electron, no bundled model, no account. Just hands for your local model.",
+    "One week old, ten releases, zero bundled models."
+  ],
+  "hook_pattern": "named-contradiction",
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 43,
+  "narration_full": "byob: bring your own brain. The desktop agent ships without one. Your Ollama stays the brain. You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's API shape. Yours is already listening. Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship. Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection. A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight.",
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "byob: bring your own brain. The desktop agent ships without one. Your Ollama stays the brain.",
+      "on_screen_text": "byob. No brain on board.",
+      "visual_brief": "Frame 1: solid black, centered monospace line 'byob. No brain on board.' with a block cursor that starts blinking within half a second. On 'ships without one' a thin-line brain icon fades in behind the text, then fades out. On 'run the model' a rounded box labeled agent rises in place with a smaller box labeled model inside it; on 'byob never does' the inner model box fades away, leaving the agent box hollow.",
+      "est_duration_s": 5.5
+    },
+    {
+      "id": "s2",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's API shape. Yours is already listening.",
+      "on_screen_text": "one client, any compatible server",
+      "visual_brief": "On 'only a client' a small tile labeled byob fades in at center-left. On 'OpenAI-compatible endpoint' a box labeled your server rises in place at center-right while a thin line fades in between them. On 'Yours is already listening' a green dot scales in on the server box and the line pulses once.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s3",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship.",
+      "on_screen_text": "files, code, spreadsheets. hob bundled the model.",
+      "visual_brief": "On 'reads files' a folder icon fades in beside the byob tile; on 'runs code' a small terminal glyph rises in place on the other side; on 'builds spreadsheets' a tiny grid scales in below. On 'predecessor hob' those icons fade out and one larger box labeled hob fades in with the model box sealed back inside it, the caption 'the myth was right there' rising in place beneath.",
+      "est_duration_s": 10.7
+    },
+    {
+      "id": "s4",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection.",
+      "on_screen_text": "cargo install byob · 60 MB download",
+      "visual_brief": "On 'cargo install byob' a dark terminal window fades in and the command types itself. On 'about sixty megabytes of download' the digits 60 MB scale in above a thin download bar. On 'one flag' the terminal line fades to 'byob --inference-url http://localhost:8080/v1' and a small checkmark scales in beside it.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s5",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight.",
+      "on_screen_text": "7 stars · 0 issues · unsigned macOS builds",
+      "visual_brief": "On 'seven stars' a minimal repo card fades in showing 7 stars and 0 open issues; on 'empty issue tracker' the zero scales up slightly. On 'No bundled brain' the card fades out; on 'grows hands' the byob tile rises in place at center as two simple hand outlines scale in at its sides, then the frame holds.",
+      "est_duration_s": 7.6
+    }
+  ],
+  "notes_for_review": "Draft storyboard assembled from blind writer JSON; est_duration_s computed at wps 2.9 (provisional ElevenLabs clone rate)."
+}

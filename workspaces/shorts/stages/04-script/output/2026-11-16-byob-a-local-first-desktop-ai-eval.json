@@ -1,0 +1,562 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-16T13:23:26+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-16-byob-a-local-first-desktop-ai-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 7,
+      "docs": 2,
+      "community": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 5,
+    "entities_total": 26,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.286,
+    "source_domains": [
+      "github.com",
+      "githubusercontent.com",
+      "ollama.com",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.6,
+      "detail": [
+        {
+          "label": "full download size, everything included",
+          "value": "about a 60 MB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "60",
+          "scene_ids": [
+            "s4"
+          ]
+        },
+        {
+          "label": "slim build download size",
+          "value": "13 MB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "13 MB",
+          "scene_ids": [
+            "s2"
+          ]
+        },
+        {
+          "label": "v0.3.6 Apple silicon macOS .dmg asset size",
+          "value": "64.3 MB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "repository stars at fetch",
+          "value": "7",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "7",
+          "scene_ids": [
+            "s5"
+          ]
+        },
+        {
+          "label": "releases published between 10 Nov 2026 (v0.1.0) and 16 Nov 2026 (v0.3.6)",
+          "value": "10",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 26,
+      "found_count": 4,
+      "score": 0.154,
+      "found": [
+        "Electron",
+        "Ollama",
+        "Test",
+        "macOS"
+      ],
+      "missing": [
+        "LM Studio",
+        "vLLM",
+        "IPC",
+        "LM Studio 1234",
+        "Xilem and Floem",
+        "GitHub",
+        "Linux",
+        "Windows",
+        "Connect",
+        "Slint",
+        "Freya",
+        "Xilem",
+        "Floem",
+        "localhost:8080",
+        "localhost:11434",
+        "Show HN",
+        "TypeScript-based",
+        "Rust",
+        "OpenAI-compatible URL",
+        "HTML",
+        "Servo",
+        "Chromium"
+      ],
+      "top2": [
+        "Electron",
+        "Ollama"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Electron",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "IPC",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Test",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "LM Studio 1234",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Xilem and Floem",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "macOS",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GitHub",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Linux",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Windows",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Connect",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Slint",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Freya",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Xilem",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Floem",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "localhost:8080",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "localhost:11434",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Show HN",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "TypeScript-based",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Rust",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenAI-compatible URL",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HTML",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Servo",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Chromium",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 14,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:13 MB"
+      ],
+      "hook_text": "byob. No brain. 13 MB.",
+      "first_sentence": "byob: bring your own brain."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 5,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s1",
+          "role": "hook",
+          "est_duration_s": 5.5,
+          "specific": true,
+          "hits": [
+            "entity:Ollama"
+          ],
+          "narration": "byob: bring your own brain. The desktop agent ships without one. Your Ollama stays the brain."
+        },
+        {
+          "id": "s2",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "num:13 MB"
+          ],
+          "narration": "You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's API shape. Yours is already listening."
+        },
+        {
+          "id": "s3",
+          "role": "explain",
+          "est_duration_s": 10.7,
+          "specific": true,
+          "hits": [
+            "entity:Electron"
+          ],
+          "narration": "Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship."
+        },
+        {
+          "id": "s4",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "num:about a 60 MB",
+            "entity:Test"
+          ],
+          "narration": "Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection."
+        },
+        {
+          "id": "s5",
+          "role": "payoff_close",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "num:7",
+            "entity:macOS"
+          ],
+          "narration": "A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.2,
+      "words": 126,
+      "sentences": 14,
+      "est_speech_s": 43.4,
+      "vo_band_ok": true
+    },
+    "narration_full": "byob: bring your own brain. The desktop agent ships without one. Your Ollama stays the brain. You'd expect it to run the model. It never does. Thirteen megabytes of program: one client for any OpenAI-compatible endpoint, a server that speaks OpenAI's API shape. Yours is already listening. Once connected, it reads files, runs code, builds spreadsheets beside your chat. Its predecessor hob bundled llama.cpp, the whole engine. byob drops even Electron, the bundled browser most agents ship. Tonight: cargo install byob, or unpack the release: about sixty megabytes of download. Launch it with one flag at your server, then press Test connection. A week old, solo-built, seven stars, an empty issue tracker. No bundled brain, no bundled browser: your model grows hands tonight.",
+    "on_screen": "byob. No brain. 13 MB. | byob. No brain on board. | one client, any compatible server | files, code, spreadsheets. hob bundled the model. | cargo install byob \u00b7 60 MB download | 7 stars \u00b7 0 issues \u00b7 unsigned macOS builds"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 6.2,
+        "words": 126,
+        "est_speech_s": 43.4,
+        "blockers": [],
+        "advisories": [
+          "10 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "10 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "target 43s outside the 32-38s evidence band",
+          "FK grade 6.2 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s2: 'API' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-16-byob-a-local-first-desktop-ai-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 3,
+        "heard": 3,
+        "total": 5,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.154,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Electron",
+          "Ollama"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:13 MB"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
