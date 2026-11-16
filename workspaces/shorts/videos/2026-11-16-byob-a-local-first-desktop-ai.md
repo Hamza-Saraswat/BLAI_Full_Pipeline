@@ -2,7 +2,7 @@
 slug: 2026-11-16-byob-a-local-first-desktop-ai
 workspace: shorts
 title: "byob: a local-first desktop AI agent, no Electron"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-16-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-16-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-16-byob-a-local-first-desktop-ai-brief|Brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -33,7 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 - Picked as #1 (opportunity 90.5, autocomplete depth 113 on "local ai agent"): the only product-named candidate whose lane (how-to) rotates off yesterday's myth-bust + news-react; classic band, three moves from nothing to a running desktop agent.
-- (none yet)
+- 03 research (unattended): angle confirmed as picked (desktop agent, no Electron, points at any endpoint incl. localhost); no redirect, slug unchanged. 10 sources, validator exit 0; 60 MB kept as download size, RAM parked under Unverified.
 
 ## Build journal
 

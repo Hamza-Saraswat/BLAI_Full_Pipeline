@@ -1,0 +1,193 @@
+{
+  "slug": "2026-11-16-byob-a-local-first-desktop-ai",
+  "topic": "byob: a local-first desktop AI agent, no Electron",
+  "generated_at": "2026-11-16T12:42:02Z",
+  "depth": "standard",
+  "thesis": "A one-week-old Rust rewrite proves a desktop AI agent needs neither a bundled model nor a bundled browser: point it at the OpenAI-compatible server you already run on localhost and it gives that model hands -- about a 60 MB download, no Electron, no account.",
+  "explanation_path": "Start from the split the name encodes: the brain and the body. The brain is the model server the viewer already runs -- llama-server, Ollama, LM Studio, vLLM -- each speaking the OpenAI-compatible HTTP dialect on a localhost port. The body is what has been missing: a desktop harness with hands (files, commands, spreadsheets, approval cards) whose only contract with the model is a URL. Establish that most agent harnesses ship as TypeScript plus Electron, a bundled Chromium, and that byob's author rebuilt the same shape as one native Rust program that draws its own interface on the GPU, going as far as prototyping six other Rust GUI toolkits before choosing egui. Then the connect beat: the predecessor hob bundled llama.cpp, and byob's defining move was dropping the bundled inference entirely, so first run just scans the usual ports, offers a Test connection button, and the model you connect becomes the default. The payoff is artifacts appearing beside the chat with per-turn undo. Land the honesty beat before the install line: a week-old, single-author project with an empty issue tracker and unsigned macOS builds is something you can try tonight, not yet something to hand your taxes.",
+  "claims": [
+    {
+      "claim": "byob is a native desktop AI coworker for the model you already run: point it at any OpenAI-compatible endpoint (llama-server, Ollama, LM Studio, vLLM or a hosted API) and it works in a folder with you, reading and writing files, running code, and building spreadsheets, charts, documents and small apps beside the chat.",
+      "source_url": "https://github.com/Scronkfinkle/byob",
+      "source_title": "Scronkfinkle/byob: Bring Your Own Brain - Local Agent Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "byob is one native program for Linux, macOS and Windows that draws its own interface on the GPU, with no Electron -- it is desktop software, not a web page in a window.",
+      "source_url": "https://github.com/Scronkfinkle/byob",
+      "source_title": "Scronkfinkle/byob: Bring Your Own Brain - Local Agent Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "The full download is about a 60 MB folder with everything in it, and the slim build is 13 MB.",
+      "source_url": "https://github.com/Scronkfinkle/byob",
+      "source_title": "Scronkfinkle/byob: Bring Your Own Brain - Local Agent Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "On first run byob shows a Connect a model screen listing servers it found on this computer's usual ports -- llama-server 8080, Ollama 11434, LM Studio 1234, vLLM 8000 -- plus presets and a Test connection button; tool calling falls back to prompt-based calls when the server has none.",
+      "source_url": "https://github.com/Scronkfinkle/byob",
+      "source_title": "Scronkfinkle/byob: Bring Your Own Brain - Local Agent Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "byob began as a rewrite of hob, an earlier desktop coworker that bundled llama.cpp; byob drops the bundled inference, so the agent never runs the model itself.",
+      "source_url": "https://github.com/Scronkfinkle/byob",
+      "source_title": "Scronkfinkle/byob: Bring Your Own Brain - Local Agent Harness",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "Instead of Electron the interface is egui/eframe 0.37 on wgpu, chosen after gpui, iced, Slint, Freya, Xilem and Floem were prototyped on 2026-11-09, and hob's Electron IPC layer was replaced by byob-protocol plus byob-server.",
+      "source_url": "https://raw.githubusercontent.com/Scronkfinkle/byob/main/docs/architecture.md",
+      "source_title": "byob architecture",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "Ollama's local server is itself an OpenAI-compatible endpoint at http://localhost:11434/v1/, one of the ports byob scans, and its API key is required by clients but ignored by the server.",
+      "source_url": "https://docs.ollama.com/api/openai-compatibility",
+      "source_title": "OpenAI compatibility - Ollama",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "llama.cpp's llama-server exposes OpenAI API compatible chat completions, responses and embeddings routes, with function calling for ~any model -- the thing byob's --inference-url http://localhost:8080/v1 points at.",
+      "source_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/master/tools/server/README.md",
+      "source_title": "LLaMA.cpp HTTP Server",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "The Show HN thread for byob sat at 4 points about 18 hours after posting; the author says most agent harness apps are TypeScript-based with Electron or IPC, and he rebuilt the idea without any web code in about a week.",
+      "source_url": "https://news.ycombinator.com/item?id=50507341",
+      "source_title": "Show HN: A local-first AI agent for the desktop, no Electron, any LLM endpoint | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    },
+    {
+      "claim": "The project's GitHub issue tracker shows 0 open and 0 closed issues at fetch, meaning no member of the public has filed a bug report yet.",
+      "source_url": "https://github.com/Scronkfinkle/byob/issues",
+      "source_title": "Issues · Scronkfinkle/byob",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-16"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "full download size, everything included",
+      "value": "about a 60 MB",
+      "source_url": "https://github.com/Scronkfinkle/byob"
+    },
+    {
+      "label": "slim build download size",
+      "value": "13 MB",
+      "source_url": "https://github.com/Scronkfinkle/byob"
+    },
+    {
+      "label": "v0.3.6 Apple silicon macOS .dmg asset size",
+      "value": "64.3 MB",
+      "source_url": "https://github.com/Scronkfinkle/byob/releases"
+    },
+    {
+      "label": "repository stars at fetch",
+      "value": "7",
+      "source_url": "https://github.com/Scronkfinkle/byob"
+    },
+    {
+      "label": "releases published between 10 Nov 2026 (v0.1.0) and 16 Nov 2026 (v0.3.6)",
+      "value": "10",
+      "source_url": "https://github.com/Scronkfinkle/byob/releases"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "BYOB restaurant",
+      "mapping": "byob supplies the table, the glasses and the service -- the window, the file tools, the approval cards -- and you supply the bottle: the model, already open on your counter at localhost:8080.",
+      "limit": "At a restaurant the bottle just sits there, while here the entire meal is poured from your bottle, so a weak local model makes the service look bad -- tool calling quality belongs to the model, not the app."
+    },
+    {
+      "vehicle": "Handset and exchange",
+      "mapping": "Any telephone handset works on any network because both sides speak one standard; the OpenAI-compatible API is the dial tone of local AI, and byob is just a very capable handset.",
+      "limit": "A handset only carries voice, but this handset has hands that act on your filesystem -- a slow exchange (low tokens per second) does not delay a call, it stalls a task halfway through a file edit."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "A local-first AI agent runs the model itself.",
+      "reality": "byob ships no inference at all; it is an HTTP client to any OpenAI-compatible URL, and it exists precisely because its predecessor hob bundled llama.cpp and byob dropped that (claim 5)."
+    },
+    {
+      "myth": "No Electron means no web technology anywhere in the app.",
+      "reality": "The desktop shell is native Rust drawing on the GPU, but the browser UI is the same app compiled to WebAssembly and HTML artifacts render through a separate Servo renderer process that ships with byob -- what is gone is Chromium as the desktop shell (claims 2 and 6)."
+    },
+    {
+      "myth": "Connecting it to your model means hand-editing config files.",
+      "reality": "First run scans the usual ports and offers a Test connection button; the entire configuration can be one flag, byob --inference-url http://localhost:8080/v1 (claim 4)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "OpenAI-compatible endpoint",
+      "definition": "A server that speaks the same HTTP API shape as OpenAI's chat completions, so any client built for OpenAI can talk to it -- including a local one on localhost."
+    },
+    {
+      "term": "Electron",
+      "definition": "A desktop-app framework that ships a whole Chromium browser plus Node.js inside every app; the standard way TypeScript agent harnesses become desktop programs."
+    },
+    {
+      "term": "llama-server",
+      "definition": "The llama.cpp HTTP server that loads a GGUF model file on your own machine and serves it on a local port."
+    },
+    {
+      "term": "egui",
+      "definition": "An immediate-mode GUI toolkit in Rust that draws its interface directly through the GPU (via wgpu) instead of rendering HTML."
+    },
+    {
+      "term": "tool calling",
+      "definition": "The model asking the client to run a function (read a file, run a command) and using the result; when a server lacks it, byob falls back to prompt-based calls."
+    },
+    {
+      "term": "WebAssembly (wasm)",
+      "definition": "A binary format that compiles programs like Rust code to run in a browser tab -- how byob's same native UI also runs on a phone."
+    },
+    {
+      "term": "Landlock",
+      "definition": "A Linux kernel feature that lets a program voluntarily give up access to files and folders, how byob sandboxes run_command and run_python on Linux."
+    }
+  ],
+  "unverified": [
+    "byob's RAM use while running has no published number in any fetched page; the 60 MB figure is download size, not memory, and our own hardware would have to measure it.",
+    "An Electron-based agent harness with the same features would use several times more memory than byob; no fetched page states such a number.",
+    "That Ollama, LM Studio and vLLM connect as smoothly as llama-server does in practice; the README lists presets for all of them, but nobody here has tried it.",
+    "Whether the project survives its first weeks of public exposure cannot be known from a single Show HN post."
+  ],
+  "suggested_outline": "Cold open: your llama-server is already running -- here is the 13 MB slim desktop harness that gives it hands, no Electron, no account.\nThe two-piece stack: a model server speaking OpenAI-compatible HTTP on localhost, and byob pointing at its URL; first run scans the usual ports (8080, 11434, 1234, 8000) and tests the connection for you.\nHonest catch, then the payoff: about a week old, one main author, zero issues filed, unsigned on macOS, and about a 60 MB is download size not RAM -- and still, tonight: cargo install byob, connect, approve the first diff.",
+  "notes": "Trendshift (fetched 2026-11-16) corroborates the timeline: repository created 7 days ago, +4 stars over three days, one social mention total (the Show HN post). Two minor discrepancies, both resolved toward the repo: byob.chat still offers 'Download byob 0.3.5' hours after v0.3.6 shipped (trust the releases page), and Trendshift lists the license as 'Apache License 2.0' while the repo states 'MIT OR Apache-2.0'. Community reception is a single Show HN post at 4 points with no comments at fetch -- the video must not claim broader traction. The Show HN number is community-tier, so it stays in claims and out of key numbers.",
+  "viewer_situation": "You already run a local model on llama-server, Ollama or LM Studio and talk to it in a web UI or a terminal, but it has no hands: it cannot touch your files, run code, or build anything beside the conversation.",
+  "has_process": true,
+  "process_steps": [
+    "Start your local model server (for example llama-server with a GGUF file, or `ollama serve`) and note the port it listens on.",
+    "Install byob: `cargo install byob`, or download the release archive for Linux, macOS or Windows from the releases page and unpack it.",
+    "Launch byob and wait for the Connect a model screen; pick the server it found on its usual port, or start it by hand with `byob --inference-url http://localhost:8080/v1 --model local`.",
+    "Press Test connection to confirm the endpoint answers, then keep that model as the default.",
+    "Open or create a workspace folder so the agent's file tools and commands have a place to run.",
+    "Ask for something concrete -- build a spreadsheet from a CSV, run a script -- and approve each action card, with its diff, before anything runs.",
+    "Optionally run `byob --serve` and `tailscale serve 7470` to reach the same live session from your phone."
+  ],
+  "objection": "It is about a week old with one main author, 7 stars, an empty issue tracker and unsigned macOS builds, so 'no Electron' is an aesthetic claim until strangers have hammered on it -- and about a 60 MB is the download size, not the memory it uses, which nobody has published."
+}
