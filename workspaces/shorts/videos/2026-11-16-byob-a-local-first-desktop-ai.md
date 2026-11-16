@@ -2,14 +2,14 @@
 slug: 2026-11-16-byob-a-local-first-desktop-ai
 workspace: shorts
 title: "byob: a desktop AI agent with no brain"
-status: building
+status: review
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-16
-updated: "2026-11-16T13:27:30Z"
+updated: "2026-11-16T13:45:57Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-script|Script]] + [[stages/04-script/output/2026-11-16-byob-a-local-first-desktop-ai-storyboard|Storyboard]]
 - Package: [[stages/05-package/output/2026-11-16-byob-a-local-first-desktop-ai-package|Package]]
 - Voice: [[stages/06-voice/output/2026-11-16-byob-a-local-first-desktop-ai-narration.txt|Narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-16-byob-a-local-first-desktop-ai-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -41,3 +41,5 @@ blotato_post_id: ""
 - 05 package (unattended): titles = 1 searchable + 2 intriguing, picked intriguing "byob: a desktop AI agent with no brain" (38 chars, keyword in first 40, complements the frame-1 hook rather than repeating it); description leads with local-first desktop AI agent + Ollama + no bundled model, names the Airlock sandbox Short as closest related. Rubric 90/100 all rows scored; compliance contains_synthetic_media false (typographic terminal scenes + creator voice clone); no duplicate title vs published/. check_outputs: 2 fails before the hub Artifacts/Voice links were set, clean after.
 - 2026-11-16T13:27:30Z build start on gn100-83c4
 - 2026-11-16T13:28:37Z 06-voice ok 63s
+- 2026-11-16T13:46:00Z 07-render ok 48.47s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 359
+- 2026-11-16T13:46:00Z 07-render ok 1040s
