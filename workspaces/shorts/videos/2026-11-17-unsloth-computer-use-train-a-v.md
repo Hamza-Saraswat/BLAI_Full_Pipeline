@@ -2,14 +2,14 @@
 slug: 2026-11-17-unsloth-computer-use-train-a-v
 workspace: shorts
 title: "Unsloth computer use: train a vision agent on one GPU"
-status: idea
+status: researched
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-17
-updated: "2026-11-17T12:08:03Z"
+updated: "2026-11-17T12:47:10Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-17-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-17-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-17-unsloth-computer-use-train-a-v-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
