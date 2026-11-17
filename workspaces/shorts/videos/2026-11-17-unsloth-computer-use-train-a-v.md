@@ -2,14 +2,14 @@
 slug: 2026-11-17-unsloth-computer-use-train-a-v
 workspace: shorts
 title: Unsloth computer use on one GPU
-status: building
+status: review
 pillar: myth-bust
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-17
-updated: "2026-11-17T13:26:10Z"
+updated: "2026-11-17T14:07:21Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-17-unsloth-computer-use-train-a-v-script]]
 - Package: [[stages/05-package/output/2026-11-17-unsloth-computer-use-train-a-v-package]]
 - Voice: [[stages/06-voice/output/2026-11-17-unsloth-computer-use-train-a-v-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-17-unsloth-computer-use-train-a-v-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -40,3 +40,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-17T13:26:10Z build start on gn100-83c4
 - 2026-11-17T13:28:26Z 06-voice ok 134s
+- 2026-11-17T14:07:25Z 07-render ok 100.50s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 363
+- 2026-11-17T14:07:25Z 07-render ok 2336s
