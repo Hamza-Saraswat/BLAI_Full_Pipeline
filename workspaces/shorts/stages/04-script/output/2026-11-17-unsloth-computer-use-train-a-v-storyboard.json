@@ -1,0 +1,220 @@
+{
+  "slug": "2026-11-17-unsloth-computer-use-train-a-v",
+  "topic": "How Unsloth's new computer-use beta on one consumer GPU stacks up against metered cloud agents from OpenAI and Anthropic on what a screen-driving agent actually costs you.",
+  "title": "Unsloth computer use vs cloud agents: what your GPU really replaces",
+  "description": "Unsloth computer use vs cloud agents, priced rung by rung.\nOpenAI caps its ChatGPT agent at 40 messages a month on Plus, and Anthropic bills every screenshot as image input. On your own card, the best-rated open screen model is about 19 GB once, and QLoRA fine-tuning fits in 22 GB of VRAM. This video climbs the full comparison: the meter, the memory, and the weights.\nYou'll learn a one-line rule for deciding when one consumer GPU replaces a metered cloud agent.\nSubscribe for weekly local AI builds. (Narration is AI-generated.)",
+  "hashtags": [
+    "#unsloth",
+    "#openai",
+    "#chatgpt",
+    "#anthropic",
+    "#qlora",
+    "#gguf",
+    "#localai",
+    "#computeruse",
+    "#aiagents",
+    "#gpu"
+  ],
+  "tags": [
+    "unsloth computer use",
+    "unsloth beta",
+    "local ai agent",
+    "train ai agent on your gpu",
+    "qlora fine tuning",
+    "22 gb vram",
+    "chatgpt agent 40 messages",
+    "openai agent limit",
+    "anthropic computer use cost",
+    "claude computer use",
+    "best gguf vision model",
+    "run ai agent locally",
+    "gpu vs cloud ai agent",
+    "unsloth fine tune",
+    "vision agent local",
+    "ai agent controls screen",
+    "consumer gpu ai training",
+    "stop renting ai agents",
+    "local computer use agent"
+  ],
+  "hook_text": "40 messages a month, or your GPU.",
+  "hook_candidates": [
+    "Forty messages a month, or your own GPU.",
+    "Nineteen gigabytes. That's the whole agent.",
+    "You've got the card. Now teach it to click.",
+    "Anthropic bills every screenshot. Your GPU doesn't.",
+    "Train a vision agent tonight, on the card you own.",
+    "Your GPU already watches the screen. Now it can act.",
+    "Stop renting your agent by the message.",
+    "19 GB in, agent out.",
+    "The datacenter myth, minus the datacenter.",
+    "LoRA: one skill bolted onto a frozen model, tonight."
+  ],
+  "script_format": "smooth-explainer",
+  "structure": "comparison-ladder",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 105,
+  "narration_full": "The meter says forty messages a month. Your GPU has no meter. You've got a gaming card, and you've watched Claude and ChatGPT drive screens for a fee. Teaching one yourself doesn't take a datacenter. The meter is the first thing you pay. OpenAI caps its ChatGPT agent at forty messages a month on Plus, then folds it into ChatGPT Work. Hit the cap and the agent stops. Your side has no meter. Unsloth just shipped a computer-use beta, an agent that reads your screen and clicks with your approval. It ships off by default, under permission rules you set. Then there's what running it costs. Anthropic's computer use tool bills every screenshot it reads as image input. The agent looks, and the meter ticks. Long tasks look a lot. Your side downloads once. The best-rated open screen model is a GGUF, a packed file that runs on your own hardware. It takes about nineteen gigabytes of memory, vision file included. After that, looking is free. Using it feels like a new hire leaning over your shoulder. It sees only the screen, it moves your mouse, and it asks before it clicks. Unlike a hire, it re-reads every screenshot from scratch, so long jobs can drift. The full job needs twenty-two gigabytes of VRAM, your card's own memory, at minimum. And the add-on is yours to keep. MiniMax's new image model is the proof. Its weights download, and this week's Unsloth release trains them. The full job needs twenty-two gigabytes of VRAM, your card's own memory, at minimum. And the add-on is yours to keep. One honest catch. It's a beta, and it behaves like one. In Unsloth's own test, two of six runs misread the screen or quit. It only drives apps on your own machine. The meter, the memory, the weights. Rent the rare jobs to the cloud. Run the routine ones on your own GPU, with Unsloth.",
+  "analogy": {
+    "vehicle": "a new hire leaning over your shoulder",
+    "mapping": "the agent sees only your screen, moves your mouse, and asks permission before it clicks, which is exactly how Unsloth's approval prompts behave",
+    "limit": "a hire remembers after day one, but the model re-reads every screenshot fresh, so long tasks can drift"
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The meter says forty messages a month. Your GPU has no meter. You've got a gaming card, and you've watched Claude and ChatGPT drive screens for a fee. Teaching one yourself doesn't take a datacenter.",
+      "on_screen_text": "40 messages a month, or your GPU.",
+      "visual_brief": "Frame 1: the hook line 'Forty messages a month, or your own GPU.' in 130 px bold type, centered in the upper two-thirds on dark slate; below it, two empty card outlines labeled 'cloud' and 'your GPU'. Motion onset at t=0.35 s: the hook line scales from 0.96 to 1.0. On 'gaming card', the 'your GPU' card rises in place and brightens. On 'for a fee', a small meter icon fades into the 'cloud' card. On 'datacenter', the cloud card dims to half opacity.",
+      "render_notes": "Hook text fully legible at frame 1, upper two-thirds, 120 px or taller; first motion is a subtle scale at t=0.35 s.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ],
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The meter is the first thing you pay. OpenAI caps its ChatGPT agent at forty messages a month on Plus, then folds it into ChatGPT Work. Hit the cap and the agent stops.",
+      "on_screen_text": "Plus plan: 40 messages a month | then folded into ChatGPT Work",
+      "visual_brief": "On 'The meter', a small gauge icon rises in place at top center. On 'forty messages a month', a giant '40' scales in at center with the caption 'messages a month on Plus' at 72 px beneath it, and the gauge fills and locks red in sync. On 'folds it into ChatGPT Work', a slim tag reading 'folded into Work' fades in under the caption. On 'the agent stops', the gauge needle freezes. All elements stay above the bottom 450 px; at most two animate at once.",
+      "render_notes": "Gauge fill and red lock land on the word 'forty'; '40' is the only digit on screen in this scene.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ],
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Your side has no meter. Unsloth just shipped a computer-use beta, an agent that reads your screen and clicks with your approval. It ships off by default, under permission rules you set.",
+      "on_screen_text": "your card: no meter | Unsloth beta: off by default",
+      "visual_brief": "Centered stack on dark slate. On 'no meter', the gauge icon fades in with a clean strike-through. On 'Unsloth', a card reading 'Unsloth computer-use beta' rises in place at center, 96 px type. On 'reads your screen and clicks', a small monitor icon with a cursor dot fades in beneath the card. On 'off by default', a toggle switch in the off position scales in below. At most two elements move at a time; everything stays in the safe zone.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Then there's what running it costs. Anthropic's computer use tool bills every screenshot it reads as image input. The agent looks, and the meter ticks. Long tasks look a lot.",
+      "on_screen_text": "every screenshot = billed image input | the meter ticks",
+      "visual_brief": "Manim diagram, left to right, kept clear of the right 120 px. On 'Anthropic', a node labeled 'screenshot' fades in at left. On 'bills every screenshot', an arrow draws to a node labeled 'image input', then a second arrow to a node labeled 'bill'. On 'the meter ticks', the 'bill' node pulses and a meter bar above it fills in three steps, about one second apart. On 'Long tasks look a lot', the whole flow echoes faintly behind itself.",
+      "est_duration_s": 10.3
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Your side downloads once. The best-rated open screen model is a GGUF, a packed file that runs on your own hardware. It takes about nineteen gigabytes of memory, vision file included. After that, looking is free.",
+      "on_screen_text": "GGUF: one packed file | about 19 GB, once",
+      "visual_brief": "On 'downloads once', a single down-arrow icon rises in place at top center. On 'GGUF', a file card labeled 'GGUF' with the subtitle 'one packed file' fades in at left-center. On 'nineteen gigabytes', a giant '19' scales in at center with 'GB, downloaded once' at 80 px beneath, and a horizontal memory bar fills to a marker labeled 'fits'. On 'looking is free', the bar fill turns green. Two animations max at once.",
+      "render_notes": "Memory bar fill lands on 'nineteen gigabytes'; keep the 'fits' marker clear of the right 120 px.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Using it feels like a new hire leaning over your shoulder. It sees only the screen, it moves your mouse, and it asks before it clicks. Unlike a hire, it re-reads every screenshot from scratch, so long jobs can drift.",
+      "on_screen_text": "sees the screen, moves the mouse | asks before it clicks",
+      "visual_brief": "Manim loop diagram in the safe zone. On 'new hire', a simple figure outline fades in, leaning over a monitor from behind. On 'sees only the screen', an arrow draws from the monitor to the figure's eyes. On 'moves your mouse', an arrow draws back to a cursor that glides a short path. On 'asks before it clicks', a dialog reading 'allow?' scales in and the cursor pauses. On 're-reads every screenshot', the loop resets with a soft fade and the cursor path wobbles to show drift.",
+      "est_duration_s": 13.8
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "The full job needs twenty-two gigabytes of VRAM, your card's own memory, at minimum. And the add-on is yours to keep.",
+      "on_screen_text": "22 GB VRAM minimum | adapter yours",
+      "visual_brief": "On 'never hand you their weights', a cloud icon with a small lock fades in at left, labeled 'their weights'. On 'QLoRA', a large block labeled 'base model' rises in place at center, tagged 'frozen'. On 'one new skill', a small puzzle piece labeled 'adapter' scales in and docks onto the block. On 'twenty-two gigabytes', a giant '22' scales in with 'GB VRAM minimum' beneath, and a memory bar fills past a line labeled 'your card'. On 'yours to keep', the adapter piece glows.",
+      "render_notes": "Adapter docks onto the frozen block with a scale-in, never a slide; glow pulse under 0.5 s.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "MiniMax's new image model is the proof. Its weights download, and this week's Unsloth release trains them.",
+      "on_screen_text": "MiniMax-H3-Image: open | trains in Unsloth",
+      "visual_brief": "On 'never hand you their weights', a cloud icon with a small lock fades in at left, labeled 'their weights'. On 'QLoRA', a large block labeled 'base model' rises in place at center, tagged 'frozen'. On 'one new skill', a small puzzle piece labeled 'adapter' scales in and docks onto the block. On 'twenty-two gigabytes', a giant '22' scales in with 'GB VRAM minimum' beneath, and a memory bar fills past a line labeled 'your card'. On 'yours to keep', the adapter piece glows.",
+      "render_notes": "Adapter docks onto the frozen block with a scale-in, never a slide; glow pulse under 0.5 s.",
+      "est_duration_s": 5.9
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "grid",
+      "narration": "The full job needs twenty-two gigabytes of VRAM, your card's own memory, at minimum. And the add-on is yours to keep.",
+      "on_screen_text": "22 GB VRAM minimum | adapter yours",
+      "visual_brief": "On 'never hand you their weights', a cloud icon with a small lock fades in at left, labeled 'their weights'. On 'QLoRA', a large block labeled 'base model' rises in place at center, tagged 'frozen'. On 'one new skill', a small puzzle piece labeled 'adapter' scales in and docks onto the block. On 'twenty-two gigabytes', a giant '22' scales in with 'GB VRAM minimum' beneath, and a memory bar fills past a line labeled 'your card'. On 'yours to keep', the adapter piece glows.",
+      "render_notes": "Adapter docks onto the frozen block with a scale-in, never a slide; glow pulse under 0.5 s.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ],
+      "est_duration_s": 7.2
+    },
+    {
+      "id": "s10",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "One honest catch. It's a beta, and it behaves like one. In Unsloth's own test, two of six runs misread the screen or quit. It only drives apps on your own machine.",
+      "on_screen_text": "it's a beta: some runs misread | local apps only",
+      "visual_brief": "Centered stack. On 'honest catch', a small caution triangle fades in at top center. On 'behaves like one', a card reading 'it's a beta' rises in place, 96 px type. On 'misread the screen or quit', two list lines fade in below: 'some runs misread' and 'some runs quit', each with a small x. On 'only launches apps', a final line fades in: 'local apps only'. Nothing enters the bottom 450 px.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s11",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The meter, the memory, the weights. Rent the rare jobs to the cloud. Run the routine ones on your own GPU, with Unsloth.",
+      "on_screen_text": "rare: rent it | routine: run it on your GPU",
+      "visual_brief": "Split compare that rhymes with frame 1: two cards side by side, left labeled 'rent it', right labeled 'run it on your GPU'. On 'Rent the agent when it's rare', the left card brightens with the tag 'rare'. On 'run it on your own GPU when it's routine', the right card brightens with 'routine' and stays lit as the left dims to half opacity. Final 0.5 s: both cards hold still and a small wordmark fades in at top left.",
+      "render_notes": "Hold the two-card composition for the final 0.5 s wordmark settle; this frame rhymes with frame 1.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ],
+      "est_duration_s": 7.9
+    }
+  ],
+  "notes_for_review": "Verify the number budget: only forty (messages a month, Plus agent cap), about nineteen (gigabytes, screen model), and twenty-two (gigabytes, QLoRA VRAM floor) are spoken or shown; 'twenty-four' never appears and the viewer's card is never numbered. Confirm computer use, GGUF, QLoRA, and VRAM each carry a same-breath appositive definition. Confirm the payoff sentence is the last thing spoken, with nothing after it.",
+  "style_pack": "halftone"
+}
