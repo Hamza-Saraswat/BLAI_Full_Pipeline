@@ -2,14 +2,14 @@
 slug: 2026-11-16-edit-one-row-stop-the-overthin
 workspace: shorts
 title: "Edit one row, stop the overthinking: think-graft"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-16
-updated: "2026-11-16T12:10:13Z"
+updated: "2026-11-17T14:35:26Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - (none yet)
 
 ## Build journal
-
+- 2026-11-17T14:35:26Z 2026-11-17T14:35:26Z expired: not from today's picks (2026-11-17); the factory carries no backlog

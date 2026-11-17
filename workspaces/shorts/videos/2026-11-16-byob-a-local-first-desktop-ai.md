@@ -2,14 +2,14 @@
 slug: 2026-11-16-byob-a-local-first-desktop-ai
 workspace: shorts
 title: "byob: a desktop AI agent with no brain"
-status: review
+status: expired
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-16
-updated: "2026-11-16T13:45:57Z"
+updated: "2026-11-17T14:35:26Z"
 publish_slot: ""
 seo_score: 90
 feedback: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-16T13:46:00Z 07-render ok 48.47s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 359
 - 2026-11-16T13:46:00Z 07-render ok 1040s
 - 2026-11-16T13:46:03Z build done, status review
+- 2026-11-17T14:35:26Z 2026-11-17T14:35:26Z expired: not from today's picks (2026-11-17); the factory carries no backlog
