@@ -33,6 +33,8 @@ blotato_post_id: ""
 
 ## Decisions
 - 03-2 (unattended): slug confirmed 2026-11-17-unsloth-computer-use-train-a-v; angle restated as "Unsloth's new computer-use beta plus LoRA means you can fine-tune a vision agent that clicks on one consumer GPU, and MiniMax-H3-Image is the worked example" -- carried from the 2026-11-17 ideas pick (myth-bust, smooth-explainer); no redirect signal, proceeding to sources.
+- 04-1 (unattended): two structures taken as comparison-ladder (draft A, one axis: what a screen agent costs; three rungs meter/run/train vs the cloud plans) and how-to-three-moves (draft B, install -> feed sixty images -> train and deploy). The hub's ideation-time structure field (worked-example) is rotation-blocked: the ledger's last two entries are worked-example (2026-11-15) and myth-bust (2026-11-16), and neither draft may use either. Value types TEACHES,EQUIPS confirmed; promise: after this video the viewer can decide or run one-GPU computer use with numbers, tonight.
+- 04-2 (unattended): 10 hooks scored per hook-library; kept hook 1 "Forty messages a month, or your own GPU." (decision pattern) for draft A and hook 2 "Nineteen gigabytes. That's the whole agent." (number-shock pattern) for draft B -- two different patterns, and both clear the last two ledger hook patterns (situation, named-contradiction).
 
 ## Build journal
 
