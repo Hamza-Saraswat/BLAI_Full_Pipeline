@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-17-unsloth-computer-use-train-a-v-brief]]
 - Script: [[stages/04-script/output/2026-11-17-unsloth-computer-use-train-a-v-script]]
 - Package: [[stages/05-package/output/2026-11-17-unsloth-computer-use-train-a-v-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-17-unsloth-computer-use-train-a-v-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -39,3 +39,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-17T13:26:10Z build start on gn100-83c4
+- 2026-11-17T13:28:26Z 06-voice ok 134s
