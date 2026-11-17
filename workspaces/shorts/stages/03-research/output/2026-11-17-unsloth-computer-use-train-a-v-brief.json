@@ -1,0 +1,201 @@
+{
+  "slug": "2026-11-17-unsloth-computer-use-train-a-v",
+  "topic": "Unsloth computer use: train a vision agent on one GPU",
+  "generated_at": "2026-11-17T12:38:37Z",
+  "depth": "standard",
+  "thesis": "Unsloth's v0.1.918-beta puts computer use on your own desk: a 27B vision model drives the screen from about 19 GB of VRAM, and the LoRA route to customize these open models fits one consumer GPU instead of a datacenter.",
+  "explanation_path": "Start with what computer use actually is: a vision model reads a screenshot, decides a click or a keystroke, and loops -- the same loop Anthropic and OpenAI run in the cloud, metered per request and per screenshot. Then land the event: Unsloth's v0.1.918-beta, released 2026-11-16, ships that loop as a local feature, off by default and gated by per-app approvals. Before any hardware claim, name the two shipped pieces so they never blur together: the computer-use loop runs existing local vision models (Qwen3.8-27B rated best, about 19 GB), while the new training story is MiniMax-H3-Image, MiniMax's open 33.1B image model now downloadable as GGUF, FP8 and INT8 with LoRA support. With the pieces named, do the memory math against the viewer's card: about 19 GB to drive the screen, 22 GB to QLoRA-finetune a 27B model, about 24 GB peak to train a MiniMax-H3-Image LoRA on the int8 base -- all inside one 24 GB GPU, with a 128 GB machine swimming in room. Then the honest catch, straight from Unsloth's own six-run receipts test (two perfect, two misread) and the beta's limits (local launches only, X11 on Linux, 100 to 200 actions per real task). Close on tonight's move: the 60-image, 150-step LoRA recipe that finished in about 100 seconds on a 96 GB card, and what to expect when the viewer repeats it.",
+  "claims": [
+    {
+      "claim": "Unsloth v0.1.918-beta, published 2026-11-16, ships computer use as a beta: local vision models see the screen and interact with apps across macOS, Windows and Linux, off by default with permission controls.",
+      "source_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.918-beta",
+      "source_title": "Release Computer Use, MiniMax-H3-Image + Perf fixes (unslothai/unsloth v0.1.918-beta)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "The same release adds MiniMax-H3-Image support: GGUF weights for CPU, Mac and AMD, FP8 and INT8 weights for NVIDIA, and LoRA training.",
+      "source_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.918-beta",
+      "source_title": "Release Computer Use, MiniMax-H3-Image + Perf fixes (unslothai/unsloth v0.1.918-beta)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "The model Unsloth rates best at computer use, Qwen3.8-27B in GGUF form, needs about 19 GB with its vision file, consistent with the 17.7 GB UD-Q4_K_XL quant file on Unsloth's repo.",
+      "source_url": "https://unsloth.ai/docs/basics/computer-use",
+      "source_title": "Computer Use with Local LLMs | Unsloth Documentation",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "Unsloth's own requirements table puts QLoRA (4-bit) fine-tuning of a 27B model at 22 GB of VRAM minimum, and 16-bit LoRA of the same at 64 GB.",
+      "source_url": "https://unsloth.ai/docs/get-started/fine-tuning-for-beginners/unsloth-requirements",
+      "source_title": "Unsloth Requirements | Unsloth Documentation",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "The MiniMax-H3-Image LoRA recipe is real and timed: 150 steps on 60 tarot cards took about 100 seconds on an RTX PRO 6000, and training needs 32 GB+ of GPU memory (an estimate; tested on 96 GB) or the int8 base at about 24 GB peak.",
+      "source_url": "https://unsloth.ai/docs/models/minimax-h3-image",
+      "source_title": "MiniMax-H3-Image | Unsloth Documentation",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "Unsloth's own reliability test is mixed: across six runs of a receipts task, Qwen3.8-27B on one A100 at about 130 tokens a second got everything right twice (22 and 30 minutes), while two runs misread one amount, one stopped before the deck, and one charted the wrong column.",
+      "source_url": "https://unsloth.ai/docs/basics/computer-use",
+      "source_title": "Computer Use with Local LLMs | Unsloth Documentation",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "MiniMax-H3-Image itself is a 33.1B-parameter dense diffusion transformer released under the MiniMax-H3-Image Community License Agreement, with the BF16 checkpoint at 68.65 GB.",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "source_title": "MiniMaxAI/MiniMax-H3-Image | Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "MiniMax-H3-Image-PE, the optional prompt expander, is a separate model fine-tuned from Qwen3.8-27B, shipped as NVFP4 at 17.9 GB, under the MiniMax-H3-Image Community License Agreement on top of Qwen's Apache 2.0 base.",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE",
+      "source_title": "MiniMaxAI/MiniMax-H3-Image-PE | Hugging Face",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "On the cloud side, Anthropic's computer-use toolset adds about 4,500 input tokens to a request before any work happens, and every screenshot comes back billed as image input.",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool",
+      "source_title": "Computer use tool - Claude Platform Docs",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-17"
+    },
+    {
+      "claim": "OpenAI's documented agent limits were 40 messages per month on Plus and 400 on Pro -- and the same page now says ChatGPT agent is no longer available, folded into ChatGPT Work.",
+      "source_url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "source_title": "ChatGPT agent | OpenAI Help Center",
+      "source_quality": "primary",
+      "confidence": "medium",
+      "accessed": "2026-11-17"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "VRAM for the best-tested computer-use model (Qwen3.8-27B GGUF with vision file)",
+      "value": "about 19 GB",
+      "source_url": "https://unsloth.ai/docs/basics/computer-use"
+    },
+    {
+      "label": "Minimum VRAM to QLoRA (4-bit) fine-tune a 27B model",
+      "value": "22 GB",
+      "source_url": "https://unsloth.ai/docs/get-started/fine-tuning-for-beginners/unsloth-requirements"
+    },
+    {
+      "label": "Peak GPU memory training a MiniMax-H3-Image LoRA on the int8 base",
+      "value": "about 24 GB peak",
+      "source_url": "https://unsloth.ai/docs/models/minimax-h3-image"
+    },
+    {
+      "label": "Unsloth's timed LoRA run (150 steps, 60 images) on an RTX PRO 6000",
+      "value": "about 100 seconds",
+      "source_url": "https://unsloth.ai/docs/models/minimax-h3-image"
+    },
+    {
+      "label": "Anthropic computer-use toolset overhead per request",
+      "value": "about 4,500 input tokens",
+      "source_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool"
+    },
+    {
+      "label": "ChatGPT agent monthly limit, Plus plan (as documented 2026-11-17)",
+      "value": "40 messages/month",
+      "source_url": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+    },
+    {
+      "label": "MiniMax-H3-Image-PE download size (NVFP4)",
+      "value": "17.9 GB",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A new hire driving your desktop over your shoulder",
+      "mapping": "The model sees only what is on the screen and moves the same mouse and keyboard you use, asking approval the way Unsloth asks before the first action and each new app.",
+      "limit": "A human intern remembers your apps after day one; the model re-reads a fresh screenshot at every step, so long tasks drift -- a real task takes 100 to 200 actions, and two of Unsloth's six receipt runs misread or quit."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Teaching an AI to use your computer is a cloud-company, datacenter-scale project.",
+      "reality": "Unsloth's own numbers put the screen-driving model at about 19 GB and QLoRA fine-tuning of a 27B model at 22 GB of VRAM -- one consumer GPU, not a rack."
+    },
+    {
+      "myth": "Computer use means handing an AI unrestricted control of your machine.",
+      "reality": "Unsloth's beta is off by default, asks before the first action in each chat and before each new app, keeps blocked apps inaccessible, and never types into OS security prompts."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "computer use",
+      "definition": "An AI feature where a model looks at screenshots of your screen and drives your mouse and keyboard to do tasks inside your apps."
+    },
+    {
+      "term": "vision-language model",
+      "definition": "A model that understands images as well as text."
+    },
+    {
+      "term": "LoRA",
+      "definition": "A small set of adapter weights trained on top of a frozen base model, teaching it a style or skill without rewriting the whole model."
+    },
+    {
+      "term": "QLoRA",
+      "definition": "LoRA training with the base model compressed to 4-bit precision, cutting the memory it needs to a fraction."
+    },
+    {
+      "term": "quantization (GGUF, FP8, INT8, 4-bit)",
+      "definition": "Storing model weights in fewer bits so the model fits in less memory, at a small cost in quality."
+    },
+    {
+      "term": "GGUF",
+      "definition": "A single-file model format that runs on CPUs, Macs and AMD GPUs as well as NVIDIA cards."
+    },
+    {
+      "term": "VRAM",
+      "definition": "The memory on your graphics card that the model and its context have to fit inside."
+    },
+    {
+      "term": "prompt expander",
+      "definition": "A helper model that rewrites your short request into a long, detailed prompt before image generation."
+    },
+    {
+      "term": "token",
+      "definition": "The word-sized chunk of text that models read and write, and the unit APIs bill by."
+    }
+  ],
+  "unverified": [
+    "No first-party measurement exists yet for how fast these models run on the channel's own DGX Spark; any tokens-per-second claim for our hardware is untested.",
+    "The dollar cost of a complete Claude computer-use task could not be computed from the docs, which give token overhead but no per-task dollar figure.",
+    "Community sentiment on the computer-use beta (Reddit, X, forums) was not fetched this session, so any claim about how stable or buggy users find it is unsupported.",
+    "Whether MiniMax-H3-Image LoRA training actually fits a 24 GB card at int8 in practice is an estimate from the docs (the 32 GB+ figure is labeled an estimate, tested on 96 GB) and has not been verified on real 24 GB hardware."
+  ],
+  "suggested_outline": "Open on the metered world: Anthropic's computer-use toolset adds about 4,500 input tokens before the first screenshot, and OpenAI capped its agent at 40 messages a month on Plus -- then the turn: yesterday Unsloth shipped the same loop for your own GPU.\nShow the goods: the computer-use beta driving a real desktop with Qwen3.8-27B in about 19 GB, plus MiniMax-H3-Image (33.1B, now GGUF, FP8 and INT8) with LoRA training -- and the memory math that keeps it all on one consumer card.\nLand the recipe and the honest catch: 60 captioned images, 150 steps, about 100 seconds on a 96 GB card and about 24 GB peak at int8, against the beta's own numbers -- two of six receipt runs perfect, local launches only -- so the viewer leaves knowing exactly what one GPU buys and what it does not.",
+  "notes": "Do not conflate the two MiniMax models: MiniMax-H3-Image is the 33.1B image diffusion transformer, while MiniMax-H3-Image-PE is a separate 27B prompt-expander LLM fine-tuned from Qwen3.8-27B; Unsloth's LoRA training section covers the image model. The release notes' broad computer-use claim is narrower in the docs: local launches only (no Docker, no WSL, no network bind, not via API key), Linux needs an X11 session, and the training VRAM floor of 32 GB+ is an estimate tested on 96 GB. OpenAI's page both lists the 40/400 limits and says the agent is no longer available; the limits are quoted as documented on 2026-11-17 and may move.",
+  "viewer_situation": "You've got a gaming PC with a 24 GB graphics card, you've watched Claude and ChatGPT agents drive screens for a metered fee, and you've assumed teaching one to do that yourself would take a datacenter.",
+  "has_process": true,
+  "process_steps": [
+    "Install Unsloth newer than 2026.11.4 (clone the repo and run the local installer until the next release ships it).",
+    "Open Images, then Train, and set Model family to MiniMax-H3-Image.",
+    "Upload about 60 captioned images of one style or subject, with a trigger word such as trtcrd in every caption.",
+    "Check the defaults: 150 steps, rank 32, resolution 1024, base precision Auto.",
+    "Click Start training and watch the loss line and the sample previews (about 8 minutes end to end in Unsloth's run).",
+    "Click Deploy to Create and prompt with your trigger word at weight 1.0."
+  ],
+  "objection": "It's a beta: two of Unsloth's own six receipt runs misread an amount or quit early, a 27B local model is not Claude, and the training floor is an estimate tested on a 96 GB card, so one GPU buys you privacy and flat cost, not cloud-grade reliability."
+}
