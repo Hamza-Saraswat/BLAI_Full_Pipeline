@@ -1,20 +1,20 @@
 ---
 slug: 2026-11-17-unsloth-computer-use-train-a-v
 workspace: shorts
-title: "Unsloth computer use on one GPU"
-status: ready-to-build
+title: Unsloth computer use on one GPU
+status: building
 pillar: myth-bust
 structure: comparison-ladder
 format: smooth-explainer
-style_pack: "halftone"
+style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-17
-updated: "2026-11-17T13:22:25Z"
+updated: "2026-11-17T13:26:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -38,4 +38,4 @@ blotato_post_id: ""
 - 05-3 (unattended): searchable title "Unsloth computer use on one GPU" chosen (product-name search is the channel's longest watch time; intriguing variants kept in title_variants). Rubric 100/100 after one revision pass. Description's first content line links the closest published video (2026-10-20 Unsloth fine tuning, g2tn9DcSiiE).
 
 ## Build journal
-
+- 2026-11-17T13:26:10Z build start on gn100-83c4
