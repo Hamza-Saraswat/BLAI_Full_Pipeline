@@ -32,6 +32,7 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 03-2 (unattended): slug confirmed 2026-11-17-unsloth-computer-use-train-a-v; angle restated as "Unsloth's new computer-use beta plus LoRA means you can fine-tune a vision agent that clicks on one consumer GPU, and MiniMax-H3-Image is the worked example" -- carried from the 2026-11-17 ideas pick (myth-bust, smooth-explainer); no redirect signal, proceeding to sources.
 
 ## Build journal
 
