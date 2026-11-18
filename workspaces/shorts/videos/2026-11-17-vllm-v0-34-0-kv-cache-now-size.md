@@ -2,14 +2,14 @@
 slug: 2026-11-17-vllm-v0-34-0-kv-cache-now-size
 workspace: shorts
 title: "vLLM v0.34.0: KV cache now sizes itself"
-status: idea
+status: expired
 pillar: news-react
 structure: news-react-so-what
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-17
-updated: "2026-11-17T12:08:03Z"
+updated: "2026-11-18T14:35:44Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-18T14:35:44Z 2026-11-18T14:35:44Z expired: not from today's picks (2026-11-18); the factory carries no backlog

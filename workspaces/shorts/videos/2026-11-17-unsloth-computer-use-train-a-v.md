@@ -2,14 +2,14 @@
 slug: 2026-11-17-unsloth-computer-use-train-a-v
 workspace: shorts
 title: Unsloth computer use on one GPU
-status: review
+status: expired
 pillar: myth-bust
 structure: comparison-ladder
 format: smooth-explainer
 style_pack: halftone
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-17
-updated: "2026-11-17T14:07:21Z"
+updated: "2026-11-18T14:35:44Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-11-17T14:07:25Z 07-render ok 100.50s: 11 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 363
 - 2026-11-17T14:07:25Z 07-render ok 2336s
 - 2026-11-17T14:07:27Z build done, status review
+- 2026-11-18T14:35:44Z 2026-11-18T14:35:44Z expired: not from today's picks (2026-11-18); the factory carries no backlog
