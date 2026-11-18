@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-18-deepseek-v4-pro-nvfp4-which-gp
 workspace: shorts
-title: "DeepSeek V4 Pro NVFP4: which GPUs can load it"
-status: researched
+title: Which GPUs load DeepSeek V4 Pro NVFP4?
+status: ready-to-build
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-18
-updated: "2026-11-18T13:17:34Z"
+updated: "2026-11-18T13:19:42Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-18-ideas]]
 - Research: [[stages/03-research/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-brief]]
 - Script: [[stages/04-script/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-package]]
+- Voice: [[stages/06-voice/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-narration|narration sidecar]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -43,6 +43,10 @@ blotato_post_id: ""
 - Checkpoint 04-02 (hooks, unattended): 10 candidates scored; picks 1 (decision, 6) and 2 (situation, 5); number-shock and named-contradiction candidates rotation-banned, so the 941 GB shock moved into the hook scene's frame-1 giant-number composition.
 - Style pack silicon (3 topic hits, previous halftone); judge graft applied: draft A payoff line replaces draft B close.
 
+- Checkpoint 05-03 (titles/desc/score, unattended): searchable title chosen ("Which GPUs load DeepSeek V4 Pro NVFP4?", 38 chars, keyword at char 22); rubric 100/100; two intriguing variants recorded. Search surface per the ideas note's keyword gap (we already rank on the NVFP4 question).
+- Voice link points at the stage-04 narration sidecar already in 06-voice/output (check_outputs wanted the Artifacts row filled once the file existed); stage 06 overwrites it with the full voice note.
+
 ## Build journal
 - 2026-11-18T12:45:30Z 03-research ok: 8 claims, 8 key numbers, validator 0, 8-12 sources
 - 2026-11-18T13:17:34Z 04-script ok: contrarian-take wins 21-20 over number-first; silicon pack; gates clean
+- 2026-11-18T13:19:42Z 05-package ok: seo 100, check_outputs clean, ready-to-build
