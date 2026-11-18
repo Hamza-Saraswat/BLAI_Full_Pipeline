@@ -2,19 +2,19 @@
 slug: 2026-11-18-deepseek-v4-pro-nvfp4-which-gp
 workspace: shorts
 title: Which GPUs load DeepSeek V4 Pro NVFP4?
-status: ready-to-build
+status: building
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-18
-updated: "2026-11-18T13:19:42Z"
+updated: "2026-11-18T13:24:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-11-18T12:45:30Z 03-research ok: 8 claims, 8 key numbers, validator 0, 8-12 sources
 - 2026-11-18T13:17:34Z 04-script ok: contrarian-take wins 21-20 over number-first; silicon pack; gates clean
 - 2026-11-18T13:19:42Z 05-package ok: seo 100, check_outputs clean, ready-to-build
+- 2026-11-18T13:24:10Z build start on gn100-83c4
