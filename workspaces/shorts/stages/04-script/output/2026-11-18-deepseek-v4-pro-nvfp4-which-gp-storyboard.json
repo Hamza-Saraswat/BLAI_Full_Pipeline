@@ -1,0 +1,104 @@
+{
+  "slug": "2026-11-18-deepseek-v4-pro-nvfp4-which-gp",
+  "topic": "DeepSeek V4 Pro NVFP4: which GPUs can load it",
+  "title": "DeepSeek V4 Pro NVFP4: Which GPUs Fit?",
+  "description": "The 4-bit cut of DeepSeek V4 Pro still weighs 941 GB, because mixture-of-experts models keep every expert in memory. The format shrinks the file, not the hardware tier: only a 512 GB Mac Studio clears the weights alone.",
+  "hashtags": [
+    "#DeepSeek",
+    "#NVFP4",
+    "#LocalAI"
+  ],
+  "hook_text": "Your GPU was never the problem.",
+  "hook_candidates": [
+    "Which GPUs can load DeepSeek? *",
+    "Your GPU was never the problem. *",
+    "The 4-bit cut that still needs a datacenter.",
+    "NVFP4, explained in one file size.",
+    "Read this before the 941 GB download.",
+    "Quantization shrinks the file, not the tier.",
+    "One terabyte, four bits, zero gaming cards.",
+    "The biggest 4-bit model ever shipped.",
+    "DeepSeek's 4-bit cut, weighed.",
+    "Stop guessing if it fits. Do the math."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 36,
+  "narration_full": "You checked if DeepSeek's biggest model fits your card. It is nine hundred forty-one gigabytes on disk. The consensus: four-bit, so it fits. Quantization stores weights in fewer bits; the file shrinks, not the count. Picture a company of specialists; a receptionist wakes the few each word needs. She re-picks every time. Forty-nine billion parameters answer one word; the whole staff fills memory. NVIDIA's biggest workstation card: ninety-six gigabytes of memory. A desktop box reaches one hundred twenty-eight gigabytes of memory. Only a Mac Studio with five hundred twelve gigabytes of memory clears the weights alone, before the chat's memory joins. So match your memory tier first, because four-bit never promised fit.",
+  "music_mood": "steady-build",
+  "analogy": {
+    "vehicle": "a company of specialists with one receptionist",
+    "mapping": "the model is the company, each specialist an expert network; for every word the receptionist wakes only the few specialists that word needs; memory is the whole staff being on staff at once",
+    "limit": "the receptionist re-picks for every word, so it is not one hand-off"
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You checked if DeepSeek's biggest model fits your card. It is nine hundred forty-one gigabytes on disk.",
+      "on_screen_text": "DeepSeek-V4-Pro-0813-NVFP4 | 941 GB on disk | will it fit?",
+      "visual_brief": "Frame 1: pinned headline 'Your GPU was never the problem.' sits top-center above a giant '941 GB' numeral on a dark silicon-die texture. At t=0.30 the numeral fades in with a slow scale-up as 'nine hundred forty-one gigabytes' lands. On 'fits your card' a small graphics-card outline rises-in-place below, visibly dwarfed by the digits. Circuit traces pulse faintly at the edges.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        "whoosh"
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The consensus: four-bit, so it fits. Quantization stores weights in fewer bits; the file shrinks, not the count.",
+      "on_screen_text": "4-bit, so it fits? | file shrinks | weight count doesn't",
+      "visual_brief": "Split screen. On 'The consensus', left panel shows a bold '4-bit' badge over a gaming card, right panel shows a shelf of weight tiles. On 'stores weights in fewer bits' the left file icon compresses to a quarter of its size. On 'not the count' the right tiles hold their grid, then replicate until the wall is full. Labels swap with a soft tick.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Picture a company of specialists; a receptionist wakes the few each word needs. She re-picks every time. Forty-nine billion parameters answer one word; the whole staff fills memory.",
+      "on_screen_text": "specialists: all resident | receptionist routes each word | 49B params per token",
+      "visual_brief": "Diagram flow on dark silicon. On 'company of specialists' a grid of glowing specialist chips fades in. On 'a receptionist wakes the few' a router node lights paths to a few chips; each word-token pulse re-lights a different few ('re-picking every time'). On 'the whole staff fills memory' the entire grid sinks into a memory block that fills to the brim.",
+      "est_duration_s": 9.7,
+      "sfx": [
+        "tick"
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "NVIDIA's biggest workstation card: ninety-six gigabytes of memory. A desktop box reaches one hundred twenty-eight gigabytes of memory.",
+      "on_screen_text": "96 GB RTX PRO 6000 | 128 GB DGX Spark unified | both fall short",
+      "visual_brief": "Giant number stage. On 'ninety-six gigabytes' the numeral '96 GB' scales in over a workstation-card silhouette while an unlabeled checkpoint bar beside it towers far taller. On 'one hundred twenty-eight' the numeral swaps to '128 GB' over a small desktop box, still short of the same bar. End: both labels dim beneath the persistent bar.",
+      "est_duration_s": 6.2,
+      "sfx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Only a Mac Studio with five hundred twelve gigabytes of memory clears the weights alone, before the chat's memory joins. So match your memory tier first, because four-bit never promised fit.",
+      "on_screen_text": "512 GB Mac Studio M5 Ultra | + KV cache on top | count memory first",
+      "visual_brief": "Centered stack. On 'five hundred twelve gigabytes' the numeral '512 GB' rises-in-place over a Mac Studio outline and finally tops the checkpoint bar behind it. On 'conversation memory joins' a small block labeled 'KV cache' stacks above the weights, eating the headroom. Final frame: 'count memory first' fades in centered and holds on clean silicon.",
+      "est_duration_s": 10.7,
+      "sfx": [
+        "ding"
+      ]
+    }
+  ],
+  "notes_for_review": "Unverified items kept out: no throughput claims, no llama.cpp/Ollama/LM Studio loading claims, no SM120 rejection reports, no 2 TB disk figure. Only the five assigned numbers are spoken; 1.65T and benchmark deltas appear nowhere. RTX PRO 6000, DGX Spark and NVFP4 are named on screen only. The trade-off lands as conversation-memory headroom after the weights; the analogy's limit (re-picking per word) is stated in s03."
+}

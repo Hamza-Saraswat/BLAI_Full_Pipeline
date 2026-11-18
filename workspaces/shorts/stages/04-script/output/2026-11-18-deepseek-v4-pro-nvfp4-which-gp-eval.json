@@ -1,0 +1,598 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-18T13:16:35+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 8,
+    "claims_by_quality": {
+      "primary": 6,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 27,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "apple.com",
+      "huggingface.co",
+      "nvidia.com",
+      "vllm.ai"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "total parameters (all experts resident in memory)",
+          "value": "1.65T in total and 49B activated",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Forty-nine",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "checkpoint size on disk (weights, scales, tokenizer)",
+          "value": "941139951818 bytes (876.5 GiB)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPQA Diamond, MXFP4 source model",
+          "value": "88.51",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GPQA Diamond, NVFP4 build",
+          "value": "88.42",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "RTX PRO 6000 Blackwell GPU memory",
+          "value": "96 GB GDDR7 with error-correcting code (ECC)",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "ninety-six",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "Mac Studio M5 Ultra maximum unified memory",
+          "value": "512GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "512",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "DGX Spark memory",
+          "value": "128 GB Unified Memory",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "128",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "maximum context length (sets KV cache growth ceiling)",
+          "value": "1 million tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 27,
+      "found_count": 5,
+      "score": 0.185,
+      "found": [
+        "NVIDIA",
+        "DeepSeek",
+        "RTX PRO 6000",
+        "Mac Studio",
+        "M5 Ultra"
+      ],
+      "missing": [
+        "Blackwell",
+        "vLLM",
+        "NVIDIA Blackwell",
+        "GPQA Diamond",
+        "B200",
+        "MXFP4",
+        "NVIDIA Blackwell B200",
+        "GPQA Diamond 88.51",
+        "Tau-squared Bench Telecom",
+        "GPU NVIDIA",
+        "Blackwell Workstation Edition",
+        "GB of GDDR7",
+        "GiB",
+        "GDDR7",
+        "Tau",
+        "E4M3",
+        "E4M3 FP8",
+        "SM100",
+        "Marlin",
+        "GGUF",
+        "DeepSeek V4 Pro",
+        "Q4 GGUF"
+      ],
+      "top2": [
+        "NVIDIA",
+        "Blackwell"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "NVIDIA",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Blackwell",
+          "tier": 0,
+          "claim_count": 4,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "vLLM",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NVIDIA Blackwell",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA Diamond",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "B200",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MXFP4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "NVIDIA Blackwell B200",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPQA Diamond 88.51",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Tau-squared Bench Telecom",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GPU NVIDIA",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RTX PRO 6000",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Blackwell Workstation Edition",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of GDDR7",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mac Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "M5 Ultra",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GiB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GDDR7",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Tau",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "E4M3",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "E4M3 FP8",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "SM100",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Marlin",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GGUF",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4 Pro",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Q4 GGUF",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DeepSeek"
+      ],
+      "hook_text": "Your GPU was never the problem.",
+      "first_sentence": "You checked if DeepSeek's biggest model fits your card."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "contrarian-take",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 5,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "You checked if DeepSeek's biggest model fits your card. It is nine hundred forty-one gigabytes on disk."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "glossary:quantization"
+          ],
+          "narration": "The consensus: four-bit, so it fits. Quantization stores weights in fewer bits; the file shrinks, not the count."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "num:1.65T in total and 49B activated"
+          ],
+          "narration": "Picture a company of specialists; a receptionist wakes the few each word needs. She re-picks every time. Forty-nine billion parameters answer one word; the whole staff fills memory."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "num:96 GB GDDR7 with error-correcting code (ECC)",
+            "num:128 GB Unified Memory",
+            "entity:NVIDIA",
+            "entity:RTX PRO 6000"
+          ],
+          "narration": "NVIDIA's biggest workstation card: ninety-six gigabytes of memory. A desktop box reaches one hundred twenty-eight gigabytes of memory."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 10.7,
+          "specific": true,
+          "hits": [
+            "num:512GB",
+            "entity:Mac Studio",
+            "entity:M5 Ultra"
+          ],
+          "narration": "Only a Mac Studio with five hundred twelve gigabytes of memory clears the weights alone, before the chat's memory joins. So match your memory tier first, because four-bit never promised fit."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 7.9,
+      "words": 119,
+      "sentences": 11,
+      "est_speech_s": 41.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "You checked if DeepSeek's biggest model fits your card. It is nine hundred forty-one gigabytes on disk. The consensus: four-bit, so it fits. Quantization stores weights in fewer bits; the file shrinks, not the count. Picture a company of specialists; a receptionist wakes the few each word needs. She re-picks every time. Forty-nine billion parameters answer one word; the whole staff fills memory. NVIDIA's biggest workstation card: ninety-six gigabytes of memory. A desktop box reaches one hundred twenty-eight gigabytes of memory. Only a Mac Studio with five hundred twelve gigabytes of memory clears the weights alone, before the chat's memory joins. So match your memory tier first, because four-bit never promised fit.",
+    "on_screen": "Your GPU was never the problem. | DeepSeek-V4-Pro-0813-NVFP4 | 941 GB on disk | will it fit? | 4-bit, so it fits? | file shrinks | weight count doesn't | specialists: all resident | receptionist routes each word | 49B params per token | 96 GB RTX PRO 6000 | 128 GB DGX Spark unified | both fall short | 512 GB Mac Studio M5 Ultra | + KV cache on top | count memory first"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 7.9,
+        "words": 119,
+        "est_speech_s": 41.0,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "FK grade 7.9 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-18-deepseek-v4-pro-nvfp4-which-gp-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 4,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.185,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "NVIDIA",
+          "Blackwell"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DeepSeek"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 5,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "contrarian-take",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
