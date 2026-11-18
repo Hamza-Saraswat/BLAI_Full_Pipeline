@@ -2,18 +2,19 @@
 slug: 2026-11-18-deepseek-v4-pro-nvfp4-which-gp
 workspace: shorts
 title: Which GPUs load DeepSeek V4 Pro NVFP4?
-status: building
+status: blocked
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-18
-updated: "2026-11-18T13:24:10Z"
+updated: "2026-11-18T13:46:14Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: ""
+blocked_reason: "\"07-render: 07-render: assemble.py exited 1: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+AttributeError: "'str' object has no attribute 'get'\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -52,3 +53,7 @@ blotato_post_id: ""
 - 2026-11-18T13:19:42Z 05-package ok: seo 100, check_outputs clean, ready-to-build
 - 2026-11-18T13:24:10Z build start on gn100-83c4
 - 2026-11-18T13:25:10Z 06-voice ok 57s
+- 2026-11-18T13:43:32Z 07-render fail 1097s (07-render: scene s05 did not pass HyperFrames inspect after 5 rounds: t=0.14-6.8s (38 samples) text_box_overflow #studio inside #studio overflowed left 23px, ri)
+- 2026-11-18T13:46:14Z 07-render fail 162s (07-render: assemble.py exited 1: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/buildlocalai/blai/repo/skills/render-shorts/scripts/assemble)
+- 2026-11-18T13:46:14Z blocked at 07-render
