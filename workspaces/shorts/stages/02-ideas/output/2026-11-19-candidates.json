@@ -1,0 +1,282 @@
+[
+ {
+  "title": "Ollama parallel agents: why your second session waits 46 seconds",
+  "keyword": "ollama parallel",
+  "lane": "how-to",
+  "why_now": "Tensward measured 46 s median wait and 54% repeat tokens when two agent sessions share one Ollama slot",
+  "radar": [
+   "hn:ollama-agent-cache"
+  ],
+  "named_product": "Ollama",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 31,
+   "suggestions_sample": [
+    "ollama parallel",
+    "ollama parallel requests",
+    "olamaie",
+    "parallelogram volume",
+    "parallelogram vs trapezoid"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "DeepSeek free chat is capped: run the weights instead",
+  "keyword": "deepseek free",
+  "lane": "news-react",
+  "why_now": "DeepSeek limited free chat usage this week",
+  "radar": [
+   "hn:deepseek-free-limit"
+  ],
+  "named_product": "DeepSeek",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 95,
+   "suggestions_sample": [
+    "deepseek free api",
+    "deepseek free janitor ai",
+    "deepseek free api key",
+    "deepseek free buff",
+    "deepseek freecad"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "vLLM disaggregated serving: why your streams stutter under load",
+  "keyword": "vllm",
+  "lane": "explainer",
+  "why_now": "vLLM published a practical guide to disaggregated serving (prefill/decode split, KV cache numbers)",
+  "radar": [
+   "hn:vllm-disagg-guide",
+   "hn:vllm-flydsl"
+  ],
+  "named_product": "vLLM",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 232,
+   "suggestions_sample": [
+    "vllm",
+    "vllm tutorial",
+    "vllm explained",
+    "vllm vs ollama",
+    "vllm vs llama.cpp"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "llama.cpp stream-k Vulkan: faster prompt processing on AMD GPUs",
+  "keyword": "llama.cpp vulkan",
+  "lane": "how-to",
+  "why_now": "llama.cpp b12535 implements stream-k MUL_MAT for Vulkan coopmat2",
+  "radar": [
+   "gh:llama.cpp-b12535",
+   "gh:llama.cpp-b12534",
+   "gh:llama.cpp-b12532"
+  ],
+  "named_product": "llama.cpp",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 14,
+   "suggestions_sample": [
+    "llama.cpp vulkan",
+    "llama cpp api",
+    "llama cpp install",
+    "llama.cpp webui",
+    "llama.cpp ubuntu"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "DaisyRose-27B: the trending one-GPU multimodal",
+  "keyword": "daisyrose 27b",
+  "lane": "comparison",
+  "why_now": "RadixArk/DaisyRose-27B trending on Hugging Face (125 likes, 166 downloads)",
+  "radar": [
+   "hf:daisyrose-27b"
+  ],
+  "named_product": "DaisyRose-27B",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 5,
+   "suggestions_sample": [
+    "6958",
+    "6838",
+    "daisy torres",
+    "5692-0940-8731",
+    "daisy 753 vs 853"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "Ghidra plus a local LLM: agent-assisted reverse engineering",
+  "keyword": "ghidra llm",
+  "lane": "how-to",
+  "why_now": "Slow Chronicle walkthrough of DeepSeek-harness + Ghidra MCP reverse engineering hit 237 points on HN",
+  "radar": [
+   "hn:llm-reverse-engineering"
+  ],
+  "named_product": "Ghidra",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 14,
+   "suggestions_sample": [
+    "ghidra llm",
+    "ghidra on linux",
+    "ghidra gdb",
+    "ghidra linux",
+    "ghidra python"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "MiniMax-H3-Image runs local: 3.2M downloads in 11 days",
+  "keyword": "minimax image",
+  "lane": "news-react",
+  "why_now": "Comfy-Org/MiniMax-H3-Image on Hugging Face, 3.2M downloads, trending score 77",
+  "radar": [
+   "hf:minimax-h3-image"
+  ],
+  "named_product": "MiniMax-H3-Image",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 45,
+   "suggestions_sample": [
+    "minimax image edit",
+    "minimax image generation",
+    "minimax image",
+    "minimax h3 image to video",
+    "minimax ai image generator"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "Your prompts can be reconstructed from model outputs",
+  "keyword": "prompt reconstruction",
+  "lane": "myth-bust",
+  "why_now": "Previous-Token Prediction LLM Inversion paper on arXiv, discussed on HN",
+  "radar": [
+   "hn:llm-inversion"
+  ],
+  "named_product": "none",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 27,
+   "suggestions_sample": [
+    "prompt engineering demo",
+    "prompt relief",
+    "prompt engineering intro",
+    "prompts in ai",
+    "prompt leaking"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "Qwen3 32B over home Wi-Fi: a 16 GB and a 24 GB Mac pooled",
+  "keyword": "qwen 32b mac",
+  "lane": "how-to",
+  "why_now": "Stratumus journal on pooling two Macs over Wi-Fi for Qwen3 32B",
+  "radar": [
+   "hn:stratumus-mac-pool"
+  ],
+  "named_product": "Qwen",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 2,
+   "suggestions_sample": [
+    "qwen 32b macbook",
+    "mac mini qwen 32b"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ },
+ {
+  "title": "TensorRT-LLM v1.4 rc: Kimi K3 NVFP4 fails to init on B300",
+  "keyword": "tensorrt llm",
+  "lane": "news-react",
+  "why_now": "v1.4.0rc4 released with Kimi K3 NVFP4 and DeepSeek-R1 FP4 known issues",
+  "radar": [
+   "gh:trt-llm-v1.4.0rc4"
+  ],
+  "named_product": "TensorRT-LLM",
+  "competition": null,
+  "competition_reason": "YT_API_KEY not set",
+  "vidiq": null,
+  "vidiq_reason": "vidIQ connector not attached",
+  "trend_slope": null,
+  "autocomplete": {
+   "depth_score": 13,
+   "suggestions_sample": [
+    "tensorrt llm",
+    "tensorrt llm tutorial",
+    "tensorrt-llm for windows",
+    "nvidia tensorrt-llm",
+    "tensorrt edge llm"
+   ],
+   "source": "autocomplete.py 2026-11-19"
+  },
+  "competition_note": "YT_API_KEY not set this run; competition snapshot skipped",
+  "vidiq_note": "vidIQ MCP connector not attached"
+ }
+]
