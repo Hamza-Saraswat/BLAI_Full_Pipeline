@@ -1,0 +1,90 @@
+{
+  "slug": "2026-11-19-deepseek-free-chat-is-capped-r",
+  "topic": "DeepSeek capped its free chat; run the open weights locally",
+  "title": "DeepSeek Runs Tonight: Three Moves",
+  "description": "DeepSeek capped its free chat this week. The open weights run on your gaming PC tonight.",
+  "hashtags": [
+    "#deepseek",
+    "#localai",
+    "#ollama"
+  ],
+  "hook_text": "DeepSeek runs tonight",
+  "hook_candidates": [
+    "Your free DeepSeek chat now has a quota.",
+    "Some users hit the daily cap in under two hours.",
+    "That free chat ran fifty-nine point two trillion tokens last week.",
+    "DeepSeek locked your week-old chats behind a quota.",
+    "No paid tier escapes this cap. None exists.",
+    "The file that replaces it is nine gigabytes.",
+    "Forty thousand characters per prompt is now the wall.",
+    "Stop paying attention to the quota. Run the weights.",
+    "Three moves and DeepSeek runs on your box tonight.",
+    "You already own the way out of this quota."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "how-to-three-moves",
+  "value_types": "REFRAMES,TEACHES",
+  "hook_pattern": "tonight",
+  "target_duration_s": 34,
+  "narration_full": "Three moves and DeepSeek runs on your box tonight. The free chat capped you this week. The notice blames insufficient computing capacity. Step one: install Ollama, the runtime that loads model files. Step two: run one command to pull the fourteen-billion distill. That's eight point nine nine gigabytes of model file. Got twenty-four gigabytes of memory? The bigger distill is nineteen point nine gigabytes of model file. Step three: load it and ask something. It answers. The catch: a distill is the student, not the big model. The gym added a turnstile; your home barbell is lighter. No quota, no key, no bill. DeepSeek lives on your box tonight.",
+  "analogy": {
+    "vehicle": "a gym that installed a turnstile versus the barbell you take home",
+    "mapping": "the capped free chat is the gym rationing visits during a crunch; the open weights are the barbell in your garage, lift whenever you like",
+    "limit": "the home barbell is lighter, the local distill is a student of the big model, not the model itself"
+  },
+  "music_mood": "steady-build",
+  "notes_for_review": "",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Three moves and DeepSeek runs on your box tonight. The free chat capped you this week. The notice blames insufficient computing capacity.",
+      "on_screen_text": "DeepSeek runs tonight | free chat capped this week",
+      "visual_brief": "Frame 1: the words 'DeepSeek runs tonight' already typed large in the terminal window, cursor blinking; on 'capped' the line 'free chat capped' stamps in below (motion onset 0.4 s, rise-in-place). Hook text 'DeepSeek runs tonight' holds stable at open, then a usage-limit notice card rises in place on 'The free chat capped you this week'. On 'your gaming PC takes over' a local chat window fades in beneath the text.",
+      "est_duration_s": 6.9
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Step one: install Ollama, the runtime that loads model files.",
+      "on_screen_text": "Step 1: install Ollama | ollama.com",
+      "visual_brief": "On 'install Ollama' the ollama.com page scales in at center with the download button highlighted. On 'the runtime that loads model files' the button fades into an installed checkmark.",
+      "est_duration_s": 3.1
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Step two: run one command to pull the fourteen-billion distill. That's eight point nine nine gigabytes of model file. Got twenty-four gigabytes of memory? The bigger distill is nineteen point nine gigabytes of model file.",
+      "on_screen_text": "Step 2: ollama run deepseek-r1:14b | 8.99 GB file | 24 GB? 19.9 GB file",
+      "visual_brief": "A terminal fades in on 'run one command' and the command types out. On 'eight point nine nine gigabytes' a giant '8.99 GB' scales in beside the terminal; on 'nineteen point nine gigabytes' a '19.9 GB' tag rises in place next to it.",
+      "est_duration_s": 10.9
+    },
+    {
+      "id": "s04",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Step three: load it and ask something. It answers. The catch: a distill is the student, not the big model. The gym added a turnstile; your home barbell is lighter.",
+      "on_screen_text": "Step 3: load and ask | student, not the big model | home barbell is lighter",
+      "visual_brief": "On 'load it and ask something' a chat tab fades in with a first prompt typed. On 'the student, not the big model' the frame splits, student card left, big-model card right; on 'your home barbell is lighter' a small barbell rises in place under the student side.",
+      "est_duration_s": 9.4
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "No quota, no key, no bill. DeepSeek lives on your box tonight.",
+      "on_screen_text": "no quota, no key, no bill | DeepSeek lives on your box tonight",
+      "visual_brief": "On 'It answers' the chat reply streams in the window. Three chips fade in on 'No quota, no key, no bill', then the closing line 'DeepSeek lives on your box tonight' settles centered, echoing the first frame.",
+      "est_duration_s": 3.8
+    }
+  ]
+}

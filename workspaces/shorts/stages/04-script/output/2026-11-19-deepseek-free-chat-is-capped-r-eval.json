@@ -1,0 +1,521 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-19T13:29:56+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-19-deepseek-free-chat-is-capped-r-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-19-deepseek-free-chat-is-capped-r-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "docs": 5,
+      "primary": 5
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 15,
+    "misconceptions_total": 3,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "deepseek.com",
+      "huggingface.co",
+      "lmstudio.ai",
+      "ollama.com",
+      "technode.com",
+      "yicai.com"
+    ],
+    "domain_diversity": 6,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "single-input cap, free chat",
+          "value": "around 40,000 Chinese characters",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "long-conversation inactivity cutoff",
+          "value": "more than seven days",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "continuous use before daily-quota notice, some users",
+          "value": "less than two hours (\u4e0d\u5230\u4e24\u5c0f\u65f6)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "weekly token volume, DeepSeek V4.1 Flash 1017, week of Nov 9-15",
+          "value": "59.2\u4e07\u4ebf Token (59.2 trillion tokens)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "deepseek-flash API input price, cache miss, off-peak",
+          "value": "$0.15 per 1M tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "deepseek-flash API output price, off-peak",
+          "value": "$0.6 per 1M tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "DeepSeek-R1-Distill-Qwen-14B GGUF at Q4_K_M",
+          "value": "8.99 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "8.99",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "DeepSeek-R1-Distill-Qwen-32B GGUF at Q4_K_M",
+          "value": "19.9 GB",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "nineteen point nine",
+          "scene_ids": [
+            "s03"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 15,
+      "found_count": 4,
+      "score": 0.267,
+      "found": [
+        "DeepSeek",
+        "R1",
+        "DeepSeek-R1",
+        "deepseek-r1:14b"
+      ],
+      "missing": [
+        "Q3_K_L",
+        "MIT",
+        "DeepSeek-V4.1-Flash-1017",
+        "Between November 15",
+        "DeepSeek V4.1 Flash 1017",
+        "Yicai",
+        "LM Studio",
+        "OpenRouter",
+        "deepseek-r1:7b",
+        "deepseek-r1:32b",
+        "Chinese"
+      ],
+      "top2": [
+        "DeepSeek",
+        "R1"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "DeepSeek",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "R1",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "DeepSeek-R1",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Q3_K_L",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MIT",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek-V4.1-Flash-1017",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Between November 15",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek V4.1 Flash 1017",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Yicai",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenRouter",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "deepseek-r1:7b",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "deepseek-r1:14b",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "deepseek-r1:32b",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Chinese",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 14,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:DeepSeek"
+      ],
+      "hook_text": "DeepSeek runs tonight",
+      "first_sentence": "Three moves and DeepSeek runs on your box tonight."
+    },
+    "positional_labels": {
+      "count": 3,
+      "structure": "how-to-three-moves",
+      "labels": [
+        {
+          "sentence_index": 3,
+          "sentence": "Step one: install Ollama, the runtime that loads model files.",
+          "label": "step",
+          "ordinal": 1,
+          "words": 10,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 4,
+          "sentence": "Step two: run one command to pull the fourteen-billion distill.",
+          "label": "step",
+          "ordinal": 2,
+          "words": 11,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 8,
+          "sentence": "Step three: load it and ask something.",
+          "label": "step",
+          "ordinal": 3,
+          "words": 7,
+          "has_action_verb": true
+        }
+      ]
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 4,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.9,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "Three moves and DeepSeek runs on your box tonight. The free chat capped you this week. The notice blames insufficient computing capacity."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 3.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Step one: install Ollama, the runtime that loads model files."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 10.9,
+          "specific": true,
+          "hits": [
+            "num:8.99 GB",
+            "num:19.9 GB",
+            "entity:DeepSeek",
+            "entity:R1",
+            "entity:DeepSeek-R1",
+            "entity:deepseek-r1:14b"
+          ],
+          "narration": "Step two: run one command to pull the fourteen-billion distill. That's eight point nine nine gigabytes of model file. Got twenty-four gigabytes of memory? The bigger distill is nineteen point nine gigabytes of model file."
+        },
+        {
+          "id": "s04",
+          "role": "foreshadow",
+          "est_duration_s": 9.4,
+          "specific": true,
+          "hits": [
+            "glossary:Distill"
+          ],
+          "narration": "Step three: load it and ask something. It answers. The catch: a distill is the student, not the big model. The gym added a turnstile; your home barbell is lighter."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 3.8,
+          "specific": true,
+          "hits": [
+            "entity:DeepSeek"
+          ],
+          "narration": "No quota, no key, no bill. DeepSeek lives on your box tonight."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.6,
+      "words": 111,
+      "sentences": 14,
+      "est_speech_s": 38.3,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves and DeepSeek runs on your box tonight. The free chat capped you this week. The notice blames insufficient computing capacity. Step one: install Ollama, the runtime that loads model files. Step two: run one command to pull the fourteen-billion distill. That's eight point nine nine gigabytes of model file. Got twenty-four gigabytes of memory? The bigger distill is nineteen point nine gigabytes of model file. Step three: load it and ask something. It answers. The catch: a distill is the student, not the big model. The gym added a turnstile; your home barbell is lighter. No quota, no key, no bill. DeepSeek lives on your box tonight.",
+    "on_screen": "DeepSeek runs tonight | DeepSeek runs tonight | free chat capped this week | Step 1: install Ollama | ollama.com | Step 2: ollama run deepseek-r1:14b | 8.99 GB file | 24 GB? 19.9 GB file | Step 3: load and ask | student, not the big model | home barbell is lighter | no quota, no key, no bill | DeepSeek lives on your box tonight"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-19-deepseek-free-chat-is-capped-r-storyboard.json",
+        "scenes": 5,
+        "fk_grade": 5.6,
+        "words": 111,
+        "est_speech_s": 38.3,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "FK grade 5.6 \u2014 target <=5"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-19-deepseek-free-chat-is-capped-r-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.267,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "DeepSeek",
+          "R1"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:DeepSeek"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 4,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 3,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [
+          "Step one: install Ollama, the runtime that loads model files.",
+          "Step two: run one command to pull the fourteen-billion distill.",
+          "Step three: load it and ask something."
+        ],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
