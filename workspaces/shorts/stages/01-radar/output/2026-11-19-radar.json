@@ -1,0 +1,1211 @@
+[
+  {
+    "id": "hn-f00d83341f",
+    "title": "LLM assisted reverse engineering",
+    "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+    "source": "hn",
+    "published_at": "2026-11-18T22:29:13Z",
+    "signals": {
+      "points": 237,
+      "num_comments": 60,
+      "signal": 0.917,
+      "signal_parts": {
+        "points": 0.959,
+        "comments": 0.819
+      },
+      "decay": 0.8226,
+      "age_h": 13.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 237 points, 60 comments on HN, 14 h ago",
+    "score": 64
+  },
+  {
+    "id": "hn-1f22063bb6",
+    "title": "Black high school students sue after AI mistakes Doritos bag for gun",
+    "url": "https://www.lawyerscommittee.org/lawyers-committee-files-lawsuit-on-behalf-of-black-students-detained-and-searched-due-to-ai-alert-falsely-identifying-a-bag-of-chips-as-a-firearm/",
+    "source": "hn",
+    "published_at": "2026-11-19T00:57:20Z",
+    "signals": {
+      "points": 98,
+      "num_comments": 66,
+      "signal": 0.815,
+      "signal_parts": {
+        "points": 0.805,
+        "comments": 0.838
+      },
+      "decay": 0.8525,
+      "age_h": 11.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 98 points, 66 comments on HN, 11 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-079a7317ed",
+    "title": "llama.cpp b12535",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12535",
+    "source": "github",
+    "published_at": "2026-11-19T11:40:28Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12535",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9952,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "<details open> vulkan: Implement stream-k MUL_MAT (#28528) * vulkan: Implement stream-k MUL_MAT Stream-k tries to split chunks of 256 K elements evenly across all SMs. Workgroups that finish a tile write to dst, others write to scratch, and there's a resolve shader similar to split-k. The shader cod",
+    "why_now": "Shipped: ggml-org/llama.cpp b12535 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-0eadc6cfbf",
+    "title": "llama.cpp b12534",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12534",
+    "source": "github",
+    "published_at": "2026-11-19T11:12:05Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12534",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9884,
+      "age_h": 0.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "OpenAI",
+      "Llama"
+    ],
+    "summary": "<details open> vulkan: use floating-point zero for storage-only FP16 in DIAG/TRI (#32379) * vulkan: Change integer zero to floating-point zero for storage-only FP16 in DIAG/TRI. Assisted-by: OpenAI Codex * delete narrow test </details> **Website:** - <https://llama.app> **Attestations:** - <https://",
+    "why_now": "Shipped: ggml-org/llama.cpp b12534 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-45a42a8bcc",
+    "title": "llama.cpp b12532",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12532",
+    "source": "github",
+    "published_at": "2026-11-19T04:45:06Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12532",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9005,
+      "age_h": 7.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> opencl: allow adjusting KV padding in decomposed FA (#32522) Assisted-by: Codex </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/69491345> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/ll",
+    "why_now": "Shipped: ggml-org/llama.cpp b12532 released (pre-release), 7 h ago",
+    "score": 53
+  },
+  {
+    "id": "hn-21efcf41c8",
+    "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
+    "url": "https://news.ycombinator.com/item?id=50548660",
+    "source": "hn",
+    "published_at": "2026-11-18T16:53:42Z",
+    "signals": {
+      "points": 106,
+      "num_comments": 36,
+      "signal": 0.789,
+      "signal_parts": {
+        "points": 0.819,
+        "comments": 0.72
+      },
+      "decay": 0.7588,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, we&#x27;re Shane, Sam, and Abhi.<p>Almost two years ago, we shared Mastra, our open-source TypeScript agent framework, on Show HN: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43103073\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43103073</a>. It got a few hundred upvo",
+    "why_now": "Shipped: 106 points, 36 comments on HN, 19 h ago",
+    "score": 51
+  },
+  {
+    "id": "github-e08fa0eb6e",
+    "title": "TensorRT-LLM v1.4.0rc4",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc4",
+    "source": "github",
+    "published_at": "2026-11-18T19:16:49Z",
+    "signals": {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "tag": "v1.4.0rc4",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.7854,
+      "age_h": 16.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:TensorRT",
+      "group": "how-to"
+    },
+    "products": [
+      "TensorRT",
+      "DeepSeek",
+      "FP4",
+      "B300",
+      "CUDA",
+      "GLM",
+      "NVFP4",
+      "Kimi"
+    ],
+    "summary": "## Highlights - Known Issues - DeepSeek-R1 FP4 disaggregated serving on B300 may produce incorrect output under CUDA graphs. - GLM-5.2 NVFP4 SM103 TP8 may fail to initialize when Modeling V2 is required with FlashInfer 0.7.3. - Kimi K3 NVFP4 KV may fail to initialize on B300 due to FP4 MLA quantizat",
+    "why_now": "Shipped with a known break: NVIDIA/TensorRT-LLM v1.4.0rc4 released (pre-release), 17 h ago",
+    "score": 48
+  },
+  {
+    "id": "hn-724823e096",
+    "title": "Launch HN: Maritime (YC F26) - A managed cloud for production AI agents",
+    "url": "https://news.ycombinator.com/item?id=50549188",
+    "source": "hn",
+    "published_at": "2026-11-18T17:26:28Z",
+    "signals": {
+      "points": 54,
+      "num_comments": 49,
+      "signal": 0.725,
+      "signal_parts": {
+        "points": 0.702,
+        "comments": 0.78
+      },
+      "decay": 0.7648,
+      "age_h": 18.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN, we&#x27;re Ary and Maria, co-founders of Maritime (<a href=\"https:&#x2F;&#x2F;maritime.sh\">https:&#x2F;&#x2F;maritime.sh</a>). We&#x27;re building an agent-native cloud that handles everything from custom environments to lifecycle management for AI agents.<p>Demo: <a href=\"https:&#x2F;&#x2F;w",
+    "why_now": "Shipped: 54 points, 49 comments on HN, 19 h ago",
+    "score": 47
+  },
+  {
+    "id": "hn-7d99e1aa81",
+    "title": "Previous-Token Prediction Based LLM Inversion for Prompt Reconstruction",
+    "url": "https://arxiv.org/abs/2607.29378",
+    "source": "hn",
+    "published_at": "2026-11-19T01:27:02Z",
+    "signals": {
+      "points": 46,
+      "num_comments": 8,
+      "signal": 0.604,
+      "signal_parts": {
+        "points": 0.675,
+        "comments": 0.438
+      },
+      "decay": 0.8586,
+      "age_h": 10.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 46 points, 8 comments on HN, 11 h ago",
+    "score": 44
+  },
+  {
+    "id": "hn-f1e2318600",
+    "title": "Show HN: Robotics needs better CAD, so I wrote a B-rep kernel and 3,487 tests",
+    "url": "https://springcraft-ai.github.io/springrep/",
+    "source": "hn",
+    "published_at": "2026-11-18T21:08:47Z",
+    "signals": {
+      "points": 31,
+      "num_comments": 7,
+      "signal": 0.549,
+      "signal_parts": {
+        "points": 0.607,
+        "comments": 0.414
+      },
+      "decay": 0.8068,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hey HN, I’m Tony. I’m a co-founder of Springcraft, where we have been doing a lot of CAD modeling for robot parts. Our team kept running into limitations with existing kernels, and so I decided to write a new B-rep kernel and a new comprehensive, kernel-agnostic B-rep conformance test suite. Both ar",
+    "why_now": "Shipped: 31 points, 7 comments on HN, 15 h ago",
+    "score": 38
+  },
+  {
+    "id": "hf-85f4e896db",
+    "title": "RadixArk/DaisyRose-27B",
+    "url": "https://huggingface.co/RadixArk/DaisyRose-27B",
+    "source": "hf",
+    "published_at": "2026-11-18T05:31:35Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 125,
+      "downloads": 166,
+      "trendingScore": 89.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.646,
+      "signal_parts": {
+        "trending": 0.592,
+        "likes": 0.7,
+        "downloads": 0.37
+      },
+      "decay": 0.6439,
+      "age_h": 30.5,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 125 likes, 166 downloads, trending score 89, created 2026-11-18",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 125 likes, 166 downloads, trending score 89, 30 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-b21f17ebb8",
+    "title": "DeepSeek Limits Free Service Usage via Chat",
+    "url": "https://finance.biggo.com/news/3ddf7191-bd44-4073-b849-a2167ecb7b55",
+    "source": "hn",
+    "published_at": "2026-11-19T10:41:23Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9811,
+      "age_h": 1.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 1 h ago",
+    "score": 30
+  },
+  {
+    "id": "hn-478c9278bd",
+    "title": "Parallel agent requests can slow down an Ollama session",
+    "url": "https://tensward.com/blog/ollama-agent-cache",
+    "source": "hn",
+    "published_at": "2026-11-18T17:55:18Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7701,
+      "age_h": 18.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 18 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-2b573ba573",
+    "title": "Show HN: KradleBench - Multi-agent AI evals in Minecraft",
+    "url": "https://www.kradle.ai?1",
+    "source": "hn",
+    "published_at": "2026-11-18T19:14:28Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 7,
+      "signal": 0.407,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.414
+      },
+      "decay": 0.7849,
+      "age_h": 16.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN -<p>This is James and Kemal. In past lives we led Firebase and Tensorflow&#x2F;JAX respectively. HN has been a particularly big part of my (James’) career and the trajectory I’ve taken would be meaningfully different without it. Thank you!<p>Our team shipped a benchmark: KradleBench. We test A",
+    "why_now": "Shipped: 9 points, 7 comments on HN, 17 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-0cebc74252",
+    "title": "Show HN: Terminess, a harness that runs the official Claude Code and Codex CLIs",
+    "url": "https://github.com/Terminess/terminess",
+    "source": "hn",
+    "published_at": "2026-11-18T15:09:12Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7399,
+      "age_h": 20.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude",
+      "Anthropic"
+    ],
+    "summary": "TLDR: I built a terminal (harness) for Claude Code and Codex that works the official way, on your own subs. Anthropic stopped Claude subs working in 3P harnesses in Feb, 9 months of suffering later, I decided to build one that plays by their rules, a terminal (harness) that runs Claude Code and Code",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 21 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-d42ebdc9d5",
+    "title": "Show HN: Git Hook for Model Identifation",
+    "url": "https://github.com/orsenthil/git-hook-model-identification",
+    "source": "hn",
+    "published_at": "2026-11-19T05:18:23Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9077,
+      "age_h": 6.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Grok",
+      "Zhipu",
+      "DeepSeek"
+    ],
+    "summary": "I have started using multiple models (Claude, Codex, Grok via cursor-agent, Z.ai, Deepseek, Hy4 via OpenCode, agy) etc, and I realized that I not able to identify which commit was made by which model. After looking around and not finding anything, I create a format specification that will let Model",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 7 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-904d5a5df4",
+    "title": "Taking vLLM Apart: A Practical Guide to Disaggregated Serving",
+    "url": "https://vllm.ai/blog/2026-09-29-disaggregated-serving-guide",
+    "source": "hn",
+    "published_at": "2026-11-19T03:19:35Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8821,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 9 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-849481457a",
+    "title": "New models tested: Gemini 4 Hydrogen, Qwen4-Max, and GPT-6.2",
+    "url": "https://www.metergraph.dev/blog/release-radar/2026-11-gemini-qwen-gpt/",
+    "source": "hn",
+    "published_at": "2026-11-19T00:12:51Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8434,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Gemini",
+      "group": "how-to"
+    },
+    "products": [
+      "Gemini",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-1caccdecee",
+    "title": "Fable 5.2 made a video explaining the DeepSeek Super-agent architecture",
+    "url": "https://www.youtube.com/watch?v=-b7g5XIgEn0",
+    "source": "hn",
+    "published_at": "2026-11-18T18:27:40Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7761,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "explainer"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-f9bf1f42d8",
+    "title": "Show HN: Klistra - A complete studio for spec-driven AI motion design and video",
+    "url": "https://klistra.ai/",
+    "source": "hn",
+    "published_at": "2026-11-18T16:58:53Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7597,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "explainer"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "As a solo-dev with a lot of projects going on, I found myself needing to make short promos or explainer videos. Not being familiar with animation software, I had the idea to use Claude to code up those videos and export them as video files. Note that this was before AI-coded music videos went viral,",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 19 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-a033424c3b",
+    "title": "Show HN: Indexed_bzip2 2.0 - I used AI to make bzip2 decompression 4x faster",
+    "url": "https://github.com/mxmlnkn/librapidarchive/releases/tag/v2.0.0",
+    "source": "hn",
+    "published_at": "2026-11-18T14:09:21Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7294,
+      "age_h": 21.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "Hi HN,<p>I started indexed_bzip2 years ago as a seekable, parallelized bzip2 backend for ratarmount. It has been dormant for a while and seemed almost finished. Out of interest, I tried looking for bugs with DeepSeek V4.1 Flash, which found dozens of them, most with a minimal reproducing test. After",
+    "why_now": "Broke: 2 points, 0 comments on HN, 22 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-14a1d49349",
+    "title": "Ask HN: How do you manage the curse of rabbit hole?",
+    "url": "https://news.ycombinator.com/item?id=50558285",
+    "source": "hn",
+    "published_at": "2026-11-19T10:21:56Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 3,
+      "signal": 0.253,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.276
+      },
+      "decay": 0.9765,
+      "age_h": 1.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "I know that I can ask llm however, asking to real people still the best way to get an insight,<p>Prolog: sometimes I do wonder , the best technical decision, best executive CEO as steve blank called, I notice they usually don&#x27;t have that much information, while I struggle with so much informati",
+    "why_now": "Discussed: 3 points, 3 comments on HN, 2 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-ce01adc1aa",
+    "title": "High-Interactivity Decode with FlyDSL MonoKernels in vLLM",
+    "url": "https://vllm.ai/blog/2026-11-18-flydsl-monokernels",
+    "source": "hn",
+    "published_at": "2026-11-19T03:21:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8826,
+      "age_h": 8.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-d2cb25e8bf",
+    "title": "Four Maryland high school students sue after AI mistakes Doritos bag for gun",
+    "url": "https://www.theguardian.com/us-news/2026/nov/18/maryland-baltimore-county-doritos-gun-ai-lawsuit",
+    "source": "hn",
+    "published_at": "2026-11-19T02:06:29Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 4,
+      "signal": 0.266,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.321
+      },
+      "decay": 0.8668,
+      "age_h": 9.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 4 comments on HN, 10 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-421bcfe02b",
+    "title": "Show HN: Stratumus - Qwen3 32B on a 16 GB and a 24 GB Mac over home Wi-Fi",
+    "url": "https://stratumus.com/journal/mac-pool",
+    "source": "hn",
+    "published_at": "2026-11-18T15:27:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7431,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 21 h ago",
+    "score": 20
+  },
+  {
+    "id": "hf-14e5a7f70a",
+    "title": "Comfy-Org/MiniMax-H3-Image",
+    "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+    "source": "hf",
+    "published_at": "2026-11-08T20:37:23Z",
+    "signals": {
+      "pipeline_tag": "text-to-image",
+      "likes": 582,
+      "downloads": 3181055,
+      "trendingScore": 77.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.787,
+      "signal_parts": {
+        "trending": 0.573,
+        "likes": 0.922,
+        "downloads": 1.0
+      },
+      "decay": 0.05,
+      "age_h": 255.4,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:MiniMax",
+      "group": "how-to"
+    },
+    "products": [
+      "MiniMax",
+      "Hugging Face"
+    ],
+    "summary": "text-to-image model on Hugging Face, 582 likes, 3.2M downloads, trending score 77, created 2026-11-08",
+    "why_now": "Shipped: new on Hugging Face (text-to-image), 582 likes, 3.2M downloads, trending score 77, 11 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-e8f60c904c",
+    "title": "Ask HN: Should we shut down current AI strategy? Vent Your Heart Out",
+    "url": "https://news.ycombinator.com/item?id=50542654",
+    "source": "hn",
+    "published_at": "2026-11-18T06:40:16Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 6,
+      "signal": 0.314,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.388
+      },
+      "decay": 0.6546,
+      "age_h": 29.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I don&#x27;t know, maybe it&#x27;s just me.<p>Does it feel to you like we&#x27;re boiling the oceans in a desperate attempt to build something &quot;smarter than human?&quot;<p>Do you notice that the idea that &quot;AI will cure cancer&quot; is predicated on the belief that we&#x27;ve found the data",
+    "why_now": "Discussed: 4 points, 6 comments on HN, 29 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-96b0d77761",
+    "title": "Baltimore students file lawsuit after AI allegedly mistakes Doritos for a gun",
+    "url": "https://www.yahoo.com/news/us/articles/baltimore-students-file-lawsuit-ai-192122200.html",
+    "source": "hn",
+    "published_at": "2026-11-19T02:32:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.8721,
+      "age_h": 9.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 9 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-76da90c1e4",
+    "title": "Show HN: Generate Angular TestBed specs and Storybook stories locally, no LLM",
+    "url": "https://sshyeri.github.io/ng-test-foundry-public/",
+    "source": "hn",
+    "published_at": "2026-11-19T00:35:27Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.848,
+      "age_h": 11.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 11 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-79316fce86",
+    "title": "Cloudflare releases weights of Clairic, its AI that reads invoices and receipts",
+    "url": "https://maccus.fr/en/cloudflare-clairic-open-weights/",
+    "source": "hn",
+    "published_at": "2026-11-19T10:50:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9832,
+      "age_h": 1.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 1 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-acb71d5fb6",
+    "title": "High school disables AI detector after it kept mistaking everyday items for guns",
+    "url": "https://www.techspot.com/news/114607-pennsylvania-high-school-disables-ai-weapons-detector-after.html",
+    "source": "hn",
+    "published_at": "2026-11-18T16:34:52Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7554,
+      "age_h": 19.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 19 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-29e49bf51f",
+    "title": "Madras School System and AI Learning Share Similarity",
+    "url": "https://news.ycombinator.com/item?id=50556148",
+    "source": "hn",
+    "published_at": "2026-11-19T04:39:05Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8992,
+      "age_h": 7.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Madras School education system (https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Madras_School) that was the bedrock of mass public structured education in the late 18-19th century has several similarities on how AI is trained today.<p>They both ensures that knowledge dissemination is free.<p>The s",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 7 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-a3019beec9",
+    "title": "Btrfs to Deal with AI and Newbies Without Common Senses More Harm Than Good",
+    "url": "https://www.phoronix.com/news/Btrfs-LLM-Newbies-Guidelines",
+    "source": "hn",
+    "published_at": "2026-11-18T23:34:44Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8357,
+      "age_h": 12.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-c35a02a877",
+    "title": "Framework for evaluating agentic systems: reliability, behavior, and readiness",
+    "url": "https://deepsense.ai/blog/your-agent-passed-the-eval-should-you-ship-it/",
+    "source": "hn",
+    "published_at": "2026-11-18T13:22:21Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7212,
+      "age_h": 22.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 23 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-9304916241",
+    "title": "Updated Clairic and Clairic-flash are now open-weight",
+    "url": "https://blog.cloudflare.com/open-clairic/",
+    "source": "hn",
+    "published_at": "2026-11-18T22:13:07Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8194,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-1500942547",
+    "title": "I will build an LLM to actively defend cyber attacks",
+    "url": "https://news.ycombinator.com/item?id=50558257",
+    "source": "hn",
+    "published_at": "2026-11-19T10:19:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9759,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I have planned to develop an open-source LLM which will defend and try to safe guard the systems and servers.<p>I have divided the work into 4 parts 1. Gather enough data which has all the details of attacks and responses to those attacks. 2. Clean and prepare that data for training an open-source m",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 2 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-56371e1b61",
+    "title": "Characterizing LLM Agent Behaviors in Module Shadowing Environments",
+    "url": "https://arxiv.org/abs/2610.40716",
+    "source": "hn",
+    "published_at": "2026-11-19T08:48:44Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9549,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-bbe49531d6",
+    "title": "An LLM workflow that reproduces, improves, extends published economics research",
+    "url": "https://www.nber.org/papers/w35782",
+    "source": "hn",
+    "published_at": "2026-11-19T05:46:35Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9139,
+      "age_h": 6.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-eb8bd99da5",
+    "title": "KradleBench: Multi-agent AI evals in Minecraft",
+    "url": "http://www.kradle.ai",
+    "source": "hn",
+    "published_at": "2026-11-18T17:46:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7685,
+      "age_h": 18.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN -<p>This is James and Kemal. In past lives we led Firebase and Tensorflow&#x2F;JAX respectively. HN has been a particularly big part of my (James’) career and the trajectory I’ve taken would be meaningfully different without it. Thank you!<p>Our team shipped a benchmark: KradleBench. We test A",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 18 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-6ee341404d",
+    "title": "Beyond the LLM Top: Putting AI security into practice [video]",
+    "url": "https://www.youtube.com/watch?v=5jijlWkozh8",
+    "source": "hn",
+    "published_at": "2026-11-18T17:14:34Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7626,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 19 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-8d36350523",
+    "title": "How we ended up building a set of elite text humanizers",
+    "url": "https://news.ycombinator.com/item?id=50545764",
+    "source": "hn",
+    "published_at": "2026-11-18T12:56:29Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7167,
+      "age_h": 23.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "TL;DR: building a basic AI detector is easy, building one that works is difficult. we realised the need for an adversarial testing pipeline that constantly tests our detector with new patterns, and retrains adapter heads to guard against fresh humanizer patterns.<p>At first when we built t9xt.com, w",
+    "why_now": "Measured: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hf-2250172890",
+    "title": "Zyphra/ZONOS3-Mini",
+    "url": "https://huggingface.co/Zyphra/ZONOS3-Mini",
+    "source": "hf",
+    "published_at": "2026-11-09T05:03:57Z",
+    "signals": {
+      "pipeline_tag": "text-to-speech",
+      "likes": 565,
+      "downloads": 128323,
+      "trendingScore": 119.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.774,
+      "signal_parts": {
+        "trending": 0.63,
+        "likes": 0.917,
+        "downloads": 0.851
+      },
+      "decay": 0.05,
+      "age_h": 246.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-to-speech model on Hugging Face, 565 likes, 128.3k downloads, trending score 119, created 2026-11-09",
+    "why_now": "Shipped: new on Hugging Face (text-to-speech), 565 likes, 128.3k downloads, trending score 119, 10 d ago",
+    "score": 3
+  }
+]
