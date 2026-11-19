@@ -2,14 +2,14 @@
 slug: 2026-11-18-qwen3-8-27b-pi-effort-ordered
 workspace: shorts
 title: "Qwen3.8-27B-Pi: effort-ordered reasoning, explained"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-18
-updated: "2026-11-18T12:12:47Z"
+updated: "2026-11-19T14:35:24Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -37,4 +37,4 @@ blotato_post_id: ""
 - Rotation: both picks avoid yesterday's myth-bust/news-react lanes; no news-react today.
 
 ## Build journal
-
+- 2026-11-19T14:35:24Z 2026-11-19T14:35:24Z expired: not from today's picks (2026-11-19); the factory carries no backlog

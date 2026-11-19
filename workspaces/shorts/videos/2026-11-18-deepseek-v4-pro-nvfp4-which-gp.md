@@ -2,19 +2,19 @@
 slug: 2026-11-18-deepseek-v4-pro-nvfp4-which-gp
 workspace: shorts
 title: Which GPUs load DeepSeek V4 Pro NVFP4?
-status: blocked
+status: expired
 pillar: comparison
 structure: contrarian-take
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-18
-updated: "2026-11-18T13:46:14Z"
+updated: "2026-11-19T14:35:24Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "\"07-render: 07-render: assemble.py exited 1: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-AttributeError: "'str' object has no attribute 'get'\""
+blocked_reason: ""
+AttributeError: "'str' object has no attribute 'get'\\\""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -57,3 +57,4 @@ blotato_post_id: ""
 - 2026-11-18T13:46:14Z 07-render fail 162s (07-render: assemble.py exited 1: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/buildlocalai/blai/repo/skills/render-shorts/scripts/assemble)
 - 2026-11-18T13:46:14Z blocked at 07-render
+- 2026-11-19T14:35:24Z 2026-11-19T14:35:24Z expired: not from today's picks (2026-11-19); the factory carries no backlog
