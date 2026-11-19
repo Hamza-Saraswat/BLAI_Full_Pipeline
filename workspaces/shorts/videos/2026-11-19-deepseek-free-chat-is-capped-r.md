@@ -1,20 +1,20 @@
 ---
 slug: 2026-11-19-deepseek-free-chat-is-capped-r
 workspace: shorts
-title: "DeepSeek free chat hit a cap? Run R1"
-status: ready-to-build
+title: DeepSeek free chat hit a cap? Run R1
+status: building
 pillar: news-react
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-19
-updated: "2026-11-19T12:08:47Z"
+updated: "2026-11-19T13:33:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -42,4 +42,4 @@ blotato_post_id: ""
 - Hub at ready-to-build: stages 06-08 belong to the Spark build agent (build/build.py --once, the blai-build cron job). Not run from this session.
 
 ## Build journal
-
+- 2026-11-19T13:33:10Z build start on gn100-83c4
