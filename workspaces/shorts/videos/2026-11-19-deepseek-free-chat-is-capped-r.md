@@ -2,14 +2,14 @@
 slug: 2026-11-19-deepseek-free-chat-is-capped-r
 workspace: shorts
 title: DeepSeek free chat hit a cap? Run R1
-status: building
+status: review
 pillar: news-react
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-19
-updated: "2026-11-19T13:33:10Z"
+updated: "2026-11-19T13:49:09Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-19-deepseek-free-chat-is-capped-r-script]]
 - Package: [[stages/05-package/output/2026-11-19-deepseek-free-chat-is-capped-r-package]]
 - Voice: [[stages/06-voice/output/2026-11-19-deepseek-free-chat-is-capped-r-narration]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-19-deepseek-free-chat-is-capped-r-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -44,3 +44,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-19T13:33:10Z build start on gn100-83c4
 - 2026-11-19T13:34:13Z 06-voice ok 61s
+- 2026-11-19T13:49:12Z 07-render ok 42.43s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 371
+- 2026-11-19T13:49:12Z 07-render ok 897s
