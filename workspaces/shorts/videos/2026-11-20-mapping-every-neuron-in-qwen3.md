@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Script checkpoint 1 (unattended): draft A worked-example, draft B myth-bust; both clear rotation (last two: contrarian-take, how-to-three-moves). Value types TEACHES + REFRAMES confirmed. Promise: after ninety seconds you can say what the Qwen3-8B neuron map is, why its switches are not screenshot luck, and what that buys you over prompting.
+- Script checkpoint 2 (unattended): 10 hooks written and scored; picks are 'Your Qwen isn't a mystery anymore. Every neuron inside it got mapped.' (A, named-contradiction) and 'Four hundred forty-two thousand neurons. One of them speaks German.' (B, number-shock); situation and tonight barred by the ledger's last two entries.
 - Research checkpoint (unattended): angle confirmed as picked -- Fermion's full Qwen3-8B neuron map framed for the local operator ('point at the neurons behind a behavior'); slug unchanged, no swap requested (no picks.md).
 - Picked (rank 1, opportunity 99.1): explainer lane, smooth-explainer band; deepest autocomplete seed of the day (41) and no direct competing Short found in-window. Chosen unattended per stage 02 step 4.
 - Lane and format rotate off yesterday's news-react pick; value types locked TEACHES + REFRAMES.
