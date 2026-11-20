@@ -2,14 +2,14 @@
 slug: 2026-11-20-mapping-every-neuron-in-qwen3
 workspace: shorts
 title: Mapping every neuron in Qwen3-8B
-status: idea
+status: researched
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-20
-updated: "2026-11-20T12:09:43Z"
+updated: "2026-11-20T12:40:49Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-20-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-20-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-20-mapping-every-neuron-in-qwen3-brief|Brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -32,8 +32,9 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Research checkpoint (unattended): angle confirmed as picked -- Fermion's full Qwen3-8B neuron map framed for the local operator ('point at the neurons behind a behavior'); slug unchanged, no swap requested (no picks.md).
 - Picked (rank 1, opportunity 99.1): explainer lane, smooth-explainer band; deepest autocomplete seed of the day (41) and no direct competing Short found in-window. Chosen unattended per stage 02 step 4.
 - Lane and format rotate off yesterday's news-react pick; value types locked TEACHES + REFRAMES.
 
 ## Build journal
-
+- 2026-11-20T12:40:49Z 03-research ok: 9 sources, 11 claims, validator 0
