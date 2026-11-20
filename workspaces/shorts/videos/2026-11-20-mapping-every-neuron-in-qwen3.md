@@ -2,19 +2,19 @@
 slug: 2026-11-20-mapping-every-neuron-in-qwen3
 workspace: shorts
 title: One Qwen3 neuron turns it German
-status: ready-to-build
+status: building
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-20
-updated: "2026-11-20T13:14:29Z"
+updated: "2026-11-20T13:18:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -44,3 +44,4 @@ blotato_post_id: ""
 - 2026-11-20T12:40:49Z 03-research ok: 9 sources, 11 claims, validator 0
 - 2026-11-20T13:13:29Z 04-script ok: A won 21-20, graft applied, gates clean, ledger 76
 - 2026-11-20T13:14:29Z 05-package ok: rubric 100, check_outputs 0 failures after link fixes
+- 2026-11-20T13:18:10Z build start on gn100-83c4
