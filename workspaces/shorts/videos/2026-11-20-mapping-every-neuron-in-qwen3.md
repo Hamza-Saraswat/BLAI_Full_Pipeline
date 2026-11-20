@@ -2,14 +2,14 @@
 slug: 2026-11-20-mapping-every-neuron-in-qwen3
 workspace: shorts
 title: One Qwen3 neuron turns it German
-status: building
+status: review
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-20
-updated: "2026-11-20T13:18:10Z"
+updated: "2026-11-20T13:52:13Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-script|Script]] · [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-storyboard|Storyboard]] · [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-drafts|Drafts]]
 - Package: [[stages/05-package/output/2026-11-20-mapping-every-neuron-in-qwen3-package|Package]]
 - Voice: [[stages/06-voice/output/2026-11-20-mapping-every-neuron-in-qwen3-narration|Narration (normalized by stage 04; audio is stage 06's)]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-20-mapping-every-neuron-in-qwen3-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -46,3 +46,5 @@ blotato_post_id: ""
 - 2026-11-20T13:14:29Z 05-package ok: rubric 100, check_outputs 0 failures after link fixes
 - 2026-11-20T13:18:10Z build start on gn100-83c4
 - 2026-11-20T13:20:30Z 06-voice ok 138s
+- 2026-11-20T13:52:17Z 07-render ok 105.93s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 374
+- 2026-11-20T13:52:17Z 07-render ok 1905s
