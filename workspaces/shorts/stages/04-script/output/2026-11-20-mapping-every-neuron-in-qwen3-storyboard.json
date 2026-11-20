@@ -1,0 +1,192 @@
+{
+  "slug": "2026-11-20-mapping-every-neuron-in-qwen3",
+  "topic": "Mapping every neuron in Qwen3-8B",
+  "description": "Working description; the package stage overwrites this.",
+  "hashtags": [
+    "#Qwen3",
+    "#LocalAI",
+    "#Interpretability"
+  ],
+  "style_pack": "blueprint",
+  "script_format": "smooth-explainer",
+  "value_types": "TEACHES,REFRAMES",
+  "music_mood": "curious-tech",
+  "structure": "worked-example",
+  "title": "Qwen3-8B neuron atlas: 442,368 neurons, 132 switches you can turn",
+  "hook_text": "Qwen's neurons: mapped",
+  "hook_candidates": [
+    "Your Qwen isn't a mystery anymore. Every neuron inside it got mapped. (NC)",
+    "Four hundred forty-two thousand neurons. One of them speaks German. (NS)",
+    "You prompt it. You curse at it. Now you can open it. (S)",
+    "Your Qwen isn't broken. One of its neurons is. (WD)",
+    "This week, someone mapped every neuron in your local model. (T)",
+    "One number turns your Qwen German. A map found it. (NS/NC)",
+    "Qwen3-8B, the model you already run, has a public parts diagram. (NC)",
+    "You run Qwen3-8B. Someone just read its mind. (S/NC)",
+    "Stop re-prompting. Start reading the map. (WD)",
+    "The black box has a wiring diagram now. (NC)",
+    "A lab mapped all 442,368 neurons in Qwen3-8B. (NS)",
+    "One dial turns your Qwen German. Now you have the full list. (NS/NC)"
+  ],
+  "target_duration_s": 110,
+  "narration_full": "Your Qwen isn't a mystery anymore. Every neuron inside it got mapped. You run it in Ollama or LM Studio, and when it does something weird, you shrug and re-prompt. Inside, your Qwen is a stack of identical layers. Every word it writes climbs through every layer before the next word appears. Each layer is packed with neurons, the small calculators inside it. Until now, that whole climb was invisible to you. That map is built on one rude little move. A push means adding a fixed amount to one neuron's number at every word. No prompt. No fine-tune. One number, changed. Isn't poking a neuron just brain damage? Often, yes. A verified switch is a push that changes exactly one behaviour, like which language your copy answers in. It must beat a panel of matched random neurons and keep working on questions it has never seen. Fermion Research ran that test on every neuron. Picture a mixing desk: four hundred forty-two thousand faders, one per neuron. About one fader in a hundred does one clear job. The rest do nothing you can name. One hundred thirty-two faders are verified switches. One fader is labelled German. Unpushed, it writes German seven percent of the time. Pushed a single notch, it answers in German a hundred percent of the time. A couple of notches later, it babbles. That's the limit: faders are independent and linear, neurons interact. Push past the sweet spot and the whole desk squeals. Now the honest catch, because a cute German trick is not understanding. These switches set who is speaking and how. None of them sets whether the speaker is telling the truth. The map admits what it did not find. And no, this is not a chat-party trick. The same switches still fire in the raw pretrained model. The switch-hunting framework is promised, not shipped. The atlas itself is public tonight. Your black box just grew a labelled panel. The next time Qwen does something weird, you don't re-prompt it. You look it up.",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "centered-stack",
+      "narration": "Your Qwen isn't a mystery anymore. Every neuron inside it got mapped. You run it in Ollama or LM Studio, and when it does something weird, you shrug and re-prompt.",
+      "on_screen_text": "Qwen's neurons: mapped | Ollama · LM Studio · shrug → re-prompt",
+      "visual_brief": "1080x1920, deep charcoal. Frame 1: small 'QWEN3-8B' tag above giant centered 'Qwen's neurons: mapped' (96px, safe area). Motion onset 0.35s: faint dot-grid (neuron field) fades in behind text. On 'Every neuron inside it got mapped,' dots light row by row. On 'Ollama or LM Studio,' two pill badges slide in low-center (above caption band). On 'shrug and re-prompt,' a circular re-prompt arrow spins once beside a dim chat bubble. All text ≥64px, clear of bottom 450px.",
+      "est_duration_s": 9.3,
+      "render_notes": "Frame 1 must read instantly; neuron field stays subtle so hook text dominates.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "manim",
+      "model_used": "glm-5.3",
+      "layout_archetype": "diagram-flow",
+      "narration": "Inside, your Qwen is a stack of identical layers. Every word it writes climbs through every layer before the next word appears. Each layer is packed with neurons, the small calculators inside it. Until now, that whole climb was invisible to you.",
+      "on_screen_text": "a tall stack of identical layers | every word climbs them all",
+      "visual_brief": "Manim, same charcoal palette. Frame 1: vertical stack of a tall stack translucent slabs centered, side label 'a tall stack layers'. Motion 0.35s. On 'Every word it writes climbs,' a glowing token dot ascends slab by slab in a loop. On 'packed with neurons,' camera zooms into one slab revealing a dense dot grid ('many' tag). On 'invisible to you,' the stack dims to a solid black box with a thin question-mark outline. Keep composition inside 900x1160 safe area; change or camera move at least every 3s.",
+      "est_duration_s": 14.1,
+      "render_notes": "36/12,288 are on-screen context digits only, per amendment; not spoken."
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "centered-stack",
+      "narration": "That map is built on one rude little move. A push means adding a fixed amount to one neuron's number at every word. No prompt. No fine-tune. One number, changed.",
+      "on_screen_text": "push = +constant at every word | no prompt · no fine-tune",
+      "visual_brief": "Frame 1: single neuron card centered on the dimmed dot grid from s02, labelled 'one neuron'. Motion 0.35s. On 'fixed amount,' a '+c' chip drops onto the card with a soft click. On 'at every word,' small token dots stream past and the card pulses on each. On 'No prompt,' a crossed-out chat bubble; on 'No fine-tune,' a crossed-out weights icon, both flanking lower. On 'One number, changed,' the number on the card ticks once and the card glows amber. Visual change every ~3s, anchored to phrases.",
+      "est_duration_s": 10.3,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "split-compare",
+      "narration": "Isn't poking a neuron just brain damage? Often, yes. A verified switch is a push that changes exactly one behaviour, like which language your copy answers in. It must beat a panel of matched random neurons and keep working on questions it has never seen.",
+      "on_screen_text": "random pushes barely move it | a switch moves one behaviour",
+      "visual_brief": "Split screen. Frame 1: left half only, 'random neurons' header over ~30 tiny bars jittering near zero, '+a sliver/100' marker. Motion 0.35s. On 'brain damage,' left bars twitch and one snaps red. On 'verified switch,' right half slides in: one tall amber bar rising past a dashed 'a real jump' threshold, tag 'one behaviour only'. On 'questions it has never seen,' a held-out question card flips over on the right, green check. On 'which language,' a small 'German?' tag previews on the amber bar (seeds s06). Bars stay inside safe area.",
+      "est_duration_s": 15.5,
+      "render_notes": "+1.4/+40/30 are on-screen digits per amendment; the spoken bar stays number-free."
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "grid",
+      "narration": "Fermion Research ran that test on every neuron. Picture a mixing desk: four hundred forty-two thousand faders, one per neuron. About one fader in a hundred does one clear job. The rest do nothing you can name. One hundred thirty-two faders are verified switches.",
+      "on_screen_text": "442,368 faders | 132 verified switches",
+      "visual_brief": "Frame 1: a vast dim mixing-desk grid of faders filling the safe area, counter at 0. Motion 0.35s. On 'four hundred forty-two thousand faders,' counter rolls to 442,368 as the desk populates. On 'one fader in a hundred,' a sparse scatter of faders lights with tiny text labels, chip 'a scatter described'. On 'nothing you can name,' unlit faders fade darker. On 'One hundred thirty-two,' exactly a small amber subset of faders glows and a chip lands: '132 verified switches'. Low fader-sweep sfx under the counter roll.",
+      "est_duration_s": 15.5,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "giant-number",
+      "narration": "One fader is labelled German. Unpushed, it writes German seven percent of the time. Pushed a single notch, it answers in German a hundred percent of the time. A couple of notches later, it babbles.",
+      "on_screen_text": "L5.N5224 German | 7% to 100% in one notch",
+      "visual_brief": "Giant number composition: '7%' redrawn as '100%' the moment narration says 'a hundred percent', one notch tick sliding on a vertical fader scale on 'one notch'. Fader id plate 'L5.N5224' with 'German' label stays legible throughout; second beat swaps to a babble glyph row on 'babbles'. Hard cut between beats, no cross-dissolve; motion onset after frame 9.",
+      "est_duration_s": 11.7,
+      "render_notes": "The babble + squeal beat is the analogy's stated limit; keep it playful, not scary.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        },
+        {
+          "at": "end",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "diagram-flow",
+      "narration": "That's the limit: faders are independent and linear, neurons interact. Push past the sweet spot and the whole desk squeals.",
+      "on_screen_text": "faders: independent | neurons: they interact",
+      "visual_brief": "Diagram-flow: two fader nodes drawn separately on 'independent and linear', then arrows knit them into one tangled web on 'neurons interact'; final beat adds a jagged overflow squiggle over the desk outline on 'the whole desk squeals'. One draw-on animation per beat, nothing else moves; stable first and last 8 frames.",
+      "est_duration_s": 6.2,
+      "render_notes": "The babble + squeal beat is the analogy's stated limit; keep it playful, not scary.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "split-compare",
+      "narration": "Now the honest catch, because a cute German trick is not understanding. These switches set who is speaking and how. None of them sets whether the speaker is telling the truth. The map admits what it did not find.",
+      "on_screen_text": "switches set: who & how | truthfulness: no switch found",
+      "visual_brief": "Frame 1: two atlas cards side by side, 'WHO is speaking' (persona icons) and 'HOW' (register dial), both ticked. Motion 0.35s. On 'cute German trick,' the L5.N5224 fader from s06 shrinks into a corner thumbnail, kept honest and small. On 'telling the truth,' a third card drops in center, stamped red 'no switch found'. On 'the map admits,' all three cards settle into an atlas page layout with a visible margin note. No flourish on the stamp; it should feel like a label, not a fail.",
+      "est_duration_s": 13.4
+    },
+    {
+      "id": "s09",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "timeline",
+      "narration": "And no, this is not a chat-party trick. The same switches still fire in the raw pretrained model. The switch-hunting framework is promised, not shipped. The atlas itself is public tonight.",
+      "on_screen_text": "still fires pre-trained | framework: promised | atlas: public",
+      "visual_brief": "Horizontal timeline across safe area. Frame 1: line draws in from left. Motion 0.35s. On 'raw pretrained model,' first node lights with chip 'nearly all still work'. On 'promised, not shipped,' a dashed-outline node pulses gently, tag 'framework: promised'. On 'public tonight,' the middle node 'atlas' brightens solid with an 'open now' tag and a JSON-file icon. Dashed vs solid styling carries the shipped/not-shipped contrast without words.",
+      "est_duration_s": 10.7,
+      "render_notes": "67/70 on screen only. Tonight = the public interactive post, not the framework."
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "model_used": "glm-5.3",
+      "layout_archetype": "centered-stack",
+      "narration": "Your black box just grew a labelled panel. The next time Qwen does something weird, you don't re-prompt it. You look it up.",
+      "on_screen_text": "you look it up | Fermion Research",
+      "visual_brief": "Rhymes with frame 1 of s01: same charcoal neuron field, now a few faders carry labels. Frame 1: centered line 'Your black box just grew a labelled panel.' Motion 0.35s. On 'you don't re-prompt it,' the looping re-prompt arrow from s01 returns and snaps open into a magnifying glass over the labelled faders. On 'You look it up,' magnifier settles, labels crisp. Final 0.5s: 'Fermion Research' wordmark and date fade to center, dot-grid matches s01 frame 1 for the loop.",
+      "est_duration_s": 7.9,
+      "sfx": []
+    }
+  ],
+  "notes_for_review": "Check the number discipline first: exactly three headline spends are spoken, each on its own beat — four hundred forty-two thousand faders and one hundred thirty-two switches in s05 (separate sentences), and the seven-to-a-hundred-percent German swing as one beat in s06. 'About one fader in a hundred' is spoken inside s05 only because the mandated mixing-desk analogy requires it. All other figures (36 layers, 12,288, +1.4/100, +40 vs 30 randoms, 11,079, 67/70, L5.N5224) appear as on-screen digits in the scene they belong to, per the packet amendment; the 'verified switch' definition is spoken as 'changes exactly one behaviour, beats a panel of matched random neurons, keeps working on questions it never saw' with the numeric bar on screen — confirm that satisfies the glossary. The analogy's limit is stated in s06 ('faders are independent and linear, neurons interact... the whole desk squeals') and is deliberately tied to the babbling beat, which also answers the 'you can break it 442,368 ways' half of the objection. The objection's other halves land in s07 (a cute German demo is not understanding; no truthfulness switch exists, the map admits it) and s08 (it helps tonight: atlas public, framework promised-not-shipped, switches hold in the pretrained model). Structure: one worked example (your copy of Qwen3-8B, German neuron seeded in s04's 'which language' line) advanced through named state changes with no positional labels. Verify the hook is verbatim, scene count is 9, durations sum to ~114.7s (target 110), max sentence is 19 words, no em dashes, no hype words, zero sentences after 'You look it up.', and adjacent layouts all differ.",
+  "analogy": {
+    "vehicle": "recording-studio mixing desk with 442,368 faders",
+    "mapping": "each fader is one neuron, each column one layer; about one in a hundred faders has a label",
+    "limit": "faders are independent and linear while neurons interact; past the sweet spot the whole desk squeals"
+  }
+}
