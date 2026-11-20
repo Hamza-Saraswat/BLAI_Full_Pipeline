@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-20-mapping-every-neuron-in-qwen3
 workspace: shorts
-title: Mapping every neuron in Qwen3-8B
-status: scripted
+title: One Qwen3 neuron turns it German
+status: ready-to-build
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-20
-updated: "2026-11-20T13:13:29Z"
+updated: "2026-11-20T13:14:29Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,12 +26,13 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-20-ideas]]
 - Research: [[stages/03-research/output/2026-11-20-mapping-every-neuron-in-qwen3-brief|Brief]]
 - Script: [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-script|Script]] · [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-storyboard|Storyboard]] · [[stages/04-script/output/2026-11-20-mapping-every-neuron-in-qwen3-drafts|Drafts]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-20-mapping-every-neuron-in-qwen3-package|Package]]
+- Voice: [[stages/06-voice/output/2026-11-20-mapping-every-neuron-in-qwen3-narration|Narration (normalized by stage 04; audio is stage 06's)]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Package checkpoint (unattended): title 2 (intriguing, "One Qwen3 neuron turns it German") picked over the searchable variant because the Shorts surface is feed-heavy and the hook already carries the map claim; Qwen3 at char 4, 32 visible chars, no hook-text overlap. Rubric 100/100 (all rows pass); closest related video "Qwen3-Coder: persona changes security"; no duplicate title in published/.
 - 04-script gates: validator 0 blockers, 1 advisory (Studio tags are stage 05's); eval 9/9 gates passed on both drafts after fixes (A round-1 number despeak 8->3, B round-1 visual-field completion); judge A 21-20, one graft applied and re-gated clean; variety recorded (ledger entry 76); style pack blueprint recorded; normalizer scenes_changed 3.
 - Script checkpoint 1 (unattended): draft A worked-example, draft B myth-bust; both clear rotation (last two: contrarian-take, how-to-three-moves). Value types TEACHES + REFRAMES confirmed. Promise: after ninety seconds you can say what the Qwen3-8B neuron map is, why its switches are not screenshot luck, and what that buys you over prompting.
 - Script checkpoint 2 (unattended): 10 hooks written and scored; picks are 'Your Qwen isn't a mystery anymore. Every neuron inside it got mapped.' (A, named-contradiction) and 'Four hundred forty-two thousand neurons. One of them speaks German.' (B, number-shock); situation and tonight barred by the ledger's last two entries.
@@ -42,3 +43,4 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-20T12:40:49Z 03-research ok: 9 sources, 11 claims, validator 0
 - 2026-11-20T13:13:29Z 04-script ok: A won 21-20, graft applied, gates clean, ledger 76
+- 2026-11-20T13:14:29Z 05-package ok: rubric 100, check_outputs 0 failures after link fixes
