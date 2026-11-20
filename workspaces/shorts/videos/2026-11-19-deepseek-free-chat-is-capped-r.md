@@ -2,14 +2,14 @@
 slug: 2026-11-19-deepseek-free-chat-is-capped-r
 workspace: shorts
 title: DeepSeek free chat hit a cap? Run R1
-status: review
+status: expired
 pillar: news-react
 structure: how-to-three-moves
 format: classic
 style_pack: terminal
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-19
-updated: "2026-11-19T13:49:09Z"
+updated: "2026-11-20T14:35:04Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-11-19T13:49:12Z 07-render ok 42.43s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 371
 - 2026-11-19T13:49:12Z 07-render ok 897s
 - 2026-11-19T13:49:15Z build done, status review
+- 2026-11-20T14:35:04Z 2026-11-20T14:35:04Z expired: not from today's picks (2026-11-20); the factory carries no backlog

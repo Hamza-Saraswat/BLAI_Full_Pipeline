@@ -2,14 +2,14 @@
 slug: 2026-11-19-ollama-parallel-agents-why-you
 workspace: shorts
 title: "Ollama parallel agents: why your second session waits 46 seconds"
-status: idea
+status: expired
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-19
-updated: "2026-11-19T12:08:47Z"
+updated: "2026-11-20T14:35:04Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-20T14:35:04Z 2026-11-20T14:35:04Z expired: not from today's picks (2026-11-20); the factory carries no backlog
