@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Picked as rank 3 / pick 2 (opportunity 57.0): only news-react of the day; the 3-build release train (b12603-b12606 in 24 h) needs a worked follow-the-builds walkthrough, so smooth-explainer.
+- Thin radar this run (Reddit 403, FireCrawl out of credits, YouTube skipped); pool was hn+hf+github.
 
 ## Build journal
 
