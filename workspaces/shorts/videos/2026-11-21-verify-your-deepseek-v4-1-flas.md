@@ -2,14 +2,14 @@
 slug: 2026-11-21-verify-your-deepseek-v4-1-flas
 workspace: shorts
 title: Verify DeepSeek V4.1 Flash weights
-status: building
+status: review
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-21
-updated: "2026-11-21T13:19:10Z"
+updated: "2026-11-21T13:34:04Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-script]] ([[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-drafts|drafts]], [[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-11-21-verify-your-deepseek-v4-1-flas-package]]
 - Voice: [[stages/06-voice/output/2026-11-21-verify-your-deepseek-v4-1-flas-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-21-verify-your-deepseek-v4-1-flas-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -47,3 +47,5 @@ blotato_post_id: ""
 - 2026-11-21T13:16:19Z 05-package ok: seo 100/100, check_outputs exit 0, title searchable (34 chars), manifest written; ready-to-build
 - 2026-11-21T13:19:10Z build start on gn100-83c4
 - 2026-11-21T13:20:20Z 06-voice ok 68s
+- 2026-11-21T13:34:08Z 07-render ok 40.90s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 377
+- 2026-11-21T13:34:08Z 07-render ok 825s
