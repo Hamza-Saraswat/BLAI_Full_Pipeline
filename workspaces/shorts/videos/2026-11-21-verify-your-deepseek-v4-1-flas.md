@@ -2,19 +2,19 @@
 slug: 2026-11-21-verify-your-deepseek-v4-1-flas
 workspace: shorts
 title: Verify DeepSeek V4.1 Flash weights
-status: ready-to-build
+status: building
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-21
-updated: "2026-11-21T13:16:19Z"
+updated: "2026-11-21T13:19:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -45,3 +45,4 @@ blotato_post_id: ""
 - 2026-11-21T12:39:09Z 03-research ok: 8 sources (3 primary), validator exit 0; thesis: hash-before-load, pin the revision
 - 2026-11-21T13:14:32Z 04-script ok: A(news-react-so-what) 22-20 B(myth-bust); validator 0/0; eval hard gates pass (soft entity_spend 0.47); ledger+style recorded
 - 2026-11-21T13:16:19Z 05-package ok: seo 100/100, check_outputs exit 0, title searchable (34 chars), manifest written; ready-to-build
+- 2026-11-21T13:19:10Z build start on gn100-83c4
