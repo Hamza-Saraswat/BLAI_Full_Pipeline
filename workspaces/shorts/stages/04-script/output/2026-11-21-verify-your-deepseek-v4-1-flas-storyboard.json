@@ -1,0 +1,137 @@
+{
+  "slug": "2026-11-21-verify-your-deepseek-v4-1-flas",
+  "topic": "Verify DeepSeek v4.1-flash weights before you run them",
+  "title": "Verify your DeepSeek v4.1-flash weights",
+  "description": "Prime Intellect served substituted DeepSeek v4.1-flash weights for over two days and no benchmark noticed. Here is how to pin the revision and hash your GGUF shards before you load them. (Narration is AI-generated.)",
+  "hashtags": [
+    "#DeepSeek",
+    "#GGUF",
+    "#LocalAI"
+  ],
+  "hook_text": "Wrong weights. Two days.",
+  "hook_candidates": [
+    "Prime Intellect served the wrong weights for over two days.",
+    "Ninety-eight refusals out of a hundred became one.",
+    "Same endpoint name. Different weights inside.",
+    "Your model download has no tamper-evident seal. It has one better thing.",
+    "Two hundred thirty-three gigabytes, and nothing checks them.",
+    "The benchmark passed. The weights were fake.",
+    "Wrong weights. Two days. Nobody benchmarked it.",
+    "It still aced every test. It was not the model.",
+    "Your GGUF shards trust the name on the folder.",
+    "Hash it before you load it."
+  ],
+  "hook_pattern": "wrong-diagnosis",
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 37,
+  "narration_full": "Prime Intellect served the wrong weights for over two days. Same endpoint, different DeepSeek weights answering you. Capability scores never moved. On JailbreakBench, a refusal test, ninety-eight of one hundred refusals became one. Scores grade answers, not origins. Unsloth's smallest one-bit pack is a GGUF your runner loads: two hundred thirty-three gigabytes of weights, never hashed. Same restaurant sign, different kitchen; diners can peek, clients cannot, so check files. Tonight, pin the revision, the full commit hash. Fetch the manifest, the list of expected fingerprints. No hash, no load. A match proves Hugging Face's bits arrived, never that they deserved trust. Verify every pull before you load it.",
+  "analogy": {
+    "vehicle": "A restaurant that keeps the sign but swaps the kitchen.",
+    "mapping": "Prime Intellect's endpoint kept its name, chat template and tokenizer while different weights answered, so every client vouched for the sign instead of the kitchen.",
+    "limit": "A diner can walk in and inspect the kitchen; an API client cannot inspect weights mid-conversation, which is why the check has to happen on the files before loading."
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Prime Intellect served the wrong weights for over two days. Same endpoint, different DeepSeek weights answering you.",
+      "on_screen_text": "deepseek/deepseek-v4.1-flash | same endpoint | different weights",
+      "visual_brief": "Frame 1: Terminal window, dark, already composed: a prompt shows a chat request sent to deepseek/deepseek-v4.1-flash, two reply blocks stacked with identical headers. As 'different DeepSeek weights answering you' lands, the second block's model tag flickers once and settles on 'abliterated-copy' in amber. Cursor blinks at the bottom. Everything holds a beat before the flicker; only the tag and the cursor ever move. Motion onset: the second reply block's header flashes amber at 0.4 s; cursor blinks 530 ms.",
+      "est_duration_s": 5.9,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Capability scores never moved. On JailbreakBench, a refusal test, ninety-eight of one hundred refusals became one. Scores grade answers, not origins.",
+      "on_screen_text": "GPQA Diamond: unchanged | tau-bench: unchanged | JailbreakBench refusals: 98/100 -> 1",
+      "visual_brief": "Split terminal. Left pane lists 'GPQA Diamond ..... unchanged' and 'tau-bench ..... unchanged' in steady green, never animating. Right pane shows 'JailbreakBench refusals' with a counter reading '98/100'. On 'became one' the counter hard-cuts to '1/100' in red and the right pane border tints red. On 'not origins' the left pane dims slightly. Hard cuts only, no dissolve, one motion at a time.",
+      "est_duration_s": 7.2,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Unsloth's smallest one-bit pack is a GGUF your runner loads: two hundred thirty-three gigabytes of weights, never hashed. Same restaurant sign, different kitchen; diners can peek, clients cannot, so check files.",
+      "on_screen_text": "smallest 1-bit GGUF: 233 GB | sha256: skipped by default",
+      "visual_brief": "Terminal file listing fades in row by row: 'DeepSeek-V4.1-Flash-UD-IQ1_S-00001.gguf', then more shard rows. On 'two hundred thirty-three gigabytes' a giant centered '233 GB' types in over the dimmed listing. On 'never hashed' a small dim tag fades beneath it: 'sha256: skipped by default'. On 'check files' the giant number drops to a corner and the cursor returns to the prompt. Entrances are typewriter or fade only.",
+      "est_duration_s": 10.7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Tonight, pin the revision, the full commit hash. Fetch the manifest, the list of expected fingerprints. No hash, no load.",
+      "on_screen_text": "hf download --revision <full hash> | fetch SHA256SUMS manifest | sha256sum -c SHA256SUMS | hf cache verify",
+      "visual_brief": "Terminal, three command rows building top-down like a checklist. On 'pin the revision' the row 'hf download --revision <full hash>' types in. On 'fetch the manifest' a 'SHA256SUMS' file row fades in beside it. On 'Check before loading' the rows 'sha256sum -c SHA256SUMS' and 'hf cache verify' type in sequence, each returning a green 'OK'. One typing cursor at a time; rows snap in place, nothing slides from an edge.",
+      "est_duration_s": 6.9,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "A match proves Hugging Face's bits arrived, never that they deserved trust. Verify every pull before you load it.",
+      "on_screen_text": "match = the repo's bits | not proof of trust | verify every pull",
+      "visual_brief": "Centered terminal stack. A green line reads 'hash match: you hold the repo's exact bits'. On 'never that they deserved trust' an amber line fades in below: 'trust in the repo: not included'. On the payoff, a final prompt line rises-in-place: 'verify every pull', and the cursor holds steady after it. Nothing else moves; the frame ends on that line.",
+      "est_duration_s": 6.6,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Working board from blind draft; judged at stage 04 step 5-6. Numbers rounded for the ear from the brief's verbatim table; substitution window rounded to 'over two days' from the UTC timestamps.",
+  "tags": [
+    "deepseek v4.1 flash",
+    "verify model weights",
+    "deepseek gguf",
+    "sha256 checksum gguf",
+    "hugging face model integrity",
+    "llama gguf hash",
+    "hf cache verify",
+    "pin revision huggingface",
+    "abliterated model",
+    "local llm security",
+    "deepseek local",
+    "gguf download check",
+    "model weights tampering",
+    "prime intellect advisory",
+    "run deepseek locally"
+  ]
+}

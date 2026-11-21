@@ -2,14 +2,14 @@
 slug: 2026-11-21-verify-your-deepseek-v4-1-flas
 workspace: shorts
 title: Verify your DeepSeek v4.1-flash weights before you run them
-status: researched
+status: scripted
 pillar: how-to
-structure: checklist
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-21
-updated: "2026-11-21T12:39:09Z"
+updated: "2026-11-21T13:14:32Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -39,3 +39,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-21T12:39:09Z 03-research ok: 8 sources (3 primary), validator exit 0; thesis: hash-before-load, pin the revision
+- 2026-11-21T13:14:32Z 04-script ok: A(news-react-so-what) 22-20 B(myth-bust); validator 0/0; eval hard gates pass (soft entity_spend 0.47); ledger+style recorded
