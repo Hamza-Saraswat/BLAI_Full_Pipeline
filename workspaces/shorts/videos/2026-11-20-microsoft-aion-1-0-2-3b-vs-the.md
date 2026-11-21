@@ -2,14 +2,14 @@
 slug: 2026-11-20-microsoft-aion-1-0-2-3b-vs-the
 workspace: shorts
 title: Microsoft Aion-1.0 2.3B vs the 2B locals you run
-status: idea
+status: expired
 pillar: comparison
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-20
-updated: "2026-11-20T12:09:43Z"
+updated: "2026-11-21T14:35:38Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Lane and format differ from pick 1 and from yesterday's how-to pick; value types locked TEACHES + EQUIPS. Skipped rank 3 (DeepSeek weights swap, 62.5) for angle overlap with a published Short.
 
 ## Build journal
-
+- 2026-11-21T14:35:38Z 2026-11-21T14:35:38Z expired: not from today's picks (2026-11-21); the factory carries no backlog

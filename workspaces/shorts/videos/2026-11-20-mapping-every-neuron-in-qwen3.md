@@ -2,14 +2,14 @@
 slug: 2026-11-20-mapping-every-neuron-in-qwen3
 workspace: shorts
 title: One Qwen3 neuron turns it German
-status: review
+status: expired
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: blueprint
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-20
-updated: "2026-11-20T13:52:13Z"
+updated: "2026-11-21T14:35:38Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - 2026-11-20T13:52:17Z 07-render ok 105.93s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 374
 - 2026-11-20T13:52:17Z 07-render ok 1905s
 - 2026-11-20T13:52:19Z build done, status review
+- 2026-11-21T14:35:38Z 2026-11-21T14:35:38Z expired: not from today's picks (2026-11-21); the factory carries no backlog
