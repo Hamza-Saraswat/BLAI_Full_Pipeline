@@ -34,6 +34,8 @@ blotato_post_id: ""
 ## Decisions
 - Picked as rank 1 (opportunity 100.0): substitution advisory is 24 h old and the verification workflow has no local-angle video. Lane rotation vs yesterday's explainer/comparison holds; classic format (one fact, one action).
 - Value tags EQUIPS,TEACHES; PROVES reserved (no own-hardware measurement at ideas stage).
+- 03 checkpoint: angle confirmed as "PI advisory reports v4.1-flash weights were substituted; verify hash and provenance before loading" (matches the pick's angle row, no redirect). Why: advisory is primary-source fresh, 24 h old, and the how-to workflow is the whole video.
+- 03 brief decision: incident framed as a hosted-endpoint substitution whose lesson is local (hash-before-load); "local mirrors already circulating" treated as folklore and parked under Unverified. Why: no fetched page documents a tampered local mirror; the brief must not hand the writer an unsourced claim.
 
 ## Build journal
 - 2026-11-21T12:39:09Z 03-research ok: 8 sources (3 primary), validator exit 0; thesis: hash-before-load, pin the revision
