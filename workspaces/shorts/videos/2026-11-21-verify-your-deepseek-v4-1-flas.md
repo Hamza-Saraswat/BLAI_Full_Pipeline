@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-21-verify-your-deepseek-v4-1-flas-brief]]
 - Script: [[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-script]] ([[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-drafts|drafts]], [[stages/04-script/output/2026-11-21-verify-your-deepseek-v4-1-flas-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-11-21-verify-your-deepseek-v4-1-flas-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-21-verify-your-deepseek-v4-1-flas-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-11-21T13:14:32Z 04-script ok: A(news-react-so-what) 22-20 B(myth-bust); validator 0/0; eval hard gates pass (soft entity_spend 0.47); ledger+style recorded
 - 2026-11-21T13:16:19Z 05-package ok: seo 100/100, check_outputs exit 0, title searchable (34 chars), manifest written; ready-to-build
 - 2026-11-21T13:19:10Z build start on gn100-83c4
+- 2026-11-21T13:20:20Z 06-voice ok 68s
