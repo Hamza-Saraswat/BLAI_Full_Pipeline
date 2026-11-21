@@ -1,0 +1,928 @@
+[
+  {
+    "id": "github-04ac047865",
+    "title": "unsloth v0.1.922-beta: Inkling Mini + Bug fixes",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.922-beta",
+    "source": "github",
+    "published_at": "2026-11-20T23:53:26Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.922-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.8394,
+      "age_h": 12.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Apple"
+    ],
+    "summary": "Run the new Inkling 2 Mini model, the strongest 26.4B model that runs on 16GB RAM. This release makes image generation faster and lighter on small GPUs. Macs with Apple Silicon can now restyle videos, and chats that use MCP tools no longer reprocess the whole conversation on every message. ## Highli",
+    "why_now": "Shipped: unslothai/unsloth v0.1.922-beta released, 12 h ago",
+    "score": 65
+  },
+  {
+    "id": "github-c0eae7f464",
+    "title": "unsloth v0.1.921-beta: Bug Fixes + Faster images +Inkling Mini + faster MCP chats",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.921-beta",
+    "source": "github",
+    "published_at": "2026-11-20T19:56:53Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.921-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7929,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "Apple"
+    ],
+    "summary": "There will be another release today in a few hours! Run the new Inkling 2 Mini model, the strongest 26.4B model that runs on 16GB RAM. This release makes image generation faster and lighter on small GPUs. Macs with Apple Silicon can now restyle videos, and chats that use MCP tools no longer reproces",
+    "why_now": "Shipped: unslothai/unsloth v0.1.921-beta released, 16 h ago",
+    "score": 62
+  },
+  {
+    "id": "hf-67c4c2c314",
+    "title": "unsloth/Inkling-2-Mini-GGUF",
+    "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+    "source": "hf",
+    "published_at": "2026-11-20T13:09:48Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 396,
+      "downloads": 238152,
+      "trendingScore": 378.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.839,
+      "signal_parts": {
+        "trending": 0.781,
+        "likes": 0.866,
+        "downloads": 0.896
+      },
+      "decay": 0.7189,
+      "age_h": 22.9,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 396 likes, 238.2k downloads, trending score 378, created 2026-11-20",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 396 likes, 238.2k downloads, trending score 378, 23 h ago",
+    "score": 61
+  },
+  {
+    "id": "github-76d3a1c059",
+    "title": "llama.cpp b12606",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12606",
+    "source": "github",
+    "published_at": "2026-11-21T10:28:59Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12606",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9781,
+      "age_h": 1.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "DeepSeek",
+      "GGUF",
+      "Mac Studio",
+      "Apple M5"
+    ],
+    "summary": "<details open> llama : remove fused lightning indexer gating (#32650) The fused lightning indexer is always used now, so drop the cparams flags, the auto probe and the non-fused fallbacks. Assisted-by: dsh:llama.cpp/ggml-org/DeepSeek-V4.1-Flash-1017-GGUF (Mac Studio, M5 Ultra, 256GB) </details> **We",
+    "why_now": "Shipped: ggml-org/llama.cpp b12606 released (pre-release), 2 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-d34d3ac8ca",
+    "title": "llama.cpp b12604",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12604",
+    "source": "github",
+    "published_at": "2026-11-21T10:05:49Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12604",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9727,
+      "age_h": 1.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> llama-grammar: Fix integer overflow (#32551) * llama-grammar: Fix integer overflow * Check incorrect values at parsing and bail out nicely * fix style </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/70497297> **macO",
+    "why_now": "Shipped: ggml-org/llama.cpp b12604 released (pre-release), 2 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-fef537a982",
+    "title": "llama.cpp b12603",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12603",
+    "source": "github",
+    "published_at": "2026-11-21T09:29:12Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12603",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9641,
+      "age_h": 2.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> llama : score only the k-pools of the ubatch sequences in QSA (#32519) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/70490159> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/r",
+    "why_now": "Shipped: ggml-org/llama.cpp b12603 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-98c6f785f1",
+    "title": "whisper.cpp b5907",
+    "url": "https://github.com/ggml-org/whisper.cpp/releases/tag/b5907",
+    "source": "github",
+    "published_at": "2026-11-20T15:48:53Z",
+    "signals": {
+      "repo": "ggml-org/whisper.cpp",
+      "tag": "b5907",
+      "prerelease": true,
+      "signal": 0.4,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.0
+      },
+      "decay": 0.747,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:whisper.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "whisper.cpp"
+    ],
+    "summary": "",
+    "why_now": "Shipped: ggml-org/whisper.cpp b5907 released (pre-release), 20 h ago",
+    "score": 40
+  },
+  {
+    "id": "hn-7489dde512",
+    "title": "Notice regarding DeepSeek/DeepSeek-v4.1-flash",
+    "url": "https://primeintellect.one/security/advisories/deepseek-v4-1-flash-model-substitution",
+    "source": "hn",
+    "published_at": "2026-11-20T12:24:18Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7111,
+      "age_h": 23.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 24 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-a6b14683bc",
+    "title": "Show HN: AI Inference for Beginners: 6 hours of video and 85 pages of notes [pdf]",
+    "url": "https://github.com/samir-sarwar/samir-vllm/blob/main/InferenceFromScratch.pdf",
+    "source": "hn",
+    "published_at": "2026-11-20T14:39:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7346,
+      "age_h": 21.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "explainer"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "Tired of AI Slop learning? This took me months to write,record, and edit. I hope you can learn from this! It dives into a smaller version of vLLM and explains many deep learning concepts and optimizations from first principles! enjoy :)",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-b3af15da93",
+    "title": "Show HN: Name the World - An Atlas Quiz",
+    "url": "https://nametheworld.starshadowx2.workers.dev/",
+    "source": "hn",
+    "published_at": "2026-11-21T01:45:28Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8623,
+      "age_h": 10.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "I&#x27;ve been working on this country naming&#x2F;geography game on and off over the past few months but most of it in Oct&#x2F;Nov, using only free tier Claude (Sonnet 5 and 5.5)<p>It started off as just wanting to make a fun little thing for myself that included features in this sort of game that",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 10 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-282316fe7b",
+    "title": "Show HN: Separating Answer Capability from EOS Permission in Qwen3-4B",
+    "url": "https://huggingface.co/sharthokrayanpal/PCCG-2-Qwen3-4B",
+    "source": "hn",
+    "published_at": "2026-11-20T19:52:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7921,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-06ac4e2150",
+    "title": "A on device STT Wisper Flow alternative that uses Mistral Voxtral model and AFM",
+    "url": "https://github.com/ThriveEngineer/Whistral",
+    "source": "hn",
+    "published_at": "2026-11-20T19:34:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7886,
+      "age_h": 16.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mistral",
+      "group": "how-to"
+    },
+    "products": [
+      "Mistral"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-b13b16916e",
+    "title": "Qwen 4 Max Is Closed (and What It Means for Qwen 4 27B) [video]",
+    "url": "https://www.youtube.com/watch?v=tvZMAqWmbFQ",
+    "source": "hn",
+    "published_at": "2026-11-20T13:30:24Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7225,
+      "age_h": 22.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 23 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-d5fe4fdb4e",
+    "title": "Show HN: Stop applying to jobs using AI-generated resume",
+    "url": "https://unmark.grandimam.com/",
+    "source": "hn",
+    "published_at": "2026-11-21T10:21:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.9762,
+      "age_h": 1.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "When LLMs hands you a resume or pdf it carry markers of how it was made, including the source. You can&#x27;t see them on the page but applicant tracking systems can read it.<p>So recruiters are flagging such profiles and rejecting them entirely. I had tested this across 40+ AI models (OpenAI, Anthr",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 2 h ago",
+    "score": 15
+  },
+  {
+    "id": "hf-99ccc673a3",
+    "title": "thinkingmachines/Inkling-2-Mini",
+    "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+    "source": "hf",
+    "published_at": "2026-11-17T00:26:57Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1197,
+      "downloads": 7944,
+      "trendingScore": 931.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.95,
+      "signal_parts": {
+        "trending": 0.899,
+        "likes": 1.0,
+        "downloads": 0.65
+      },
+      "decay": 0.2115,
+      "age_h": 107.6,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 1.2k likes, 7.9k downloads, trending score 931, created 2026-11-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 1.2k likes, 7.9k downloads, trending score 931, 4 d ago",
+    "score": 15
+  },
+  {
+    "id": "hn-784008a82d",
+    "title": "Show HN: Openspot - macOS launcher for disposable tools",
+    "url": "https://github.com/celishq/openspot",
+    "source": "hn",
+    "published_at": "2026-11-19T14:51:21Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 3,
+      "signal": 0.322,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.276
+      },
+      "decay": 0.5209,
+      "age_h": 45.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN! We&#x27;re Tony, Kolom and Anastasiia, a small team from Ukraine.<p>Today we are open-sourcing Openspot, our research project on using generative UI in day-to-day work.<p>The idea is simple: generate a tool (spot) for your current task using coding agent, and keep it if you like it or remove",
+    "why_now": "Shipped: 6 points, 3 comments on HN, 45 h ago",
+    "score": 14
+  },
+  {
+    "id": "hn-fe4513527f",
+    "title": "Cursor tells Congress it's considering phasing out foreign open-weight AI models",
+    "url": "https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html",
+    "source": "hn",
+    "published_at": "2026-11-20T22:55:03Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8277,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 13 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-fff2785ad2",
+    "title": "Ask HN: How does one build an LLM router with a labelled set of 100 tasks?",
+    "url": "https://news.ycombinator.com/item?id=50575992",
+    "source": "hn",
+    "published_at": "2026-11-20T15:23:21Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7424,
+      "age_h": 20.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "I already spent the time building rubrics for a set of ~100 tasks on various criterias (accuracy, thoroughness communication style ). Then ran these on a few models and now have a labelled-set where I know for each task which is the cheapest&#x2F;fastest model that gets a minimum threshold ( say 80",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-34fe75d2be",
+    "title": "The Dubious Idea of AI-Run Companies",
+    "url": "https://read.misalignedmag.com/the-dubious-idea-of-ai-run-companies-b26c49c77dc5",
+    "source": "hn",
+    "published_at": "2026-11-20T15:21:48Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7421,
+      "age_h": 20.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 1 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-d496089657",
+    "title": "OpenAI: Generating scripts to copy outgoing email to an unauthorized address",
+    "url": "https://openai.com/safety-alignment/misalignment-reports/generating-scripts-to-copy-outgoing-email-to-an-unauthorized-address/",
+    "source": "hn",
+    "published_at": "2026-11-21T02:19:52Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.8695,
+      "age_h": 9.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "product:OpenAI",
+      "group": "news-react"
+    },
+    "products": [
+      "OpenAI"
+    ],
+    "summary": "",
+    "why_now": "Changed: 1 points, 1 comments on HN, 10 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-34b1d8eaa3",
+    "title": "The AI Forecasting Agenda",
+    "url": "https://www.astralcodexten.com/p/the-ai-forecasting-agenda",
+    "source": "hn",
+    "published_at": "2026-11-20T16:21:41Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7529,
+      "age_h": 19.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-3cc88e3eca",
+    "title": "The use of AI based tools to find bugs in Open Source software",
+    "url": "https://www.haproxy.com/blog/on-the-use-of-ai-based-tools-to-find-bugs-in-open-source-software",
+    "source": "hn",
+    "published_at": "2026-11-20T19:39:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7896,
+      "age_h": 16.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 1 comments on HN, 16 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-60602c445e",
+    "title": "AI Search Analytics Confirm Higher Ed's LLM Winners Are Large Publics/Nonprofits",
+    "url": "https://insights.kolariconsulting.com/p/ai-search-analytics-confirm-higher",
+    "source": "hn",
+    "published_at": "2026-11-20T13:45:26Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7251,
+      "age_h": 22.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 22 h ago",
+    "score": 8
+  },
+  {
+    "id": "hn-72c925fd64",
+    "title": "Show HN: Learnmap, learn programming in a playful way",
+    "url": "https://learnmap.sh",
+    "source": "hn",
+    "published_at": "2026-11-21T08:58:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9571,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "Even while a large majority of people will program with an LLM these days, people are still learning programming languages, and the demand to &quot;how to learn language X&quot; is still strong.<p>Learnmap allows you to learn a language by picking your own path, with your own goal. 15+ languages are",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 3 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-066d807783",
+    "title": "Show HN: Sniffy - a free AI detector and Chrome extension",
+    "url": "https://getsniffy.com/",
+    "source": "hn",
+    "published_at": "2026-11-21T05:47:31Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.914,
+      "age_h": 6.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:fine tun",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi,<p>I wanted to see if I can replicate a completely free pangram.com alternative.<p>I directed Fable 5.2 to fine tune RoBert model.<p>At this point it does make mistakes, and not as accurate as pangram.com but I intend to improve it as more people help me with data.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 6 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-fe0b2d5347",
+    "title": "When an LLM Refuses to Answer",
+    "url": "https://towardsdev.com/when-an-ai-refuses-to-answer-315d3277075c?sk=bae249916084db4096b5a2ba6dda13f4",
+    "source": "hn",
+    "published_at": "2026-11-21T03:21:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8825,
+      "age_h": 8.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 9 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-d3ddd06dd2",
+    "title": "LLM Token-Limit Demos?",
+    "url": "https://blog.ielliott.io/note/2026-11-20-llm-demos",
+    "source": "hn",
+    "published_at": "2026-11-20T20:45:09Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8022,
+      "age_h": 15.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 15 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-461492694c",
+    "title": "Tiny AI Security Model Beats Five Frontier LLMs on Privacy Detection",
+    "url": "https://www.proofagent.ai/research/ai-shield-nano",
+    "source": "hn",
+    "published_at": "2026-11-20T15:55:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7482,
+      "age_h": 20.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:ai",
+      "group": "enterprise-privacy"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-18d5f6980d",
+    "title": "Show HN: TheGeoPot - AI scanner for minerals, coins, plants and crops",
+    "url": "https://thegeopot.com/",
+    "source": "hn",
+    "published_at": "2026-11-20T14:18:12Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7308,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-4f6821a5ff",
+    "title": "Small TTS Bench: open-weight text-to-speech models on CPU",
+    "url": "https://erogol.com/small_tts_bench/",
+    "source": "hn",
+    "published_at": "2026-11-20T14:13:54Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7301,
+      "age_h": 21.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 22 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-be5c072da8",
+    "title": "Show HN: Prediction market competition where only agents can trade",
+    "url": "https://www.vaticin.ai",
+    "source": "hn",
+    "published_at": "2026-11-20T13:27:15Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7219,
+      "age_h": 22.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi HN. I’ve been working on a project called Vaticin (with an i). Interested in your feedback.<p>Vaticin is a prediction market competition platform where only agents are allowed to make wagers. Humans can’t directly do so themselves. There’s no real-money wagering involved. Vaticin is built for com",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-def57425be",
+    "title": "Show HN: BiVelio Savings Layer",
+    "url": "https://github.com/BiVelio/bivelio-savings-layer",
+    "source": "hn",
+    "published_at": "2026-11-20T13:12:25Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7194,
+      "age_h": 22.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "We turned our research into BiVelio Savings Layer, an open-source SDK. It can handle duplicate LLM requests with one API call. It reports how calls it avoided and estimates what they would have costs.",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 23 h ago",
+    "score": 5
+  }
+]
