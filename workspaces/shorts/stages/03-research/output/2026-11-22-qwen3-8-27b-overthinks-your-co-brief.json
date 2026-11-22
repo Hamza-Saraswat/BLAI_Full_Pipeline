@@ -1,0 +1,227 @@
+{
+  "slug": "2026-11-22-qwen3-8-27b-overthinks-your-co",
+  "topic": "Qwen3.8-27B overthinks coding tasks: the knobs that cut the waste",
+  "generated_at": "2026-11-22T12:40:00Z",
+  "depth": "standard",
+  "thesis": "Your Qwen3.8-27B isn't a slow coder -- it ships with its thinking dial glued to maximum, and one flag plus a hard cap turn it into a fast one.",
+  "explanation_path": "Start from the symptom a local coder already knows: you ask for a small edit, the model disappears into its thinking trace, and on a loaded context of 8,192 tokens the thinking alone can eat the window before any code appears. Name the actor before the knobs: Qwen3.8-27B is a dense 27B model that codes at the frontier of what runs at home (SWE-bench Pro 61.7, LiveCodeBench v6 90.3), so the viewer is not compensating for a weak model -- that fact earns respect for the machine before we criticize its default. Then show where the waste lives: thinking is on by default, the effort dial has three stops (xhigh, medium, low), and the template's fallback line hands every caller that sets nothing the most expensive stop; that is why IDE harnesses that never send the flag sit at roughly 60K thinking tokens per turn with 40+ second time-to-first-token. With the mechanism named, the first knob is almost anticlimactic: pass reasoning_effort low or medium and the same model answers in ~80 seconds instead of ~14 minutes, at the same median score. But honest coverage needs the second half: the dial is an injected instruction, not a hard linkage -- engines can ignore it, wrong keys silently fall back to xhigh -- so the mechanical fix is a thinking budget, a hard token cap like dwim's 2,048 or oMLX's tested 12,000, paired with what the model is told when the cap hits: act now, read the code, decide from the output already in context. Close on the boundary Qwen itself draws: lower effort is not always fewer total tokens in multi-turn agent runs, because retries; the dial and the cap are the right tools, used with eyes open.",
+  "claims": [
+    {
+      "claim": "Thinking mode is on by default and reasoning_effort has three levels, with xhigh the default.",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "source_title": "Qwen/Qwen3.8-27B model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "The xhigh default is a chat-template fallback line, so any caller that sets nothing silently gets maximum thinking.",
+      "source_url": "https://llm-bench.io/guides/qwen3-8-27b-reasoning-effort",
+      "source_title": "Qwen3.8-27B has the best coding ceiling you can run at home, and it ships on maximum effort",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "Simon Willison measured the xhigh default at 21 minutes and 22,276 reasoning tokens for 3,223 tokens of output on one prompt, versus 137s and 3,715 tokens with reasoning off.",
+      "source_url": "https://simonw.substack.com/p/qwen-38-27b-is-excellent-but-it-defaults",
+      "source_title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "On one M5 Max run, low and medium effort cost about the same (4,984 and 4,792 median tokens, 84 s and 77 s) while xhigh cost ~8x the tokens and ~11x the wall clock for ~0.5 median score gain (78.8 vs 78.2).",
+      "source_url": "https://llm-bench.io/guides/qwen3-8-27b-reasoning-effort",
+      "source_title": "Qwen3.8-27B has the best coding ceiling you can run at home, and it ships on maximum effort",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "penberg.org's mitigations beat OpenCode with the same model: 64% vs 52% of 50 SWE-bench issues resolved, thinking about a quarter as much (median 6,270 vs 22,610 tokens) in about a third of the time (55 s vs 169 s).",
+      "source_url": "https://penberg.org/blog/qwen38-overthink.html",
+      "source_title": "Why Qwen3.8-27B Overthinks in Coding Tasks and How to Mitigate That",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "dwim's core mitigations are a 2,048-token hard thinking cap plus replacement closing sentences that push the model to act on what is in context rather than recall from memory.",
+      "source_url": "https://penberg.org/blog/qwen38-overthink.html",
+      "source_title": "Why Qwen3.8-27B Overthinks in Coding Tasks and How to Mitigate That",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "The root failure mode is reasoning from memory about code it could simply read -- looping on \"I think\", \"I recall\", \"wait\" -- instead of acting on the code and tool output already in its context.",
+      "source_url": "https://penberg.org/blog/qwen38-overthink.html",
+      "source_title": "Why Qwen3.8-27B Overthinks in Coding Tasks and How to Mitigate That",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "The academic grounding (Cuadron et al.) finds higher overthinking scores correlate with decreased performance, and simple mitigation improves performance by almost 30% while cutting computational costs by 43%.",
+      "source_url": "https://arxiv.org/abs/2502.08235",
+      "source_title": "The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "The same bug report shows the default is measurably fragile: empty-answer failures hit 18 of 93 calls (19.4%) at xhigh versus 0 of 47 at low and 0 of 48 at medium.",
+      "source_url": "https://github.com/QwenLM/Qwen3.8/issues/216",
+      "source_title": "reasoning_effort=\"xhigh\" (the default) returns an empty answer",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    },
+    {
+      "claim": "A 4-bit quant of the dense 27B model runs in 16-19GB total memory, fitting a 24GB RTX 4090/5080 or a 24GB-RAM Mac.",
+      "source_url": "https://unsloth.ai/docs/models/qwen3.8",
+      "source_title": "Qwen3.8 - How to Run Locally",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "xhigh SVG prompt cost (Willison)",
+      "value": "21 minutes; 22,276 reasoning tokens for 3,223 tokens of output",
+      "source_url": "https://simonw.substack.com/p/qwen-38-27b-is-excellent-but-it-defaults"
+    },
+    {
+      "label": "same prompt with reasoning off",
+      "value": "3,715 tokens; 137s",
+      "source_url": "https://simonw.substack.com/p/qwen-38-27b-is-excellent-but-it-defaults"
+    },
+    {
+      "label": "median tokens and wall clock by effort (M5 Max)",
+      "value": "low 4,984 tokens / 84 s; medium 4,792 tokens / 77 s; xhigh 36,188 tokens / 869 s",
+      "source_url": "https://llm-bench.io/guides/qwen3-8-27b-reasoning-effort"
+    },
+    {
+      "label": "dwim vs OpenCode (same model)",
+      "value": "64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s",
+      "source_url": "https://penberg.org/blog/qwen38-overthink.html"
+    },
+    {
+      "label": "dwim thinking cap",
+      "value": "2,048 tokens",
+      "source_url": "https://penberg.org/blog/qwen38-overthink.html"
+    },
+    {
+      "label": "empty-answer rate at xhigh",
+      "value": "18 (19.4%) of 93 calls; low 0 of 47; medium 0 of 48",
+      "source_url": "https://github.com/QwenLM/Qwen3.8/issues/216"
+    },
+    {
+      "label": "4-bit memory footprint",
+      "value": "16-19GB total memory",
+      "source_url": "https://unsloth.ai/docs/models/qwen3.8"
+    },
+    {
+      "label": "native context",
+      "value": "262,144 tokens",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Kitchen blender with a glued dial",
+      "mapping": "Every blend order arrives at maximum speed no matter what you meant to set -- the blades are fine, the dial is stuck on liquefy; the thinking budget is a timer that cuts power mid-blend even when the dial is ignored.",
+      "limit": "Hard problems genuinely need liquefy (xhigh's higher 89.2 ceiling), and a timer set too early makes chunky salsa."
+    },
+    {
+      "vehicle": "Mechanic reciting the workshop manual from memory while the car sits there with the hood open",
+      "mapping": "The model recalls how code works instead of reading the code in its context; one glance under the hood settles it.",
+      "limit": "Memory can be stale or wrong, and the read is not always actually in context."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "You have to turn reasoning off entirely to stop the overthinking.",
+      "reality": "\"You don't have to turn reasoning off completely to fix that. Instead, the harness can keep the thinking short and push the model to act.\""
+    },
+    {
+      "myth": "More thinking tokens buy better coding results.",
+      "reality": "\"so far I did not see better results from Qwen3.8-27B with more thinking; quite the opposite.\""
+    },
+    {
+      "myth": "Setting reasoning_effort=low always fixes it.",
+      "reality": "Qwen's own card warns lower effort can raise total latency and tokens in multi-turn agentic tasks via retries, and misconfigured harnesses silently fall back to xhigh."
+    },
+    {
+      "myth": "The model is just slow by nature.",
+      "reality": "The weights score a median ~78 at low/medium in ~80 s; the 14-minute answers come from a shipped xhigh default in the chat template, not the model's only gear."
+    },
+    {
+      "myth": "A bigger context window stops the overthinking.",
+      "reality": "\"Nothing changed, except that the loop ran longer before it died.\""
+    }
+  ],
+  "glossary": [
+    {
+      "term": "reasoning_effort",
+      "definition": "Qwen3.8's official knob for reasoning depth and cost, with levels xhigh (default), medium, and low."
+    },
+    {
+      "term": "thinking budget",
+      "definition": "A hard cap on how many tokens the model may spend reasoning, which stops deliberation without truncating the answer."
+    },
+    {
+      "term": "enable_thinking",
+      "definition": "The per-request switch (inside chat_template_kwargs) that turns the thinking preamble off entirely for direct answers."
+    },
+    {
+      "term": "chat_template_kwargs",
+      "definition": "The nested extra_body dict where Qwen3.8's per-request template flags must be passed, distinct from top-level completion parameters."
+    },
+    {
+      "term": "xhigh",
+      "definition": "The highest of Qwen3.8's three reasoning-effort levels and the shipped default, \"for complex tasks demanding thorough analysis\"."
+    },
+    {
+      "term": "overthinking",
+      "definition": "A failure case where a reasoning model stalls because it thinks too much instead of acting on the environment."
+    },
+    {
+      "term": "TTFT",
+      "definition": "Time to first token; community reports put Qwen3.8-27B at 40+ seconds under default xhigh effort in IDE harnesses."
+    },
+    {
+      "term": "SWE-bench Verified Mini",
+      "definition": "The 50-issue Django and Sphinx subset of SWE-bench Verified used in the penberg.org dwim-vs-OpenCode evaluation."
+    },
+    {
+      "term": "dwim",
+      "definition": "Pekka Enberg's local coding agent that bundles a model and a harness; source of the penberg.org mitigations and eval."
+    },
+    {
+      "term": "dense model",
+      "definition": "A model where every parameter is used on every token (no expert routing), so active parameters equals total parameters."
+    }
+  ],
+  "unverified": [
+    "The penberg.org page itself shows only \"November 2026\" as its date; the Nov 21, 2026 publication timestamp comes from a third-party listing in search results, not from a fetched page.",
+    "Whether specific harnesses like Claude Code send effort flags for local models is community speculation in the HF thread, not documented in a fetched primary source.",
+    "Kaitchup's full off-vs-low-vs-medium-vs-xhigh accuracy benchmark is paywalled; only the setup was confirmed, not the per-benchmark numbers.",
+    "Community reports of a llama.cpp \"--reasoning-budget N\" flag were not verified for syntax or effect.",
+    "VentureBeat's report of Qwen3.8-27B scoring 51 on Artificial Analysis' Agentic Index is a search snippet only; page not fetched.",
+    "Whether non-thinking mode retains the 90.3 LiveCodeBench v6 score: model-card benchmarks were run in thinking mode; no fetched page isolates non-thinking coding scores."
+  ],
+  "suggested_outline": "Open on the symptom: your local coder vanished into its own head -- 21 minutes, 22,276 thinking tokens, 3,223 tokens of code out.\nAcquit the engine: dense 27B, SWE-bench Pro 61.7, fits 24GB at 4-bit (16-19GB) -- this is not a weak model.\nIndict the default: xhigh thinking is the template fallback; effort is a three-stop dial; the flag is one line.\nThe honest catch: effort is a suggestion, not a linkage -- the hard fix is a thinking budget, and Qwen itself warns retries can eat the savings.\nThe payoff: 64% vs 52% resolved, a quarter of the thinking, a third of the time -- same model, better harness.",
+  "notes": "Conflicts: none material. Qwen's card (xhigh default, sampler profiles, retry caveat) and llm-bench.io agree on mechanism; llm-bench.io's independent M5 Max measurement is the only effort-level token/latency benchmark in hand. Thin spots: the only systematic effort-vs-accuracy comparison outside llm-bench.io is paywalled (Kaitchup), and non-thinking-mode coding scores are not isolated by any fetched source, so the brief does not claim them. The most arresting number is 21 minutes / 22,276 reasoning tokens for 3,223 tokens of output (hook-grade).",
+  "viewer_situation": "You've got Qwen3.8-27B running locally for coding -- LM Studio, Ollama, or your IDE's local hook -- and it thinks for minutes before touching your code.",
+  "has_process": true,
+  "process_steps": [
+    "Notice the stall: thinking trace looping on \"I think\", \"I recall\", \"wait\" while your code sits unread.",
+    "Set the effort flag: pass reasoning_effort low or medium on every request instead of the default xhigh.",
+    "Cap the thinking: set a hard thinking budget (dwim: 2,048 tokens; oMLX tested 12,000) so deliberation has a mechanical end.",
+    "Tell it to act: when the cap hits, inject the closing sentence that says the answer is in the output already in context -- read, decide, edit."
+  ],
+  "objection": "Any modern reasoning model overthinks sometimes; a hard cap just truncates reasoning and guts accuracy on hard problems -- and Qwen's own card says lower effort can cost more total time in agentic runs."
+}

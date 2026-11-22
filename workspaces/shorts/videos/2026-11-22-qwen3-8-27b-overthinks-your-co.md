@@ -2,14 +2,14 @@
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
 title: "Qwen3.8-27B overthinks your code: the fix"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T12:06:15Z"
+updated: "2026-11-22T12:41:17Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-22-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-22-qwen3-8-27b-overthinks-your-co-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -34,6 +34,8 @@ blotato_post_id: ""
 ## Decisions
 - Picked as rank 2 (opportunity 87.0, autocomplete depth 221): suggestions show buying research ("mac", "review") and the overthink-fix angle fills a gap reviews do not.
 - Lane repeats yesterday's how-to only under the quiet-day exception: every candidate outside yesterday's lanes scored below 60.
+- Research checkpoint: angle confirmed unchanged (27B burns tokens overthinking coding tasks; the knobs that cut the waste), slug confirmed; penberg.org write-up (~23 h old) anchors the failure mode and mitigations.
+- Research depth: standard, 10 sources fetched, 3 parallel questions (failure mode, knobs, specs/baseline); thesis shifted from "the model overthinks" to "the default does" because the chat-template xhigh fallback is the load-bearing fact.
 
 ## Build journal
 
