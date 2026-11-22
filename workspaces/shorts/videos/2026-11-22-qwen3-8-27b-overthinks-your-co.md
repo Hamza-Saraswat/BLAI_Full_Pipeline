@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
-title: "Qwen3.8-27B overthinks your code: the fix"
-status: scripted
+title: "Qwen3.8-27B overthinking: the fix"
+status: ready-to-build
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T13:18:21Z"
+updated: "2026-11-22T13:19:46Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 95
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -25,9 +25,9 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-22-ideas]]
 - Research: [[stages/03-research/output/2026-11-22-qwen3-8-27b-overthinks-your-co-brief]]
-- Script: [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Script: [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-script]] ([[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-drafts|drafts]], [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard|storyboard]])
+- Package: [[stages/05-package/output/2026-11-22-qwen3-8-27b-overthinks-your-co-package]]
+- Voice: [[stages/06-voice/output/2026-11-22-qwen3-8-27b-overthinks-your-co-narration]] (normalized; render note pending stage 07)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -38,6 +38,7 @@ blotato_post_id: ""
 - Research depth: standard, 10 sources fetched, 3 parallel questions (failure mode, knobs, specs/baseline); thesis shifted from "the model overthinks" to "the default does" because the chat-template xhigh fallback is the load-bearing fact.
 - Structures: how-to-three-moves (A) vs myth-bust (B); B won 23-17 (judge on kimi-k3); A capped on difference for repeating 2026-11-19's how-to/tonight shape. One graft: A's "flag is only a suggestion; budget is a hard stop" into B s04.
 - Gates on winner: validator 0/0, eval failures none (soft: entity_spend, top2 -- classic board this number-led carries no entity density), sameness clean vs last 5, normalizer 2 scenes changed; hook "21 minutes. One SVG." (number-shock) puts digits on frame 1 per the matcher's law.
+- Package checkpoint: three titles written (searchable chosen, search-heavy keyword pool), description leads keyword+promise with the Qwen3-Coder fix video as closest; rubric 95 (half credit on Description: closest-video line at line 3). check_outputs 0 failures; hub at ready-to-build.
 
 ## Build journal
 
