@@ -2,14 +2,14 @@
 slug: 2026-11-21-verify-your-deepseek-v4-1-flas
 workspace: shorts
 title: Verify DeepSeek V4.1 Flash weights
-status: review
+status: expired
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-21
-updated: "2026-11-21T13:34:04Z"
+updated: "2026-11-22T14:35:14Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -50,3 +50,4 @@ blotato_post_id: ""
 - 2026-11-21T13:34:08Z 07-render ok 40.90s: 5 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 377
 - 2026-11-21T13:34:08Z 07-render ok 825s
 - 2026-11-21T13:34:15Z build done, status review
+- 2026-11-22T14:35:14Z 2026-11-22T14:35:14Z expired: not from today's picks (2026-11-22); the factory carries no backlog

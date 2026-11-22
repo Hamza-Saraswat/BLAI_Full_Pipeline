@@ -2,14 +2,14 @@
 slug: 2026-11-21-llama-cpp-shipped-3-builds-in
 workspace: shorts
 title: llama.cpp shipped 3 builds in 24 hours
-status: idea
+status: expired
 pillar: news-react
 structure: worked-example
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-21
-updated: "2026-11-21T12:06:34Z"
+updated: "2026-11-22T14:35:14Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Thin radar this run (Reddit 403, FireCrawl out of credits, YouTube skipped); pool was hn+hf+github.
 
 ## Build journal
-
+- 2026-11-22T14:35:14Z 2026-11-22T14:35:14Z expired: not from today's picks (2026-11-22); the factory carries no backlog
