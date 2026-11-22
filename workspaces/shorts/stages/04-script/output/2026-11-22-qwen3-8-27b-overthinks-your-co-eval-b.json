@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-22T13:06:59+00:00",
+  "generated_at": "2026-11-22T13:10:54+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-b.json",
@@ -37,9 +37,9 @@
   "board_metrics": {
     "number_spend": {
       "total": 8,
-      "spent": 3,
-      "distinct": 3,
-      "score": 0.375,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
       "detail": [
         {
           "label": "xhigh SVG prompt cost (Willison)",
@@ -71,21 +71,19 @@
           "label": "dwim vs OpenCode (same model)",
           "value": "64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s",
           "spent": true,
-          "matched_in": "on_screen",
-          "matched_token": "64%",
+          "matched_in": "narration",
+          "matched_token": "sixty-four",
           "scene_ids": [
-            "s05"
+            "s06"
           ]
         },
         {
           "label": "dwim thinking cap",
           "value": "2,048 tokens",
-          "spent": true,
-          "matched_in": "on_screen",
-          "matched_token": "2,048",
-          "scene_ids": [
-            "s04"
-          ]
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
         },
         {
           "label": "empty-answer rate at xhigh",
@@ -115,15 +113,16 @@
     },
     "entity_spend": {
       "total": 7,
-      "found_count": 0,
-      "score": 0.0,
-      "found": [],
-      "missing": [
+      "found_count": 2,
+      "score": 0.286,
+      "found": [
         "OpenCode",
+        "Qwen3.8-27B"
+      ],
+      "missing": [
         "RAM Mac",
         "M5 Max",
         "Simon Willison",
-        "Qwen3.8-27B",
         "More",
         "Setting"
       ],
@@ -137,8 +136,10 @@
           "name": "OpenCode",
           "tier": 0,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "RAM Mac",
@@ -165,8 +166,10 @@
           "name": "Qwen3.8-27B",
           "tier": 4,
           "claim_count": 0,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "More",
@@ -185,16 +188,18 @@
       ]
     },
     "skeleton": {
-      "sentences": 12,
+      "sentences": 13,
       "hits": 0,
       "density": 0.0,
       "offenders": []
     },
     "hook": {
-      "concrete": false,
-      "via": [],
-      "hook_text": "Twenty-one minutes for one SVG.",
-      "first_sentence": "Twenty-one minutes for one SVG."
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "21 minutes. One SVG.",
+      "first_sentence": "Twenty-one minutes for one vector image."
     },
     "positional_labels": {
       "count": 0,
@@ -202,17 +207,19 @@
       "labels": []
     },
     "scene_specificity": {
-      "total": 5,
-      "specific_count": 4,
-      "ratio": 0.8,
+      "total": 6,
+      "specific_count": 5,
+      "ratio": 0.833,
       "scenes": [
         {
           "id": "s01",
           "role": "hook",
           "est_duration_s": 5,
-          "specific": false,
-          "hits": [],
-          "narration": "Twenty-one minutes for one SVG. You run this model locally for coding. So: slow model."
+          "specific": true,
+          "hits": [
+            "entity:Qwen3.8-27B"
+          ],
+          "narration": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model."
         },
         {
           "id": "s02",
@@ -230,79 +237,66 @@
           "est_duration_s": 10,
           "specific": true,
           "hits": [
-            "glossary:xhigh"
+            "entity:Qwen3.8-27B"
           ],
-          "narration": "Qwen three point eight twenty-seven B gives thinking three stops: low, medium, xhigh. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous."
+          "narration": "Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous."
         },
         {
           "id": "s04",
           "role": "explain",
           "est_duration_s": 8,
-          "specific": true,
-          "hits": [
-            "num:2,048 tokens"
-          ],
+          "specific": false,
+          "hits": [],
           "narration": "Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens."
         },
         {
           "id": "s05",
-          "role": "payoff_close",
-          "est_duration_s": 13,
+          "role": "explain",
+          "est_duration_s": 7,
           "specific": true,
           "hits": [
-            "num:64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s"
+            "glossary:xhigh"
           ],
-          "narration": "Dwim, a local coding agent, resolved sixty-four percent of issues against fifty-two percent. xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings. You never bought a slow model; the dial shipped glued."
+          "narration": "x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s",
+            "entity:OpenCode"
+          ],
+          "narration": "Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued."
         }
       ]
     },
     "language": {
-      "fk_grade": 6.5,
-      "words": 122,
-      "sentences": 12,
-      "est_speech_s": 42.1,
+      "fk_grade": 5.9,
+      "words": 120,
+      "sentences": 13,
+      "est_speech_s": 41.4,
       "vo_band_ok": true
     },
-    "narration_full": "Twenty-one minutes for one SVG. You run this model locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight twenty-seven B gives thinking three stops: low, medium, xhigh. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens. Dwim, a local coding agent, resolved sixty-four percent of issues against fifty-two percent. xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings. You never bought a slow model; the dial shipped glued.",
-    "on_screen": "Twenty-one minutes for one SVG. | Twenty-one minutes for one SVG. | 77 s/question, same typical score | low \u00b7 medium \u00b7 xhigh (default) | cap: 2,048 tokens | dwim: 64% vs 52%"
+    "narration_full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
+    "on_screen": "21 minutes. One SVG. | Qwen3.8-27B: 21 min, 1 SVG | 77 s/question, same typical score | Qwen3.8-27B: low \u00b7 medium \u00b7 xhigh | cap: 2,048 tokens | ceiling: xhigh | savings: medium | dwim 64% vs OpenCode 52%"
   },
   "validators": {
     "storyboard": {
-      "exit_code": 3,
+      "exit_code": 0,
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-b.json",
-        "scenes": 5,
-        "fk_grade": 6.5,
-        "words": 122,
-        "est_speech_s": 42.1,
+        "scenes": 6,
+        "fk_grade": 5.9,
+        "words": 120,
+        "est_speech_s": 41.4,
         "blockers": [],
-        "advisories": [
-          "bad music_mood: focused",
-          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "only 0 hook_candidates \u2014 write >=10",
-          "s01: acronym 'SVG' has no spoken form \u2014 rewrite it or add an entry to skills/script-gates/tts_lexicon.json",
-          "s05: est 13s \u2014 long single-render scene; consider splitting the beat",
-          "s05: narration ~39 words (~13s on screen) \u2014 long single-render scene; split the beat",
-          "hook visual_brief must specify the frame-1 composition",
-          "ending 'abrupt': 2 sentences follow the payoff line (at most 1): cut to the payoff and stop: 'xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings\u2026'"
-        ],
-        "violations": [
-          "bad music_mood: focused",
-          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "only 0 hook_candidates \u2014 write >=10",
-          "s01: acronym 'SVG' has no spoken form \u2014 rewrite it or add an entry to skills/script-gates/tts_lexicon.json",
-          "s05: est 13s \u2014 long single-render scene; consider splitting the beat",
-          "s05: narration ~39 words (~13s on screen) \u2014 long single-render scene; split the beat",
-          "hook visual_brief must specify the frame-1 composition",
-          "ending 'abrupt': 2 sentences follow the payoff line (at most 1): cut to the payoff and stop: 'xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings\u2026'"
-        ],
+        "advisories": [],
+        "violations": [],
         "warnings": [
-          "target 40s outside the 32-38s evidence band",
-          "title 41 chars \u2014 mobile truncates ~40",
-          "FK grade 6.5 \u2014 target <=5",
-          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
-          "s05: 13s scene with ~3 visual beats in brief \u2014 need a change every ~3s",
-          "hook brief: name the <=0.5s motion onset explicitly"
+          "target 41s outside the 32-38s evidence band",
+          "FK grade 5.9 \u2014 target <=5"
         ]
       }
     },
@@ -357,18 +351,16 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "hook_concrete"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
     ],
     "detail": {
       "number_spend": {
-        "spent": 3,
-        "heard": 3,
+        "spent": 2,
+        "heard": 2,
         "total": 8,
         "need": 2,
         "min": 2,
@@ -376,7 +368,7 @@
         "mode": "band"
       },
       "entity_spend": {
-        "score": 0.0,
+        "score": 0.286,
         "need": 0.5,
         "advisory": true
       },
@@ -389,13 +381,15 @@
         "advisory": true
       },
       "hook_concrete": {
-        "concrete": false,
-        "via": []
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
       },
       "scene_specificity": {
-        "specific": 4,
-        "need": 4,
-        "total": 5
+        "specific": 5,
+        "need": 5,
+        "total": 6
       },
       "not_x_but_y": {
         "count": 0,

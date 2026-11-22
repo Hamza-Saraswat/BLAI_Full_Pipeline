@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-22T13:06:59+00:00",
+  "generated_at": "2026-11-22T13:10:42+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-a.json",
@@ -113,15 +113,16 @@
     },
     "entity_spend": {
       "total": 7,
-      "found_count": 0,
-      "score": 0.0,
-      "found": [],
-      "missing": [
+      "found_count": 2,
+      "score": 0.286,
+      "found": [
         "OpenCode",
+        "Qwen3.8-27B"
+      ],
+      "missing": [
         "RAM Mac",
         "M5 Max",
         "Simon Willison",
-        "Qwen3.8-27B",
         "More",
         "Setting"
       ],
@@ -135,8 +136,10 @@
           "name": "OpenCode",
           "tier": 0,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "RAM Mac",
@@ -163,8 +166,10 @@
           "name": "Qwen3.8-27B",
           "tier": 4,
           "claim_count": 0,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "More",
@@ -189,9 +194,11 @@
       "offenders": []
     },
     "hook": {
-      "concrete": false,
-      "via": [],
-      "hook_text": "Three moves and your coder stops stalling tonight.",
+      "concrete": true,
+      "via": [
+        "digit"
+      ],
+      "hook_text": "3 moves. 21 minutes gone.",
       "first_sentence": "Three moves and your coder stops stalling tonight."
     },
     "positional_labels": {
@@ -226,15 +233,17 @@
     },
     "scene_specificity": {
       "total": 5,
-      "specific_count": 3,
-      "ratio": 0.6,
+      "specific_count": 4,
+      "ratio": 0.8,
       "scenes": [
         {
           "id": "s01",
           "role": "hook",
           "est_duration_s": 7,
-          "specific": false,
-          "hits": [],
+          "specific": true,
+          "hits": [
+            "entity:Qwen3.8-27B"
+          ],
           "narration": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default."
         },
         {
@@ -243,7 +252,7 @@
           "est_duration_s": 10,
           "specific": true,
           "hits": [
-            "glossary:reasoning_effort"
+            "entity:Qwen3.8-27B"
           ],
           "narration": "Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to."
         },
@@ -271,7 +280,8 @@
           "est_duration_s": 7,
           "specific": true,
           "hits": [
-            "num:64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s"
+            "num:64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s",
+            "entity:OpenCode"
           ],
           "narration": "Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code."
         }
@@ -285,11 +295,11 @@
       "vo_band_ok": true
     },
     "narration_full": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default. Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to. Step two: cap the thinking; the flag is only a suggestion. A budget is a hard stop: two thousand forty-eight reasoning tokens. Step three: paste the closing line. When the cap hits, it tells the model: act on the code already read. Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code.",
-    "on_screen": "Three moves and your coder stops stalling tonight. | Three moves and your coder stops stalling tonight. | reasoning_effort: \"medium\" | thinking_budget = 2048 | \"Act on the code already read.\" | SWE-bench Mini: 64% vs 52% resolved"
+    "on_screen": "3 moves. 21 minutes gone. | Qwen3.8-27B: 21 min stall | Qwen3.8-27B: reasoning_effort \"medium\" | thinking_budget = 2048 | \"Act on the code already read.\" | dwim 64% vs OpenCode 52%"
   },
   "validators": {
     "storyboard": {
-      "exit_code": 3,
+      "exit_code": 0,
       "output": {
         "file": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-a.json",
         "scenes": 5,
@@ -297,25 +307,11 @@
         "words": 115,
         "est_speech_s": 39.7,
         "blockers": [],
-        "advisories": [
-          "bad music_mood: focused",
-          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "hook_text >7 words: 'Three moves and your coder stops stalling tonight.'",
-          "only 0 hook_candidates \u2014 write >=10",
-          "hook visual_brief must specify the frame-1 composition"
-        ],
-        "violations": [
-          "bad music_mood: focused",
-          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
-          "hook_text >7 words: 'Three moves and your coder stops stalling tonight.'",
-          "only 0 hook_candidates \u2014 write >=10",
-          "hook visual_brief must specify the frame-1 composition"
-        ],
+        "advisories": [],
+        "violations": [],
         "warnings": [
           "target 39s outside the 32-38s evidence band",
-          "title 41 chars \u2014 mobile truncates ~40",
-          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
-          "hook brief: name the <=0.5s motion onset explicitly"
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence"
         ]
       }
     },
@@ -370,11 +366,8 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "hook_concrete",
-      "scene_specificity"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
@@ -390,7 +383,7 @@
         "mode": "band"
       },
       "entity_spend": {
-        "score": 0.0,
+        "score": 0.286,
         "need": 0.5,
         "advisory": true
       },
@@ -403,11 +396,13 @@
         "advisory": true
       },
       "hook_concrete": {
-        "concrete": false,
-        "via": []
+        "concrete": true,
+        "via": [
+          "digit"
+        ]
       },
       "scene_specificity": {
-        "specific": 3,
+        "specific": 4,
         "need": 4,
         "total": 5
       },
