@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-22T13:10:54+00:00",
+  "generated_at": "2026-11-22T13:17:24+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-b.json",
@@ -244,10 +244,10 @@
         {
           "id": "s04",
           "role": "explain",
-          "est_duration_s": 8,
+          "est_duration_s": 9,
           "specific": false,
           "hits": [],
-          "narration": "Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens."
+          "narration": "Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens."
         },
         {
           "id": "s05",
@@ -274,12 +274,12 @@
     },
     "language": {
       "fk_grade": 5.9,
-      "words": 120,
+      "words": 123,
       "sentences": 13,
-      "est_speech_s": 41.4,
+      "est_speech_s": 42.4,
       "vo_band_ok": true
     },
-    "narration_full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
+    "narration_full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
     "on_screen": "21 minutes. One SVG. | Qwen3.8-27B: 21 min, 1 SVG | 77 s/question, same typical score | Qwen3.8-27B: low \u00b7 medium \u00b7 xhigh | cap: 2,048 tokens | ceiling: xhigh | savings: medium | dwim 64% vs OpenCode 52%"
   },
   "validators": {
@@ -289,13 +289,13 @@
         "file": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-b.json",
         "scenes": 6,
         "fk_grade": 5.9,
-        "words": 120,
-        "est_speech_s": 41.4,
+        "words": 123,
+        "est_speech_s": 42.4,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
-          "target 41s outside the 32-38s evidence band",
+          "target 42s outside the 32-38s evidence band",
           "FK grade 5.9 \u2014 target <=5"
         ]
       }

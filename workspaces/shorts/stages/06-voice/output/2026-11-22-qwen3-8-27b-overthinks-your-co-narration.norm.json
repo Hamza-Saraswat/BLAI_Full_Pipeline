@@ -1,0 +1,43 @@
+{
+  "full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. chwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. chwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
+  "words": 117,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model.",
+      "words": 15,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Same weights, medium effort: seventy-seven seconds a question, same typical score.",
+      "words": 11,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "chwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous.",
+      "words": 29,
+      "changed": true
+    },
+    {
+      "id": "s04",
+      "text": "Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "x high keeps the higher ceiling, and agent retries can eat the savings. chwen says so itself.",
+      "words": 17,
+      "changed": true
+    },
+    {
+      "id": "s06",
+      "text": "Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
+      "words": 20,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

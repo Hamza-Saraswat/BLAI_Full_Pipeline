@@ -2,14 +2,14 @@
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
 title: "Qwen3.8-27B overthinks your code: the fix"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: myth-bust
 format: classic
-style_pack: ""
+style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T12:41:17Z"
+updated: "2026-11-22T13:18:21Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-22-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-22-ideas]]
 - Research: [[stages/03-research/output/2026-11-22-qwen3-8-27b-overthinks-your-co-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)

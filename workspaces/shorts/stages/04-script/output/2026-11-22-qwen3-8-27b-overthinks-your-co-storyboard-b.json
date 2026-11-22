@@ -48,8 +48,8 @@
   "script_format": "classic",
   "structure": "myth-bust",
   "value_types": "TEACHES,EQUIPS",
-  "target_duration_s": 41,
-  "narration_full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
+  "target_duration_s": 42,
+  "narration_full": "Twenty-one minutes for one vector image. You run it locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight gives thinking three stops: low, medium, x high. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens. x high keeps the higher ceiling, and agent retries can eat the savings. Qwen says so itself. Dwim resolved sixty-four percent against fifty-two, same model, same issues. You never bought a slow model; the dial shipped glued.",
   "analogy": {},
   "music_mood": "curious-tech",
   "scenes": [
@@ -88,10 +88,10 @@
       "role": "explain",
       "tool": "manim",
       "layout_archetype": "timeline",
-      "narration": "Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens.",
+      "narration": "Set reasoning effort, the thinking-depth dial, to medium. The flag is only a suggestion; a budget is a hard stop: two thousand forty-eight thinking tokens.",
       "on_screen_text": "cap: 2,048 tokens",
       "visual_brief": "On \"Set reasoning effort,\" a horizontal request timeline fades in with a short thinking bar labeled medium. On \"hard cap,\" a marker scales in at the tick labeled 2,048 and the thinking bar stops dead there.",
-      "est_duration_s": 8
+      "est_duration_s": 9
     },
     {
       "id": "s05",
