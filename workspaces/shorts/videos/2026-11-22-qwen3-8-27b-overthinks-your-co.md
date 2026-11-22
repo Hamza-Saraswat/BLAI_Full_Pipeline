@@ -2,14 +2,14 @@
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
 title: "Qwen3.8-27B overthinking: the fix"
-status: building
+status: review
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T13:21:10Z"
+updated: "2026-11-22T13:36:48Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-script]] ([[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-drafts|drafts]], [[stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard|storyboard]])
 - Package: [[stages/05-package/output/2026-11-22-qwen3-8-27b-overthinks-your-co-package]]
 - Voice: [[stages/06-voice/output/2026-11-22-qwen3-8-27b-overthinks-your-co-narration]] (normalized; render note pending stage 07)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-22-qwen3-8-27b-overthinks-your-co-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -43,3 +43,5 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-22T13:21:10Z build start on gn100-83c4
 - 2026-11-22T13:22:11Z 06-voice ok 59s
+- 2026-11-22T13:36:53Z 07-render ok 42.37s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 380
+- 2026-11-22T13:36:53Z 07-render ok 879s
