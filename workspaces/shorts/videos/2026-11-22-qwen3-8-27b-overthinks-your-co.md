@@ -2,19 +2,19 @@
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
 title: "Qwen3.8-27B overthinking: the fix"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T13:19:46Z"
+updated: "2026-11-22T13:21:10Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -41,4 +41,4 @@ blotato_post_id: ""
 - Package checkpoint: three titles written (searchable chosen, search-heavy keyword pool), description leads keyword+promise with the Qwen3-Coder fix video as closest; rubric 95 (half credit on Description: closest-video line at line 3). check_outputs 0 failures; hub at ready-to-build.
 
 ## Build journal
-
+- 2026-11-22T13:21:10Z build start on gn100-83c4
