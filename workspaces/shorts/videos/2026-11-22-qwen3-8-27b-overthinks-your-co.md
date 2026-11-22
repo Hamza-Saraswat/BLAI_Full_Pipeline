@@ -36,8 +36,6 @@ blotato_post_id: ""
 - Lane repeats yesterday's how-to only under the quiet-day exception: every candidate outside yesterday's lanes scored below 60.
 - Research checkpoint: angle confirmed unchanged (27B burns tokens overthinking coding tasks; the knobs that cut the waste), slug confirmed; penberg.org write-up (~23 h old) anchors the failure mode and mitigations.
 - Research depth: standard, 10 sources fetched, 3 parallel questions (failure mode, knobs, specs/baseline); thesis shifted from "the model overthinks" to "the default does" because the chat-template xhigh fallback is the load-bearing fact.
-
-## Decisions (stage 04)
 - Structures: how-to-three-moves (A) vs myth-bust (B); B won 23-17 (judge on kimi-k3); A capped on difference for repeating 2026-11-19's how-to/tonight shape. One graft: A's "flag is only a suggestion; budget is a hard stop" into B s04.
 - Gates on winner: validator 0/0, eval failures none (soft: entity_spend, top2 -- classic board this number-led carries no entity density), sameness clean vs last 5, normalizer 2 scenes changed; hook "21 minutes. One SVG." (number-shock) puts digits on frame 1 per the matcher's law.
 
