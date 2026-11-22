@@ -1,0 +1,76 @@
+{
+  "slug": "2026-11-22-qwen3-8-27b-overthinks-your-co",
+  "topic": "Qwen3.8-27B overthinks coding tasks: the knobs that cut the waste",
+  "title": "Qwen3.8-27B overthinks your code: the fix",
+  "description": "Working value; the package stage overwrites.",
+  "hashtags": [
+    "#localai",
+    "#qwen",
+    "#llm"
+  ],
+  "tags": [],
+  "hook_text": "Twenty-one minutes for one SVG.",
+  "hook_candidates": [],
+  "hook_pattern": "number-shock",
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "myth-bust",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 40,
+  "narration_full": "Twenty-one minutes for one SVG. You run this model locally for coding. So: slow model. Same weights, medium effort: seventy-seven seconds a question, same typical score. Qwen three point eight twenty-seven B gives thinking three stops: low, medium, xhigh. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous. Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens. Dwim, a local coding agent, resolved sixty-four percent of issues against fifty-two percent. xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings. You never bought a slow model; the dial shipped glued.",
+  "analogy": {},
+  "music_mood": "focused",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Twenty-one minutes for one SVG. You run this model locally for coding. So: slow model.",
+      "on_screen_text": "Twenty-one minutes for one SVG.",
+      "visual_brief": "On \"Twenty-one minutes,\" the hook line scales in at center as the giant element; on \"slow model,\" the words settle with a slow fade, nothing else moving.",
+      "est_duration_s": 5
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Same weights, medium effort: seventy-seven seconds a question, same typical score.",
+      "on_screen_text": "77 s/question, same typical score",
+      "visual_brief": "On \"Same weights,\" a left panel fades in reading \"same weights\"; on \"seventy-seven seconds a question,\" the right panel rises in place with the time and score line.",
+      "est_duration_s": 4
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Qwen three point eight twenty-seven B gives thinking three stops: low, medium, xhigh. The chat template, the formatter behind every request, hands you the maximum when you set nothing. Generous.",
+      "on_screen_text": "low · medium · xhigh (default)",
+      "visual_brief": "On \"three stops,\" a flow diagram fades in: a request arrow enters a box labeled \"chat template\" and three branches fan out, labeled low, medium, xhigh. On \"hands you the maximum,\" the xhigh branch scales up and brightens.",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "timeline",
+      "narration": "Set reasoning effort, the thinking-depth dial, to medium. Engines can ignore that, so add a hard cap: two thousand forty-eight thinking tokens.",
+      "on_screen_text": "cap: 2,048 tokens",
+      "visual_brief": "On \"Set reasoning effort,\" a horizontal request timeline fades in with a short thinking bar labeled medium. On \"hard cap,\" a marker scales in at the tick labeled 2,048 and the thinking bar stops dead there.",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Dwim, a local coding agent, resolved sixty-four percent of issues against fifty-two percent. xhigh keeps the higher ceiling, and Qwen warns agent retries can eat the savings. You never bought a slow model; the dial shipped glued.",
+      "on_screen_text": "dwim: 64% vs 52%",
+      "visual_brief": "On \"resolved sixty-four percent,\" the result scales in at center under the small label \"dwim.\" On \"the dial shipped glued,\" the numbers fade and the payoff line settles alone in the stack.",
+      "est_duration_s": 13
+    }
+  ],
+  "notes_for_review": "Band rule says the myth-breaking measurement lands by second 4, but the mandated situation sentence makes that impossible; the seventy-seven-second number lands around second 7, as early as the hook allows. Confirm this trade-off is acceptable.; \"Same typical score\" glosses the llm-bench M5 Max medians (78.2 vs 78.8, about half a point apart); the myth-bust packet sanctions \"same median score,\" but check the simplification passes your accuracy bar.; dwim's 64 vs 52 result comes from the 2,048-token cap plus act-on-context closing sentences, not from the effort flag alone; scene order implies the cap did the work, which matches the brief, but verify the causality reads honestly.; Confirm TTS rendering of the spoken model name \"Qwen three point eight twenty-seven B\" and of \"xhigh.\"; Do not add \"21 min\" to the s02 split panel: the number is not spoken in that scene, so it would break the shown-number rule.; The payoff is one sentence joined by a semicolon; confirm the sentence-count gate reads it that way.; \"Generous.\" is the single wry beat, placed in s03; it lands on the template default, not the viewer."
+}

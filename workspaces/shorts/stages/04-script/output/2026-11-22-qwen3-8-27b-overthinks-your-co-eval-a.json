@@ -1,0 +1,454 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-22T13:06:59+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-a.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-22-qwen3-8-27b-overthinks-your-co-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 4,
+      "benchmark": 3,
+      "community": 2,
+      "docs": 1
+    },
+    "pct_primary_docs": 0.5,
+    "key_numbers_total": 8,
+    "entities_total": 7,
+    "misconceptions_total": 5,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "arxiv.org",
+      "github.com",
+      "huggingface.co",
+      "llm-bench.io",
+      "penberg.org",
+      "substack.com",
+      "unsloth.ai"
+    ],
+    "domain_diversity": 7,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "xhigh SVG prompt cost (Willison)",
+          "value": "21 minutes; 22,276 reasoning tokens for 3,223 tokens of output",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "same prompt with reasoning off",
+          "value": "3,715 tokens; 137s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "median tokens and wall clock by effort (M5 Max)",
+          "value": "low 4,984 tokens / 84 s; medium 4,792 tokens / 77 s; xhigh 36,188 tokens / 869 s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "dwim vs OpenCode (same model)",
+          "value": "64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "sixty-four",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "dwim thinking cap",
+          "value": "2,048 tokens",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "2048",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "empty-answer rate at xhigh",
+          "value": "18 (19.4%) of 93 calls; low 0 of 47; medium 0 of 48",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "4-bit memory footprint",
+          "value": "16-19GB total memory",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "native context",
+          "value": "262,144 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 7,
+      "found_count": 0,
+      "score": 0.0,
+      "found": [],
+      "missing": [
+        "OpenCode",
+        "RAM Mac",
+        "M5 Max",
+        "Simon Willison",
+        "Qwen3.8-27B",
+        "More",
+        "Setting"
+      ],
+      "top2": [
+        "OpenCode",
+        "RAM Mac"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "OpenCode",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RAM Mac",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M5 Max",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Simon Willison",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "More",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Setting",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 11,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": false,
+      "via": [],
+      "hook_text": "Three moves and your coder stops stalling tonight.",
+      "first_sentence": "Three moves and your coder stops stalling tonight."
+    },
+    "positional_labels": {
+      "count": 3,
+      "structure": "how-to-three-moves",
+      "labels": [
+        {
+          "sentence_index": 2,
+          "sentence": "Step one: set reasoning effort, the dial for how long it thinks, to medium.",
+          "label": "step",
+          "ordinal": 1,
+          "words": 14,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 5,
+          "sentence": "Step two: cap the thinking; the flag is only a suggestion.",
+          "label": "step",
+          "ordinal": 2,
+          "words": 11,
+          "has_action_verb": true
+        },
+        {
+          "sentence_index": 7,
+          "sentence": "Step three: paste the closing line.",
+          "label": "step",
+          "ordinal": 3,
+          "words": 6,
+          "has_action_verb": true
+        }
+      ]
+    },
+    "scene_specificity": {
+      "total": 5,
+      "specific_count": 3,
+      "ratio": 0.6,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 7,
+          "specific": false,
+          "hits": [],
+          "narration": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 10,
+          "specific": true,
+          "hits": [
+            "glossary:reasoning_effort"
+          ],
+          "narration": "Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 8,
+          "specific": true,
+          "hits": [
+            "num:2,048 tokens"
+          ],
+          "narration": "Step two: cap the thinking; the flag is only a suggestion. A budget is a hard stop: two thousand forty-eight reasoning tokens."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": false,
+          "hits": [],
+          "narration": "Step three: paste the closing line. When the cap hits, it tells the model: act on the code already read."
+        },
+        {
+          "id": "s05",
+          "role": "payoff_close",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:64% vs 52% resolved; 6,270 vs 22,610 median thinking tokens; 55 s vs 169 s"
+          ],
+          "narration": "Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 4.9,
+      "words": 115,
+      "sentences": 11,
+      "est_speech_s": 39.7,
+      "vo_band_ok": true
+    },
+    "narration_full": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default. Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to. Step two: cap the thinking; the flag is only a suggestion. A budget is a hard stop: two thousand forty-eight reasoning tokens. Step three: paste the closing line. When the cap hits, it tells the model: act on the code already read. Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code.",
+    "on_screen": "Three moves and your coder stops stalling tonight. | Three moves and your coder stops stalling tonight. | reasoning_effort: \"medium\" | thinking_budget = 2048 | \"Act on the code already read.\" | SWE-bench Mini: 64% vs 52% resolved"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-22-qwen3-8-27b-overthinks-your-co-storyboard-a.json",
+        "scenes": 5,
+        "fk_grade": 4.9,
+        "words": 115,
+        "est_speech_s": 39.7,
+        "blockers": [],
+        "advisories": [
+          "bad music_mood: focused",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "hook_text >7 words: 'Three moves and your coder stops stalling tonight.'",
+          "only 0 hook_candidates \u2014 write >=10",
+          "hook visual_brief must specify the frame-1 composition"
+        ],
+        "violations": [
+          "bad music_mood: focused",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "hook_text >7 words: 'Three moves and your coder stops stalling tonight.'",
+          "only 0 hook_candidates \u2014 write >=10",
+          "hook visual_brief must specify the frame-1 composition"
+        ],
+        "warnings": [
+          "target 39s outside the 32-38s evidence band",
+          "title 41 chars \u2014 mobile truncates ~40",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-22-qwen3-8-27b-overthinks-your-co-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "hook_concrete",
+      "scene_specificity"
+    ],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.0,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "OpenCode",
+          "RAM Mac"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": false,
+        "via": []
+      },
+      "scene_specificity": {
+        "specific": 3,
+        "need": 4,
+        "total": 5
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 3,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [
+          "Step one: set reasoning effort, the dial for how long it thinks, to medium.",
+          "Step two: cap the thinking; the flag is only a suggestion.",
+          "Step three: paste the closing line."
+        ],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

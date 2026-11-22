@@ -1,0 +1,76 @@
+{
+  "slug": "2026-11-22-qwen3-8-27b-overthinks-your-co",
+  "topic": "Qwen3.8-27B overthinks coding tasks: the knobs that cut the waste",
+  "title": "Qwen3.8-27B overthinks your code: the fix",
+  "description": "Working value; the package stage overwrites.",
+  "hashtags": [
+    "#localai",
+    "#qwen",
+    "#llm"
+  ],
+  "tags": [],
+  "hook_text": "Three moves and your coder stops stalling tonight.",
+  "hook_candidates": [],
+  "hook_pattern": "tonight",
+  "style_pack": "signal",
+  "script_format": "classic",
+  "structure": "how-to-three-moves",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 39,
+  "narration_full": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default. Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to. Step two: cap the thinking; the flag is only a suggestion. A budget is a hard stop: two thousand forty-eight reasoning tokens. Step three: paste the closing line. When the cap hits, it tells the model: act on the code already read. Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code.",
+  "analogy": {},
+  "music_mood": "focused",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Three moves and your coder stops stalling tonight. Twenty-one minutes thinking on one prompt: that's your local Qwen's factory default.",
+      "on_screen_text": "Three moves and your coder stops stalling tonight.",
+      "visual_brief": "Dark centered stack. On 'stops stalling tonight' the hook line fades in center. On 'twenty-one minutes' a terminal panel rises in place beneath it: one short prompt at the top, a pulsing cursor on an empty reply line, and a thin progress bar frozen nearly full. No other text on screen.",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Step one: set reasoning effort, the dial for how long it thinks, to medium. Qwen three point eight ships on x high, the maximum. Nobody asked it to.",
+      "on_screen_text": "reasoning_effort: \"medium\"",
+      "visual_brief": "Split compare. On 'set reasoning effort' a request-settings panel fades in left with the line reasoning_effort: \"medium\" highlighted. On 'x high' a three-stop dial fades in right, stops labeled xhigh, medium, low, the needle resting on the top stop. On 'to medium' the needle ticks down to medium. On 'the maximum' a small tag reading 'shipped here' fades in beside the xhigh stop.",
+      "est_duration_s": 10
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "giant-number",
+      "narration": "Step two: cap the thinking; the flag is only a suggestion. A budget is a hard stop: two thousand forty-eight reasoning tokens.",
+      "on_screen_text": "thinking_budget = 2048",
+      "visual_brief": "Giant number layout. On 'cap the thinking' the digits 2048 scale in large at center with the config line thinking_budget = 2048 beneath. Below it a token bar scales in and keeps growing; on 'hard stop' a vertical cut line fades in across the bar and the bar clips at that line.",
+      "est_duration_s": 8
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "manim",
+      "layout_archetype": "diagram-flow",
+      "narration": "Step three: paste the closing line. When the cap hits, it tells the model: act on the code already read.",
+      "on_screen_text": "\"Act on the code already read.\"",
+      "visual_brief": "Diagram flow. On 'the closing line' a spent-token node fades in left, labeled 'cap hit'. On 'it tells the model' a quote card fades in center carrying the closing sentence. On 'act on the code' a code-editor node rises in place right, one line highlighting as an edit lands. Thin connectors fade in between the nodes.",
+      "est_duration_s": 7
+    },
+    {
+      "id": "s05",
+      "role": "payoff_close",
+      "tool": "manim",
+      "layout_archetype": "split-compare",
+      "narration": "Same model, same issues: sixty-four percent fixed instead of fifty-two, on a quarter of the thinking. It just writes the code.",
+      "on_screen_text": "SWE-bench Mini: 64% vs 52% resolved",
+      "visual_brief": "Split compare bars. On 'sixty-four percent' two bars rise in place under the header: the taller left bar marked 64 and labeled dwim, the right bar marked 52 and labeled OpenCode. On 'a quarter of the thinking' a thin underbar scales in beneath each bar, the left one a quarter the width of the right. On 'It just writes the code' the frame holds one beat and the wordmark fades in at the corner.",
+      "est_duration_s": 7
+    }
+  ],
+  "notes_for_review": "Spoken numbers: twenty-one minutes (Willison prompt), two thousand forty-eight token cap (dwim), sixty-four vs fifty-two percent resolved and a quarter of the thinking (dwim vs OpenCode). Four key numbers, each with unit and referent; nothing else numeric is spoken.; Payoff evidence is dwim's cap-plus-closing-line eval; the effort flag (step one) was not part of that eval, so the payoff says 'same model, same issues' rather than claiming all three moves produced the sixty-four. Confirm that framing.; Qwen's model-card caveat that lower effort can raise total tokens via retries in multi-turn agentic runs is cut for word budget; the honesty beat is compressed into 'the flag is only a suggestion'. Flag if the retry caveat must go back in.; Single wry beat is 'Nobody asked it to.' in scene two; none in hook or payoff.; TTS check: 'x high' is the xhigh effort level. Version digits (3.8, 27B) are deliberately kept off screen so every on-screen number is spoken in its scene; only 2048, 64, 52 appear as digits and all are spoken.; Hook scene runs about seven seconds at narration pace; trim the terminal beat if it reads long."
+}
