@@ -1,0 +1,889 @@
+[
+  {
+    "id": "github-d006b257ed",
+    "title": "llama.cpp b12631",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12631",
+    "source": "github",
+    "published_at": "2026-11-22T09:03:19Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12631",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9583,
+      "age_h": 3.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> webgpu : update GDN supports_op check (#32782) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/70718174> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12631/",
+    "why_now": "Shipped: ggml-org/llama.cpp b12631 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-040d847d4b",
+    "title": "llama.cpp b12629",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12629",
+    "source": "github",
+    "published_at": "2026-11-22T08:43:35Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12629",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9537,
+      "age_h": 3.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Claude"
+    ],
+    "summary": "<details open> opencl: add coopmat GEMM for Adreno 850 (Q4_0, Q5_0, Q8_0, Q4_K, Q5_K, Q6_K) (#32686) * opencl: add Q4_0 coopmat GEMM for Adreno 850 Assisted-by: Claude Opus 5.5 * opencl: add Q5_0 coopmat GEMM for Adreno 850 * opencl: add Q8_0 coopmat GEMM for Adreno 850 * opencl: add Q4_K coopmat GE",
+    "why_now": "Shipped: ggml-org/llama.cpp b12629 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "github-4441c8b530",
+    "title": "llama.cpp b12628",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12628",
+    "source": "github",
+    "published_at": "2026-11-22T06:53:42Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12628",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9288,
+      "age_h": 5.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> vulkan : support non-contiguous src in SCALE (#32735) Assisted-By: Opus 5.5 </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/70699278> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.",
+    "why_now": "Shipped: ggml-org/llama.cpp b12628 released (pre-release), 5 h ago",
+    "score": 54
+  },
+  {
+    "id": "hf-9dc3bbb2d9",
+    "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+    "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+    "source": "hf",
+    "published_at": "2026-11-20T20:42:23Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 348,
+      "downloads": 129693,
+      "trendingScore": 214.89999999999998,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.78,
+      "signal_parts": {
+        "trending": 0.707,
+        "likes": 0.847,
+        "downloads": 0.852
+      },
+      "decay": 0.5669,
+      "age_h": 39.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 348 likes, 129.7k downloads, trending score 214, created 2026-11-20",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 348 likes, 129.7k downloads, trending score 214, 39 h ago",
+    "score": 49
+  },
+  {
+    "id": "github-7f7ccbf019",
+    "title": "transformers v5.24.0: Release v5.24.0",
+    "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0",
+    "source": "github",
+    "published_at": "2026-11-21T12:28:26Z",
+    "signals": {
+      "repo": "huggingface/transformers",
+      "tag": "v5.24.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.7119,
+      "age_h": 23.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:transformer",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "# Release v5.24.0 ## New Model additions ### Inkling 2 Mini <img width=\"80%\" alt=\"image\" src=\"https://github.com/user-attachments/assets/beefb5e0-39a9-4205-ab07-0ee707af95f2\" /> Inkling 2 Mini is a multimodal model from Thinking Machines Lab that accepts text and image inputs and generates text outp",
+    "why_now": "Shipped: huggingface/transformers v5.24.0 released, 24 h ago",
+    "score": 42
+  },
+  {
+    "id": "hn-6bac6f1160",
+    "title": "Field Guide: Running Qwen3.8 Locally",
+    "url": "https://igorstechnoclub.com/field-guide-running-qwen38-locally/",
+    "source": "hn",
+    "published_at": "2026-11-21T22:39:26Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.8246,
+      "age_h": 13.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 1 comments on HN, 13 h ago",
+    "score": 33
+  },
+  {
+    "id": "hn-366bc733ee",
+    "title": "Automated K8s hill-climbing harness and tuning vLLM and SGLang on a single A100",
+    "url": "https://github.com/johnsonshi/a100-inference-hillclimb",
+    "source": "hn",
+    "published_at": "2026-11-22T00:56:29Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8523,
+      "age_h": 11.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "SGLang"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 11 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-c25f6312c8",
+    "title": "Why Qwen3.8-27B Overthinks in Coding Tasks and How to Mitigate That",
+    "url": "https://penberg.org/blog/qwen38-overthink.html",
+    "source": "hn",
+    "published_at": "2026-11-21T13:18:54Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 2,
+      "signal": 0.2,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.219
+      },
+      "decay": 0.7206,
+      "age_h": 22.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 2 comments on HN, 23 h ago",
+    "score": 27
+  },
+  {
+    "id": "hn-e0cd502ec3",
+    "title": "Show HN: I asked a simple RegEx question and DeepSeek had a breakdown",
+    "url": "https://chat.deepseek.com/a/chat/s/d6d82831-9b07-44fb-ae5b-6d3163e25092",
+    "source": "hn",
+    "published_at": "2026-11-22T09:44:38Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.9678,
+      "age_h": 2.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "The question was: &quot;&quot;&quot; Now, I am looking for files ending with anything rather than double quotes. `[^&quot;]\\z` does not work! &quot;&quot;&quot;",
+    "why_now": "Broke: 1 points, 1 comments on HN, 2 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-bd1866fe02",
+    "title": "Hill-climbing vLLM and SGLang configs on a single A100",
+    "url": "https://twitter.com/johnsonshi86/status/2124250717963932121",
+    "source": "hn",
+    "published_at": "2026-11-21T23:33:40Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8355,
+      "age_h": 12.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "SGLang"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 12 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-f5d790bc4e",
+    "title": "Qwen3.8 27B Just Became a Coding Monster (DaisyRose)",
+    "url": "https://www.youtube.com/watch?v=bwsSnLM3YFI",
+    "source": "hn",
+    "published_at": "2026-11-21T14:20:43Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7314,
+      "age_h": 21.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 22 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-924d063019",
+    "title": "Show HN: Tartelette - an RP2040 emulator and breakout simulator",
+    "url": "https://pferreir.github.io/tartelette/",
+    "source": "hn",
+    "published_at": "2026-11-22T09:04:18Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9585,
+      "age_h": 2.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Broke",
+      "relevance": "product:Raspberry Pi",
+      "group": "news-react"
+    },
+    "products": [
+      "Raspberry Pi"
+    ],
+    "summary": "This is something I made (with LLM help) in order to easily develop and test firmware for Eurorack modules.<p>The RP2040 is the MCU in the famous Raspberry Pi Pico (and Pico W) boards, as well as many other variants and clones. It is a staple of the maker, retro and synth scenes and, while there are",
+    "why_now": "Broke: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-bb1873c487",
+    "title": "Intruder swaps DeepSeek at Prime Intellect. The copy almost never refuses",
+    "url": "https://maccus.fr/en/prime-intellect-deepseek-swap/",
+    "source": "hn",
+    "published_at": "2026-11-22T08:50:51Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9554,
+      "age_h": 3.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 3 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-4e4180d224",
+    "title": "Qlaude - Claude Code against your own model server",
+    "url": "https://github.com/trail-openers/qlaude",
+    "source": "hn",
+    "published_at": "2026-11-22T07:20:04Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9347,
+      "age_h": 4.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 5 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-62737095f0",
+    "title": "I got banned from Lobsters for writing like an LLM",
+    "url": "https://en.andros.dev/blog/94a77341/i-got-banned-from-lobsters-for-writing-like-an-llm/",
+    "source": "hn",
+    "published_at": "2026-11-21T17:00:41Z",
+    "signals": {
+      "points": 9,
+      "num_comments": 2,
+      "signal": 0.348,
+      "signal_parts": {
+        "points": 0.403,
+        "comments": 0.219
+      },
+      "decay": 0.7601,
+      "age_h": 19.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 9 points, 2 comments on HN, 19 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-93212cbbd4",
+    "title": "TonkAI - OpenAI-Compatible Gateway for GPT, Claude, Gemini, DeepSeek, and Qwen",
+    "url": "https://tonkai.app/",
+    "source": "hn",
+    "published_at": "2026-11-22T00:59:13Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8529,
+      "age_h": 11.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:OpenAI",
+      "group": "how-to"
+    },
+    "products": [
+      "OpenAI",
+      "Claude",
+      "Gemini",
+      "DeepSeek",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 11 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-acfdf15270",
+    "title": "Brain Doesn't Think in Sentences. Why Should an LLM?",
+    "url": "https://www.innerkore.com/blog/brain-doesnt-think-sentences-llm/",
+    "source": "hn",
+    "published_at": "2026-11-21T21:04:11Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 3,
+      "signal": 0.303,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.276
+      },
+      "decay": 0.806,
+      "age_h": 14.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 5 points, 3 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-57d63e6098",
+    "title": "A Slinky on an Escalator Is a Weirdly Good Test of LLM Intelligence",
+    "url": "https://morethanamachine.com/posts/slinky-escalator-benchmark/",
+    "source": "hn",
+    "published_at": "2026-11-22T07:31:41Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 1,
+      "signal": 0.239,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.138
+      },
+      "decay": 0.9373,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 1 comments on HN, 4 h ago",
+    "score": 19
+  },
+  {
+    "id": "hn-1693e2be0e",
+    "title": "Cursor may stop using Chinese open-weights AI models",
+    "url": "https://casrai.org/news/house-committees-cursor-chinese-open-weight-ai-models-report-2026",
+    "source": "hn",
+    "published_at": "2026-11-21T22:14:48Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.8198,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weights",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 1 comments on HN, 14 h ago",
+    "score": 15
+  },
+  {
+    "id": "hn-a51ec69363",
+    "title": "AWS local emulator created by AI agents",
+    "url": "https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/",
+    "source": "hn",
+    "published_at": "2026-11-22T05:57:03Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.9162,
+      "age_h": 6.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 6 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-d24d6450f9",
+    "title": "A quantization compiler that delivers 12× lower KL than Q4_K_M at the same size",
+    "url": "https://lookatmyquant.pages.dev/",
+    "source": "hn",
+    "published_at": "2026-11-21T19:07:20Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7836,
+      "age_h": 16.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 4 points, 0 comments on HN, 17 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-a8ca9451f4",
+    "title": "Show HN: Pencil - LLM writes whiteboard lessons as JSON, a browser draws them",
+    "url": "https://github.com/VBS2004/pencil",
+    "source": "hn",
+    "published_at": "2026-11-21T18:33:22Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7772,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 3 points, 0 comments on HN, 17 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-e54b34697d",
+    "title": "Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks",
+    "url": "https://www.far.ai/research/prefill-level-jailbreak-a-black-box-risk-analysis-of-large-language-models",
+    "source": "hn",
+    "published_at": "2026-11-21T15:02:59Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7389,
+      "age_h": 21.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 3 points, 0 comments on HN, 21 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-ca450512a2",
+    "title": "Kvdiff - Local proxy showing the byte breaking your LLM prompt cache",
+    "url": "https://github.com/flipcyde101/kvdiff",
+    "source": "hn",
+    "published_at": "2026-11-21T22:38:12Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8244,
+      "age_h": 13.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 2 points, 0 comments on HN, 13 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-92f300ab22",
+    "title": "Analysis of Local Open-Weight LLM Agents on Vulnerability-Reproduction Tasks",
+    "url": "https://arxiv.org/abs/2611.06257",
+    "source": "hn",
+    "published_at": "2026-11-21T15:39:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7454,
+      "age_h": 20.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 2 points, 0 comments on HN, 20 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-5a38dbf9f8",
+    "title": "Show HN: MemFiddle",
+    "url": "https://memalign.github.io/m/memfiddle/index.html",
+    "source": "hn",
+    "published_at": "2026-11-22T08:01:14Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.944,
+      "age_h": 4.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Inspired by JSFiddle, I wondered if it&#x27;d be possible to make a mobile-optimized experience where I can paste in HTML, CSS, and JavaScript (generated by my favorite LLM) and run that mini web app with ease.<p>It is possible! Introducing MemFiddle, a way to preview and test simple web apps right",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-0b3380041a",
+    "title": "Three-way translation merge: keeping translated pages in sync with an LLM",
+    "url": "https://maxmart.github.io/posts/three-way-translation-merge/",
+    "source": "hn",
+    "published_at": "2026-11-22T07:32:56Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9376,
+      "age_h": 4.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-d9fd61f460",
+    "title": "Show HN: Scalar codebook quantization, an interactive guide",
+    "url": "https://myli.page/posts/202611211800-how-a-weight-fits-in-4-bits/",
+    "source": "hn",
+    "published_at": "2026-11-21T18:32:53Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7771,
+      "age_h": 17.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:quantiz",
+      "group": "how-to"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 17 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-838925f59e",
+    "title": "How long do AI agents last? I counted 172 self-declared ones on Bluesky",
+    "url": "https://salomonai.mataroa.blog/blog/how-long-do-ai-agents-last-i-counted-the-ones-that-went-quiet/",
+    "source": "hn",
+    "published_at": "2026-11-21T16:56:39Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7593,
+      "age_h": 19.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-27a5307a9d",
+    "title": "EvalSift - 100 hand-labeled LLM agent traces",
+    "url": "https://github.com/Eddie-Town/evalsift-lite",
+    "source": "hn",
+    "published_at": "2026-11-21T16:00:08Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7491,
+      "age_h": 20.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  },
+  {
+    "id": "hn-2712007acb",
+    "title": "PII redaction before LLM processing",
+    "url": "https://danb.id.au/blog/pii-redaction-before-llm.html",
+    "source": "hn",
+    "published_at": "2026-11-21T15:45:16Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7464,
+      "age_h": 20.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 5
+  }
+]
