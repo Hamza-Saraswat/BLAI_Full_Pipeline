@@ -2,19 +2,19 @@
 slug: 2026-11-23-local-llms-reproduce-claude-wh
 workspace: shorts
 title: Local LLMs reproduce Claude? Receipts
-status: ready-to-build
+status: building
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-23
-updated: "2026-11-23T13:17:32Z"
+updated: "2026-11-23T13:18:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -41,4 +41,4 @@ blotato_post_id: ""
 - 05-package: contains_synthetic_media false (typographic scenes + creator voice clone, exempt); original_insight names the no-blind-test gap and the trade; no duplicate title vs published/. check_outputs clean after Artifacts links filled.
 
 ## Build journal
-
+- 2026-11-23T13:18:10Z build start on gn100-83c4
