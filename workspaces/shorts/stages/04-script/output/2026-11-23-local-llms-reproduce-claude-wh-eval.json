@@ -1,0 +1,671 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-23T13:15:37+00:00",
+  "slug": "final",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-23-local-llms-reproduce-claude-wh-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "docs": 1,
+      "primary": 8,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 31,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.333,
+    "source_domains": [
+      "emergent.sh",
+      "huggingface.co",
+      "substack.com",
+      "yudhanjaya.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 1,
+      "distinct": 1,
+      "score": 0.125,
+      "detail": [
+        {
+          "label": "Claude desktop app speed (subscription baseline)",
+          "value": "60-80 tokens per second",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "big-model local tier on the experimenter's hardware",
+          "value": "30 tps",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "30",
+          "scene_ids": [
+            "s05"
+          ]
+        },
+        {
+          "label": "fast small-tier decode (Swift 1.5 IQ2_XS, 125B/6B, RTX 4080)",
+          "value": "141.9 tok/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "NVIDIA RTX 5090 starting price (32 GB GDDR7)",
+          "value": "$1999",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Claude Pro subscription, annual billing",
+          "value": "$17 per month ($20 if billed monthly)",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "recommended 4-bit Inkling 2 Mini file (UD-Q4_K_XL)",
+          "value": "17.6 GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "entry card for the Goldilocks local setup",
+          "value": "12 GB 3060 with 16 GB VRAM",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "needle-in-haystack reach of LFM3-Omni-2B",
+          "value": "found at 11,000 tokens and 32k; lost at 88k",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 31,
+      "found_count": 2,
+      "score": 0.065,
+      "found": [
+        "Claude",
+        "Home"
+      ],
+      "missing": [
+        "RTX",
+        "Yudhanjaya",
+        "Claude Opus 4.5",
+        "Claude Sonnet 5.5",
+        "We Have Claude",
+        "Yudhanjaya Wijeratne",
+        "X3D PC",
+        "GB of DDR4-3200 RAM",
+        "Claude Opus 5.5",
+        "GB RTX 3060",
+        "NetLogo",
+        "TypeScript",
+        "OpenStreetMap",
+        "HTML",
+        "LFM3-Omni-2B",
+        "Ryzen",
+        "Goldilocks",
+        "Flash",
+        "Strata",
+        "Mini",
+        "Apache",
+        "November 22",
+        "Claude-level AI",
+        "Claude Code",
+        "Ornith-1.0-35B",
+        "Qwen3.6-35B-A3B",
+        "Ornith",
+        "November 2026",
+        "Thinking Machines Lab Inkling 2"
+      ],
+      "top2": [
+        "Claude",
+        "Home"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Claude",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Home",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "RTX",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Yudhanjaya",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 4.5",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Sonnet 5.5",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "We Have Claude",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Yudhanjaya Wijeratne",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "X3D PC",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB of DDR4-3200 RAM",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Opus 5.5",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB RTX 3060",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "NetLogo",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "TypeScript",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "OpenStreetMap",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HTML",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LFM3-Omni-2B",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ryzen",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Goldilocks",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Flash",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Strata",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Mini",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "November 22",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude-level AI",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Claude Code",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ornith-1.0-35B",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Qwen3.6-35B-A3B",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ornith",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "November 2026",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Thinking Machines Lab Inkling 2",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 28,
+      "hits": 1,
+      "density": 0.036,
+      "offenders": [
+        "Then a post says you could run it at home for free."
+      ]
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Claude",
+        "entity:Home"
+      ],
+      "hook_text": "CLAUDE AT HOME, FREE?",
+      "first_sentence": "You pay for Claude every month."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "worked-example",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 10,
+      "specific_count": 8,
+      "ratio": 0.8,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 6.2,
+          "specific": true,
+          "hits": [
+            "entity:Claude",
+            "entity:Home"
+          ],
+          "narration": "You pay for Claude every month. Then a post says you could run it at home for free."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "entity:Home"
+          ],
+          "narration": "One developer actually tried it. His box is a home P C, two generations old, with a secondhand graphics card. It runs local models, A I stored as files on his own machine."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "entity:Claude"
+          ],
+          "narration": "His test was one hard job he built himself: rebuild a research simulation as working code. On that job, the local models landed very close to Claude Sonnet."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "entity:Claude"
+          ],
+          "narration": "So what did he measure? Claude's app usually streams sixty to eighty tokens a second, tokens being the little chunks of words it writes."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": true,
+          "hits": [
+            "num:30 tps"
+          ],
+          "narration": "His big local models? Thirty tokens a second. He says he's happy to get it. That's just under half the speed of a subscription."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "glossary:quantization"
+          ],
+          "narration": "So how does a giant model fit on a gaming card? Quantization, storing the model's numbers with fewer bits, shrinks the file until it fits in your card's memory."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 8.3,
+          "specific": false,
+          "hits": [],
+          "narration": "The other trick is mixture of experts, waking only a few specialist parts per token. A huge model ends up running at small-model speed."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 18.3,
+          "specific": true,
+          "hits": [
+            "entity:Claude"
+          ],
+          "narration": "Now the verdict he wrote. His best local models edge past last year's Claude and almost tie today's Sonnet. The keyword, he writes, is almost. No blind test, no head-to-head benchmark, and no drop-in replacement for the top Claude. In another engineer's test, a leaderboard favorite did nothing while a plainer model finished."
+        },
+        {
+          "id": "s09",
+          "role": "explain",
+          "est_duration_s": 14.1,
+          "specific": false,
+          "hits": [],
+          "narration": "Think of a local model as a cover band that has rehearsed your setlist. On the songs it knows, it sounds like the record. His simulation job was one of those songs. Shout a request it never learned, and it fumbles."
+        },
+        {
+          "id": "s10",
+          "role": "payoff_close",
+          "est_duration_s": 9.7,
+          "specific": true,
+          "hits": [
+            "entity:Claude",
+            "entity:Home"
+          ],
+          "narration": "So Claude at home is real, and it's a trade, not a replacement. Even the man who ran it still pays ten dollars a month for the original."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 5.2,
+      "words": 306,
+      "sentences": 28,
+      "est_speech_s": 105.5,
+      "vo_band_ok": true
+    },
+    "narration_full": "You pay for Claude every month. Then a post says you could run it at home for free. One developer actually tried it. His box is a home P C, two generations old, with a secondhand graphics card. It runs local models, A I stored as files on his own machine. His test was one hard job he built himself: rebuild a research simulation as working code. On that job, the local models landed very close to Claude Sonnet. So what did he measure? Claude's app usually streams sixty to eighty tokens a second, tokens being the little chunks of words it writes. His big local models? Thirty tokens a second. He says he's happy to get it. That's just under half the speed of a subscription. So how does a giant model fit on a gaming card? Quantization, storing the model's numbers with fewer bits, shrinks the file until it fits in your card's memory. The other trick is mixture of experts, waking only a few specialist parts per token. A huge model ends up running at small-model speed. Now the verdict he wrote. His best local models edge past last year's Claude and almost tie today's Sonnet. The keyword, he writes, is almost. No blind test, no head-to-head benchmark, and no drop-in replacement for the top Claude. In another engineer's test, a leaderboard favorite did nothing while a plainer model finished. Think of a local model as a cover band that has rehearsed your setlist. On the songs it knows, it sounds like the record. His simulation job was one of those songs. Shout a request it never learned, and it fumbles. So Claude at home is real, and it's a trade, not a replacement. Even the man who ran it still pays ten dollars a month for the original.",
+    "on_screen": "CLAUDE AT HOME, FREE? | CLAUDE AT HOME, FREE? | ONE DEVELOPER | HOME PC, SECONDHAND CARD | ONE HARD JOB, HIS OWN | CLAUDE SONNET VS LOCAL | VERY SIMILAR OUTPUTS | CLAUDE'S APP | 60-80 TOKENS/SEC | LOCAL BIG MODELS: 30 TOK/SEC | HALF THE SPEED | QUANTIZATION | FEWER BITS, SMALLER FILE | MIXTURE OF EXPERTS | FEW SPECIALISTS WAKE | EDGES LAST YEAR'S CLAUDE | ALMOST TIES SONNET | NO BLIND TEST | COVER BAND | KNOWS YOUR SETLIST | NEW REQUEST? FUMBLES | CLAUDE AT HOME: REAL | A TRADE, NOT A REPLACEMENT | HE STILL PAYS $10/MO"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-storyboard.json",
+        "scenes": 10,
+        "fk_grade": 5.2,
+        "words": 306,
+        "est_speech_s": 105.5,
+        "blockers": [],
+        "advisories": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s08: est 18s \u2014 long single-render scene; consider splitting the beat",
+          "s08: narration ~56 words (~19s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "violations": [
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s08: est 18s \u2014 long single-render scene; consider splitting the beat",
+          "s08: narration ~56 words (~19s on screen) \u2014 long single-render scene; split the beat"
+        ],
+        "warnings": [
+          "title 51 chars \u2014 mobile truncates ~40",
+          "FK grade 5.2 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually']",
+          "s08: 18s scene with ~4 visual beats in brief \u2014 need a change every ~3s"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-23-local-llms-reproduce-claude-wh-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 1,
+        "heard": 1,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.065,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Claude",
+          "Home"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Claude",
+          "entity:Home"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 8,
+        "need": 8,
+        "total": 10
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.036,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "worked-example",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}

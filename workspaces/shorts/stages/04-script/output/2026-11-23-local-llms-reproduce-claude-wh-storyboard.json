@@ -1,0 +1,172 @@
+{
+  "slug": "2026-11-23-local-llms-reproduce-claude-wh",
+  "topic": "Local LLMs reproduce Claude: what the experiments show",
+  "title": "Local LLMs reproduce Claude? What the receipts show",
+  "description": "Working description; the package stage overwrites this. A developer ran the Claude-at-home experiment and published the numbers: what actually got reproduced, at what speed, and what it costs.",
+  "hashtags": [
+    "#LocalLLM",
+    "#Claude",
+    "#AI"
+  ],
+  "hook_text": "CLAUDE AT HOME, FREE?",
+  "hook_candidates": [
+    "Claude at home, free? The receipts say slower",
+    "You want Claude at home. One man tested it.",
+    "Everyone says local AI matches Claude now",
+    "Local LLMs reproduced Claude. Almost.",
+    "Your subscription isn't the target. The claim is.",
+    "Sixty to eighty tokens a second. His box does thirty.",
+    "A secondhand graphics card reproduced Claude. Half of it.",
+    "He reproduced last year's Claude in his bedroom",
+    "The keyword in his verdict is almost",
+    "What got reproduced isn't what you think"
+  ],
+  "style_pack": "halftone",
+  "script_format": "smooth-explainer",
+  "structure": "worked-example",
+  "value_types": "REFRAMES,TEACHES",
+  "target_duration_s": 104,
+  "narration_full": "You pay for Claude every month. Then a post says you could run it at home for free. One developer actually tried it. His box is a home P C, two generations old, with a secondhand graphics card. It runs local models, A I stored as files on his own machine. His test was one hard job he built himself: rebuild a research simulation as working code. On that job, the local models landed very close to Claude Sonnet. So what did he measure? Claude's app usually streams sixty to eighty tokens a second, tokens being the little chunks of words it writes. His big local models? Thirty tokens a second. He says he's happy to get it. That's just under half the speed of a subscription. So how does a giant model fit on a gaming card? Quantization, storing the model's numbers with fewer bits, shrinks the file until it fits in your card's memory. The other trick is mixture of experts, waking only a few specialist parts per token. A huge model ends up running at small-model speed. Now the verdict he wrote. His best local models edge past last year's Claude and almost tie today's Sonnet. The keyword, he writes, is almost. No blind test, no head-to-head benchmark, and no drop-in replacement for the top Claude. In another engineer's test, a leaderboard favorite did nothing while a plainer model finished. Think of a local model as a cover band that has rehearsed your setlist. On the songs it knows, it sounds like the record. His simulation job was one of those songs. Shout a request it never learned, and it fumbles. So Claude at home is real, and it's a trade, not a replacement. Even the man who ran it still pays ten dollars a month for the original.",
+  "analogy": {
+    "vehicle": "a cover band that has rehearsed your setlist",
+    "mapping": "the local model is the band, the original recording is Claude; on the tasks you repeat every week it is hard to tell them apart",
+    "limit": "a request it never learned, a room too big (context past what it holds), or release-day speed breaks the picture"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You pay for Claude every month. Then a post says you could run it at home for free.",
+      "on_screen_text": "CLAUDE AT HOME, FREE?",
+      "visual_brief": "Frame 1: finished halftone composition, dark background, the headline CLAUDE AT HOME, FREE? set in large amber dotted letters with a dotted speech-bubble halo, all text 64px or taller, everything above y 1260. Motion onset at 0.4s: the dots of FREE? scale-pulse once on 'a post says'. On 'run it at home' a small dotted house icon fades in beneath the headline. On 'for free' the house dots shimmer. Never more than two elements moving at once.",
+      "est_duration_s": 6.2,
+      "render_notes": "Halftone dot texture on all type; amber on near-black. Safe area 900x1160 centered; nothing below y 1260.",
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "One developer actually tried it. His box is a home P C, two generations old, with a secondhand graphics card. It runs local models, A I stored as files on his own machine.",
+      "on_screen_text": "ONE DEVELOPER | HOME PC, SECONDHAND CARD",
+      "visual_brief": "Hard cut to a dotted diagram. On 'One developer' a dotted avatar silhouette fades in at left. On 'home P C' a dotted PC tower scales in at center, joined to the avatar by a faint dotted line. On 'secondhand graphics card' a GPU card outline tagged SECONDHAND rises into the tower slot. On 'files on his own machine' three dotted file icons fade into the tower. Amber accents on dark, labels 64px plus, all above the caption band.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "His test was one hard job he built himself: rebuild a research simulation as working code. On that job, the local models landed very close to Claude Sonnet.",
+      "on_screen_text": "ONE HARD JOB, HIS OWN | CLAUDE SONNET VS LOCAL | VERY SIMILAR OUTPUTS",
+      "visual_brief": "On 'one hard job' two dotted panels rise side by side: left labeled CLAUDE SONNET, right labeled LOCAL, each filled with dotted code lines. On 'rebuild a research simulation' a small dotted chart icon fades into each panel. On 'landed very close' the right panel's code dots cross-fade until both patterns match, then VERY SIMILAR OUTPUTS scales in below. One text block animates at a time; fade and scale entrances only.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "So what did he measure? Claude's app usually streams sixty to eighty tokens a second, tokens being the little chunks of words it writes.",
+      "on_screen_text": "CLAUDE'S APP | 60-80 TOKENS/SEC",
+      "visual_brief": "Hard cut to a giant amber dotted number 60-80 with TOKENS/SEC beneath, fading in on 'sixty to eighty tokens a second', with a ding on the reveal. Static label CLAUDE'S APP above it. On 'little chunks of words' four small dotted token chips scale in a row under the number, each filling as if typed. All text 64px plus, centered in the safe area, above y 1260.",
+      "est_duration_s": 8.3,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "His big local models? Thirty tokens a second. He says he's happy to get it. That's just under half the speed of a subscription.",
+      "on_screen_text": "LOCAL BIG MODELS: 30 TOK/SEC | HALF THE SPEED",
+      "visual_brief": "Two vertical dotted bars grow by scale from a shared baseline: a tall left bar labeled CLAUDE APP, no digits, and a short right bar labeled LOCAL with 30 at its top, popping in on 'Thirty tokens a second' with a whoosh. On 'half the speed' the short bar is framed at half the tall bar's height while a dotted tag HALF THE SPEED fades in beside it. Amber on dark, text 64px plus.",
+      "est_duration_s": 8.3,
+      "render_notes": "Bar heights must read as roughly 2:1. Digits appear only on the LOCAL bar.",
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "So how does a giant model fit on a gaming card? Quantization, storing the model's numbers with fewer bits, shrinks the file until it fits in your card's memory.",
+      "on_screen_text": "QUANTIZATION | FEWER BITS, SMALLER FILE",
+      "visual_brief": "On 'giant model' a big dotted file box labeled MODEL fades in above a dotted GPU outline it clearly cannot fit. On 'Quantization' the word scales in as a label at top. On 'fewer bits' the box scales down in two steps, shedding small dots that fade out. On 'fits in your card's memory' the shrunken box fades into the GPU outline, which pulses amber once. Max two moving elements.",
+      "est_duration_s": 10.0
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "The other trick is mixture of experts, waking only a few specialist parts per token. A huge model ends up running at small-model speed.",
+      "on_screen_text": "MIXTURE OF EXPERTS | FEW SPECIALISTS WAKE",
+      "visual_brief": "A dotted grid of many small expert tiles fades in on 'mixture of experts', label static at top. On 'only a few specialist parts' a scattered few tiles light amber while the rest stay dim. On 'per token' the lit set swaps once to a new few, showing rotation. On 'small-model speed' a dotted gauge needle rises into a low, relaxed position beside the grid. Only tiles and needle move; text 64px plus.",
+      "est_duration_s": 8.3
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Now the verdict he wrote. His best local models edge past last year's Claude and almost tie today's Sonnet. The keyword, he writes, is almost. No blind test, no head-to-head benchmark, and no drop-in replacement for the top Claude. In another engineer's test, a leaderboard favorite did nothing while a plainer model finished.",
+      "on_screen_text": "EDGES LAST YEAR'S CLAUDE | ALMOST TIES SONNET | NO BLIND TEST",
+      "visual_brief": "The hook's dotted headline returns, now punctured with holes, tick sound as the scene opens. On 'edge past last year's Claude' a stamp reading EDGES LAST YEAR'S CLAUDE fades in top-left. On 'almost tie today's Sonnet' a giant dotted ALMOST scales in center. On 'No blind test' the line NO BLIND TEST rises beneath ALMOST. Each stamp replaces the last, one text block animating at a time, amber ink on dark, 64px plus.",
+      "est_duration_s": 18.3,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Think of a local model as a cover band that has rehearsed your setlist. On the songs it knows, it sounds like the record. His simulation job was one of those songs. Shout a request it never learned, and it fumbles.",
+      "on_screen_text": "COVER BAND | KNOWS YOUR SETLIST | NEW REQUEST? FUMBLES",
+      "visual_brief": "A dotted setlist grid of song cards fades in on 'cover band'. On 'rehearsed your setlist' amber checkmarks scale onto most cards. On 'sounds like the record' a dotted waveform pulses behind the grid. On 'a request it never learned' one card dims and a question mark scales in over it, then that card's dots scatter slightly on 'fumbles'. One animated group at a time, fade and scale only, all above y 1260.",
+      "est_duration_s": 14.1
+    },
+    {
+      "id": "s10",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "So Claude at home is real, and it's a trade, not a replacement. Even the man who ran it still pays ten dollars a month for the original.",
+      "on_screen_text": "CLAUDE AT HOME: REAL | A TRADE, NOT A REPLACEMENT | HE STILL PAYS $10/MO",
+      "visual_brief": "The frame-1 composition reassembles: same dotted headline style now reading CLAUDE AT HOME: REAL, fading in on 'Claude at home is real'. On 'a trade, not a replacement' that subline fades in below. On 'ten dollars a month' a small amber price tag reading $10/MO scales in at lower center with a ding, kept above y 1260. Final frame holds this dotted composition, rhyming with frame 1 as the loop anchor.",
+      "est_duration_s": 9.7,
+      "render_notes": "Match scene 1 typography, dot density, and amber tone exactly so the loop closes cleanly.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Two blind kimi-k3 drafts, judged per judge-rubric.md. Wrapper filled board fields; est = words / 2.9."
+}
