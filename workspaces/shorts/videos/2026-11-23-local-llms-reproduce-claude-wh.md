@@ -2,14 +2,14 @@
 slug: 2026-11-23-local-llms-reproduce-claude-wh
 workspace: shorts
 title: "Local LLMs reproduce Claude: what the experiments show"
-status: idea
+status: researched
 pillar: myth-bust
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-23
-updated: "2026-11-23T12:11:38Z"
+updated: "2026-11-23T12:49:44Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-23-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-23-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-23-local-llms-reproduce-claude-wh-brief|Brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
