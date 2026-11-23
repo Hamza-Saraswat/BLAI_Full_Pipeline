@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 2026-11-23T12:50:03Z 03-research checkpoint (angle/slug): slug confirmed; angle unchanged from pick 2, receipts-first read of the reproduce-Claude claim. Unattended call: proceed.
+03-research: standard depth, 10 sources fetched this run, validator exit 0; 10 claims, 8 key numbers. Thesis: reproduced is last year's Claude, half speed, rehearsed workloads -- not today's, not drop-in.
 
 ## Build journal
 
