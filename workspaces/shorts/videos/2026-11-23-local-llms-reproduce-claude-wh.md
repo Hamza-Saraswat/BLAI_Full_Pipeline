@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-23-local-llms-reproduce-claude-wh-brief|Brief]]
 - Script: [[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-script|Script]] ([[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-drafts|drafts]], [[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-storyboard|board]])
 - Package: [[stages/05-package/output/2026-11-23-local-llms-reproduce-claude-wh-package|Package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-23-local-llms-reproduce-claude-wh-narration|Narration]] (normalized pre-voice; stage 06 fills the rest)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
