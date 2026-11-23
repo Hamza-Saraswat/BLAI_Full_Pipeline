@@ -2,14 +2,14 @@
 slug: 2026-11-23-local-llms-reproduce-claude-wh
 workspace: shorts
 title: Local LLMs reproduce Claude? Receipts
-status: building
+status: review
 pillar: myth-bust
 structure: worked-example
 format: smooth-explainer
 style_pack: halftone
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-23
-updated: "2026-11-23T13:18:10Z"
+updated: "2026-11-23T14:01:32Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-script|Script]] ([[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-drafts|drafts]], [[stages/04-script/output/2026-11-23-local-llms-reproduce-claude-wh-storyboard|board]])
 - Package: [[stages/05-package/output/2026-11-23-local-llms-reproduce-claude-wh-package|Package]]
 - Voice: [[stages/06-voice/output/2026-11-23-local-llms-reproduce-claude-wh-narration|Narration]] (normalized pre-voice; stage 06 fills the rest)
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-23-local-llms-reproduce-claude-wh-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -43,3 +43,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-23T13:18:10Z build start on gn100-83c4
 - 2026-11-23T13:21:37Z 06-voice ok 204s
+- 2026-11-23T13:41:09Z 07-render fail 1169s (07-render: scene s06 did not pass HyperFrames inspect after 5 rounds: t=3.03-8.37s (64 samples) content_overlap span.gpu-label inside span.body-text.mono "YOUR )
+- 2026-11-23T14:01:36Z 07-render ok 91.20s: 10 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 383
+- 2026-11-23T14:01:36Z 07-render ok 1226s
