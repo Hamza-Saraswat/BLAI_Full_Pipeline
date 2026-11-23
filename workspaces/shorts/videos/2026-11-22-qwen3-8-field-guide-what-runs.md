@@ -2,14 +2,14 @@
 slug: 2026-11-22-qwen3-8-field-guide-what-runs
 workspace: shorts
 title: "Qwen3.8 field guide: what runs where"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T12:06:15Z"
+updated: "2026-11-23T14:35:57Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Lane repeats yesterday's explainer only under the quiet-day exception: no non-repeating candidate scored above 60.
 
 ## Build journal
-
+- 2026-11-23T14:35:57Z 2026-11-23T14:35:57Z expired: not from today's picks (2026-11-23); the factory carries no backlog

@@ -2,14 +2,14 @@
 slug: 2026-11-22-qwen3-8-27b-overthinks-your-co
 workspace: shorts
 title: "Qwen3.8-27B overthinking: the fix"
-status: review
+status: expired
 pillar: how-to
 structure: myth-bust
 format: classic
 style_pack: signal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-22
-updated: "2026-11-22T13:36:48Z"
+updated: "2026-11-23T14:35:57Z"
 publish_slot: ""
 seo_score: 95
 feedback: ""
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-11-22T13:36:53Z 07-render ok 42.37s: 6 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 380
 - 2026-11-22T13:36:53Z 07-render ok 879s
 - 2026-11-22T13:36:55Z build done, status review
+- 2026-11-23T14:35:57Z 2026-11-23T14:35:57Z expired: not from today's picks (2026-11-23); the factory carries no backlog
