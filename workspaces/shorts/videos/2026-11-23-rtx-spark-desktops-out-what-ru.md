@@ -2,14 +2,14 @@
 slug: 2026-11-23-rtx-spark-desktops-out-what-ru
 workspace: shorts
 title: "RTX Spark desktops out: what runs on day one"
-status: idea
+status: expired
 pillar: news-react
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-23
-updated: "2026-11-23T12:11:38Z"
+updated: "2026-11-24T14:35:39Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-24T14:35:39Z 2026-11-24T14:35:39Z expired: not from today's picks (2026-11-24); the factory carries no backlog
