@@ -2,18 +2,18 @@
 slug: 2026-11-24-nariq-a-27b-at-3-bits-in-10-gb
 workspace: shorts
 title: "NariQ: a 27B model at 3 bits, in 10 GB"
-status: building
+status: blocked
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-24
-updated: "2026-11-24T13:38:25Z"
+updated: "2026-11-24T14:12:03Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
-blocked_reason: ""
+blocked_reason: "07-render: 07-render: scene s04 did not pass lint_video after 5 rounds"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -50,3 +50,6 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-24T13:38:25Z build start on gn100-83c4
 - 2026-11-24T13:43:42Z 06-voice ok 315s
+- 2026-11-24T14:02:48Z 07-render fail 1143s (07-render: scene s04 did not pass lint_video after 5 rounds)
+- 2026-11-24T14:12:03Z 07-render fail 555s (07-render: scene s04 did not pass lint_video after 5 rounds)
+- 2026-11-24T14:12:03Z blocked at 07-render
