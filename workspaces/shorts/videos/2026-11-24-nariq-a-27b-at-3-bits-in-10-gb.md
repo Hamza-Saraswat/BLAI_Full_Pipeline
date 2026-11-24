@@ -2,14 +2,14 @@
 slug: 2026-11-24-nariq-a-27b-at-3-bits-in-10-gb
 workspace: shorts
 title: "NariQ: a 27B at 3 bits, in 10 GB"
-status: idea
+status: researched
 pillar: explainer
 structure: worked-example
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-24
-updated: "2026-11-24T12:09:03Z"
+updated: "2026-11-24T12:45:08Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
