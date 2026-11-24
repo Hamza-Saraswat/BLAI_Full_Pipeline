@@ -1,0 +1,599 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-24T12:57:51+00:00",
+  "slug": "B",
+  "inputs": {
+    "storyboard_path": "/home/buildlocalai/blai/repo/.local-builds/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb/board-B.json",
+    "research_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-brief.json",
+    "project_record": null,
+    "ledger_path": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 1,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.909,
+    "key_numbers_total": 5,
+    "entities_total": 20,
+    "misconceptions_total": 2,
+    "unverified_ratio": 0.312,
+    "source_domains": [
+      "arxiv.org",
+      "github.com",
+      "huggingface.co",
+      "mindstudio.ai",
+      "substack.com"
+    ],
+    "domain_diversity": 5,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 5,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.8,
+      "detail": [
+        {
+          "label": "NariQ 3-bit file size",
+          "value": "10.12 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "10.12",
+          "scene_ids": [
+            "s01",
+            "s04"
+          ]
+        },
+        {
+          "label": "BF16 original size, Nari Labs' table",
+          "value": "53.8 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "53.8",
+          "scene_ids": [
+            "s04"
+          ]
+        },
+        {
+          "label": "NariQ 3-bit DeepSWE v1.1 mean pass@1 vs BF16",
+          "value": "41.0 against 39.8",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "41",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Prior sub-3-bit DeepSWE ceiling vs BF16",
+          "value": "at most 72% as many tasks as BF16",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "72%",
+          "scene_ids": [
+            "s02",
+            "s05"
+          ]
+        },
+        {
+          "label": "Qwen3.8-27B native context",
+          "value": "262,144 natively and extensible up to 1,000,000 tokens",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 20,
+      "found_count": 6,
+      "score": 0.3,
+      "found": [
+        "Qwen3.8-27B",
+        "NariQ",
+        "Nari Labs",
+        "DeepSWE",
+        "Nari Labs'",
+        "GeForce"
+      ],
+      "missing": [
+        "RTX PRO 6000",
+        "LM Studio",
+        "Ollama",
+        "Ollama and LM Studio",
+        "L4 and A10",
+        "M3 Pro",
+        "b12431",
+        "H100",
+        "A10",
+        "Nov",
+        "LiveCodeBench and GPQA Diamond",
+        "LiveCodeBench",
+        "GB UD-IQ3",
+        "Unsloth UD-IQ3"
+      ],
+      "top2": [
+        "Qwen3.8-27B",
+        "NariQ"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Qwen3.8-27B",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "NariQ",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Nari Labs",
+          "tier": 0,
+          "claim_count": 3,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "DeepSWE",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "RTX PRO 6000",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LM Studio",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nari Labs'",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Ollama and LM Studio",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "L4 and A10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "M3 Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "b12431",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "H100",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "A10",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GeForce",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Nov",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LiveCodeBench and GPQA Diamond",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "LiveCodeBench",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "GB UD-IQ3",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Unsloth UD-IQ3",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 25,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "digit",
+        "number:10.12 GB"
+      ],
+      "hook_text": "27B in 10 GB",
+      "first_sentence": "Ten gigabytes now holds a twenty-seven billion parameter model."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 8,
+      "specific_count": 6,
+      "ratio": 0.75,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 5.9,
+          "specific": true,
+          "hits": [
+            "num:10.12 GB"
+          ],
+          "narration": "Ten gigabytes now holds a twenty-seven billion parameter model. You learned that three bits wrecks a model."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 14.5,
+          "specific": true,
+          "hits": [
+            "num:41.0 against 39.8",
+            "num:at most 72% as many tasks as BF16",
+            "entity:Qwen3.8-27B",
+            "entity:DeepSWE"
+          ],
+          "narration": "The three-bit file scored forty-one versus thirty-nine point eight for the full-size original on DeepSWE. DeepSWE is a benchmark where an agent must solve real software tasks. Every earlier file below three bits solved at most seventy-two percent of the original's tasks."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 21.7,
+          "specific": true,
+          "hits": [
+            "entity:NariQ"
+          ],
+          "narration": "Quantization, storing each number in fewer bits, is like writing pi as three point one and dropping the tail. NariQ's trick is trellis coding, a rounding scheme that remembers earlier roundings, so small errors cancel instead of stacking. Think of an MP3 next to its studio master. The limit is that the loss is uneven: exact math notices first, casual chat never does."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 20.3,
+          "specific": true,
+          "hits": [
+            "num:10.12 GB",
+            "num:53.8 GB",
+            "entity:NariQ",
+            "entity:Nari Labs",
+            "entity:Nari Labs'"
+          ],
+          "narration": "What actually shipped is a GGUF, the one-file format your local tools load, at ten point one two gigabytes. The catch sits in the fine print, where catches live. The scores came from Nari Labs' own fork of llama.cpp, a modified engine tuned for workstation silicon. Stock llama.cpp cannot open it yet, and on other hardware it runs slower."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 13.4,
+          "specific": true,
+          "hits": [
+            "num:at most 72% as many tasks as BF16",
+            "entity:NariQ"
+          ],
+          "narration": "The original stores every number as BF16, the model's full sixteen-bit memory. NariQ stores the same numbers in three bits. That is about a fifth of the space each, and that shrinking, not new intelligence, removes the memory wall."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 14.1,
+          "specific": true,
+          "hits": [
+            "entity:Nari Labs",
+            "entity:GeForce"
+          ],
+          "narration": "Now the honest limits. These numbers are four days old, and Nari Labs graded its own homework in its own harness. GeForce cards have not been tested yet. And the runtime runs slower than stock quants except on one workstation GPU."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 10.7,
+          "specific": false,
+          "hits": [],
+          "narration": "The myth still holds where precision bites. Long stretches of exact math expose the flattening. If you chase the last fraction of a point, the full-size original is still your tool."
+        },
+        {
+          "id": "s08",
+          "role": "payoff_close",
+          "est_duration_s": 6.6,
+          "specific": false,
+          "hits": [],
+          "narration": "At three bits, the question stops being whether the model is good enough. It becomes what memory you have."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.7,
+      "words": 322,
+      "sentences": 25,
+      "est_speech_s": 111.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "Ten gigabytes now holds a twenty-seven billion parameter model. You learned that three bits wrecks a model. The three-bit file scored forty-one versus thirty-nine point eight for the full-size original on DeepSWE. DeepSWE is a benchmark where an agent must solve real software tasks. Every earlier file below three bits solved at most seventy-two percent of the original's tasks. Quantization, storing each number in fewer bits, is like writing pi as three point one and dropping the tail. NariQ's trick is trellis coding, a rounding scheme that remembers earlier roundings, so small errors cancel instead of stacking. Think of an MP3 next to its studio master. The limit is that the loss is uneven: exact math notices first, casual chat never does. What actually shipped is a GGUF, the one-file format your local tools load, at ten point one two gigabytes. The catch sits in the fine print, where catches live. The scores came from Nari Labs' own fork of llama.cpp, a modified engine tuned for workstation silicon. Stock llama.cpp cannot open it yet, and on other hardware it runs slower. The original stores every number as BF16, the model's full sixteen-bit memory. NariQ stores the same numbers in three bits. That is about a fifth of the space each, and that shrinking, not new intelligence, removes the memory wall. Now the honest limits. These numbers are four days old, and Nari Labs graded its own homework in its own harness. GeForce cards have not been tested yet. And the runtime runs slower than stock quants except on one workstation GPU. The myth still holds where precision bites. Long stretches of exact math expose the flattening. If you chase the last fraction of a point, the full-size original is still your tool. At three bits, the question stops being whether the model is good enough. It becomes what memory you have.",
+    "on_screen": "27B in 10 GB | 27B in 10 GB | the old rule: 3 bits wrecks models | Qwen3.8-27B on DeepSWE | 3-bit: 41.0 | BF16: 39.8 | old ceiling: 72% of tasks | pi rounded to 3.1 | trellis coding: roundings cancel | like MP3 vs studio master | NariQ GGUF: 10.12 GB | BF16 original: 53.8 GB | stock llama.cpp: cannot load | BF16: 16 bits per number | NariQ: 3 bits per number | about 1/5 the space | release: 4 days old | scores: self-graded | GeForce cards: not tested | exact math: gap shows | chasing points: keep the original | 3 bits | not: is it good enough? | now: what memory do you have?"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/.local-builds/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb/board-B.json",
+        "scenes": 8,
+        "fk_grade": 6.7,
+        "words": 322,
+        "est_speech_s": 111.0,
+        "blockers": [],
+        "advisories": [
+          "7 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s02: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s03: est 22s \u2014 long single-render scene; consider splitting the beat",
+          "s03: narration ~63 words (~22s on screen) \u2014 long single-render scene; split the beat",
+          "s03: digits in narration: '3' \u2014 write numbers as words",
+          "s04: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s04: narration ~62 words (~21s on screen) \u2014 long single-render scene; split the beat",
+          "s04: number without referent: '\u2026point one two gigabytes' \u2014 name what it measures ('gigabytes of memory', 'billion parameters')",
+          "s05: digits in narration: '16,' \u2014 write numbers as words"
+        ],
+        "violations": [
+          "7 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)",
+          "s02: narration ~47 words (~16s on screen) \u2014 long single-render scene; split the beat",
+          "s03: est 22s \u2014 long single-render scene; consider splitting the beat",
+          "s03: narration ~63 words (~22s on screen) \u2014 long single-render scene; split the beat",
+          "s03: digits in narration: '3' \u2014 write numbers as words",
+          "s04: est 20s \u2014 long single-render scene; consider splitting the beat",
+          "s04: narration ~62 words (~21s on screen) \u2014 long single-render scene; split the beat",
+          "s04: number without referent: '\u2026point one two gigabytes' \u2014 name what it measures ('gigabytes of memory', 'billion parameters')",
+          "s05: digits in narration: '16,' \u2014 write numbers as words"
+        ],
+        "warnings": [
+          "title 49 chars \u2014 mobile truncates ~40",
+          "FK grade 6.7 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "fillers present: ['actually']",
+          "s04: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s05: 13s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s07: 11s scene with ~2 visual beats in brief \u2014 need a change every ~3s",
+          "s08: 7s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "hook brief: name the <=0.5s motion onset explicitly"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/03-research/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "number_spend",
+      "sameness"
+    ],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 4,
+        "total": 5,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap",
+        "reason": "the viewer hears 4 distinct numbers (4 of 5 brief rows matched); the band is 0-3"
+      },
+      "entity_spend": {
+        "score": 0.3,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Qwen3.8-27B",
+          "NariQ"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "digit",
+          "number:10.12 GB"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 6,
+        "total": 8
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": false,
+        "ledger": "/home/buildlocalai/blai/repo/workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [
+          {
+            "rule": "structure",
+            "detail": "structure 'myth-bust' repeats 2026-11-22-qwen3-8-27b-overthinks-your-co",
+            "against": [
+              "2026-11-22-qwen3-8-27b-overthinks-your-co"
+            ]
+          },
+          {
+            "rule": "hook_pattern",
+            "detail": "hook pattern 'number-shock' repeats 2026-11-22-qwen3-8-27b-overthinks-your-co",
+            "against": [
+              "2026-11-22-qwen3-8-27b-overthinks-your-co"
+            ]
+          }
+        ],
+        "advisories": [],
+        "reason": "structure 'myth-bust' repeats 2026-11-22-qwen3-8-27b-overthinks-your-co; hook pattern 'number-shock' repeats 2026-11-22-qwen3-8-27b-overthinks-your-co"
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
