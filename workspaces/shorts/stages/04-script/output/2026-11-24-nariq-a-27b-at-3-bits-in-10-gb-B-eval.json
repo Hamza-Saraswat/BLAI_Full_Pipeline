@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-24T13:15:49+00:00",
+  "generated_at": "2026-11-24T13:35:52+00:00",
   "slug": "B",
   "inputs": {
     "storyboard_path": "/home/buildlocalai/blai/repo/.local-builds/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb/board-B.json",
@@ -286,7 +286,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 33,
+      "sentences": 34,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -295,7 +295,7 @@
       "concrete": false,
       "via": [],
       "hook_text": "Not the card. The file.",
-      "first_sentence": "Your card isn't too small."
+      "first_sentence": "You downloaded a twenty-seven billion parameter model and it would not fit."
     },
     "positional_labels": {
       "count": 0,
@@ -310,12 +310,12 @@
         {
           "id": "s01",
           "role": "hook",
-          "est_duration_s": 9.3,
+          "est_duration_s": 13.4,
           "specific": true,
           "hits": [
             "num:53.8 GB"
           ],
-          "narration": "Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes."
+          "narration": "You downloaded a twenty-seven billion parameter model and it would not fit. Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes."
         },
         {
           "id": "s02",
@@ -393,13 +393,13 @@
       ]
     },
     "language": {
-      "fk_grade": 6.5,
-      "words": 379,
-      "sentences": 33,
-      "est_speech_s": 130.7,
+      "fk_grade": 6.6,
+      "words": 392,
+      "sentences": 34,
+      "est_speech_s": 135.2,
       "vo_band_ok": true
     },
-    "narration_full": "Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes. Everyone running local models learned the rule. Quantization, fewer bits per stored number, always costs quality. Below four bits a model is supposed to fall apart. A twenty-seven billion parameter model is supposed to need a workstation. Here is the evidence against it. NariQ is a three-bit compression of Qwen3.8-27B, built by Nari Labs. The GGUF, the single file your local tools load, is ten point one two gigabytes. On DeepSWE, a benchmark of real software tasks, it scored forty-one against the original's thirty-nine point eight. Every earlier attempt at or below three bits fell further behind. Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions. Now the narrower claim this earns. One file, one benchmark family, four days old. Every quality number comes from the publisher's own tests, so the only referee so far is grading its own homework. Stock llama.cpp, the engine under the usual local tools, cannot load the file yet. Neither can Ollama or LM Studio; you would need the Nari Labs fork. That fork is slower than stock quants, the usual compressed files, on most hardware, with one exception, a workstation-class GPU. Support in stock tools has no date. Who should stay put? If you need the last fraction of a point, or long exact math, stay on BF16. If your card is a GeForce, the publisher says it plainly: GeForce cards have not been tested yet. The card was never the problem, and three bits was never the real question. The old question was whether three bits is good enough. The only question left is what memory you have.",
+    "narration_full": "You downloaded a twenty-seven billion parameter model and it would not fit. Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes. Everyone running local models learned the rule. Quantization, fewer bits per stored number, always costs quality. Below four bits a model is supposed to fall apart. A twenty-seven billion parameter model is supposed to need a workstation. Here is the evidence against it. NariQ is a three-bit compression of Qwen3.8-27B, built by Nari Labs. The GGUF, the single file your local tools load, is ten point one two gigabytes. On DeepSWE, a benchmark of real software tasks, it scored forty-one against the original's thirty-nine point eight. Every earlier attempt at or below three bits fell further behind. Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions. Now the narrower claim this earns. One file, one benchmark family, four days old. Every quality number comes from the publisher's own tests, so the only referee so far is grading its own homework. Stock llama.cpp, the engine under the usual local tools, cannot load the file yet. Neither can Ollama or LM Studio; you would need the Nari Labs fork. That fork is slower than stock quants, the usual compressed files, on most hardware, with one exception, a workstation-class GPU. Support in stock tools has no date. Who should stay put? If you need the last fraction of a point, or long exact math, stay on BF16. If your card is a GeForce, the publisher says it plainly: GeForce cards have not been tested yet. The card was never the problem, and three bits was never the real question. The old question was whether three bits is good enough. The only question left is what memory you have.",
     "on_screen": "Not the card. The file. | Not the card. The file. | 53.8 GB full file | 12 GB your card | quantization costs quality | under 4 bits falls apart | 27B params need a workstation | NariQ 3-bit GGUF | 10.12 GB | DeepSWE 41.0 vs 39.8 | BF16: full memory | quant: 3 bits | pi: 5 decimals to 3.1 | trellis: errors cancel | 1 file | 1 benchmark family | 4 days old | scores self-graded | stock llama.cpp cannot load | Ollama, LM Studio: no | Nari Labs fork required | slower except 1 workstation GPU | need the last fraction? stay on BF16 | GeForce cards: not tested yet | old question: is 3 bits enough? | new question: what memory do you have?"
   },
   "validators": {
@@ -408,9 +408,9 @@
       "output": {
         "file": "/home/buildlocalai/blai/repo/.local-builds/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb/board-B.json",
         "scenes": 8,
-        "fk_grade": 6.5,
-        "words": 379,
-        "est_speech_s": 130.7,
+        "fk_grade": 6.6,
+        "words": 392,
+        "est_speech_s": 135.2,
         "blockers": [],
         "advisories": [
           "7 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
@@ -426,7 +426,8 @@
           "s04: digits in narration: '16,' \u2014 write numbers as words",
           "s06: est 19s \u2014 long single-render scene; consider splitting the beat",
           "s06: narration ~56 words (~19s on screen) \u2014 long single-render scene; split the beat",
-          "s07: digits in narration: '16.' \u2014 write numbers as words"
+          "s07: digits in narration: '16.' \u2014 write numbers as words",
+          "hook scene >10s"
         ],
         "violations": [
           "7 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
@@ -442,11 +443,12 @@
           "s04: digits in narration: '16,' \u2014 write numbers as words",
           "s06: est 19s \u2014 long single-render scene; consider splitting the beat",
           "s06: narration ~56 words (~19s on screen) \u2014 long single-render scene; split the beat",
-          "s07: digits in narration: '16.' \u2014 write numbers as words"
+          "s07: digits in narration: '16.' \u2014 write numbers as words",
+          "hook scene >10s"
         ],
         "warnings": [
           "title 49 chars \u2014 mobile truncates ~40",
-          "FK grade 6.5 \u2014 target <=5",
+          "FK grade 6.6 \u2014 target <=5",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence",
           "s03: 'GGUF' will be spoken via skills/script-gates/tts_lexicon.json",
           "s03: 21s scene with ~2 visual beats in brief \u2014 need a change every ~3s",

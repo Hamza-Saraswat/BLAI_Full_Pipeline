@@ -1,0 +1,160 @@
+{
+  "slug": "2026-11-24-nariq-a-27b-at-3-bits-in-10-gb",
+  "topic": "NariQ 3-bit quantization packs Qwen3.8-27B into a 10 GB GGUF",
+  "title": "A 27B model in 10 GB: NariQ's 3-bit quant, tested",
+  "description": "NariQ compresses Qwen3.8-27B to a 10.12 GB GGUF at 3 bits and holds near-BF16 scores on DeepSWE (41.0 vs 39.8). Here is what that means for your 12 GB card, and the fine print. (Narration is AI-generated.)",
+  "hashtags": [
+    "#NariQ",
+    "#Qwen",
+    "#LocalAI",
+    "#GGUF",
+    "#quantization",
+    "#llamacpp",
+    "#OpenWeights"
+  ],
+  "hook_text": "Not the card. The file.",
+  "hook_candidates": [
+    "Not the card. The file.",
+    "You downloaded a 27B model and it would not fit.",
+    "27B in 10 GB, at 3 bits.",
+    "Ten gigabytes now holds a twenty-seven billion parameter model.",
+    "A 27B model that fits a 12 GB card.",
+    "Quantization didn't wreck this one.",
+    "The 3-bit file that benchmarks like BF16.",
+    "10.12 GB. That's the whole 27B.",
+    "NariQ: 27B at 3 bits, in 10 GB.",
+    "The memory wall just moved."
+  ],
+  "hook_pattern": "named-contradiction",
+  "style_pack": "silicon",
+  "script_format": "smooth-explainer",
+  "structure": "contrarian-take",
+  "value_types": "TEACHES,REFRAMES",
+  "target_duration_s": 127,
+  "narration_full": "You downloaded a twenty-seven billion parameter model and it would not fit. Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes. Everyone running local models learned the rule. Quantization, fewer bits per stored number, always costs quality. Below four bits a model is supposed to fall apart. A twenty-seven billion parameter model is supposed to need a workstation. Here is the evidence against it. NariQ is a three-bit compression of Qwen3.8-27B, built by Nari Labs. The GGUF, the single file your local tools load, is ten point one two gigabytes. On DeepSWE, a benchmark of real software tasks, it scored forty-one against the original's thirty-nine point eight. Every earlier attempt at or below three bits fell further behind. Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions. Now the narrower claim this earns. One file, one benchmark family, four days old. Every quality number comes from the publisher's own tests, so the only referee so far is grading its own homework. Stock llama.cpp, the engine under the usual local tools, cannot load the file yet. Neither can Ollama or LM Studio; you would need the Nari Labs fork. That fork is slower than stock quants, the usual compressed files, on most hardware, with one exception, a workstation-class GPU. Support in stock tools has no date. Who should stay put? If you need the last fraction of a point, or long exact math, stay on BF16. If your card is a GeForce, the publisher says it plainly: GeForce cards have not been tested yet. The card was never the problem, and three bits was never the real question. The old question was whether three bits is good enough. The only question left is what memory you have.",
+  "analogy": {
+    "vehicle": "Rounding pi: five decimal places, then three point one.",
+    "mapping": "Quantization keeps fewer bits per stored number; most accuracy survives and the file shrinks dramatically. NariQ's trellis coding chooses which numbers to flatten together so the errors cancel instead of stacking.",
+    "limit": "The loss is not uniform. Exact math notices first; casual chat never does."
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "You downloaded a twenty-seven billion parameter model and it would not fit. Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes.",
+      "on_screen_text": "Not the card. The file. | 53.8 GB full file | 12 GB your card",
+      "visual_brief": "SILICON die shot, finished composition at frame one: a dark substrate, a giant dimmed '27B' etched on the die with a red 'didn't fit' chip beside it. On 'Your card isn't too small', the chip clears to amber and the etched '53.8 GB' numeral scales in above a small '12 GB' memory bar. On 'twelve gigabytes', the bar rises-in-place and pulses once. Fades and scale only, motion starts after the opening beat.",
+      "est_duration_s": 13.4,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Everyone running local models learned the rule. Quantization, fewer bits per stored number, always costs quality. Below four bits a model is supposed to fall apart. A twenty-seven billion parameter model is supposed to need a workstation.",
+      "on_screen_text": "quantization costs quality | under 4 bits falls apart | 27B params need a workstation",
+      "visual_brief": "Centered stack on a dark PCB field: three etched rule cards stack vertically, each fading in on its own phrase: 'quantization costs quality', then 'under 4 bits falls apart', then '27B needs a workstation'. As 'supposed to need a workstation' lands, a hairline crack fades across the whole stack. Hard cut in from the previous scene, no sliding elements.",
+      "est_duration_s": 12.8,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Here is the evidence against it. NariQ is a three-bit compression of Qwen3.8-27B, built by Nari Labs. The GGUF, the single file your local tools load, is ten point one two gigabytes. On DeepSWE, a benchmark of real software tasks, it scored forty-one against the original's thirty-nine point eight. Every earlier attempt at or below three bits fell further behind.",
+      "on_screen_text": "NariQ 3-bit GGUF | 10.12 GB | DeepSWE 41.0 vs 39.8",
+      "visual_brief": "Split-compare of two die packages on one substrate. Left: a slim die labeled 'NariQ 3-bit'; its size bar fills on 'ten point one two gigabytes' under a '10.12 GB' tag. Right: a tall die for the original. On 'forty-one against', the numerals '41.0' and '39.8' scale in above the dies beneath a 'DeepSWE' header.",
+      "est_duration_s": 20.7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "ding"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions.",
+      "on_screen_text": "BF16: full memory | quant: 3 bits | pi: 5 decimals to 3.1 | trellis: errors cancel",
+      "visual_brief": "Diagram-flow across a die cross-section: a left column of memory cells marked 'full', arrows converging right into compact cells marked '3 bits'. On 'rounds each number down to three bits', the cells scale down in place. On the pi phrase, a margin annotation 'pi: 5 decimals to 3.1' fades in. On 'errors cancel instead of stacking', paired plus and minus ticks along the arrows fade out in pairs. At most two elements animate at once.",
+      "est_duration_s": 25.0,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "Now the narrower claim this earns. One file, one benchmark family, four days old. Every quality number comes from the publisher's own tests, so the only referee so far is grading its own homework.",
+      "on_screen_text": "1 file | 1 benchmark family | 4 days old | scores self-graded",
+      "visual_brief": "Timeline archetype: a short horizontal track etched like a circuit trace, a single die icon labeled 'NariQ GGUF' at its left end and a 'today' marker at the right; the gap tag '4 days' fades in on 'four days old'. Above the track, the tags '1 file' and '1 benchmark family' fade in on their phrases. On 'grading its own homework', a magnifier lens rises-in-place over a stamp reading 'self-graded'.",
+      "est_duration_s": 11.7
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Stock llama.cpp, the engine under the usual local tools, cannot load the file yet. Neither can Ollama or LM Studio; you would need the Nari Labs fork. That fork is slower than stock quants, the usual compressed files, on most hardware, with one exception, a workstation-class GPU. Support in stock tools has no date.",
+      "on_screen_text": "stock llama.cpp cannot load | Ollama, LM Studio: no | Nari Labs fork required | slower except 1 workstation GPU",
+      "visual_brief": "Grid of four runtime tiles on a PCB background: 'stock llama.cpp', 'Ollama', 'LM Studio', 'Nari Labs fork'. On 'cannot load the file yet', grey X marks fade onto the first three tiles. On 'Nari Labs fork', the fourth tile lights up. On 'slower than stock quants', a small gauge fades in with its needle low; on 'one exception', a green tag reading '1 workstation GPU' pops at the gauge corner.",
+      "est_duration_s": 18.6,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Who should stay put? If you need the last fraction of a point, or long exact math, stay on BF16. If your card is a GeForce, the publisher says it plainly: GeForce cards have not been tested yet.",
+      "on_screen_text": "need the last fraction? stay on BF16 | GeForce cards: not tested yet",
+      "visual_brief": "Split-compare: left panel etched 'stay on BF16' with a full-height memory bar and an exact-math glyph; right panel 'NariQ file' with a compact bar. On 'GeForce cards have not been tested yet', a graphics-card outline rises-in-place below center and a grey tag reading 'not tested yet' fades over it. One accent moves at a time; the bars hold static.",
+      "est_duration_s": 13.1
+    },
+    {
+      "id": "s08",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "The card was never the problem, and three bits was never the real question. The old question was whether three bits is good enough. The only question left is what memory you have.",
+      "on_screen_text": "old question: is 3 bits enough? | new question: what memory do you have?",
+      "visual_brief": "Centered-stack payoff on a near-black die field. A card etched 'is 3 bits good enough?' fades down on 'The old question' as a second card, 'what memory do you have?', scales up to fill the frame on 'The only question left', backlit like a lit die with circuit traces brightening outward. The final frame holds static on the second card with no further motion.",
+      "est_duration_s": 11.4,
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Numbers rounded for the ear from the brief's verbatim table; quality numbers are the publisher's own harness (4-day-old release); GeForce untested, upstream merge a hope. On-screen-only numbers follow the 'spoken same scene' rule per scene."
+}
