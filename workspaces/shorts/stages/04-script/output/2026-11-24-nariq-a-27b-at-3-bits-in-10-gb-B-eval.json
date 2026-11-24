@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-24T13:14:51+00:00",
+  "generated_at": "2026-11-24T13:15:49+00:00",
   "slug": "B",
   "inputs": {
     "storyboard_path": "/home/buildlocalai/blai/repo/.local-builds/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb/board-B.json",
@@ -34,9 +34,9 @@
   "board_metrics": {
     "number_spend": {
       "total": 5,
-      "spent": 4,
-      "distinct": 4,
-      "score": 0.8,
+      "spent": 3,
+      "distinct": 3,
+      "score": 0.6,
       "detail": [
         {
           "label": "NariQ 3-bit file size",
@@ -71,12 +71,10 @@
         {
           "label": "Prior sub-3-bit DeepSWE ceiling vs BF16",
           "value": "at most 72% as many tasks as BF16",
-          "spent": true,
-          "matched_in": "on_screen",
-          "matched_token": "16",
-          "scene_ids": [
-            "s04"
-          ]
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
         },
         {
           "label": "Qwen3.8-27B native context",
@@ -350,7 +348,6 @@
           "est_duration_s": 25.0,
           "specific": true,
           "hits": [
-            "num:at most 72% as many tasks as BF16",
             "entity:NariQ"
           ],
           "narration": "Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions."
@@ -403,7 +400,7 @@
       "vo_band_ok": true
     },
     "narration_full": "Your card isn't too small. The file is. The full-precision original of the model you gave up on needs about fifty-three gigabytes. Your card holds twelve gigabytes. Everyone running local models learned the rule. Quantization, fewer bits per stored number, always costs quality. Below four bits a model is supposed to fall apart. A twenty-seven billion parameter model is supposed to need a workstation. Here is the evidence against it. NariQ is a three-bit compression of Qwen3.8-27B, built by Nari Labs. The GGUF, the single file your local tools load, is ten point one two gigabytes. On DeepSWE, a benchmark of real software tasks, it scored forty-one against the original's thirty-nine point eight. Every earlier attempt at or below three bits fell further behind. Why does it hold up? The original stores every parameter, each a stored number, in BF16, the model's full sixteen-bit memory. Quantization rounds each number down to three bits. Picture rounding pi from five decimal places to three point one. Close enough for most work; exact math notices first, casual chat never does. NariQ's twist is trellis coding, choosing which numbers to flatten together so the rounding errors cancel instead of stacking. It was tuned on tokens the full model wrote during real agent sessions. Now the narrower claim this earns. One file, one benchmark family, four days old. Every quality number comes from the publisher's own tests, so the only referee so far is grading its own homework. Stock llama.cpp, the engine under the usual local tools, cannot load the file yet. Neither can Ollama or LM Studio; you would need the Nari Labs fork. That fork is slower than stock quants, the usual compressed files, on most hardware, with one exception, a workstation-class GPU. Support in stock tools has no date. Who should stay put? If you need the last fraction of a point, or long exact math, stay on BF16. If your card is a GeForce, the publisher says it plainly: GeForce cards have not been tested yet. The card was never the problem, and three bits was never the real question. The old question was whether three bits is good enough. The only question left is what memory you have.",
-    "on_screen": "Not the card. The file. | Not the card. The file. | 53.8 GB full file | 12 GB your card | quantization costs quality | under 4 bits falls apart | 27B params need a workstation | NariQ 3-bit GGUF | 10.12 GB | DeepSWE 41.0 vs 39.8 | BF16: 16 bits per number | quant: 3 bits | pi: 5 decimals to 3.1 | trellis: errors cancel | 1 file | 1 benchmark family | 4 days old | scores self-graded | stock llama.cpp cannot load | Ollama, LM Studio: no | Nari Labs fork required | slower except 1 workstation GPU | need the last fraction? stay on BF16 | GeForce cards: not tested yet | old question: is 3 bits enough? | new question: what memory do you have?"
+    "on_screen": "Not the card. The file. | Not the card. The file. | 53.8 GB full file | 12 GB your card | quantization costs quality | under 4 bits falls apart | 27B params need a workstation | NariQ 3-bit GGUF | 10.12 GB | DeepSWE 41.0 vs 39.8 | BF16: full memory | quant: 3 bits | pi: 5 decimals to 3.1 | trellis: errors cancel | 1 file | 1 benchmark family | 4 days old | scores self-graded | stock llama.cpp cannot load | Ollama, LM Studio: no | Nari Labs fork required | slower except 1 workstation GPU | need the last fraction? stay on BF16 | GeForce cards: not tested yet | old question: is 3 bits enough? | new question: what memory do you have?"
   },
   "validators": {
     "storyboard": {
@@ -509,23 +506,20 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "number_spend"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend"
     ],
     "detail": {
       "number_spend": {
-        "spent": 4,
-        "heard": 4,
+        "spent": 3,
+        "heard": 3,
         "total": 5,
         "need": "<=3",
         "min": null,
         "max": 3,
-        "mode": "cap",
-        "reason": "the viewer hears 4 distinct numbers (4 of 5 brief rows matched); the band is 0-3"
+        "mode": "cap"
       },
       "entity_spend": {
         "score": 0.4,
