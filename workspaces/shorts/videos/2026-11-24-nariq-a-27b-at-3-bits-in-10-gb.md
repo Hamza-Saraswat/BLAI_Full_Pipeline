@@ -29,7 +29,7 @@ blotato_post_id: ""
 - Storyboard: [[stages/04-script/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-storyboard]]
 - Drafts: [[stages/04-script/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-drafts]]
 - Package: [[stages/05-package/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 
 ## Build journal
 - 2026-11-24T13:38:25Z build start on gn100-83c4
+- 2026-11-24T13:43:42Z 06-voice ok 315s
