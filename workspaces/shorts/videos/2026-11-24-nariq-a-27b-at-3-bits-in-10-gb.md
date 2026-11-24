@@ -2,19 +2,19 @@
 slug: 2026-11-24-nariq-a-27b-at-3-bits-in-10-gb
 workspace: shorts
 title: "NariQ: a 27B model at 3 bits, in 10 GB"
-status: ready-to-build
+status: building
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-24
-updated: "2026-11-24T13:37:53Z"
+updated: "2026-11-24T13:38:25Z"
 publish_slot: ""
 seo_score: 92
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -48,4 +48,4 @@ blotato_post_id: ""
 - Thin spot for the writer: quality numbers are Nari Labs self-measured in its own fork harness; GeForce untested, upstream llama.cpp merge a hope. Held in Unverified and the objection.
 
 ## Build journal
-
+- 2026-11-24T13:38:25Z build start on gn100-83c4
