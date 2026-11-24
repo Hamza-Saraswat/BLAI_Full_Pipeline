@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-24-nariq-a-27b-at-3-bits-in-10-gb
 workspace: shorts
-title: "NariQ: a 27B at 3 bits, in 10 GB"
-status: scripted
+title: "NariQ: a 27B model at 3 bits, in 10 GB"
+status: ready-to-build
 pillar: explainer
 structure: contrarian-take
 format: smooth-explainer
 style_pack: silicon
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-24
-updated: "2026-11-24T13:36:27Z"
+updated: "2026-11-24T13:37:53Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 92
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -28,12 +28,14 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-script]]
 - Storyboard: [[stages/04-script/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-storyboard]]
 - Drafts: [[stages/04-script/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-drafts]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-11-24-nariq-a-27b-at-3-bits-in-10-gb-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
 ## Decisions
+- Checkpoint 3 (titles, description, score): searchable title chosen ("NariQ: a 27B model at 3 bits, in 10 GB", 38 chars, keyword at position 0); three hashtags; rubric all 8 rows pass, self-score 92 (3 held back on description head, 5 on unverified frame-1 legibility). Unattended call: proceed.
+- Package audit: no em dashes; description 1067 bytes with keyword+promise in the first 146 characters; tags 195 chars; title unique vs published/. check_outputs clean after the Artifacts link was filled.
 - Checkpoint 1 (structures + value types + promise): news-react-so-what (A) and contrarian-take (B), both legal vs the last two ledger entries; value types TEACHES,REFRAMES locked; promise: the viewer knows why a 3-bit file holds a 27B's quality and that memory is the wall. Unattended call: proceed.
 - Checkpoint 2 (10 hooks, two picks): situation (A) and named-contradiction (B) from different patterns; pool and scores in the script note. Unattended call: proceed.
 - Round 1 withdrawn by the variety gate: worked-example/myth-bust repeated the last two ledger entries and number-shock repeated 11-22's hook; both writers re-assigned legal shapes and re-run blind.
