@@ -1,0 +1,275 @@
+{
+  "question": "How do folder workspaces work in practice -- how did the feature arrive across the 0.13.x release line (which release introduced it, beta/preview status), and what are the exact steps a user performs to set one up and use it (enable, pick a folder, what appears beside the chat, what you can do with the files)?",
+  "topic": "Open WebUI 0.13.5 folder workspaces -- your project beside your chat (a self-hosted ChatGPT-style UI for local models like Ollama)",
+  "accessed": "2026-11-25",
+  "budget_used": {
+    "searches": 3,
+    "page_fetches": 4
+  },
+  "sources": [
+    {
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui",
+      "tier": "primary"
+    },
+    {
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary"
+    },
+    {
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects",
+      "tier": "docs"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Open WebUI v0.13.5, released 25 Nov 09:37 (2 hours before this session's fetch), lists Folder workspaces as the first item under Added, defining it as choosing the computer and project directory once for the folder and absorbing the standalone Open WebUI Computer (cptr) app.",
+      "verbatim_quote": "Folder workspaces. Run your project's tests in a terminal and try the app in a browser while your chat stays open beside them. Choose the computer and project directory once for the folder. Even in a shared folder, everyone can return to their own tabs and layout. If you used the standalone Open WebUI Computer (cptr) app, that workflow is now built into Open WebUI.",
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The pieces of folder workspaces arrived progressively across 0.13.x: v0.13.0 (03 Nov 12:23) added the tabbed workspace beside the chat; v0.13.1 added the working-directory picker in the message input; v0.13.4 (17 Nov 14:46) made each chat save its terminal and working folder and gave folder pages a chat board with statuses.",
+      "verbatim_quote": "Tabbed workspace. The Tabs button at the top of a chat now opens a workspace for files, multiple terminal sessions, artifacts, previews, voice calls and comments. Add tabs from the + menu, drag to reorder them, and create and save new files directly into the selected terminal.",
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "v0.13.5 pairs Folder workspaces with project instructions: an AGENTS.md or CLAUDE.md file in the project folder is read by every new chat there, and with Open Terminal 0.18.0 or later the assistant can also follow project skills, run checks in the terminal and inspect the result in a browser tab.",
+      "verbatim_quote": "Project instructions and skills. Tell the assistant how your project works once in an `AGENTS.md` or `CLAUDE.md` file. Every new chat in that project folder reads those instructions. Connect the project machine with Open Terminal 0.18.0 or later and the assistant can also follow reusable project instructions called skills, run checks in your terminal and inspect the result in your browser tab.",
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The official v0.13.0 blog post gives the exact administrator steps to connect the workspace computer (Open Terminal) once: add it in Settings > Admin > Integrations, set Access, flip the switch on, share the model, then pick the terminal from the Terminal menu and open tabs from the + menu.",
+      "verbatim_quote": "1. Click your name at the bottom of the sidebar, and go to `Settings > Admin > Integrations`.\n2. In the Open Terminal section, click +, enter `http://localhost:8000` and your key, and save. The [connection guide](https://docs.openwebui.com/features/open-terminal/setup/connecting) covers other setups.\n3. Before you save, click Access and choose who gets it. Public opens it to everyone, or add groups and people. Until you do, only administrators can use it.\n4. Turn on the switch next to your new connection. It starts off, and the Terminal menu won't appear until it's on.\n5. Share the model too. In `Settings > Admin > Models`, open the model, click Access, and choose who gets it. If it's a custom model, do the same for the model it's built on, or teammates will see \"Model not found\".\n6. Start a new chat with a model that has tool calling and image input, because desktop tools send screenshots.\n7. In the message box, pick your terminal from the Terminal menu.\n8. Click the Tabs button at the top of the chat, and open the Desktop tab from the + menu.",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The machine behind a folder workspace is started with one docker run command using the default Open Terminal image, about 4 GB, because the slim and alpine images do not include the desktop.",
+      "verbatim_quote": "Start it with Docker, and swap in your own key. Use the default image, about 4 GB, because the `slim` and `alpine` images don't include the desktop. $ docker run -d --name open-terminal --restart unless-stopped -p 8000:8000 -v open-terminal:/home/user -e OPEN_TERMINAL_API_KEY=your-secret-key ghcr.io/open-webui/open-terminal",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The official Folders & Projects docs page presents the folder page and folder settings as project workspaces with no beta or preview qualifier on that page, and states folders are enabled by default via ENABLE_FOLDERS (default True).",
+      "verbatim_quote": "Open WebUI provides powerful folder-based organization that turns simple chat containers into full-featured **project workspaces**. Folders allow you to not only group related conversations but also define specific contexts, system prompts, and knowledge bases that apply to all chats within them.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The exact folder-setup steps in the docs: create the folder from the sidebar's Folders + button, then in the Edit Folder dialog under Advanced set Machine and Working directory once for the folder, so its chats, files and terminals use it.",
+      "verbatim_quote": "Under **Advanced**, **Machine** picks the machine the folder runs on. Its chats, files and terminals use it and start in **Working directory**, or in the machine's own default when that is empty. With a machine that has a separate instance per chat or model, each chat can pick another machine. While the folder's machine is unavailable to you, the message box in your own chats of the folder is disabled. Its folder button browses the machine's directories, where you can also [clone a Git repository](https://docs.openwebui.com/features/open-terminal/file-browser#cloning-a-repository) into a new folder.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Clicking a folder in the sidebar makes it the active workspace: any new chat is created inside the folder and inherits the folder's default model, machine, working directory, system prompt and knowledge.",
+      "verbatim_quote": "1. Click on any folder in the sidebar to select it.\n2. The chat interface will show that folder is active.\n3. Any new chat you start will automatically be created inside this folder.\n4. New chats will **inherit the folder's settings** (default model, machine, working directory, system prompt and knowledge).",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "What appears beside the chat is a set of tabs you open yourself: with the terminal picked, the Files tab opens into a folder, the Git panel at the bottom of the Files tab shows changes and diffs, and the Browser tab from the + menu shows what the model builds, usable at the same time as the model.",
+      "verbatim_quote": "1. With your terminal picked, open the Files tab and click into a folder that's a Git repository.\n2. Open the Git panel at the bottom of the Files tab.\n3. Give the model a job in that folder.",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Tabs can take the whole window and the choice is remembered: Use full-width tabs gives the tabs the whole chat area with the conversation as a tab of its own, and Use side tabs returns to the side layout.",
+      "verbatim_quote": "On a larger screen, click Use full-width tabs to give the tabs the whole chat area, with the conversation as a tab of its own. Click Use side tabs to go back. Open WebUI remembers your choice.",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Every tool call can be made to wait for a click: an administrator turns on Tool Permissions in Settings > Admin > Interface or sets ENABLE_TOOL_PERMISSIONS, the user picks Ask for approval from the + menu, and clicks Allow when the model stops; the default is Full access.",
+      "verbatim_quote": "1. An administrator turns on Tool Permissions in `Settings > Admin > Interface`, or sets `ENABLE_TOOL_PERMISSIONS`.\n2. Open the + menu in the message box, and pick Ask for approval.\n3. Ask the model to use a tool, then click Allow when it stops.",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Upgrading onto the 0.13.x line carries a database migration: v0.13.0 changes the database schema, so users must back up before updating because going back to an earlier version means restoring that backup.",
+      "verbatim_quote": "Back up your database and data first. v0.13.0 changes the database schema, so going back to an earlier version means restoring that backup.",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+      "title": "Open WebUI v0.13.0: Your Model Gets a Computer",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    }
+  ],
+  "numbers": [
+    {
+      "label": "Open Terminal default Docker image size",
+      "value": "about 4 GB",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer"
+    },
+    {
+      "label": "Open Terminal minimum version for project instructions/skills in folder workspaces",
+      "value": "0.18.0 or later",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "label": "Open Terminal version used to record the v0.13.0 blog clips",
+      "value": "v0.16.0",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer"
+    },
+    {
+      "label": "Release date of v0.13.5 (Folder workspaces)",
+      "value": "25 Nov 09:37",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "label": "Release date of v0.13.4 (terminals follow your chats, folder chat board)",
+      "value": "17 Nov 14:46",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "label": "Release date of v0.13.0 (tabbed workspace)",
+      "value": "03 Nov 12:23",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    }
+  ],
+  "process_steps": [
+    "Update Open WebUI to v0.13.5, backing up first because the 0.13.x line changes the database schema | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Start the machine once with Docker: docker run -d --name open-terminal --restart unless-stopped -p 8000:8000 -v open-terminal:/home/user -e OPEN_TERMINAL_API_KEY=your-secret-key ghcr.io/open-webui/open-terminal | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Click your name at the bottom of the sidebar and go to Settings > Admin > Integrations | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Click + in the Open Terminal section, enter http://localhost:8000 and your key, and save | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Click Access before saving and choose who gets the terminal (Public, or groups and people; until then only administrators can use it) | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Turn on the switch next to the new connection, since the Terminal menu will not appear until it is on | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Share the model too, in Settings > Admin > Models, opening the model and clicking Access | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Create the folder: in the sidebar, click the + button on the Folders section header, select New Folder, enter a name, and click Save | https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+    "Edit the folder (three-dot menu on the folder) and, under Advanced, pick the Machine and set the Working directory, choosing the computer and project directory once for the folder | https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+    "Optionally clone your project into a new folder using the folder button in the message box, which browses the machine's directories | https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+    "Click the folder in the sidebar to make it the active workspace, so new chats are created inside it and inherit its default model, machine, working directory, system prompt and knowledge | https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+    "Pick your terminal from the Terminal menu in the message box | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Click the Tabs button at the top of the chat and open the Files, Desktop and Browser tabs from the + menu, dragging tabs into order and switching with Use full-width tabs / Use side tabs | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Give the model a job in that folder, such as \"A test in the date-parser folder fails. Fix it and run python3 -m unittest. Don't commit.\" | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Review the work beside the chat: open the Git panel at the bottom of the Files tab (clicking a change opens its diff), then try the app in the Browser tab while the chat stays open | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Optionally gate every action: pick Ask for approval from the + menu in the message box, then click Allow when the model stops | https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer",
+    "Write an AGENTS.md or CLAUDE.md in the project folder so every new chat there reads the project instructions (project skills need Open Terminal 0.18.0 or later) | https://github.com/open-webui/open-webui/releases"
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A workshop bench beside your phone call",
+      "mapping": "The chat is the call; the tabbed side panel (Files, Desktop, Browser, Git) is the bench next to it where the actual project work happens, and you can look over or grab the tools any time without hanging up",
+      "limit": "Breaks because the model works at the bench too, not just you, and on a shared folder teammates share the bench while each keeps their own tab layout"
+    },
+    {
+      "vehicle": "A project room in an office",
+      "mapping": "The sidebar folder is the room: it has one computer (Machine) and one project directory picked once, everyone on the room's access list works from the same files, and chats left open there are still there when you come back",
+      "limit": "Breaks because the 'room' is per-folder settings in a chat UI rather than a place you enter, and each person's tabs and layout stay their own even in the shared folder"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Folder workspaces are just chat folders that have always been there, and 0.13.5 is a minor patch",
+      "reality": "The feature assembled progressively across 0.13.x (tabbed side panel in v0.13.0, working-directory picker in v0.13.1, chats remembering terminal and folder in v0.13.4), and 'Folder workspaces' as the named feature binding one computer and project directory to a folder ships in v0.13.5",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "myth": "You need the separate Open WebUI Computer (cptr) app to work this way",
+      "reality": "v0.13.5 folds the cptr app's workflow into Open WebUI itself; only Open Terminal is needed as the machine, and the folder remembers it",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "myth": "The model gets free rein over your machine",
+      "reality": "The machine and directory are chosen once per folder, the Tether sandbox can lock a terminal to the one folder you pick with no incoming connections, and every tool call can wait for approval under Ask for approval",
+      "url": "https://github.com/open-webui/open-webui/releases"
+    },
+    {
+      "myth": "A folder workspace is only for teams",
+      "reality": "The single-user loop works end to end: one Open Terminal container, one folder with Machine and Working directory set, tabs beside your own chat; sharing and per-person layouts are optional extras",
+      "url": "https://openwebui.com/blog/v0-13-0-your-model-gets-a-computer"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Folder workspace",
+      "definition": "A sidebar folder that has a computer (Machine) and project directory chosen once, so its chats, files, terminals and browser tabs work in that project while the chat stays open beside them."
+    },
+    {
+      "term": "Open Terminal",
+      "definition": "The self-hosted computer environment, connected once in Settings > Admin > Integrations, where the model runs commands and manages files."
+    },
+    {
+      "term": "Tabbed side panel",
+      "definition": "The tabs (Files, terminal sessions, Desktop, Browser, artifacts, previews, voice calls, comments) that open beside the conversation from the Tabs button and can fill the whole window."
+    },
+    {
+      "term": "cptr",
+      "definition": "The standalone Open WebUI Computer app whose folder workflow was built into Open WebUI proper in v0.13.5."
+    },
+    {
+      "term": "AGENTS.md / CLAUDE.md",
+      "definition": "A project instructions file whose contents every new chat in that project folder automatically reads."
+    },
+    {
+      "term": "ENABLE_FOLDERS",
+      "definition": "The environment variable (default True) that turns the folders feature on or off globally."
+    },
+    {
+      "term": "Ask for approval",
+      "definition": "The per-chat mode, enabled by an administrator's Tool Permissions setting, that makes every tool call wait for you to click Allow."
+    }
+  ],
+  "unverified": [
+    "Whether Folder workspaces in v0.13.5 is labelled beta, preview or experimental anywhere: neither the fetched release notes nor the fetched Folders & Projects docs page carries such a qualifier, and no page stating the rollout status explicitly could be fetched within budget.",
+    "That the docs' 'project workspaces' wording on the Folders & Projects page refers to the same v0.13.5 'Folder workspaces' feature: both pages were fetched and describe the same folder-with-machine-and-directory behavior, but neither page cross-references the other by name.",
+    "The exact click-path a v0.13.5 user sees when first binding a machine to a folder (the docs describe the Edit Folder dialog's Advanced section with Machine and Working directory, but a v0.13.5-specific walkthrough page was not fetched).",
+    "Whether the folder page's statuses and board view (Added in v0.13.4) appear for folder workspaces automatically or require Edit statuses setup; the v0.13.4 bullet was read on the releases list page, but the folder page docs describe statuses as something you add yourself under Edit statuses.",
+    "How folder workspaces behave for Ollama-only users with no Open Terminal connected; no fetched page states a fallback for the Files/Browser tabs without a machine."
+  ],
+  "not_found": [
+    "A dedicated docs.openwebui.com page named for folder workspaces; the search lead docs.openwebui.com/ecosystem/computer/use-cases/a-folder-that-follows-you/ returned Page Not Found when fetched.",
+    "Any beta/preview/experimental label on Folder workspaces in the v0.13.5 release notes (it appears as a regular bullet under Added).",
+    "Release notes for versions before 0.13.0 (the fetched releases list page covers v0.13.5 down to v0.13.0)."
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "question": "What exactly shipped in open-webui v0.13.5: specifically the folder workspaces feature (what it is, what it does, what appears in the UI) and any other headline changes in that release?",
+  "topic": "Open WebUI 0.13.5 folder workspaces -- your project beside your chat (a self-hosted ChatGPT-style UI for local models like Ollama)",
+  "accessed": "2026-11-25",
+  "budget_used": {
+    "searches": 3,
+    "page_fetches": 4
+  },
+  "sources": [
+    {
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary"
+    },
+    {
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui · GitHub",
+      "tier": "primary"
+    },
+    {
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs"
+    },
+    {
+      "url": "https://docs.openwebui.com/features/workspace/",
+      "title": "Workspace / Open WebUI",
+      "tier": "docs"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Open WebUI v0.13.5 is the latest release, published 25 Nov 2026 at 09:37 UTC by github-actions.",
+      "verbatim_quote": "released this 2 hours ago 25 Nov 09:37 ... 2 hours ago2026-11-25T09:37:38Z",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Folder workspaces is the headline Added item: run a project's tests in a terminal and the app in a browser while the chat stays open beside them; the computer and project directory are chosen once for the folder, and each user keeps their own tabs and layout even in a shared folder.",
+      "verbatim_quote": "**Folder workspaces.** Run your project’s tests in a terminal and try the app in a browser while your chat stays open beside them. Choose the computer and project directory once for the folder. Even in a shared folder, everyone can return to their own tabs and layout. If you used the standalone Open WebUI Computer (cptr) app, that workflow is now built into Open WebUI.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The folder workspaces feature replaces the standalone Open WebUI Computer (cptr) app by building that workflow into Open WebUI itself.",
+      "verbatim_quote": "If you used the standalone Open WebUI Computer (cptr) app, that workflow is now built into Open WebUI.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Folder workspaces shipped via PRs #34804 and #34805 with issues #34800 and #34803.",
+      "verbatim_quote": "**Folder workspaces.** Run your project’s tests in a terminal and try the app in a browser while your chat stays open beside them. [#34804](https://github.com/open-webui/open-webui/pull/34804), [#34805](https://github.com/open-webui/open-webui/pull/34805), [#34800](https://github.com/open-webui/open-webui/issues/34800), [#34803](https://github.com/open-webui/open-webui/issues/34803)",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Project instructions and skills: an AGENTS.md or CLAUDE.md file in the project folder is read by every new chat there; with Open Terminal 0.18.0+ the assistant can follow reusable skills, run checks in the terminal and inspect the result in a browser tab.",
+      "verbatim_quote": "**Project instructions and skills.** Tell the assistant how your project works once in an `AGENTS.md` or `CLAUDE.md` file. Every new chat in that project folder reads those instructions. Connect the project machine with Open Terminal 0.18.0 or later and the assistant can also follow reusable project instructions called skills, run checks in your terminal and inspect the result in your browser tab.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "In the UI, clicking a folder in the sidebar makes it the active workspace and new chats inherit the folder's settings: default model, machine, working directory, system prompt and knowledge.",
+      "verbatim_quote": "New chats will **inherit the folder's settings** (default model, machine, working directory, system prompt and knowledge).",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "In the UI, a folder keeps its own tabs, so reopening it restores the chats, files and terminals left open there, and the home page lists work-in-progress folders under Continue.",
+      "verbatim_quote": "A folder keeps its own tabs for you, so opening it again brings back the chats, files and terminals you left open there. The new chat page lists your folders with work in progress under **Continue**, meaning a chat that is running or waiting for your approval, or tabs left open, so you can pick up where you left off.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Folder settings expose the machine binding under Advanced: Machine picks the computer the folder runs on, and its chats, files and terminals start in the Working directory.",
+      "verbatim_quote": "Under **Advanced**, **Machine** picks the machine the folder runs on. Its chats, files and terminals use it and start in **Working directory**, or in the machine's own default when that is empty.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The folder page acts as a project tracker: it shows every chat in the folder as a list or board, and with statuses as columns the board works like a kanban view.",
+      "verbatim_quote": "Click a folder in the sidebar and its page shows every chat in it, laid out like a small project tracker. ... With statuses as columns the board works like a kanban view.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Docs describe folders as full-featured project workspaces that carry contexts, system prompts and knowledge bases applying to all chats within them, not just chat grouping.",
+      "verbatim_quote": "Open WebUI provides powerful folder-based organization that turns simple chat containers into full-featured **project workspaces**. Folders allow you to not only group related conversations but also define specific contexts, system prompts, and knowledge bases that apply to all chats within them.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/",
+      "title": "Folders & Projects / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other headline change: long chat performance, where sending a message was 34x faster in a 130 MB PostgreSQL test chat, with server accept time down from 10.9 to 0.32 seconds and per-message database writes down from 533 MB to 2 KB.",
+      "verbatim_quote": "**Long chat performance.** Sending a message was 34× faster in our 130 MB PostgreSQL test chat. The server accepted it in 0.32 seconds, down from 10.9, because it now saves just the messages that changed. Database writes fell from 533 MB to 2 KB per message.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other headline change: automatic model selection via routers, where one router in the chat's model picker sends coding questions to one model and writing requests to another.",
+      "verbatim_quote": "**Automatic model selection.** Put one router in the chat’s model picker and it can send coding questions to one model and writing requests to another. Admins choose text patterns or describe the kind of question each model should handle. If nothing matches, the router uses the first model on its list or picks one at random.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other headline change: citations beside the chat, where hovering a source number shows a quick excerpt and clicking reads the evidence beside the answer.",
+      "verbatim_quote": "**Citations beside the chat.** Hover over a source number for a quick excerpt, or click it to read the evidence beside the answer. You can compare passages from the same document, see how closely they match your question and jump to the cited PDF page when page information is available.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other headline change: steering a coding agent mid-run, so a text correction sent while Codex or Claude Code is working is acted on in the same chat.",
+      "verbatim_quote": "**Steer a coding agent while it works.** If Codex or Claude Code starts editing the wrong file, send a correction in the same chat. The coding agent can act on a text follow-up while the job is running. A follow-up with attachments waits for the next turn so the agent receives the instruction and files together.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other folder-related addition: notes in folders, where a note dragged into a sidebar folder sits beside the project's chats and inherits the folder's read or edit access.",
+      "verbatim_quote": "**Notes in folders.** Keep a project brief in the same sidebar folder as the chats where you discuss it. Drag the note into the folder and it inherits the folder’s read or edit access, so the people already working there can use it too.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Other folder-related additions: folder chat priorities (drag a card on the folder board to set status and priority at once) and the home page Continue section showing up to three work-in-progress folders.",
+      "verbatim_quote": "**Folder chat priorities.** Move a chat from routine work to an urgent follow-up by dragging its card on the folder board. A single move sets both status and priority, and the board’s filters help the team find conversations that need attention first.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The release's Fixed section leads with a security advisory urging prompt upgrades to 0.13.5, with details to be published once CVE identifiers exist.",
+      "verbatim_quote": "**Security Advisory.** Update Open WebUI deployments to 0.13.5 promptly to receive this release’s security fixes. The project will publish details in its security advisories once the fixes have CVE identifiers, the public reference numbers used to track vulnerabilities.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Breaking upgrade note: 0.13.5 stores each chat message separately, so upgrading converts existing database history; back up first and upgrade all workers and servers together because old and new formats are incompatible.",
+      "verbatim_quote": "**Database migrations.** Open WebUI 0.13.5 stores each chat message separately, so upgrading converts the history in your existing database. Back up the database and associated data first, then upgrade all workers and servers together because the old and new versions use incompatible formats. The conversion runs in batches and can resume after an interruption.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Terminology change: terminal connections are now called Machines, with API clients directed to /api/v1/machines and the MACHINE_CONNECTIONS response key.",
+      "verbatim_quote": "**Terminal connections are now called Machines.** To manage the computers a chat can use for files and commands, look under Machines in Open WebUI. Connections previously listed as Terminals keep their permissions. API clients should switch to `/api/v1/machines` and `/api/v1/configs/machines` and read the `MACHINE_CONNECTIONS` response key.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5",
+      "title": "Release v0.13.5 · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The release notes' 'folder workspaces' is distinct from the docs' Workspace section, which is the area for composing custom models from five building blocks (Models, Knowledge, Prompts, Skills, Tools).",
+      "verbatim_quote": "The Workspace is where you turn a raw model into something tailored to your work. Bind knowledge, attach tools, set a system prompt, teach it skills and save the result as a reusable model.",
+      "url": "https://docs.openwebui.com/features/workspace/",
+      "title": "Workspace / Open WebUI",
+      "tier": "docs",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "v0.13.5 follows v0.13.4, which was released one week earlier on 17 Nov 2026.",
+      "verbatim_quote": "## v0.13.4 ... released this last week 17 Nov 14:46",
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "title": "Releases · open-webui/open-webui · GitHub",
+      "tier": "primary",
+      "confidence": "medium",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    }
+  ],
+  "numbers": [
+    {
+      "label": "Message-send speedup in 130 MB PostgreSQL test chat",
+      "value": "34×",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Server accept time for a message, before to after",
+      "value": "0.32 seconds, down from 10.9",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Database writes per message, before to after",
+      "value": "from 533 MB to 2 KB per message",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Size of the PostgreSQL test chat used for the benchmark",
+      "value": "130 MB",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Faster chat opening, 500-message test on 5 Mbit/s connection",
+      "value": "about a second sooner",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Shared chat search, PostgreSQL test with 61,000 chats, two-word search under All",
+      "value": "from 18.2 seconds to 1.4",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Sidebar folder list load time, test with 30 folders and 240 files",
+      "value": "44–61 milliseconds, down from 335",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Model input for an Open Terminal file listing after JSON compaction",
+      "value": "from 1,013 tokens to 672",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Release timestamp of v0.13.5",
+      "value": "2026-11-25T09:37:38Z",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Default cutoff between full-text and retrieval for uploaded files",
+      "value": "50,000 characters per file",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Images shown directly to a coding agent per message",
+      "value": "up to 10 MiB per message",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Minimum Open Terminal version for project skills",
+      "value": "Open Terminal 0.18.0 or later",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Minimum Open Terminal version for the SSH remote computer setup",
+      "value": "Open Terminal 0.17.21 or later",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Project folders shown in the home page Continue section",
+      "value": "up to three project folders",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "label": "Maximum length of a folder status name",
+      "value": "up to 40 characters",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "VS Code with the chat pane docked beside terminal and browser preview",
+      "mapping": "A folder is a project workspace: one directory, one machine, terminal + file browser + browser tab + chat all open around it; pick the machine and directory once and every chat in the folder works there.",
+      "limit": "Open WebUI is chat-first, not file-first, and the folder also carries a default model, system prompt and attached knowledge; an IDE project is single-user and local while a folder can be shared with per-user tab layouts."
+    },
+    {
+      "vehicle": "A shared workshop room with one bench",
+      "mapping": "The room (folder) has fixed equipment: the machine and project directory are set once; teammates enter the same room but each returns to their own desk arrangement (their own tabs and layout).",
+      "limit": "The machine can be a remote workstation reached over SSH and the room is a sidebar entry in a web UI, not a physical place; access is gated by read/write permissions."
+    },
+    {
+      "vehicle": "Trello or kanban board",
+      "mapping": "The folder page lays out chats as cards in status columns; dragging a card sets status and priority in one move, and filters surface what needs attention.",
+      "limit": "The cards are live AI conversations that stream, wait for tool approvals and generate unread badges, not static tasks."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Folder workspaces are just chat folders for tidying the sidebar, like ChatGPT's folders.",
+      "reality": "Docs describe folders as full-featured project workspaces: new chats inherit the folder's default model, machine, working directory, system prompt and knowledge, and the folder keeps its own tabs for files and terminals.",
+      "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/conversation-organization/"
+    },
+    {
+      "myth": "You still need the separate Open WebUI Computer (cptr) app to work beside your chat.",
+      "reality": "The v0.13.5 release notes state that cptr workflow is now built into Open WebUI.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "myth": "0.13.5 is a routine cosmetic UI release.",
+      "reality": "The Fixed section leads with a security advisory telling deployments to update promptly, and a database migration converts chat history on upgrade, requiring a backup and a coordinated worker upgrade.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.5"
+    },
+    {
+      "myth": "Folder workspaces are the same thing as the Workspace section in the UI.",
+      "reality": "The docs' Workspace section is for composing custom models from building blocks; folder workspaces are the sidebar folder project feature that binds a machine and working directory to chats.",
+      "url": "https://docs.openwebui.com/features/workspace/"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Folder workspace",
+      "definition": "A sidebar folder configured as a project: it binds a machine and working directory, and its chats, files, terminals and per-user tabs all live inside it."
+    },
+    {
+      "term": "Machine",
+      "definition": "What v0.13.5 calls terminal connections: the computer a chat or folder uses for files and commands, managed under Machines."
+    },
+    {
+      "term": "Open Terminal",
+      "definition": "The companion computer layer whose version gates features: 0.17.21+ for SSH remote computers and server commands, 0.18.0+ for project skills, 0.18.1+ for GitHub review feedback."
+    },
+    {
+      "term": "cptr",
+      "definition": "The standalone Open WebUI Computer app whose beside-your-chat workflow v0.13.5 folds into the main product."
+    },
+    {
+      "term": "Router",
+      "definition": "A model-picker entry that automatically sends each question to a different model based on text patterns or a described question type."
+    },
+    {
+      "term": "AGENTS.md / CLAUDE.md",
+      "definition": "Project instruction files placed in a project folder; every new chat in that folder reads them."
+    },
+    {
+      "term": "Skill",
+      "definition": "Reusable project instructions the assistant can follow, running checks in the terminal and inspecting results in a browser tab."
+    }
+  ],
+  "unverified": [
+    "Community reaction to v0.13.5: a search result surfaced a Reddit thread about 0.13.0's tabbed workspace, but no community page was fetched, so reception to 0.13.5 specifically is unknown.",
+    "CVE identifiers and details for the release's security fixes are unpublished per the release note; the security advisories page was not fetched.",
+    "The contents of PRs #34804 and #34805 and issues #34800 and #34803 were not fetched, so implementation details beyond the release-note description are unknown.",
+    "The docs 'Folders & Projects' page is versionless, so its exact correspondence to v0.13.5 behavior (versus earlier 0.13.x releases) is inferred from the match between its described features and the v0.13.5 release notes."
+  ],
+  "not_found": [
+    "No dedicated docs.openwebui.com page using the exact term 'folder workspaces' was found in three searches; the closest docs coverage is the Folders & Projects page under Chat & Conversations and the separate Workspace section page.",
+    "No fetched page shows screenshots or a visual UI walkthrough of the folder workspaces interface; UI appearance is grounded in text descriptions only."
+  ]
+}
