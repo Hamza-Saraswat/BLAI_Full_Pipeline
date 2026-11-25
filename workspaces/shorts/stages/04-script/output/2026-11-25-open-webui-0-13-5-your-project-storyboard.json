@@ -1,0 +1,129 @@
+{
+  "slug": "2026-11-25-open-webui-0-13-5-your-project",
+  "topic": "Open WebUI 0.13.5 folder workspaces: your project beside your chat",
+  "title": "Open WebUI 0.13.5: Your Project Beside Your Chat",
+  "description": "Open WebUI 0.13.5 adds folder workspaces: pick one machine and one project directory, and your project's terminal, browser and files sit beside the chat that serves your local model. You'll learn how to connect the machine, bind the folder and give the model a job in your project tonight. Try it, subscribe for daily local AI builds. (Narration is AI-generated.)",
+  "hashtags": [
+    "#openwebui",
+    "#localai",
+    "#ollama",
+    "#selfhosted",
+    "#aiagents",
+    "#llm",
+    "#buildlocalai",
+    "#codingagent"
+  ],
+  "hook_text": "Your model and your project, apart",
+  "hook_candidates": [
+    "Your model and your project, apart",
+    "Your chat grew a terminal",
+    "0.13.5: your project beside your chat",
+    "Your chat can't see your code",
+    "Copy-pasting code into your chat ends tonight",
+    "Your model, your folder, one window",
+    "The chat that finally sees your project",
+    "Your project's tests, beside your chat",
+    "A chat app that runs your tests",
+    "Your folder is now a workspace"
+  ],
+  "style_pack": "signal",
+  "script_format": "smooth-explainer",
+  "structure": "how-to-three-moves",
+  "value_types": "EQUIPS,TEACHES",
+  "target_duration_s": 95,
+  "narration_full": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip. Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once. Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included. Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge. Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab. Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click. The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor. The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there. Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done.",
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip.",
+      "on_screen_text": "Your chat can't see your project | copy-paste, every single question",
+      "visual_brief": "Built in hyperframes. Frame 1: flat dark background, split screen; left a chat panel labeled Open WebUI, right a dim file tree labeled project, empty gap between; hook text \"Your chat can't see your project\" in big bold amber type up top. Motion onset at t=0.35 s: an amber divider line rises-in-place in the gap. On \"copy-paste round trip\", a code snippet card fades out of the tree and scales into the chat, then back, never sliding. Max two elements moving. Hard cut out. Music steady-build enters low; sfx: whoosh at start.",
+      "est_duration_s": 9.0
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once.",
+      "on_screen_text": "v0.13.5 | folder workspace | one computer, one project directory",
+      "visual_brief": "Built in hyperframes. Flat dark centered stack. On \"zero point thirteen point five\", a bold amber badge reading v0.13.5 fades in top center. On \"folder workspace\", a plain folder icon scales up below it; on \"computer and a project directory\", two chips rise-in-place onto the folder, one labeled computer, one labeled project directory, settling as \"you pick once\" lands. Entrances only fade, scale, rise-in-place; two elements animating max. Hard cut.",
+      "est_duration_s": 10.7
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included.",
+      "on_screen_text": "Move one: connect the machine | Open Terminal | 4 GB of disk",
+      "visual_brief": "Built in hyperframes. Flat dark stage with a centered terminal card. On \"Move one\", the label rises-in-place top left in amber. On \"Open Terminal\", a chip fades in naming it. On \"single Docker command\", the docker run command types itself into the card. On \"four gigabytes of disk\", a giant amber 4 GB scales up center with a pop sfx; on \"desktop is the point\", a small caption fades in below reading slim and alpine skip the desktop. Two elements moving max. Hard cut.",
+      "est_duration_s": 12.4
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge.",
+      "on_screen_text": "Move two: set machine + directory | new chats inherit your defaults",
+      "visual_brief": "Built in hyperframes. Flat dark split-compare: left, the Open WebUI sidebar with a fresh folder highlighted amber; right, its settings card. On \"Pick the Machine and the Working directory\", two fields rise-in-place: Machine set to Open Terminal, Working directory set to /home/user/date-parser. On \"inherit\", small chips fade in under the folder one pair at a time: model, machine, directory, prompt, knowledge. Fade and rise-in-place only, two moving max. Hard cut.",
+      "est_duration_s": 11.4
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab.",
+      "on_screen_text": "Move three: give the job | Files | terminal | Browser | chat stays open",
+      "visual_brief": "Built in hyperframes. Flat dark grid: chat column left, three panes right labeled Files, terminal, Browser. On \"a test fails\", the job message types into the chat box. On \"fix lands\", an amber diff card fades into the Files pane; on \"tests run\", amber check lines rise-in-place in the terminal pane; on \"app opens\", a small web page scales into the Browser pane while the chat column stays lit. Max two elements animating at once. Hard cut.",
+      "est_duration_s": 15.2
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click.",
+      "on_screen_text": "no free rein | Ask for approval | every call waits for Allow",
+      "visual_brief": "Built in hyperframes. Flat dark centered stack. On \"free rein\", a container chip labeled Machine with a bold amber outline fades in. On \"Ask for approval\", a toggle card rises-in-place reading Ask for approval, and a tool call card fades in beneath it, paused mid-action. On \"wait for your click\", an amber Allow button scales up and holds a gentle pulse until the sentence ends. Nothing else moves. Hard cut.",
+      "est_duration_s": 11.0
+    },
+    {
+      "id": "s07",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor.",
+      "on_screen_text": "honest catch: not an IDE | 13 coding agents | Cursor + GitHub Copilot",
+      "visual_brief": "Built in hyperframes. Flat dark stage. On \"honest catch\", a plain browser pane fades in beside a faint editor outline, captioned not an IDE in bold type. On \"thirteen coding agents\", those fade back and a giant amber 13 scales up center with a ding sfx; on \"Cursor and GitHub Copilot\", two small chips rise-in-place under it. On \"moves inside\", the chips drift-settle toward the browser pane using scale only. Two elements moving max. Hard cut.",
+      "est_duration_s": 8.6
+    },
+    {
+      "id": "s08",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there.",
+      "on_screen_text": "AGENTS.md | every new chat reads it",
+      "visual_brief": "Two-up on 'moves inside your self-hosted setup': left card a chat pane with a model-picker chip, right card a home server glyph, a connecting line draws between them. On 'A G E N T S dot M D', a file card rises in place on the right with the filename in mono, a chat bubble fades in beside it, and a small arrow loops file to bubble on 'read by every new chat'. Amber underline on the filename. Hard cut in; fade-swap one element at a time.",
+      "est_duration_s": 9.7
+    },
+    {
+      "id": "s09",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "grid",
+      "narration": "Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done.",
+      "on_screen_text": "tests pass | app live | chat open",
+      "visual_brief": "Loop-anchor rhyme with frame 1, resolved as a grid of three lit tiles. On 'where you left it', the three tiles fade in already lit: terminal green with passing tests, browser showing the app, chat open. On 'run live beside the chat', the tiles scale up one notch together. On 'round trip is done', the snippet card from frame 1 pops out. Final 0.5 s: wordmark settle, tiles dim behind it.",
+      "est_duration_s": 10.3
+    }
+  ],
+  "notes_for_review": "Draft parsed from writer output; board fields (description, hashtags, title working values) filled by the wrapper. Numbers to check: four gigabytes of disk (Open Terminal default image), one docker run command, at most three numbers spoken."
+}

@@ -1,0 +1,61 @@
+{
+  "full": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip. Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once. Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included. Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge. Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab. Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click. The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor. The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there. Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done.",
+  "words": 285,
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip.",
+      "words": 26,
+      "changed": false
+    },
+    {
+      "id": "s02",
+      "text": "Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once.",
+      "words": 31,
+      "changed": false
+    },
+    {
+      "id": "s03",
+      "text": "Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included.",
+      "words": 36,
+      "changed": false
+    },
+    {
+      "id": "s04",
+      "text": "Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge.",
+      "words": 33,
+      "changed": false
+    },
+    {
+      "id": "s05",
+      "text": "Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab.",
+      "words": 44,
+      "changed": false
+    },
+    {
+      "id": "s06",
+      "text": "Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click.",
+      "words": 32,
+      "changed": false
+    },
+    {
+      "id": "s07",
+      "text": "The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor.",
+      "words": 25,
+      "changed": false
+    },
+    {
+      "id": "s08",
+      "text": "The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there.",
+      "words": 28,
+      "changed": false
+    },
+    {
+      "id": "s09",
+      "text": "Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done.",
+      "words": 30,
+      "changed": false
+    }
+  ],
+  "source": "normalize_narration.py"
+}

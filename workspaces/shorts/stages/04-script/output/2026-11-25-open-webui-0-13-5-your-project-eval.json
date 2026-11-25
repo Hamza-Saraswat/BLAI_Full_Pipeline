@@ -1,0 +1,565 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-25T13:42:30+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-25-open-webui-0-13-5-your-project-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-25-open-webui-0-13-5-your-project-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 11,
+    "claims_by_quality": {
+      "primary": 9,
+      "docs": 2
+    },
+    "pct_primary_docs": 1.0,
+    "key_numbers_total": 8,
+    "entities_total": 19,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.389,
+    "source_domains": [
+      "github.com",
+      "openwebui.com"
+    ],
+    "domain_diversity": 2,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.25,
+      "detail": [
+        {
+          "label": "message-send speedup, 130 MB PostgreSQL test chat",
+          "value": "34x faster",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "server accept time, before to after",
+          "value": "0.32 seconds, down from 10.9",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "database writes per message, before to after",
+          "value": "533 MB to 2 KB per message",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GitHub stars (seen 2026-11-25)",
+          "value": "159.5k stars",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "GitHub contributors (seen 2026-11-25)",
+          "value": "888 contributors",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Open Terminal default Docker image size",
+          "value": "about 4 GB",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "4",
+          "scene_ids": [
+            "s03"
+          ]
+        },
+        {
+          "label": "coding agents selectable in the model picker",
+          "value": "13 agents",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "13",
+          "scene_ids": [
+            "s07"
+          ]
+        },
+        {
+          "label": "v0.13.5 release timestamp",
+          "value": "2026-11-25T09:37:38Z",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 19,
+      "found_count": 6,
+      "score": 0.316,
+      "found": [
+        "Open WebUI",
+        "Machine",
+        "Working",
+        "v0.13.5",
+        "Docker",
+        "Cursor and GitHub Copilot"
+      ],
+      "missing": [
+        "Added",
+        "Ollama",
+        "Open WebUI Computer",
+        "Nov",
+        "Ollama and OpenAI-compatible APIs",
+        "Ollama and Nvidia GPU",
+        "UTC",
+        "v0.13.0",
+        "v0.13.1",
+        "v0.13.4",
+        "Open WebUI 0.13",
+        "WebUI 0.13.5",
+        "Open WebUI GitHub"
+      ],
+      "top2": [
+        "Open WebUI",
+        "Machine"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Open WebUI",
+          "tier": 0,
+          "claim_count": 5,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Machine",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Working",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Added",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.13.5",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Docker",
+          "tier": 0,
+          "claim_count": 2,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Open WebUI Computer",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Nov",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama and OpenAI-compatible APIs",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Ollama and Nvidia GPU",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "UTC",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.13.0",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.13.1",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "v0.13.4",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Cursor and GitHub Copilot",
+          "tier": 1,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Open WebUI 0.13",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "WebUI 0.13.5",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Open WebUI GitHub",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 25,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Open WebUI"
+      ],
+      "hook_text": "Your model and your project, apart",
+      "first_sentence": "Your model lives in Open WebUI, and your project lives on disk."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "how-to-three-moves",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 9,
+      "specific_count": 7,
+      "ratio": 0.778,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 9.0,
+          "specific": true,
+          "hits": [
+            "entity:Open WebUI"
+          ],
+          "narration": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 10.7,
+          "specific": true,
+          "hits": [
+            "entity:Open WebUI",
+            "entity:v0.13.5"
+          ],
+          "narration": "Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 12.4,
+          "specific": true,
+          "hits": [
+            "num:about 4 GB",
+            "entity:Machine",
+            "entity:Docker"
+          ],
+          "narration": "Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 11.4,
+          "specific": true,
+          "hits": [
+            "entity:Machine",
+            "entity:Working"
+          ],
+          "narration": "Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 15.2,
+          "specific": false,
+          "hits": [],
+          "narration": "Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 11.0,
+          "specific": true,
+          "hits": [
+            "entity:Machine"
+          ],
+          "narration": "Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click."
+        },
+        {
+          "id": "s07",
+          "role": "explain",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "num:13 agents"
+          ],
+          "narration": "The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor."
+        },
+        {
+          "id": "s08",
+          "role": "explain",
+          "est_duration_s": 9.7,
+          "specific": false,
+          "hits": [],
+          "narration": "The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there."
+        },
+        {
+          "id": "s09",
+          "role": "payoff_close",
+          "est_duration_s": 10.3,
+          "specific": true,
+          "hits": [
+            "entity:Open WebUI"
+          ],
+          "narration": "Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.2,
+      "words": 290,
+      "sentences": 25,
+      "est_speech_s": 100.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your model lives in Open WebUI, and your project lives on disk. The chat cannot see your project. Every code question is a copy-paste round trip. Open WebUI zero point thirteen point five changes what a folder is. It becomes a folder workspace, a sidebar folder tied to a computer and a project directory you pick once. Move one: connect the machine. A machine is an Open Terminal connection, a self-hosted computer where the model runs commands. One Docker command starts it. The default image takes about four gigabytes of disk, desktop included. Move two: set the folder's machine and directory. Create a folder in the sidebar, open its settings, pick the Machine and the Working directory. New chats inside inherit its model, directory and knowledge. Move three: give the model a job. Tell it a test fails in the date parser folder: fix it and run the tests. The fix lands in the Files tab, the tests run in the terminal, and your app opens in the Browser tab. Nothing here is free rein. The machine is a container you started, and the directory was picked once. Ask for approval, a per-chat mode, makes every tool call wait for your click. The honest catch: these are browser tabs over a container, not an I D E. But the model picker lists thirteen coding agents, including Cursor. The agent moves inside your self-hosted setup. An A G E N T S dot M D in the project folder is read by every new chat there. Reopen the folder tomorrow and everything is where you left it. In Open WebUI, your tests and your app run live beside the chat. The copy-paste round trip is done.",
+    "on_screen": "Your model and your project, apart | Your chat can't see your project | copy-paste, every single question | v0.13.5 | folder workspace | one computer, one project directory | Move one: connect the machine | Open Terminal | 4 GB of disk | Move two: set machine + directory | new chats inherit your defaults | Move three: give the job | Files | terminal | Browser | chat stays open | no free rein | Ask for approval | every call waits for Allow | honest catch: not an IDE | 13 coding agents | Cursor + GitHub Copilot | AGENTS.md | every new chat reads it | tests pass | app live | chat open"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 3,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-25-open-webui-0-13-5-your-project-storyboard.json",
+        "scenes": 9,
+        "fk_grade": 6.2,
+        "words": 290,
+        "est_speech_s": 100.0,
+        "blockers": [],
+        "advisories": [
+          "8 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "violations": [
+          "8 hashtags -- 2-3 is the target (only 3 show above the title; see shared/playbook/hashtags-tags.md)",
+          "0 YouTube keyword tags \u2014 15\u201325 recommended (the Studio Tags box, separate from hashtags)"
+        ],
+        "warnings": [
+          "title 48 chars \u2014 mobile truncates ~40",
+          "FK grade 6.2 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-25-open-webui-0-13-5-your-project-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "smooth-explainer",
+  "thresholds": {
+    "number_spend": {
+      "max_count": 3
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": false
+    },
+    "scene_specificity": {
+      "allow_generic": 2
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 2,
+        "heard": 2,
+        "total": 8,
+        "need": "<=3",
+        "min": null,
+        "max": 3,
+        "mode": "cap"
+      },
+      "entity_spend": {
+        "score": 0.316,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Open WebUI",
+          "Machine"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Open WebUI"
+        ],
+        "waived": true
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 7,
+        "total": 9
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "how-to-three-moves",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
