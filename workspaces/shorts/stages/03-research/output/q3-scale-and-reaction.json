@@ -1,0 +1,368 @@
+{
+  "question": "Why does this matter to someone running AI on their own hardware: what is Open WebUI's scale and standing, how do local-AI users use it today, and what is the reaction to the 0.13.5 folder-workspaces release?",
+  "topic": "Open WebUI 0.13.5 folder workspaces: your project beside your chat (a self-hosted ChatGPT-style UI for local models like Ollama)",
+  "accessed": "2026-11-25",
+  "budget_used": {
+    "searches": 3,
+    "page_fetches": 4
+  },
+  "sources": [
+    {
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)"
+    },
+    {
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+      "title": "open-webui/CHANGELOG.md at main - open-webui/open-webui - GitHub",
+      "tier": "tier 1 (primary: in-repo CHANGELOG)"
+    },
+    {
+      "url": "https://openwebui.com/blog/v0-13-4-ai-that-does-the-work-not-just-answers",
+      "title": "Open WebUI v0.13.4: Interactive Charts, Videos, and AI Agents - Open WebUI Blog",
+      "tier": "tier 2 (official blog)"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=48346990",
+      "title": "Why not just use open webui? / Hacker News",
+      "tier": "tier 4 (community: Hacker News)"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Open WebUI's GitHub repository showed 159.5k stars when the page was fetched on 2026-11-25.",
+      "verbatim_quote": "159.5k stars",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The same page showed 23.1k forks and 687 watchers on 2026-11-25.",
+      "verbatim_quote": "23.1k forks",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The repository is large and long-running: 21,286 commits, 183 releases, and 888 contributors as of 2026-11-25.",
+      "verbatim_quote": "21,286 Commits",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "GitHub's 'Used by' counter on the repo page lists 280, which counts GitHub-registered dependent repositories, not installs or downloads.",
+      "verbatim_quote": "280 (280)",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The project is maintained under the open-webui GitHub organization; the latest main-branch commit (merged 2026-11-25) is by tjbck merging pull request #34613 from open-webui/dev, and the project takes sponsorship through GitHub Sponsors with an enterprise-sales channel advertised on its official blog.",
+      "verbatim_quote": "Merge pull request #34613 from open-webui/dev",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "v0.13.5 was tagged the latest release on 2026-11-25, the same day as this research (the repo page showed it published '2 hours ago').",
+      "verbatim_quote": "v0.13.5Latest 2 hours agoNov 25, 2026",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The changelog entry for 0.13.5 is dated 2026-11-25 and its headline addition is folder workspaces: run the project's tests in a terminal and try the app in a browser while the chat stays open beside them, with one computer and project directory chosen once per folder; it absorbs the standalone Open WebUI Computer (cptr) app.",
+      "verbatim_quote": "**Folder workspaces.** Run your project’s tests in a terminal and try the app in a browser while your chat stays open beside them. Choose the computer and project directory once for the folder.",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+      "title": "open-webui/CHANGELOG.md at main - open-webui/open-webui - GitHub",
+      "tier": "tier 1 (primary: in-repo CHANGELOG)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "In 0.13.5, every new chat in a project folder reads per-project instructions from an AGENTS.md or CLAUDE.md file, and with Open Terminal 0.18.0+ the assistant can follow reusable project skills and run checks in the terminal.",
+      "verbatim_quote": "**Project instructions and skills.** Tell the assistant how your project works once in an `AGENTS.md` or `CLAUDE.md` file. Every new chat in that project folder reads those instructions.",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+      "title": "open-webui/CHANGELOG.md at main - open-webui/open-webui - GitHub",
+      "tier": "tier 1 (primary: in-repo CHANGELOG)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "0.13.5 also fixes long-chat performance: sending a message was 34x faster in the project's 130 MB PostgreSQL test chat, and database writes fell from 533 MB to 2 KB per message.",
+      "verbatim_quote": "Sending a message was 34× faster in our 130 MB PostgreSQL test chat. The server accepted it in 0.32 seconds, down from 10.9, because it now saves just the messages that changed. Database writes fell from 533 MB to 2 KB per message.",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+      "title": "open-webui/CHANGELOG.md at main - open-webui/open-webui - GitHub",
+      "tier": "tier 1 (primary: in-repo CHANGELOG)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "0.13.5 includes docked note chats, keeping the document being written and the consulting chat visible side by side, the side-by-side pattern editor users know from tools like Cursor.",
+      "verbatim_quote": "**Docked note chats.** Keep the note you’re writing and the chat you’re consulting visible side by side. Ask about a passage or work through a revision, then collapse the conversation when you want the full width back for writing.",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+      "title": "open-webui/CHANGELOG.md at main - open-webui/open-webui - GitHub",
+      "tier": "tier 1 (primary: in-repo CHANGELOG)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Open WebUI positions itself as a self-hosted platform that runs entirely offline, connecting local models through Ollama and any OpenAI-compatible API, with agents added through the Agent Client Protocol.",
+      "verbatim_quote": "Open WebUI is [**a home for AI**](https://docs.openwebui.com/): an extensible, easy-to-use, self-hosted platform built to run entirely offline. Connect local models through Ollama, use OpenAI-compatible APIs for local and cloud models, or add agents through [Agent Client Protocol (ACP)](https://docs.openwebui.com/features/open-terminal/agents).",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: repo README)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Local-AI installs are first-class: Docker ships an image bundling Open WebUI with Ollama, plus :cuda and :slim variants, and a pip/uvx install path is documented in the README.",
+      "verbatim_quote": "Open WebUI bundled with Ollama",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: repo README)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Nvidia GPU hardware is supported directly: the README documents --gpus all for the :cuda and :ollama images (requiring the Nvidia Container Toolkit) and an OLLAMA_BASE_URL option to point at an Ollama server on another machine.",
+      "verbatim_quote": "Enable Nvidia GPU access for `:cuda` or `:ollama`; requires the Nvidia Container Toolkit",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: repo README)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The 0.13.x series repositioned Open WebUI from a chat interface into a workspace where agents do whole jobs, per the project's official blog.",
+      "verbatim_quote": "v0.13.1 to v0.13.4 make Open WebUI a place where work gets done, not only answered.",
+      "url": "https://openwebui.com/blog/v0-13-4-ai-that-does-the-work-not-just-answers",
+      "title": "Open WebUI v0.13.4: Interactive Charts, Videos, and AI Agents - Open WebUI Blog",
+      "tier": "tier 2 (official blog)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Cursor and GitHub Copilot are among 13 coding agents selectable in Open WebUI's model picker, which is the direct comparison point to editor side-chats: the agent tool moves inside the self-hosted UI rather than the chat living inside the editor.",
+      "verbatim_quote": "We support 13 agents: Claude Code, Codex, Cursor, Grok, OpenCode, Cline, Gemini CLI, Pi, Hermes, Antigravity, GitHub Copilot, Goose, and Qwen Code.",
+      "url": "https://openwebui.com/blog/v0-13-4-ai-that-does-the-work-not-just-answers",
+      "title": "Open WebUI v0.13.4: Interactive Charts, Videos, and AI Agents - Open WebUI Blog",
+      "tier": "tier 2 (official blog)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "In a Hacker News thread from roughly June 2026 (comments marked '5 months ago' from 2026-11-25, with one referencing June 1st), commenters criticized Open WebUI's branding restriction, calling it source-available rather than open source.",
+      "verbatim_quote": "Open webui isn't fully open source, because it doesn't allow you to change or remove Open Webui branding.",
+      "url": "https://news.ycombinator.com/item?id=48346990",
+      "title": "Why not just use open webui? / Hacker News",
+      "tier": "tier 4 (community: Hacker News)",
+      "confidence": "medium",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "The same thread shows both fandom and competitive pressure: a self-described fan flags a document-editing feature Open WebUI lacked, in a thread about rival Odysseus.",
+      "verbatim_quote": "I am a 'fan' of Open Web UI, but the document editing mode is a compelling feature that Open Web UI does not have.",
+      "url": "https://news.ycombinator.com/item?id=48346990",
+      "title": "Why not just use open webui? / Hacker News",
+      "tier": "tier 4 (community: Hacker News)",
+      "confidence": "medium",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "A community install complaint cites 12 GB of pip packages as a reason to give up on Open WebUI, while another commenter answers that docker compose is the simple path.",
+      "verbatim_quote": "I tried installing openwebui once. I gave up after the first 12 gigabytes of pip packages.",
+      "url": "https://news.ycombinator.com/item?id=48346990",
+      "title": "Why not just use open webui? / Hacker News",
+      "tier": "tier 4 (community: Hacker News)",
+      "confidence": "medium",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    },
+    {
+      "claim": "Because v0.13.5 shipped on 2026-11-25 only hours before this research, no community reaction to the folder-workspaces release exists in any page fetched this session; the Hacker News sentiment above predates the release by about five months.",
+      "verbatim_quote": "2 hours agoNov 25, 2026",
+      "url": "https://github.com/open-webui/open-webui",
+      "title": "GitHub - open-webui/open-webui: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "tier": "tier 1 (primary: GitHub repo page)",
+      "confidence": "high",
+      "via": "web_extract",
+      "accessed": "2026-11-25"
+    }
+  ],
+  "numbers": [
+    {
+      "label": "GitHub stars, seen 2026-11-25",
+      "value": "159.5k stars",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "GitHub forks, seen 2026-11-25",
+      "value": "23.1k forks",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "GitHub watchers, seen 2026-11-25",
+      "value": "687 watching",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "Contributors, seen 2026-11-25",
+      "value": "888 contributors",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "Commits on main, seen 2026-11-25",
+      "value": "21,286 Commits",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "Releases, seen 2026-11-25",
+      "value": "183 releases",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "GitHub 'Used by' dependents (registered dependent repos, not installs), seen 2026-11-25",
+      "value": "280",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "label": "v0.13.5 release date",
+      "value": "2026-11-25",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Message-send speedup, 130 MB PostgreSQL test chat",
+      "value": "34× faster; the server accepted it in 0.32 seconds, down from 10.9",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Database writes per message in the same test",
+      "value": "533 MB to 2 KB per message",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Shared-chat search, PostgreSQL test with 61,000 chats",
+      "value": "18.2 seconds to 1.4",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Sidebar folder-list load, test with 30 folders and 240 files",
+      "value": "44–61 milliseconds, down from 335",
+      "url": "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Coding agents in the model picker (v0.13.4 official blog)",
+      "value": "13 agents",
+      "url": "https://openwebui.com/blog/v0-13-4-ai-that-does-the-work-not-just-answers"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "Cursor's side chat",
+      "mapping": "0.13.5 docks the chat beside your project's terminal, browser and files instead of beside your code editor; chat and artifacts share one folder",
+      "limit": "Cursor binds the chat to its editor and its vendor's models, while Open WebUI's folder drives any model or agent on hardware you host, and it is a web UI, not an IDE"
+    },
+    {
+      "vehicle": "ChatGPT Projects",
+      "mapping": "a folder groups chats, notes, knowledge and a working directory per project, like ChatGPT's Projects, but self-hosted with local models",
+      "limit": "ChatGPT's project runs on OpenAI's cloud with cloud models only; an Open WebUI folder has a real terminal and browser the model can drive"
+    },
+    {
+      "vehicle": "VS Code workbench",
+      "mapping": "tabs for terminal, browser and editor sit beside a chat panel, and the computer and project directory are chosen once per folder like a workspace setting",
+      "limit": "Open WebUI is not an IDE: no language intelligence, and the 'computer' is a container or SSH box, not the viewer's laptop"
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "Open WebUI is just a pretty chat skin over Ollama",
+      "reality": "The README calls it 'a home for AI', a self-hosted platform built to run entirely offline, and the 0.13.x series added terminals, browsers, agents and per-project instructions",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "myth": "Installing it means downloading 12 GB of pip packages",
+      "reality": "That is one community anecdote about the pip path; the README's documented paths are one Docker command (including a :slim image and an image bundling Ollama) or uvx open-webui@latest serve",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "myth": "Open WebUI is fully open source with no strings attached",
+      "reality": "Hacker News commenters report the license does not allow changing or removing the Open WebUI branding, which they call source-available rather than open source; the license text itself was not fetched this session",
+      "url": "https://news.ycombinator.com/item?id=48346990"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Open WebUI",
+      "definition": "A self-hosted, offline-capable web platform for chatting with local and cloud models, run from Docker, pip or a desktop app."
+    },
+    {
+      "term": "Ollama",
+      "definition": "A local model runner that Open WebUI connects to, including a Docker image that bundles both together."
+    },
+    {
+      "term": "Folder workspace (0.13.5)",
+      "definition": "A sidebar folder that gets one computer and one project directory, where terminal, browser and chat tabs stay open together."
+    },
+    {
+      "term": "Open Terminal",
+      "definition": "Open WebUI's self-hosted sandboxed computer environment where a model can run commands, edit files, and use a browser and a desktop."
+    },
+    {
+      "term": "AGENTS.md / CLAUDE.md",
+      "definition": "Per-project instruction files that every new chat in a 0.13.5 project folder reads."
+    },
+    {
+      "term": "Agent Client Protocol (ACP)",
+      "definition": "The protocol Open WebUI uses to plug external coding agents such as Claude Code or Cursor in as selectable models."
+    },
+    {
+      "term": "tjbck",
+      "definition": "The GitHub handle of Open WebUI's lead maintainer, author of the latest main-branch commit seen on 2026-11-25."
+    }
+  ],
+  "unverified": [
+    "Open WebUI's total install base: no downloads or Docker-pull figure was fetched; GitHub's 'Used by 280' counts only GitHub-registered dependent repositories, not installs.",
+    "Direct llama.cpp support: the fetched README names Ollama and OpenAI-compatible APIs; connecting llama.cpp's server through an OpenAI-compatible endpoint is plausible but was not stated on any fetched page.",
+    "Open WebUI deployments on DGX-class hardware: no fetched page mentions DGX; the README documents Nvidia GPU access only generally (--gpus all, :cuda tag, Nvidia Container Toolkit).",
+    "Whether the license formally forbids removing branding: only Hacker News commenters said so; the LICENSE file was not fetched this session.",
+    "Contents of r/OpenWebUI release threads (0.13.0 and 0.13.1 posts mentioning tabbed workspaces, side chats and terminals): the Reddit scrape failed, so their titles were seen only in search snippets, not in a fetched page.",
+    "Community reaction to 0.13.5 specifically: the release shipped hours before this research and no post, thread or article about it was found."
+  ],
+  "not_found": [
+    "A download or install count for Open WebUI (Docker Hub pulls, pip download stats): not present on the fetched repo page; three searches surfaced no official install-base figure.",
+    "Any community post, thread or article reacting to the 0.13.5 folder-workspaces release: not found; the release is dated 2026-11-25, the same day as this research.",
+    "r/OpenWebUI thread contents: the scrape attempt failed (site not supported by the fetcher); not fetched, therefore not cited.",
+    "Open WebUI usage on DGX-class or other specific local hardware: not mentioned on any fetched page."
+  ]
+}
