@@ -2,14 +2,14 @@
 slug: 2026-11-24-glm-5-3-is-not-mit
 workspace: shorts
 title: GLM 5.3 is not MIT
-status: idea
+status: expired
 pillar: enterprise-privacy
 structure: story-first
 format: classic
 style_pack: ""
 value_types: "REFRAMES,TEACHES"
 created: 2026-11-24
-updated: "2026-11-24T12:09:03Z"
+updated: "2026-11-25T14:35:08Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-25T14:35:08Z 2026-11-25T14:35:08Z expired: not from today's picks (2026-11-25); the factory carries no backlog
