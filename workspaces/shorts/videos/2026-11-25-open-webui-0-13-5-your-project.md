@@ -39,6 +39,8 @@ blotato_post_id: ""
 - Checkpoint (step 1): structures how-to-three-moves and news-react-so-what, both rotation-legal (last two were worked-example and contrarian-take); value types EQUIPS,TEACHES confirmed; promise: connect one machine, bind a folder, give the model a job tonight.
 - Checkpoint (step 2): 10 hooks scored, kept the Situation hook for A and Named contradiction for B; A's first hook text re-classed to situation after the sameness gate caught a named-contradiction repeat of 2026-11-24.
 - Gates: validator 0 blockers (2 advisories kept with reasons: hashtags and keyword tags are stage 05 fields); eval_short 0 failures; sameness ok vs 5 comparisons; variety_check recorded (ledger entry 81); style_pack signal recorded; normalizer scenes_changed 0.
+- Checkpoint (step 3): chose the searchable title "Open WebUI 0.13.5: folder workspaces" over two intriguing variants because the pick's surface is search-heavy (open webui autocomplete depth 207); rubric scored 100/100 after the description carried keyword and promise in the first 150 characters.
+- Compliance: contains_synthetic_media false (typographic scenes, creator's cloned voice); original_insight names the three-week 0.13.x assembly timeline; no prior Open WebUI video exists, so the description's related line names the channel.
 
 ## Build journal
 - 2026-11-25T13:06:09Z 03-research ok: 9 sources, 11 claims, validator 0
