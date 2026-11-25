@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-25-open-webui-0-13-5-your-project
 workspace: shorts
-title: "Open WebUI 0.13.5: your project beside your chat"
-status: scripted
+title: "Open WebUI 0.13.5: folder workspaces"
+status: ready-to-build
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-25
-updated: "2026-11-25T13:42:37Z"
+updated: "2026-11-25T13:43:42Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 100
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,8 +26,8 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-25-ideas]]
 - Research: [[stages/03-research/output/2026-11-25-open-webui-0-13-5-your-project-brief]]
 - Script: [[stages/04-script/output/2026-11-25-open-webui-0-13-5-your-project-script]]
-- Package: (filled by stage 05)
-- Voice: (filled by stage 06)
+- Package: [[stages/05-package/output/2026-11-25-open-webui-0-13-5-your-project-package]]
+- Voice: [[stages/06-voice/output/2026-11-25-open-webui-0-13-5-your-project-narration]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -43,3 +43,4 @@ blotato_post_id: ""
 ## Build journal
 - 2026-11-25T13:06:09Z 03-research ok: 9 sources, 11 claims, validator 0
 - 2026-11-25T13:42:37Z 04-script ok: A beat B 20-18, gates 0 failures, est 98.3s
+- 2026-11-25T13:43:42Z 05-package ok: seo 100, ready-to-build
