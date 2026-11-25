@@ -2,19 +2,19 @@
 slug: 2026-11-25-open-webui-0-13-5-your-project
 workspace: shorts
 title: "Open WebUI 0.13.5: folder workspaces"
-status: ready-to-build
+status: building
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-25
-updated: "2026-11-25T13:43:42Z"
+updated: "2026-11-25T13:49:10Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -46,3 +46,4 @@ blotato_post_id: ""
 - 2026-11-25T13:06:09Z 03-research ok: 9 sources, 11 claims, validator 0
 - 2026-11-25T13:42:37Z 04-script ok: A beat B 20-18, gates 0 failures, est 98.3s
 - 2026-11-25T13:43:42Z 05-package ok: seo 100, ready-to-build
+- 2026-11-25T13:49:10Z build start on gn100-83c4
