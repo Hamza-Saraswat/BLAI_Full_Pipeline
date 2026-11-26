@@ -2,19 +2,19 @@
 slug: 2026-11-26-claude-code-with-a-free-local
 workspace: shorts
 title: Run Claude Code on Ollama for free
-status: ready-to-build
+status: building
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-26
-updated: "2026-11-26T13:48:27Z"
+updated: "2026-11-26T13:51:11Z"
 publish_slot: ""
 seo_score: 96
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -43,3 +43,4 @@ blotato_post_id: ""
 - 2026-11-26T12:51:44Z 03-research ok: 16 sources, 10 claims, validator exit 0
 - 2026-11-26T13:45:53Z 04-script ok: draft B wins 22-17, validator 0 blockers, eval gates pass, sameness clean
 - 2026-11-26T13:48:27Z 05-package ok: title searchable, seo 96, manifest written
+- 2026-11-26T13:51:11Z build start on gn100-83c4
