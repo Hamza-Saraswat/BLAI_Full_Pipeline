@@ -2,14 +2,14 @@
 slug: 2026-11-26-claude-code-with-a-free-local
 workspace: shorts
 title: "Claude Code with a free local LLM: the Ollama setup"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-26
-updated: "2026-11-26T12:09:00Z"
+updated: "2026-11-26T12:51:44Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-26-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-26-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-26-claude-code-with-a-free-local-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - 2026-11-26 stage 03 checkpoint (unattended): angle confirmed as the ideas note states it -- "Point Claude Code at a local Ollama model tonight and stop paying per prompt"; slug 2026-11-26-claude-code-with-a-free-local, lane how-to, format classic. No redirect; no swap requested (no picks.md).
 - FireCrawl is out of credits this run (402), so research runs on web_search + web_extract, the documented fallback; source count stays at standard depth (8-12).
 ## Build journal
-
+- 2026-11-26T12:51:44Z 03-research ok: 16 sources, 10 claims, validator exit 0
