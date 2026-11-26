@@ -2,18 +2,18 @@
 slug: 2026-11-25-open-webui-0-13-5-your-project
 workspace: shorts
 title: "Open WebUI 0.13.5: folder workspaces"
-status: blocked
+status: expired
 pillar: how-to
 structure: how-to-three-moves
 format: smooth-explainer
 style_pack: signal
 value_types: "EQUIPS,TEACHES"
 created: 2026-11-25
-updated: "2026-11-25T13:51:12Z"
+updated: "2026-11-26T14:35:41Z"
 publish_slot: ""
 seo_score: 100
 feedback: ""
-blocked_reason: "07-render: 07-render: scene s01 failed: llm_call: unknown provider 'opencode-free' (not built in, not in /home/buildlocalai/.hermes/config.yaml)"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -51,3 +51,4 @@ blotato_post_id: ""
 - 2026-11-25T13:51:11Z 07-render fail 0s (07-render: scene s01 failed: llm_call: unknown provider 'opencode-free' (not built in, not in /home/buildlocalai/.hermes/config.yaml))
 - 2026-11-25T13:51:12Z 07-render fail 0s (07-render: scene s01 failed: llm_call: unknown provider 'opencode-free' (not built in, not in /home/buildlocalai/.hermes/config.yaml))
 - 2026-11-25T13:51:12Z blocked at 07-render
+- 2026-11-26T14:35:41Z 2026-11-26T14:35:41Z expired: not from today's picks (2026-11-26); the factory carries no backlog

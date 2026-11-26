@@ -2,14 +2,14 @@
 slug: 2026-11-25-rtx-spark-on-linux-14-tok-s-wh
 workspace: shorts
 title: "RTX Spark on Linux: 14 tok/s when you plug in"
-status: idea
+status: expired
 pillar: myth-bust
 structure: ""
 format: classic
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-11-25
-updated: "2026-11-25T12:11:05Z"
+updated: "2026-11-26T14:35:41Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -36,4 +36,4 @@ blotato_post_id: ""
 - Source verified this run: gigazine/MindStudio article fetched and read before the pick was locked.
 
 ## Build journal
-
+- 2026-11-26T14:35:41Z 2026-11-26T14:35:41Z expired: not from today's picks (2026-11-26); the factory carries no backlog
