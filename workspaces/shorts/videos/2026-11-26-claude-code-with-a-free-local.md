@@ -2,18 +2,18 @@
 slug: 2026-11-26-claude-code-with-a-free-local
 workspace: shorts
 title: Run Claude Code on Ollama for free
-status: building
+status: blocked
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-26
-updated: "2026-11-26T13:51:11Z"
+updated: "2026-11-26T13:57:01Z"
 publish_slot: ""
 seo_score: 96
 feedback: ""
-blocked_reason: ""
+blocked_reason: "06-voice: voice QA failed: WER 0.110, 12 mismatch(es): expected 'clawed' heard 'claude'; expected 'ohlah' heard 'olah'; expected 'clawed' heard 'claude'"
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-26-claude-code-with-a-free-local-brief]]
 - Script: [[stages/04-script/output/2026-11-26-claude-code-with-a-free-local-script]]
 - Package: [[stages/05-package/output/2026-11-26-claude-code-with-a-free-local-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-26-claude-code-with-a-free-local-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -44,3 +44,6 @@ blotato_post_id: ""
 - 2026-11-26T13:45:53Z 04-script ok: draft B wins 22-17, validator 0 blockers, eval gates pass, sameness clean
 - 2026-11-26T13:48:27Z 05-package ok: title searchable, seo 96, manifest written
 - 2026-11-26T13:51:11Z build start on gn100-83c4
+- 2026-11-26T13:54:39Z 06-voice fail 205s (voice QA failed: WER 0.136, 14 mismatch(es): expected "anthropic's" heard 'anthropics'; expected 'ollama' heard 'olahma'; expected 'api' heard 'of pi')
+- 2026-11-26T13:57:01Z 06-voice fail 142s (voice QA failed: WER 0.110, 12 mismatch(es): expected 'clawed' heard 'claude'; expected 'ohlah' heard 'olah'; expected 'clawed' heard 'claude')
+- 2026-11-26T13:57:01Z blocked at 06-voice
