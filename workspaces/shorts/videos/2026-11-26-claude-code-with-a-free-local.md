@@ -33,6 +33,8 @@ blotato_post_id: ""
 
 ## Decisions
 
+- 2026-11-26 stage 04 checkpoint 1 (unattended): draft A structure worked-example, draft B news-react-so-what; both clear the rotation rule (last two ledger entries: contrarian-take, how-to-three-moves). how-to-three-moves is the brief's natural fit but is barred by yesterday's entry, so worked-example carries the process instead. Locked value types TEACHES (the BASE_URL redirect mechanism and the context trap) and EQUIPS (three lines plus a model pick the viewer runs tonight). Promise: after thirty-five seconds you can point Claude Code at a free local Ollama model and run your first prompt tonight.
+- 2026-11-26 stage 04 checkpoint 2 (unattended): 10 hooks scored, picks are "Twenty dollars a month, or three lines tonight." (Price, draft A) and "Claude Code runs without Anthropic's cloud." (named contradiction, draft B); different patterns, both carry a product or number, both true per brief claims 1, 3 and 7.
 - 2026-11-26 stage 03 checkpoint (unattended): angle confirmed as the ideas note states it -- "Point Claude Code at a local Ollama model tonight and stop paying per prompt"; slug 2026-11-26-claude-code-with-a-free-local, lane how-to, format classic. No redirect; no swap requested (no picks.md).
 - FireCrawl is out of credits this run (402), so research runs on web_search + web_extract, the documented fallback; source count stays at standard depth (8-12).
 ## Build journal
