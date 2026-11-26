@@ -2,14 +2,14 @@
 slug: 2026-11-26-claude-code-with-a-free-local
 workspace: shorts
 title: "Claude Code with a free local LLM: the Ollama setup"
-status: researched
+status: scripted
 pillar: how-to
-structure: ""
+structure: news-react-so-what
 format: classic
-style_pack: ""
+style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-26
-updated: "2026-11-26T12:51:44Z"
+updated: "2026-11-26T13:45:53Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -25,7 +25,7 @@ blotato_post_id: ""
 - Radar: [[stages/01-radar/output/2026-11-26-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-26-ideas]]
 - Research: [[stages/03-research/output/2026-11-26-claude-code-with-a-free-local-brief]]
-- Script: (filled by stage 04)
+- Script: [[stages/04-script/output/2026-11-26-claude-code-with-a-free-local-script]]
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
@@ -37,5 +37,7 @@ blotato_post_id: ""
 - 2026-11-26 stage 04 checkpoint 2 (unattended): 10 hooks scored, picks are "Twenty dollars a month, or three lines tonight." (Price, draft A) and "Claude Code runs without Anthropic's cloud." (named contradiction, draft B); different patterns, both carry a product or number, both true per brief claims 1, 3 and 7.
 - 2026-11-26 stage 03 checkpoint (unattended): angle confirmed as the ideas note states it -- "Point Claude Code at a local Ollama model tonight and stop paying per prompt"; slug 2026-11-26-claude-code-with-a-free-local, lane how-to, format classic. No redirect; no swap requested (no picks.md).
 - FireCrawl is out of credits this run (402), so research runs on web_search + web_extract, the documented fallback; source count stays at standard depth (8-12).
+- 2026-11-26 stage 04 close (unattended): writers ran as two llm_call.py kimi-k3 calls in private scratch dirs (writer A's first two calls died at the 32k completion cap; a third call with an explicit output-cap line in the system file landed). Validator 0 blockers 0 advisories on both drafts; eval gates pass on both (entity_spend soft advisory only); normalize A scenes_changed 2, B 4; sameness clean (5 comparisons, 0 violations). Draft B (news-react-so-what) won 22-17 over draft A (worked-example); one graft from A (the Ollama's-engineering catch line). style_rotation picked terminal (3 keyword hits, previous signal); ledger entry 82 recorded. Hook: "Claude Code runs without Anthropic's cloud." (named contradiction, candidate 2 of 10).
 ## Build journal
 - 2026-11-26T12:51:44Z 03-research ok: 16 sources, 10 claims, validator exit 0
+- 2026-11-26T13:45:53Z 04-script ok: draft B wins 22-17, validator 0 blockers, eval gates pass, sameness clean
