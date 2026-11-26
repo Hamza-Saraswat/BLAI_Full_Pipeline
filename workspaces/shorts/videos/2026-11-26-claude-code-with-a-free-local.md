@@ -33,5 +33,7 @@ blotato_post_id: ""
 
 ## Decisions
 
+- 2026-11-26 stage 03 checkpoint (unattended): angle confirmed as the ideas note states it -- "Point Claude Code at a local Ollama model tonight and stop paying per prompt"; slug 2026-11-26-claude-code-with-a-free-local, lane how-to, format classic. No redirect; no swap requested (no picks.md).
+- FireCrawl is out of credits this run (402), so research runs on web_search + web_extract, the documented fallback; source count stays at standard depth (8-12).
 ## Build journal
 
