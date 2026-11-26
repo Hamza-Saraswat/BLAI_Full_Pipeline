@@ -1,0 +1,156 @@
+{
+  "slug": "2026-11-26-claude-code-with-a-free-local",
+  "topic": "Claude Code with a free local LLM: the Ollama setup",
+  "title": "Claude Code on a Free Local LLM (Ollama)",
+  "description": "Ollama now speaks the Anthropic Messages API, so Claude Code can run against a free local model on your own hardware. You set three environment variables, dodge the 4k default context trap, and run your first local prompt tonight. You'll learn what ANTHROPIC_BASE_URL actually changes and where local models still fall over. (Narration is AI-generated.)",
+  "hashtags": [
+    "#ClaudeCode",
+    "#Ollama",
+    "#LocalLLM"
+  ],
+  "hook_text": "CLAUDE CODE RUNS WITHOUT ANTHROPIC'S CLOUD",
+  "hook_candidates": [
+    "Twenty dollars a month, or three lines tonight.",
+    "Claude Code runs without Anthropic's cloud.",
+    "Your terminal agent doesn't need Anthropic's servers.",
+    "Three lines turn Claude Code local tonight.",
+    "Four thousand tokens will break your local Claude Code.",
+    "Claude Code on your GPU, zero dollars a prompt.",
+    "You pay Pro rates. Your GPU idles.",
+    "Ollama speaks Anthropic's language since January.",
+    "Sixteen gigabytes runs a Claude Code model tonight.",
+    "Same agent, same terminal, zero dollars a prompt."
+  ],
+  "style_pack": "terminal",
+  "script_format": "classic",
+  "structure": "news-react-so-what",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 38,
+  "narration_full": "Claude Code runs without Anthropic's cloud. In January, Ollama began answering the Anthropic Messages API, Claude Code's request format. Your twenty-dollar Pro agent now runs on your gaming PC. Claude Code is a courier packing Anthropic-format boxes. The base address, where requests go, is only the drop-off. Ollama, your garage, signed by copying Anthropic's protocol, so box quality rides on shelf space, your card's memory. The catch: it's Ollama's engineering, not Anthropic's blessing. The previous open model scored six point six percent on tool use. Ollama's default context, how much code it sees, starts at four thousand tokens. Agent work wants sixty-four thousand tokens minimum, so set that first. Tonight, run ollama launch claude with qwen three coder, then check slash status. Same terminal, same agent, zero dollars a prompt.",
+  "analogy": {
+    "vehicle": "A courier route with a changeable drop-off address",
+    "mapping": "Claude Code is the courier that always packs the same Anthropic-format boxes; ANTHROPIC_BASE_URL is only the delivery address, and Ollama is your garage that learned to sign for them.",
+    "limit": "The receiver had to implement the sender's exact protocol to sign at all, and once delivery is free the box quality depends on your garage's shelf space (VRAM), not the courier."
+  },
+  "music_mood": "steady-build",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Claude Code runs without Anthropic's cloud. In January, Ollama began answering the Anthropic Messages API, Claude Code's request format.",
+      "on_screen_text": "CLAUDE CODE RUNS WITHOUT ANTHROPIC'S CLOUD",
+      "visual_brief": "Frame 1 opens on a finished terminal composition: the hook line typed in amber top-center, cursor blinking, motion onset at 0.4 s; beneath it a version line stamps OLLAMA v0.14.0, JAN 16 2026 on 'In January', and the terminal prompt retypes itself on the final beat. Hard cuts only, no fades on text.",
+      "est_duration_s": 7,
+      "sfx": [
+        {
+          "at": "start",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Your twenty-dollar Pro agent now runs on your gaming PC.",
+      "on_screen_text": "PRO $20/MO TO YOUR GPU",
+      "visual_brief": "Split screen hard-cuts in: left pane a cloud invoice receipt scrolling its line items, right pane the same claude prompt running against a localhost banner; the left pane's receipt tears away on 'gaming PC' leaving the local pane full-frame.",
+      "est_duration_s": 3
+    },
+    {
+      "id": "s03",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Claude Code is a courier packing Anthropic-format boxes. The base address, where requests go, is only the drop-off.",
+      "on_screen_text": "BASE_URL = THE DROP-OFF ONLY",
+      "visual_brief": "A courier route diagram draws left to right: a terminal icon packs identical amber boxes on 'packing Anthropic-format boxes', and on 'only the drop-off' the route's destination label rewrites itself from a cloud icon to a garage icon while the boxes stay untouched.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Ollama, your garage, signed by copying Anthropic's protocol, so box quality rides on shelf space, your card's memory.",
+      "on_screen_text": "SHELF SPACE = YOUR CARD'S MEMORY",
+      "visual_brief": "A centered garage-shelf outline fills with amber model-weight blocks on 'signed by copying Anthropic's protocol'; on 'shelf space' the blocks resize against a GPU silhouette drawn beside the shelf, and the shelf label rewrites VRAM on the final beat.",
+      "est_duration_s": 6
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "The catch: it's Ollama's engineering, not Anthropic's blessing. The previous open model scored six point six percent on tool use.",
+      "on_screen_text": "tau2-bench tool use: 6.6%",
+      "visual_brief": "Split screen: left pane a grayed Anthropic docs note stamped UNSUPPORTED on 'doesn't support this'; right pane a terminal emitting malformed tool JSON that loops and retries on 'six point six percent', with the score stamped large in amber.",
+      "est_duration_s": 7,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "pop"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Ollama's default context, how much code it sees, starts at four thousand tokens. Agent work wants sixty-four thousand tokens minimum, so set that first.",
+      "on_screen_text": "DEFAULT 4K, SET 64000",
+      "visual_brief": "A giant amber 4K shatters into fragments on 'four thousand tokens', the fragments reassemble into 64000 on 'sixty-four thousand tokens', and OLLAMA_CONTEXT_LENGTH=64000 types itself beneath the number on 'set that first'.",
+      "est_duration_s": 8,
+      "sfx": [
+        {
+          "at": "number-reveal",
+          "name": "tick"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "Tonight, run ollama launch claude with qwen three coder, then check slash status. Same terminal, same agent, zero dollars a prompt.",
+      "on_screen_text": "ollama launch claude --model qwen3-coder",
+      "visual_brief": "A centered terminal echoes frame one's composition: the launch command types itself on 'Tonight', /status prints CONNECTED TO LOCALHOST on 'slash status', a $0 badge replaces the invoice on 'zero dollars a prompt', and the wordmark settle fills the final half second so the last frame rhymes with frame one.",
+      "est_duration_s": 7,
+      "render_notes": "The $0 badge mirrors the invoice from s02; wordmark settle in the final 0.5 s.",
+      "sfx": [
+        {
+          "at": "end",
+          "name": "ding"
+        }
+      ]
+    }
+  ],
+  "notes_for_review": "Numbers are verbatim from the brief ($20 monthly Pro, 6.6% tau2-bench, 4k default, 64000 minimum); 'doesn't support this' carries the brief's Anthropic-does-not-endorse conflict as the honest catch. The analogy limit rides on 'box quality rides on shelf space, your card's memory'. No positional labels anywhere: navigation is by content.",
+  "tags": [
+    "claude code ollama",
+    "claude code local llm",
+    "claude code local model",
+    "ollama claude code setup",
+    "claude code free",
+    "local llm coding",
+    "qwen3 coder",
+    "qwen3 coder 30b",
+    "gpt-oss 20b",
+    "ollama setup",
+    "local ai coding agent",
+    "anthropic base url",
+    "ollama context length",
+    "run claude code locally",
+    "free coding agent",
+    "local llm windows",
+    "local llm mac",
+    "ai coding terminal",
+    "ollama launch claude",
+    "build local ai"
+  ]
+}

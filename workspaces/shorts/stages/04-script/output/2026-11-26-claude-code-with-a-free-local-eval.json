@@ -1,0 +1,546 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-26T13:45:04+00:00",
+  "slug": "2026-11-26-claude-code-with-a-free-local",
+  "inputs": {
+    "storyboard_path": "workspaces/shorts/stages/04-script/output/2026-11-26-claude-code-with-a-free-local-storyboard.json",
+    "research_path": "workspaces/shorts/stages/03-research/output/2026-11-26-claude-code-with-a-free-local-brief.json",
+    "project_record": null,
+    "ledger_path": "workspaces/shorts/stages/04-script/output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 10,
+    "claims_by_quality": {
+      "primary": 9,
+      "benchmark": 1
+    },
+    "pct_primary_docs": 0.9,
+    "key_numbers_total": 8,
+    "entities_total": 16,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.375,
+    "source_domains": [
+      "anthropic.com",
+      "claude.com",
+      "kdnuggets.com",
+      "ollama.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 8,
+      "spent": 4,
+      "distinct": 4,
+      "score": 0.5,
+      "detail": [
+        {
+          "label": "Pro plan price (monthly billing)",
+          "value": "$20 if billed monthly",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "$20",
+          "scene_ids": [
+            "s02"
+          ]
+        },
+        {
+          "label": "Ollama default context below 24 GiB VRAM",
+          "value": "4k context",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Ollama docs floor for agents and coding tools",
+          "value": "at least 64000 tokens",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "64000",
+          "scene_ids": [
+            "s06"
+          ]
+        },
+        {
+          "label": "Ollama blog minimum context for Claude Code",
+          "value": "at least 32K tokens context length",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "qwen3-coder:30b download size",
+          "value": "19GB",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "qwen3-coder:30b activated parameters",
+          "value": "only 3.3B activated",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "three",
+          "scene_ids": [
+            "s07"
+          ]
+        },
+        {
+          "label": "gpt-oss:20b minimum memory",
+          "value": "as little as 16GB memory",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "Gemma 3 27B agentic tool use (tau2-bench)",
+          "value": "6.6%",
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "six point six",
+          "scene_ids": [
+            "s05"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 16,
+      "found_count": 7,
+      "score": 0.438,
+      "found": [
+        "Claude",
+        "Ollama",
+        "Anthropic",
+        "Claude Code",
+        "Anthropic Messages",
+        "Pro",
+        "tau2-bench"
+      ],
+      "missing": [
+        "GiB",
+        "qwen3-coder:30b",
+        "gpt-oss:20b",
+        "Apache",
+        "Max",
+        "Console",
+        "Gemma",
+        "Invalid",
+        "Set ANTHROPIC"
+      ],
+      "top2": [
+        "Claude",
+        "Ollama"
+      ],
+      "top2_present": true,
+      "entities": [
+        {
+          "name": "Claude",
+          "tier": 0,
+          "claim_count": 6,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Ollama",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Anthropic",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Claude Code",
+          "tier": 0,
+          "claim_count": 4,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GiB",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Anthropic Messages",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "qwen3-coder:30b",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Pro",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "gpt-oss:20b",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Apache",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Max",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Console",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "tau2-bench",
+          "tier": 2,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Gemma",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Invalid",
+          "tier": 2,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Set ANTHROPIC",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 12,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:Claude",
+        "entity:Anthropic",
+        "entity:Claude Code"
+      ],
+      "hook_text": "CLAUDE CODE RUNS WITHOUT ANTHROPIC'S CLOUD",
+      "first_sentence": "Claude Code runs without Anthropic's cloud."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "news-react-so-what",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 7,
+      "specific_count": 7,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "entity:Claude",
+            "entity:Ollama",
+            "entity:Anthropic",
+            "entity:Claude Code",
+            "entity:Anthropic Messages"
+          ],
+          "narration": "Claude Code runs without Anthropic's cloud. In January, Ollama began answering the Anthropic Messages API, Claude Code's request format."
+        },
+        {
+          "id": "s02",
+          "role": "explain",
+          "est_duration_s": 3,
+          "specific": true,
+          "hits": [
+            "num:$20 if billed monthly",
+            "entity:Pro"
+          ],
+          "narration": "Your twenty-dollar Pro agent now runs on your gaming PC."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "entity:Claude",
+            "entity:Anthropic",
+            "entity:Claude Code"
+          ],
+          "narration": "Claude Code is a courier packing Anthropic-format boxes. The base address, where requests go, is only the drop-off."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 6,
+          "specific": true,
+          "hits": [
+            "entity:Ollama",
+            "entity:Anthropic"
+          ],
+          "narration": "Ollama, your garage, signed by copying Anthropic's protocol, so box quality rides on shelf space, your card's memory."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:6.6%",
+            "entity:Ollama",
+            "entity:Anthropic",
+            "entity:tau2-bench"
+          ],
+          "narration": "The catch: it's Ollama's engineering, not Anthropic's blessing. The previous open model scored six point six percent on tool use."
+        },
+        {
+          "id": "s06",
+          "role": "explain",
+          "est_duration_s": 8,
+          "specific": true,
+          "hits": [
+            "num:at least 64000 tokens",
+            "entity:Ollama"
+          ],
+          "narration": "Ollama's default context, how much code it sees, starts at four thousand tokens. Agent work wants sixty-four thousand tokens minimum, so set that first."
+        },
+        {
+          "id": "s07",
+          "role": "payoff_close",
+          "est_duration_s": 7,
+          "specific": true,
+          "hits": [
+            "num:only 3.3B activated",
+            "entity:Claude",
+            "entity:Ollama"
+          ],
+          "narration": "Tonight, run ollama launch claude with qwen three coder, then check slash status. Same terminal, same agent, zero dollars a prompt."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 7.6,
+      "words": 134,
+      "sentences": 12,
+      "est_speech_s": 46.2,
+      "vo_band_ok": true
+    },
+    "narration_full": "Claude Code runs without Anthropic's cloud. In January, Ollama began answering the Anthropic Messages API, Claude Code's request format. Your twenty-dollar Pro agent now runs on your gaming PC. Claude Code is a courier packing Anthropic-format boxes. The base address, where requests go, is only the drop-off. Ollama, your garage, signed by copying Anthropic's protocol, so box quality rides on shelf space, your card's memory. The catch: it's Ollama's engineering, not Anthropic's blessing. The previous open model scored six point six percent on tool use. Ollama's default context, how much code it sees, starts at four thousand tokens. Agent work wants sixty-four thousand tokens minimum, so set that first. Tonight, run ollama launch claude with qwen three coder, then check slash status. Same terminal, same agent, zero dollars a prompt.",
+    "on_screen": "CLAUDE CODE RUNS WITHOUT ANTHROPIC'S CLOUD | CLAUDE CODE RUNS WITHOUT ANTHROPIC'S CLOUD | PRO $20/MO TO YOUR GPU | BASE_URL = THE DROP-OFF ONLY | SHELF SPACE = YOUR CARD'S MEMORY | tau2-bench tool use: 6.6% | DEFAULT 4K, SET 64000 | ollama launch claude --model qwen3-coder"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/04-script/output/2026-11-26-claude-code-with-a-free-local-storyboard.json",
+        "scenes": 7,
+        "fk_grade": 7.6,
+        "words": 134,
+        "est_speech_s": 46.2,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 7.6 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 'API' will be spoken via skills/script-gates/tts_lexicon.json",
+          "134 words \u2014 32-38s band wants ~85-110"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "workspaces/shorts/stages/03-research/output/2026-11-26-claude-code-with-a-free-local-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": true,
+    "failures": [],
+    "advisories": [
+      "entity_spend"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 4,
+        "heard": 4,
+        "total": 8,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band"
+      },
+      "entity_spend": {
+        "score": 0.438,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "Claude",
+          "Ollama"
+        ],
+        "present": true,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:Claude",
+          "entity:Anthropic",
+          "entity:Claude Code"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 7,
+        "need": 6,
+        "total": 7
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "news-react-so-what",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "workspaces/shorts/stages/04-script/output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
