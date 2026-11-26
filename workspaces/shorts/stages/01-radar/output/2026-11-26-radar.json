@@ -1,0 +1,1355 @@
+[
+  {
+    "id": "hn-0452d68d88",
+    "title": "Jev is probably Qwen3.5-35B-A3B",
+    "url": "https://modaic.dev/blog/latency-doesnt-lie",
+    "source": "hn",
+    "published_at": "2026-11-25T22:57:04Z",
+    "signals": {
+      "points": 318,
+      "num_comments": 88,
+      "signal": 0.968,
+      "signal_parts": {
+        "points": 1.0,
+        "comments": 0.895
+      },
+      "decay": 0.828,
+      "age_h": 13.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 318 points, 88 comments on HN, 13 h ago",
+    "score": 83
+  },
+  {
+    "id": "hn-a1356d98ce",
+    "title": "Bare Metal Qwen",
+    "url": "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os",
+    "source": "hn",
+    "published_at": "2026-11-25T22:15:34Z",
+    "signals": {
+      "points": 169,
+      "num_comments": 39,
+      "signal": 0.85,
+      "signal_parts": {
+        "points": 0.9,
+        "comments": 0.735
+      },
+      "decay": 0.8198,
+      "age_h": 13.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 169 points, 39 comments on HN, 14 h ago",
+    "score": 74
+  },
+  {
+    "id": "github-75a9a11746",
+    "title": "llama.cpp v1.1.0",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.1.0",
+    "source": "github",
+    "published_at": "2026-11-26T09:16:47Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "v1.1.0",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.9612,
+      "age_h": 2.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp"
+    ],
+    "summary": "## Overview llama.cpp v1.1.0 adds the Inkling 2 family (base, Mini and DSpark), Domyn Edge 4B, Zaya1 8B, RAON-1-mini and Hy4 flash, splits DFlash speculative decoding into separate draft methods, and deprecates the old `llama_batch` API in favour of `llama_batch_ext`. It brings a large set of TTS an",
+    "why_now": "Shipped: ggml-org/llama.cpp v1.1.0 released, 3 h ago",
+    "score": 72
+  },
+  {
+    "id": "github-d41725febc",
+    "title": "unsloth v0.1.925-beta: Inkling finetuning + perf fixes",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.925-beta",
+    "source": "github",
+    "published_at": "2026-11-25T14:13:35Z",
+    "signals": {
+      "repo": "unslothai/unsloth",
+      "tag": "v0.1.925-beta",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.73,
+      "age_h": 21.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:Unsloth",
+      "group": "how-to"
+    },
+    "products": [
+      "Unsloth",
+      "GGUF"
+    ],
+    "summary": "# Inkling Fine-tuning You can now fine-tune Inkling 2 Mini 1.8 to 3.1x faster and use 50% less VRAM in Unsloth with LoRA or QLoRA, then export it to GGUF or a merged 16-bit model. It trains on Kaggle's free 2x T4 and now supports tensor, pipeline and context parallel across GPUs. Also new: faster `a",
+    "why_now": "Shipped with a known break: unslothai/unsloth v0.1.925-beta released, 22 h ago",
+    "score": 58
+  },
+  {
+    "id": "github-0d84d845a1",
+    "title": "llama.cpp b12776",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12776",
+    "source": "github",
+    "published_at": "2026-11-26T11:48:37Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12776",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.997,
+      "age_h": 0.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA"
+    ],
+    "summary": "<details open> CUDA: fix ROCm CI, do not pick the tile FA kernel for DKQ 576 with a GQA ratio not divisible by 4 (#33045) * CUDA: flash attention tile kernel for DKQ 576 with a GQA ratio of 2 The tile kernel for 576/512 only had variants for GQA ratios that are multiples of 4, while the kernel selec",
+    "why_now": "Shipped: ggml-org/llama.cpp b12776 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-ec40b09806",
+    "title": "llama.cpp b12774",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12774",
+    "source": "github",
+    "published_at": "2026-11-26T09:13:58Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12774",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9606,
+      "age_h": 2.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> sync : ggml </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/72575758> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12774/llama-b12774-bin-macos-arm64.tar.gz",
+    "why_now": "Shipped: ggml-org/llama.cpp b12774 released (pre-release), 3 h ago",
+    "score": 56
+  },
+  {
+    "id": "hn-6cd1724457",
+    "title": "An algebraic quantization of gravity from the null cone",
+    "url": "https://arxiv.org/abs/2611.34924",
+    "source": "hn",
+    "published_at": "2026-11-26T05:37:51Z",
+    "signals": {
+      "points": 47,
+      "num_comments": 6,
+      "signal": 0.591,
+      "signal_parts": {
+        "points": 0.678,
+        "comments": 0.388
+      },
+      "decay": 0.9119,
+      "age_h": 6.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:quantiz",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 47 points, 6 comments on HN, 6 h ago",
+    "score": 46
+  },
+  {
+    "id": "firecrawl-a0f9e0b08c",
+    "title": "System Recovery -- DGX Spark User Guide",
+    "url": "https://docs.nvidia.com/dgx/dgx-spark/system-recovery.html",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:DGX Spark",
+      "group": "how-to"
+    },
+    "products": [
+      "DGX Spark"
+    ],
+    "summary": "The system recovery process for the DGX Spark restores the operating system and firmware to their original factory state. This process erases the internal solid ...",
+    "why_now": "Changed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-1a187e210e",
+    "title": "Explore the top ideas from our DGX Spark giveaway | Blog",
+    "url": "https://ciq.com/blog/explore-the-top-ideas-from-our-dgx-spark-giveaway",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "DGX Spark",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DGX Spark",
+      "group": "news-react"
+    },
+    "products": [
+      "DGX Spark"
+    ],
+    "summary": "The Spark's 128 GB of unified memory holds matrices that a typical home-server GPU cannot. Spot the patterns. Across all ten ideas, four themes repeat: Data ...",
+    "why_now": "Discussed: in this week's web news for 'DGX Spark', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-6269073a07",
+    "title": "The 20 Best Local LLMs of 2026: A Complete Guide for Enterprises and Power Users",
+    "url": "https://hackernoon.com/the-20-best-local-llms-of-2026-a-complete-guide-for-enterprises-and-power-users",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mac Studio",
+      "group": "enterprise-privacy"
+    },
+    "products": [
+      "Mac Studio"
+    ],
+    "summary": "Run frontier AI on your own hardware. The 20 best local LLMs for a 2 TB Mac Studio cluster and 64 GB rigs, with quants, budgets and uncensored builds.",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-c0e169ab61",
+    "title": "Best Local LLMs in 2026: What You Can Run on a Mac mini, DGX Spark or Server",
+    "url": "https://plotly.com/blog/best-local-llm-2026/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Mac mini",
+      "group": "how-to"
+    },
+    "products": [
+      "Mac mini",
+      "DGX Spark",
+      "Alibaba",
+      "Qwen"
+    ],
+    "summary": "What's the best LLM I can run locally? On our data analysis exam, Alibaba's Qwen 3.8 27B is the best model that fits on a desktop: it scored 38 of 43 and needs ...",
+    "why_now": "Discussed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-8a35ad45c3",
+    "title": "Claude Code With a Local LLM: Free Ollama & LM Studio Setup",
+    "url": "https://www.microcenter.com/site/mc-news/article/claude-code-local-llm-ollama-lm-studio.aspx",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "how-to"
+    },
+    "products": [
+      "Claude",
+      "Ollama",
+      "LM Studio"
+    ],
+    "summary": "Run Claude Code with a local LLM for free. Pair it with Ollama or LM Studio and an open-weight coding model, plus VRAM tips to match your GPU.",
+    "why_now": "Shipped: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "firecrawl-1490e6c868",
+    "title": "Half of what I used ChatGPT Plus for now runs on a local model I didn't pay for",
+    "url": "https://www.xda-developers.com/half-of-what-i-used-chatgpt-plus-for-now-runs-on-free-local-model/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.15,
+      "why_now_kind": "Changed",
+      "relevance": "product:ChatGPT",
+      "group": "myth-bust"
+    },
+    "products": [
+      "ChatGPT"
+    ],
+    "summary": "So, I wanted to see how much a local LLM could actually replace the real, everyday, mundane work my ChatGPT Plus subscription handles. Switching models in the ...",
+    "why_now": "Changed: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 39
+  },
+  {
+    "id": "hn-649e8b63ca",
+    "title": "Qwen-4-27B-Preview Released on HF",
+    "url": "https://huggingface.co/spaces/SUGE212/Qwen-4-27B-Preview",
+    "source": "hn",
+    "published_at": "2026-11-26T04:49:08Z",
+    "signals": {
+      "points": 7,
+      "num_comments": 0,
+      "signal": 0.255,
+      "signal_parts": {
+        "points": 0.364,
+        "comments": 0.0
+      },
+      "decay": 0.9013,
+      "age_h": 7.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 7 points, 0 comments on HN, 7 h ago",
+    "score": 35
+  },
+  {
+    "id": "hn-03e058b51a",
+    "title": "Show HN: Run Inkling 2 Mini on Mac Faster Than Anywhere Else",
+    "url": "https://www.subconscious.dev/local",
+    "source": "hn",
+    "published_at": "2026-11-25T17:05:52Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 1,
+      "signal": 0.261,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.138
+      },
+      "decay": 0.7609,
+      "age_h": 18.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "vLLM",
+      "MLX"
+    ],
+    "summary": "We developed a local inference engine that&#x27;s faster than llama.cpp, vllm-metal, and mlx-lm. Download and try for yourself. Free, private, fast forever.<p>Inkling 2 Mini is very impressive as a small model.",
+    "why_now": "Shipped: 5 points, 1 comments on HN, 19 h ago",
+    "score": 32
+  },
+  {
+    "id": "hn-2b938f41a1",
+    "title": "Show HN: Fmgrep - indexed grep over a persistent FM index",
+    "url": "https://github.com/pepeiborra/fmgrep",
+    "source": "hn",
+    "published_at": "2026-11-25T17:12:29Z",
+    "signals": {
+      "points": 4,
+      "num_comments": 0,
+      "signal": 0.197,
+      "signal_parts": {
+        "points": 0.282,
+        "comments": 0.0
+      },
+      "decay": 0.7621,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Claude",
+      "group": "news-react"
+    },
+    "products": [
+      "Claude"
+    ],
+    "summary": "fmgrep is a (Claude-powered) open source reimplementation of a FAANG code search engine I was involved in a few years back. It&#x27;s aimed at very large (e.g. AOSP) source trees.<p>Back then we wanted to get our hands on the Github search engine (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;danlark1&",
+    "why_now": "Shipped: 4 points, 0 comments on HN, 19 h ago",
+    "score": 28
+  },
+  {
+    "id": "hn-77351addc1",
+    "title": "Lessons from running DeepSeek's DSec sandbox design on public cloud",
+    "url": "https://vibrantlabs.com/research/swarmbox",
+    "source": "hn",
+    "published_at": "2026-11-25T20:01:20Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.7938,
+      "age_h": 16.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 16 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-19ba5446bf",
+    "title": "vLLM-GR: Efficient Inference for Generative Recommendation",
+    "url": "https://vllm.ai/blog/2026-11-24-vllm-gr-announcement",
+    "source": "hn",
+    "published_at": "2026-11-26T02:47:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8752,
+      "age_h": 9.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 9 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-757071c5b8",
+    "title": "Parse PDFs with Nemotron 3.5 Parse, PP-OCRv6 at 16K output tokens/s",
+    "url": "https://chat.vlm.run/compare/4cc35a94-d8ff-4a2f-9913-ec03407399f6",
+    "source": "hn",
+    "published_at": "2026-11-26T00:12:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8432,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Measured",
+      "relevance": "product:Nemotron",
+      "group": "how-to"
+    },
+    "products": [
+      "Nemotron"
+    ],
+    "summary": "",
+    "why_now": "Measured: 2 points, 0 comments on HN, 12 h ago",
+    "score": 25
+  },
+  {
+    "id": "hn-3e37a82f62",
+    "title": "Show HN: Free tool to collect invoices and spot forgotten subscriptions",
+    "url": "https://spendgap.ai/",
+    "source": "hn",
+    "published_at": "2026-11-25T12:57:40Z",
+    "signals": {
+      "points": 8,
+      "num_comments": 7,
+      "signal": 0.394,
+      "signal_parts": {
+        "points": 0.385,
+        "comments": 0.414
+      },
+      "decay": 0.7168,
+      "age_h": 23.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "At my previous company, I spent hours every month going through our bank statements and looking for the invoice behind each charge.<p>There are many invoice collectors, with varying accuracy, but AI makes this much better now. I also noticed that while checking the statements, I was subconsciously r",
+    "why_now": "Shipped: 8 points, 7 comments on HN, 23 h ago",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-bc2cbc5a2e",
+    "title": "Best Local LLMs (November 2026): Benchmarks, Memory & Workload",
+    "url": "https://benchlm.ai/best/local-llm",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Compare a source-checked local LLM shortlist for November 2026 using public capability scores, exact licenses, memory evidence, runtime support, ...",
+    "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-c5a75287bb",
+    "title": "RAMDeck Engineering Blog -- Local LLMs & Memory Guides",
+    "url": "https://ramdeck.com/blog/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "local LLM news",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "RAMDeck Engineering Blog covers multi-device memory pooling, 30B-120B LLM sizing math, Tailscale remote GPU clustering, and live hardware benchmarks.",
+    "why_now": "Measured: in this week's web news for 'local LLM news', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-491b1c32d0",
+    "title": "NVIDIA GPU Firmware Update Tool for DisplayID",
+    "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5233/~/nvidia-gpu-firmware-update-tool-for-displayid",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "product:NVIDIA",
+      "group": "news-react"
+    },
+    "products": [
+      "NVIDIA"
+    ],
+    "summary": "The NVIDIA GPU Firmware Update Tool will detect whether the firmware update is needed, and if needed, will give the user the option to update it. If you are ...",
+    "why_now": "Changed: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "firecrawl-f49bc810c8",
+    "title": "Surface RTX Spark Dev Box Launches at $5999.99: 128 GB AI Desktop and Critical Firmware Update",
+    "url": "https://windowsforum.com/news/surface-rtx-spark-dev-box-launches-at-5-999-99-128-gb-ai-desktop-and-critical-firmware-update.454023/",
+    "source": "firecrawl",
+    "published_at": null,
+    "signals": {
+      "query": "NVIDIA DGX Spark firmware update",
+      "signal": 0.5,
+      "signal_parts": {
+        "news": 0.5
+      },
+      "decay": 0.7071,
+      "age_h": null,
+      "source_weight": 0.8,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Microsoft",
+      "group": "how-to"
+    },
+    "products": [
+      "Microsoft"
+    ],
+    "summary": "Microsoft's U.S.-only Surface RTX Spark Dev Box costs $5999.99, includes 128 GB unified memory, and early buyers should install its November 19 firmware ...",
+    "why_now": "Shipped: in this week's web news for 'NVIDIA DGX Spark firmware update', date unknown (this week)",
+    "score": 24
+  },
+  {
+    "id": "hn-0d63289af4",
+    "title": "Free DeepSeek v4.1 Flash 1017 No Card No Limits",
+    "url": "https://demonroute.com/",
+    "source": "hn",
+    "published_at": "2026-11-25T14:42:00Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.735,
+      "age_h": 21.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 1 comments on HN, 21 h ago",
+    "score": 23
+  },
+  {
+    "id": "hn-dd2220d072",
+    "title": "Ask HN: For professional Mathematicians -- about your career in the future",
+    "url": "https://news.ycombinator.com/item?id=50647440",
+    "source": "hn",
+    "published_at": "2026-11-25T20:58:34Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 2,
+      "signal": 0.304,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.219
+      },
+      "decay": 0.8048,
+      "age_h": 15.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Measured",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi friends, genuine question.<p>We all see that top notch Mathematicians can use LLM to prove world class results in a relatively short time of period. OK I admit some of the results are not verified yet, but please hear me. Neither do I know how much “brain” is human and how much is the LLM, becaus",
+    "why_now": "Measured: 6 points, 2 comments on HN, 15 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-c2e8474f9f",
+    "title": "Show HN: LLM Training NO CUDA 85k tok/SEC locally",
+    "url": "https://github.com/drakestapleton/omega-helix",
+    "source": "hn",
+    "published_at": "2026-11-25T19:34:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7887,
+      "age_h": 16.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:CUDA",
+      "group": "news-react"
+    },
+    "products": [
+      "CUDA"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-13fbe12ec3",
+    "title": "Fine-Tuning Local Models for the GPU Poor - Qwen3.8-27B on RTX 4090",
+    "url": "https://shimin.io/journal/fine-tuning-local-models-for-the-gpu-poor/",
+    "source": "hn",
+    "published_at": "2026-11-25T17:13:40Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7624,
+      "age_h": 18.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "RTX 4090"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 19 h ago",
+    "score": 21
+  },
+  {
+    "id": "hf-dc79824f74",
+    "title": "harness-hub/Qwen3.8-27B-pi-adapted",
+    "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+    "source": "hf",
+    "published_at": "2026-11-16T06:52:31Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1125,
+      "downloads": 3844,
+      "trendingScore": 151.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.83,
+      "signal_parts": {
+        "trending": 0.661,
+        "likes": 1.0,
+        "downloads": 0.597
+      },
+      "decay": 0.05,
+      "age_h": 245.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen",
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 1.1k likes, 3.8k downloads, trending score 151, created 2026-11-16",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 1.1k likes, 3.8k downloads, trending score 151, 10 d ago",
+    "score": 18
+  },
+  {
+    "id": "hn-76ec755317",
+    "title": "I Learned to Stop Worrying and Love the AI",
+    "url": "https://news.ycombinator.com/item?id=50651635",
+    "source": "hn",
+    "published_at": "2026-11-26T05:01:25Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.9039,
+      "age_h": 7.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "A few years ago talking heads and AM radio personalities went cookoo over AI. The warnings were replete with assertations of total destruction. I blew them off as doomsdayesque viewer&#x2F;listener headline&#x2F;listener bastards that saw dollar signs in words.<p>Assuredly, they completely misunders",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 7 h ago",
+    "score": 16
+  },
+  {
+    "id": "hn-779b464a9b",
+    "title": "Tell HN: Finality is like the speed of light to LLMs from the labs",
+    "url": "https://news.ycombinator.com/item?id=50650927",
+    "source": "hn",
+    "published_at": "2026-11-26T03:07:30Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8795,
+      "age_h": 8.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I think you&#x27;ve all noticed the &quot;one more thing&quot; with AI, and the many articles to fix it, and that they don&#x27;t really fix anything at all. If your task ends, so does token spend, so if you ask an LLM to draw a square (metaphor for a moderately complex system), it will forever draw",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 9 h ago",
+    "score": 13
+  },
+  {
+    "id": "hn-80164864c8",
+    "title": "Plato's Key: A single rotation lets one LLM use another’s representations",
+    "url": "https://twitter.com/viviencheng__/status/2125631050319831474",
+    "source": "hn",
+    "published_at": "2026-11-26T01:17:22Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.8565,
+      "age_h": 10.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 0 comments on HN, 11 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-aef5ca5c01",
+    "title": "KORA: Determining whether LLM inference is necessary before invoking it",
+    "url": "https://arxiv.org/abs/2610.35869",
+    "source": "hn",
+    "published_at": "2026-11-26T08:09:04Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9457,
+      "age_h": 3.9,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 4 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-01129f0fb2",
+    "title": "OCRia-Nano-1",
+    "url": "https://www.llamaindex.ai/blog/introducing-ocria-nano-1",
+    "source": "hn",
+    "published_at": "2026-11-26T05:58:02Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9163,
+      "age_h": 6.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:ai",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 6 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c05ec4a0b9",
+    "title": "Flawrence - LLM-based vulnerability analysis for everyone",
+    "url": "https://github.com/mschwarzl/flawrence",
+    "source": "hn",
+    "published_at": "2026-11-25T18:22:11Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 0,
+      "signal": 0.17,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.0
+      },
+      "decay": 0.775,
+      "age_h": 17.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 3 points, 0 comments on HN, 18 h ago",
+    "score": 11
+  },
+  {
+    "id": "hn-c255a94664",
+    "title": "Will the next big discovery using LLM's solve Fusion Energy?",
+    "url": "https://news.ycombinator.com/item?id=50650485",
+    "source": "hn",
+    "published_at": "2026-11-26T02:03:14Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.866,
+      "age_h": 10.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Or, is it too much of a hardware problem, rather than just software ? You can bet the folks over at Sandia, Fermi, PPPL, LANL, LLNL, ORNL, INL, Brookhaven, etc are all working feverishly with LLM&#x27;s. No doubt a Noble prize would be possible.",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 10 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-f22e6937bc",
+    "title": "Pushing the US Open-Weight Frontier",
+    "url": "https://www.harvey.ai/blog/applying-the-harvey-tenet-training-recipe-to-us-open-weight-models",
+    "source": "hn",
+    "published_at": "2026-11-26T00:17:18Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8442,
+      "age_h": 11.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 12 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-040b9138c7",
+    "title": "Verifiable Social Reasoning for LLM Assistants",
+    "url": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/",
+    "source": "hn",
+    "published_at": "2026-11-25T18:19:12Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7745,
+      "age_h": 17.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-68ffb76740",
+    "title": "The state of LLM: costs and capabilities",
+    "url": "https://www.asya.ai/blog/the-state-of-llm-costs-and-capabilities",
+    "source": "hn",
+    "published_at": "2026-11-26T11:58:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9994,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-aae170351a",
+    "title": "AgenticPPL: Perplexity (on what?) is intelligence",
+    "url": "https://wenhaochai.com/blogs/agentic-ppl.html",
+    "source": "hn",
+    "published_at": "2026-11-26T07:41:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9395,
+      "age_h": 4.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:agentic",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 4 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-762140f4aa",
+    "title": "In which a traveling salesman digs π out of LLM temperature math",
+    "url": "https://www.hexbites.dev/stories/2026-11-25-pi-from-simulated-annealing.html",
+    "source": "hn",
+    "published_at": "2026-11-26T04:03:03Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.8913,
+      "age_h": 8.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 8 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-7721c2286a",
+    "title": "Why is LLM inference challenging?",
+    "url": "https://mehrdadmahabadi.com/blog/why-is-llm-inference-hard.html",
+    "source": "hn",
+    "published_at": "2026-11-25T20:24:05Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7981,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "explainer"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hn-4d5f5a7628",
+    "title": "Six local-first Python engines for 10M-cell PII, LLM security and SEO",
+    "url": "https://www.sideprojectors.com/user/profile/288750",
+    "source": "hn",
+    "published_at": "2026-11-25T19:49:46Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7915,
+      "age_h": 16.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Broke",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Broke: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hf-4b443d68fa",
+    "title": "sensenova/SenseNova-Loop-9B",
+    "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
+    "source": "hf",
+    "published_at": "2026-11-17T10:16:41Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 753,
+      "downloads": 3268,
+      "trendingScore": 86.5,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.774,
+      "signal_parts": {
+        "trending": 0.588,
+        "likes": 0.959,
+        "downloads": 0.586
+      },
+      "decay": 0.05,
+      "age_h": 217.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 753 likes, 3.3k downloads, trending score 86, created 2026-11-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 753 likes, 3.3k downloads, trending score 86, 9 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-b4f1a99333",
+    "title": "tencent/Hy4-flash",
+    "url": "https://huggingface.co/tencent/Hy4-flash",
+    "source": "hf",
+    "published_at": "2026-11-17T03:44:46Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 718,
+      "downloads": 10479,
+      "trendingScore": 113.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.788,
+      "signal_parts": {
+        "trending": 0.623,
+        "likes": 0.952,
+        "downloads": 0.67
+      },
+      "decay": 0.05,
+      "age_h": 224.3,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 718 likes, 10.5k downloads, trending score 113, created 2026-11-17",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 718 likes, 10.5k downloads, trending score 113, 9 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-6f06a2856d",
+    "title": "apple/FastFrames-L",
+    "url": "https://huggingface.co/apple/FastFrames-L",
+    "source": "hf",
+    "published_at": "2026-11-16T17:21:04Z",
+    "signals": {
+      "pipeline_tag": "text-to-video",
+      "likes": 634,
+      "downloads": 0,
+      "trendingScore": 88.5,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.763,
+      "signal_parts": {
+        "trending": 0.591,
+        "likes": 0.934,
+        "downloads": 0.0
+      },
+      "decay": 0.05,
+      "age_h": 234.7,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Apple",
+      "group": "news-react"
+    },
+    "products": [
+      "Apple",
+      "Hugging Face"
+    ],
+    "summary": "text-to-video model on Hugging Face, 634 likes, 0 downloads, trending score 88, created 2026-11-16",
+    "why_now": "Shipped: new on Hugging Face (text-to-video), 634 likes, 0 downloads, trending score 88, 10 d ago",
+    "score": 3
+  },
+  {
+    "id": "hf-ed989e9e97",
+    "title": "llamaindex/OCRia-1",
+    "url": "https://huggingface.co/llamaindex/OCRia-1",
+    "source": "hf",
+    "published_at": "2026-11-13T21:52:49Z",
+    "signals": {
+      "pipeline_tag": "image-text-to-text",
+      "likes": 105,
+      "downloads": 419,
+      "trendingScore": 80.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.627,
+      "signal_parts": {
+        "trending": 0.578,
+        "likes": 0.675,
+        "downloads": 0.437
+      },
+      "decay": 0.05,
+      "age_h": 302.1,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "image-text-to-text model on Hugging Face, 105 likes, 419 downloads, trending score 80, created 2026-11-13",
+    "why_now": "Shipped: new on Hugging Face (image-text-to-text), 105 likes, 419 downloads, trending score 80, 13 d ago",
+    "score": 2
+  }
+]
