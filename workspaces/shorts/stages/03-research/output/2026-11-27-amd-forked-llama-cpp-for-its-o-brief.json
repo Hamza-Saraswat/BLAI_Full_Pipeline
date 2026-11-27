@@ -1,0 +1,219 @@
+{
+  "slug": "2026-11-27-amd-forked-llama-cpp-for-its-o",
+  "topic": "AMD forked llama.cpp for its own GPUs",
+  "depth": "standard",
+  "generated_at": "2026-11-27T12:42:28Z",
+  "thesis": "The \"AMD fork\" your feed is talking about is a one-maintainer community patch set called llama-cpp-rdna-boosts, not an AMD product, and that is the real news: Radeon owners are getting their speedups from outsider patches pinned to stock llama.cpp while AMD itself points back upstream.",
+  "explanation_path": "Open on the machine the viewer already owns: a gaming PC with a Radeon card and a copy of llama.cpp, the free engine that runs models locally. Establish the pain before any news appears: stock llama.cpp speaks NVIDIA's CUDA best, and AMD owners have historically patched, pinned and prayed. Land the dated event: a writeup recommending one specific answer, llama-cpp-rdna-boosts, hit Hacker News around 2026-11-26 and drew 367 points. Sort the cast the headline blurs before any numbers appear: stock upstream llama.cpp, which still builds for AMD GPUs through HIP and Vulkan and even ships as AMD-validated pre-built Windows binaries; AMD's own GitHub fork, which is retired and points back upstream; and the community patch set the thread is actually about, 19 patches pinned to one upstream commit. With the cast straight, the payoff can land: the writeup's author reports token generation going from 35 to 55 tokens/second on his R9700, one machine, YMMV. Close on what AMD is actually doing, an HRX backend proposed upstream, and what the viewer does tonight: build stock or pull pre-built binaries, and treat the patch set as an opt-in speed layer, not a new engine.",
+  "claims": [
+    {
+      "claim": "The fork behind the news is llama-cpp-rdna-boosts, a community patch collection maintained by GitHub user stew675, which ships as 19 default patches applied to a pinned upstream llama.cpp checkout at fork point 919794500 (the 2026-11-20 re-base), targeting RDNA3, RDNA3.5 and RDNA4 GPUs with RDNA2 as best-effort.",
+      "source_url": "https://github.com/stew675/llama-cpp-rdna-boosts",
+      "source_title": "stew675/llama-cpp-rdna-boosts",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "The devnull.land writeup that trended recommends llama-cpp-rdna-boosts to AMD card owners and credits it with raising the author's token generation from 35 to 55 tokens/second and his prefill from 700 to 1300 tokens per second on an R9700 eGPU, a single-machine result the author himself flags as YMMV.",
+      "source_url": "https://devnull.land/amd-specific-llama-cpp",
+      "source_title": "AMD-specific fork of llama.cpp (devnull.land)",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "The writeup hit Hacker News as \"AMD-specific fork of llama.cpp\" around 2026-11-26 and drew 367 points and 88 comments within roughly 17 hours of posting.",
+      "source_url": "https://news.ycombinator.com/item?id=50657265",
+      "source_title": "AMD-specific fork of llama.cpp | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "AMD's own GitHub llama.cpp fork, ROCm/llama.cpp (now displayed as AMD-Ecosystem/llama.cpp), is retired, with a banner directing users to the upstream ggml-org/llama.cpp repository.",
+      "source_url": "https://github.com/AMD-Ecosystem/llama.cpp",
+      "source_title": "AMD-Ecosystem/llama.cpp: LLM inference in C/C++",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "AMD's first-party llama.cpp work goes upstream rather than into a fork: the ggml-hrx backend RFC by AMD engineers claims a 30-50% tok/s uplift on prefill and Parity to 15% tok/s uplift on non-MTP decode compared to the faster of the existing Vulkan and HIP backends.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/27219",
+      "source_title": "RFC: Adding a native AMD ggml-hrx backend · ggml-org/llama.cpp · Discussion #27219",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "Stock llama.cpp still supports AMD GPUs through its HIP backend, built with GGML_HIP=ON and a GPU target such as gfx1030, alongside a Vulkan backend.",
+      "source_url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md",
+      "source_title": "Build llama.cpp locally (docs/build.md)",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "AMD publishes AMD-validated pre-built Windows llama.cpp binaries (rocm-rel-7.2.1 for gfx110X, gfx115X and gfx120X) and documents running llama-server with -ngl 99 to offload all layers to the GPU.",
+      "source_url": "https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/advanced/advancedrad/windows/llm/llamacpp.html",
+      "source_title": "Llama.cpp pre-built binaries (Use ROCm on Radeon and Ryzen)",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "AMD also invests first-party in llama.cpp on Instinct datacenter GPUs, publishing MI300X benchmarks where DeepSeek 671B Q4_K reaches pp512 439.14 ± 1.68 t/s across 8 MI300X GPUs.",
+      "source_url": "https://rocm.blogs.amd.com/ecosystems-and-partners/llama-cpp/README.html",
+      "source_title": "Llama.cpp Meets Instinct: A New Era of Open-Source AI Acceleration",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    },
+    {
+      "claim": "HN reception included pushback on speed-chasing forks, with one commenter arguing that changes like Strata's can degrade the model's performance, while a self-identified llama.cpp maintainer replied that the project is happy to take high-quality patches.",
+      "source_url": "https://news.ycombinator.com/item?id=50657265",
+      "source_title": "AMD-specific fork of llama.cpp | Hacker News",
+      "source_quality": "community",
+      "confidence": "high",
+      "accessed": "2026-11-27"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "HN thread score (roughly 17 hours after posting)",
+      "value": "367 points",
+      "source_url": "https://news.ycombinator.com/item?id=50657265"
+    },
+    {
+      "label": "HN thread comments",
+      "value": "88 comments",
+      "source_url": "https://news.ycombinator.com/item?id=50657265"
+    },
+    {
+      "label": "AMD HRX claimed prefill uplift vs faster of Vulkan/HIP",
+      "value": "30-50% tok/s uplift on prefill",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/27219"
+    },
+    {
+      "label": "AMD HRX claimed non-MTP decode uplift",
+      "value": "Parity to 15% tok/s uplift on non-MTP decode",
+      "source_url": "https://github.com/ggml-org/llama.cpp/discussions/27219"
+    },
+    {
+      "label": "MI300X pp512 t/s, DeepSeek 671B Q4_K, 8 GPUs, ROCm llama.cpp",
+      "value": "439.14 ± 1.68 t/s",
+      "source_url": "https://rocm.blogs.amd.com/ecosystems-and-partners/llama-cpp/README.html"
+    },
+    {
+      "label": "rdna-boosts default patch count (fork point 919794500)",
+      "value": "19 default patches",
+      "source_url": "https://github.com/stew675/llama-cpp-rdna-boosts"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "an aftermarket tune for one engine family",
+      "mapping": "llama.cpp is the stock engine everyone gets; llama-cpp-rdna-boosts is a tuner's kit that bolts onto one specific production run of that engine (commit 919794500) and is re-fitted each time the factory reprints it; AMD's own fork is the manufacturer's discontinued in-house tuning shop whose door now says \"use the stock engine\".",
+      "limit": "the tune is 19 software patches maintained by one person, not parts you buy once, and the advertised gains are one driver's stopwatch, not a dyno sheet."
+    },
+    {
+      "vehicle": "handwritten margin notes on a pinned printing of a cookbook",
+      "mapping": "upstream llama.cpp is the cookbook every kitchen uses; the patch set is a photocopied page of margin notes you staple to a specific printing, good only for the ovens in one family (RDNA3/3.5/4).",
+      "limit": "a new printing arrives every re-base and the notes must be re-copied, and the notes improve only some dishes, not the whole book."
+    },
+    {
+      "vehicle": "a hand-drawn faster bus route taped beside the official timetable",
+      "mapping": "AMD's docs are the official timetable (pre-built binaries, supported cards); the patch set is one rider's hand-drawn shortcut taped next to it.",
+      "limit": "the tape peels off every timetable reprint, and the \"faster\" times are that rider's own commute, not the transit authority's."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "AMD now ships and maintains its own llama.cpp fork for Radeon owners.",
+      "reality": "AMD's GitHub fork is retired and points to upstream, and the trending \"AMD fork\" is one maintainer's patch set (claims 4, 1)."
+    },
+    {
+      "myth": "AMD owners must use a fork or patch set to run llama.cpp at all.",
+      "reality": "Stock llama.cpp builds for AMD GPUs via HIP and Vulkan, and AMD itself ships pre-built Windows binaries (claims 6, 7)."
+    },
+    {
+      "myth": "The token-generation gains being shared are official benchmarks.",
+      "reality": "They are one blogger's own single-machine measurement, flagged YMMV; AMD's own first-party performance claim is the separate, upstream HRX backend RFC (claims 2, 5)."
+    },
+    {
+      "myth": "An \"AMD-specific fork\" means AMD's software stack is now the fastest supported path for Radeon.",
+      "reality": "AMD's first-party llama.cpp effort targets an upstream backend (HRX) and Instinct datacenter parts, not a shipped Radeon fork (claims 5, 8)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "llama.cpp",
+      "definition": "A free, open-source C/C++ program for running AI models locally on your own CPU and GPU."
+    },
+    {
+      "term": "fork",
+      "definition": "A copy of someone else's open-source project that you change yourself, kept separate from the original."
+    },
+    {
+      "term": "patch set",
+      "definition": "A series of small code changes designed to be applied on top of a specific version of the original project."
+    },
+    {
+      "term": "HIP",
+      "definition": "AMD's translation layer that lets CUDA-style GPU code run on AMD cards; the backend stock llama.cpp uses for AMD GPUs."
+    },
+    {
+      "term": "ROCm",
+      "definition": "AMD's software stack for GPU computing; HIP is part of it."
+    },
+    {
+      "term": "Vulkan",
+      "definition": "A general graphics-and-compute standard that llama.cpp can also use to run on AMD cards."
+    },
+    {
+      "term": "RDNA3 / RDNA4",
+      "definition": "AMD GPU generations; RX 7900-series cards are RDNA3, RX 9070-series are RDNA4."
+    },
+    {
+      "term": "prefill",
+      "definition": "The phase where the engine reads your whole prompt before it starts answering."
+    },
+    {
+      "term": "token generation",
+      "definition": "The phase where the answer is produced, one token at a time; its speed is the \"t/s\" number."
+    },
+    {
+      "term": "MTP",
+      "definition": "Multi-token prediction, a technique that generates several tokens per step to speed up output."
+    },
+    {
+      "term": "GGUF",
+      "definition": "The model file format llama.cpp loads."
+    },
+    {
+      "term": "eGPU",
+      "definition": "A desktop graphics card connected to a laptop through an external enclosure."
+    }
+  ],
+  "unverified": [
+    "The devnull.land author's gains, token generation from 35 to 55 tokens/second and prefill from 700 to 1300 tokens per second, are his own single-machine measurement, and no primary or docs page fetched corroborates them.",
+    "The writeup's claim that forks like Strata trade model quality for speed by preferring experts loaded in VRAM over the ones the model would normally choose.",
+    "HN commenters' throughput reports on their own hardware (MI50 pairs, 7900 XTX, Radeon 8060S, R9700 with other engines) were not corroborated by any primary or docs page.",
+    "The claim by some HN commenters that the Vulkan backend outperforms HIP on certain AMD cards.",
+    "That the hub-note framing \"AMD now ships its own llama.cpp fork\" is literally accurate; every primary page fetched complicates or contradicts it.",
+    "Any throughput delta between llama-cpp-rdna-boosts and stock llama.cpp on our own hardware; nothing was measured first-party this session."
+  ],
+  "suggested_outline": "Hook: your Radeon can get a real llama.cpp speedup tonight, and the twist is who made it: not AMD, whose own fork is retired, but one guy's 19-patch set that just pulled 367 points on Hacker News.\nSort the three things the headline blurs: stock llama.cpp already runs AMD via HIP and Vulkan with AMD's own pre-built Windows binaries; AMD's GitHub fork is retired; the trending rdna-boosts patch set is a community speed layer pinned to one upstream commit for RDNA3/3.5/4 cards.\nLand the honest number and the catch: one R9700 owner reports token generation going from 35 to 55 tokens/second on his own machine, YMMV; the patch set is default-on but unofficial, AMD's own speed push (HRX) is still an upstream proposal, and llama.cpp maintainers say they are happy to take high-quality patches.",
+  "notes": "Tool family: web_search for discovery (2 searches) and web_extract for page reads (12 fetch attempts, 8 pages returned content). Failures: 4 attempts errored (Firecrawl keyless 500s and credit exhaustion) on the first pass; the AMD-Ecosystem repo, the AMD docs page, the rdna-boosts repo and build.md all succeeded on retry, and the 12-attempt budget was reached exactly. The ROCm/llama.cpp URL redirects to AMD-Ecosystem/llama.cpp; the final URL is recorded. The radar's approximate figure of roughly 379 HN points was not used; the live page read 367 points at fetch. Conflicts: the HN headline frames the project as an \"AMD-specific fork\" while AMD's retired-repo banner (primary) and the project's own README (primary) show a community patch set; the primary pages are trusted over the headline. Thin spots: no independent or first-party benchmark of llama-cpp-rdna-boosts was fetched, so the writeup's 35-to-55 tokens/second figure stays attributed and hedged, and the key-numbers table carries only primary or docs sourced numbers plus the HN thread's own score. The original angle phrase \"AMD now ships its own fork\" does not survive the sources; the script should land the twist rather than the literal claim.",
+  "viewer_situation": "You have a gaming PC with an AMD Radeon card (something in the RX 6000 through RX 9070 range), you run a local model or want to tonight, and you have watched NVIDIA owners get the easy path.",
+  "has_process": true,
+  "process_steps": [
+    "Install ROCm, then clone stock llama.cpp and build it with -DGGML_HIP=ON and -DGPU_TARGETS set to your card (upstream build docs use gfx1030 as the example).",
+    "Download AMD's pre-built Windows llama.cpp binaries (rocm-rel-7.2.1, gfx110X/gfx115X/gfx120X) and extract the zip if you would rather not compile.",
+    "Download a GGUF model file (AMD's walkthrough uses gpt-oss-20b-mxfp4.gguf).",
+    "Run llama-server with your model and -ngl 99 to offload all layers to the GPU (AMD's example: .\\llama-server.exe -m test_model.gguf -c 2048 -ngl 99 -fa on --port 8080).",
+    "Clone upstream llama.cpp, check out commit 919794500, and run bash <path-to-repo>/scripts/apply-all.sh . from the rdna-boosts repo to apply the 19 patches before building."
+  ],
+  "objection": "A single-maintainer patch set with a one-machine benchmark is not a foundation for your inference stack; stock llama.cpp plus AMD's own validated binaries is the supported path, and speed claims should wait for upstream acceptance or your own measurement."
+}
