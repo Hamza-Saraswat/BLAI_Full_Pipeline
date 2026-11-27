@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-27T13:18:29+00:00",
+  "generated_at": "2026-11-27T13:33:53+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-A-storyboard.json",
@@ -85,20 +85,20 @@
           "spent": true,
           "matched_in": "on_screen",
           "matched_token": "19",
-          "scene_ids": [
-            "s03"
-          ]
+          "scene_ids": []
         }
       ]
     },
     "entity_spend": {
       "total": 26,
-      "found_count": 4,
-      "score": 0.154,
+      "found_count": 6,
+      "score": 0.231,
       "found": [
         "AMD",
         "Windows",
+        "YMMV",
         "Hacker News",
+        "R9700",
         "Radeon"
       ],
       "missing": [
@@ -121,8 +121,6 @@
         "gfx1030",
         "DeepSeek 671B",
         "pp512 439.14",
-        "YMMV",
-        "R9700",
         "AMD GitHub"
       ],
       "top2": [
@@ -287,8 +285,10 @@
           "name": "YMMV",
           "tier": 3,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "Hacker News",
@@ -303,8 +303,10 @@
           "name": "R9700",
           "tier": 3,
           "claim_count": 1,
-          "found": false,
-          "matched_in": []
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
         },
         {
           "name": "Radeon",
@@ -325,7 +327,7 @@
       ]
     },
     "skeleton": {
-      "sentences": 12,
+      "sentences": 13,
       "hits": 0,
       "density": 0.0,
       "offenders": []
@@ -344,9 +346,9 @@
       "labels": []
     },
     "scene_specificity": {
-      "total": 6,
-      "specific_count": 5,
-      "ratio": 0.833,
+      "total": 7,
+      "specific_count": 6,
+      "ratio": 0.857,
       "scenes": [
         {
           "id": "s01",
@@ -373,12 +375,10 @@
         {
           "id": "s03",
           "role": "explain",
-          "est_duration_s": 4.5,
-          "specific": true,
-          "hits": [
-            "num:19 default patches"
-          ],
-          "narration": "What trended is one maintainer's patch set: nineteen changes on a pinned copy."
+          "est_duration_s": 3.4,
+          "specific": false,
+          "hits": [],
+          "narration": "The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code."
         },
         {
           "id": "s04",
@@ -395,13 +395,25 @@
         {
           "id": "s05",
           "role": "explain",
-          "est_duration_s": 9.3,
-          "specific": false,
-          "hits": [],
-          "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary."
+          "est_duration_s": 7.2,
+          "specific": true,
+          "hits": [
+            "entity:R9700"
+          ],
+          "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second, how fast answers appear, on his R-nine-seven-zero-zero card."
         },
         {
           "id": "s06",
+          "role": "explain",
+          "est_duration_s": 3.8,
+          "specific": true,
+          "hits": [
+            "entity:YMMV"
+          ],
+          "narration": "Patched, he reports fifty-five tokens a second. Your mileage may vary."
+        },
+        {
+          "id": "s07",
           "role": "payoff_close",
           "est_duration_s": 3.4,
           "specific": true,
@@ -414,37 +426,37 @@
       ]
     },
     "language": {
-      "fk_grade": 6.0,
-      "words": 119,
-      "sentences": 12,
-      "est_speech_s": 41.0,
+      "fk_grade": 5.5,
+      "words": 124,
+      "sentences": 13,
+      "est_speech_s": 42.8,
       "vo_band_ok": true
     },
-    "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor. What trended is one maintainer's patch set: nineteen changes on a pinned copy. AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary. Your feed's Radeon fix came from a stranger, not AMD.",
-    "on_screen": "Your feed's AMD fork isn't from AMD. | YOUR FEED'S AMD FORK ISN'T FROM AMD | HN THREAD | 367 POINTS | AMD'S OWN FORK | ONE MAINTAINER | 19 PATCHES | AMD FORK RETIRED | USE UPSTREAM | 35 TO 55 TOK/S | ONE MACHINE | FROM A STRANGER, NOT AMD"
+    "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor. The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code. AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second, how fast answers appear, on his R-nine-seven-zero-zero card. Patched, he reports fifty-five tokens a second. Your mileage may vary. Your feed's Radeon fix came from a stranger, not AMD.",
+    "on_screen": "Your feed's AMD fork isn't from AMD. | YOUR FEED'S AMD FORK ISN'T FROM AMD | HN THREAD | 367 POINTS | AMD'S OWN FORK | ONE MAINTAINER | 19 PATCHES | AMD FORK RETIRED | USE UPSTREAM | 35 TOKENS/S | ONE R9700 | 55 TOKENS/S | YMMV | FROM A STRANGER, NOT AMD"
   },
   "validators": {
     "storyboard": {
       "exit_code": 0,
       "output": {
         "file": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-A-storyboard.json",
-        "scenes": 6,
-        "fk_grade": 6.0,
-        "words": 119,
-        "est_speech_s": 41.0,
+        "scenes": 7,
+        "fk_grade": 5.5,
+        "words": 124,
+        "est_speech_s": 42.8,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
           "title 43 chars \u2014 mobile truncates ~40",
-          "FK grade 6.0 \u2014 target <=5",
+          "FK grade 5.5 \u2014 target <=5",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence",
           "s01: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s01: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s02: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s04: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s04: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
-          "s06: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
+          "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
         ]
       }
     },
@@ -516,7 +528,7 @@
         "mode": "band"
       },
       "entity_spend": {
-        "score": 0.154,
+        "score": 0.231,
         "need": 0.5,
         "advisory": true
       },
@@ -535,9 +547,9 @@
         ]
       },
       "scene_specificity": {
-        "specific": 5,
-        "need": 5,
-        "total": 6
+        "specific": 6,
+        "need": 6,
+        "total": 7
       },
       "not_x_but_y": {
         "count": 0,

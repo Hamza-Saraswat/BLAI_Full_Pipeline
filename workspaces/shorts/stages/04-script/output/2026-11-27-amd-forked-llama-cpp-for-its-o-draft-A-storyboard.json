@@ -44,7 +44,7 @@
   "structure": "myth-bust",
   "value_types": "TEACHES,EQUIPS",
   "target_duration_s": 38,
-  "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor. What trended is one maintainer's patch set: nineteen changes on a pinned copy. AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary. Your feed's Radeon fix came from a stranger, not AMD.",
+  "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor. The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code. AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second, how fast answers appear, on his R-nine-seven-zero-zero card. Patched, he reports fifty-five tokens a second. Your mileage may vary. Your feed's Radeon fix came from a stranger, not AMD.",
   "analogy": {
     "vehicle": "an aftermarket tune for one engine family",
     "mapping": "stock llama.cpp is the engine everyone gets; llama-cpp-rdna-boosts is a tuner's kit of 19 patches bolted onto one pinned production run; AMD's own fork is the discontinued in-house tuning shop whose door now says use the stock engine",
@@ -79,10 +79,10 @@
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "diagram-flow",
-      "narration": "What trended is one maintainer's patch set: nineteen changes on a pinned copy.",
+      "narration": "The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code.",
       "on_screen_text": "ONE MAINTAINER | 19 PATCHES",
       "visual_brief": "A clean engine block labeled llama.cpp sits center while nineteen small patch plates bolt on one at a time to a single pinned base, each plate stamping in on a beat of 'nineteen changes on a pinned copy'.",
-      "est_duration_s": 4.5,
+      "est_duration_s": 3.4,
       "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
@@ -101,14 +101,25 @@
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "giant-number",
-      "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary.",
-      "on_screen_text": "35 TO 55 TOK/S | ONE MACHINE",
-      "visual_brief": "A giant counter rolls from 35 up to 55 tok/s beside one lone desktop rig on 'thirty-five tokens a second' and 'fifty-five tokens a second', a single-machine tag pulsing under it on 'your mileage may vary'.",
-      "est_duration_s": 9.3,
+      "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second, how fast answers appear, on his R-nine-seven-zero-zero card.",
+      "on_screen_text": "35 TOKENS/S | ONE R9700",
+      "visual_brief": "A giant counter holds at 35 tok/s beside one lone desktop rig, the counter stamping in on 'thirty-five tokens a second' and the card tag lighting on 'R-nine-seven-zero-zero card'.",
+      "est_duration_s": 7.2,
       "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Patched, he reports fifty-five tokens a second. Your mileage may vary.",
+      "on_screen_text": "55 TOKENS/S | YMMV",
+      "visual_brief": "A split compare: left half holds the 35 counter grayed, right half rolls up to 55 tok/s on 'fifty-five tokens a second', and the YMMV tag pulses beneath on 'Your mileage may vary'.",
+      "est_duration_s": 3.8,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
+    },
+    {
+      "id": "s07",
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
