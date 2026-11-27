@@ -2,14 +2,14 @@
 slug: 2026-11-27-amd-forked-llama-cpp-for-its-o
 workspace: shorts
 title: The AMD llama.cpp fork that is not from AMD
-status: building
+status: review
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-27
-updated: "2026-11-27T13:38:10Z"
+updated: "2026-11-27T14:02:11Z"
 publish_slot: ""
 seo_score: 88
 feedback: ""
@@ -28,7 +28,7 @@ blotato_post_id: ""
 - Script: [[stages/04-script/output/2026-11-27-amd-forked-llama-cpp-for-its-o-script]]
 - Package: [[stages/05-package/output/2026-11-27-amd-forked-llama-cpp-for-its-o-package]]
 - Voice: [[stages/06-voice/output/2026-11-27-amd-forked-llama-cpp-for-its-o-voice]]
-- Render: (filled by stage 07)
+- Render: [[stages/07-render/output/2026-11-27-amd-forked-llama-cpp-for-its-o-render]]
 - Publish: (filled by stage 08)
 
 ## Decisions
@@ -50,3 +50,6 @@ blotato_post_id: ""
 - Reason: AMD fork scored 55.4 with the strongest news signal of the window (379 HN points); fits classic band, one fact one consequence.
 - 2026-11-27T13:38:10Z build start on gn100-83c4
 - 2026-11-27T13:39:13Z 06-voice ok 61s
+- 2026-11-27T13:52:57Z 07-render fail 821s (07-render: scene s04 did not pass HyperFrames inspect after 5 rounds: t=5.2-5.28s (2 samples) content_overlap span.accent inside div.fab-mark "DOWNLOADS" — Two )
+- 2026-11-27T14:02:15Z 07-render ok 42.40s: 7 scenes via scene_worker.py, lint True, safe-zone True, loop True, card message_id 406
+- 2026-11-27T14:02:15Z 07-render ok 558s
