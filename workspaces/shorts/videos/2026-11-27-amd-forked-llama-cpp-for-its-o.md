@@ -27,7 +27,7 @@ blotato_post_id: ""
 - Research: [[stages/03-research/output/2026-11-27-amd-forked-llama-cpp-for-its-o-brief]]
 - Script: [[stages/04-script/output/2026-11-27-amd-forked-llama-cpp-for-its-o-script]]
 - Package: [[stages/05-package/output/2026-11-27-amd-forked-llama-cpp-for-its-o-package]]
-- Voice: (filled by stage 06)
+- Voice: [[stages/06-voice/output/2026-11-27-amd-forked-llama-cpp-for-its-o-voice]]
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
 
@@ -49,3 +49,4 @@ blotato_post_id: ""
 - Picked 2026-11-27 (unattended): selected on opportunity score and lane rotation; top scorer "ai detectors" (94.3) discarded by the named-product rule.
 - Reason: AMD fork scored 55.4 with the strongest news signal of the window (379 HN points); fits classic band, one fact one consequence.
 - 2026-11-27T13:38:10Z build start on gn100-83c4
+- 2026-11-27T13:39:13Z 06-voice ok 61s
