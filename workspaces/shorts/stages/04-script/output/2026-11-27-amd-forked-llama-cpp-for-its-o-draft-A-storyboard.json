@@ -1,7 +1,7 @@
 {
   "slug": "2026-11-27-amd-forked-llama-cpp-for-its-o",
   "topic": "The AMD llama.cpp fork story: community patch set, retired AMD repo, Radeon options",
-  "title": "The AMD fork that is not from AMD",
+  "title": "The AMD llama.cpp fork that is not from AMD",
   "description": "The AMD llama.cpp fork everyone is sharing is not AMD's. AMD's own fork is retired, and the trending speedup is one maintainer's nineteen-patch set for stock llama.cpp. You'll learn what stock llama.cpp already does on Radeon via HIP and Vulkan, and what the patch set really adds. (Narration is AI-generated.)",
   "hashtags": [
     "#llamacpp",
@@ -12,6 +12,7 @@
     "llama.cpp",
     "amd llama.cpp",
     "llama.cpp amd",
+    "llama.cpp on amd",
     "radeon llm",
     "llama.cpp radeon",
     "llama-cpp-rdna-boosts",
@@ -23,7 +24,7 @@
     "llama fork",
     "amd fork",
     "local ai",
-    "llama.cpp on amd"
+    "amd gpu ai"
   ],
   "hook_text": "Your feed's AMD fork isn't from AMD.",
   "hook_candidates": [
@@ -43,7 +44,7 @@
   "structure": "myth-bust",
   "value_types": "TEACHES,EQUIPS",
   "target_duration_s": 38,
-  "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models on your PC. Everyone's sharing it as AMD's own fork, its own in-house copy, for Radeon. What trended is a solo maintainer's patch set: nineteen code changes on a pinned copy. AMD's own fork is retired; its page says use the original. The original already runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. After patching, he reports fifty-five tokens a second, warning your mileage may vary. The Radeon fix in your feed came from a stranger, not AMD.",
+  "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor. What trended is one maintainer's patch set: nineteen changes on a pinned copy. AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary. Your feed's Radeon fix came from a stranger, not AMD.",
   "analogy": {
     "vehicle": "an aftermarket tune for one engine family",
     "mapping": "stock llama.cpp is the engine everyone gets; llama-cpp-rdna-boosts is a tuner's kit of 19 patches bolted onto one pinned production run; AMD's own fork is the discontinued in-house tuning shop whose door now says use the stock engine",
@@ -58,65 +59,65 @@
       "layout_archetype": "centered-stack",
       "narration": "Your feed's AMD fork isn't from AMD.",
       "on_screen_text": "YOUR FEED'S AMD FORK ISN'T FROM AMD",
-      "visual_brief": "Frame 1: finished silicon-pack composition, hook line fully legible top-third, Radeon die slab bottom-left with lit amber trace; motion onset at 0.30s as the trace brightens and the hook word NOT shifts one beat. Hook line types onto a dark terminal and the word \"isn't\" flips red as the contradiction lands.",
+      "visual_brief": "Frame 1: finished silicon composition, hook line legible in the top third, Radeon die slab lower left with one amber trace; motion onset 0.30s as the trace brightens and the word ISN'T ticks once on 'from AMD'.",
       "est_duration_s": 2.4,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s02",
       "role": "foreshadow",
       "tool": "hyperframes",
       "layout_archetype": "grid",
-      "narration": "llama.cpp is the free program that runs AI models on your PC. Everyone's sharing it as AMD's own fork, its own in-house copy, for Radeon.",
-      "on_screen_text": "LLAMA.CPP · EVERYONE'S SHARING: AMD'S OWN FORK",
-      "visual_brief": "A phone-screen grid floods with identical repost cards all repeating AMD's own fork for Radeon.",
-      "est_duration_s": 8.6,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "narration": "llama.cpp is the free program that runs AI models locally. Everyone's sharing it as AMD's own fork, an in-house copy. The Hacker News thread pulled three hundred sixty seven points. Real upvotes, wrong vendor.",
+      "on_screen_text": "HN THREAD | 367 POINTS | AMD'S OWN FORK",
+      "visual_brief": "A phone-screen grid floods with repost cards all repeating AMD's own fork for Radeon; on 'three hundred sixty seven points' the top card flips into a counter that snaps to 367, and on 'wrong vendor' every card's AMD mark dims to gray.",
+      "est_duration_s": 11.7,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s03",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "diagram-flow",
-      "narration": "What trended is a solo maintainer's patch set: nineteen code changes on a pinned copy.",
-      "on_screen_text": "SOLO MAINTAINER · 19 PATCHES · PINNED COPY",
-      "visual_brief": "A clean engine block labeled llama.cpp sits center while a stack of 19 small patch plates bolts onto a single pinned base copy.",
-      "est_duration_s": 5.2,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "narration": "What trended is one maintainer's patch set: nineteen changes on a pinned copy.",
+      "on_screen_text": "ONE MAINTAINER | 19 PATCHES",
+      "visual_brief": "A clean engine block labeled llama.cpp sits center while nineteen small patch plates bolt on one at a time to a single pinned base, each plate stamping in on a beat of 'nineteen changes on a pinned copy'.",
+      "est_duration_s": 4.5,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s04",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "timeline",
-      "narration": "AMD's own fork is retired; its page says use the original. The original already runs on Radeon; AMD posts ready-made Windows downloads.",
-      "on_screen_text": "RETIRED → UPSTREAM + WINDOWS BUILDS",
-      "visual_brief": "A timeline shows AMD's own repo card getting stamped RETIRED while a bold arrow redirects to the original project.",
-      "est_duration_s": 7.6,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "narration": "AMD's own fork is retired, pointing to the original. The original runs on Radeon; AMD posts ready-made Windows downloads.",
+      "on_screen_text": "AMD FORK RETIRED | USE UPSTREAM",
+      "visual_brief": "A timeline stamps AMD's own repo card RETIRED on 'retired', then a bold amber arrow redirects to the upstream project card which lights up on 'ready-made Windows downloads'.",
+      "est_duration_s": 6.6,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s05",
       "role": "explain",
       "tool": "hyperframes",
       "layout_archetype": "giant-number",
-      "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. After patching, he reports fifty-five tokens a second, warning your mileage may vary.",
-      "on_screen_text": "35 → 55 TOK/S ON R9700 · YMMV",
-      "visual_brief": "A giant counter rolls from 35 up to 55 tok/s beside a lone desktop rig with a single R9700 card inside.",
-      "est_duration_s": 10.0,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. Patched, he reports fifty-five tokens a second; your mileage may vary.",
+      "on_screen_text": "35 TO 55 TOK/S | ONE MACHINE",
+      "visual_brief": "A giant counter rolls from 35 up to 55 tok/s beside one lone desktop rig on 'thirty-five tokens a second' and 'fifty-five tokens a second', a single-machine tag pulsing under it on 'your mileage may vary'.",
+      "est_duration_s": 9.3,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     },
     {
       "id": "s06",
       "role": "payoff_close",
       "tool": "hyperframes",
       "layout_archetype": "centered-stack",
-      "narration": "The Radeon fix in your feed came from a stranger, not AMD.",
+      "narration": "Your feed's Radeon fix came from a stranger, not AMD.",
       "on_screen_text": "FROM A STRANGER, NOT AMD",
-      "visual_brief": "The words NOT AMD stamp down over the speed number while a lone stranger avatar outshines a grayed company logo.",
-      "est_duration_s": 4.1,
-      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+      "visual_brief": "The words NOT AMD stamp down over the fading speed counter while one stranger avatar glows amber against a grayed company mark; wordmark settle rhymes with frame 1.",
+      "est_duration_s": 3.4,
+      "render_notes": "silicon pack: chip slab, die and lit-trace motifs; amber accent; hard cuts"
     }
   ],
-  "notes_for_review": "Numbers rounded for the ear from the brief's verbatim figures; the 35-to-55 t/s gain stays attributed to one R9700 owner (single-machine, YMMV); 367 points is the HN thread's own score at fetch; verify the retired-banner wording before publish. Hook pattern: named-contradiction."
+  "notes_for_review": "Numbers rounded for the ear from the brief's verbatim figures; the 35-to-55 t/s gain stays attributed to one R9700 owner (single-machine, YMMV); 367 points is the HN thread's own score at fetch. Entity gates left as advisories: GitHub is the brief's second entity and the narration names it only via the patch-set story. Hook pattern: named-contradiction."
 }

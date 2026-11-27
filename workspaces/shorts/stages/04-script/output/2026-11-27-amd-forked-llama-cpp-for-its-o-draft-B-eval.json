@@ -1,6 +1,6 @@
 {
   "eval_version": 1,
-  "generated_at": "2026-11-27T13:13:51+00:00",
+  "generated_at": "2026-11-27T13:18:29+00:00",
   "slug": "adhoc",
   "inputs": {
     "storyboard_path": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-B-storyboard.json",
@@ -33,17 +33,19 @@
   "board_metrics": {
     "number_spend": {
       "total": 6,
-      "spent": 0,
-      "distinct": 0,
-      "score": 0.0,
+      "spent": 2,
+      "distinct": 2,
+      "score": 0.333,
       "detail": [
         {
           "label": "HN thread score (roughly 17 hours after posting)",
           "value": "367 points",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Three hundred sixty seven",
+          "scene_ids": [
+            "s03"
+          ]
         },
         {
           "label": "HN thread comments",
@@ -80,10 +82,12 @@
         {
           "label": "rdna-boosts default patch count (fork point 919794500)",
           "value": "19 default patches",
-          "spent": false,
-          "matched_in": null,
-          "matched_token": null,
-          "scene_ids": []
+          "spent": true,
+          "matched_in": "narration",
+          "matched_token": "Nineteen",
+          "scene_ids": [
+            "s05"
+          ]
         }
       ]
     },
@@ -320,12 +324,12 @@
       ]
     },
     "skeleton": {
-      "sentences": 14,
+      "sentences": 15,
       "hits": 2,
-      "density": 0.143,
+      "density": 0.133,
       "offenders": [
         "Then you check who built it.",
-        "Then an AMD fork, a copy you change yourself, tops Hacker News."
+        "Then an AMD fork, a copy you change yourself, tops the Hacker News thread."
       ]
     },
     "hook": {
@@ -341,7 +345,7 @@
       "structure": "worked-example",
       "labels": [
         {
-          "sentence_index": 6,
+          "sentence_index": 7,
           "sentence": "Step one: clone the llama.cpp repository.",
           "label": "step",
           "ordinal": 1,
@@ -349,7 +353,7 @@
           "has_action_verb": true
         },
         {
-          "sentence_index": 7,
+          "sentence_index": 8,
           "sentence": "Step two: pin the commit and apply the patches.",
           "label": "step",
           "ordinal": 2,
@@ -357,7 +361,7 @@
           "has_action_verb": true
         },
         {
-          "sentence_index": 8,
+          "sentence_index": 9,
           "sentence": "Step three: build it for your Radeon.",
           "label": "step",
           "ordinal": 3,
@@ -368,8 +372,8 @@
     },
     "scene_specificity": {
       "total": 7,
-      "specific_count": 6,
-      "ratio": 0.857,
+      "specific_count": 7,
+      "ratio": 1.0,
       "scenes": [
         {
           "id": "s01",
@@ -384,23 +388,24 @@
         {
           "id": "s02",
           "role": "explain",
-          "est_duration_s": 3.4,
+          "est_duration_s": 3.1,
           "specific": true,
           "hits": [
             "entity:Radeon"
           ],
-          "narration": "Your Radeon already runs llama.cpp, the free local AI engine."
+          "narration": "Your Radeon already runs llama.cpp, the free local engine."
         },
         {
           "id": "s03",
           "role": "foreshadow",
-          "est_duration_s": 7.2,
+          "est_duration_s": 9.7,
           "specific": true,
           "hits": [
+            "num:367 points",
             "entity:AMD",
             "entity:Hacker News"
           ],
-          "narration": "Then an AMD fork, a copy you change yourself, tops Hacker News. AMD's own fork is retired, pointing to the original."
+          "narration": "Then an AMD fork, a copy you change yourself, tops the Hacker News thread. Three hundred sixty seven points. AMD's own fork is retired, pointing to the original."
         },
         {
           "id": "s04",
@@ -410,15 +415,17 @@
           "hits": [
             "entity:Radeon"
           ],
-          "narration": "The speedup is llama-cpp-rdna-boosts, one maintainer's patches for stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon."
+          "narration": "The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon."
         },
         {
           "id": "s05",
           "role": "explain",
-          "est_duration_s": 2.4,
-          "specific": false,
-          "hits": [],
-          "narration": "Nineteen patches now live in your engine."
+          "est_duration_s": 3.1,
+          "specific": true,
+          "hits": [
+            "num:19 default patches"
+          ],
+          "narration": "Nineteen patches from rdna-boosts now live in your engine."
         },
         {
           "id": "s06",
@@ -443,14 +450,14 @@
       ]
     },
     "language": {
-      "fk_grade": 4.8,
-      "words": 123,
-      "sentences": 14,
-      "est_speech_s": 42.4,
+      "fk_grade": 4.7,
+      "words": 132,
+      "sentences": 15,
+      "est_speech_s": 45.5,
       "vo_band_ok": true
     },
-    "narration_full": "You speed up your Radeon tonight. Then you check who built it. Your Radeon already runs llama.cpp, the free local AI engine. Then an AMD fork, a copy you change yourself, tops Hacker News. AMD's own fork is retired, pointing to the original. The speedup is llama-cpp-rdna-boosts, one maintainer's patches for stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon. Nineteen patches now live in your engine. One author's Radeon made thirty-five tokens a second, how fast answers appear. Patched, it hit fifty-five tokens a second. Yours may differ. AMD's fix remains a proposal; your speedup came from one outsider's patches.",
-    "on_screen": "You speed up your Radeon tonight. | You speed up your Radeon tonight. | your Radeon \u2192 llama.cpp \u2192 local model | AMD fork tops HN / AMD's own fork: retired | clone \u2192 pin commit \u2192 apply \u2192 build | 19 patches | 35 \u2192 55 tokens/sec \u00b7 yours may differ | one outsider, not AMD"
+    "narration_full": "You speed up your Radeon tonight. Then you check who built it. Your Radeon already runs llama.cpp, the free local engine. Then an AMD fork, a copy you change yourself, tops the Hacker News thread. Three hundred sixty seven points. AMD's own fork is retired, pointing to the original. The speedup is llama-cpp-rdna-boosts, one maintainer's patches on stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon. Nineteen patches from rdna-boosts now live in your engine. One author's Radeon made thirty-five tokens a second, how fast answers appear. Patched, it hit fifty-five tokens a second. Yours may differ. AMD's fix remains a proposal; your speedup came from one outsider's patches.",
+    "on_screen": "You speed up your Radeon tonight. | You speed up your Radeon tonight. | your Radeon > llama.cpp > local model | 367 POINTS | AMD FORK: RETIRED | clone > pin > apply > build | 19 patches | 35 TO 55 TOK/S | yours may differ | one outsider, not AMD"
   },
   "validators": {
     "storyboard": {
@@ -458,21 +465,21 @@
       "output": {
         "file": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-B-storyboard.json",
         "scenes": 7,
-        "fk_grade": 4.8,
-        "words": 123,
-        "est_speech_s": 42.4,
+        "fk_grade": 4.7,
+        "words": 132,
+        "est_speech_s": 45.5,
         "blockers": [],
         "advisories": [],
         "violations": [],
         "warnings": [
-          "target 40s outside the 32-38s evidence band",
+          "target 43s outside the 32-38s evidence band",
+          "title 43 chars \u2014 mobile truncates ~40",
           "4 consecutive sentences all >6 words \u2014 add a punch sentence",
           "s03: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
           "s03: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
-          "s03: 7s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
           "s04: 11s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
-          "s06: 8s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
-          "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
+          "s07: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "132 words \u2014 32-38s band wants ~85-110"
         ]
       }
     },
@@ -527,24 +534,21 @@
     }
   },
   "overall": {
-    "gate1_ready": false,
-    "failures": [
-      "number_spend"
-    ],
+    "gate1_ready": true,
+    "failures": [],
     "advisories": [
       "entity_spend",
       "top2"
     ],
     "detail": {
       "number_spend": {
-        "spent": 0,
-        "heard": 0,
+        "spent": 2,
+        "heard": 2,
         "total": 6,
         "need": 2,
         "min": 2,
         "max": 5,
-        "mode": "band",
-        "reason": "the viewer hears 0 distinct numbers (0 of 6 brief rows matched); the band is 2-5"
+        "mode": "band"
       },
       "entity_spend": {
         "score": 0.115,
@@ -566,7 +570,7 @@
         ]
       },
       "scene_specificity": {
-        "specific": 6,
+        "specific": 7,
         "need": 6,
         "total": 7
       },
@@ -576,7 +580,7 @@
         "advisory": true
       },
       "skeleton": {
-        "density": 0.143,
+        "density": 0.133,
         "max": 0.15
       },
       "positional_labels": {
