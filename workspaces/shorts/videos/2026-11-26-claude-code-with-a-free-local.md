@@ -2,18 +2,18 @@
 slug: 2026-11-26-claude-code-with-a-free-local
 workspace: shorts
 title: Run Claude Code on Ollama for free
-status: blocked
+status: expired
 pillar: how-to
 structure: news-react-so-what
 format: classic
 style_pack: terminal
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-26
-updated: "2026-11-26T13:57:01Z"
+updated: "2026-11-27T14:35:16Z"
 publish_slot: ""
 seo_score: 96
 feedback: ""
-blocked_reason: "06-voice: voice QA failed: WER 0.110, 12 mismatch(es): expected 'clawed' heard 'claude'; expected 'ohlah' heard 'olah'; expected 'clawed' heard 'claude'"
+blocked_reason: ""
 build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
@@ -47,3 +47,4 @@ blotato_post_id: ""
 - 2026-11-26T13:54:39Z 06-voice fail 205s (voice QA failed: WER 0.136, 14 mismatch(es): expected "anthropic's" heard 'anthropics'; expected 'ollama' heard 'olahma'; expected 'api' heard 'of pi')
 - 2026-11-26T13:57:01Z 06-voice fail 142s (voice QA failed: WER 0.110, 12 mismatch(es): expected 'clawed' heard 'claude'; expected 'ohlah' heard 'olah'; expected 'clawed' heard 'claude')
 - 2026-11-26T13:57:01Z blocked at 06-voice
+- 2026-11-27T14:35:16Z 2026-11-27T14:35:16Z expired: not from today's picks (2026-11-27); the factory carries no backlog

@@ -2,14 +2,14 @@
 slug: 2026-11-26-jev-is-probably-qwen3-5-35b-a3
 workspace: shorts
 title: "Jev is probably Qwen3.5-35B-A3B, and latency gave it away"
-status: idea
+status: expired
 pillar: explainer
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,REFRAMES"
 created: 2026-11-26
-updated: "2026-11-26T12:09:01Z"
+updated: "2026-11-27T14:35:16Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -34,4 +34,4 @@ blotato_post_id: ""
 ## Decisions
 
 ## Build journal
-
+- 2026-11-27T14:35:16Z 2026-11-27T14:35:16Z expired: not from today's picks (2026-11-27); the factory carries no backlog
