@@ -1,0 +1,133 @@
+{
+  "slug": "2026-11-27-amd-forked-llama-cpp-for-its-o",
+  "topic": "The AMD llama.cpp fork story: community patch set, retired AMD repo, Radeon options",
+  "title": "The AMD fork that is not from AMD",
+  "description": "The AMD llama.cpp fork everyone is sharing is not AMD's. AMD's own fork is retired, and the trending speedup is one maintainer's nineteen-patch set for stock llama.cpp. You'll learn what stock llama.cpp already does on Radeon via HIP and Vulkan, and what the patch set really adds. (Narration is AI-generated.)",
+  "hashtags": [
+    "#llamacpp",
+    "#amd",
+    "#radeon"
+  ],
+  "tags": [
+    "llama.cpp",
+    "amd llama.cpp",
+    "llama.cpp amd",
+    "radeon llm",
+    "llama.cpp radeon",
+    "llama-cpp-rdna-boosts",
+    "rocm llama.cpp",
+    "hip llama.cpp",
+    "vulkan llama.cpp",
+    "run llm on amd gpu",
+    "local llm",
+    "llama fork",
+    "amd fork",
+    "local ai",
+    "llama.cpp on amd"
+  ],
+  "hook_text": "You speed up your Radeon tonight.",
+  "hook_candidates": [
+    "Your feed's AMD fork isn't from AMD.",
+    "You speed up your Radeon tonight. Then you check who built it.",
+    "AMD didn't make the fork everyone's sharing.",
+    "The Radeon llama.cpp speedup wasn't built by AMD.",
+    "367 upvotes for an AMD fork AMD didn't write.",
+    "The AMD fork story got the who wrong.",
+    "Your Radeon gets its speedup from a stranger.",
+    "Radeon speedup, one maintainer, zero AMD.",
+    "The AMD fork is nineteen patches and a stranger.",
+    "AMD's fork is retired. The speedup isn't theirs."
+  ],
+  "style_pack": "silicon",
+  "script_format": "classic",
+  "structure": "worked-example",
+  "value_types": "TEACHES,EQUIPS",
+  "target_duration_s": 40,
+  "narration_full": "You speed up your Radeon tonight. Then you check who built it. Your Radeon already runs llama.cpp, the free local AI engine. Then an AMD fork, a copy you change yourself, tops Hacker News. AMD's own fork is retired, pointing to the original. The speedup is llama-cpp-rdna-boosts, one maintainer's patches for stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon. Nineteen patches now live in your engine. One author's Radeon made thirty-five tokens a second, how fast answers appear. Patched, it hit fifty-five tokens a second. Yours may differ. AMD's fix remains a proposal; your speedup came from one outsider's patches.",
+  "analogy": {
+    "vehicle": "an aftermarket tune for one engine family",
+    "mapping": "stock llama.cpp is the engine everyone gets; llama-cpp-rdna-boosts is a tuner's kit of 19 patches bolted onto one pinned production run; AMD's own fork is the discontinued in-house tuning shop whose door now says use the stock engine",
+    "limit": "the tune is 19 software patches by one person, re-fitted at every re-base, and the advertised gains are one driver's stopwatch, not a dyno sheet"
+  },
+  "music_mood": "curious-tech",
+  "scenes": [
+    {
+      "id": "s01",
+      "role": "hook",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "You speed up your Radeon tonight. Then you check who built it.",
+      "on_screen_text": "You speed up your Radeon tonight.",
+      "visual_brief": "Frame 1: finished silicon-pack composition, hook line fully legible top-third, Radeon die slab bottom-left with lit amber trace; motion onset at 0.30s as the trace brightens and the hook word NOT shifts one beat. A Radeon gaming PC glows in a dark room as the words \"You speed up your Radeon tonight\" type onto screen and the case fans spin up.",
+      "est_duration_s": 4.1,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s02",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "diagram-flow",
+      "narration": "Your Radeon already runs llama.cpp, the free local AI engine.",
+      "on_screen_text": "your Radeon → llama.cpp → local model",
+      "visual_brief": "A simple flow diagram links your Radeon through llama.cpp to a chat reply, illustrating \"the free local AI engine\" already running.",
+      "est_duration_s": 3.4,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s03",
+      "role": "foreshadow",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "Then an AMD fork, a copy you change yourself, tops Hacker News. AMD's own fork is retired, pointing to the original.",
+      "on_screen_text": "AMD fork tops HN / AMD's own fork: retired",
+      "visual_brief": "A split screen pits a climbing Hacker News headline against an archived repo banner, matching \"AMD's own fork is retired, pointing to the original.\"",
+      "est_duration_s": 7.2,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s04",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "timeline",
+      "narration": "The speedup is llama-cpp-rdna-boosts, one maintainer's patches for stock code. Step one: clone the llama.cpp repository. Step two: pin the commit and apply the patches. Step three: build it for your Radeon.",
+      "on_screen_text": "clone → pin commit → apply → build",
+      "visual_brief": "Three stops light up along a horizontal timeline as each command lands on your machine, echoing \"pin the commit, apply the patches.\"",
+      "est_duration_s": 11.0,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s05",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "giant-number",
+      "narration": "Nineteen patches now live in your engine.",
+      "on_screen_text": "19 patches",
+      "visual_brief": "A giant 19 stamps onto the engine diagram as \"Nineteen patches now live in your engine\" lands, credited to one maintainer below.",
+      "est_duration_s": 2.4,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s06",
+      "role": "explain",
+      "tool": "hyperframes",
+      "layout_archetype": "split-compare",
+      "narration": "One author's Radeon made thirty-five tokens a second, how fast answers appear. Patched, it hit fifty-five tokens a second. Yours may differ.",
+      "on_screen_text": "35 → 55 tokens/sec · yours may differ",
+      "visual_brief": "Two counters compare one author's Radeon before and after, climbing from 35 to 55 tokens/sec while the caveat sits beneath.",
+      "est_duration_s": 7.6,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    },
+    {
+      "id": "s07",
+      "role": "payoff_close",
+      "tool": "hyperframes",
+      "layout_archetype": "centered-stack",
+      "narration": "AMD's fix remains a proposal; your speedup came from one outsider's patches.",
+      "on_screen_text": "one outsider, not AMD",
+      "visual_brief": "The credit zooms from a fading AMD logo to a single maintainer avatar as \"your speedup came from one outsider's patches\" lands.",
+      "est_duration_s": 4.1,
+      "render_notes": "silicon pack: chip slab, lit trace and die motifs; amber accent"
+    }
+  ],
+  "notes_for_review": "Numbers rounded for the ear from the brief's verbatim figures; the 35-to-55 t/s gain stays attributed to one R9700 owner (single-machine, YMMV); 367 points is the HN thread's own score at fetch; verify the retired-banner wording before publish. Hook pattern: situation."
+}

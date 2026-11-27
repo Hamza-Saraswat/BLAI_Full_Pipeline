@@ -1,0 +1,586 @@
+{
+  "eval_version": 1,
+  "generated_at": "2026-11-27T13:13:51+00:00",
+  "slug": "adhoc",
+  "inputs": {
+    "storyboard_path": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-A-storyboard.json",
+    "research_path": "../03-research/output/2026-11-27-amd-forked-llama-cpp-for-its-o-brief.json",
+    "project_record": null,
+    "ledger_path": "output/script-ledger.json"
+  },
+  "research_metrics": {
+    "claims_total": 9,
+    "claims_by_quality": {
+      "primary": 4,
+      "community": 3,
+      "docs": 2
+    },
+    "pct_primary_docs": 0.667,
+    "key_numbers_total": 6,
+    "entities_total": 26,
+    "misconceptions_total": 4,
+    "unverified_ratio": 0.4,
+    "source_domains": [
+      "amd.com",
+      "devnull.land",
+      "github.com",
+      "ycombinator.com"
+    ],
+    "domain_diversity": 4,
+    "depth": "standard",
+    "has_notes": true
+  },
+  "board_metrics": {
+    "number_spend": {
+      "total": 6,
+      "spent": 1,
+      "distinct": 1,
+      "score": 0.167,
+      "detail": [
+        {
+          "label": "HN thread score (roughly 17 hours after posting)",
+          "value": "367 points",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "HN thread comments",
+          "value": "88 comments",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "AMD HRX claimed prefill uplift vs faster of Vulkan/HIP",
+          "value": "30-50% tok/s uplift on prefill",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "AMD HRX claimed non-MTP decode uplift",
+          "value": "Parity to 15% tok/s uplift on non-MTP decode",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "MI300X pp512 t/s, DeepSeek 671B Q4_K, 8 GPUs, ROCm llama.cpp",
+          "value": "439.14 \u00b1 1.68 t/s",
+          "spent": false,
+          "matched_in": null,
+          "matched_token": null,
+          "scene_ids": []
+        },
+        {
+          "label": "rdna-boosts default patch count (fork point 919794500)",
+          "value": "19 default patches",
+          "spent": true,
+          "matched_in": "on_screen",
+          "matched_token": "19",
+          "scene_ids": [
+            "s03"
+          ]
+        }
+      ]
+    },
+    "entity_spend": {
+      "total": 26,
+      "found_count": 5,
+      "score": 0.192,
+      "found": [
+        "AMD",
+        "Windows",
+        "YMMV",
+        "R9700",
+        "Radeon"
+      ],
+      "missing": [
+        "GitHub",
+        "Vulkan",
+        "HRX",
+        "RFC",
+        "RDNA3.5 and RDNA4 GPUs",
+        "stew675",
+        "RDNA3.5",
+        "RDNA2",
+        "gfx110X",
+        "gfx115X",
+        "gfx120X",
+        "Parity",
+        "AMD GPUs",
+        "MI300X",
+        "Instinct",
+        "MI300X GPUs",
+        "gfx1030",
+        "DeepSeek 671B",
+        "pp512 439.14",
+        "Hacker News",
+        "AMD GitHub"
+      ],
+      "top2": [
+        "AMD",
+        "GitHub"
+      ],
+      "top2_present": false,
+      "entities": [
+        {
+          "name": "AMD",
+          "tier": 0,
+          "claim_count": 7,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "GitHub",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Vulkan",
+          "tier": 0,
+          "claim_count": 2,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "HRX",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RFC",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Windows",
+          "tier": 0,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "narration",
+            "on_screen"
+          ]
+        },
+        {
+          "name": "RDNA3.5 and RDNA4 GPUs",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "stew675",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RDNA3.5",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "RDNA2",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gfx110X",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gfx115X",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gfx120X",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Parity",
+          "tier": 0,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "AMD GPUs",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MI300X",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "Instinct",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "MI300X GPUs",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "gfx1030",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "DeepSeek 671B",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "pp512 439.14",
+          "tier": 1,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "YMMV",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Hacker News",
+          "tier": 3,
+          "claim_count": 1,
+          "found": false,
+          "matched_in": []
+        },
+        {
+          "name": "R9700",
+          "tier": 3,
+          "claim_count": 1,
+          "found": true,
+          "matched_in": [
+            "on_screen"
+          ]
+        },
+        {
+          "name": "Radeon",
+          "tier": 4,
+          "claim_count": 0,
+          "found": true,
+          "matched_in": [
+            "narration"
+          ]
+        },
+        {
+          "name": "AMD GitHub",
+          "tier": 4,
+          "claim_count": 0,
+          "found": false,
+          "matched_in": []
+        }
+      ]
+    },
+    "skeleton": {
+      "sentences": 10,
+      "hits": 0,
+      "density": 0.0,
+      "offenders": []
+    },
+    "hook": {
+      "concrete": true,
+      "via": [
+        "entity:AMD"
+      ],
+      "hook_text": "Your feed's AMD fork isn't from AMD.",
+      "first_sentence": "Your feed's AMD fork isn't from AMD."
+    },
+    "positional_labels": {
+      "count": 0,
+      "structure": "myth-bust",
+      "labels": []
+    },
+    "scene_specificity": {
+      "total": 6,
+      "specific_count": 6,
+      "ratio": 1.0,
+      "scenes": [
+        {
+          "id": "s01",
+          "role": "hook",
+          "est_duration_s": 2.4,
+          "specific": true,
+          "hits": [
+            "entity:AMD"
+          ],
+          "narration": "Your feed's AMD fork isn't from AMD."
+        },
+        {
+          "id": "s02",
+          "role": "foreshadow",
+          "est_duration_s": 8.6,
+          "specific": true,
+          "hits": [
+            "entity:AMD",
+            "entity:Radeon"
+          ],
+          "narration": "llama.cpp is the free program that runs AI models on your PC. Everyone's sharing it as AMD's own fork, its own in-house copy, for Radeon."
+        },
+        {
+          "id": "s03",
+          "role": "explain",
+          "est_duration_s": 5.2,
+          "specific": true,
+          "hits": [
+            "num:19 default patches"
+          ],
+          "narration": "What trended is a solo maintainer's patch set: nineteen code changes on a pinned copy."
+        },
+        {
+          "id": "s04",
+          "role": "explain",
+          "est_duration_s": 7.6,
+          "specific": true,
+          "hits": [
+            "entity:AMD",
+            "entity:Windows",
+            "entity:Radeon"
+          ],
+          "narration": "AMD's own fork is retired; its page says use the original. The original already runs on Radeon; AMD posts ready-made Windows downloads."
+        },
+        {
+          "id": "s05",
+          "role": "explain",
+          "est_duration_s": 10.0,
+          "specific": true,
+          "hits": [
+            "entity:YMMV",
+            "entity:R9700"
+          ],
+          "narration": "A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. After patching, he reports fifty-five tokens a second, warning your mileage may vary."
+        },
+        {
+          "id": "s06",
+          "role": "payoff_close",
+          "est_duration_s": 4.1,
+          "specific": true,
+          "hits": [
+            "entity:AMD",
+            "entity:Radeon"
+          ],
+          "narration": "The Radeon fix in your feed came from a stranger, not AMD."
+        }
+      ]
+    },
+    "language": {
+      "fk_grade": 6.3,
+      "words": 119,
+      "sentences": 10,
+      "est_speech_s": 41.0,
+      "vo_band_ok": true
+    },
+    "narration_full": "Your feed's AMD fork isn't from AMD. llama.cpp is the free program that runs AI models on your PC. Everyone's sharing it as AMD's own fork, its own in-house copy, for Radeon. What trended is a solo maintainer's patch set: nineteen code changes on a pinned copy. AMD's own fork is retired; its page says use the original. The original already runs on Radeon; AMD posts ready-made Windows downloads. A single machine backs the speedup. One user measured thirty-five tokens a second on his R-nine-seven-zero-zero. After patching, he reports fifty-five tokens a second, warning your mileage may vary. The Radeon fix in your feed came from a stranger, not AMD.",
+    "on_screen": "Your feed's AMD fork isn't from AMD. | YOUR FEED'S AMD FORK ISN'T FROM AMD | LLAMA.CPP \u00b7 EVERYONE'S SHARING: AMD'S OWN FORK | SOLO MAINTAINER \u00b7 19 PATCHES \u00b7 PINNED COPY | RETIRED \u2192 UPSTREAM + WINDOWS BUILDS | 35 \u2192 55 TOK/S ON R9700 \u00b7 YMMV | FROM A STRANGER, NOT AMD"
+  },
+  "validators": {
+    "storyboard": {
+      "exit_code": 0,
+      "output": {
+        "file": "output/2026-11-27-amd-forked-llama-cpp-for-its-o-draft-A-storyboard.json",
+        "scenes": 6,
+        "fk_grade": 6.3,
+        "words": 119,
+        "est_speech_s": 41.0,
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": [
+          "FK grade 6.3 \u2014 target <=5",
+          "4 consecutive sentences all >6 words \u2014 add a punch sentence",
+          "s01: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s01: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s02: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s02: 9s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
+          "s04: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json",
+          "s04: 8s scene with ~0 visual beats in brief \u2014 need a change every ~3s",
+          "s05: 10s scene with ~1 visual beats in brief \u2014 need a change every ~3s",
+          "s06: 'AMD' will be spoken via skills/script-gates/tts_lexicon.json"
+        ]
+      }
+    },
+    "research": {
+      "exit_code": 0,
+      "output": {
+        "file": "../03-research/output/2026-11-27-amd-forked-llama-cpp-for-its-o-brief.json",
+        "blockers": [],
+        "advisories": [],
+        "violations": [],
+        "warnings": []
+      }
+    }
+  },
+  "telemetry": {
+    "note": "dashboard/data not readable"
+  },
+  "script_format": "classic",
+  "thresholds": {
+    "number_spend": {
+      "min_count": 2,
+      "max_count": 5
+    },
+    "entity_spend": {
+      "min_ratio": 0.5
+    },
+    "top2": {
+      "required": true
+    },
+    "hook_concrete": {
+      "required": true
+    },
+    "scene_specificity": {
+      "allow_generic": 1
+    },
+    "skeleton": {
+      "max_density": 0.15
+    },
+    "positional_labels": {
+      "allowed_structures": [
+        "how-to-three-moves",
+        "worked-example"
+      ],
+      "max_labels": 3,
+      "min_label_words": 6
+    },
+    "sameness": {
+      "window": 5
+    },
+    "validator": {
+      "max_blockers": 0
+    }
+  },
+  "overall": {
+    "gate1_ready": false,
+    "failures": [
+      "number_spend"
+    ],
+    "advisories": [
+      "entity_spend",
+      "top2"
+    ],
+    "detail": {
+      "number_spend": {
+        "spent": 1,
+        "heard": 1,
+        "total": 6,
+        "need": 2,
+        "min": 2,
+        "max": 5,
+        "mode": "band",
+        "reason": "the viewer hears 1 distinct number (1 of 6 brief rows matched); the band is 2-5"
+      },
+      "entity_spend": {
+        "score": 0.192,
+        "need": 0.5,
+        "advisory": true
+      },
+      "top2": {
+        "top2": [
+          "AMD",
+          "GitHub"
+        ],
+        "present": false,
+        "advisory": true
+      },
+      "hook_concrete": {
+        "concrete": true,
+        "via": [
+          "entity:AMD"
+        ]
+      },
+      "scene_specificity": {
+        "specific": 6,
+        "need": 5,
+        "total": 6
+      },
+      "not_x_but_y": {
+        "count": 0,
+        "max": 1,
+        "advisory": true
+      },
+      "skeleton": {
+        "density": 0.0,
+        "max": 0.15
+      },
+      "positional_labels": {
+        "count": 0,
+        "structure": "myth-bust",
+        "allowed_structures": [
+          "how-to-three-moves",
+          "worked-example"
+        ],
+        "max_labels": 3,
+        "min_label_words": 6,
+        "offenders": [],
+        "reasons": [],
+        "reason": null
+      },
+      "sameness": {
+        "checked": true,
+        "ok": true,
+        "ledger": "output/script-ledger.json",
+        "comparisons": 5,
+        "violations": [],
+        "advisories": [],
+        "reason": null
+      },
+      "validator": {
+        "blockers": 0
+      }
+    }
+  }
+}
