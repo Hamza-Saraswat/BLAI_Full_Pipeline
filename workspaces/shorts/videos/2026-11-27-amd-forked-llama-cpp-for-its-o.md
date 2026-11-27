@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-27-amd-forked-llama-cpp-for-its-o
 workspace: shorts
-title: AMD forked llama.cpp for its own GPUs
-status: scripted
+title: The AMD llama.cpp fork that is not from AMD
+status: ready-to-build
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-27
-updated: "2026-11-27T13:35:06Z"
+updated: "2026-11-27T13:36:09Z"
 publish_slot: ""
-seo_score: 0
+seo_score: 88
 feedback: ""
 blocked_reason: ""
 build_host: ""
@@ -26,7 +26,7 @@ blotato_post_id: ""
 - Ideas: [[stages/02-ideas/output/2026-11-27-ideas]]
 - Research: [[stages/03-research/output/2026-11-27-amd-forked-llama-cpp-for-its-o-brief]]
 - Script: [[stages/04-script/output/2026-11-27-amd-forked-llama-cpp-for-its-o-script]]
-- Package: (filled by stage 05)
+- Package: [[stages/05-package/output/2026-11-27-amd-forked-llama-cpp-for-its-o-package]]
 - Voice: (filled by stage 06)
 - Render: (filled by stage 07)
 - Publish: (filled by stage 08)
@@ -41,6 +41,7 @@ blotato_post_id: ""
 - 2026-11-27T12:59:27Z Script step 2 (unattended): 10 hooks scored per hook-library; picks are A = hook 1 (Named contradiction) and B = hook 8 (Situation), two different patterns, both true per brief.
 - 2026-11-27T13:35:06Z Script done (unattended): writers kimi-k3 draft A (myth-bust) 19/24 and draft B (worked-example) 10/24; judge kimi-k3, blind; winner A with one graft (names llama-cpp-rdna-boosts).
 - 2026-11-27T13:35:06Z Gates on winner: validator 0 blockers 0 advisories; eval gate1_ready True (failures none; entity_spend and top2 soft advisories, GitHub only appears via the patch-set story); number_spend 2 of 6 (367 thread points, 19 rdna patches); sameness clean vs last 5. Post-judge fixes: tokens-a-second defined, R-number spoken, s05 split. Style pack silicon recorded; ledger entry 83 appended; normalizer 4 scenes changed.
+- 2026-11-27T13:36:09Z Package done (unattended): rubric 88/100 (searchable title, product-first, related video AMD Quark Short, 3 hashtags, 17 tags, compliance flags false, original_insight the mechanism split no coverage names). check_outputs: 1 pre-existing failure (Voice link unfilled while normalized narration sits in 06 output, stage 06 not run -- known normalizer sidecar class, not this stage debt); Package link now filled.
 
 ## Build journal
 
