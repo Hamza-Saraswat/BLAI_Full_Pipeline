@@ -2,19 +2,19 @@
 slug: 2026-11-27-amd-forked-llama-cpp-for-its-o
 workspace: shorts
 title: The AMD llama.cpp fork that is not from AMD
-status: ready-to-build
+status: building
 pillar: news-react
 structure: myth-bust
 format: classic
 style_pack: silicon
 value_types: "TEACHES,EQUIPS"
 created: 2026-11-27
-updated: "2026-11-27T13:36:09Z"
+updated: "2026-11-27T13:38:10Z"
 publish_slot: ""
 seo_score: 88
 feedback: ""
 blocked_reason: ""
-build_host: ""
+build_host: gn100-83c4
 preview_url: ""
 youtube_url: ""
 blotato_post_id: ""
@@ -48,3 +48,4 @@ blotato_post_id: ""
 
 - Picked 2026-11-27 (unattended): selected on opportunity score and lane rotation; top scorer "ai detectors" (94.3) discarded by the named-product rule.
 - Reason: AMD fork scored 55.4 with the strongest news signal of the window (379 HN points); fits classic band, one fact one consequence.
+- 2026-11-27T13:38:10Z build start on gn100-83c4
