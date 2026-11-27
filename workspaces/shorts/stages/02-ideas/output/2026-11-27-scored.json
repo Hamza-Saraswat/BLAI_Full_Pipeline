@@ -1,0 +1,422 @@
+[
+  {
+    "title": "AI detectors can't tell, and the tests show it",
+    "keyword": "ai detectors",
+    "autocomplete": {
+      "seed": "ai detectors",
+      "depth_score": 203,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [],
+    "lane": "myth-bust",
+    "angle": "Everyone runs AI detectors; the manual-technique tests say they flag the wrong things.",
+    "why_now": "unslop.run writeup on HN 18 h ago.",
+    "radar_items": [
+      "beating-ai-detectors"
+    ],
+    "value_types": [
+      "REFRAMES",
+      "TEACHES"
+    ],
+    "demand": 2.9522,
+    "competition_score": 0.0,
+    "opportunity": 94.3,
+    "bonuses": {
+      "named_product": 0.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 2.9522,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 1
+  },
+  {
+    "title": "AMD forked llama.cpp for its own GPUs",
+    "keyword": "llama.cpp on AMD",
+    "autocomplete": {
+      "seed": "llama.cpp on AMD",
+      "depth_score": 19,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "AMD",
+      "llama.cpp"
+    ],
+    "lane": "news-react",
+    "angle": "AMD now ships its own llama.cpp fork, so RX owners stop fighting the stock build.",
+    "why_now": "379 points on HN in the last 48 h, devnull.land writeup 19 h ago.",
+    "radar_items": [
+      "amd-fork-llamacpp"
+    ],
+    "value_types": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "demand": -0.3044,
+    "competition_score": 0.0,
+    "opportunity": 55.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3044,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 2
+  },
+  {
+    "title": "Inkling-2-Mini GGUF: 177 likes, zero downloads",
+    "keyword": "inkling gguf",
+    "autocomplete": {
+      "seed": "inkling gguf",
+      "depth_score": 15,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "Inkling-2-Mini"
+    ],
+    "lane": "news-react",
+    "angle": "The trending GGUF has 177 likes and 0 downloads; hype is ahead of the usage data.",
+    "why_now": "Trending score 145 on Hugging Face, 23 h ago.",
+    "radar_items": [
+      "inkling-2-mini"
+    ],
+    "value_types": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "demand": -0.3752,
+    "competition_score": 0.0,
+    "opportunity": 54.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3752,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 3
+  },
+  {
+    "title": "RustingStrata: run GGUF models bigger than your VRAM",
+    "keyword": "models bigger than vram",
+    "autocomplete": {
+      "seed": "models bigger than vram",
+      "depth_score": 15,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "RustingStrata",
+      "GGUF"
+    ],
+    "lane": "how-to",
+    "angle": "A pure Rust GGUF engine runs models larger than VRAM on CUDA and Vulkan, so 8 GB card boxes get a new option.",
+    "why_now": "Show HN 18 h ago; runs > VRAM is the hook.",
+    "radar_items": [
+      "rustingstrata"
+    ],
+    "value_types": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "demand": -0.3752,
+    "competition_score": 0.0,
+    "opportunity": 54.4,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3752,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 4
+  },
+  {
+    "title": "llama.cpp ships three builds a day now",
+    "keyword": "llama.cpp release",
+    "autocomplete": {
+      "seed": "llama.cpp release",
+      "depth_score": 14,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "llama.cpp"
+    ],
+    "lane": "news-react",
+    "angle": "b12809 through b12811 landed in five hours, one with a known break; pin your builds.",
+    "why_now": "Three pre-releases inside the 48 h window.",
+    "radar_items": [
+      "llamacpp-b12811",
+      "llamacpp-b12810",
+      "llamacpp-b12809"
+    ],
+    "value_types": [
+      "EQUIPS",
+      "TEACHES"
+    ],
+    "demand": -0.3929,
+    "competition_score": 0.0,
+    "opportunity": 54.1,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.3929,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 5
+  },
+  {
+    "title": "A bare-metal OS runs Qwen3-0.6B 54% faster than llama.cpp",
+    "keyword": "bare metal llm",
+    "autocomplete": {
+      "seed": "bare metal llm",
+      "depth_score": 13,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "Qwen3-0.6B",
+      "llama.cpp"
+    ],
+    "lane": "comparison",
+    "angle": "A hobby OS beats llama.cpp by 54% on a 0.6B model, and the reason is stack overhead, not model speed.",
+    "why_now": "Measured claim on HN 19 h ago; 54% number carries the video.",
+    "radar_items": [
+      "baremetal-os-qwen"
+    ],
+    "value_types": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "demand": -0.4106,
+    "competition_score": 0.0,
+    "opportunity": 53.8,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.4106,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 6
+  },
+  {
+    "title": "Ollama vs llama.cpp: which one should you actually run",
+    "keyword": "ollama vs llama.cpp",
+    "autocomplete": {
+      "seed": "ollama vs llama.cpp",
+      "depth_score": 13,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "Ollama",
+      "llama.cpp"
+    ],
+    "lane": "comparison",
+    "angle": "Ollama and llama.cpp solve different halves of the same job; the decision rule is one sentence.",
+    "why_now": "Ollama v0.40.19-rc0 shipped 18 h ago; evergreen comparison with fresh release hook.",
+    "radar_items": [
+      "ollama-0.40.19-rc0"
+    ],
+    "value_types": [
+      "TEACHES",
+      "EQUIPS"
+    ],
+    "demand": -0.4106,
+    "competition_score": 0.0,
+    "opportunity": 53.8,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.4106,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 7
+  },
+  {
+    "title": "Mistral Large for code reviews, without the API bill",
+    "keyword": "local llm code review",
+    "autocomplete": {
+      "seed": "local llm code review",
+      "depth_score": 12,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "Mistral Large"
+    ],
+    "lane": "comparison",
+    "angle": "One team dumped cloud models for Mistral Large on code reviews; the local GGUF question is whether it fits your card.",
+    "why_now": "tomassetti.me writeup on HN 1 h ago.",
+    "radar_items": [
+      "mistral-large-code-reviews"
+    ],
+    "value_types": [
+      "EQUIPS",
+      "REFRAMES"
+    ],
+    "demand": -0.4283,
+    "competition_score": 0.0,
+    "opportunity": 53.6,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.4283,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 8
+  },
+  {
+    "title": "Six old MacBook Airs: the honest payback math",
+    "keyword": "old macbook llm",
+    "autocomplete": {
+      "seed": "old macbook llm",
+      "depth_score": 11,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [
+      "MacBook Air"
+    ],
+    "lane": "myth-bust",
+    "angle": "A used MacBook Air cluster pays for itself only at the right electricity rate; the math decides, not the vibes.",
+    "why_now": "quickchat.ai honest-math writeup on HN 23 h ago.",
+    "radar_items": [
+      "six-macbook-airs"
+    ],
+    "value_types": [
+      "REFRAMES",
+      "TEACHES"
+    ],
+    "demand": -0.446,
+    "competition_score": 0.0,
+    "opportunity": 53.3,
+    "bonuses": {
+      "named_product": 10.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": -0.446,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 9
+  },
+  {
+    "title": "Why your first local LLM should start with why",
+    "keyword": "why local llm",
+    "autocomplete": {
+      "seed": "why local llm",
+      "depth_score": 47,
+      "source": "autocomplete.py run 2026-11-27"
+    },
+    "competition": null,
+    "vidiq": null,
+    "trend_slope": null,
+    "named_product": [],
+    "lane": "explainer",
+    "angle": "The reason to run local is the workload, not the model; pick the reason first and the model follows.",
+    "why_now": "Evergreen pillar explainer; deepest autocomplete of the day (47).",
+    "radar_items": [],
+    "value_types": [
+      "TEACHES",
+      "REFRAMES"
+    ],
+    "demand": 0.1911,
+    "competition_score": 0.0,
+    "opportunity": 52.9,
+    "bonuses": {
+      "named_product": 0.0,
+      "small_channel_velocity": 0.0
+    },
+    "z": {
+      "depth_score": 0.1911,
+      "vidiq_volume": null,
+      "trend_slope": null,
+      "median_views": null,
+      "median_subs": null,
+      "share_recent_180d": null,
+      "exact_title_rate": null
+    },
+    "rank": 10
+  }
+]
