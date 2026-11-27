@@ -2,7 +2,7 @@
 slug: 2026-11-27-amd-forked-llama-cpp-for-its-o
 workspace: shorts
 title: AMD forked llama.cpp for its own GPUs
-status: idea
+status: researched
 pillar: news-react
 structure: ""
 format: classic
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-27-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-27-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-27-amd-forked-llama-cpp-for-its-o-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
@@ -34,6 +34,8 @@ blotato_post_id: ""
 ## Decisions
 - 2026-11-27T12:34:34Z Checkpoint (research, unattended): confirmed angle and slug -- AMD now ships its own llama.cpp fork, so RX owners stop fighting the stock build; slug 2026-11-27-amd-forked-llama-cpp-for-its-o.
 - 2026-11-27T12:34:34Z Why: hub slug matches ideas pick 1 row exactly; no picks.md swap instruction exists for 2026-11-27; angle fits the news-react one-fact-one-consequence band.
+- 2026-11-27T12:56:49Z Research done (unattended): 8 sources fetched via web_search+web_extract (FireCrawl 402 credit-exhausted, fallback used); validator exit 0; 9 claims, 6 key numbers.
+- 2026-11-27T12:56:49Z Why: brief thesis lands the twist -- the trending "AMD fork" is one-maintainer community patch set llama-cpp-rdna-boosts, AMD own fork retired, so the script corrects the headline instead of repeating it. 35-to-55 t/s figure stays attributed single-machine YMMV.
 
 ## Build journal
 
