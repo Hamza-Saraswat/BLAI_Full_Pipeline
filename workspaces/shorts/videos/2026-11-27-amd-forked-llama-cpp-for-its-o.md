@@ -32,6 +32,8 @@ blotato_post_id: ""
 - Publish: (filled by stage 08)
 
 ## Decisions
+- 2026-11-27T12:34:34Z Checkpoint (research, unattended): confirmed angle and slug -- AMD now ships its own llama.cpp fork, so RX owners stop fighting the stock build; slug 2026-11-27-amd-forked-llama-cpp-for-its-o.
+- 2026-11-27T12:34:34Z Why: hub slug matches ideas pick 1 row exactly; no picks.md swap instruction exists for 2026-11-27; angle fits the news-react one-fact-one-consequence band.
 
 ## Build journal
 
