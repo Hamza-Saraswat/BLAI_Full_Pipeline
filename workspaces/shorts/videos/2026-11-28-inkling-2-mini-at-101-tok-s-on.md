@@ -2,14 +2,14 @@
 slug: 2026-11-28-inkling-2-mini-at-101-tok-s-on
 workspace: shorts
 title: "Inkling 2 Mini at 101 tok/s on a GB10: what vLLM did"
-status: idea
+status: researched
 pillar: how-to
 structure: ""
 format: smooth-explainer
 style_pack: ""
 value_types: "TEACHES,PROVES"
 created: 2026-11-28
-updated: "2026-11-28T12:10:57Z"
+updated: "2026-11-28T13:02:09Z"
 publish_slot: ""
 seo_score: 0
 feedback: ""
@@ -24,7 +24,7 @@ blotato_post_id: ""
 ## Artifacts
 - Radar: [[stages/01-radar/output/2026-11-28-radar]]
 - Ideas: [[stages/02-ideas/output/2026-11-28-ideas]]
-- Research: (filled by stage 03)
+- Research: [[stages/03-research/output/2026-11-28-inkling-2-mini-at-101-tok-s-on-brief]]
 - Script: (filled by stage 04)
 - Package: (filled by stage 05)
 - Voice: (filled by stage 06)
