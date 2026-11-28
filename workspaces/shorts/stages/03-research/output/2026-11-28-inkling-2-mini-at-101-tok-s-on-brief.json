@@ -1,0 +1,214 @@
+{
+  "slug": "2026-11-28-inkling-2-mini-at-101-tok-s-on",
+  "topic": "Can one GB10 hit 101 tok/s on Inkling 2 Mini in vLLM, and which settings get it there?",
+  "generated_at": "2026-11-28T12:53:23Z",
+  "depth": "standard",
+  "thesis": "A desk-side GB10 with 128 GB of shared memory hits 101 tok/s on Inkling 2 Mini not by adding hardware but by trading prefill chunk size, KV-cache precision and a draft model against one memory budget.",
+  "explanation_path": "Speed on this box is a budgeting story before it is a compute story. Establish what a tokens-per-second number measures -- a request splits into prefill, reading your prompt, and decode, writing the reply, and the 101 number is decode only -- before any hardware or flag appears. Then establish the machine: one GB10 chip whose 128 GB of memory is shared between CPU and GPU, which is why every setting is a trade against the same pool, and the model: a mixture-of-experts design that stores 26.4B weights but activates 5.4B effective per token, arriving as one about-20GB checkpoint already in 4-bit-class precision. With those three fixed, the settings land as consequences: a small draft model guesses tokens ahead so each decode step commits one to eight tokens; an FP8 KV cache roughly doubles how much conversation fits; the prefill chunk stays small so the KV cache keeps full-length requests; and the prefill win comes from kernel launch configuration because memory bandwidth was not the limit. Close on the transferable habit: profile one real step, change one knob, measure again.",
+  "claims": [
+    {
+      "claim": "Inkling 2 Mini is Thinking Machines Lab's looped mixture-of-experts model with 26.4B total parameters, 3.4B active and 5.4B effective active parameters per token across three loop passes, released November 20, 2026 under Apache 2.0 with a context window up to 1M tokens.",
+      "source_url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "source_title": "thinkingmachines/Inkling-2-Mini model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "The weights ship as one checkpoint of about 20GB in mixed NVFP4 and MXFP8 precisions, with 1x NVIDIA DGX Spark supported, Apple silicon devices with 32GB or more memory, and 32GB or more of VRAM recommended on other GPUs.",
+      "source_url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "source_title": "thinkingmachines/Inkling-2-Mini model card",
+      "source_quality": "primary",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "A homelab author measured 101 tok/s of single-request decode and 195.7 tok/s in aggregate for four concurrent requests, running the official checkpoint in vLLM on one GB10 machine (an MSI EdgeXpert with 128 GB of unified memory) with an FP8 KV cache, a 131,072-token context and 36% of memory.",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+      "source_title": "Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "On the same published benchmark, the vLLM baseline with the shipped DSpark drafter was 61.4 tok/s, swapping in the DFlash2 draft model lifted it to 88.2 tok/s, and the author's five further changes took the live service from 90.3 to 101.0 tok/s.",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+      "source_title": "Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "Raising the prefill chunk size sped prefill but shrank the KV cache: at 6,144-token chunks the cache held only 1.33 full 131,072-token requests, and at 8,192 the service would not start, so the configuration kept 4,096-token chunks.",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+      "source_title": "Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "The prefill bottleneck was kernel launch configuration, not memory bandwidth: the expert GEMMs reached about 38 TFLOP/s (roughly 8% of the GB10's FP4 peak), and retiling them cut a 32K prompt's time to first token from 12.2 to 9.7 seconds.",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+      "source_title": "Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "On one DGX Spark, an FP8 (E4M3) KV cache grows the KV pool to 3,308,911 tokens from 2,075,828 tokens at BF16, holding three full 1,048,576-token requests at once and passing a 949,953-token needle test.",
+      "source_url": "https://github.com/tonyd2wild/Inkling-2-Mini-NVFP4-DGX-Spark",
+      "source_title": "Inkling-2-Mini-NVFP4-DGX-Spark repository",
+      "source_quality": "benchmark",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "In vLLM V1 chunked prefill is always enabled by default, and the tuning docs state that smaller max_num_batched_tokens values achieve better inter-token latency while higher values achieve better time to first token.",
+      "source_url": "https://docs.vllm.ai/en/v0.10.2/configuration/optimization.html",
+      "source_title": "Optimization and Tuning - vLLM",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "vLLM's official recipe for Inkling 2 Mini lists the DGX Spark (GB10) as supported hardware, serves it with the checkpoint's bundled DSpark speculative drafter, and caps the context at 262,144 tokens on the Spark to fit in memory.",
+      "source_url": "https://recipes.vllm.ai/thinkingmachines/Inkling-2-Mini",
+      "source_title": "thinkingmachines/Inkling-2-Mini | vLLM Recipes",
+      "source_quality": "docs",
+      "confidence": "high",
+      "accessed": "2026-11-28"
+    },
+    {
+      "claim": "The measurement was posted as a Show HN thread on Hacker News about a day before this brief, where the sharpest reply dismissed tok/s ratings in favor of output quality rather than challenging the method.",
+      "source_url": "https://news.ycombinator.com/item?id=50670443",
+      "source_title": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10 | Hacker News",
+      "source_quality": "community",
+      "confidence": "medium",
+      "accessed": "2026-11-28"
+    }
+  ],
+  "key_numbers": [
+    {
+      "label": "single-request decode, final vLLM configuration, one GB10",
+      "value": "101 tok/s",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/"
+    },
+    {
+      "label": "published single-request decode, vLLM + DSpark baseline, same benchmark",
+      "value": "61.4 tok/s",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/"
+    },
+    {
+      "label": "aggregate decode, four concurrent requests",
+      "value": "195.7 tok/s",
+      "source_url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/"
+    },
+    {
+      "label": "official checkpoint size on disk",
+      "value": "about 20GB",
+      "source_url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "label": "recommended GGUF quant for a 24 GB card",
+      "value": "17.6 GB",
+      "source_url": "https://unsloth.ai/docs/models/inkling-2-mini"
+    },
+    {
+      "label": "DGX Spark memory bandwidth",
+      "value": "273 GB/s",
+      "source_url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+    },
+    {
+      "label": "KV pool, FP8 KV tier, one DGX Spark",
+      "value": "3,308,911 tokens",
+      "source_url": "https://github.com/tonyd2wild/Inkling-2-Mini-NVFP4-DGX-Spark"
+    }
+  ],
+  "analogy_candidates": [
+    {
+      "vehicle": "A prep cook and a head chef",
+      "mapping": "The draft model preps seven token guesses and Inkling verifies all of them in a single pass, keeping one to eight tokens per step -- that is where the decode speed comes from.",
+      "limit": "It explains the draft-model win but none of the memory tradeoffs that decided every other setting."
+    },
+    {
+      "vehicle": "One shared garage",
+      "mapping": "The CPU and the GPU park in the same 128 GB garage, and every crate reserved for the KV cache is a crate the OS and a second model cannot use, which is why the fast configuration uses a small chunk size and an FP8 KV cache.",
+      "limit": "A garage does no computing, so it cannot explain why kernel retileing, not parking, moved prefill."
+    }
+  ],
+  "misconceptions": [
+    {
+      "myth": "vLLM is a batch-serving engine for companies; single-stream chat at home belongs to llama.cpp or Ollama.",
+      "reality": "The biggest gains in this writeup were single-user gains, 61.4 to 101 tok/s for one request, and vLLM's own docs tune chunked prefill for inter-token latency (claims 4 and 8)."
+    },
+    {
+      "myth": "A 273 GB/s unified-memory box is too bandwidth-starved for fast decode.",
+      "reality": "The author profiled the expert GEMMs at roughly 8% of the GB10's FP4 peak and found memory bandwidth was not the limit; kernel launch configuration was (claim 6)."
+    },
+    {
+      "myth": "A 26B model needs tens of gigabytes of VRAM before you can start, so you must re-quantize it yourself.",
+      "reality": "The official checkpoint already ships in mixed NVFP4 and MXFP8 at about 20GB, so no re-quantization is needed on a Spark, and a recommended 4-bit GGUF at 17.6 GB fits a 24 GB card (claim 2)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "tokens per second (tok/s)",
+      "definition": "How many tokens the model writes per second once it has read your prompt; the headline speed number."
+    },
+    {
+      "term": "prefill",
+      "definition": "Reading your whole prompt into memory before the first word of the reply appears."
+    },
+    {
+      "term": "decode",
+      "definition": "Writing the reply after the first token, one step at a time."
+    },
+    {
+      "term": "KV cache",
+      "definition": "The memory where the model keeps what it has already read so it does not re-read it on every token."
+    },
+    {
+      "term": "chunked prefill",
+      "definition": "Reading a long prompt in fixed-size chunks so ongoing decodes are not stalled behind it."
+    },
+    {
+      "term": "draft model (speculative decoding)",
+      "definition": "A small model that guesses several tokens ahead while the big model checks all guesses in one pass."
+    },
+    {
+      "term": "mixture of experts (MoE)",
+      "definition": "A model that stores many specialist sub-networks and routes each token through only a few of them."
+    },
+    {
+      "term": "quantization",
+      "definition": "Storing model weights in lower precision to shrink memory, such as NVFP4 or a 4-bit GGUF."
+    },
+    {
+      "term": "unified memory",
+      "definition": "One pool of RAM shared by CPU and GPU, as on the DGX Spark's GB10."
+    },
+    {
+      "term": "CUDA graph",
+      "definition": "A recorded sequence of GPU kernel launches that the engine replays every decode step instead of launching each kernel anew."
+    }
+  ],
+  "unverified": [
+    "Tokens per second on our own DGX Spark remains unmeasured; the expectation is the published 61 to 101 range on the DSpark and DFlash2 configurations.",
+    "A Hacker News commenter reports more than 3k prefill and more than 100 decode on a 32 GB GPU with the base model; community-only, not verified.",
+    "A Hacker News commenter reports about 220 tok/s on a 5090 with two 131k contexts via Basalt; community-only, not verified.",
+    "A Hacker News commenter reports 5K prefill and 150 decode for oMlx on Mac; community-only, not verified.",
+    "Whether the DFlash2 patches and the compile-stall fix have merged into a released vLLM version; the writeup ran them as eight overlay files, and vLLM pull request #69288 was still open."
+  ],
+  "suggested_outline": "Open on the number and the gap: 101 tokens per second on one desk-side GB10 box, against a published 61.4 on the same benchmark -- the difference is settings, not silicon.\nDefine what the number measures and what the box is: prefill versus decode, and one 128 GB memory pool shared by CPU and GPU that every setting draws from.\nWalk the knobs that did the work -- a draft model that guesses ahead, an FP8 KV cache that roughly doubles what fits, a 4,096-token chunk size chosen to protect the KV cache -- then hand the viewer tonight's commands and the honest catch that untuned setups land near 61.",
+  "notes": "The 101 tok/s is decode speed on tonyd2wild's benchmark: five prompts in each of eight categories at temperature 0 with thinking off and 1,024 output tokens, excluding time to first token; on sampled everyday prompts at temperature 1.0 the tuned setup scored 69.8 to 70.7 tok/s. The serving image is vllm/vllm-openai:inkling-2-mini (vLLM 0.1.dev25855+g7cb5dae22, a pre-release of 0.35, per tonyd2wild's as-tested table); runtimenotes pins it by digest. Conflict: tonyd2wild's README rounds the DFlash2 swap to 61 tok/s to 88 tok/s (1.44x) where runtimenotes' table gives 61.4 and 88.2 for the same setup -- the same measurement, rounded differently; the brief reports the decimals. A viewer starting from tonyd2wild's repository tonight should expect its published 88, not 101, because the 101 configuration additionally mounts eight overlay files (DFlash2 patches, INT8 draft copies, the compile-stall fix, adaptive verify width, the prefill GEMM configuration). The Unsloth GGUF path is the gaming-PC route; the official NVFP4 checkpoint route is the Spark route. The Thinking Machines release notes corroborate the model facts and add that the ~20GB footprint was demonstrated offline on a MacBook Pro.",
+  "viewer_situation": "You have a gaming PC or a DGX Spark on your desk, you have already run a model in Ollama or LM Studio, and you keep hearing vLLM is for batch servers at work rather than one fast chat at home.",
+  "has_process": true,
+  "process_steps": [
+    "Check the memory you have against the model: the official checkpoint is about 20GB and the recommended GGUF quant UD-Q4_K_XL is 17.6 GB.",
+    "On a gaming PC, install Unsloth Desktop (or a llama.cpp build with looped-layer support) and download the quant that fits your card.",
+    "On a Spark, clone tonyd2wild's Inkling-2-Mini-NVFP4-DGX-Spark repository and run ./launch_standard.sh, then ./prepare_dflash2.sh and ./launch_dflash2.sh for the faster draft model.",
+    "Keep the launch flags that protect the KV cache: 4,096-token chunks and an FP8 KV cache where your memory budget allows.",
+    "Watch unified memory while the server warms up; the repository's watch_start.sh kills the container if MemAvailable drops under 3 GiB."
+  ],
+  "objection": "The 101 tok/s needed eight patched overlay files beyond stock vLLM on a benchmark at temperature 0, and speed means nothing if the output is worse than the same-size competition -- as one skeptic on the thread said."
+}
