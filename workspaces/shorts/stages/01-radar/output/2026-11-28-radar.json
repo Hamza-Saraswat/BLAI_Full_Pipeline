@@ -1,0 +1,698 @@
+[
+  {
+    "id": "hn-592bb52db4",
+    "title": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+    "url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+    "source": "hn",
+    "published_at": "2026-11-27T18:59:55Z",
+    "signals": {
+      "points": 57,
+      "num_comments": 15,
+      "signal": 0.664,
+      "signal_parts": {
+        "points": 0.711,
+        "comments": 0.553
+      },
+      "decay": 0.7817,
+      "age_h": 17.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM",
+      "GB10"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 57 points, 15 comments on HN, 17 h ago",
+    "score": 59
+  },
+  {
+    "id": "github-9dd8eb885f",
+    "title": "llama.cpp b12828",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12828",
+    "source": "github",
+    "published_at": "2026-11-28T12:02:31Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12828",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9998,
+      "age_h": 0.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "Llama"
+    ],
+    "summary": "<details open> model : expand Inkling 2 tau after embeddings (#33186) * model : inkling2 expand tau after the embeddings * model : build inkling2 embeddings before tau </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/73437238> **ma",
+    "why_now": "Shipped: ggml-org/llama.cpp b12828 released (pre-release), 0 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-b9faaf0d3a",
+    "title": "llama.cpp b12827",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12827",
+    "source": "github",
+    "published_at": "2026-11-28T11:32:11Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12827",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.9925,
+      "age_h": 0.5,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "Llama",
+      "Apple"
+    ],
+    "summary": "<details open> CUDA: consistent ncols2 selection for mma FA (#32626) </details> **Website:** - <https://llama.app> **Attestations:** - <https://github.com/ggml-org/llama.cpp/attestations/73432687> **macOS/iOS:** - [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/",
+    "why_now": "Shipped: ggml-org/llama.cpp b12827 released (pre-release), 1 h ago",
+    "score": 57
+  },
+  {
+    "id": "github-3dc171f4c6",
+    "title": "llama.cpp b12823",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12823",
+    "source": "github",
+    "published_at": "2026-11-28T01:24:25Z",
+    "signals": {
+      "repo": "ggml-org/llama.cpp",
+      "tag": "b12823",
+      "prerelease": true,
+      "signal": 0.5,
+      "signal_parts": {
+        "release": 0.4,
+        "notes": 0.1
+      },
+      "decay": 0.8574,
+      "age_h": 10.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped with a known break",
+      "relevance": "product:llama.cpp",
+      "group": "how-to"
+    },
+    "products": [
+      "llama.cpp",
+      "CUDA",
+      "NVIDIA"
+    ],
+    "summary": "<details open> CUDA: fix ADD_ID launch for more than 65535 tokens (#33162) The grid's y dimension came directly from the token count, so ADD_ID launches with more than 65535 tokens failed with \"invalid configuration argument\". NVIDIA and HIP are equally affected, since gridDim.y is capped at 65535 o",
+    "why_now": "Shipped with a known break: ggml-org/llama.cpp b12823 released (pre-release), 11 h ago",
+    "score": 51
+  },
+  {
+    "id": "hn-9c5bfbf877",
+    "title": "Show HN: A 52 KB WebAssembly engine that runs Qwen3.5-2B in a browser tab",
+    "url": "https://tesseracted.com/experiments-llm-os/",
+    "source": "hn",
+    "published_at": "2026-11-28T00:16:59Z",
+    "signals": {
+      "points": 19,
+      "num_comments": 7,
+      "signal": 0.492,
+      "signal_parts": {
+        "points": 0.525,
+        "comments": 0.414
+      },
+      "decay": 0.8436,
+      "age_h": 11.8,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Qwen",
+      "group": "how-to"
+    },
+    "products": [
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Shipped: 19 points, 7 comments on HN, 12 h ago",
+    "score": 50
+  },
+  {
+    "id": "github-80c5781889",
+    "title": "ollama v0.40.19",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.19",
+    "source": "github",
+    "published_at": "2026-11-26T17:52:02Z",
+    "signals": {
+      "repo": "ollama/ollama",
+      "tag": "v0.40.19",
+      "prerelease": false,
+      "signal": 0.7,
+      "signal_parts": {
+        "release": 0.6,
+        "notes": 0.1
+      },
+      "decay": 0.5438,
+      "age_h": 42.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Ollama",
+      "group": "how-to"
+    },
+    "products": [
+      "Ollama"
+    ],
+    "summary": "## What's Changed * inkling2: faster short histories, draft proposals and conv snapshots by @dhiltgen in https://github.com/ollama/ollama/pull/19881 * mlxrunner: compact Engram history buffers by @pdevine in https://github.com/ollama/ollama/pull/19913 * bump llama-server by @pdevine in https://githu",
+    "why_now": "Shipped: ollama/ollama v0.40.19 released, 42 h ago",
+    "score": 47
+  },
+  {
+    "id": "hn-9c508e8f7f",
+    "title": "Sandboxed AI models talk via GPU rounding errors on shared vLLM servers",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/sandboxed-ai-models-secretly-talk-via-gpu-rounding-errors-on-shared-vllm-servers-with-no-network-or-shared-files-colluding-watchdog-let-all-354-attacks-slip-through",
+    "source": "hn",
+    "published_at": "2026-11-27T18:40:22Z",
+    "signals": {
+      "points": 3,
+      "num_comments": 1,
+      "signal": 0.211,
+      "signal_parts": {
+        "points": 0.243,
+        "comments": 0.138
+      },
+      "decay": 0.778,
+      "age_h": 17.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:vLLM",
+      "group": "how-to"
+    },
+    "products": [
+      "vLLM"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 3 points, 1 comments on HN, 17 h ago",
+    "score": 29
+  },
+  {
+    "id": "hn-6756fa0864",
+    "title": "GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims",
+    "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/",
+    "source": "hn",
+    "published_at": "2026-11-28T11:57:04Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.9985,
+      "age_h": 0.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:GGUF",
+      "group": "how-to"
+    },
+    "products": [
+      "GGUF",
+      "Hugging Face"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 0 h ago",
+    "score": 26
+  },
+  {
+    "id": "hn-9de21e3b0a",
+    "title": "Indic LLMs Leaderboard: Compare Gemma, Qwen and More on Indian Languages",
+    "url": "https://indicllms.com",
+    "source": "hn",
+    "published_at": "2026-11-27T18:27:49Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7756,
+      "age_h": 17.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:Gemma",
+      "group": "how-to"
+    },
+    "products": [
+      "Gemma",
+      "Qwen"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 18 h ago",
+    "score": 24
+  },
+  {
+    "id": "hn-dc237a0df8",
+    "title": "DeepSeek has commissioned a third-party risk evaluation of V4 Pro [pdf]",
+    "url": "https://concordia-ai.com/wp-content/uploads/2026/11/deepseek_v4_pro_0813_systemic_risk_assessment.pdf",
+    "source": "hn",
+    "published_at": "2026-11-28T09:49:56Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9684,
+      "age_h": 2.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 2 h ago",
+    "score": 22
+  },
+  {
+    "id": "hn-a519f60a21",
+    "title": "Llm.asm - Pure x86-64 Assembly for LLM Inference and Training",
+    "url": "https://github.com/alesha-pro/llm.asm",
+    "source": "hn",
+    "published_at": "2026-11-28T03:39:41Z",
+    "signals": {
+      "points": 6,
+      "num_comments": 1,
+      "signal": 0.28,
+      "signal_parts": {
+        "points": 0.341,
+        "comments": 0.138
+      },
+      "decay": 0.8858,
+      "age_h": 8.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 6 points, 1 comments on HN, 8 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-2babb0f7f4",
+    "title": "ShrinkLoop - Local MLX proxy and RLVR/GRPO trainer for verifiable LLM tasks",
+    "url": "https://shrinkloop.com/demo",
+    "source": "hn",
+    "published_at": "2026-11-27T17:37:20Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7663,
+      "age_h": 18.4,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:MLX",
+      "group": "how-to"
+    },
+    "products": [
+      "MLX"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 18 h ago",
+    "score": 21
+  },
+  {
+    "id": "hn-7156000462",
+    "title": "Large-batch DeepSeek-v4.1-Flash on four 16 GB AMD GPUs: API accuracy at API cost",
+    "url": "https://alexselzer.com/posts/large-batch-local-inference/",
+    "source": "hn",
+    "published_at": "2026-11-27T15:51:57Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7471,
+      "age_h": 20.2,
+      "source_weight": 1.0,
+      "product_bonus": 0.15,
+      "why_now_kind": "Discussed",
+      "relevance": "product:DeepSeek",
+      "group": "how-to"
+    },
+    "products": [
+      "DeepSeek",
+      "AMD"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 20 h ago",
+    "score": 20
+  },
+  {
+    "id": "hn-57ed4d823c",
+    "title": "Show HN: WikiVectors - makes any LLM smarter",
+    "url": "https://wikivectors.com/",
+    "source": "hn",
+    "published_at": "2026-11-28T05:06:05Z",
+    "signals": {
+      "points": 5,
+      "num_comments": 0,
+      "signal": 0.22,
+      "signal_parts": {
+        "points": 0.314,
+        "comments": 0.0
+      },
+      "decay": 0.9044,
+      "age_h": 7.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I have a number of projects that I needed to streamline cost, without giving up anything. It turned out that was only one of the benefits.",
+    "why_now": "Shipped: 5 points, 0 comments on HN, 7 h ago",
+    "score": 17
+  },
+  {
+    "id": "hn-d72141e682",
+    "title": "Show HN: A local-first AI memory for your video footage",
+    "url": "https://news.ycombinator.com/item?id=50670468",
+    "source": "hn",
+    "published_at": "2026-11-27T19:02:01Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 1,
+      "signal": 0.176,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.138
+      },
+      "decay": 0.7821,
+      "age_h": 17.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:open-weight",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I&#x27;m Ilias, the creator behind Orcah Studio (a local-first knowledge system that will transcribe, perform speaker diarization, analyse frames, and create multi-modal embeddings) using open-weight models<p>Demo video: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;9uUZrayDEgs\" rel=\"nofollow\">https:&#x2",
+    "why_now": "Shipped: 2 points, 1 comments on HN, 17 h ago",
+    "score": 12
+  },
+  {
+    "id": "hn-04604b2667",
+    "title": "Estimating LLM decode speed and the price of a token per second",
+    "url": "https://wanabai.com/build-finder/paper.html",
+    "source": "hn",
+    "published_at": "2026-11-28T04:01:14Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.8904,
+      "age_h": 8.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Changed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Changed: 2 points, 0 comments on HN, 8 h ago",
+    "score": 10
+  },
+  {
+    "id": "hn-b38178cce9",
+    "title": "Show HN: I ran an LLM written in F# on a Commodore 64 [video]",
+    "url": "https://www.youtube.com/watch?v=2zufRUcZeuc",
+    "source": "hn",
+    "published_at": "2026-11-27T22:03:30Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.817,
+      "age_h": 14.0,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 14 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-beaa80bec2",
+    "title": "Show HN: Sentinel, live monitoring tool for coding agent sabotage",
+    "url": "https://github.com/run-llama/sentinel",
+    "source": "hn",
+    "published_at": "2026-11-27T20:29:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 1,
+      "signal": 0.126,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.138
+      },
+      "decay": 0.7987,
+      "age_h": 15.6,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agent",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Shipped: 1 points, 1 comments on HN, 16 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-b983aed4f2",
+    "title": "LLM-assisted English translation of a 9th-century Syriac liturgical commentary",
+    "url": "https://docs.google.com/document/d/1NlgkmxuXkmBfgBuUdx85rM8FgA6hxcXbRaSWATI95T8/edit?usp=sharing",
+    "source": "hn",
+    "published_at": "2026-11-27T19:43:16Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7899,
+      "age_h": 16.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "topic:llm",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "",
+    "why_now": "Discussed: 2 points, 0 comments on HN, 16 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-098d0075b0",
+    "title": "Show HN: Flowmaps - the logic layer for agents and developers",
+    "url": "https://flowmaps.ai/",
+    "source": "hn",
+    "published_at": "2026-11-27T18:20:28Z",
+    "signals": {
+      "points": 2,
+      "num_comments": 0,
+      "signal": 0.135,
+      "signal_parts": {
+        "points": 0.192,
+        "comments": 0.0
+      },
+      "decay": 0.7743,
+      "age_h": 17.7,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "Hi everyone,<p>I&#x27;ve spent the last few months building a tool called Flowmaps. It&#x27;s the logic layer for agents and developers. It sits between your team and your codebase and constantly builds and maintains a logical map of what the code does.<p>Agents are already writing a large volume of",
+    "why_now": "Shipped: 2 points, 0 comments on HN, 18 h ago",
+    "score": 9
+  },
+  {
+    "id": "hn-2486143dc4",
+    "title": "Show HN: Turbotap - Open-Source CLI for AI Agents to Drive an iPhone over Wi-Fi",
+    "url": "https://github.com/Maxteabag/turbotap",
+    "source": "hn",
+    "published_at": "2026-11-28T11:47:33Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9962,
+      "age_h": 0.3,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "news-react"
+    },
+    "products": [],
+    "summary": "I’ve been trying to make more of my daily life AI-driven, and my iPhone was becoming the bottleneck. If an app didn’t have a web version, an MCP, or an API, I still had to pick up the phone and do it myself.<p>After lots of searching I finally found a solution that worked. I put a spare iPhone in de",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 0 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-b8be9ab551",
+    "title": "Bare-metal Type-1 AMD SVM hypervisor (Ring -1) running beneath Linux kernel",
+    "url": "https://github.com/alesha-pro/llm.asm/tree/main/04-ring1-kernel-surgeon",
+    "source": "hn",
+    "published_at": "2026-11-28T10:59:06Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.9846,
+      "age_h": 1.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Discussed",
+      "relevance": "product:AMD",
+      "group": "news-react"
+    },
+    "products": [
+      "AMD"
+    ],
+    "summary": "",
+    "why_now": "Discussed: 1 points, 0 comments on HN, 1 h ago",
+    "score": 7
+  },
+  {
+    "id": "hn-29d4c120ca",
+    "title": "Show HN: I gave my AI Agents Production backed Memory",
+    "url": "https://usecodela.com/",
+    "source": "hn",
+    "published_at": "2026-11-27T19:58:45Z",
+    "signals": {
+      "points": 1,
+      "num_comments": 0,
+      "signal": 0.085,
+      "signal_parts": {
+        "points": 0.121,
+        "comments": 0.0
+      },
+      "decay": 0.7928,
+      "age_h": 16.1,
+      "source_weight": 1.0,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "topic:agents",
+      "group": "myth-bust"
+    },
+    "products": [],
+    "summary": "Hi HN, I’m building Codela to help coding agents learn from what happens after their code ships. I realized that my AI agent writes a change, the tests pass, and it gets deployed. Then in production a problem happens, I fix it, but what it did wrong and why never reaches the agent, so futures sessio",
+    "why_now": "Shipped: 1 points, 0 comments on HN, 16 h ago",
+    "score": 6
+  },
+  {
+    "id": "hf-97338d69ca",
+    "title": "ai-sage/GigaChat4-37B-A4B",
+    "url": "https://huggingface.co/ai-sage/GigaChat4-37B-A4B",
+    "source": "hf",
+    "published_at": "2026-11-20T14:13:00Z",
+    "signals": {
+      "pipeline_tag": "text-generation",
+      "likes": 104,
+      "downloads": 815,
+      "trendingScore": 81.0,
+      "lists": [
+        "trending"
+      ],
+      "signal": 0.627,
+      "signal_parts": {
+        "trending": 0.58,
+        "likes": 0.674,
+        "downloads": 0.485
+      },
+      "decay": 0.0645,
+      "age_h": 189.8,
+      "source_weight": 0.9,
+      "product_bonus": 0.0,
+      "why_now_kind": "Shipped",
+      "relevance": "product:Hugging Face",
+      "group": "news-react"
+    },
+    "products": [
+      "Hugging Face"
+    ],
+    "summary": "text-generation model on Hugging Face, 104 likes, 815 downloads, trending score 81, created 2026-11-20",
+    "why_now": "Shipped: new on Hugging Face (text-generation), 104 likes, 815 downloads, trending score 81, 8 d ago",
+    "score": 3
+  }
+]
